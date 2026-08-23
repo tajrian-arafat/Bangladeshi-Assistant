@@ -52,9 +52,17 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
     );
   }
 
-  const title = locale === "bn" ? service.title_bn : service.title_en;
-  const description =
-    locale === "bn" ? service.description_bn : service.description_en;
+  const title = locale === "bn" ? service.name_bn : service.name_en;
+  const checklist = (service.checklist_items ?? []).map((item) => ({
+    item: locale === "bn" ? item.label_bn : item.label_en,
+    type: item.item_type as "REQUIRED" | "OPTIONAL" | "CONDITIONAL" | "RECOMMENDED" | "NOT_APPLICABLE",
+  }));
+  const steps = (service.procedure_steps ?? []).map((step) => ({
+    order: step.order,
+    title: locale === "bn" ? step.title_bn : step.title_en,
+    description: locale === "bn" ? step.description_bn : step.description_en,
+    official_url: step.official_url,
+  }));
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
@@ -72,14 +80,11 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
               {service.category}
             </span>
           )}
-          {service.agency_name && (
-            <span className="text-sm text-gray-500">{service.agency_name}</span>
+          {service.status && (
+            <span className="text-sm text-gray-500">{service.status}</span>
           )}
         </div>
         <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">{title}</h1>
-        {description && (
-          <p className="mt-3 text-gray-600">{description}</p>
-        )}
         {service.last_verified_at && (
           <p className="mt-2 text-xs text-gray-400">
             {t("lastVerified")}:{" "}
@@ -90,32 +95,18 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
         )}
       </header>
 
-      {service.official_url && (
-        <a
-          href={service.official_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mb-8 inline-flex items-center gap-2 rounded-lg bg-bd-green-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-bd-green-600"
-        >
-          {t("officialLink")}
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
-      )}
-
       <div className="space-y-8">
-        {service.checklist && service.checklist.length > 0 && (
+        {checklist.length > 0 && (
           <section className="rounded-xl border border-gray-200 bg-white p-6">
             <h2 className="mb-4 text-lg font-semibold text-gray-900">{t("requirements")}</h2>
-            <ChecklistView items={service.checklist} />
+            <ChecklistView items={checklist} />
           </section>
         )}
 
-        {service.procedures && service.procedures.length > 0 && (
+        {steps.length > 0 && (
           <section className="rounded-xl border border-gray-200 bg-white p-6">
             <h2 className="mb-4 text-lg font-semibold text-gray-900">{t("relatedProcedures")}</h2>
-            <ProcedureSteps steps={service.procedures} />
+            <ProcedureSteps steps={steps} />
           </section>
         )}
 

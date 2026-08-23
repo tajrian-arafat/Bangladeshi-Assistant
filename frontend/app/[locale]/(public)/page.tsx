@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useRouter } from "@/i18n/routing";
 import { useTranslations, useLocale } from "next-intl";
 import { useMutation } from "@tanstack/react-query";
 import { ChatThread } from "@/components/ChatThread";
@@ -14,7 +13,6 @@ export default function LandingPage() {
   const tChat = useTranslations("chat");
   const tCommon = useTranslations("common");
   const locale = useLocale();
-  const router = useRouter();
 
   const [messages, setMessages] = useState<ConversationMessage[]>([]);
   const [conversationId, setConversationId] = useState<string | null>(null);
@@ -38,9 +36,7 @@ export default function LandingPage() {
 
       setMessages((prev) => [...prev, assistantMsg]);
 
-      if (!conversationId && data.conversation_id) {
-        router.push(`/chat/${data.conversation_id}`);
-      }
+      // Stay on landing page for smoother demo UX
     },
     onError: (err: Error) => {
       if (err instanceof ApiClientError) {

@@ -13,7 +13,9 @@ import type {
 } from "@/types/api";
 
 const API_BASE =
-  process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+  typeof window === "undefined"
+    ? (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000")
+    : (process.env.NEXT_PUBLIC_API_URL ?? "");
 
 export class ApiClientError extends Error {
   code: string;
@@ -90,18 +92,24 @@ export const api = {
   getConversation: (id: string) =>
     request<Conversation>(`/api/v1/conversations/${id}`),
 
-  getServices: (params?: { q?: string; category?: string }) => {
+  getServices: async (params?: { q?: string; category?: string }) => {
     const search = new URLSearchParams();
     if (params?.q) search.set("q", params.q);
     if (params?.category) search.set("category", params.category);
     const qs = search.toString();
-    return request<ServiceSummary[]>(`/api/v1/services${qs ? `?${qs}` : ""}`);
+    const response = await request<{ items: ServiceSummary[] }>(
+      `/api/v1/services${qs ? `?${qs}` : ""}`,
+    );
+    return response.items;
   },
 
   getService: (slug: string) =>
     request<ServiceDetail>(`/api/v1/services/${slug}`),
 
-  getDistricts: () => request<District[]>("/api/v1/districts"),
+  getDistricts: async () => {
+    const response = await request<{ items: District[] }>("/api/v1/districts");
+    return response.items;
+  },
 
   search: (q: string) =>
     request<{ results: ServiceSummary[] }>(

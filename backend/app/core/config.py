@@ -44,7 +44,7 @@ class Settings(BaseSettings):
 
     feature_document_upload: bool = False
     feature_playwright_crawl: bool = False
-    feature_llm_enabled: bool = True
+    feature_llm_enabled: bool = False
 
     log_level: str = "INFO"
     prometheus_enabled: bool = False

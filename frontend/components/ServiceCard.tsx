@@ -10,9 +10,7 @@ interface ServiceCardProps {
 
 export function ServiceCard({ service }: ServiceCardProps) {
   const locale = useLocale();
-  const title = locale === "bn" ? service.title_bn : service.title_en;
-  const description =
-    locale === "bn" ? service.description_bn : service.description_en;
+  const title = locale === "bn" ? service.name_bn : service.name_en;
 
   return (
     <article className="group flex flex-col rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
@@ -29,14 +27,11 @@ export function ServiceCard({ service }: ServiceCardProps) {
         )}
       </div>
 
-      {description && (
-        <p className="mb-4 flex-1 text-sm text-gray-600 line-clamp-2">{description}</p>
+      {service.category && (
+        <p className="mb-4 flex-1 text-sm text-gray-600 line-clamp-2">{service.category}</p>
       )}
 
       <div className="flex items-center justify-between gap-2">
-        {service.agency_name && (
-          <span className="text-xs text-gray-500">{service.agency_name}</span>
-        )}
         <Link
           href={`/services/${service.slug}`}
           className="ml-auto text-sm font-medium text-bd-green-600 hover:text-bd-green-800 hover:underline"

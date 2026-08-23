@@ -78,19 +78,33 @@ export interface ChatResponse {
 export interface ServiceSummary {
   id: string;
   slug: string;
-  title_en: string;
-  title_bn: string;
-  description_en?: string;
-  description_bn?: string;
-  agency_name?: string;
+  name_en: string;
+  name_bn: string;
   category?: string;
+  status?: string;
+  agency_id?: string;
 }
 
 export interface ServiceDetail extends ServiceSummary {
-  procedures?: ProcedureStep[];
-  checklist?: ChecklistItem[];
+  aliases?: string[];
+  eligibility?: Record<string, unknown>;
+  checklist_items?: Array<{
+    id: string;
+    item_type: string;
+    label_en: string;
+    label_bn: string;
+    order: number;
+  }>;
+  procedure_steps?: Array<{
+    id: string;
+    order: number;
+    title_en: string;
+    title_bn: string;
+    description_en?: string;
+    description_bn?: string;
+    official_url?: string | null;
+  }>;
   fees?: FeeItem[];
-  official_url?: string;
   last_verified_at?: string;
 }
 
