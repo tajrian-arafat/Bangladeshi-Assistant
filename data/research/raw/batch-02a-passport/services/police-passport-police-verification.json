@@ -1,0 +1,87 @@
+{
+  "service_id": "police-passport-police-verification",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Passport Police Verification",
+  "service_name_bn": "পাসপোর্ট পুলিশ ভেরিফিকেশন",
+  "aliases": [
+    "passport verification police",
+    "PV report passport"
+  ],
+  "banglish_variants": [],
+  "category_id": "police",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police (Special Branch / Passport Wing)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://www.dip.gov.bd/",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "police-passport-police-verification::c-pv-pathway-exists",
+      "legacy_claim_id": "c-pv-pathway-exists",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "availability",
+      "claim_text": "Passport police verification is part of e-Passport processing pathway via Special Branch.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-home",
+        "src-police-sb"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-pathway-exists-src-dip-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-station-onboarding",
+      "legacy_claim_id": "c-pv-station-onboarding",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Applicant selects nearest police station during e-Passport onboarding for verification routing.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-station-onboarding-src-epassport-onboarding"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-delay-note",
+      "legacy_claim_id": "c-pv-delay-note",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "practical_tip",
+      "claim_text": "Mission pages note police verification timing can affect e-Passport processing duration.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-delay-note-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null
+}

@@ -1,0 +1,274 @@
+{
+  "service_id": "epassport-new-application",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "New e-Passport Application",
+  "service_name_bn": "নতুন ই-পাসপোর্ট আবেদন",
+  "aliases": [
+    "e-passport apply",
+    "online passport Bangladesh"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://www.epassport.gov.bd/onboarding",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "epassport-new-application::c-apply-online",
+      "legacy_claim_id": "c-apply-online",
+      "service_id": "epassport-new-application",
+      "claim_type": "application_url",
+      "claim_text": "New e-Passport applications are submitted online at www.epassport.gov.bd/onboarding.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-apply-online-src-epassport-onboarding"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-no-attestation-online",
+      "legacy_claim_id": "c-no-attestation-online",
+      "service_id": "epassport-new-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Online e-Passport application does not require attested documents or photo upload at application stage.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-no-attestation-online-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-id-nid-or-brc",
+      "legacy_claim_id": "c-id-nid-or-brc",
+      "service_id": "epassport-new-application",
+      "claim_type": "document",
+      "claim_text": "Applicant must use NID or 17-digit online-verifiable Birth Registration Certificate (English) matching portal rules.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-instructions",
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-id-nid-or-brc-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-minor-parent-nid",
+      "legacy_claim_id": "c-minor-parent-nid",
+      "service_id": "epassport-new-application",
+      "claim_type": "conditional_document",
+      "claim_text": "Applicants under 18 without own NID must provide father or mother NID number in application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "age",
+        "op": "lt",
+        "value": 18
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-minor-parent-nid-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-minor-3r-photo",
+      "legacy_claim_id": "c-minor-3r-photo",
+      "service_id": "epassport-new-application",
+      "claim_type": "conditional_document",
+      "claim_text": "Applicants under 6 years must submit 3R size lab-print photo at enrollment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "age",
+        "op": "lt",
+        "value": 6
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-minor-3r-photo-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-police-station-select",
+      "legacy_claim_id": "c-police-station-select",
+      "service_id": "epassport-new-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Applicant selects nearest police station to present address during online onboarding.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-police-station-select-src-epassport-onboarding"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-govt-noc",
+      "legacy_claim_id": "c-govt-noc",
+      "service_id": "epassport-new-application",
+      "claim_type": "conditional_document",
+      "claim_text": "Government employees must provide GO/NOC at enrollment when applicable.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "employment_type",
+        "op": "eq",
+        "value": "government"
+      },
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-govt-noc-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-enrollment-docs-list",
+      "legacy_claim_id": "c-enrollment-docs-list",
+      "service_id": "epassport-new-application",
+      "claim_type": "document",
+      "claim_text": "Enrollment requires printed application summary with appointment, original NID/BRC, printed application form, previous passport if any.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-enrollment-docs-list-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-five-step-workflow",
+      "legacy_claim_id": "c-five-step-workflow",
+      "service_id": "epassport-new-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Official portal documents a five-step e-Passport application workflow from online apply through enrollment to collection.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-five-steps",
+        "src-epassport-landing"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-five-step-workflow-src-epassport-five-steps"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-expatriate-onboarding-no",
+      "legacy_claim_id": "c-expatriate-onboarding-no",
+      "service_id": "epassport-new-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Expatriate applicants select 'No' for applying from Bangladesh and choose mission/country during onboarding Step 1.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding",
+        "src-mofa-abudhabi-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-expatriate-onboarding-no-src-epassport-onboarding"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-brc-everify",
+      "legacy_claim_id": "c-brc-everify",
+      "service_id": "epassport-new-application",
+      "claim_type": "conditional_document",
+      "claim_text": "Mission guidance requires 17-digit online-verifiable Birth Registration Certificate (English) verifiable at everify.bdris.gov.bd when BRC used instead of NID.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "id_document_type",
+        "op": "eq",
+        "value": "brc"
+      },
+      "source_ids": [
+        "src-mofa-dubai-epassport",
+        "src-mofa-abudhabi-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-brc-everify-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Online form using NID or online birth certificate (BRC English)."
+}
