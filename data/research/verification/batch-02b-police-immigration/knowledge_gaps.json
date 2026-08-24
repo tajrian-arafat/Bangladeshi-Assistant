@@ -1,0 +1,123 @@
+{
+  "knowledge_gaps": [
+    {
+      "gap_id": "MISSING_GD_PORTAL_SNAPSHOT",
+      "service_ids": [
+        "police-general-diary",
+        "police-general-diary-online"
+      ],
+      "classification": "source_discovery_problem",
+      "priority": "HIGH",
+      "description": "gd.police.gov.bd SSL fetch failed; Tier-1 portal text not independently snapshotted in this pass.",
+      "status": "OPEN",
+      "related_claims": [
+        "police-general-diary::c-gd-portal-url",
+        "police-general-diary-online::c-gd-portal-url",
+        "police-general-diary-online::c-gd-all-types-expansion"
+      ]
+    },
+    {
+      "gap_id": "MISSING_VISA_GOV_BD_SNAPSHOT",
+      "service_ids": [
+        "migration-visa-application-dip"
+      ],
+      "classification": "source_discovery_problem",
+      "priority": "HIGH",
+      "description": "visa.gov.bd application workflow, fees, and document upload rules not captured from live portal.",
+      "status": "OPEN",
+      "related_claims": [
+        "migration-visa-application-dip::c-visa-online-portal"
+      ]
+    },
+    {
+      "gap_id": "MISSING_MRV_FEE_TABLE_EXTRACT",
+      "service_ids": [
+        "migration-visa-application-dip"
+      ],
+      "classification": "missing_fee_schedule",
+      "priority": "HIGH",
+      "description": "DIP MRV fee page fetched but structured fee matrix not extracted (likely embedded PDF/image).",
+      "status": "OPEN",
+      "related_claims": [
+        "migration-visa-application-dip::c-visa-mrv-fees-page"
+      ]
+    },
+    {
+      "gap_id": "MISSING_VISA_TYPES_MATRIX",
+      "service_ids": [
+        "migration-visa-application-dip"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "HIGH",
+      "description": "Visa types/documents page last updated 2022; per-visa-type document list not machine-read in this pass.",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "MISSING_EMPLOYMENT_VERIFICATION_FEE_AMOUNT",
+      "service_ids": [
+        "police-employment-verification"
+      ],
+      "classification": "missing_fee_schedule",
+      "priority": "MEDIUM",
+      "description": "Charter cites government fee but no numeric amount on Tier 1–2 pages reviewed.",
+      "status": "OPEN",
+      "related_claims": [
+        "police-employment-verification::c-ev-charter-fee"
+      ]
+    },
+    {
+      "gap_id": "MISSING_PASSPORT_VERIFICATION_FEE_AMOUNT",
+      "service_ids": [
+        "police-passport-verification"
+      ],
+      "classification": "missing_fee_schedule",
+      "priority": "MEDIUM",
+      "description": "Charter cites government fee but no numeric amount on Tier 1–2 pages reviewed.",
+      "status": "OPEN",
+      "related_claims": [
+        "police-passport-verification::c-pv-charter-fee"
+      ]
+    },
+    {
+      "gap_id": "MISSING_PCC_COLLECTION_DELIVERY_OFFICIAL",
+      "service_ids": [
+        "police-clearance-certificate"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "MEDIUM",
+      "description": "Courier/mail delivery options referenced in third-party guides; not confirmed on Tier 1 portal pages captured.",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "MISSING_FIREARMS_DOCUMENT_CHECKLIST",
+      "service_ids": [
+        "police-firearms-license"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "MEDIUM",
+      "description": "No dedicated firearms license document checklist found on Tier 1–2 sources in this pass.",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "MISSING_GD_DUPLICATE_CANONICAL_RESOLUTION",
+      "service_ids": [
+        "police-general-diary",
+        "police-general-diary-online"
+      ],
+      "classification": "service_identification_problem",
+      "priority": "LOW",
+      "description": "Two catalogue entries share gd.police.gov.bd; relationship (alias vs subprocess) not resolved in research phase.",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "MISSING_PCC_REISSUE_CORRECTION_PROCESS",
+      "service_ids": [
+        "police-clearance-certificate"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "MEDIUM",
+      "description": "Correction/reissue workflow for issued PCC not found on official pages reviewed.",
+      "status": "OPEN"
+    }
+  ]
+}
