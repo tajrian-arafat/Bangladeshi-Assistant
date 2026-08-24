@@ -38,6 +38,7 @@ class AnswerPayload(BaseModel):
     fees: list[FeeResponse] = Field(default_factory=list)
     warnings: list[str] = Field(default_factory=list)
     clarifications_needed: list[str] = Field(default_factory=list)
+    support_level: str | None = None
 
 
 class CitationResponse(BaseModel):

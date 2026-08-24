@@ -80,6 +80,13 @@ class Service(Base):
     service_links: Mapped[list["ServiceLink"]] = relationship(back_populates="service")
     service_offices: Mapped[list["ServiceOffice"]] = relationship(back_populates="service")
     knowledge_chunks: Mapped[list["KnowledgeChunk"]] = relationship(back_populates="service")
+    claims: Mapped[list["Claim"]] = relationship(back_populates="service")  # noqa: F821
+    knowledge_gaps: Mapped[list["KnowledgeGap"]] = relationship(  # noqa: F821
+        back_populates="service"
+    )
+    catalogue_mappings: Mapped[list["ServiceCatalogueMapping"]] = relationship(  # noqa: F821
+        back_populates="runtime_service"
+    )
 
 
 class Procedure(Base):
@@ -129,6 +136,9 @@ class ProcedureStep(Base):
     dependencies: Mapped[list | None] = mapped_column(JSONType, nullable=True)
     conditions: Mapped[dict | None] = mapped_column(JSONType, nullable=True)
     evidence_ids: Mapped[list | None] = mapped_column(JSONType, nullable=True)
+    claim_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("claims.id", ondelete="SET NULL"), nullable=True, index=True
+    )
     last_verified_at: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True), nullable=True
     )
@@ -152,6 +162,9 @@ class ChecklistItem(Base):
     conditions: Mapped[dict | None] = mapped_column(JSONType, nullable=True)
     evidence_chunk_id: Mapped[uuid.UUID | None] = mapped_column(
         ForeignKey("knowledge_chunks.id", ondelete="SET NULL"), nullable=True
+    )
+    claim_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("claims.id", ondelete="SET NULL"), nullable=True, index=True
     )
     confidence: Mapped[float | None] = mapped_column(Float, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
@@ -190,6 +203,12 @@ class Fee(Base):
     effective_date: Mapped[date | None] = mapped_column(Date, nullable=True)
     evidence_chunk_id: Mapped[uuid.UUID | None] = mapped_column(
         ForeignKey("knowledge_chunks.id", ondelete="SET NULL"), nullable=True
+    )
+    claim_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("claims.id", ondelete="SET NULL"), nullable=True, index=True
+    )
+    verified_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
     )
     notes_bn: Mapped[str | None] = mapped_column(Text, nullable=True)
     notes_en: Mapped[str | None] = mapped_column(Text, nullable=True)
@@ -287,13 +306,30 @@ class Source(Base):
 
 
 class SourceVersion(Base):
+    """Durable snapshot reference for a source URL at retrieval time.
+
+    Large bodies live on filesystem/object storage via raw_content_path /
+    extracted_text_path — not inline in relational columns.
+    """
+
     __tablename__ = "source_versions"
 
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
     source_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("sources.id", ondelete="CASCADE"))
     url: Mapped[str] = mapped_column(String(2048))
+    canonical_url: Mapped[str | None] = mapped_column(String(2048), nullable=True)
     content_hash: Mapped[str | None] = mapped_column(String(128), nullable=True)
+    content_type: Mapped[str | None] = mapped_column(String(128), nullable=True)
+    raw_content_path: Mapped[str | None] = mapped_column(String(2048), nullable=True)
+    extracted_text_path: Mapped[str | None] = mapped_column(String(2048), nullable=True)
+    title: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    language: Mapped[str | None] = mapped_column(String(16), nullable=True)
+    http_status: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    parser_version: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    retrieval_method: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    content_length: Mapped[int | None] = mapped_column(Integer, nullable=True)
     fetched_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    retrieved_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     source_published_at: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True), nullable=True
     )
@@ -306,6 +342,9 @@ class SourceVersion(Base):
 
     source: Mapped["Source"] = relationship(back_populates="versions")
     documents: Mapped[list["KnowledgeDocument"]] = relationship(back_populates="source_version")
+    claim_evidence_links: Mapped[list["ClaimEvidence"]] = relationship(  # noqa: F821
+        back_populates="source_version"
+    )
 
 
 class KnowledgeDocument(Base):

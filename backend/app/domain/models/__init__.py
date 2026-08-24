@@ -10,6 +10,12 @@ from app.domain.models.auth import (
     User,
     UserSession,
 )
+from app.domain.models.claims import (
+    Claim,
+    ClaimEvidence,
+    KnowledgeGap,
+    ServiceCatalogueMapping,
+)
 from app.domain.models.conversation import (
     ClarificationState,
     Conversation,
@@ -65,6 +71,8 @@ __all__ = [
     "ChecklistCondition",
     "ChecklistItem",
     "CityCorporation",
+    "Claim",
+    "ClaimEvidence",
     "ClarificationState",
     "Conversation",
     "CrawlAttempt",
@@ -80,6 +88,7 @@ __all__ = [
     "GeographyAlias",
     "KnowledgeChunk",
     "KnowledgeDocument",
+    "KnowledgeGap",
     "Message",
     "MessageCitation",
     "MessageFeedback",
@@ -93,6 +102,7 @@ __all__ = [
     "Role",
     "RolePermission",
     "Service",
+    "ServiceCatalogueMapping",
     "ServiceLink",
     "ServiceOffice",
     "Source",

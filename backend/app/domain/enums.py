@@ -44,12 +44,110 @@ class ProcedureStepStatus(StrEnum):
 
 
 class SourceTier(StrEnum):
-    TIER_1 = "1"
-    TIER_2 = "2"
-    TIER_3 = "3"
-    TIER_4 = "4"
-    TIER_5 = "5"
-    TIER_6 = "6"
+    """Authority tiers. Never auto-changed by LLM."""
+
+    TIER_1 = "1"  # Official authority directly responsible
+    TIER_2 = "2"  # Other official Bangladesh government source
+    TIER_3 = "3"  # Official institution / public body
+    TIER_4 = "4"  # Recognized institutional source
+    TIER_5 = "5"  # Reliable media / professional
+    TIER_6 = "6"  # Guides / blogs
+    TIER_7 = "7"  # Community / social media
+
+
+class ClaimPipelineStatus(StrEnum):
+    """Claim lifecycle. VERIFIED ≠ 'a source was found'."""
+
+    DISCOVERED = "DISCOVERED"
+    EXTRACTED = "EXTRACTED"
+    NORMALIZED = "NORMALIZED"
+    CROSS_CHECKED = "CROSS_CHECKED"
+    PENDING_REVIEW = "PENDING_REVIEW"
+    VERIFIED = "VERIFIED"
+    CONFLICTING = "CONFLICTING"
+    OUTDATED = "OUTDATED"
+    REJECTED = "REJECTED"
+
+
+class ClaimType(StrEnum):
+    ELIGIBILITY = "eligibility"
+    DOCUMENT = "document"
+    CONDITIONAL_DOCUMENT = "conditional_document"
+    FEE = "fee"
+    PROCEDURE_STEP = "procedure_step"
+    PROCESSING_TIME = "processing_time"
+    APPLICATION_URL = "application_url"
+    OFFICE = "office"
+    PAYMENT_METHOD = "payment_method"
+    DEADLINE = "deadline"
+    LEGAL_BASIS = "legal_basis"
+    AVAILABILITY = "availability"
+    RESTRICTION = "restriction"
+    PRACTICAL_TIP = "practical_tip"
+    OTHER = "other"
+
+
+class InformationClass(StrEnum):
+    OFFICIAL = "OFFICIAL"
+    PRACTICAL = "PRACTICAL"
+    DISCOVERY = "DISCOVERY"
+
+
+class EvidenceStrength(StrEnum):
+    WEAK = "WEAK"
+    MODERATE = "MODERATE"
+    STRONG = "STRONG"
+
+
+class KnowledgeGapType(StrEnum):
+    MISSING_FEE_SCHEDULE = "missing_fee_schedule"
+    MISSING_PROCEDURE = "missing_procedure"
+    MISSING_APPLICATION_URL = "missing_application_url"
+    CONFLICTING_SOURCES = "conflicting_sources"
+    MISSING_LOCAL_RULE = "missing_local_government_rule"
+    MISSING_PROCESSING_SLA = "missing_processing_sla"
+    MISSING_DOCUMENT_MATRIX = "missing_document_matrix"
+    MISSING_EVIDENCE = "missing_evidence"
+    OTHER = "other"
+
+
+class KnowledgeGapStatus(StrEnum):
+    OPEN = "OPEN"
+    IN_PROGRESS = "IN_PROGRESS"
+    RESOLVED = "RESOLVED"
+    WONT_FIX = "WONT_FIX"
+
+
+class KnowledgeGapPriority(StrEnum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+    CRITICAL = "CRITICAL"
+
+
+class AnswerSupportLevel(StrEnum):
+    """Controls user-facing answer behavior (not always shown raw)."""
+
+    VERIFIED = "VERIFIED"
+    PARTIALLY_SUPPORTED = "PARTIALLY_SUPPORTED"
+    CONFLICTED = "CONFLICTED"
+    INSUFFICIENT_EVIDENCE = "INSUFFICIENT_EVIDENCE"
+
+
+class CatalogueMappingType(StrEnum):
+    EXISTING_SEED = "existing_seed"
+    NEW_CANONICAL = "new_canonical"
+    ALIAS = "alias"
+    MERGE = "merge"
+    DUPLICATE = "duplicate"
+    RETIRED = "retired"
+
+
+class CatalogueMappingReviewStatus(StrEnum):
+    PENDING = "PENDING"
+    APPROVED = "APPROVED"
+    NEEDS_REVIEW = "NEEDS_REVIEW"
+    BLOCKED = "BLOCKED"
 
 
 class LanguageCode(StrEnum):

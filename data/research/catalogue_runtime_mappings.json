@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "description": "Explicit catalogue_service_id → runtime Service.slug mapping. Silent overwrite of MVP seeds is forbidden unless allow_overwrite_seed=true after human review.",
+  "mvp_seed_slugs": [
+    "passport-renewal",
+    "nid-correction",
+    "driving-licence-renewal",
+    "birth-registration",
+    "tin-registration"
+  ],
+  "mappings": [
+    {
+      "catalogue_service_id": "nid-card-info-correction",
+      "runtime_slug": "nid-correction",
+      "mapping_type": "existing_seed",
+      "review_status": "NEEDS_REVIEW",
+      "allow_overwrite_seed": false,
+      "notes": "MVP nid-correction overlaps Batch 1 correction services; do not overwrite until verified claims exist and review approves."
+    },
+    {
+      "catalogue_service_id": "nid-other-info-correction",
+      "runtime_slug": "nid-correction",
+      "mapping_type": "alias",
+      "review_status": "NEEDS_REVIEW",
+      "allow_overwrite_seed": false,
+      "notes": "Alias into MVP nid-correction; may later split into dedicated runtime service."
+    },
+    {
+      "catalogue_service_id": "nid-combined-correction",
+      "runtime_slug": "nid-correction",
+      "mapping_type": "alias",
+      "review_status": "NEEDS_REVIEW",
+      "allow_overwrite_seed": false
+    },
+    {
+      "catalogue_service_id": "civil-birth-registration",
+      "runtime_slug": "birth-registration",
+      "mapping_type": "existing_seed",
+      "review_status": "NEEDS_REVIEW",
+      "allow_overwrite_seed": false,
+      "notes": "MVP birth-registration is placeholder; overwrite only after VERIFIED claims + review."
+    },
+    {
+      "catalogue_service_id": "nid-new-voter-registration",
+      "runtime_slug": null,
+      "mapping_type": "new_canonical",
+      "review_status": "PENDING",
+      "allow_overwrite_seed": false,
+      "notes": "No runtime service row yet; create Service before publish."
+    },
+    {
+      "catalogue_service_id": "nid-reissue-lost",
+      "runtime_slug": null,
+      "mapping_type": "new_canonical",
+      "review_status": "PENDING",
+      "allow_overwrite_seed": false
+    },
+    {
+      "catalogue_service_id": "civil-death-registration",
+      "runtime_slug": null,
+      "mapping_type": "new_canonical",
+      "review_status": "PENDING",
+      "allow_overwrite_seed": false
+    },
+    {
+      "catalogue_service_id": "civil-marriage-registration",
+      "runtime_slug": null,
+      "mapping_type": "new_canonical",
+      "review_status": "PENDING",
+      "allow_overwrite_seed": false
+    },
+    {
+      "catalogue_service_id": "local-character-certificate",
+      "runtime_slug": null,
+      "mapping_type": "new_canonical",
+      "review_status": "PENDING",
+      "allow_overwrite_seed": false
+    }
+  ]
+}

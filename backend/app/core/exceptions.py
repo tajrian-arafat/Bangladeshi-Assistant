@@ -50,6 +50,11 @@ class InsufficientEvidenceError(BDAError):
         super().__init__("INSUFFICIENT_EVIDENCE", message, status_code=422)
 
 
+class ValidationError(BDAError):
+    def __init__(self, message: str, *, details: dict[str, Any] | None = None) -> None:
+        super().__init__("VALIDATION_ERROR", message, status_code=422, details=details)
+
+
 def error_payload(
     code: str,
     message: str,

@@ -4,6 +4,8 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.exceptions import NotFoundError
+from app.domain.enums import ClaimPipelineStatus, KnowledgeGapStatus
+from app.domain.models.claims import Claim, KnowledgeGap
 from app.domain.models.geography import District
 from app.domain.models.knowledge import Agency, Service
 from app.domain.models.operations import FeatureFlag, ReviewQueueItem
@@ -41,6 +43,27 @@ class AdminService:
         total_districts = (
             await self.session.execute(select(func.count()).select_from(District))
         ).scalar_one()
+        pending_claims = (
+            await self.session.execute(
+                select(func.count())
+                .select_from(Claim)
+                .where(Claim.pipeline_status == ClaimPipelineStatus.PENDING_REVIEW.value)
+            )
+        ).scalar_one()
+        conflicting_claims = (
+            await self.session.execute(
+                select(func.count())
+                .select_from(Claim)
+                .where(Claim.pipeline_status == ClaimPipelineStatus.CONFLICTING.value)
+            )
+        ).scalar_one()
+        open_gaps = (
+            await self.session.execute(
+                select(func.count())
+                .select_from(KnowledgeGap)
+                .where(KnowledgeGap.status == KnowledgeGapStatus.OPEN.value)
+            )
+        ).scalar_one()
 
         return AdminDashboardStats(
             total_services=total_services,
@@ -48,6 +71,9 @@ class AdminService:
             pending_reviews=pending_reviews,
             total_agencies=total_agencies,
             total_districts=total_districts,
+            pending_claims=pending_claims,
+            conflicting_claims=conflicting_claims,
+            open_gaps=open_gaps,
         )
 
     async def list_feature_flags(self) -> list[FeatureFlagOut]:

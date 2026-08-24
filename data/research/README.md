@@ -19,13 +19,24 @@ artifacts. It is intentionally separate from the production database and from
 
 ```
 data/research/
-  README.md                 ← this file
-  raw/                      ← discovery dumps (unprocessed / legacy)
-  staging/                  ← normalized Source→…→Claim chains
+  README.md
+  catalogue_runtime_mappings.json   ← catalogue_service_id → runtime slug
+  raw/                              ← discovery dumps
+  staging/                          ← normalized Source→…→Claim chains
     schema.json
     batch-01/
-  publication/              ← reserved; empty until verification phase
+  publication/                      ← reserved; empty until verification phase
 ```
+
+## Runtime publish CLI
+
+```bash
+python scripts/publish_verified_knowledge.py --batch batch-01 --dry-run
+python scripts/publish_verified_knowledge.py --batch batch-01 --sync-claims --dry-run
+python scripts/publish_verified_knowledge.py --batch batch-01 --publish --commit
+```
+
+See `docs/RESEARCH_TO_RUNTIME_PIPELINE.md` and `docs/KNOWLEDGE_PUBLICATION_GATE.md`.
 
 ## Pipeline states (claim / fact)
 
