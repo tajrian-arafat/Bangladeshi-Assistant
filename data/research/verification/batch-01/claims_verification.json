@@ -1,0 +1,2230 @@
+{
+  "schema": "bda.research.verification.claims/1.0",
+  "batch_id": "batch-01-identity-civil-registration",
+  "claims": [
+    {
+      "claim_id": "civil-bdris-application-print::c-print",
+      "service_id": "civil-bdris-application-print",
+      "claim_text": "BDRIS provides an application print endpoint for applicants.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 1,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "BDRIS homepage exposes application-print menu routes. Direct GET to /application/print returned 403 from verifier network (bot gate). Endpoint existence supported; full page content not independently readable.",
+      "evidence": [
+        {
+          "source_id": "src-bdris-home",
+          "source_url": "https://www.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/bdris_www.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-death-verify::c-verify",
+      "service_id": "civil-birth-death-verify",
+      "claim_text": "Birth and death records can be verified via everify.bdris.gov.bd.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live everify.bdris.gov.bd serves Birth and Death Verification UI; linked from BDRIS home.",
+      "evidence": [
+        {
+          "source_id": "src-everify",
+          "source_url": "https://everify.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "evidence_location": "page title/body: Birth and Death Verification; BRN+DOB form"
+        },
+        {
+          "source_id": "src-bdris-home",
+          "source_url": "https://www.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/bdris_www.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-portal",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Birth registration applications are submitted via BDRIS at bdris.gov.bd; applicant chooses registration address type (birth place / permanent / present).",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 1,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Official portal path confirmed via homepage links. Direct application page GET returned 403 bot interstitial; form details (address-type chooser) not re-read.",
+      "evidence": [
+        {
+          "source_id": "src-bdris-home",
+          "source_url": "https://www.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/bdris_www.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-upload",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Only image files (.jpg/.jpeg/.png) may be uploaded; maximum 2 MB per file (application page).",
+      "staging_pipeline_status": "CROSS_CHECKED",
+      "information_class": "OFFICIAL",
+      "claim_type": "restriction",
+      "priority": 2,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "Birth application page returned 403; jpg/png/2MB upload constraint not independently confirmed (note: orgbdr feedback widget mentions jpg/png/pdf 2MB — different surface).",
+      "evidence": [
+        {
+          "source_id": "src-bdris-home",
+          "source_url": "https://www.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/bdris_www.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_BDRIS_APPLICATION_UPLOAD_CONSTRAINTS",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-fee-free45",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Registration within 45 days of birth is free of charge (domestic and abroad) per LGD-referenced fee schedule republished via MOFA mission notice.",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "ORGBDR Tier-1 fee page (Wayback 2026-04-05, content marked updated 4 Apr 2026) explicitly states free registration within 45 days. MOFA Tier-2 mission notice citing LGD letter matches. No material contradiction found in Tier 1–2 sources. No separate 10-year fee tier appears on the official schedule.",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        },
+        {
+          "source_id": "src-mofa-ankara-bdr",
+          "source_url": "https://www.ankara.mofa.gov.bd/en/site/page/Birth--and-Death-Registration--English-",
+          "authority_tier": 2,
+          "retrieved_via": "Wayback 2023-06-08 (live mission host unreachable)",
+          "cites": "LGD letter No-46.04.0000.101.22.001.21-278 dated 22 Feb 2023",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/mofa_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": "universal_for_service_variant",
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-fee-late",
+      "service_id": "civil-birth-registration",
+      "claim_text": "After 45 days to 5 years: BDT 25 (domestic) / USD 1 (abroad); after 5 years: BDT 50 (domestic) / USD 1 (abroad), per LGD-referenced schedule.",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "ORGBDR Tier-1 schedule states domestic BDT 25 (after 45 days to 5 years) and BDT 50 (after 5 years). MOFA notice adds abroad USD 1 for those bands. Claim's domestic+abroad structure is supported. Conflict with secondary BDT 500 after 10 years is treated separately — official schedule has no 10-year tier.",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        },
+        {
+          "source_id": "src-mofa-ankara-bdr",
+          "source_url": "https://www.ankara.mofa.gov.bd/en/site/page/Birth--and-Death-Registration--English-",
+          "authority_tier": 2,
+          "retrieved_via": "Wayback 2023-06-08 (live mission host unreachable)",
+          "cites": "LGD letter No-46.04.0000.101.22.001.21-278 dated 22 Feb 2023",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/mofa_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": "conditional_on_days_since_event_and_location",
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-fee-conflict-500",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Some secondary guides claim BDT 500 for registration after 10 years; this conflicts with the LGD-referenced schedule (BDT 50 after 5 years) and is not adopted as official.",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "PRACTICAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "REJECTED",
+      "reasoning": "Secondary guide claim of BDT 500 after 10 years is NOT supported by ORGBDR Tier-1 fee schedule (only free / 25 / 50 tiers). Classified as secondary misstatement / outdated guide, not an official fee variant. Do not publish as OFFICIAL.",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        },
+        {
+          "source_id": "src-legalclarity-birth",
+          "source_url": "https://legalclarity.org/bangladesh-birth-certificate-registration-and-verification/",
+          "authority_tier": 6,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": "conf-br-fee-10y",
+      "conflict_classification": "secondary_error_vs_official_schedule",
+      "knowledge_gap": null,
+      "do_not_promote_to_must": true,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-helpline",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Registrar General office operates call centre 16152; support emails support@bdris.gov.bd / help@bdris.gov.bd.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "office",
+      "priority": 2,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "Helpline ১৬১৫২ appears only inside an HTML comment on the live BDRIS homepage (not visibly published). support@bdris.gov.bd / help@bdris.gov.bd not found on retrieved homepage (only programmer_rg@lgd.gov.bd). Do not verify contact claim from commented markup.",
+      "evidence": [
+        {
+          "source_id": "src-bdris-home",
+          "source_url": "https://www.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/bdris_www.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_CURRENT_BDRIS_HELPLINE_PUBLICATION",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-docs-practical",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Guides commonly list hospital birth certificate/midwife certificate and parents' NID/birth certificates; treat as practical/conditional pending full official checklist PDF retrieval.",
+      "staging_pipeline_status": "EXTRACTED",
+      "information_class": "PRACTICAL",
+      "claim_type": "practical_tip",
+      "priority": 3,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "MOFA/LGD-referenced document list includes medical/birth-attendant proof and parents' NID/birth certificate variants — aligns with practical guides. Keep PRACTICAL; requirements are conditional by timing/applicant, not blanket MUST NEED.",
+      "evidence": [
+        {
+          "source_id": "src-mofa-ankara-bdr",
+          "source_url": "https://www.ankara.mofa.gov.bd/en/site/page/Birth--and-Death-Registration--English-",
+          "authority_tier": 2,
+          "retrieved_via": "Wayback 2023-06-08 (live mission host unreachable)",
+          "cites": "LGD letter No-46.04.0000.101.22.001.21-278 dated 22 Feb 2023",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/mofa_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": true,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration-copy::c-copy-fee",
+      "service_id": "civil-birth-registration-copy",
+      "claim_text": "Issuance of duplicate certificate copy in Bangla & English: BDT 50 domestic / USD 1 abroad; original certificate issuance free.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "ORGBDR item 7: duplicate certificate copy BDT 50 domestic. MOFA lists copy issuance TK 50 / USD 1 abroad. Original issuance after correction is free domestically (item 6) — claim's dual structure matches.",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        },
+        {
+          "source_id": "src-mofa-ankara-bdr",
+          "source_url": "https://www.ankara.mofa.gov.bd/en/site/page/Birth--and-Death-Registration--English-",
+          "authority_tier": 2,
+          "retrieved_via": "Wayback 2023-06-08 (live mission host unreachable)",
+          "cites": "LGD letter No-46.04.0000.101.22.001.21-278 dated 22 Feb 2023",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/mofa_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration-correction::c-corr-fee-dob",
+      "service_id": "civil-birth-registration-correction",
+      "claim_text": "Application fee for date-of-birth correction: BDT 100 domestic / USD 2 abroad (LGD-referenced schedule).",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "ORGBDR Tier-1 explicitly: DOB correction application fee BDT 100 (abroad USD 2 per MOFA).",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        },
+        {
+          "source_id": "src-mofa-ankara-bdr",
+          "source_url": "https://www.ankara.mofa.gov.bd/en/site/page/Birth--and-Death-Registration--English-",
+          "authority_tier": 2,
+          "retrieved_via": "Wayback 2023-06-08 (live mission host unreachable)",
+          "cites": "LGD letter No-46.04.0000.101.22.001.21-278 dated 22 Feb 2023",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/mofa_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration-correction::c-corr-fee-other",
+      "service_id": "civil-birth-registration-correction",
+      "claim_text": "Application fee for other information correction (name, parents, address, etc.): BDT 50 domestic / USD 1 abroad (LGD-referenced schedule).",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "ORGBDR Tier-1 explicitly distinguishes other-info correction at BDT 50 from DOB at 100. Secondary blogs claiming 100 for other corrections conflict with Tier-1; prefer ORGBDR.",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        },
+        {
+          "source_id": "src-mofa-ankara-bdr",
+          "source_url": "https://www.ankara.mofa.gov.bd/en/site/page/Birth--and-Death-Registration--English-",
+          "authority_tier": 2,
+          "retrieved_via": "Wayback 2023-06-08 (live mission host unreachable)",
+          "cites": "LGD letter No-46.04.0000.101.22.001.21-278 dated 22 Feb 2023",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/mofa_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": "conf-bdris-corr-other-fee",
+      "conflict_classification": "resolved_prefer_tier1_other_fee_50",
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-dup-cancel",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_text": "orgbdr.gov.bd lists cancellation of multiple birth certificates as a service linked through BDRIS login/application print flows.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 2,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Service listed on BDRIS; deep page not opened (403). ORGBDR live host unreachable.",
+      "evidence": [
+        {
+          "source_id": "src-bdris-home",
+          "source_url": "https://www.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/bdris_www.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-death-registration::c-dr-portal",
+      "service_id": "civil-death-registration",
+      "claim_text": "Death registration applications are available at bdris.gov.bd/dr/application.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 1,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Path confirmed on homepage; application page itself 403 to verifier.",
+      "evidence": [
+        {
+          "source_id": "src-bdris-home",
+          "source_url": "https://www.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/bdris_www.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-death-registration::c-dr-fees",
+      "service_id": "civil-death-registration",
+      "claim_text": "Death registration fee tiers mirror birth registration (free ≤45 days; BDT 25 after 45 days to 5 years; BDT 50 after 5 years) per LGD-referenced schedule.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "ORGBDR/MOFA schedule applies jointly to birth OR death registration fee tiers.",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        },
+        {
+          "source_id": "src-mofa-ankara-bdr",
+          "source_url": "https://www.ankara.mofa.gov.bd/en/site/page/Birth--and-Death-Registration--English-",
+          "authority_tier": 2,
+          "retrieved_via": "Wayback 2023-06-08 (live mission host unreachable)",
+          "cites": "LGD letter No-46.04.0000.101.22.001.21-278 dated 22 Feb 2023",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/mofa_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-death-registration-copy::c-copy-fee",
+      "service_id": "civil-death-registration-copy",
+      "claim_text": "Issuance of duplicate certificate copy in Bangla & English: BDT 50 domestic / USD 1 abroad; original certificate issuance free.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Same ORGBDR item 7 duplicate-copy fee applies to death certificates.",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        },
+        {
+          "source_id": "src-mofa-ankara-bdr",
+          "source_url": "https://www.ankara.mofa.gov.bd/en/site/page/Birth--and-Death-Registration--English-",
+          "authority_tier": 2,
+          "retrieved_via": "Wayback 2023-06-08 (live mission host unreachable)",
+          "cites": "LGD letter No-46.04.0000.101.22.001.21-278 dated 22 Feb 2023",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/mofa_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-corr-fee-dob",
+      "service_id": "civil-death-registration-correction",
+      "claim_text": "Application fee for date-of-birth correction: BDT 100 domestic / USD 2 abroad (LGD-referenced schedule).",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "ORGBDR schedule labels item 4 as 'জন্ম তারিখ সংশোধন' (birth-date correction). Death-record correction fee for date fields is not separately labeled on the same page; applying the DOB line to death corrections is reasonable but not explicitly worded for death. Keep partial until death-specific wording confirmed.",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_DEATH_CORRECTION_FEE_WORDING",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-corr-fee-other",
+      "service_id": "civil-death-registration-correction",
+      "claim_text": "Application fee for other information correction (name, parents, address, etc.): BDT 50 domestic / USD 1 abroad (LGD-referenced schedule).",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "ORGBDR item 5 covers correction of name/parents/address etc. other than date of birth at BDT 50; applies across the civil registration fee schedule.",
+      "evidence": [
+        {
+          "source_id": "src-orgbdr-fee-page",
+          "source_url": "https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "authority_tier": 1,
+          "responsible_body": "Office of the Registrar General (ORGBDR) / LGD",
+          "retrieved_via": "Wayback Machine capture 2026-04-05 (live origin unreachable from verifier network)",
+          "wayback_url": "https://web.archive.org/web/20260405044343/https://orgbdr.gov.bd/pages/static-pages/69cf48059d736d71f1a34c8c",
+          "content_updated_label": "শনিবার, ৪ এপ্রিল, ২০২৬",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/orgbdr_fee_wb.txt"
+        },
+        {
+          "source_id": "src-mofa-ankara-bdr",
+          "source_url": "https://www.ankara.mofa.gov.bd/en/site/page/Birth--and-Death-Registration--English-",
+          "authority_tier": 2,
+          "retrieved_via": "Wayback 2023-06-08 (live mission host unreachable)",
+          "cites": "LGD letter No-46.04.0000.101.22.001.21-278 dated 22 Feb 2023",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/mofa_wb.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": "conf-bdris-corr-other-fee",
+      "conflict_classification": "resolved_prefer_tier1_other_fee_50",
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-death-registration-duplicate-cancel::c-dup-cancel",
+      "service_id": "civil-death-registration-duplicate-cancel",
+      "claim_text": "orgbdr.gov.bd lists cancellation of multiple birth certificates as a service linked through BDRIS login/application print flows.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 2,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Listed on BDRIS death menus; full workflow page not independently opened.",
+      "evidence": [
+        {
+          "source_id": "src-bdris-home",
+          "source_url": "https://www.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/bdris_www.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-divorce-registration::c-div-portal",
+      "service_id": "civil-divorce-registration",
+      "claim_text": "CRVS Marriage & Divorce portal user manual covers divorce-related registrar workflows alongside marriage.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 2,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Portal branding and registrar manual cover divorce alongside marriage; citizen divorce path not fully walked.",
+      "evidence": [
+        {
+          "source_id": "src-marriage-portal",
+          "source_url": "https://marriage.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "notes": "Next.js shell loaded; title CRVS Marriage & Divorce"
+        },
+        {
+          "source_id": "src-marriage-manual",
+          "source_url": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "notes": "PDF 20 pages; registrar-use manual covering marriage/divorce portal workflows"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-marriage-registrar-hindu-list::c-reg-list",
+      "service_id": "civil-marriage-registrar-hindu-list",
+      "claim_text": "marriage.gov.bd provides registrar list/search functions for Muslim/Hindu registrars.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 2,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "Portal home loaded but registrar list/search UI for Hindu registrars not independently confirmed in retrieved markup.",
+      "evidence": [
+        {
+          "source_id": "src-marriage-portal",
+          "source_url": "https://marriage.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "notes": "Next.js shell loaded; title CRVS Marriage & Divorce"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_HINDU_REGISTRAR_LIST_EVIDENCE",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-marriage-registrar-muslim-list::c-reg-list",
+      "service_id": "civil-marriage-registrar-muslim-list",
+      "claim_text": "marriage.gov.bd provides registrar list/search functions for Muslim/Hindu registrars.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 2,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "Same limitation as Hindu registrar list — search function not confirmed beyond portal existence.",
+      "evidence": [
+        {
+          "source_id": "src-marriage-portal",
+          "source_url": "https://marriage.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "notes": "Next.js shell loaded; title CRVS Marriage & Divorce"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_MUSLIM_REGISTRAR_LIST_EVIDENCE",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-mm-mandatory",
+      "service_id": "civil-marriage-registration",
+      "claim_text": "Every marriage solemnized under Muslim law shall be registered under the 1974 Act.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "legal_basis",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live bdlaws text of Muslim Marriages and Divorces (Registration) Act, 1974 s.3.",
+      "evidence": [
+        {
+          "source_id": "src-law-muslim-marriage",
+          "source_url": "http://bdlaws.minlaw.gov.bd/act-details-476.html",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-01/source_snapshots/law_muslim.txt"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-hm-optional",
+      "service_id": "civil-marriage-registration",
+      "claim_text": "Hindu marriage registration is provided for under the 2012 Act (registration framework; widely described as optional vs Muslim mandatory).",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "legal_basis",
+      "priority": 1,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "Hindu Marriage Registration Act page responded 200 but text extraction failed (encoding). Optional-vs-mandatory characterization not independently confirmed.",
+      "evidence": [
+        {
+          "source_id": "src-law-hindu-marriage",
+          "source_url": "http://bdlaws.minlaw.gov.bd/act-1105.html?lang=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "notes": "Page retrieved but UTF-16 content could not be reliably decoded in verifier toolchain"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_HINDU_MARRIAGE_ACT_TEXT_EXTRACTION",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-portal",
+      "service_id": "civil-marriage-registration",
+      "claim_text": "CRVS Marriage & Divorce portal supports civilian registration/login and multi-step marriage registration forms; registrars manage applications (official user manual).",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 1,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "marriage.gov.bd returns 200 with CRVS Marriage & Divorce title; official PDF manual exists for registrar workflows. Civilian multi-step form details not fully extracted from JS-rendered UI in this pass.",
+      "evidence": [
+        {
+          "source_id": "src-marriage-portal",
+          "source_url": "https://marriage.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "notes": "Next.js shell loaded; title CRVS Marriage & Divorce"
+        },
+        {
+          "source_id": "src-marriage-manual",
+          "source_url": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "notes": "PDF 20 pages; registrar-use manual covering marriage/divorce portal workflows"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-report-30",
+      "service_id": "civil-marriage-registration",
+      "claim_text": "Where marriage is solemnized by someone other than the Nikah Registrar, the bridegroom must report within 30 days for registration.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "deadline",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Act requires reporting to Nikah Registrar within thirty days when marriage is solemnized by someone other than the Nikah Registrar — conditional, not universal MUST for all applicants.",
+      "evidence": [
+        {
+          "source_id": "src-law-muslim-marriage",
+          "source_url": "http://bdlaws.minlaw.gov.bd/act-details-476.html",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-01/source_snapshots/law_muslim.txt"
+        }
+      ],
+      "condition": "IF solemnized_by_person_other_than_nikah_registrar THEN report_within_30_days",
+      "applicability": "conditional",
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-dc-attestation-photocopy-exists",
+      "service_id": "dc-attestation-photocopy",
+      "claim_text": "Example official/LGI URL referenced: https://www.dhaka.gov.bd/en. Treat as geographic instance, not national fee/doc schedule.",
+      "staging_pipeline_status": "EXTRACTED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 3,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "Example URL did not respond successfully from verifier network; leave unverified.",
+      "evidence": [
+        {
+          "source_url": "https://www.dhaka.gov.bd/en",
+          "authority_tier": 3,
+          "live_http_status": null,
+          "retrieved_live_at": "2026-08-24"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_LGI_EXAMPLE_URL_REACHABILITY",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "dc-guardianship-certificate::c-dc-guardianship-certificate-exists",
+      "service_id": "dc-guardianship-certificate",
+      "claim_text": "Example official/LGI URL referenced: https://www.dhaka.gov.bd/en. Treat as geographic instance, not national fee/doc schedule.",
+      "staging_pipeline_status": "EXTRACTED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 3,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "Example URL did not respond successfully from verifier network; leave unverified.",
+      "evidence": [
+        {
+          "source_url": "https://www.dhaka.gov.bd/en",
+          "authority_tier": 3,
+          "live_http_status": null,
+          "retrieved_live_at": "2026-08-24"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_LGI_EXAMPLE_URL_REACHABILITY",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "identity-voter-slip-download::c-slip",
+      "service_id": "identity-voter-slip-download",
+      "claim_text": "Online account services include election-time vote centre related information.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "availability",
+      "priority": 3,
+      "verification_status": "VERIFIED",
+      "reasoning": "FAQ lists election-time vote-centre related information among online account services.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "local-character-certificate::c-local-character-certificate-exists",
+      "service_id": "local-character-certificate",
+      "claim_text": "Example official/LGI URL referenced: https://www.chandanpurup.gov.bd/new/application/citizen. Treat as geographic instance, not national fee/doc schedule.",
+      "staging_pipeline_status": "EXTRACTED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 3,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+      "evidence": [
+        {
+          "source_url": "https://www.chandanpurup.gov.bd/new/application/citizen",
+          "authority_tier": 3,
+          "live_http_status": 200,
+          "retrieved_live_at": "2026-08-24"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "local-death-certificate-union::c-local-death-certificate-union-exists",
+      "service_id": "local-death-certificate-union",
+      "claim_text": "Example official/LGI URL referenced: https://www.chandanpurup.gov.bd/new/application/citizen. Treat as geographic instance, not national fee/doc schedule.",
+      "staging_pipeline_status": "EXTRACTED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 3,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+      "evidence": [
+        {
+          "source_url": "https://www.chandanpurup.gov.bd/new/application/citizen",
+          "authority_tier": 3,
+          "live_http_status": 200,
+          "retrieved_live_at": "2026-08-24"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "local-death-certificate-union::c-local-death-vs-bdris",
+      "service_id": "local-death-certificate-union",
+      "claim_text": "Local union death certificate is distinct from BDRIS death registration (catalogue/finalization notes).",
+      "staging_pipeline_status": "EXTRACTED",
+      "information_class": "OFFICIAL",
+      "claim_type": "other",
+      "priority": 2,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "BDRIS death registration is a national CRVS pathway; union-level death certificates are a distinct LGI product conceptually. Direct comparative official notice not retrieved.",
+      "evidence": [
+        {
+          "source_id": "src-bdris-home",
+          "source_url": "https://www.bdris.gov.bd/",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/bdris_www.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "local-nationality-certificate::c-local-nationality-certificate-exists",
+      "service_id": "local-nationality-certificate",
+      "claim_text": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "staging_pipeline_status": "EXTRACTED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 3,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+      "evidence": [
+        {
+          "source_url": "https://tilokpursonod.gov.bd/select_certificate/",
+          "authority_tier": 3,
+          "live_http_status": 200,
+          "retrieved_live_at": "2026-08-24"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-local-passport-attestation-exists",
+      "service_id": "local-passport-attestation",
+      "claim_text": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "staging_pipeline_status": "EXTRACTED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 3,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+      "evidence": [
+        {
+          "source_url": "https://tilokpursonod.gov.bd/select_certificate/",
+          "authority_tier": 3,
+          "live_http_status": 200,
+          "retrieved_live_at": "2026-08-24"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "local-voter-transfer-attestation::c-local-voter-transfer-attestation-exists",
+      "service_id": "local-voter-transfer-attestation",
+      "claim_text": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "staging_pipeline_status": "EXTRACTED",
+      "information_class": "OFFICIAL",
+      "claim_type": "application_url",
+      "priority": 3,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+      "evidence": [
+        {
+          "source_url": "https://tilokpursonod.gov.bd/select_certificate/",
+          "authority_tier": 3,
+          "live_http_status": 200,
+          "retrieved_live_at": "2026-08-24"
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-channel",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 2,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ correction channels match.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-ssc-priority",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "conditional_document",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Conditional SSC requirement for name/DOB correction confirmed; not universal MUST NEED.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": "IF correcting_name_or_dob AND has_ssc_or_equivalent THEN require_ssc_certificate",
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-once",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "staging_pipeline_status": "CROSS_CHECKED",
+      "information_class": "OFFICIAL",
+      "claim_type": "restriction",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ one-time-per-field correction rule matches.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-fee-exists",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Tier-1 fee calculator confirms fees are payable and must be calculated in-portal. No static official amount schedule was retrieved from Tier 1–2 — do not hardcode amounts.",
+      "evidence": [
+        {
+          "source_id": "src-nid-fees",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/fees",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_fees.txt",
+          "live_http_status": 200
+        },
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": "conf-nid-card-info-correction-fee-amount",
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-fee-amount-news",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "PRACTICAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "News/blog cites VAT-inclusive BDT 230/345/460 tiers, but official Tier-1 surface only exposes a calculator without publishing those static amounts. High-risk fee amounts cannot be promoted to OFFICIAL/VERIFIED from Tier 5 alone.",
+      "evidence": [
+        {
+          "source_id": "src-sib-nid-fees",
+          "source_url": "https://ssitbari.com/ec-new-nid-correction-fee-bangladesh/",
+          "authority_tier": 5,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200
+        },
+        {
+          "source_id": "src-nid-fees",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/fees",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_fees.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": "conf-nid-card-info-correction-fee-amount",
+      "conflict_classification": "unresolved_static_amounts_vs_official_calculator",
+      "knowledge_gap": "MISSING_OFFICIAL_NID_FEE_SCHEDULE_STATIC",
+      "do_not_promote_to_must": true,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-claim-account::c-claim",
+      "service_id": "nid-claim-account",
+      "claim_text": "If registered as voter but no NID number received, use Claim Account with form number, date of birth, captcha and required info, then login to download NID copy.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 2,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ Claim Account instructions match.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-channel",
+      "service_id": "nid-combined-correction",
+      "claim_text": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 2,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ correction channels match.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-ssc-priority",
+      "service_id": "nid-combined-correction",
+      "claim_text": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "conditional_document",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Conditional SSC requirement for name/DOB correction confirmed; not universal MUST NEED.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": "IF correcting_name_or_dob AND has_ssc_or_equivalent THEN require_ssc_certificate",
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-once",
+      "service_id": "nid-combined-correction",
+      "claim_text": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "staging_pipeline_status": "CROSS_CHECKED",
+      "information_class": "OFFICIAL",
+      "claim_type": "restriction",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ one-time-per-field correction rule matches.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-fee-exists",
+      "service_id": "nid-combined-correction",
+      "claim_text": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Tier-1 fee calculator confirms fees are payable and must be calculated in-portal. No static official amount schedule was retrieved from Tier 1–2 — do not hardcode amounts.",
+      "evidence": [
+        {
+          "source_id": "src-nid-fees",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/fees",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_fees.txt",
+          "live_http_status": 200
+        },
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": "conf-nid-combined-correction-fee-amount",
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-fee-amount-news",
+      "service_id": "nid-combined-correction",
+      "claim_text": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "PRACTICAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "News/blog cites VAT-inclusive BDT 230/345/460 tiers, but official Tier-1 surface only exposes a calculator without publishing those static amounts. High-risk fee amounts cannot be promoted to OFFICIAL/VERIFIED from Tier 5 alone.",
+      "evidence": [
+        {
+          "source_id": "src-sib-nid-fees",
+          "source_url": "https://ssitbari.com/ec-new-nid-correction-fee-bangladesh/",
+          "authority_tier": 5,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200
+        },
+        {
+          "source_id": "src-nid-fees",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/fees",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_fees.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": "conf-nid-combined-correction-fee-amount",
+      "conflict_classification": "unresolved_static_amounts_vs_official_calculator",
+      "knowledge_gap": "MISSING_OFFICIAL_NID_FEE_SCHEDULE_STATIC",
+      "do_not_promote_to_must": true,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-download-copy::c-dl",
+      "service_id": "nid-download-copy",
+      "claim_text": "Citizens with online account can download NID card copy from the download menu after login.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 2,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ download-menu instruction matches.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-expatriate-registration::c-exp-otp",
+      "service_id": "nid-expatriate-registration",
+      "claim_text": "OTP and notifications for expatriate Bangladeshi applicants are sent via email only.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 2,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "Live FAQ discusses email/mobile messages generally but does not explicitly state OTP/notifications for expatriate applicants are email-only.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_EXPATRIATE_OTP_CHANNEL_RULE",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-expatriate-registration::c-exp-apply",
+      "service_id": "nid-expatriate-registration",
+      "claim_text": "Applicants abroad who missed registration may apply online any time (FAQ).",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "eligibility",
+      "priority": 2,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "FAQ includes expatriates in new-registration pathway; 'any time' wording not explicitly confirmed.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-fee-calculator::c-fee-types",
+      "service_id": "nid-fee-calculator",
+      "claim_text": "Fee calculator supports application types: NID card correction; other info correction; combined correction; reissue — plus delivery type.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live Tier-1 calculator dropdown options match the claimed application types.",
+      "evidence": [
+        {
+          "source_id": "src-nid-fees",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/fees",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_fees.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-age10",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "Citizens aged 10 years or more who are not yet registered as voters may apply online and provide biometrics at the relevant Upazila/Thana election office.",
+      "staging_pipeline_status": "CROSS_CHECKED",
+      "information_class": "OFFICIAL",
+      "claim_type": "eligibility",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ explicitly states age 10+ unregistered citizens may apply online then biometrics.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-voter18",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "If age is 18 years on or before 1 January of the current year, the applicant will be included in the voter list.",
+      "staging_pipeline_status": "CROSS_CHECKED",
+      "information_class": "OFFICIAL",
+      "claim_type": "eligibility",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ voter-list inclusion rule matches claim.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-docs",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "At biometric appointment, applicants need printed online form, age-proof document(s), address proof, and other supporting IDs as applicable.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "document",
+      "priority": 1,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "FAQ lists printed form and age-proof documents at biometric appointment. Full MUST NEED matrix (address proof variants) partially truncated in extract — treat as partial; documents are appointment-conditional not universal online-only MUST.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": "IF attending_biometric_appointment THEN bring_printed_form_and_age_proof_etc",
+      "applicability": "conditional",
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-duplicate-crime",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "Re-applying when already registered is a punishable offence.",
+      "staging_pipeline_status": "CROSS_CHECKED",
+      "information_class": "OFFICIAL",
+      "claim_type": "restriction",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ states re-application when already registered is a punishable offence.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-ssc-priority",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "For name/age, SSC or equivalent certificate gets priority when the person is SSC-qualified.",
+      "staging_pipeline_status": "CROSS_CHECKED",
+      "information_class": "OFFICIAL",
+      "claim_type": "conditional_document",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "FAQ states SSC priority when applicant is SSC-qualified — conditional rule, not universal MUST.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": "IF minimum_qualification_ssc_or_equivalent THEN ssc_certificate_required_for_name_dob",
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-online-account-registration::c-acct-reg",
+      "service_id": "nid-online-account-registration",
+      "claim_text": "Voters with NID can register an online account using card number, active mobile/email, date of birth, and address-related info.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "eligibility",
+      "priority": 2,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ account registration requirements match.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-online-account-registration::c-acct-wallet",
+      "service_id": "nid-online-account-registration",
+      "claim_text": "After registration, download NID Wallet app and complete face verification to log in.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 3,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ instructs NID Wallet download + face verification after registration.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-channel",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 2,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ correction channels match.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-ssc-priority",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "conditional_document",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Conditional SSC requirement for name/DOB correction confirmed; not universal MUST NEED.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": "IF correcting_name_or_dob AND has_ssc_or_equivalent THEN require_ssc_certificate",
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-once",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "staging_pipeline_status": "CROSS_CHECKED",
+      "information_class": "OFFICIAL",
+      "claim_type": "restriction",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ one-time-per-field correction rule matches.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-fee-exists",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Tier-1 fee calculator confirms fees are payable and must be calculated in-portal. No static official amount schedule was retrieved from Tier 1–2 — do not hardcode amounts.",
+      "evidence": [
+        {
+          "source_id": "src-nid-fees",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/fees",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_fees.txt",
+          "live_http_status": 200
+        },
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": "conf-nid-other-info-correction-fee-amount",
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-fee-amount-news",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "staging_pipeline_status": "CONFLICTING",
+      "information_class": "PRACTICAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "UNVERIFIED",
+      "reasoning": "News/blog cites VAT-inclusive BDT 230/345/460 tiers, but official Tier-1 surface only exposes a calculator without publishing those static amounts. High-risk fee amounts cannot be promoted to OFFICIAL/VERIFIED from Tier 5 alone.",
+      "evidence": [
+        {
+          "source_id": "src-sib-nid-fees",
+          "source_url": "https://ssitbari.com/ec-new-nid-correction-fee-bangladesh/",
+          "authority_tier": 5,
+          "retrieved_live_at": "2026-08-24",
+          "live_http_status": 200
+        },
+        {
+          "source_id": "src-nid-fees",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/fees",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_fees.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": "conf-nid-other-info-correction-fee-amount",
+      "conflict_classification": "unresolved_static_amounts_vs_official_calculator",
+      "knowledge_gap": "MISSING_OFFICIAL_NID_FEE_SCHEDULE_STATIC",
+      "do_not_promote_to_must": true,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-photo-signature-appointment::c-photo",
+      "service_id": "nid-photo-signature-appointment",
+      "claim_text": "Photo/signature change appointment is listed among online account services; unclear photo may require in-person application at National Identity Registration Wing.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 2,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "FAQ lists photo/signature appointment service; 'unclear photo may require in-person' nuance not fully quoted.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-photo-signature-appointment::c-sign-once",
+      "service_id": "nid-photo-signature-appointment",
+      "claim_text": "Signature change requires sample with acceptable proof; signature may be changed only once.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "restriction",
+      "priority": 2,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ signature-change-once rule matches.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-online",
+      "service_id": "nid-reissue-lost",
+      "claim_text": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 2,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ lost-card reissue steps match.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-law",
+      "service_id": "nid-reissue-lost",
+      "claim_text": "If NID is lost or damaged, citizen may apply in prescribed manner with prescribed fees for a fresh card.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "legal_basis",
+      "priority": 1,
+      "verification_status": "PARTIALLY_VERIFIED",
+      "reasoning": "FAQ confirms lost/damaged card reissue process with prescribed fees, but the claim's broader legal formulation was not matched to a specific Act/section text in this pass.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": "MISSING_NID_REISSUE_STATUTORY_CITATION",
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-no-combo",
+      "service_id": "nid-reissue-lost",
+      "claim_text": "Lost-card reissue and correction cannot be done together; reissue first.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "restriction",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ forbids simultaneous lost-card reissue and correction.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-fee",
+      "service_id": "nid-reissue-lost",
+      "claim_text": "Fees apply; use official fee calculator (application type: reissue).",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "fee",
+      "priority": 1,
+      "verification_status": "VERIFIED",
+      "reasoning": "FAQ explicitly requires fee; calculator includes reissue type.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        },
+        {
+          "source_id": "src-nid-fees",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/fees",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_fees.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": null,
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    },
+    {
+      "claim_id": "nid-voter-area-change::c-f13",
+      "service_id": "nid-voter-area-change",
+      "claim_text": "For change of residence, apply with Form 13 at the Upazila/Thana election office of the current residence area. Spelling/detail fixes within same voter area use ordinary correction form.",
+      "staging_pipeline_status": "NORMALIZED",
+      "information_class": "OFFICIAL",
+      "claim_type": "procedure_step",
+      "priority": 2,
+      "verification_status": "VERIFIED",
+      "reasoning": "Live FAQ Form 13 residence-area change rule matches; spelling-only changes use ordinary correction form.",
+      "evidence": [
+        {
+          "source_id": "src-nid-faq",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "authority_tier": 1,
+          "retrieved_live_at": "2026-08-24",
+          "snapshot": "data/research/verification/batch-01/source_snapshots/nid_faq.txt",
+          "live_http_status": 200
+        }
+      ],
+      "condition": "IF change_of_residence_area THEN apply_form_13_at_current_upazila_thana_election_office",
+      "applicability": null,
+      "conflict_id": null,
+      "conflict_classification": null,
+      "knowledge_gap": null,
+      "do_not_promote_to_must": false,
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-24T19:28:51.522618+00:00",
+      "publication_status": "STAGING_ONLY"
+    }
+  ]
+}

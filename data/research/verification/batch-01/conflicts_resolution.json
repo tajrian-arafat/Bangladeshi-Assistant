@@ -1,0 +1,39 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "conf-br-fee-10y",
+      "resolution_status": "RESOLVED",
+      "classification": "secondary_error_vs_official_schedule",
+      "outcome": "Official ORGBDR schedule has free/25/50 tiers only. BDT 500 after 10 years REJECTED for official use.",
+      "blocks_official_publication": false
+    },
+    {
+      "conflict_id": "conf-bdris-corr-other-fee",
+      "resolution_status": "RESOLVED",
+      "classification": "resolved_prefer_tier1_other_fee_50",
+      "outcome": "ORGBDR Tier-1: other-info correction BDT 50; DOB BDT 100.",
+      "blocks_official_publication": false
+    },
+    {
+      "conflict_id": "conf-nid-card-info-correction-fee-amount",
+      "resolution_status": "UNRESOLVED",
+      "classification": "unresolved_static_amounts_vs_official_calculator",
+      "outcome": "Use official calculator; do not publish news static amounts as OFFICIAL.",
+      "blocks_official_publication": true
+    },
+    {
+      "conflict_id": "conf-nid-combined-correction-fee-amount",
+      "resolution_status": "UNRESOLVED",
+      "classification": "unresolved_static_amounts_vs_official_calculator",
+      "outcome": "Same as card-info correction fee conflict.",
+      "blocks_official_publication": true
+    },
+    {
+      "conflict_id": "conf-nid-other-info-correction-fee-amount",
+      "resolution_status": "UNRESOLVED",
+      "classification": "unresolved_static_amounts_vs_official_calculator",
+      "outcome": "Same as card-info correction fee conflict.",
+      "blocks_official_publication": true
+    }
+  ]
+}

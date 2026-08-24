@@ -28,5 +28,44 @@
   "verified_claims_emitted": 0,
   "raw_discovery_path": "data/research/raw/batch-01",
   "staging_path": "data/research/staging/batch-01",
-  "legacy_discovery_path_note": "data/knowledge/batch-01 is a legacy discovery dump and must not be treated as verified SoT. Prefer data/research/staging/batch-01."
+  "legacy_discovery_path_note": "data/knowledge/batch-01 is a legacy discovery dump and must not be treated as verified SoT. Prefer data/research/staging/batch-01.",
+  "independent_verification": {
+    "batch_id": "batch-01-identity-civil-registration",
+    "layer": "research/verification",
+    "publication_status": "STAGING_ONLY",
+    "published": false,
+    "verifier": "cursor-cloud-agent",
+    "verified_at": "2026-08-24T19:28:51.522618+00:00",
+    "total_claims": 69,
+    "status_counts": {
+      "PARTIALLY_VERIFIED": 19,
+      "VERIFIED": 38,
+      "UNVERIFIED": 11,
+      "REJECTED": 1
+    },
+    "official_claims_verified": 38,
+    "practical_claims": 5,
+    "claims_requiring_manual_review": 30,
+    "conflicts_resolved": 2,
+    "conflicts_unresolved": 3,
+    "knowledge_gaps_created": 10,
+    "services_green": 14,
+    "services_yellow": 18,
+    "services_red": 2,
+    "evidence_coverage_notes": "Primary live Tier-1: services.nidw.gov.bd FAQ/fees; www.bdris.gov.bd home; everify.bdris.gov.bd; bdlaws Muslim Marriage Act; marriage.gov.bd (+ manual PDF). Tier-1 ORGBDR fee page via Wayback 2026-04-05. MOFA fee notice via Wayback 2023-06. Bright Data unlocker unavailable (401). Several BDRIS deep pages 403.",
+    "verification_coverage": "69/69 claims assigned a primary verification status",
+    "main_limitations": [
+      "BDRIS application deep pages blocked (403) — portal claims often PARTIAL",
+      "Live ORGBDR/MOFA hosts unreachable — used Wayback for fee schedule",
+      "NID static fee amounts not on official calculator page",
+      "Hindu Marriage Act text extraction failed",
+      "No claims published to runtime Fee/Checklist tables"
+    ]
+  },
+  "independent_verification_status_counts": {
+    "PARTIALLY_VERIFIED": 19,
+    "VERIFIED": 38,
+    "UNVERIFIED": 11,
+    "REJECTED": 1
+  }
 }

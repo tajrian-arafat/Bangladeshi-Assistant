@@ -46,9 +46,13 @@ Finding a source does **not** make a claim `VERIFIED`.
 ## Pipeline status
 
 `DISCOVERED` → `EXTRACTED` → `NORMALIZED` → `CROSS_CHECKED` → `PENDING_REVIEW` → `VERIFIED`  
-Also: `CONFLICTING`, `OUTDATED`, `REJECTED`
+Also: `PARTIALLY_VERIFIED`, `CONFLICTING`, `OUTDATED`, `REJECTED`, `UNVERIFIED`
 
 **VERIFIED** means: evidence passed project verification rules and is approved for official publication — not merely that a URL was found.
+
+**PARTIALLY_VERIFIED** means: some part of the claim is supported, but the complete claim cannot yet be established for authoritative publication.
+
+**UNVERIFIED** means: insufficient evidence after independent inspection.
 
 ---
 

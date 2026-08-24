@@ -30,8 +30,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-print",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "BDRIS homepage exposes application-print menu routes. Direct GET to /application/print returned 403 from verifier network (bot gate). Endpoint existence supported; full page content not independently readable.",
+        "priority": 1,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-birth-death-verify::c-verify",
@@ -63,8 +75,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-verify",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live everify.bdris.gov.bd serves Birth and Death Verification UI; linked from BDRIS home.",
+        "priority": 1,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-birth-registration::c-br-portal",
@@ -93,8 +117,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-portal",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Official portal path confirmed via homepage links. Direct application page GET returned 403 bot interstitial; form details (address-type chooser) not re-read.",
+        "priority": 1,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-birth-registration::c-br-upload",
@@ -123,8 +159,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-upload",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Birth application page returned 403; jpg/png/2MB upload constraint not independently confirmed (note: orgbdr feedback widget mentions jpg/png/pdf 2MB — different surface).",
+        "priority": 2,
+        "claim_type": "restriction",
+        "knowledge_gap": "MISSING_BDRIS_APPLICATION_UPLOAD_CONSTRAINTS",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-birth-registration::c-br-fee-free45",
@@ -156,8 +204,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-fee-free45",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "ORGBDR Tier-1 fee page (Wayback 2026-04-05, content marked updated 4 Apr 2026) explicitly states free registration within 45 days. MOFA Tier-2 mission notice citing LGD letter matches. No material contradiction found in Tier 1–2 sources. No separate 10-year fee tier appears on the official schedule.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-birth-registration::c-br-fee-late",
@@ -189,8 +249,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-fee-late",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "ORGBDR Tier-1 schedule states domestic BDT 25 (after 45 days to 5 years) and BDT 50 (after 5 years). MOFA notice adds abroad USD 1 for those bands. Claim's domestic+abroad structure is supported. Conflict with secondary BDT 500 after 10 years is treated separately — official schedule has no 10-year tier.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-birth-registration::c-br-fee-conflict-500",
@@ -219,8 +291,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-fee-conflict-500",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "REJECTED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Secondary guide claim of BDT 500 after 10 years is NOT supported by ORGBDR Tier-1 fee schedule (only free / 25 / 50 tiers). Classified as secondary misstatement / outdated guide, not an official fee variant. Do not publish as OFFICIAL.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": "secondary_error_vs_official_schedule"
+      },
+      "suggested_pipeline_status": "REJECTED"
     },
     {
       "claim_id": "civil-birth-registration::c-br-helpline",
@@ -249,8 +333,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-helpline",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Helpline ১৬১৫২ appears only inside an HTML comment on the live BDRIS homepage (not visibly published). support@bdris.gov.bd / help@bdris.gov.bd not found on retrieved homepage (only programmer_rg@lgd.gov.bd). Do not verify contact claim from commented markup.",
+        "priority": 2,
+        "claim_type": "office",
+        "knowledge_gap": "MISSING_CURRENT_BDRIS_HELPLINE_PUBLICATION",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-birth-registration::c-br-docs-practical",
@@ -282,8 +378,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-docs-practical",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "MOFA/LGD-referenced document list includes medical/birth-attendant proof and parents' NID/birth certificate variants — aligns with practical guides. Keep PRACTICAL; requirements are conditional by timing/applicant, not blanket MUST NEED.",
+        "priority": 3,
+        "claim_type": "practical_tip",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-birth-registration-copy::c-copy-fee",
@@ -315,8 +423,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-copy-fee",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "ORGBDR item 7: duplicate certificate copy BDT 50 domestic. MOFA lists copy issuance TK 50 / USD 1 abroad. Original issuance after correction is free domestically (item 6) — claim's dual structure matches.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-birth-registration-correction::c-corr-fee-dob",
@@ -348,8 +468,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-corr-fee-dob",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "ORGBDR Tier-1 explicitly: DOB correction application fee BDT 100 (abroad USD 2 per MOFA).",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-birth-registration-correction::c-corr-fee-other",
@@ -381,8 +513,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-corr-fee-other",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "ORGBDR Tier-1 explicitly distinguishes other-info correction at BDT 50 from DOB at 100. Secondary blogs claiming 100 for other corrections conflict with Tier-1; prefer ORGBDR.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": "resolved_prefer_tier1_other_fee_50"
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-birth-registration-duplicate-cancel::c-dup-cancel",
@@ -411,8 +555,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-dup-cancel",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Service listed on BDRIS; deep page not opened (403). ORGBDR live host unreachable.",
+        "priority": 2,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-death-registration::c-dr-portal",
@@ -441,8 +597,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-dr-portal",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Path confirmed on homepage; application page itself 403 to verifier.",
+        "priority": 1,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-death-registration::c-dr-fees",
@@ -474,8 +642,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-dr-fees",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "ORGBDR/MOFA schedule applies jointly to birth OR death registration fee tiers.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-death-registration-copy::c-copy-fee",
@@ -507,8 +687,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-copy-fee",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Same ORGBDR item 7 duplicate-copy fee applies to death certificates.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-death-registration-correction::c-corr-fee-dob",
@@ -540,8 +732,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-corr-fee-dob",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "ORGBDR schedule labels item 4 as 'জন্ম তারিখ সংশোধন' (birth-date correction). Death-record correction fee for date fields is not separately labeled on the same page; applying the DOB line to death corrections is reasonable but not explicitly worded for death. Keep partial until death-specific wording confirmed.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": "MISSING_DEATH_CORRECTION_FEE_WORDING",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-death-registration-correction::c-corr-fee-other",
@@ -573,8 +777,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-corr-fee-other",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "ORGBDR item 5 covers correction of name/parents/address etc. other than date of birth at BDT 50; applies across the civil registration fee schedule.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": "resolved_prefer_tier1_other_fee_50"
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-death-registration-duplicate-cancel::c-dup-cancel",
@@ -603,8 +819,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-dup-cancel",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Listed on BDRIS death menus; full workflow page not independently opened.",
+        "priority": 2,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-divorce-registration::c-div-portal",
@@ -633,8 +861,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-div-portal",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Portal branding and registrar manual cover divorce alongside marriage; citizen divorce path not fully walked.",
+        "priority": 2,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-marriage-registrar-hindu-list::c-reg-list",
@@ -663,8 +903,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-reg-list",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Portal home loaded but registrar list/search UI for Hindu registrars not independently confirmed in retrieved markup.",
+        "priority": 2,
+        "claim_type": "application_url",
+        "knowledge_gap": "MISSING_HINDU_REGISTRAR_LIST_EVIDENCE",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-marriage-registrar-muslim-list::c-reg-list",
@@ -693,8 +945,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-reg-list",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Same limitation as Hindu registrar list — search function not confirmed beyond portal existence.",
+        "priority": 2,
+        "claim_type": "application_url",
+        "knowledge_gap": "MISSING_MUSLIM_REGISTRAR_LIST_EVIDENCE",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-marriage-registration::c-mm-mandatory",
@@ -723,8 +987,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-mm-mandatory",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live bdlaws text of Muslim Marriages and Divorces (Registration) Act, 1974 s.3.",
+        "priority": 1,
+        "claim_type": "legal_basis",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "civil-marriage-registration::c-hm-optional",
@@ -753,8 +1029,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-hm-optional",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Hindu Marriage Registration Act page responded 200 but text extraction failed (encoding). Optional-vs-mandatory characterization not independently confirmed.",
+        "priority": 1,
+        "claim_type": "legal_basis",
+        "knowledge_gap": "MISSING_HINDU_MARRIAGE_ACT_TEXT_EXTRACTION",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-marriage-registration::c-portal",
@@ -786,8 +1074,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-portal",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "marriage.gov.bd returns 200 with CRVS Marriage & Divorce title; official PDF manual exists for registrar workflows. Civilian multi-step form details not fully extracted from JS-rendered UI in this pass.",
+        "priority": 1,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "civil-marriage-registration::c-report-30",
@@ -816,8 +1116,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-report-30",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Act requires reporting to Nikah Registrar within thirty days when marriage is solemnized by someone other than the Nikah Registrar — conditional, not universal MUST for all applicants.",
+        "priority": 1,
+        "claim_type": "deadline",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "dc-attestation-photocopy::c-dc-attestation-photocopy-exists",
@@ -842,8 +1154,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-dc-attestation-photocopy-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Example URL did not respond successfully from verifier network; leave unverified.",
+        "priority": 3,
+        "claim_type": "application_url",
+        "knowledge_gap": "MISSING_LGI_EXAMPLE_URL_REACHABILITY",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "dc-guardianship-certificate::c-dc-guardianship-certificate-exists",
@@ -868,8 +1192,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-dc-guardianship-certificate-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Example URL did not respond successfully from verifier network; leave unverified.",
+        "priority": 3,
+        "claim_type": "application_url",
+        "knowledge_gap": "MISSING_LGI_EXAMPLE_URL_REACHABILITY",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "identity-voter-slip-download::c-slip",
@@ -898,8 +1234,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-slip",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "FAQ lists election-time vote-centre related information among online account services.",
+        "priority": 3,
+        "claim_type": "availability",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "local-character-certificate::c-local-character-certificate-exists",
@@ -924,8 +1272,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-character-certificate-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+        "priority": 3,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "local-death-certificate-union::c-local-death-certificate-union-exists",
@@ -950,8 +1310,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-death-certificate-union-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+        "priority": 3,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "local-death-certificate-union::c-local-death-vs-bdris",
@@ -974,8 +1346,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-death-vs-bdris",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "BDRIS death registration is a national CRVS pathway; union-level death certificates are a distinct LGI product conceptually. Direct comparative official notice not retrieved.",
+        "priority": 2,
+        "claim_type": "other",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "local-nationality-certificate::c-local-nationality-certificate-exists",
@@ -1000,8 +1384,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-nationality-certificate-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+        "priority": 3,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "local-passport-attestation::c-local-passport-attestation-exists",
@@ -1026,8 +1422,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-passport-attestation-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+        "priority": 3,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "local-voter-transfer-attestation::c-local-voter-transfer-attestation-exists",
@@ -1052,8 +1460,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-voter-transfer-attestation-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Example LGI URL is live and related to citizen certificate applications. Claim correctly frames as geographic instance, not national fee/doc schedule. Service-specific page mapping not exhaustively proven.",
+        "priority": 3,
+        "claim_type": "application_url",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "nid-card-info-correction::c-nid-card-info-correction-channel",
@@ -1082,8 +1502,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-channel",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ correction channels match.",
+        "priority": 2,
+        "claim_type": "procedure_step",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-card-info-correction::c-nid-card-info-correction-ssc-priority",
@@ -1112,8 +1544,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-ssc-priority",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Conditional SSC requirement for name/DOB correction confirmed; not universal MUST NEED.",
+        "priority": 1,
+        "claim_type": "conditional_document",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-card-info-correction::c-nid-card-info-correction-once",
@@ -1142,8 +1586,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-once",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ one-time-per-field correction rule matches.",
+        "priority": 1,
+        "claim_type": "restriction",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-card-info-correction::c-nid-card-info-correction-fee-exists",
@@ -1175,8 +1631,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-fee-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Tier-1 fee calculator confirms fees are payable and must be calculated in-portal. No static official amount schedule was retrieved from Tier 1–2 — do not hardcode amounts.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-card-info-correction::c-nid-card-info-correction-fee-amount-news",
@@ -1205,8 +1673,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-fee-amount-news",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "News/blog cites VAT-inclusive BDT 230/345/460 tiers, but official Tier-1 surface only exposes a calculator without publishing those static amounts. High-risk fee amounts cannot be promoted to OFFICIAL/VERIFIED from Tier 5 alone.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": "MISSING_OFFICIAL_NID_FEE_SCHEDULE_STATIC",
+        "conflict_classification": "unresolved_static_amounts_vs_official_calculator"
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "nid-claim-account::c-claim",
@@ -1235,8 +1715,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-claim",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ Claim Account instructions match.",
+        "priority": 2,
+        "claim_type": "procedure_step",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-combined-correction::c-nid-combined-correction-channel",
@@ -1265,8 +1757,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-channel",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ correction channels match.",
+        "priority": 2,
+        "claim_type": "procedure_step",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-combined-correction::c-nid-combined-correction-ssc-priority",
@@ -1295,8 +1799,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-ssc-priority",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Conditional SSC requirement for name/DOB correction confirmed; not universal MUST NEED.",
+        "priority": 1,
+        "claim_type": "conditional_document",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-combined-correction::c-nid-combined-correction-once",
@@ -1325,8 +1841,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-once",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ one-time-per-field correction rule matches.",
+        "priority": 1,
+        "claim_type": "restriction",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-combined-correction::c-nid-combined-correction-fee-exists",
@@ -1358,8 +1886,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-fee-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Tier-1 fee calculator confirms fees are payable and must be calculated in-portal. No static official amount schedule was retrieved from Tier 1–2 — do not hardcode amounts.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-combined-correction::c-nid-combined-correction-fee-amount-news",
@@ -1388,8 +1928,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-fee-amount-news",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "News/blog cites VAT-inclusive BDT 230/345/460 tiers, but official Tier-1 surface only exposes a calculator without publishing those static amounts. High-risk fee amounts cannot be promoted to OFFICIAL/VERIFIED from Tier 5 alone.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": "MISSING_OFFICIAL_NID_FEE_SCHEDULE_STATIC",
+        "conflict_classification": "unresolved_static_amounts_vs_official_calculator"
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "nid-download-copy::c-dl",
@@ -1421,8 +1973,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-dl",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ download-menu instruction matches.",
+        "priority": 2,
+        "claim_type": "procedure_step",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-expatriate-registration::c-exp-otp",
@@ -1451,8 +2015,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-exp-otp",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ discusses email/mobile messages generally but does not explicitly state OTP/notifications for expatriate applicants are email-only.",
+        "priority": 2,
+        "claim_type": "procedure_step",
+        "knowledge_gap": "MISSING_EXPATRIATE_OTP_CHANNEL_RULE",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "nid-expatriate-registration::c-exp-apply",
@@ -1481,8 +2057,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-exp-apply",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "FAQ includes expatriates in new-registration pathway; 'any time' wording not explicitly confirmed.",
+        "priority": 2,
+        "claim_type": "eligibility",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "nid-fee-calculator::c-fee-types",
@@ -1511,8 +2099,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-fee-types",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live Tier-1 calculator dropdown options match the claimed application types.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-new-voter-registration::c-nid-new-age10",
@@ -1541,8 +2141,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-new-age10",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ explicitly states age 10+ unregistered citizens may apply online then biometrics.",
+        "priority": 1,
+        "claim_type": "eligibility",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-new-voter-registration::c-nid-new-voter18",
@@ -1571,8 +2183,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-new-voter18",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ voter-list inclusion rule matches claim.",
+        "priority": 1,
+        "claim_type": "eligibility",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-new-voter-registration::c-nid-new-docs",
@@ -1601,8 +2225,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-new-docs",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "FAQ lists printed form and age-proof documents at biometric appointment. Full MUST NEED matrix (address proof variants) partially truncated in extract — treat as partial; documents are appointment-conditional not universal online-only MUST.",
+        "priority": 1,
+        "claim_type": "document",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "nid-new-voter-registration::c-nid-new-duplicate-crime",
@@ -1631,8 +2267,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-new-duplicate-crime",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ states re-application when already registered is a punishable offence.",
+        "priority": 1,
+        "claim_type": "restriction",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-new-voter-registration::c-nid-ssc-priority",
@@ -1664,8 +2312,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-ssc-priority",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "FAQ states SSC priority when applicant is SSC-qualified — conditional rule, not universal MUST.",
+        "priority": 1,
+        "claim_type": "conditional_document",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-online-account-registration::c-acct-reg",
@@ -1694,8 +2354,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-acct-reg",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ account registration requirements match.",
+        "priority": 2,
+        "claim_type": "eligibility",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-online-account-registration::c-acct-wallet",
@@ -1724,8 +2396,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-acct-wallet",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ instructs NID Wallet download + face verification after registration.",
+        "priority": 3,
+        "claim_type": "procedure_step",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-other-info-correction::c-nid-other-info-correction-channel",
@@ -1754,8 +2438,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-channel",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ correction channels match.",
+        "priority": 2,
+        "claim_type": "procedure_step",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-other-info-correction::c-nid-other-info-correction-ssc-priority",
@@ -1784,8 +2480,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-ssc-priority",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Conditional SSC requirement for name/DOB correction confirmed; not universal MUST NEED.",
+        "priority": 1,
+        "claim_type": "conditional_document",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-other-info-correction::c-nid-other-info-correction-once",
@@ -1814,8 +2522,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-once",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ one-time-per-field correction rule matches.",
+        "priority": 1,
+        "claim_type": "restriction",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-other-info-correction::c-nid-other-info-correction-fee-exists",
@@ -1847,8 +2567,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-fee-exists",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Tier-1 fee calculator confirms fees are payable and must be calculated in-portal. No static official amount schedule was retrieved from Tier 1–2 — do not hardcode amounts.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-other-info-correction::c-nid-other-info-correction-fee-amount-news",
@@ -1877,8 +2609,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-fee-amount-news",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "UNVERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "News/blog cites VAT-inclusive BDT 230/345/460 tiers, but official Tier-1 surface only exposes a calculator without publishing those static amounts. High-risk fee amounts cannot be promoted to OFFICIAL/VERIFIED from Tier 5 alone.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": "MISSING_OFFICIAL_NID_FEE_SCHEDULE_STATIC",
+        "conflict_classification": "unresolved_static_amounts_vs_official_calculator"
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "nid-photo-signature-appointment::c-photo",
@@ -1907,8 +2651,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-photo",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "FAQ lists photo/signature appointment service; 'unclear photo may require in-person' nuance not fully quoted.",
+        "priority": 2,
+        "claim_type": "procedure_step",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "nid-photo-signature-appointment::c-sign-once",
@@ -1937,8 +2693,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-sign-once",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ signature-change-once rule matches.",
+        "priority": 2,
+        "claim_type": "restriction",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-reissue-lost::c-reissue-online",
@@ -1967,8 +2735,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-reissue-online",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ lost-card reissue steps match.",
+        "priority": 2,
+        "claim_type": "procedure_step",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-reissue-lost::c-reissue-law",
@@ -1997,8 +2777,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-reissue-law",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "PARTIALLY_VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "FAQ confirms lost/damaged card reissue process with prescribed fees, but the claim's broader legal formulation was not matched to a specific Act/section text in this pass.",
+        "priority": 1,
+        "claim_type": "legal_basis",
+        "knowledge_gap": "MISSING_NID_REISSUE_STATUTORY_CITATION",
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "PENDING_REVIEW"
     },
     {
       "claim_id": "nid-reissue-lost::c-reissue-no-combo",
@@ -2027,8 +2819,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-reissue-no-combo",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ forbids simultaneous lost-card reissue and correction.",
+        "priority": 1,
+        "claim_type": "restriction",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-reissue-lost::c-reissue-fee",
@@ -2060,8 +2864,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-reissue-fee",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "FAQ explicitly requires fee; calculator includes reissue type.",
+        "priority": 1,
+        "claim_type": "fee",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     },
     {
       "claim_id": "nid-voter-area-change::c-f13",
@@ -2090,8 +2906,20 @@
         "raw_pointer": "data/research/raw/batch-01/claims.json#c-f13",
         "verifier_id": null,
         "verified_at": null,
-        "publication_status": "STAGING_ONLY"
-      }
+        "publication_status": "STAGING_ONLY",
+        "independent_verified_at": "2026-08-24T19:28:51.522618+00:00"
+      },
+      "independent_verification_status": "VERIFIED",
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T19:28:51.522618+00:00",
+        "reasoning": "Live FAQ Form 13 residence-area change rule matches; spelling-only changes use ordinary correction form.",
+        "priority": 2,
+        "claim_type": "procedure_step",
+        "knowledge_gap": null,
+        "conflict_classification": null
+      },
+      "suggested_pipeline_status": "VERIFIED"
     }
   ]
 }
