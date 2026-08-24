@@ -1,6 +1,6 @@
 {
-  "category": "INVESTMENT",
-  "count": 8,
+  "category_id": "investment",
+  "count": 6,
   "services": [
     {
       "service_id": "bida-aftercare-services",
@@ -12,24 +12,34 @@
         "BIDA Aftercare Services for Investors"
       ],
       "category": "INVESTMENT",
+      "category_id": "investment",
       "subcategory": "aftercare",
       "responsible_authority": "Bangladesh Investment Development Authority (BIDA)",
-      "authority_id": null,
+      "authority_id": "bangladesh-investment-development-authority-bida",
       "target_user": [
         "business",
         "foreign_investor"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://bida.gov.bd/",
       "discovery_sources": [
         "https://bida.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Compliance and issue resolution support for registered investors.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "BIDA aftercare is a documented investor-facing service under BIDA OSS."
     },
     {
       "service_id": "bida-commercial-office-services",
@@ -42,24 +52,34 @@
         "Branch, Liaison and Representative Office Services (BIDA)"
       ],
       "category": "INVESTMENT",
+      "category_id": "investment",
       "subcategory": "commercial_office",
       "responsible_authority": "Bangladesh Investment Development Authority (BIDA)",
-      "authority_id": null,
+      "authority_id": "bangladesh-investment-development-authority-bida",
       "target_user": [
         "foreign_investor",
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://bida.gov.bd/",
       "discovery_sources": [
         "https://bida.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Commercial office services listed on BIDA website; apply via OSS where integrated.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "BIDA branch/liaison/representative office services are OSS investment services."
     },
     {
       "service_id": "bida-invest-bangladesh-oss",
@@ -69,27 +89,43 @@
       "aliases": [
         "investbangladesh.gov.bd",
         "investment facilitation OSS",
-        "Invest Bangladesh OSS Portal"
+        "Invest Bangladesh OSS Portal",
+        "bidaquickserv",
+        "BanglaBiz OSS",
+        "investment OSS",
+        "BIDA One Stop Service (OSS) Portal",
+        "bida-oss-portal"
       ],
       "category": "INVESTMENT",
+      "category_id": "investment",
       "subcategory": "oss",
       "responsible_authority": "Bangladesh Investment Development Authority (BIDA)",
-      "authority_id": null,
+      "authority_id": "bangladesh-investment-development-authority-bida",
       "target_user": [
         "business",
         "foreign_investor"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://investbangladesh.gov.bd/faq",
       "discovery_sources": [
-        "https://investbangladesh.gov.bd/faq"
+        "https://investbangladesh.gov.bd/faq",
+        "https://bidaquickserv.org"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Includes environment clearance, land mutation, fire NOC workflows for investors.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "bida-irms-platform",
@@ -102,87 +138,34 @@
         "BIDA Investment Relationship Management System (IRMS)"
       ],
       "category": "INVESTMENT",
+      "category_id": "investment",
       "subcategory": "investor_relations",
       "responsible_authority": "Bangladesh Investment Development Authority (BIDA)",
-      "authority_id": null,
+      "authority_id": "bangladesh-investment-development-authority-bida",
       "target_user": [
         "business",
         "foreign_investor"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://irms.bida.gov.bd/",
       "discovery_sources": [
         "https://irms.bida.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "bida-oss-available-services",
-      "uuid": "ebafc227-4aa9-5575-b71c-f1de12dd24ca",
-      "service_name_bn": "BIDA OSS সেবা তালিকা",
-      "service_name_en": "BIDA OSS Available Services List",
-      "aliases": [
-        "OSS service catalogue BIDA",
-        "BIDA OSS Available Services List"
-      ],
-      "category": "INVESTMENT",
-      "subcategory": "oss",
-      "responsible_authority": "Bangladesh Investment Development Authority (BIDA)",
-      "authority_id": null,
-      "target_user": [
-        "business",
-        "foreign_investor"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [],
-      "official_source": "https://bidaquickserv.org/articles/available-services",
-      "discovery_sources": [
-        "https://bidaquickserv.org/articles/available-services"
-      ],
-      "status": "CONFIRMED",
-      "canonical_service_id": null,
-      "notes": null,
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "bida-oss-portal",
-      "uuid": "98ef502b-bd9e-5eef-b5d0-7557c53e62e6",
-      "service_name_bn": "BIDA One Stop Service (OSS) পোর্টাল",
-      "service_name_en": "BIDA One Stop Service (OSS) Portal",
-      "aliases": [
-        "bidaquickserv",
-        "BanglaBiz OSS",
-        "investment OSS",
-        "BIDA One Stop Service (OSS) Portal"
-      ],
-      "category": "INVESTMENT",
-      "subcategory": "oss",
-      "responsible_authority": "Bangladesh Investment Development Authority (BIDA)",
-      "authority_id": null,
-      "target_user": [
-        "business",
-        "foreign_investor",
-        "entrepreneur"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [
-        "business"
-      ],
-      "official_source": "https://bidaquickserv.org",
-      "discovery_sources": [
-        "https://bidaquickserv.org"
-      ],
-      "status": "CONFIRMED",
-      "canonical_service_id": null,
-      "notes": "58 online investor services from BIDA and partner agencies.",
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "bida-osspid-registration",
@@ -195,24 +178,34 @@
         "OSSPID Account Registration (BIDA)"
       ],
       "category": "INVESTMENT",
+      "category_id": "investment",
       "subcategory": "registration",
       "responsible_authority": "Bangladesh Investment Development Authority (BIDA)",
-      "authority_id": null,
+      "authority_id": "bangladesh-investment-development-authority-bida",
       "target_user": [
         "business",
         "foreign_investor"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://irms.bida.gov.bd/set-registration-type/investor",
       "discovery_sources": [
         "https://irms.bida.gov.bd/set-registration-type/investor"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Required to access BIDA OSS services.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "bida-work-permit-security-clearance",
@@ -224,24 +217,34 @@
         "BIDA Work Permit Security Clearance (Online)"
       ],
       "category": "INVESTMENT",
+      "category_id": "investment",
       "subcategory": "work_permit",
       "responsible_authority": "Bangladesh Investment Development Authority (BIDA)",
-      "authority_id": null,
+      "authority_id": "bangladesh-investment-development-authority-bida",
       "target_user": [
         "foreign_investor",
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://bida.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital",
       "discovery_sources": [
         "https://bida.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Fully online via BIDA OSS from Oct 2025.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     }
   ]
 }

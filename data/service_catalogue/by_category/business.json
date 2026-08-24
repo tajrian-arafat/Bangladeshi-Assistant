@@ -1,6 +1,6 @@
 {
-  "category": "BUSINESS",
-  "count": 4,
+  "category_id": "business",
+  "count": 3,
   "services": [
     {
       "service_id": "business-entity-name-search",
@@ -12,6 +12,7 @@
         "company name check"
       ],
       "category": "BUSINESS",
+      "category_id": "business",
       "subcategory": "name_search",
       "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
       "authority_id": "rjsc",
@@ -20,16 +21,25 @@
         "entrepreneur"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://app.roc.gov.bd/psp/nc_search",
       "discovery_sources": [
         "https://app.roc.gov.bd/psp/nc_search"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "business-name-clearance",
@@ -41,6 +51,7 @@
         "name clearance certificate"
       ],
       "category": "BUSINESS",
+      "category_id": "business",
       "subcategory": "name_clearance",
       "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
       "authority_id": "rjsc",
@@ -49,16 +60,25 @@
         "entrepreneur"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
       "discovery_sources": [
         "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Prerequisite for company/society/trade organization registration.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "business-rjsc-certified-copy",
@@ -70,6 +90,7 @@
         "incorporation copy"
       ],
       "category": "BUSINESS",
+      "category_id": "business",
       "subcategory": "certified_copy",
       "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
       "authority_id": "rjsc",
@@ -77,46 +98,25 @@
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://app.roc.gov.bd/psp/RJSC_Fees",
       "discovery_sources": [
         "https://app.roc.gov.bd/psp/RJSC_Fees"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Fees listed for certificate of incorporation copies.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "business-startup-trade-licence-guidance",
-      "uuid": "bec4a4c4-0ff3-51fa-afc9-c1a7b9ef5806",
-      "service_name_bn": "ব্যবসা শুরু: ট্রেড লাইসেন্স/TIN/VAT ক্রম",
-      "service_name_en": "Business Startup Licensing Sequence (Trade Licence, TIN, VAT)",
-      "aliases": [
-        "business startup Bangladesh",
-        "investment onboarding"
-      ],
-      "category": "BUSINESS",
-      "subcategory": "startup_guidance",
-      "responsible_authority": "Bangladesh Investment Development Authority / Local Government / NBR / RJSC",
-      "authority_id": null,
-      "target_user": [
-        "business",
-        "entrepreneur",
-        "foreign_investor"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [],
-      "official_source": "https://bangladeshtradeportal.gov.bd/index.php?id=429&r=site%2Fdisplay",
-      "discovery_sources": [
-        "https://bangladeshtradeportal.gov.bd/index.php?id=429&r=site%2Fdisplay"
-      ],
-      "status": "CONFIRMED",
-      "canonical_service_id": null,
-      "notes": "Meta-process referencing RJSC, trade licence, TIN, VAT, BIDA registration.",
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     }
   ]
 }

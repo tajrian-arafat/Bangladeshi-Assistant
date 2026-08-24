@@ -1,5 +1,5 @@
 {
-  "category": "CERTIFICATES",
+  "category_id": "certificates",
   "count": 13,
   "services": [
     {
@@ -12,14 +12,16 @@
         "freedom fighter certificate"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "freedom_fighter",
       "responsible_authority": "Ministry of Liberation War Affairs",
-      "authority_id": null,
+      "authority_id": "ministry-of-liberation-war-affairs",
       "target_user": [
         "citizen",
         "freedom_fighter"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "retirement",
         "social_protection"
@@ -28,11 +30,19 @@
       "discovery_sources": [
         "https://www.mygov.bd/"
       ],
-      "status": "NEEDS_VERIFICATION",
+      "mygov_service_ids": [],
+      "status": "UNVERIFIED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Distinct from BFFWT MIS and allowance programmes already catalogued.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Issuance/correction pathway distinct from MIS/allowance not confirmed with primary URL."
     },
     {
       "service_id": "civil-marriage-certificate-search",
@@ -43,24 +53,34 @@
         "marriage certificate lookup"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "marriage_certificate",
       "responsible_authority": "Ministry of Law, Justice and Parliamentary Affairs",
-      "authority_id": null,
+      "authority_id": "ministry-of-law-justice-and-parliamentary-affairs",
       "target_user": [
         "citizen",
         "nikah_registrar"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
       "discovery_sources": [
         "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-certificate-verify",
@@ -72,24 +92,34 @@
         "certificate tracking"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "verification",
       "responsible_authority": "Union Parishad (Digital Union Tax System)",
-      "authority_id": null,
+      "authority_id": "union-parishad-digital-union-tax-system",
       "target_user": [
         "citizen",
         "employer"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://uniontax.gov.bd/sonod/search",
       "discovery_sources": [
         "https://uniontax.gov.bd/sonod/search"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-character-certificate",
@@ -100,6 +130,7 @@
         "citizenship and character certificate"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "character",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -108,16 +139,25 @@
         "student"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.chandanpurup.gov.bd/new/application/citizen",
       "discovery_sources": [
         "https://www.chandanpurup.gov.bd/new/application/citizen"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-death-certificate-union",
@@ -128,6 +168,7 @@
         "union death certificate"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "death_attestation",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -135,16 +176,25 @@
         "citizen"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.chandanpurup.gov.bd/new/application/citizen",
       "discovery_sources": [
         "https://www.chandanpurup.gov.bd/new/application/citizen"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Union attestation certificate; distinct from BRIS legal death registration.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-income-certificate",
@@ -156,6 +206,7 @@
         "annual income attestation"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "income",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -164,16 +215,25 @@
         "student"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
       "discovery_sources": [
         "https://tilokpursonod.gov.bd/select_certificate/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-inheritance-certificate",
@@ -185,6 +245,7 @@
         "succession certificate"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "inheritance",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -192,16 +253,25 @@
         "citizen"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://certificate.uniontax.gov.bd/",
       "discovery_sources": [
         "https://certificate.uniontax.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-landless-certificate",
@@ -212,6 +282,7 @@
         "landless attestation"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "landless",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -220,16 +291,25 @@
         "farmer"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.chandanpurup.gov.bd/new/application/citizen",
       "discovery_sources": [
         "https://www.chandanpurup.gov.bd/new/application/citizen"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-marital-status-certificate",
@@ -242,6 +322,7 @@
         "divorce certificate union"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "marital_status",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -249,16 +330,25 @@
         "citizen"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.palshaup.gov.bd/new/application/citizen/17",
       "discovery_sources": [
         "https://www.palshaup.gov.bd/new/application/citizen/17"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Union-issued marital attestation distinct from BRIS/marriage.gov.bd registration.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-nationality-certificate",
@@ -269,6 +359,7 @@
         "nationality attestation"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "nationality",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -276,16 +367,25 @@
         "citizen"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
       "discovery_sources": [
         "https://tilokpursonod.gov.bd/select_certificate/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Representative union portal listing certificate types.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-noc-certificate",
@@ -296,6 +396,7 @@
         "NOC union parishad"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "noc",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -303,16 +404,25 @@
         "citizen"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
       "discovery_sources": [
         "https://tilokpursonod.gov.bd/select_certificate/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-passport-attestation",
@@ -323,6 +433,7 @@
         "passport attestation union"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "passport_attestation",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -330,16 +441,25 @@
         "citizen"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
       "discovery_sources": [
         "https://tilokpursonod.gov.bd/select_certificate/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Local attestation; distinct from DIP passport issuance.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-voter-transfer-attestation",
@@ -350,6 +470,7 @@
         "voter region change certificate"
       ],
       "category": "CERTIFICATES",
+      "category_id": "certificates",
       "subcategory": "voter",
       "responsible_authority": "Union Parishad",
       "authority_id": "union-parishad",
@@ -357,16 +478,25 @@
         "citizen"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
       "discovery_sources": [
         "https://tilokpursonod.gov.bd/select_certificate/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     }
   ]
 }

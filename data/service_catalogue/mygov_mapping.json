@@ -1,0 +1,17 @@
+{
+  "mapping_version": "0.1.0",
+  "notes": "myGov.bd is an access/orchestration layer. Public pages list ministries and sectors but do not expose a stable machine-readable myGov service ID catalogue in this pass. Only store verified mygov_service_id values. Currently unresolved for all services.",
+  "verified_mappings": [],
+  "unresolved_count": 464,
+  "relationship_model": {
+    "fields": [
+      "canonical_service_id",
+      "mygov_service_id",
+      "mygov_url",
+      "verification_status",
+      "verified_at",
+      "notes"
+    ],
+    "rule": "Do not assume myGov entry count equals unique government services."
+  }
+}

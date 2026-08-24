@@ -1,0 +1,25 @@
+{
+  "model_version": "1.0.0",
+  "principle": "Do not create hundreds of duplicate canonical services for district/LGI delivery. Use geographic_availability on a single canonical service.",
+  "tiers": [
+    "DIVISION",
+    "DISTRICT",
+    "CITY_CORPORATION",
+    "MUNICIPALITY",
+    "UPAZILA",
+    "UNION",
+    "WARD"
+  ],
+  "availability_values": [
+    "AVAILABLE",
+    "UNAVAILABLE",
+    "PROCEDURE_DIFFERS",
+    "OFFICE_DIFFERS",
+    "URL_DIFFERS",
+    "FEE_DIFFERS"
+  ],
+  "canonical_services_using_geo": [
+    "licence-trade-local-government",
+    "local-holding-tax-payment"
+  ]
+}

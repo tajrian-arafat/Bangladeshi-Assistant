@@ -1,5 +1,5 @@
 {
-  "category": "POLICE",
+  "category_id": "police",
   "count": 8,
   "services": [
     {
@@ -13,6 +13,7 @@
         "character certificate police"
       ],
       "category": "POLICE",
+      "category_id": "police",
       "subcategory": "clearance",
       "responsible_authority": "Bangladesh Police",
       "authority_id": "police",
@@ -22,16 +23,25 @@
         "foreigner"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
       "discovery_sources": [
         "https://pcc.police.gov.bd/ords/r/pcc/pcc/9"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "police-cyber-support-women",
@@ -43,23 +53,33 @@
         "cyber support women"
       ],
       "category": "POLICE",
+      "category_id": "police",
       "subcategory": "cyber",
       "responsible_authority": "Bangladesh Police Headquarters",
-      "authority_id": null,
+      "authority_id": "bangladesh-police-headquarters",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.police.gov.bd/index.php/en/citizen_charter",
       "discovery_sources": [
         "https://www.police.gov.bd/index.php/en/citizen_charter"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "police-employment-verification",
@@ -70,24 +90,34 @@
         "job verification police"
       ],
       "category": "POLICE",
+      "category_id": "police",
       "subcategory": "verification",
       "responsible_authority": "Bangladesh Police (District/Special Branch)",
-      "authority_id": null,
+      "authority_id": "bangladesh-police-district-special-branch",
       "target_user": [
         "citizen",
         "employer"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.police.gov.bd/index.php/en/citizen_charter",
       "discovery_sources": [
         "https://www.police.gov.bd/index.php/en/citizen_charter"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "police-general-diary",
@@ -100,6 +130,7 @@
         "lost report"
       ],
       "category": "POLICE",
+      "category_id": "police",
       "subcategory": "general_diary",
       "responsible_authority": "Bangladesh Police",
       "authority_id": "police",
@@ -107,16 +138,25 @@
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://gd.police.gov.bd/",
       "discovery_sources": [
         "https://gd.police.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "police-general-diary-online",
@@ -128,6 +168,7 @@
         "e-GD Bangladesh"
       ],
       "category": "POLICE",
+      "category_id": "police",
       "subcategory": "general_diary",
       "responsible_authority": "Bangladesh Police",
       "authority_id": "police",
@@ -135,16 +176,26 @@
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
-      "official_source": null,
+      "official_source": "https://gd.police.gov.bd/",
       "discovery_sources": [
-        "https://www.mygov.bd/"
+        "https://www.mygov.bd/",
+        "https://gd.police.gov.bd/"
       ],
-      "status": "NEEDS_VERIFICATION",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Official Bangladesh Police Online GD portal gd.police.gov.bd."
     },
     {
       "service_id": "police-nid-address-verification",
@@ -156,24 +207,34 @@
         "address verification police"
       ],
       "category": "POLICE",
+      "category_id": "police",
       "subcategory": "verification",
       "responsible_authority": "Bangladesh Police (local unit)",
-      "authority_id": null,
+      "authority_id": "bangladesh-police-local-unit",
       "target_user": [
         "citizen",
         "employer"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.police.gov.bd/en/police_clearance_certificate",
       "discovery_sources": [
         "https://www.police.gov.bd/en/police_clearance_certificate"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "PCC and verification use NID/birth ID/ward councillor certificate when passport lacks address.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Address/NID-based police verification is a documented police citizen verification service."
     },
     {
       "service_id": "police-passport-police-verification",
@@ -185,23 +246,33 @@
         "PV report passport"
       ],
       "category": "POLICE",
+      "category_id": "police",
       "subcategory": "verification",
       "responsible_authority": "Bangladesh Police (Special Branch / Passport Wing)",
-      "authority_id": null,
+      "authority_id": "bangladesh-police-special-branch-passport-wing",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.dip.gov.bd/",
       "discovery_sources": [
         "https://www.dip.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Passport police verification is a required DIP/police pathway for e-passport."
     },
     {
       "service_id": "police-passport-verification",
@@ -212,25 +283,35 @@
         "passport police verification"
       ],
       "category": "POLICE",
+      "category_id": "police",
       "subcategory": "verification",
       "responsible_authority": "Bangladesh Police (District/Special Branch)",
-      "authority_id": null,
+      "authority_id": "bangladesh-police-district-special-branch",
       "target_user": [
         "citizen",
         "employer",
         "government_employee"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.police.gov.bd/index.php/en/citizen_charter",
       "discovery_sources": [
         "https://www.police.gov.bd/index.php/en/citizen_charter"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Normal 15-21 days; urgent 7 days per citizen charter.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     }
   ]
 }

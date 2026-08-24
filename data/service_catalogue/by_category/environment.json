@@ -1,6 +1,6 @@
 {
-  "category": "ENVIRONMENT",
-  "count": 7,
+  "category_id": "environment",
+  "count": 4,
   "services": [
     {
       "service_id": "env-ecc-certificate-verification",
@@ -13,25 +13,35 @@
         "Environmental Clearance Certificate Verification"
       ],
       "category": "ENVIRONMENT",
+      "category_id": "environment",
       "subcategory": "verification",
       "responsible_authority": "Department of Environment (DoE)",
-      "authority_id": null,
+      "authority_id": "department-of-environment-doe",
       "target_user": [
         "citizen",
         "employer",
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://ecc-beta.doe.gov.bd/certificate-verification",
       "discovery_sources": [
         "https://ecc-beta.doe.gov.bd/certificate-verification"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "env-ecc-entrepreneur-registration",
@@ -43,53 +53,34 @@
         "DoE ECC Entrepreneur Registration"
       ],
       "category": "ENVIRONMENT",
+      "category_id": "environment",
       "subcategory": "registration",
       "responsible_authority": "Department of Environment (DoE)",
-      "authority_id": null,
+      "authority_id": "department-of-environment-doe",
       "target_user": [
         "business",
         "entrepreneur"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://ecc-beta.doe.gov.bd/register",
       "discovery_sources": [
         "https://ecc-beta.doe.gov.bd/register"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "env-ecc-how-to-apply",
-      "uuid": "fad25ec1-fc5f-5016-a3f5-020c179744b3",
-      "service_name_bn": "পরিবেশ ছাড়পত্র আবেদন নির্দেশিকা",
-      "service_name_en": "Environmental Clearance Application Guide",
-      "aliases": [
-        "DoE how to apply",
-        "Environmental Clearance Application Guide"
-      ],
-      "category": "ENVIRONMENT",
-      "subcategory": "guidance",
-      "responsible_authority": "Department of Environment (DoE)",
-      "authority_id": null,
-      "target_user": [
-        "business",
-        "entrepreneur"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [],
-      "official_source": "https://ecc-beta.doe.gov.bd/how-to-apply",
-      "discovery_sources": [
-        "https://ecc-beta.doe.gov.bd/how-to-apply"
-      ],
-      "status": "CONFIRMED",
-      "canonical_service_id": null,
-      "notes": null,
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "env-ecc-online-application",
@@ -102,14 +93,16 @@
         "Environmental Clearance Certificate (ECC) Online Application"
       ],
       "category": "ENVIRONMENT",
+      "category_id": "environment",
       "subcategory": "clearance",
       "responsible_authority": "Department of Environment (DoE)",
-      "authority_id": null,
+      "authority_id": "department-of-environment-doe",
       "target_user": [
         "business",
         "entrepreneur"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "business"
       ],
@@ -117,68 +110,19 @@
       "discovery_sources": [
         "https://ecc-beta.doe.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "env-ecc-portal-info",
-      "uuid": "e4487f0e-9bca-54dc-ba8c-1290159becf3",
-      "service_name_bn": "DoE অনলাইন ছাড়পত্র তথ্য",
-      "service_name_en": "DoE Online Clearance Information Page",
-      "aliases": [
-        "doe portal clearance",
-        "DoE Online Clearance Information Page"
-      ],
-      "category": "ENVIRONMENT",
-      "subcategory": "information",
-      "responsible_authority": "Department of Environment (DoE)",
-      "authority_id": null,
-      "target_user": [
-        "business"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [],
-      "official_source": "http://doe.portal.gov.bd/pages/static-pages/6922dee6933eb65569e1e3b0",
-      "discovery_sources": [
-        "http://doe.portal.gov.bd/pages/static-pages/6922dee6933eb65569e1e3b0"
-      ],
-      "status": "CONFIRMED",
-      "canonical_service_id": null,
-      "notes": null,
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "env-eia-guidelines",
-      "uuid": "148f5e3a-e975-5f2f-bfb3-9b6039fc9889",
-      "service_name_bn": "EIA নির্দেশিকা (শিল্প)",
-      "service_name_en": "Environmental Impact Assessment (EIA) Guidelines",
-      "aliases": [
-        "IEE EIA Bangladesh",
-        "environment impact assessment",
-        "Environmental Impact Assessment (EIA) Guidelines"
-      ],
-      "category": "ENVIRONMENT",
-      "subcategory": "eia",
-      "responsible_authority": "Department of Environment (DoE)",
-      "authority_id": null,
-      "target_user": [
-        "business"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [],
-      "official_source": "http://file.portal.gov.bd/uploads/8ef2a505-c131-4a8f-b6d0-2ac4760cc936/635/f6b/1e6/635f6b1e69cb8822258025.pdf",
-      "discovery_sources": [
-        "http://file.portal.gov.bd/uploads/8ef2a505-c131-4a8f-b6d0-2ac4760cc936/635/f6b/1e6/635f6b1e69cb8822258025.pdf"
-      ],
-      "status": "CONFIRMED",
-      "canonical_service_id": null,
-      "notes": "Official DoE EIA guidelines PDF on national portal.",
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "environment-forest-clearance",
@@ -190,14 +134,16 @@
         "tree felling permission"
       ],
       "category": "ENVIRONMENT",
+      "category_id": "environment",
       "subcategory": "forest_clearance",
       "responsible_authority": "Forest Department, Ministry of Environment & Forest",
-      "authority_id": null,
+      "authority_id": "forest-department-ministry-of-environment-forest",
       "target_user": [
         "business",
         "developer"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "business",
         "property"
@@ -206,11 +152,19 @@
       "discovery_sources": [
         "https://bforest.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Forest Department clearance/permits are real environmental authorizations."
     }
   ]
 }

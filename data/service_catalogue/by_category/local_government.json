@@ -1,6 +1,6 @@
 {
-  "category": "LOCAL_GOVERNMENT",
-  "count": 15,
+  "category_id": "local_government",
+  "count": 12,
   "services": [
     {
       "service_id": "dc-armed-forces-property-noc",
@@ -12,24 +12,34 @@
         "Armed Forces Property NOC (DC Office)"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "noc",
       "responsible_authority": "Deputy Commissioner Office",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-office",
       "target_user": [
         "citizen",
         "landowner"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.dhaka.gov.bd/en",
       "discovery_sources": [
         "https://www.dhaka.gov.bd/en"
       ],
-      "status": "NEEDS_VERIFICATION",
+      "mygov_service_ids": [],
+      "status": "UNVERIFIED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Common DC revenue-branch service; district-specific procedure via citizen charter.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Niche DC NOC; circular-level evidence only."
     },
     {
       "service_id": "dc-attestation-photocopy",
@@ -42,24 +52,34 @@
         "DC Office Document Attestation/Photocopy Certification"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "attestation",
       "responsible_authority": "Deputy Commissioner Office",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-office",
       "target_user": [
         "citizen",
         "student"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.dhaka.gov.bd/en",
       "discovery_sources": [
         "https://www.dhaka.gov.bd/en"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Standard DC citizen charter service for document certification.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "DC office document attestation is a standard district citizen service."
     },
     {
       "service_id": "dc-citizen-charter-bagerhat",
@@ -71,23 +91,33 @@
         "Bagerhat District Citizen Charter Services"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "citizen_charter",
       "responsible_authority": "Deputy Commissioner, Bagerhat District",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-bagerhat-district",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://bagerhat.gov.bd/en",
       "discovery_sources": [
         "https://bagerhat.gov.bd/en"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "dc-citizen-charter-comilla",
@@ -100,23 +130,33 @@
         "Cumilla District Citizen Charter Services"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "citizen_charter",
       "responsible_authority": "Deputy Commissioner, Cumilla District",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-cumilla-district",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.comilla.gov.bd/en",
       "discovery_sources": [
         "https://www.comilla.gov.bd/en"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Includes citizen charter and online application links.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "dc-citizen-charter-dhaka",
@@ -129,13 +169,15 @@
         "Dhaka District Citizen Charter Services"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "citizen_charter",
       "responsible_authority": "Deputy Commissioner, Dhaka District",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-dhaka-district",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "family",
         "property"
@@ -144,11 +186,19 @@
       "discovery_sources": [
         "https://www.dhaka.gov.bd/en"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "District portal lists citizen charter, focal officers, and service procedures.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "dc-citizen-charter-rajshahi",
@@ -160,23 +210,33 @@
         "Rajshahi District Citizen Charter Services"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "citizen_charter",
       "responsible_authority": "Deputy Commissioner, Rajshahi District",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-rajshahi-district",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://rajshahi.gov.bd/en",
       "discovery_sources": [
         "https://rajshahi.gov.bd/en"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "dc-district-e-application",
@@ -189,23 +249,33 @@
         "District Online Forms Application"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "online_application",
       "responsible_authority": "Deputy Commissioner Office",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-office",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "http://online.forms.gov.bd/",
       "discovery_sources": [
         "http://online.forms.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Referenced on Cumilla district portal for district e-applications.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "District online forms portal online.forms.gov.bd is a real citizen application channel."
     },
     {
       "service_id": "dc-guardianship-certificate",
@@ -217,24 +287,34 @@
         "Guardianship Certificate (DC Office)"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "certificate",
       "responsible_authority": "Deputy Commissioner Office",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-office",
       "target_user": [
         "citizen",
         "parent"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.dhaka.gov.bd/en",
       "discovery_sources": [
         "https://www.dhaka.gov.bd/en"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Listed in typical DC citizen charters; apply at district revenue branch.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Guardianship certificate via DC office is a documented district citizen service."
     },
     {
       "service_id": "dc-nothi-citizen-application",
@@ -247,13 +327,15 @@
         "Nothi Citizen Application (District/DC Office)"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "online_application",
       "responsible_authority": "Deputy Commissioner Office (via Nothi)",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-office-via-nothi",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "family",
         "property"
@@ -262,11 +344,19 @@
       "discovery_sources": [
         "http://nothi.gov.bd/dak_nagoriks/NagorikAbedon"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Linked from multiple district portals for citizen petitions to DC office.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "dc-revenue-branch-services",
@@ -280,152 +370,126 @@
         "DC Office Revenue Branch Services"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "revenue_branch",
       "responsible_authority": "Deputy Commissioner Office (Revenue Branch)",
-      "authority_id": null,
+      "authority_id": "deputy-commissioner-office-revenue-branch",
       "target_user": [
         "citizen",
         "farmer",
         "business"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "http://file-dhaka.portal.gov.bd/uploads/c744821c-aa9f-44f9-a403-07fc560350c2/61d/d71/949/61dd71949329c483376321.pdf",
       "discovery_sources": [
         "http://file-dhaka.portal.gov.bd/uploads/c744821c-aa9f-44f9-a403-07fc560350c2/61d/d71/949/61dd71949329c483376321.pdf"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Representative citizen charter PDF (Manikganj) listing revenue-branch certificates and licences.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
-      "service_id": "local-ccc-holding-tax",
-      "uuid": "eadfdd69-4447-58c8-a85b-939d3d17b3c7",
-      "service_name_bn": "চট্টগ্রাম সিটি করporation holding tax",
-      "service_name_en": "Chattogram City Corporation Holding Tax Payment",
+      "service_id": "local-holding-tax-payment",
+      "uuid": null,
+      "service_name_bn": "স্থানীয় সরকার হোল্ডিং ট্যাক্স পরিশোধ",
+      "service_name_en": "Local Government Holding Tax Payment",
       "aliases": [
-        "CCC holding tax",
-        "Amader Chattogram holding tax"
-      ],
-      "category": "LOCAL_GOVERNMENT",
-      "subcategory": "holding_tax",
-      "responsible_authority": "Chattogram City Corporation (CCC)",
-      "authority_id": null,
-      "target_user": [
-        "citizen",
-        "property_owner"
-      ],
-      "geographic_scope": "LOCAL",
-      "lifecycle_stage": [
-        "property",
-        "tax"
-      ],
-      "official_source": null,
-      "discovery_sources": [
-        "https://www.tbsnews.net/bangladesh/chattogram-city-corporation-launches-app-one-stop-citizen-services-1491636"
-      ],
-      "status": "LIKELY",
-      "canonical_service_id": null,
-      "notes": null,
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "local-dncc-holding-tax",
-      "uuid": "8c0c3f66-9a79-540f-bb6e-7cd818ac3fd8",
-      "service_name_bn": "DNCC holding tax",
-      "service_name_en": "Dhaka North City Corporation Holding Tax",
-      "aliases": [
+        "holding tax",
+        "হোল্ডিং ট্যাক্স",
+        "municipal holding tax",
+        "city corporation holding tax",
         "DNCC holding tax payment",
-        "DNCC tax"
+        "DNCC tax",
+        "Dhaka North City Corporation Holding Tax",
+        "local-dncc-holding-tax",
+        "DSCC holding tax payment",
+        "Dhaka South City Corporation Holding Tax",
+        "local-dscc-holding-tax",
+        "CCC holding tax",
+        "Amader Chattogram holding tax",
+        "Chattogram City Corporation Holding Tax Payment",
+        "local-ccc-holding-tax",
+        "pourashava holding tax",
+        "Municipality (Pourashava) Holding Tax",
+        "local-pourashava-holding-tax"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "holding_tax",
-      "responsible_authority": "Dhaka North City Corporation (DNCC)",
-      "authority_id": "dncc",
+      "responsible_authority": "City Corporation / Municipality / Pourashava",
+      "authority_id": "local-government-institutions",
       "target_user": [
         "citizen",
         "property_owner"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [
+        {
+          "tier": "CITY_CORPORATION",
+          "name_en": "Dhaka North City Corporation",
+          "name_bn": "ঢাকা উত্তর সিটি কর্পোরেশন",
+          "availability": "AVAILABLE",
+          "url": "https://dncc.gov.bd/"
+        },
+        {
+          "tier": "CITY_CORPORATION",
+          "name_en": "Dhaka South City Corporation",
+          "name_bn": "ঢাকা দক্ষিণ সিটি কর্পোরেশন",
+          "availability": "AVAILABLE",
+          "url": "https://dscc.gov.bd/"
+        },
+        {
+          "tier": "CITY_CORPORATION",
+          "name_en": "Chattogram City Corporation",
+          "name_bn": "চট্টগ্রাম সিটি কর্পোরেশন",
+          "availability": "AVAILABLE",
+          "url": null,
+          "notes": "Amader Chattogram / Shapla OSS references holding tax."
+        },
+        {
+          "tier": "MUNICIPALITY",
+          "name_en": "Municipality / Pourashava (generic)",
+          "name_bn": "পৌরসভা",
+          "availability": "AVAILABLE",
+          "url": null
+        }
+      ],
       "lifecycle_stage": [
         "property",
         "tax"
       ],
       "official_source": "https://dncc.gov.bd/",
       "discovery_sources": [
-        "https://dncc.gov.bd/"
-      ],
-      "status": "LIKELY",
-      "canonical_service_id": null,
-      "notes": null,
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "local-dscc-holding-tax",
-      "uuid": "d2a5c7ef-d093-5609-8950-b4974e8764f6",
-      "service_name_bn": "DSCC holding tax",
-      "service_name_en": "Dhaka South City Corporation Holding Tax",
-      "aliases": [
-        "DSCC holding tax payment"
-      ],
-      "category": "LOCAL_GOVERNMENT",
-      "subcategory": "holding_tax",
-      "responsible_authority": "Dhaka South City Corporation (DSCC)",
-      "authority_id": "dscc",
-      "target_user": [
-        "citizen",
-        "property_owner"
-      ],
-      "geographic_scope": "LOCAL",
-      "lifecycle_stage": [
-        "property",
-        "tax"
-      ],
-      "official_source": "https://dscc.gov.bd/",
-      "discovery_sources": [
-        "https://dscc.gov.bd/"
-      ],
-      "status": "LIKELY",
-      "canonical_service_id": null,
-      "notes": null,
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "local-pourashava-holding-tax",
-      "uuid": "30879fd8-38e5-553d-b13d-31c4c962b384",
-      "service_name_bn": "পৌরসভা holding tax",
-      "service_name_en": "Municipality (Pourashava) Holding Tax",
-      "aliases": [
-        "pourashava holding tax",
-        "municipal holding tax"
-      ],
-      "category": "LOCAL_GOVERNMENT",
-      "subcategory": "holding_tax",
-      "responsible_authority": "Municipality (Pourashava)",
-      "authority_id": null,
-      "target_user": [
-        "citizen",
-        "property_owner"
-      ],
-      "geographic_scope": "LOCAL",
-      "lifecycle_stage": [
-        "property",
-        "tax"
-      ],
-      "official_source": null,
-      "discovery_sources": [
+        "https://dncc.gov.bd/",
+        "https://dscc.gov.bd/",
+        "https://www.tbsnews.net/bangladesh/chattogram-city-corporation-launches-app-one-stop-citizen-services-1491636",
         "https://www.mygov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
-      "notes": null,
+      "relationship_type": null,
+      "notes": "Canonical holding-tax service. Delivery varies by LGI; see geographic_availability.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Created during finalization to absorb geographic/portal merges."
     },
     {
       "service_id": "local-unno-digital-upazila-services",
@@ -437,23 +501,33 @@
         "upazila citizen charter"
       ],
       "category": "LOCAL_GOVERNMENT",
+      "category_id": "local_government",
       "subcategory": "upazila_administration",
       "responsible_authority": "Upazila Nirbahi Officer (UNO) Office",
-      "authority_id": null,
+      "authority_id": "upazila-nirbahi-officer-uno-office",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": null,
       "discovery_sources": [
         "https://www.mygov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "UNO office provides multiple citizen charter services; retained as umbrella local channel."
     }
   ]
 }

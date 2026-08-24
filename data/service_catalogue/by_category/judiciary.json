@@ -1,5 +1,5 @@
 {
-  "category": "JUDICIARY",
+  "category_id": "judiciary",
   "count": 6,
   "services": [
     {
@@ -12,14 +12,16 @@
         "loan court Bangladesh"
       ],
       "category": "JUDICIARY",
+      "category_id": "judiciary",
       "subcategory": "specialized_court",
       "responsible_authority": "Artha Rin Adalat",
-      "authority_id": null,
+      "authority_id": "artha-rin-adalat",
       "target_user": [
         "citizen",
         "business"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "property",
         "business"
@@ -28,11 +30,19 @@
       "discovery_sources": [
         "https://www.mygov.bd/"
       ],
-      "status": "NEEDS_VERIFICATION",
+      "mygov_service_ids": [],
+      "status": "UNVERIFIED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Artha Rin Adalat exists in law; citizen-facing digital service entry not confirmed."
     },
     {
       "service_id": "judiciary-case-status-tracking",
@@ -45,24 +55,34 @@
         "case ID tracking"
       ],
       "category": "JUDICIARY",
+      "category_id": "judiciary",
       "subcategory": "case_tracking",
       "responsible_authority": "Supreme Court of Bangladesh",
-      "authority_id": null,
+      "authority_id": "supreme-court-of-bangladesh",
       "target_user": [
         "citizen",
         "lawyer"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://supremecourt.gov.bd/",
       "discovery_sources": [
         "https://supremecourt.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Case status / tracking via Supreme Court digital systems is a citizen/lawyer service."
     },
     {
       "service_id": "judiciary-family-court-services",
@@ -75,13 +95,15 @@
         "guardianship court"
       ],
       "category": "JUDICIARY",
+      "category_id": "judiciary",
       "subcategory": "family_court",
       "responsible_authority": "District Judge Court / Family Court",
-      "authority_id": null,
+      "authority_id": "district-judge-court-family-court",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "family",
         "marriage"
@@ -90,11 +112,19 @@
       "discovery_sources": [
         "https://www.mygov.bd/"
       ],
-      "status": "NEEDS_VERIFICATION",
+      "mygov_service_ids": [],
+      "status": "UNVERIFIED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Family courts exist; catalogue entry is too broad without a concrete application path."
     },
     {
       "service_id": "judiciary-supreme-court-certified-copy",
@@ -107,25 +137,35 @@
         "High Court certified copy application"
       ],
       "category": "JUDICIARY",
+      "category_id": "judiciary",
       "subcategory": "certified_copy",
       "responsible_authority": "Supreme Court of Bangladesh",
-      "authority_id": null,
+      "authority_id": "supreme-court-of-bangladesh",
       "target_user": [
         "citizen",
         "lawyer"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://supremecourt.gov.bd/",
       "discovery_sources": [
         "https://supremecourt.gov.bd/",
         "https://supremecourt.gov.bd/web/index.php?lang=&menu=11&page=tutorial.php"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Registry application for certified copies under Supreme Court Rules.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Supreme Court certified copy applications are a documented registry service."
     },
     {
       "service_id": "judiciary-supreme-court-e-filing",
@@ -138,24 +178,34 @@
         "SC e-filing"
       ],
       "category": "JUDICIARY",
+      "category_id": "judiciary",
       "subcategory": "case_filing",
       "responsible_authority": "Supreme Court of Bangladesh",
-      "authority_id": null,
+      "authority_id": "supreme-court-of-bangladesh",
       "target_user": [
         "lawyer"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://apps.supremecourt.gov.bd/mycase",
       "discovery_sources": [
         "https://apps.supremecourt.gov.bd/mycase",
         "https://supremecourt.gov.bd/web/index.php?lang=&menu=11&page=tutorial.php"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Official Supreme Court lawyers panel / mycase e-filing tutorial."
     },
     {
       "service_id": "judiciary-virtual-court-services",
@@ -167,25 +217,35 @@
         "e-court hearing"
       ],
       "category": "JUDICIARY",
+      "category_id": "judiciary",
       "subcategory": "virtual_court",
       "responsible_authority": "Law and Justice Division / Supreme Court of Bangladesh",
-      "authority_id": null,
+      "authority_id": "law-and-justice-division-supreme-court-of-bangladesh",
       "target_user": [
         "citizen",
         "lawyer"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://supremecourt.gov.bd/",
       "discovery_sources": [
         "https://supremecourt.gov.bd/",
         "https://www.mygov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Virtual court hearings are an established judiciary digital service channel."
     }
   ]
 }

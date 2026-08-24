@@ -1,5 +1,5 @@
 {
-  "duplicates": [
+  "redirects": [
     {
       "service_id": "agri-livestock-registration",
       "uuid": "b449273e-5f28-5c14-8c3b-f614814bf8dc",
@@ -41,6 +41,45 @@
       "deprecated_at": null,
       "catalogue_version": "1.0.0-finalized",
       "finalization_notes": "MVP/legacy alias merged into agriculture-livestock-farm-registration."
+    },
+    {
+      "service_id": "bida-oss-available-services",
+      "uuid": "ebafc227-4aa9-5575-b71c-f1de12dd24ca",
+      "service_name_bn": "BIDA OSS সেবা তালিকা",
+      "service_name_en": "BIDA OSS Available Services List",
+      "aliases": [
+        "OSS service catalogue BIDA",
+        "BIDA OSS Available Services List"
+      ],
+      "category": "INVESTMENT",
+      "category_id": "investment",
+      "subcategory": "oss",
+      "responsible_authority": "Bangladesh Investment Development Authority (BIDA)",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "target_user": [
+        "business",
+        "foreign_investor"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bidaquickserv.org/articles/available-services",
+      "discovery_sources": [
+        "https://bidaquickserv.org/articles/available-services"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Catalogue/list page of services, not a service outcome."
     },
     {
       "service_id": "bida-oss-portal",
@@ -169,6 +208,46 @@
       "finalization_notes": "MVP/legacy alias merged into civil-birth-registration."
     },
     {
+      "service_id": "business-startup-trade-licence-guidance",
+      "uuid": "bec4a4c4-0ff3-51fa-afc9-c1a7b9ef5806",
+      "service_name_bn": "ব্যবসা শুরু: ট্রেড লাইসেন্স/TIN/VAT ক্রম",
+      "service_name_en": "Business Startup Licensing Sequence (Trade Licence, TIN, VAT)",
+      "aliases": [
+        "business startup Bangladesh",
+        "investment onboarding"
+      ],
+      "category": "BUSINESS",
+      "category_id": "business",
+      "subcategory": "startup_guidance",
+      "responsible_authority": "Bangladesh Investment Development Authority / Local Government / NBR / RJSC",
+      "authority_id": "bangladesh-investment-development-authority-local-government-nbr",
+      "target_user": [
+        "business",
+        "entrepreneur",
+        "foreign_investor"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bangladeshtradeportal.gov.bd/index.php?id=429&r=site%2Fdisplay",
+      "discovery_sources": [
+        "https://bangladeshtradeportal.gov.bd/index.php?id=429&r=site%2Fdisplay"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Meta-process referencing RJSC, trade licence, TIN, VAT, BIDA registration.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Guidance sequence across multiple services (trade licence, TIN, VAT), not one service."
+    },
+    {
       "service_id": "business-trade-license-renewal",
       "uuid": "38b3fe55-bb50-50c4-85ab-64ed20d461cb",
       "service_name_bn": "ট্রেড লাইসেন্স নবায়ন",
@@ -204,6 +283,44 @@
       "deprecated_at": null,
       "catalogue_version": "1.0.0-finalized",
       "finalization_notes": "Renewal is a procedure variant of the same trade licence service outcome."
+    },
+    {
+      "service_id": "civil-marriage-registrar-directory",
+      "uuid": "44fc3e39-46d6-59e3-b452-e18ec344619c",
+      "service_name_bn": "বিবাহ নিবন্ধক তালিকা",
+      "service_name_en": "Marriage Registrar Directory",
+      "aliases": [
+        "kazi list",
+        "nikah registrar list"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "registrar_directory",
+      "responsible_authority": "Law and Justice Division",
+      "authority_id": "law-and-justice-division",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://marriage.gov.bd/",
+      "discovery_sources": [
+        "https://marriage.gov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Includes Muslim, Hindu, and Special marriage registrar lists.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Registrar directory/lookup, not a registration service."
     },
     {
       "service_id": "death-certificate-bris",
@@ -281,6 +398,83 @@
       "deprecated_at": null,
       "catalogue_version": "1.0.0-finalized",
       "finalization_notes": "MVP/legacy alias merged into local-death-certificate-union."
+    },
+    {
+      "service_id": "digital-centre-list",
+      "uuid": "03237a48-d66d-5217-b6ac-d59829b284c8",
+      "service_name_bn": "ডিজিটাল সেন্টার তালিকা",
+      "service_name_en": "Digital Centre Directory",
+      "aliases": [
+        "nearest digital centre",
+        "Ekseba centre list"
+      ],
+      "category": "ICT",
+      "category_id": "ict",
+      "subcategory": "digital_centre",
+      "responsible_authority": "Aspire to Innovate (a2i), ICT Division",
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://uddokta.eksheba.gov.bd/index.php/center-list",
+      "discovery_sources": [
+        "https://uddokta.eksheba.gov.bd/index.php/center-list"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Locate nearest digital centre for assisted government services.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Directory of centres, not a service outcome."
+    },
+    {
+      "service_id": "dm-knowledge-portal",
+      "uuid": "5ae4f915-1e9b-5d93-a8f6-30d2d211ee72",
+      "service_name_bn": "DM Knowledge Portal",
+      "service_name_en": "Disaster Management Knowledge Portal",
+      "aliases": [
+        "DDM knowledge base",
+        "Disaster Management Knowledge Portal"
+      ],
+      "category": "DISASTER_RELIEF",
+      "category_id": "disaster_relief",
+      "subcategory": "information",
+      "responsible_authority": "Department of Disaster Management (DDM)",
+      "authority_id": "department-of-disaster-management-ddm",
+      "target_user": [
+        "citizen",
+        "government_employee"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "http://ddm.portal.gov.bd/pages/internal-eservices/dm-knowledge-portal-experimental-6d20a4-6922d95adbfbab28ce04bb26",
+      "discovery_sources": [
+        "http://ddm.portal.gov.bd/pages/internal-eservices/dm-knowledge-portal-experimental-6d20a4-6922d95adbfbab28ce04bb26"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Experimental knowledge portal per DDM e-services listing.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Knowledge portal / information site, not a transactional citizen service."
     },
     {
       "service_id": "driving-licence-renewal",
@@ -398,6 +592,200 @@
       "finalization_notes": "MVP/legacy alias merged into epassport-reissue."
     },
     {
+      "service_id": "education-madrasah-board-services",
+      "uuid": "c6d8b342-26aa-58db-9522-0ff2e91d6b30",
+      "service_name_bn": "মাদ্রাসা শিক্ষা বোর্ড সেবা",
+      "service_name_en": "Bangladesh Madrasah Education Board Services",
+      "aliases": [
+        "Dakhil certificate",
+        "Alim certificate",
+        "madrasah board"
+      ],
+      "category": "EDUCATION",
+      "category_id": "education",
+      "subcategory": "madrasah",
+      "responsible_authority": "Bangladesh Madrasah Education Board",
+      "authority_id": "bangladesh-madrasah-education-board",
+      "target_user": [
+        "student"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "http://www.educationboard.gov.bd/",
+      "discovery_sources": [
+        "http://www.educationboard.gov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Madrasah board selectable on national result verification portal.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Agency/board umbrella label; individual board services should be separate."
+    },
+    {
+      "service_id": "education-technical-board-services",
+      "uuid": "19ecf494-c908-5036-943c-6e0de17329b2",
+      "service_name_bn": "কারিগরি শিক্ষা বোর্ড সেবা",
+      "service_name_en": "Bangladesh Technical Education Board Services",
+      "aliases": [
+        "SSC vocational",
+        "HSC vocational",
+        "technical board"
+      ],
+      "category": "EDUCATION",
+      "category_id": "education",
+      "subcategory": "technical",
+      "responsible_authority": "Bangladesh Technical Education Board",
+      "authority_id": "bangladesh-technical-education-board",
+      "target_user": [
+        "student"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "http://www.educationboard.gov.bd/",
+      "discovery_sources": [
+        "http://www.educationboard.gov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Technical board selectable on national result verification portal.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Agency/board umbrella label; not a single service outcome."
+    },
+    {
+      "service_id": "env-ecc-how-to-apply",
+      "uuid": "fad25ec1-fc5f-5016-a3f5-020c179744b3",
+      "service_name_bn": "পরিবেশ ছাড়পত্র আবেদন নির্দেশিকা",
+      "service_name_en": "Environmental Clearance Application Guide",
+      "aliases": [
+        "DoE how to apply",
+        "Environmental Clearance Application Guide"
+      ],
+      "category": "ENVIRONMENT",
+      "category_id": "environment",
+      "subcategory": "guidance",
+      "responsible_authority": "Department of Environment (DoE)",
+      "authority_id": "department-of-environment-doe",
+      "target_user": [
+        "business",
+        "entrepreneur"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://ecc-beta.doe.gov.bd/how-to-apply",
+      "discovery_sources": [
+        "https://ecc-beta.doe.gov.bd/how-to-apply"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Application guide/information page for ECC, not a separate service."
+    },
+    {
+      "service_id": "env-ecc-portal-info",
+      "uuid": "e4487f0e-9bca-54dc-ba8c-1290159becf3",
+      "service_name_bn": "DoE অনলাইন ছাড়পত্র তথ্য",
+      "service_name_en": "DoE Online Clearance Information Page",
+      "aliases": [
+        "doe portal clearance",
+        "DoE Online Clearance Information Page"
+      ],
+      "category": "ENVIRONMENT",
+      "category_id": "environment",
+      "subcategory": "information",
+      "responsible_authority": "Department of Environment (DoE)",
+      "authority_id": "department-of-environment-doe",
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "http://doe.portal.gov.bd/pages/static-pages/6922dee6933eb65569e1e3b0",
+      "discovery_sources": [
+        "http://doe.portal.gov.bd/pages/static-pages/6922dee6933eb65569e1e3b0"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Information page for DoE online clearance."
+    },
+    {
+      "service_id": "env-eia-guidelines",
+      "uuid": "148f5e3a-e975-5f2f-bfb3-9b6039fc9889",
+      "service_name_bn": "EIA নির্দেশিকা (শিল্প)",
+      "service_name_en": "Environmental Impact Assessment (EIA) Guidelines",
+      "aliases": [
+        "IEE EIA Bangladesh",
+        "environment impact assessment",
+        "Environmental Impact Assessment (EIA) Guidelines"
+      ],
+      "category": "ENVIRONMENT",
+      "category_id": "environment",
+      "subcategory": "eia",
+      "responsible_authority": "Department of Environment (DoE)",
+      "authority_id": "department-of-environment-doe",
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "http://file.portal.gov.bd/uploads/8ef2a505-c131-4a8f-b6d0-2ac4760cc936/635/f6b/1e6/635f6b1e69cb8822258025.pdf",
+      "discovery_sources": [
+        "http://file.portal.gov.bd/uploads/8ef2a505-c131-4a8f-b6d0-2ac4760cc936/635/f6b/1e6/635f6b1e69cb8822258025.pdf"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Official DoE EIA guidelines PDF on national portal.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Guidelines document, not a citizen application service."
+    },
+    {
       "service_id": "ff-mis-login",
       "uuid": "3278ca3a-b31d-5bde-bbbc-df83ad01b6ed",
       "service_name_bn": "মুক্তিযোদ্ধা MIS",
@@ -437,6 +825,45 @@
       "finalization_notes": "MIS login is access method for freedom fighter list/verification."
     },
     {
+      "service_id": "ff-welfare-trust-portal",
+      "uuid": "70b9fe9d-667f-5818-9953-4458170a527d",
+      "service_name_bn": "বাংলাদেশ মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট",
+      "service_name_en": "Bangladesh Freedom Fighters Welfare Trust Portal",
+      "aliases": [
+        "BFFWT portal",
+        "muktijuddha trust",
+        "Bangladesh Freedom Fighters Welfare Trust Portal"
+      ],
+      "category": "SOCIAL_PROTECTION",
+      "category_id": "social_protection",
+      "subcategory": "freedom_fighter",
+      "responsible_authority": "Bangladesh Freedom Fighters Welfare Trust (BFFWT)",
+      "authority_id": "bangladesh-freedom-fighters-welfare-trust-bffwt",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bffwt.gov.bd/",
+      "discovery_sources": [
+        "https://bffwt.gov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Trust portal homepage, not a distinct enrollment service (enrollment kept)."
+    },
+    {
       "service_id": "hajj-registration-portal",
       "uuid": "c169cfd9-9785-5b95-86bc-cec859a72c79",
       "service_name_bn": "হজ নিবন্ধন পোর্টাল",
@@ -474,6 +901,45 @@
       "deprecated_at": null,
       "catalogue_version": "1.0.0-finalized",
       "finalization_notes": "Portal access for Hajj registration; canonical outcome is pre-registration/registration."
+    },
+    {
+      "service_id": "legal-aid-office-management",
+      "uuid": "c89148a7-2947-5574-931c-f8720e04dc4d",
+      "service_name_bn": "লিগ্যাল এইড অফিস ম্যানেজমেন্ট",
+      "service_name_en": "Legal Aid Office Management Portal",
+      "aliases": [
+        "NLASO db portal",
+        "Legal Aid Office Management Portal"
+      ],
+      "category": "LEGAL_AID",
+      "category_id": "legal_aid",
+      "subcategory": "portal",
+      "responsible_authority": "National Legal Aid Services Organization (NLASO)",
+      "authority_id": "national-legal-aid-services-organization-nlaso",
+      "target_user": [
+        "government_employee",
+        "lawyer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://db.nlaso.gov.bd",
+      "discovery_sources": [
+        "https://db.nlaso.gov.bd"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Backend portal also referenced for online applications.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Internal office management portal; not citizen-facing outcome."
     },
     {
       "service_id": "licence-trade-dncc",
@@ -871,6 +1337,46 @@
       "finalization_notes": "Form artifact for MOFA attestation; merge into attestation service."
     },
     {
+      "service_id": "mofa-citizen-eservices",
+      "uuid": "9f4d82e8-5e4f-59f8-ad61-f148ea3992f0",
+      "service_name_bn": "MOFA নাগরিক ই-সেবা",
+      "service_name_en": "Ministry of Foreign Affairs Citizen e-Services",
+      "aliases": [
+        "MOFA e-services",
+        "foreign ministry portal",
+        "Ministry of Foreign Affairs Citizen e-Services"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "category_id": "passport_immigration",
+      "subcategory": "consular",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA)",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://mofa.portal.gov.bd/",
+      "discovery_sources": [
+        "https://mofa.portal.gov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Ministry e-services landing/overview, not a single service."
+    },
+    {
       "service_id": "mofa-document-attestation-requirements",
       "uuid": "68c1df82-07a9-5be3-ab13-f23b3ccb3898",
       "service_name_bn": "MOFA নথি/prattyoyon সাধারণ নির্দেশিকা",
@@ -913,6 +1419,44 @@
       "deprecated_at": null,
       "catalogue_version": "1.0.0-finalized",
       "finalization_notes": "Requirements page for MOFA attestation."
+    },
+    {
+      "service_id": "mofa-mygov-services",
+      "uuid": "f26077d2-11d1-55fd-aef9-ddb773a79589",
+      "service_name_bn": "MOFA myGov সেবা ডিরেক্টরি",
+      "service_name_en": "MOFA myGov Service Directory",
+      "aliases": [
+        "MOFA myGov services",
+        "MOFA myGov Service Directory"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "category_id": "passport_immigration",
+      "subcategory": "consular",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA)",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://www.mygov.bd/serviceByOffice/?agent=np&domain=mofa.gov.bd",
+      "discovery_sources": [
+        "https://www.mygov.bd/serviceByOffice/?agent=np&domain=mofa.gov.bd"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "myGov directory listing for MOFA, not a service outcome."
     },
     {
       "service_id": "mrp-passport-initial",
@@ -991,6 +1535,46 @@
       "deprecated_at": null,
       "catalogue_version": "1.0.0-finalized",
       "finalization_notes": "MVP/legacy alias merged into passport-mrp-reissue."
+    },
+    {
+      "service_id": "mygov-national-portal",
+      "uuid": "42260865-0738-5baa-aa9c-603e652214b8",
+      "service_name_bn": "myGov জাতীয় ই-সেবা পোর্টাল",
+      "service_name_en": "myGov National e-Services Portal",
+      "aliases": [
+        "mygov.bd",
+        "national e-services",
+        "myGov National e-Services Portal"
+      ],
+      "category": "DIGITAL_GOVERNMENT",
+      "category_id": "digital_government",
+      "subcategory": "portal",
+      "responsible_authority": "Aspire to Innovate (a2i), ICT Division",
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://www.mygov.bd/",
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "National aggregator for ministry e-services; availability may vary by office.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "myGov is an access channel/portal, not a service outcome. Account registration retained separately."
     },
     {
       "service_id": "nid-correction",
@@ -1108,6 +1692,45 @@
       "finalization_notes": "MVP/legacy alias merged into epassport-reissue."
     },
     {
+      "service_id": "religious-mora-portal",
+      "uuid": "9b1f371f-19c7-5f15-affc-af29d2dd166c",
+      "service_name_bn": "ধর্ম বিষয়ক মন্ত্রণালয় সেবা",
+      "service_name_en": "Ministry of Religious Affairs Services Overview",
+      "aliases": [
+        "MORA services",
+        "religious affairs ministry",
+        "Ministry of Religious Affairs Services Overview"
+      ],
+      "category": "RELIGIOUS_AFFAIRS",
+      "category_id": "religious_affairs",
+      "subcategory": "information",
+      "responsible_authority": "Ministry of Religious Affairs",
+      "authority_id": "ministry-of-religious-affairs",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://mora.gov.bd/",
+      "discovery_sources": [
+        "https://mora.gov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "NOT_A_SERVICE",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Ministry portal; hajj services have dedicated hajj.gov.bd portal.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Ministry portal/overview page, not a distinct citizen service outcome."
+    },
+    {
       "service_id": "tin-registration",
       "uuid": "00fb5d1c-995d-52c3-bbb6-4a3ad7c49416",
       "service_name_bn": "ই-টিআইএন নিবন্ধন",
@@ -1186,5 +1809,9 @@
       "catalogue_version": "1.0.0-finalized",
       "finalization_notes": "MVP/legacy alias merged into nid-new-voter-registration."
     }
-  ]
+  ],
+  "counts_by_status": {
+    "DUPLICATE": 30,
+    "NOT_A_SERVICE": 16
+  }
 }

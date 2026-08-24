@@ -1,6 +1,6 @@
 {
-  "category": "LEGAL_AID",
-  "count": 6,
+  "category_id": "legal_aid",
+  "count": 5,
   "services": [
     {
       "service_id": "legal-aid-district-helpline-16430",
@@ -12,23 +12,33 @@
         "District Legal Aid Toll-free Helpline (16430)"
       ],
       "category": "LEGAL_AID",
+      "category_id": "legal_aid",
       "subcategory": "helpline",
       "responsible_authority": "District Legal Aid Office (NLASO)",
-      "authority_id": null,
+      "authority_id": "district-legal-aid-office-nlaso",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline",
       "discovery_sources": [
         "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Toll-free district legal aid helpline referenced on judiciary portals.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "legal-aid-government-service",
@@ -41,23 +51,33 @@
         "Government-funded Legal Aid Service"
       ],
       "category": "LEGAL_AID",
+      "category_id": "legal_aid",
       "subcategory": "legal_aid",
       "responsible_authority": "National Legal Aid Services Organization (NLASO)",
-      "authority_id": null,
+      "authority_id": "national-legal-aid-services-organization-nlaso",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "http://nlaso.portal.gov.bd/pages/static-pages/6922dc72933eb65569e106d0",
       "discovery_sources": [
         "http://nlaso.portal.gov.bd/pages/static-pages/6922dc72933eb65569e106d0"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "legal-aid-helpline-16699",
@@ -70,52 +90,33 @@
         "National Legal Aid Helpline (16699)"
       ],
       "category": "LEGAL_AID",
+      "category_id": "legal_aid",
       "subcategory": "helpline",
       "responsible_authority": "National Legal Aid Services Organization (NLASO)",
-      "authority_id": null,
+      "authority_id": "national-legal-aid-services-organization-nlaso",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "http://nlaso.portal.gov.bd/pages/static-pages/69ca4e8234fc363bf320ca55",
       "discovery_sources": [
         "http://nlaso.portal.gov.bd/pages/static-pages/69ca4e8234fc363bf320ca55"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "legal-aid-office-management",
-      "uuid": "c89148a7-2947-5574-931c-f8720e04dc4d",
-      "service_name_bn": "লিগ্যাল এইড অফিস ম্যানেজমেন্ট",
-      "service_name_en": "Legal Aid Office Management Portal",
-      "aliases": [
-        "NLASO db portal",
-        "Legal Aid Office Management Portal"
-      ],
-      "category": "LEGAL_AID",
-      "subcategory": "portal",
-      "responsible_authority": "National Legal Aid Services Organization (NLASO)",
-      "authority_id": null,
-      "target_user": [
-        "government_employee",
-        "lawyer"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [],
-      "official_source": "https://db.nlaso.gov.bd",
-      "discovery_sources": [
-        "https://db.nlaso.gov.bd"
-      ],
-      "status": "CONFIRMED",
-      "canonical_service_id": null,
-      "notes": "Backend portal also referenced for online applications.",
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "legal-aid-online-application",
@@ -128,13 +129,15 @@
         "National Legal Aid Online Application"
       ],
       "category": "LEGAL_AID",
+      "category_id": "legal_aid",
       "subcategory": "application",
       "responsible_authority": "National Legal Aid Services Organization (NLASO)",
-      "authority_id": null,
+      "authority_id": "national-legal-aid-services-organization-nlaso",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "family"
       ],
@@ -142,11 +145,19 @@
       "discovery_sources": [
         "https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "legal-aid-panel-lawyer-list",
@@ -158,23 +169,33 @@
         "Panel Lawyer List (District Legal Aid)"
       ],
       "category": "LEGAL_AID",
+      "category_id": "legal_aid",
       "subcategory": "directory",
       "responsible_authority": "District Legal Aid Office (NLASO)",
-      "authority_id": null,
+      "authority_id": "district-legal-aid-office-nlaso",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "http://nlaso.portal.gov.bd/",
       "discovery_sources": [
         "http://nlaso.portal.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "District panel lawyer lists published via NLASO and judiciary portals.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "NLASO panel lawyer lists support legal aid application; retained as supporting service."
     }
   ]
 }

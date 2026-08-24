@@ -1,5 +1,5 @@
 {
-  "category": "LAND",
+  "category_id": "land",
   "count": 16,
   "services": [
     {
@@ -12,25 +12,35 @@
         "sub registry office"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "deed_registration",
       "responsible_authority": "Department of Registration (Ministry of Law)",
-      "authority_id": null,
+      "authority_id": "department-of-registration-ministry-of-law",
       "target_user": [
         "citizen",
         "landowner",
         "business"
       ],
       "geographic_scope": "DISTRICT",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.land.gov.bd/poripotro",
       "discovery_sources": [
         "https://www.land.gov.bd/poripotro"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Land Ministry circular references integrating registration with land info system; registration done at sub-registry offices.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Registration Act / Sub-Registrar deed registration is a core citizen service; land.gov.bd references."
     },
     {
       "service_id": "land-dlrms-application-track",
@@ -41,6 +51,7 @@
         "DLRMS track"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "application_tracking",
       "responsible_authority": "Ministry of Land (DLRMS)",
       "authority_id": "ministry-land",
@@ -48,16 +59,25 @@
         "citizen"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://dlrms.land.gov.bd/application/track",
       "discovery_sources": [
         "https://dlrms.land.gov.bd/application/track"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-e-stamp-payment",
@@ -70,14 +90,16 @@
         "judicial stamp"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "stamp",
       "responsible_authority": "Office of the Controller of Stamps / NBR",
-      "authority_id": null,
+      "authority_id": "office-of-the-controller-of-stamps-nbr",
       "target_user": [
         "citizen",
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "property",
         "business"
@@ -86,11 +108,19 @@
       "discovery_sources": [
         "https://www.mygov.bd/"
       ],
-      "status": "NEEDS_VERIFICATION",
+      "mygov_service_ids": [],
+      "status": "UNVERIFIED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Stamp duty / A-challan transition underway; dedicated e-stamp citizen portal URL not verified."
     },
     {
       "service_id": "land-khatian-certified-copy",
@@ -101,6 +131,7 @@
         "certified land record"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "khatian_certified",
       "responsible_authority": "Ministry of Land (DLRMS)",
       "authority_id": "ministry-land",
@@ -109,16 +140,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://land.gov.bd/vumisheba-fee",
       "discovery_sources": [
         "https://land.gov.bd/vumisheba-fee"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-khatian-correction",
@@ -130,6 +170,7 @@
         "land record amendment"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "record_correction",
       "responsible_authority": "Ministry of Land",
       "authority_id": "ministry-land",
@@ -138,16 +179,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://land.gov.bd/vumisheba-fee",
       "discovery_sources": [
         "https://land.gov.bd/vumisheba-fee"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-khatian-online-copy",
@@ -160,6 +210,7 @@
         "QR khatian"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "khatian_copy",
       "responsible_authority": "Ministry of Land (DLRMS)",
       "authority_id": "ministry-land",
@@ -168,16 +219,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://dlrms.land.gov.bd/",
       "discovery_sources": [
         "https://dlrms.land.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "120 BDT online/instant copy per DLRMS homepage.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-mortgage-info-search",
@@ -188,6 +248,7 @@
         "mortgage search"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "mortgage",
       "responsible_authority": "Ministry of Land",
       "authority_id": "ministry-land",
@@ -197,16 +258,25 @@
         "bank"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://mutation.land.gov.bd/search-mortgage-info",
       "discovery_sources": [
         "https://mutation.land.gov.bd/search-mortgage-info"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-mouza-map",
@@ -218,6 +288,7 @@
         "mouza chita"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "map",
       "responsible_authority": "Ministry of Land",
       "authority_id": "ministry-land",
@@ -226,16 +297,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://land.gov.bd/vumisheba-fee",
       "discovery_sources": [
         "https://land.gov.bd/vumisheba-fee"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-mutation-apply",
@@ -247,6 +327,7 @@
         "land ownership transfer"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "mutation",
       "responsible_authority": "Ministry of Land",
       "authority_id": "ministry-land",
@@ -255,16 +336,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://mutation.land.gov.bd/",
       "discovery_sources": [
         "https://mutation.land.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-mutation-dcr",
@@ -276,6 +366,7 @@
         "mutation khatian print"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "mutation_dcr",
       "responsible_authority": "Ministry of Land",
       "authority_id": "ministry-land",
@@ -284,16 +375,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://mutation.land.gov.bd/namjari-steps",
       "discovery_sources": [
         "https://mutation.land.gov.bd/namjari-steps"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-mutation-khatian-search",
@@ -304,6 +404,7 @@
         "namjari khatian search"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "khatian_search",
       "responsible_authority": "Ministry of Land (DLRMS)",
       "authority_id": "ministry-land",
@@ -312,16 +413,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://dlrms.land.gov.bd/",
       "discovery_sources": [
         "https://dlrms.land.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-mutation-review",
@@ -333,6 +443,7 @@
         "namjari review"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "mutation_review",
       "responsible_authority": "Ministry of Land",
       "authority_id": "ministry-land",
@@ -341,16 +452,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://land.gov.bd/vumisheba-fee",
       "discovery_sources": [
         "https://land.gov.bd/vumisheba-fee"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Separate review court/notice/DCR fees listed on land service fee schedule.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-mutation-track",
@@ -361,6 +481,7 @@
         "mutation status"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "mutation_tracking",
       "responsible_authority": "Ministry of Land",
       "authority_id": "ministry-land",
@@ -369,16 +490,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://mutation.land.gov.bd/search-application",
       "discovery_sources": [
         "https://mutation.land.gov.bd/search-application"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "land-partition-consolidation",
@@ -390,6 +520,7 @@
         "joma ekikaran"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "partition_consolidation",
       "responsible_authority": "Ministry of Land",
       "authority_id": "ministry-land",
@@ -398,16 +529,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://www.land.gov.bd/nagorik-subidha",
       "discovery_sources": [
         "https://www.land.gov.bd/nagorik-subidha"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Processed via mutation/record correction framework per citizen services policy.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Land partition/consolidation via Ministry of Land is a citizen land service."
     },
     {
       "service_id": "land-survey-khatian-search",
@@ -419,6 +559,7 @@
         "CS khatian search"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "khatian_search",
       "responsible_authority": "Ministry of Land (DLRMS)",
       "authority_id": "ministry-land",
@@ -427,16 +568,25 @@
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://dlrms.land.gov.bd/",
       "discovery_sources": [
         "https://dlrms.land.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "local-upazila-land-tax-payment",
@@ -449,14 +599,16 @@
         "union land tax"
       ],
       "category": "LAND",
+      "category_id": "land",
       "subcategory": "land_tax",
       "responsible_authority": "Union Parishad / Upazila Land Office",
-      "authority_id": null,
+      "authority_id": "union-parishad-upazila-land-office",
       "target_user": [
         "citizen",
         "landowner"
       ],
       "geographic_scope": "UPAZILA",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "property",
         "tax"
@@ -465,11 +617,19 @@
       "discovery_sources": [
         "https://www.mygov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Land development tax payment at upazila/union land offices is a core local service."
     }
   ]
 }

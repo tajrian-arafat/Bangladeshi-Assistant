@@ -1,5 +1,5 @@
 {
-  "category": "VAT",
+  "category_id": "vat",
   "count": 3,
   "services": [
     {
@@ -13,6 +13,7 @@
         "Mushak 2.1"
       ],
       "category": "VAT",
+      "category_id": "vat",
       "subcategory": "registration",
       "responsible_authority": "National Board of Revenue (NBR)",
       "authority_id": "nbr",
@@ -22,16 +23,25 @@
         "exporter"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://nbr.gov.bd/faq/vat-faq/eng",
       "discovery_sources": [
         "https://nbr.gov.bd/faq/vat-faq/eng"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Turnover above 8 million BDT requires registration.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "vat-return-filing",
@@ -43,6 +53,7 @@
         "Mushak return"
       ],
       "category": "VAT",
+      "category_id": "vat",
       "subcategory": "return_filing",
       "responsible_authority": "National Board of Revenue (NBR)",
       "authority_id": "nbr",
@@ -50,6 +61,7 @@
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "tax",
         "business"
@@ -58,11 +70,19 @@
       "discovery_sources": [
         "https://nbr.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "VAT Mushak return filing is a core NBR business tax service."
     },
     {
       "service_id": "vat-turnover-enlistment",
@@ -74,6 +94,7 @@
         "BIN enlistment"
       ],
       "category": "VAT",
+      "category_id": "vat",
       "subcategory": "enlistment",
       "responsible_authority": "National Board of Revenue (NBR)",
       "authority_id": "nbr",
@@ -81,16 +102,25 @@
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://nbr.gov.bd/faq/vat-faq/eng",
       "discovery_sources": [
         "https://nbr.gov.bd/faq/vat-faq/eng"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "For turnover 3-8 million BDT per 12 months.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     }
   ]
 }

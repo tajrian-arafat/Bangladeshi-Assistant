@@ -1,5 +1,5 @@
 {
-  "category": "TAX",
+  "category_id": "tax",
   "count": 5,
   "services": [
     {
@@ -11,6 +11,7 @@
         "tax clearance certificate"
       ],
       "category": "TAX",
+      "category_id": "tax",
       "subcategory": "clearance",
       "responsible_authority": "National Board of Revenue (NBR)",
       "authority_id": "nbr",
@@ -19,16 +20,25 @@
         "expatriate"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://nbr.gov.bd/all-eservices/eng",
       "discovery_sources": [
         "https://nbr.gov.bd/all-eservices/eng"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Listed under Income Tax eServices on NBR portal.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "tax-etin-registration",
@@ -40,6 +50,7 @@
         "tax identification number"
       ],
       "category": "TAX",
+      "category_id": "tax",
       "subcategory": "tin",
       "responsible_authority": "National Board of Revenue (NBR)",
       "authority_id": "nbr",
@@ -49,16 +60,25 @@
         "foreigner"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://nbr.gov.bd/all-faq/e-services/eng",
       "discovery_sources": [
         "https://nbr.gov.bd/all-faq/e-services/eng"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Registration via incometax.gov.bd referenced on NBR FAQ.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "tax-income-return-file",
@@ -70,6 +90,7 @@
         "IT-11GA"
       ],
       "category": "TAX",
+      "category_id": "tax",
       "subcategory": "return",
       "responsible_authority": "National Board of Revenue (NBR)",
       "authority_id": "nbr",
@@ -78,16 +99,25 @@
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://nbr.gov.bd/all-faq/e-services/return-verify",
       "discovery_sources": [
         "https://nbr.gov.bd/all-faq/e-services/return-verify"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Online filing via etaxnbr.gov.bd referenced on NBR site.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "tax-income-tax-return-filing",
@@ -99,6 +129,7 @@
         "IT return NBR"
       ],
       "category": "TAX",
+      "category_id": "tax",
       "subcategory": "income_tax",
       "responsible_authority": "National Board of Revenue (NBR)",
       "authority_id": "nbr",
@@ -107,6 +138,7 @@
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "tax",
         "employment"
@@ -115,11 +147,19 @@
       "discovery_sources": [
         "https://nbr.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "NBR income tax return filing is a core citizen/business tax service."
     },
     {
       "service_id": "tax-source-tax-deduction-certificate",
@@ -132,6 +172,7 @@
         "source tax certificate"
       ],
       "category": "TAX",
+      "category_id": "tax",
       "subcategory": "withholding",
       "responsible_authority": "National Board of Revenue (NBR)",
       "authority_id": "nbr",
@@ -140,6 +181,7 @@
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "tax"
       ],
@@ -147,11 +189,19 @@
       "discovery_sources": [
         "https://nbr.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "TDS/AIT certificate issuance is a standard NBR tax service."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "category": "RELIGIOUS_AFFAIRS",
-  "count": 6,
+  "category_id": "religious_affairs",
+  "count": 4,
   "services": [
     {
       "service_id": "hajj-call-center",
@@ -12,23 +12,33 @@
         "Hajj Call Center (16136)"
       ],
       "category": "RELIGIOUS_AFFAIRS",
+      "category_id": "religious_affairs",
       "subcategory": "helpline",
       "responsible_authority": "Ministry of Religious Affairs (Hajj Wing)",
-      "authority_id": null,
+      "authority_id": "ministry-of-religious-affairs-hajj-wing",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://pilgrim.hajj.gov.bd/",
       "discovery_sources": [
         "https://pilgrim.hajj.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Already CONFIRMED in prior pass; helpline is a citizen service channel."
     },
     {
       "service_id": "hajj-pilgrim-search",
@@ -40,23 +50,33 @@
         "Hajj Pilgrim Search and Status"
       ],
       "category": "RELIGIOUS_AFFAIRS",
+      "category_id": "religious_affairs",
       "subcategory": "hajj",
       "responsible_authority": "Ministry of Religious Affairs (Hajj Wing)",
-      "authority_id": null,
+      "authority_id": "ministry-of-religious-affairs-hajj-wing",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://hajj.gov.bd/",
       "discovery_sources": [
         "https://hajj.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Verify registration eligibility using pre-registration tracking number.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "hajj-pre-registration",
@@ -66,84 +86,41 @@
       "aliases": [
         "pilgrim pre-registration",
         "hajj tracking number",
-        "Hajj Pre-registration"
+        "Hajj Pre-registration",
+        "hajj.gov.bd registration",
+        "government hajj",
+        "Hajj Registration Portal",
+        "hajj-registration-portal"
       ],
       "category": "RELIGIOUS_AFFAIRS",
+      "category_id": "religious_affairs",
       "subcategory": "hajj",
       "responsible_authority": "Ministry of Religious Affairs (Hajj Wing)",
-      "authority_id": null,
+      "authority_id": "ministry-of-religious-affairs-hajj-wing",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://pilgrim.hajj.gov.bd/",
       "discovery_sources": [
-        "https://pilgrim.hajj.gov.bd/"
-      ],
-      "status": "CONFIRMED",
-      "canonical_service_id": null,
-      "notes": "First step before government/private hajj registration.",
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "hajj-registration-portal",
-      "uuid": "c169cfd9-9785-5b95-86bc-cec859a72c79",
-      "service_name_bn": "হজ নিবন্ধন পোর্টাল",
-      "service_name_en": "Hajj Registration Portal",
-      "aliases": [
-        "hajj.gov.bd registration",
-        "government hajj",
-        "Hajj Registration Portal"
-      ],
-      "category": "RELIGIOUS_AFFAIRS",
-      "subcategory": "hajj",
-      "responsible_authority": "Ministry of Religious Affairs (Hajj Wing)",
-      "authority_id": null,
-      "target_user": [
-        "citizen"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [],
-      "official_source": "https://hajj.gov.bd/",
-      "discovery_sources": [
+        "https://pilgrim.hajj.gov.bd/",
         "https://hajj.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
-      "notes": null,
+      "relationship_type": null,
+      "notes": "First step before government/private hajj registration.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
-      "service_id": "religious-mora-portal",
-      "uuid": "9b1f371f-19c7-5f15-affc-af29d2dd166c",
-      "service_name_bn": "ধর্ম বিষয়ক মন্ত্রণালয় সেবা",
-      "service_name_en": "Ministry of Religious Affairs Services Overview",
-      "aliases": [
-        "MORA services",
-        "religious affairs ministry",
-        "Ministry of Religious Affairs Services Overview"
-      ],
-      "category": "RELIGIOUS_AFFAIRS",
-      "subcategory": "information",
-      "responsible_authority": "Ministry of Religious Affairs",
-      "authority_id": null,
-      "target_user": [
-        "citizen"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [],
-      "official_source": "https://mora.gov.bd/",
-      "discovery_sources": [
-        "https://mora.gov.bd/"
-      ],
-      "status": "NEEDS_VERIFICATION",
-      "canonical_service_id": null,
-      "notes": "Ministry portal; hajj services have dedicated hajj.gov.bd portal.",
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "religious-waqf-services",
@@ -155,24 +132,34 @@
         "Waqf Property Management Services"
       ],
       "category": "RELIGIOUS_AFFAIRS",
+      "category_id": "religious_affairs",
       "subcategory": "waqf",
       "responsible_authority": "Islamic Foundation / Ministry of Religious Affairs",
-      "authority_id": null,
+      "authority_id": "islamic-foundation-ministry-of-religious-affairs",
       "target_user": [
         "citizen",
         "organization"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://islamicfoundation.gov.bd/",
       "discovery_sources": [
         "https://islamicfoundation.gov.bd/"
       ],
-      "status": "NEEDS_VERIFICATION",
+      "mygov_service_ids": [],
+      "status": "UNVERIFIED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Islamic Foundation portal; specific waqf e-service URL needs verification.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": null,
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Waqf administration exists; specific citizen service endpoints not verified."
     }
   ]
 }

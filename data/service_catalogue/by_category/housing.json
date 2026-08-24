@@ -1,5 +1,5 @@
 {
-  "category": "HOUSING",
+  "category_id": "housing",
   "count": 10,
   "services": [
     {
@@ -13,13 +13,15 @@
         "House Building Loan (BHBFC)"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "housing_finance",
       "responsible_authority": "Bangladesh House Building Finance Corporation (BHBFC)",
-      "authority_id": null,
+      "authority_id": "bangladesh-house-building-finance-corporation-bhbfc",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "property"
       ],
@@ -27,11 +29,19 @@
       "discovery_sources": [
         "https://bhbfc.khulna.gov.bd/en/site/page/%E0%A6%AC%E0%A6%BE%E0%A7%9C%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A3-%E0%A6%8B%E0%A6%A3-%E0%A6%B8%E0%A6%82%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A4-%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Loan application forms on BHBFC zonal portals; terms vary by branch.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "housing-cda-building-permit",
@@ -43,14 +53,16 @@
         "Chittagong building permit"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "building_permit",
       "responsible_authority": "Chattogram Development Authority (CDA)",
-      "authority_id": null,
+      "authority_id": "chattogram-development-authority-cda",
       "target_user": [
         "citizen",
         "developer"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "property",
         "business"
@@ -59,11 +71,19 @@
       "discovery_sources": [
         "https://cda.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "CDA building plan approval is a real development-authority permit service."
     },
     {
       "service_id": "housing-nha-allotment-application",
@@ -75,13 +95,15 @@
         "government flat application"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "allotment",
       "responsible_authority": "National Housing Authority (NHA)",
-      "authority_id": null,
+      "authority_id": "national-housing-authority-nha",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "property",
         "family"
@@ -90,11 +112,19 @@
       "discovery_sources": [
         "https://nha.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "NHA flat allotment applications are periodic but real public housing services."
     },
     {
       "service_id": "housing-nha-citizen-charter",
@@ -106,23 +136,33 @@
         "NHA Citizen Charter Services"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "citizen_charter",
       "responsible_authority": "National Housing Authority (NHA)",
-      "authority_id": null,
+      "authority_id": "national-housing-authority-nha",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://nha.gov.bd/site/office_citizen_charter/7e6aa951-ece7-40fb-af0a-0abd5bd4ad3f/-",
       "discovery_sources": [
         "https://nha.gov.bd/site/office_citizen_charter/7e6aa951-ece7-40fb-af0a-0abd5bd4ad3f/-"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "housing-nha-projects",
@@ -135,13 +175,15 @@
         "National Housing Authority (NHA) Projects"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "public_housing",
       "responsible_authority": "National Housing Authority (NHA)",
-      "authority_id": null,
+      "authority_id": "national-housing-authority-nha",
       "target_user": [
         "citizen"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "property",
         "family"
@@ -150,11 +192,19 @@
       "discovery_sources": [
         "https://nha.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "housing-rajuk-construction-permit",
@@ -167,14 +217,16 @@
         "RAJUK Construction Permit (CP)"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "construction_permit",
       "responsible_authority": "Rajdhani Unnayan Kartripakkha (RAJUK)",
-      "authority_id": null,
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
       "target_user": [
         "citizen",
         "business"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "property"
       ],
@@ -182,11 +234,19 @@
       "discovery_sources": [
         "https://ecps.gov.bd/permits/construction-permit/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "housing-rajuk-large-special-project",
@@ -199,23 +259,33 @@
         "RAJUK Large and Special Project Clearance (LSP)"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "special_project",
       "responsible_authority": "Rajdhani Unnayan Kartripakkha (RAJUK)",
-      "authority_id": null,
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
       "target_user": [
         "business"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://ecps.gov.bd/",
       "discovery_sources": [
         "https://ecps.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "housing-rajuk-occupancy-certificate",
@@ -227,24 +297,34 @@
         "RAJUK Occupancy Certificate"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "occupancy",
       "responsible_authority": "Rajdhani Unnayan Kartripakkha (RAJUK)",
-      "authority_id": null,
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
       "target_user": [
         "citizen",
         "business"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://ecps.gov.bd/",
       "discovery_sources": [
         "https://ecps.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "housing-rajuk-planning-permit",
@@ -257,14 +337,16 @@
         "RAJUK Planning Permit (PP)"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "planning_permit",
       "responsible_authority": "Rajdhani Unnayan Kartripakkha (RAJUK)",
-      "authority_id": null,
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
       "target_user": [
         "citizen",
         "business"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "property"
       ],
@@ -272,11 +354,19 @@
       "discovery_sources": [
         "https://ecps.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Part of ECPS; some applications temporarily suspended during 2025 rules upgrade.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     },
     {
       "service_id": "housing-rajuk-professional-registration",
@@ -288,23 +378,33 @@
         "RAJUK Professional Registration (ECPS)"
       ],
       "category": "HOUSING",
+      "category_id": "housing",
       "subcategory": "professional_registration",
       "responsible_authority": "Rajdhani Unnayan Kartripakkha (RAJUK)",
-      "authority_id": null,
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
       "target_user": [
         "business"
       ],
       "geographic_scope": "LOCAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://ecps.gov.bd/",
       "discovery_sources": [
         "https://ecps.gov.bd/"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Architects, engineers, and related professionals register on ECPS.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "category": "GOVERNMENT_PAYMENTS",
+  "category_id": "government_payments",
   "count": 3,
   "services": [
     {
@@ -13,26 +13,37 @@
         "treasury challan"
       ],
       "category": "GOVERNMENT_PAYMENTS",
+      "category_id": "government_payments",
       "subcategory": "challan",
       "responsible_authority": "Finance Division / Office of the Controller General of Accounts",
-      "authority_id": null,
+      "authority_id": "finance-division-office-of-the-controller-general-of-accounts",
       "target_user": [
         "citizen",
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [
         "tax"
       ],
-      "official_source": null,
+      "official_source": "https://www.achallan.gov.bd/",
       "discovery_sources": [
-        "https://www.mygov.bd/"
+        "https://www.mygov.bd/",
+        "https://www.achallan.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "A-challan / automated treasury challan is the government payment channel for duties/fees."
     },
     {
       "service_id": "digital-ekpay-government-payment",
@@ -44,24 +55,34 @@
         "government payment gateway Bangladesh"
       ],
       "category": "GOVERNMENT_PAYMENTS",
+      "category_id": "government_payments",
       "subcategory": "payment_gateway",
       "responsible_authority": "Aspire to Innovate (a2i), ICT Division",
-      "authority_id": null,
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
       "target_user": [
         "citizen",
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://ekpay.gov.bd/",
       "discovery_sources": [
         "https://ekpay.gov.bd/"
       ],
-      "status": "LIKELY",
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": null,
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "Official a2i national P2G payment gateway (ekpay.gov.bd / support.ekpay.gov.bd)."
     },
     {
       "service_id": "tax-challan-payment",
@@ -73,6 +94,7 @@
         "government payment NBR"
       ],
       "category": "GOVERNMENT_PAYMENTS",
+      "category_id": "government_payments",
       "subcategory": "challan",
       "responsible_authority": "National Board of Revenue (NBR)",
       "authority_id": "nbr",
@@ -81,16 +103,25 @@
         "business"
       ],
       "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
       "lifecycle_stage": [],
       "official_source": "https://nbr.gov.bd/all-eservices/eng",
       "discovery_sources": [
         "https://nbr.gov.bd/all-eservices/eng"
       ],
+      "mygov_service_ids": [],
       "status": "CONFIRMED",
       "canonical_service_id": null,
+      "relationship_type": null,
       "notes": "Listed under Payment and Chalan eServices.",
       "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
     }
   ]
 }
