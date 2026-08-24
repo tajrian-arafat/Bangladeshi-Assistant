@@ -1,6 +1,6 @@
 {
   "category": "VAT",
-  "count": 2,
+  "count": 3,
   "services": [
     {
       "service_id": "vat-bin-registration",
@@ -30,6 +30,37 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Turnover above 8 million BDT requires registration.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "vat-return-filing",
+      "uuid": "eda03439-8a86-56c1-ae5b-b484c833f949",
+      "service_name_bn": "ভ্যাট রিটার্ন দাখিল",
+      "service_name_en": "VAT Return Filing",
+      "aliases": [
+        "VAT return NBR",
+        "Mushak return"
+      ],
+      "category": "VAT",
+      "subcategory": "return_filing",
+      "responsible_authority": "National Board of Revenue (NBR)",
+      "authority_id": "nbr",
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "tax",
+        "business"
+      ],
+      "official_source": "https://nbr.gov.bd/",
+      "discovery_sources": [
+        "https://nbr.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },

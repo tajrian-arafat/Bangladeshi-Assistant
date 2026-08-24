@@ -1,7 +1,64 @@
 {
   "category": "IDENTITY",
-  "count": 12,
+  "count": 14,
   "services": [
+    {
+      "service_id": "election-candidate-nomination",
+      "uuid": "0118a8d6-8a71-59cc-96d2-45a87b86e95b",
+      "service_name_bn": "প্রার্থী মনোনয়ন/নির্বাচনী তফসিল",
+      "service_name_en": "Election Candidate Nomination and Schedule Services",
+      "aliases": [
+        "nomination paper EC",
+        "election candidate registration"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "election",
+      "responsible_authority": "Bangladesh Election Commission",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "candidate"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://www.ecs.gov.bd/",
+      "discovery_sources": [
+        "https://www.ecs.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "identity-voter-slip-download",
+      "uuid": "4658126f-cba2-5f3f-8dee-7e0ef7ef6d65",
+      "service_name_bn": "ভোটার স্লিপ/তথ্য ডাউনলোড",
+      "service_name_en": "Voter Information Slip Download",
+      "aliases": [
+        "voter slip",
+        "voter ID slip EC"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "voter",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
     {
       "service_id": "nid-card-info-correction",
       "uuid": "495608a8-c20b-5d97-a8b1-2fcd70ce6b13",

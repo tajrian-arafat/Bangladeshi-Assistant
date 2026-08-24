@@ -1,6 +1,6 @@
 {
   "category": "SOCIAL_PROTECTION",
-  "count": 147,
+  "count": 149,
   "services": [
     {
       "service_id": "ff-g2p-electronic-payment",
@@ -180,6 +180,37 @@
         "https://bffwt.gov.bd/"
       ],
       "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "food-ministry-vgf-card",
+      "uuid": "3e4fa792-74af-5fa4-a78b-07ceb6a0cc9d",
+      "service_name_bn": "VGF/খাদ্য সহায়তা কার্ড",
+      "service_name_en": "Vulnerable Group Feeding (VGF) / Food Assistance Card",
+      "aliases": [
+        "VGF card",
+        "food ministry relief card",
+        "TR rice card"
+      ],
+      "category": "SOCIAL_PROTECTION",
+      "subcategory": "food_assistance",
+      "responsible_authority": "Ministry of Food",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "social_protection"
+      ],
+      "official_source": "https://food.gov.bd/",
+      "discovery_sources": [
+        "https://food.gov.bd/"
+      ],
+      "status": "LIKELY",
       "canonical_service_id": null,
       "notes": null,
       "discovered_at": "2026-08-24",
@@ -4271,6 +4302,43 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Listed on official SSPS programme inventory (NSSS). Name-only discovery; eligibility not catalogued.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "social-allowance-online-application",
+      "uuid": "5dd7febd-50f7-5d43-a30d-14fc98807e0d",
+      "service_name_bn": "ভাতা ও উপবৃত্তি অনলাইন আবেদন (mis.bhata)",
+      "service_name_en": "Social Allowance and Stipend Online Application",
+      "aliases": [
+        "bhata online application",
+        "old age allowance application",
+        "disability allowance application",
+        "widow allowance application"
+      ],
+      "category": "SOCIAL_PROTECTION",
+      "subcategory": "allowance_application",
+      "responsible_authority": "Department of Social Services (DSS)",
+      "authority_id": "dss",
+      "target_user": [
+        "citizen",
+        "student",
+        "elderly"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "social_protection",
+        "retirement",
+        "family"
+      ],
+      "official_source": "https://mis.bhata.gov.bd/online-application",
+      "discovery_sources": [
+        "https://mis.bhata.gov.bd/online-application",
+        "https://outlookbangla.com/2026/07/03/online-applications-for-allowances-stipends-to-begin-on-aug-1/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": "Citizen application portal for old-age, widow, disability allowances and related stipends; distinct from SSPS programme inventory entries.",
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     }

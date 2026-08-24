@@ -1,7 +1,68 @@
 {
   "category": "GOVERNMENT_PAYMENTS",
-  "count": 1,
+  "count": 3,
   "services": [
+    {
+      "service_id": "digital-challan-treasury-payment",
+      "uuid": "ad6ab63b-7608-589d-ae51-eee534be2531",
+      "service_name_bn": "ট্রেজারি/চালান পেমেন্ট (aChallan)",
+      "service_name_en": "Treasury Challan Online Payment (aChallan)",
+      "aliases": [
+        "aChallan",
+        "online chalan payment",
+        "treasury challan"
+      ],
+      "category": "GOVERNMENT_PAYMENTS",
+      "subcategory": "challan",
+      "responsible_authority": "Finance Division / Office of the Controller General of Accounts",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "tax"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "digital-ekpay-government-payment",
+      "uuid": "02ec4ba2-a99f-55db-8bda-85fa9b7fde14",
+      "service_name_bn": "Ekpay সরকারি পেমেন্ট",
+      "service_name_en": "Ekpay Unified Government Payment Gateway",
+      "aliases": [
+        "ekpay",
+        "government payment gateway Bangladesh"
+      ],
+      "category": "GOVERNMENT_PAYMENTS",
+      "subcategory": "payment_gateway",
+      "responsible_authority": "Aspire to Innovate (a2i), ICT Division",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://ekpay.gov.bd/",
+      "discovery_sources": [
+        "https://ekpay.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
     {
       "service_id": "tax-challan-payment",
       "uuid": "94e98317-01be-52be-8194-7fb58081ee64",

@@ -1,6 +1,6 @@
 {
   "category": "LAND",
-  "count": 14,
+  "count": 16,
   "services": [
     {
       "service_id": "land-deed-registration",
@@ -54,6 +54,39 @@
         "https://dlrms.land.gov.bd/application/track"
       ],
       "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "land-e-stamp-payment",
+      "uuid": "8eed1b2b-a70b-51f0-937c-9b2701d867f2",
+      "service_name_bn": "ই-স্ট্যাম্প / non-judicial stamp",
+      "service_name_en": "e-Stamp / Non-Judicial Stamp Purchase",
+      "aliases": [
+        "e-stamp Bangladesh",
+        "stamp vendor",
+        "judicial stamp"
+      ],
+      "category": "LAND",
+      "subcategory": "stamp",
+      "responsible_authority": "Office of the Controller of Stamps / NBR",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "property",
+        "business"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "NEEDS_VERIFICATION",
       "canonical_service_id": null,
       "notes": null,
       "discovered_at": "2026-08-24",
@@ -400,6 +433,39 @@
         "https://dlrms.land.gov.bd/"
       ],
       "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "local-upazila-land-tax-payment",
+      "uuid": "a75632aa-15c8-52ed-8523-655f93e96a38",
+      "service_name_bn": "উপজেলা ভূমি উন্নয়ন কর",
+      "service_name_en": "Upazila Land Development Tax Payment",
+      "aliases": [
+        "land development tax",
+        "holding tax rural",
+        "union land tax"
+      ],
+      "category": "LAND",
+      "subcategory": "land_tax",
+      "responsible_authority": "Union Parishad / Upazila Land Office",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "landowner"
+      ],
+      "geographic_scope": "UPAZILA",
+      "lifecycle_stage": [
+        "property",
+        "tax"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "LIKELY",
       "canonical_service_id": null,
       "notes": null,
       "discovered_at": "2026-08-24",

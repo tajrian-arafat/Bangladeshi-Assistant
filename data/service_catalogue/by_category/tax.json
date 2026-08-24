@@ -1,6 +1,6 @@
 {
   "category": "TAX",
-  "count": 3,
+  "count": 5,
   "services": [
     {
       "service_id": "tax-clearance-foreigners",
@@ -86,6 +86,70 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Online filing via etaxnbr.gov.bd referenced on NBR site.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "tax-income-tax-return-filing",
+      "uuid": "11844b49-89f9-55ea-ae28-3f6c8a95f5ab",
+      "service_name_bn": "আয়কর রিটার্ন দাখিল",
+      "service_name_en": "Income Tax Return Filing",
+      "aliases": [
+        "tax return Bangladesh",
+        "IT return NBR"
+      ],
+      "category": "TAX",
+      "subcategory": "income_tax",
+      "responsible_authority": "National Board of Revenue (NBR)",
+      "authority_id": "nbr",
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "tax",
+        "employment"
+      ],
+      "official_source": "https://nbr.gov.bd/",
+      "discovery_sources": [
+        "https://nbr.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "tax-source-tax-deduction-certificate",
+      "uuid": "896e74fa-4e2e-54a6-8c24-813328f5c137",
+      "service_name_bn": "উৎস কর সনদ (TDS/AIT certificate)",
+      "service_name_en": "Tax Deduction at Source Certificate",
+      "aliases": [
+        "TDS certificate",
+        "AIT certificate",
+        "source tax certificate"
+      ],
+      "category": "TAX",
+      "subcategory": "withholding",
+      "responsible_authority": "National Board of Revenue (NBR)",
+      "authority_id": "nbr",
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "tax"
+      ],
+      "official_source": "https://nbr.gov.bd/",
+      "discovery_sources": [
+        "https://nbr.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     }

@@ -1,6 +1,6 @@
 {
   "category": "HOUSING",
-  "count": 8,
+  "count": 10,
   "services": [
     {
       "service_id": "housing-bhbfc-loan-application",
@@ -30,6 +30,69 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Loan application forms on BHBFC zonal portals; terms vary by branch.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "housing-cda-building-permit",
+      "uuid": "f0595734-ce29-5c92-b4f7-2c6e8fc4158d",
+      "service_name_bn": "CDA building plan approval (Chattogram)",
+      "service_name_en": "Chattogram Development Authority Building Plan Approval",
+      "aliases": [
+        "CDA plan pass",
+        "Chittagong building permit"
+      ],
+      "category": "HOUSING",
+      "subcategory": "building_permit",
+      "responsible_authority": "Chattogram Development Authority (CDA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "developer"
+      ],
+      "geographic_scope": "LOCAL",
+      "lifecycle_stage": [
+        "property",
+        "business"
+      ],
+      "official_source": "https://cda.gov.bd/",
+      "discovery_sources": [
+        "https://cda.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "housing-nha-allotment-application",
+      "uuid": "d0a89842-3477-55be-a431-f3fbb5b0c16d",
+      "service_name_bn": "জাতীয় গৃহায়ন কর্তৃপক্ষ (NHA) flat allotment",
+      "service_name_en": "National Housing Authority Flat Allotment Application",
+      "aliases": [
+        "NHA allotment",
+        "government flat application"
+      ],
+      "category": "HOUSING",
+      "subcategory": "allotment",
+      "responsible_authority": "National Housing Authority (NHA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "property",
+        "family"
+      ],
+      "official_source": "https://nha.gov.bd/",
+      "discovery_sources": [
+        "https://nha.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },

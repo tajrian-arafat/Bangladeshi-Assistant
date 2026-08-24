@@ -37,6 +37,7 @@ DUPLICATE_ALIASES: dict[str, str] = {
     "e-passport-application": "epassport-new-application",
     "mrp-passport-initial": "passport-mrp-initial",
     "mrp-passport-reissue": "passport-mrp-reissue",
+    "agri-livestock-registration": "agriculture-livestock-farm-registration",
 }
 
 AUTHORITY_SLUG_MAP: dict[str, str] = {

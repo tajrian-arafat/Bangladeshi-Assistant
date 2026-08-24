@@ -1,6 +1,6 @@
 {
   "category": "HEALTH",
-  "count": 12,
+  "count": 14,
   "services": [
     {
       "service_id": "health-16263-telemedicine",
@@ -254,6 +254,71 @@
         "https://payment.bmdc.org.bd/home/page/form-list"
       ],
       "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "health-hospital-birth-notification",
+      "uuid": "c6a1be04-6fc8-5cf1-b110-e3bae9ed9ed4",
+      "service_name_bn": "হাসপাতালে জন্ম নিবেদন",
+      "service_name_en": "Hospital Birth Notification (for BDRIS registration)",
+      "aliases": [
+        "hospital birth report",
+        "birth notification form"
+      ],
+      "category": "HEALTH",
+      "subcategory": "birth_notification",
+      "responsible_authority": "Directorate General of Health Services (DGHS)",
+      "authority_id": "dghs",
+      "target_user": [
+        "citizen",
+        "hospital"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "birth",
+        "childhood"
+      ],
+      "official_source": "https://bdris.gov.bd/",
+      "discovery_sources": [
+        "https://bdris.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": "Hospital notification pathway into civil birth registration; related to but distinct from BDRIS application.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "health-immunization-card-mcv",
+      "uuid": "d55fdbb6-ef44-5590-a0d1-6f65c8249b51",
+      "service_name_bn": "টিকা/card (EPI/MCV)",
+      "service_name_en": "Immunization / Vaccination Card (EPI)",
+      "aliases": [
+        "vaccination card",
+        "EPI card",
+        "child immunization record"
+      ],
+      "category": "HEALTH",
+      "subcategory": "immunization",
+      "responsible_authority": "Directorate General of Health Services (DGHS) / EPI",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "child"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "childhood",
+        "healthcare"
+      ],
+      "official_source": "https://dghs.gov.bd/",
+      "discovery_sources": [
+        "https://dghs.gov.bd/"
+      ],
+      "status": "LIKELY",
       "canonical_service_id": null,
       "notes": null,
       "discovered_at": "2026-08-24",

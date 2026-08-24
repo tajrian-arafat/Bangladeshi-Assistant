@@ -1,6 +1,6 @@
 {
   "category": "POLICE",
-  "count": 6,
+  "count": 8,
   "services": [
     {
       "service_id": "police-clearance-certificate",
@@ -119,6 +119,34 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "police-general-diary-online",
+      "uuid": "416f1a97-38ec-59b7-80d7-f844a7171cb4",
+      "service_name_bn": "অনলাইন GD (General Diary)",
+      "service_name_en": "Online General Diary (GD) Filing",
+      "aliases": [
+        "online GD police",
+        "e-GD Bangladesh"
+      ],
+      "category": "POLICE",
+      "subcategory": "general_diary",
+      "responsible_authority": "Bangladesh Police",
+      "authority_id": "police",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "NEEDS_VERIFICATION",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "police-nid-address-verification",
       "uuid": "545502a4-0229-5287-ae07-b5a588fef79c",
       "service_name_bn": "NID/ঠিকানা ভিত্তিক পুলিশ ভেরিফিকেশন",
@@ -144,6 +172,34 @@
       "status": "LIKELY",
       "canonical_service_id": null,
       "notes": "PCC and verification use NID/birth ID/ward councillor certificate when passport lacks address.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "police-passport-police-verification",
+      "uuid": "a148ea2c-4f73-5c1d-bd94-4abd9d01593e",
+      "service_name_bn": "পাসপোর্ট পুলিশ ভেরিফিকেশন",
+      "service_name_en": "Passport Police Verification",
+      "aliases": [
+        "passport verification police",
+        "PV report passport"
+      ],
+      "category": "POLICE",
+      "subcategory": "verification",
+      "responsible_authority": "Bangladesh Police (Special Branch / Passport Wing)",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://www.dip.gov.bd/",
+      "discovery_sources": [
+        "https://www.dip.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },

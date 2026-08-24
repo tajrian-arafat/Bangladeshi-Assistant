@@ -1,6 +1,6 @@
 {
   "category": "EDUCATION",
-  "count": 12,
+  "count": 14,
   "services": [
     {
       "service_id": "education-class-registration",
@@ -198,6 +198,36 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "education-public-university-admission",
+      "uuid": "48f3fb1c-4fc3-52c8-aea6-8bdf81f856cd",
+      "service_name_bn": "পাবলিক বিশ্ববিদ্যালয় ভর্তি (centralized/gov)",
+      "service_name_en": "Public University Admission Services",
+      "aliases": [
+        "university admission Bangladesh",
+        "admission portal public university"
+      ],
+      "category": "EDUCATION",
+      "subcategory": "admission",
+      "responsible_authority": "University Grants Commission (UGC) / respective public university",
+      "authority_id": null,
+      "target_user": [
+        "student"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "education"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "NEEDS_VERIFICATION",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "education-registration-card-correction",
       "uuid": "7baa2bfa-2986-57be-bd68-847dfacaefe8",
       "service_name_bn": "রেজিস্ট্রেশন কার্ড তথ্য সংশোধন",
@@ -336,6 +366,37 @@
       "status": "LIKELY",
       "canonical_service_id": null,
       "notes": "Technical board selectable on national result verification portal.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "education-ugc-university-recognition",
+      "uuid": "63c212b1-de4b-51b7-990d-23e5371def5b",
+      "service_name_bn": "UGC বিশ্ববিদ্যালয়/প্রতিষ্ঠান স্বীকৃতি যাচাই",
+      "service_name_en": "UGC University/Institution Recognition Verification",
+      "aliases": [
+        "UGC approved university list",
+        "university recognition Bangladesh"
+      ],
+      "category": "EDUCATION",
+      "subcategory": "higher_education",
+      "responsible_authority": "University Grants Commission (UGC)",
+      "authority_id": null,
+      "target_user": [
+        "student",
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "education"
+      ],
+      "official_source": "https://www.ugc.gov.bd/",
+      "discovery_sources": [
+        "https://www.ugc.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     }

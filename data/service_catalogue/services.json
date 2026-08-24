@@ -2,9 +2,9 @@
   "catalogue_version": "0.1.0-discovery",
   "discovered_at": "2026-08-24",
   "disclaimer": "This is a discovery-phase inventory. It does NOT claim to list all Bangladesh government services. Completeness is measured via coverage metrics, not asserted.",
-  "total_entries": 446,
-  "canonical_services": 432,
-  "duplicate_entries": 14,
+  "total_entries": 509,
+  "canonical_services": 492,
+  "duplicate_entries": 17,
   "services": [
     {
       "service_id": "agri-bamis-farmer-registration",
@@ -183,35 +183,6 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
-      "service_id": "agri-livestock-registration",
-      "uuid": "6776806c-78aa-5585-9850-7c8f473d8233",
-      "service_name_bn": "পশুসম্পদ নিবন্ধন/সেবা",
-      "service_name_en": "Livestock Registration and Services",
-      "aliases": [
-        "DLS livestock services",
-        "Livestock Registration and Services"
-      ],
-      "category": "AGRICULTURE",
-      "subcategory": "livestock",
-      "responsible_authority": "Department of Livestock Services (DLS)",
-      "authority_id": null,
-      "target_user": [
-        "farmer",
-        "business"
-      ],
-      "geographic_scope": "NATIONAL",
-      "lifecycle_stage": [],
-      "official_source": "https://dls.gov.bd/",
-      "discovery_sources": [
-        "https://dls.gov.bd/"
-      ],
-      "status": "NEEDS_VERIFICATION",
-      "canonical_service_id": null,
-      "notes": "Department portal; specific e-service URLs to be verified per service.",
-      "discovered_at": "2026-08-24",
-      "catalogue_version": "0.1.0-discovery"
-    },
-    {
       "service_id": "agri-seed-certification",
       "uuid": "2ae518d4-7144-5bf9-96ae-a6480a860879",
       "service_name_bn": "বীজ সনদ/নিবন্ধন (BADC)",
@@ -237,6 +208,70 @@
       "status": "NEEDS_VERIFICATION",
       "canonical_service_id": null,
       "notes": "BADC oversees seed; dedicated online portal URL needs verification.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "agriculture-fisheries-fish-farm-registration",
+      "uuid": "cc2e176b-1e38-5c1c-ba4a-c86238a3adb0",
+      "service_name_bn": "মাছ খামার নিবন্ধন",
+      "service_name_en": "Fish Farm Registration",
+      "aliases": [
+        "DoF fish farm registration",
+        "aquaculture registration"
+      ],
+      "category": "FISHERIES",
+      "subcategory": "farm_registration",
+      "responsible_authority": "Department of Fisheries (DoF)",
+      "authority_id": null,
+      "target_user": [
+        "farmer",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment",
+        "business"
+      ],
+      "official_source": "https://fisheries.gov.bd/",
+      "discovery_sources": [
+        "https://fisheries.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "agriculture-livestock-farm-registration",
+      "uuid": "b449273e-5f28-5c14-8c3b-f614814bf8dc",
+      "service_name_bn": "খামার/পশুসম্পদ নিবন্ধন (DLS)",
+      "service_name_en": "Livestock Farm Registration (DLS)",
+      "aliases": [
+        "DLS farm registration",
+        "livestock farm licence"
+      ],
+      "category": "LIVESTOCK",
+      "subcategory": "farm_registration",
+      "responsible_authority": "Department of Livestock Services (DLS)",
+      "authority_id": null,
+      "target_user": [
+        "farmer",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment",
+        "business"
+      ],
+      "official_source": "https://dls.gov.bd/",
+      "discovery_sources": [
+        "https://dls.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": "Replaces weaker agri-livestock-registration entry if merged during dedup review.",
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -1470,6 +1505,40 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "business-cooperative-society-registration",
+      "uuid": "c112eb9b-7be7-5091-bca9-d613f7b619d4",
+      "service_name_bn": "সমবায় সমিতি নিবন্ধন",
+      "service_name_en": "Cooperative Society Registration",
+      "aliases": [
+        "cooperative registration",
+        "coop society registration",
+        "service.rdcd.gov.bd"
+      ],
+      "category": "REGISTRATIONS",
+      "subcategory": "cooperative",
+      "responsible_authority": "Department of Cooperatives (RDCD)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "group"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business"
+      ],
+      "official_source": "https://service.rdcd.gov.bd/",
+      "discovery_sources": [
+        "https://service.rdcd.gov.bd/",
+        "https://coop.gov.bd/",
+        "https://dashboard.rdcd.gov.bd/tutorial/6"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "business-entity-name-search",
       "uuid": "c7160ba4-22af-5e97-a928-3392a26643e9",
       "service_name_bn": "প্রতিষ্ঠানের নাম অনুসন্ধান",
@@ -1553,6 +1622,37 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Prerequisite for company/society/trade organization registration.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "business-ngoab-ngo-registration",
+      "uuid": "dade1c51-328b-582f-8045-1c60c24acbd0",
+      "service_name_bn": "এনজিও বিষয়ক অধিদপ্তর NGO নিবন্ধন",
+      "service_name_en": "NGO Registration (NGO Affairs Bureau)",
+      "aliases": [
+        "NGOAB registration",
+        "NGO registration Bangladesh",
+        "foreign NGO registration"
+      ],
+      "category": "REGISTRATIONS",
+      "subcategory": "ngo",
+      "responsible_authority": "NGO Affairs Bureau",
+      "authority_id": null,
+      "target_user": [
+        "organization"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business"
+      ],
+      "official_source": "https://ngoa.gov.bd/",
+      "discovery_sources": [
+        "https://ngoa.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -1721,6 +1821,38 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "certificates-freedom-fighter-certificate",
+      "uuid": "a3a887b4-5eaf-5afc-a3f6-2ed5f09762b6",
+      "service_name_bn": "মুক্তিযোদ্ধা/তথ্য সংশোধন সনদ",
+      "service_name_en": "Freedom Fighter Certificate Issuance/Correction",
+      "aliases": [
+        "muktijoddha certificate",
+        "freedom fighter certificate"
+      ],
+      "category": "CERTIFICATES",
+      "subcategory": "freedom_fighter",
+      "responsible_authority": "Ministry of Liberation War Affairs",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "freedom_fighter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "retirement",
+        "social_protection"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "NEEDS_VERIFICATION",
+      "canonical_service_id": null,
+      "notes": "Distinct from BFFWT MIS and allowance programmes already catalogued.",
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -2932,6 +3064,130 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "digital-challan-treasury-payment",
+      "uuid": "ad6ab63b-7608-589d-ae51-eee534be2531",
+      "service_name_bn": "ট্রেজারি/চালান পেমেন্ট (aChallan)",
+      "service_name_en": "Treasury Challan Online Payment (aChallan)",
+      "aliases": [
+        "aChallan",
+        "online chalan payment",
+        "treasury challan"
+      ],
+      "category": "GOVERNMENT_PAYMENTS",
+      "subcategory": "challan",
+      "responsible_authority": "Finance Division / Office of the Controller General of Accounts",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "tax"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "digital-ekpay-government-payment",
+      "uuid": "02ec4ba2-a99f-55db-8bda-85fa9b7fde14",
+      "service_name_bn": "Ekpay সরকারি পেমেন্ট",
+      "service_name_en": "Ekpay Unified Government Payment Gateway",
+      "aliases": [
+        "ekpay",
+        "government payment gateway Bangladesh"
+      ],
+      "category": "GOVERNMENT_PAYMENTS",
+      "subcategory": "payment_gateway",
+      "responsible_authority": "Aspire to Innovate (a2i), ICT Division",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://ekpay.gov.bd/",
+      "discovery_sources": [
+        "https://ekpay.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "digital-mygov-citizen-registration",
+      "uuid": "5919c894-3241-54ec-9928-be0e2b609c9c",
+      "service_name_bn": "myGov নাগরিক নিবন্ধন",
+      "service_name_en": "myGov Citizen Account Registration",
+      "aliases": [
+        "myGov registration",
+        "mygov.bd signup"
+      ],
+      "category": "DIGITAL_GOVERNMENT",
+      "subcategory": "portal_account",
+      "responsible_authority": "Aspire to Innovate (a2i), ICT Division",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://www.mygov.bd/",
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "disability-dis-registration",
+      "uuid": "c89b83b9-10b2-54ee-8d37-d43b4f9fe2e7",
+      "service_name_bn": "প্রতিবন্ধী নিবন্ধন ও পরিচয়পত্র (DIS)",
+      "service_name_en": "Disability Registration and Identity Card (DIS)",
+      "aliases": [
+        "Subarna Nagorik Card",
+        "DIS registration",
+        "disability ID card",
+        "প্রতিবন্ধী পরিচয়পত্র"
+      ],
+      "category": "DISABILITY",
+      "subcategory": "registration",
+      "responsible_authority": "Department of Social Services (DSS)",
+      "authority_id": "dss",
+      "target_user": [
+        "citizen",
+        "guardian"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "healthcare",
+        "social_protection"
+      ],
+      "official_source": "https://www.dis.gov.bd/",
+      "discovery_sources": [
+        "https://www.dis.gov.bd/",
+        "https://legislativediv.portal.gov.bd/"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Disability Information System; prerequisite for disability allowance and many benefits.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "dm-committee-database",
       "uuid": "ebefda60-5f71-5188-8d9d-ddad6d8fbae2",
       "service_name_bn": "দুর্যোগ ব্যবস্থাপনা কমিটি ডাটাবেজ",
@@ -3533,6 +3789,36 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "education-public-university-admission",
+      "uuid": "48f3fb1c-4fc3-52c8-aea6-8bdf81f856cd",
+      "service_name_bn": "পাবলিক বিশ্ববিদ্যালয় ভর্তি (centralized/gov)",
+      "service_name_en": "Public University Admission Services",
+      "aliases": [
+        "university admission Bangladesh",
+        "admission portal public university"
+      ],
+      "category": "EDUCATION",
+      "subcategory": "admission",
+      "responsible_authority": "University Grants Commission (UGC) / respective public university",
+      "authority_id": null,
+      "target_user": [
+        "student"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "education"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "NEEDS_VERIFICATION",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "education-registration-card-correction",
       "uuid": "7baa2bfa-2986-57be-bd68-847dfacaefe8",
       "service_name_bn": "রেজিস্ট্রেশন কার্ড তথ্য সংশোধন",
@@ -3671,6 +3957,194 @@
       "status": "LIKELY",
       "canonical_service_id": null,
       "notes": "Technical board selectable on national result verification portal.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "education-ugc-university-recognition",
+      "uuid": "63c212b1-de4b-51b7-990d-23e5371def5b",
+      "service_name_bn": "UGC বিশ্ববিদ্যালয়/প্রতিষ্ঠান স্বীকৃতি যাচাই",
+      "service_name_en": "UGC University/Institution Recognition Verification",
+      "aliases": [
+        "UGC approved university list",
+        "university recognition Bangladesh"
+      ],
+      "category": "EDUCATION",
+      "subcategory": "higher_education",
+      "responsible_authority": "University Grants Commission (UGC)",
+      "authority_id": null,
+      "target_user": [
+        "student",
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "education"
+      ],
+      "official_source": "https://www.ugc.gov.bd/",
+      "discovery_sources": [
+        "https://www.ugc.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "election-candidate-nomination",
+      "uuid": "0118a8d6-8a71-59cc-96d2-45a87b86e95b",
+      "service_name_bn": "প্রার্থী মনোনয়ন/নির্বাচনী তফসিল",
+      "service_name_en": "Election Candidate Nomination and Schedule Services",
+      "aliases": [
+        "nomination paper EC",
+        "election candidate registration"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "election",
+      "responsible_authority": "Bangladesh Election Commission",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "candidate"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://www.ecs.gov.bd/",
+      "discovery_sources": [
+        "https://www.ecs.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "employment-boesl-overseas-recruitment",
+      "uuid": "4bbdc2e4-7fc1-5ccb-aeee-77171faf13f5",
+      "service_name_bn": "BOESL বিদেশি চাকরি নিবন্ধন",
+      "service_name_en": "BOESL Overseas Job Seeker Registration",
+      "aliases": [
+        "BOESL registration",
+        "brms.boesl.gov.bd",
+        "government overseas recruitment"
+      ],
+      "category": "EMPLOYMENT",
+      "subcategory": "overseas_recruitment",
+      "responsible_authority": "Bangladesh Overseas Employment and Services Ltd. (BOESL)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "job_seeker"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment"
+      ],
+      "official_source": "https://brms.boesl.gov.bd/",
+      "discovery_sources": [
+        "https://brms.boesl.gov.bd/"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "employment-district-employment-exchange",
+      "uuid": "e145c73b-3f32-56c6-9095-ed22a8c58503",
+      "service_name_bn": "জেলা/উপজেলা কর্মসংস্থান বিনিময় কেন্দ্র",
+      "service_name_en": "District/Upazila Employment Exchange",
+      "aliases": [
+        "employment exchange Bangladesh",
+        "job seeker database"
+      ],
+      "category": "EMPLOYMENT",
+      "subcategory": "employment_exchange",
+      "responsible_authority": "Department of Labour and Employment",
+      "authority_id": null,
+      "target_user": [
+        "job_seeker",
+        "employer"
+      ],
+      "geographic_scope": "DISTRICT",
+      "lifecycle_stage": [
+        "employment"
+      ],
+      "official_source": "https://mole.gov.bd/",
+      "discovery_sources": [
+        "https://mole.gov.bd/",
+        "https://www.tbsnews.net/bangladesh/govt-launch-district-level-employment-exchanges-bridge-skills-gap-1412601"
+      ],
+      "status": "NEEDS_VERIFICATION",
+      "canonical_service_id": null,
+      "notes": "Rollout announced 2026; may not yet be operational in all districts.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "employment-labour-court-adr",
+      "uuid": "f5581e5f-8ec1-56cf-a378-1801187abe3a",
+      "service_name_bn": "শ্রম আদালত/ADR সেবা",
+      "service_name_en": "Labour Court Alternative Dispute Resolution",
+      "aliases": [
+        "labour court ADR",
+        "industrial dispute resolution"
+      ],
+      "category": "EMPLOYMENT",
+      "subcategory": "dispute_resolution",
+      "responsible_authority": "Ministry of Labour & Employment",
+      "authority_id": null,
+      "target_user": [
+        "worker",
+        "employer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment"
+      ],
+      "official_source": "https://mole.gov.bd/",
+      "discovery_sources": [
+        "https://mole.gov.bd/",
+        "https://www.newagebd.net/print/post/292120"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "employment-trade-union-registration",
+      "uuid": "68c47388-2798-5c63-b349-e3219cddf2c0",
+      "service_name_bn": "ট্রেড ইউনিয়ন নিবন্ধন",
+      "service_name_en": "Trade Union Registration",
+      "aliases": [
+        "labour union registration",
+        "trade union digital registration"
+      ],
+      "category": "EMPLOYMENT",
+      "subcategory": "trade_union",
+      "responsible_authority": "Department of Labour, Ministry of Labour & Employment",
+      "authority_id": null,
+      "target_user": [
+        "worker",
+        "employer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment"
+      ],
+      "official_source": "https://mole.gov.bd/",
+      "discovery_sources": [
+        "https://www.newagebd.net/print/post/292120",
+        "https://mole.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": "Digital trade union registration announced under labour ministry action plan.",
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -3849,6 +4323,38 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Official DoE EIA guidelines PDF on national portal.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "environment-forest-clearance",
+      "uuid": "5611ab5d-e594-5104-a862-474f1c6a4d98",
+      "service_name_bn": "বন/forest clearance",
+      "service_name_en": "Forest Clearance Certificate",
+      "aliases": [
+        "forest clearance Bangladesh",
+        "tree felling permission"
+      ],
+      "category": "ENVIRONMENT",
+      "subcategory": "forest_clearance",
+      "responsible_authority": "Forest Department, Ministry of Environment & Forest",
+      "authority_id": null,
+      "target_user": [
+        "business",
+        "developer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business",
+        "property"
+      ],
+      "official_source": "https://bforest.gov.bd/",
+      "discovery_sources": [
+        "https://bforest.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -4556,6 +5062,37 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "food-ministry-vgf-card",
+      "uuid": "3e4fa792-74af-5fa4-a78b-07ceb6a0cc9d",
+      "service_name_bn": "VGF/খাদ্য সহায়তা কার্ড",
+      "service_name_en": "Vulnerable Group Feeding (VGF) / Food Assistance Card",
+      "aliases": [
+        "VGF card",
+        "food ministry relief card",
+        "TR rice card"
+      ],
+      "category": "SOCIAL_PROTECTION",
+      "subcategory": "food_assistance",
+      "responsible_authority": "Ministry of Food",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "social_protection"
+      ],
+      "official_source": "https://food.gov.bd/",
+      "discovery_sources": [
+        "https://food.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "hajj-call-center",
       "uuid": "7af8eafa-4754-5bf7-ad19-04909d368feb",
       "service_name_bn": "হজ কল সেন্টার (১৬১৩৬)",
@@ -4927,6 +5464,71 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "health-hospital-birth-notification",
+      "uuid": "c6a1be04-6fc8-5cf1-b110-e3bae9ed9ed4",
+      "service_name_bn": "হাসপাতালে জন্ম নিবেদন",
+      "service_name_en": "Hospital Birth Notification (for BDRIS registration)",
+      "aliases": [
+        "hospital birth report",
+        "birth notification form"
+      ],
+      "category": "HEALTH",
+      "subcategory": "birth_notification",
+      "responsible_authority": "Directorate General of Health Services (DGHS)",
+      "authority_id": "dghs",
+      "target_user": [
+        "citizen",
+        "hospital"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "birth",
+        "childhood"
+      ],
+      "official_source": "https://bdris.gov.bd/",
+      "discovery_sources": [
+        "https://bdris.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": "Hospital notification pathway into civil birth registration; related to but distinct from BDRIS application.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "health-immunization-card-mcv",
+      "uuid": "d55fdbb6-ef44-5590-a0d1-6f65c8249b51",
+      "service_name_bn": "টিকা/card (EPI/MCV)",
+      "service_name_en": "Immunization / Vaccination Card (EPI)",
+      "aliases": [
+        "vaccination card",
+        "EPI card",
+        "child immunization record"
+      ],
+      "category": "HEALTH",
+      "subcategory": "immunization",
+      "responsible_authority": "Directorate General of Health Services (DGHS) / EPI",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "child"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "childhood",
+        "healthcare"
+      ],
+      "official_source": "https://dghs.gov.bd/",
+      "discovery_sources": [
+        "https://dghs.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "health-medical-assistant-registration",
       "uuid": "42a9312c-efb5-59dc-8cb1-7e8005b4bf34",
       "service_name_bn": "মেডিকেল Assistant BMDC নিবন্ধন",
@@ -5036,6 +5638,69 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Loan application forms on BHBFC zonal portals; terms vary by branch.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "housing-cda-building-permit",
+      "uuid": "f0595734-ce29-5c92-b4f7-2c6e8fc4158d",
+      "service_name_bn": "CDA building plan approval (Chattogram)",
+      "service_name_en": "Chattogram Development Authority Building Plan Approval",
+      "aliases": [
+        "CDA plan pass",
+        "Chittagong building permit"
+      ],
+      "category": "HOUSING",
+      "subcategory": "building_permit",
+      "responsible_authority": "Chattogram Development Authority (CDA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "developer"
+      ],
+      "geographic_scope": "LOCAL",
+      "lifecycle_stage": [
+        "property",
+        "business"
+      ],
+      "official_source": "https://cda.gov.bd/",
+      "discovery_sources": [
+        "https://cda.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "housing-nha-allotment-application",
+      "uuid": "d0a89842-3477-55be-a431-f3fbb5b0c16d",
+      "service_name_bn": "জাতীয় গৃহায়ন কর্তৃপক্ষ (NHA) flat allotment",
+      "service_name_en": "National Housing Authority Flat Allotment Application",
+      "aliases": [
+        "NHA allotment",
+        "government flat application"
+      ],
+      "category": "HOUSING",
+      "subcategory": "allotment",
+      "responsible_authority": "National Housing Authority (NHA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "property",
+        "family"
+      ],
+      "official_source": "https://nha.gov.bd/",
+      "discovery_sources": [
+        "https://nha.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -5250,6 +5915,219 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "identity-voter-slip-download",
+      "uuid": "4658126f-cba2-5f3f-8dee-7e0ef7ef6d65",
+      "service_name_bn": "ভোটার স্লিপ/তথ্য ডাউনলোড",
+      "service_name_en": "Voter Information Slip Download",
+      "aliases": [
+        "voter slip",
+        "voter ID slip EC"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "voter",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "judiciary-artha-rin-salish",
+      "uuid": "d3194126-37bf-529a-97b8-6c44c7481af6",
+      "service_name_bn": "আর্থিক ঋণ/আর্থা রিন সালিশ আদালত",
+      "service_name_en": "Money Loan Court (Artha Rin) / Artha Rin Adalat Services",
+      "aliases": [
+        "Artha Rin Adalat",
+        "loan court Bangladesh"
+      ],
+      "category": "JUDICIARY",
+      "subcategory": "specialized_court",
+      "responsible_authority": "Artha Rin Adalat",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "DISTRICT",
+      "lifecycle_stage": [
+        "property",
+        "business"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "NEEDS_VERIFICATION",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "judiciary-case-status-tracking",
+      "uuid": "53edcbf9-3088-5b5e-92ba-2003e642b65f",
+      "service_name_bn": "মামলার স্ট্যাটাস/ট্র্যাকিং",
+      "service_name_en": "Court Case Status Tracking",
+      "aliases": [
+        "case tracking Bangladesh",
+        "cause list",
+        "case ID tracking"
+      ],
+      "category": "JUDICIARY",
+      "subcategory": "case_tracking",
+      "responsible_authority": "Supreme Court of Bangladesh",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "lawyer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://supremecourt.gov.bd/",
+      "discovery_sources": [
+        "https://supremecourt.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "judiciary-family-court-services",
+      "uuid": "8de54bac-fdfe-5a60-8349-fff74370976b",
+      "service_name_bn": "পারিবারিক আদালত সেবা",
+      "service_name_en": "Family Court Services (Maintenance, Guardianship, Divorce)",
+      "aliases": [
+        "family court Bangladesh",
+        "maintenance case",
+        "guardianship court"
+      ],
+      "category": "JUDICIARY",
+      "subcategory": "family_court",
+      "responsible_authority": "District Judge Court / Family Court",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "DISTRICT",
+      "lifecycle_stage": [
+        "family",
+        "marriage"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "NEEDS_VERIFICATION",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "uuid": "76fd676c-8fce-5f53-822c-722e3b5a8115",
+      "service_name_bn": "সুপ্রীম কোর্ট certified copy",
+      "service_name_en": "Supreme Court Certified Copy of Judgment/Order",
+      "aliases": [
+        "court certified copy",
+        "SC copy",
+        "High Court certified copy application"
+      ],
+      "category": "JUDICIARY",
+      "subcategory": "certified_copy",
+      "responsible_authority": "Supreme Court of Bangladesh",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "lawyer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://supremecourt.gov.bd/",
+      "discovery_sources": [
+        "https://supremecourt.gov.bd/",
+        "https://supremecourt.gov.bd/web/index.php?lang=&menu=11&page=tutorial.php"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": "Registry application for certified copies under Supreme Court Rules.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "judiciary-supreme-court-e-filing",
+      "uuid": "05c77dea-18f4-5801-8d2b-a05d8afe8a1f",
+      "service_name_bn": "সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel)",
+      "service_name_en": "Supreme Court e-Filing (Lawyers Panel)",
+      "aliases": [
+        "apps.supremecourt.gov.bd",
+        "mycase portal",
+        "SC e-filing"
+      ],
+      "category": "JUDICIARY",
+      "subcategory": "case_filing",
+      "responsible_authority": "Supreme Court of Bangladesh",
+      "authority_id": null,
+      "target_user": [
+        "lawyer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://apps.supremecourt.gov.bd/mycase",
+      "discovery_sources": [
+        "https://apps.supremecourt.gov.bd/mycase",
+        "https://supremecourt.gov.bd/web/index.php?lang=&menu=11&page=tutorial.php"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "judiciary-virtual-court-services",
+      "uuid": "41e69824-0281-537c-96eb-afbf8faa127f",
+      "service_name_bn": "ভার্চুয়াল/অনলাইন আদালত সেবা",
+      "service_name_en": "Virtual Court Services",
+      "aliases": [
+        "virtual court Bangladesh",
+        "e-court hearing"
+      ],
+      "category": "JUDICIARY",
+      "subcategory": "virtual_court",
+      "responsible_authority": "Law and Justice Division / Supreme Court of Bangladesh",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "lawyer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://supremecourt.gov.bd/",
+      "discovery_sources": [
+        "https://supremecourt.gov.bd/",
+        "https://www.mygov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "land-deed-registration",
       "uuid": "1ebba518-9be4-5c8d-a940-e6e69127c487",
       "service_name_bn": "দলিল/দলিল রেজিস্ট্রেশন",
@@ -5301,6 +6179,39 @@
         "https://dlrms.land.gov.bd/application/track"
       ],
       "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "land-e-stamp-payment",
+      "uuid": "8eed1b2b-a70b-51f0-937c-9b2701d867f2",
+      "service_name_bn": "ই-স্ট্যাম্প / non-judicial stamp",
+      "service_name_en": "e-Stamp / Non-Judicial Stamp Purchase",
+      "aliases": [
+        "e-stamp Bangladesh",
+        "stamp vendor",
+        "judicial stamp"
+      ],
+      "category": "LAND",
+      "subcategory": "stamp",
+      "responsible_authority": "Office of the Controller of Stamps / NBR",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "property",
+        "business"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "NEEDS_VERIFICATION",
       "canonical_service_id": null,
       "notes": null,
       "discovered_at": "2026-08-24",
@@ -5937,6 +6848,68 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "local-ccc-holding-tax",
+      "uuid": "eadfdd69-4447-58c8-a85b-939d3d17b3c7",
+      "service_name_bn": "চট্টগ্রাম সিটি করporation holding tax",
+      "service_name_en": "Chattogram City Corporation Holding Tax Payment",
+      "aliases": [
+        "CCC holding tax",
+        "Amader Chattogram holding tax"
+      ],
+      "category": "LOCAL_GOVERNMENT",
+      "subcategory": "holding_tax",
+      "responsible_authority": "Chattogram City Corporation (CCC)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "property_owner"
+      ],
+      "geographic_scope": "LOCAL",
+      "lifecycle_stage": [
+        "property",
+        "tax"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.tbsnews.net/bangladesh/chattogram-city-corporation-launches-app-one-stop-citizen-services-1491636"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "local-ccc-trade-licence",
+      "uuid": "dcaf7eb2-a6c0-52df-bb65-982acd88c641",
+      "service_name_bn": "চট্টগ্রাম সিটি করporation ট্রেড লাইসেন্স",
+      "service_name_en": "Chattogram City Corporation Trade Licence",
+      "aliases": [
+        "CCC trade license",
+        "Shapla OSS trade license"
+      ],
+      "category": "LICENCES",
+      "subcategory": "trade_licence",
+      "responsible_authority": "Chattogram City Corporation (CCC)",
+      "authority_id": null,
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "LOCAL",
+      "lifecycle_stage": [
+        "business"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.tbsnews.net/bangladesh/jionex-launch-shapla-one-stop-service-revolutionise-citizen-service-sector-chattogram"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "local-certificate-verify",
       "uuid": "200b37cc-4620-55fc-ab55-fc92e6f13c9e",
       "service_name_bn": "ইউনিয়ন সনদ যাচাই",
@@ -6017,6 +6990,69 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Union attestation certificate; distinct from BRIS legal death registration.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "local-dncc-holding-tax",
+      "uuid": "8c0c3f66-9a79-540f-bb6e-7cd818ac3fd8",
+      "service_name_bn": "DNCC holding tax",
+      "service_name_en": "Dhaka North City Corporation Holding Tax",
+      "aliases": [
+        "DNCC holding tax payment",
+        "DNCC tax"
+      ],
+      "category": "LOCAL_GOVERNMENT",
+      "subcategory": "holding_tax",
+      "responsible_authority": "Dhaka North City Corporation (DNCC)",
+      "authority_id": "dncc",
+      "target_user": [
+        "citizen",
+        "property_owner"
+      ],
+      "geographic_scope": "LOCAL",
+      "lifecycle_stage": [
+        "property",
+        "tax"
+      ],
+      "official_source": "https://dncc.gov.bd/",
+      "discovery_sources": [
+        "https://dncc.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "local-dscc-holding-tax",
+      "uuid": "d2a5c7ef-d093-5609-8950-b4974e8764f6",
+      "service_name_bn": "DSCC holding tax",
+      "service_name_en": "Dhaka South City Corporation Holding Tax",
+      "aliases": [
+        "DSCC holding tax payment"
+      ],
+      "category": "LOCAL_GOVERNMENT",
+      "subcategory": "holding_tax",
+      "responsible_authority": "Dhaka South City Corporation (DSCC)",
+      "authority_id": "dscc",
+      "target_user": [
+        "citizen",
+        "property_owner"
+      ],
+      "geographic_scope": "LOCAL",
+      "lifecycle_stage": [
+        "property",
+        "tax"
+      ],
+      "official_source": "https://dscc.gov.bd/",
+      "discovery_sources": [
+        "https://dscc.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -6216,6 +7252,99 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "local-pourashava-holding-tax",
+      "uuid": "30879fd8-38e5-553d-b13d-31c4c962b384",
+      "service_name_bn": "পৌরসভা holding tax",
+      "service_name_en": "Municipality (Pourashava) Holding Tax",
+      "aliases": [
+        "pourashava holding tax",
+        "municipal holding tax"
+      ],
+      "category": "LOCAL_GOVERNMENT",
+      "subcategory": "holding_tax",
+      "responsible_authority": "Municipality (Pourashava)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "property_owner"
+      ],
+      "geographic_scope": "LOCAL",
+      "lifecycle_stage": [
+        "property",
+        "tax"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "local-unno-digital-upazila-services",
+      "uuid": "aaddd134-123a-5904-8c34-74c8ae11e9ac",
+      "service_name_bn": "উন্নত উপজেলা (UNO) ডিজিটাল সেবা",
+      "service_name_en": "Upazila Nirbahi Officer (UNO) Digital Citizen Services",
+      "aliases": [
+        "UNO office services",
+        "upazila citizen charter"
+      ],
+      "category": "LOCAL_GOVERNMENT",
+      "subcategory": "upazila_administration",
+      "responsible_authority": "Upazila Nirbahi Officer (UNO) Office",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "UPAZILA",
+      "lifecycle_stage": [],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "local-upazila-land-tax-payment",
+      "uuid": "a75632aa-15c8-52ed-8523-655f93e96a38",
+      "service_name_bn": "উপজেলা ভূমি উন্নয়ন কর",
+      "service_name_en": "Upazila Land Development Tax Payment",
+      "aliases": [
+        "land development tax",
+        "holding tax rural",
+        "union land tax"
+      ],
+      "category": "LAND",
+      "subcategory": "land_tax",
+      "responsible_authority": "Union Parishad / Upazila Land Office",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "landowner"
+      ],
+      "geographic_scope": "UPAZILA",
+      "lifecycle_stage": [
+        "property",
+        "tax"
+      ],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "local-voter-transfer-attestation",
       "uuid": "99b40e15-089b-51ee-8c36-b97e675aae2c",
       "service_name_bn": "ভোটার এলাকা স্থানান্তর প্রত্যয়ন",
@@ -6237,6 +7366,71 @@
         "https://tilokpursonod.gov.bd/select_certificate/"
       ],
       "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "migration-e-apostille",
+      "uuid": "e5988da1-5376-5082-86d8-277c6a71d940",
+      "service_name_bn": "ই-আপোস্টিল (MOFA)",
+      "service_name_en": "e-Apostille Document Authentication",
+      "aliases": [
+        "e-Apostille",
+        "Hague apostille Bangladesh",
+        "apostille.mygov.bd"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "document_authentication",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "student",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "education",
+        "employment"
+      ],
+      "official_source": "https://apostille.mygov.bd/",
+      "discovery_sources": [
+        "https://mofa-servicedirectory.apostille.mygov.bd/",
+        "https://apostille.mygov.bd/"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "migration-visa-application-dip",
+      "uuid": "cb14a2ea-3709-5ffe-84dd-240d1124fef6",
+      "service_name_bn": "ভিসা আবেদন (DIP)",
+      "service_name_en": "Visa Application (Department of Immigration and Passports)",
+      "aliases": [
+        "DIP visa",
+        "visa application Bangladesh",
+        "Divisional Passport and Visa Office"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "visa",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "foreigner",
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://www.dip.gov.bd/",
+      "discovery_sources": [
+        "https://www.dip.gov.bd/"
+      ],
+      "status": "LIKELY",
       "canonical_service_id": null,
       "notes": null,
       "discovered_at": "2026-08-24",
@@ -6911,6 +8105,135 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "permits-fire-e-license",
+      "uuid": "cadf993f-5786-5932-863f-fec623dbe8d1",
+      "service_name_bn": "ই-ফায়ার লাইসেন্স",
+      "service_name_en": "e-Fire License Application",
+      "aliases": [
+        "fire license Bangladesh",
+        "elicense.fireservice.gov.bd"
+      ],
+      "category": "PERMITS",
+      "subcategory": "fire_license",
+      "responsible_authority": "Fire Service and Civil Defence Directorate",
+      "authority_id": null,
+      "target_user": [
+        "business",
+        "building_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business",
+        "property"
+      ],
+      "official_source": "https://elicense.fireservice.gov.bd/",
+      "discovery_sources": [
+        "https://elicense.fireservice.gov.bd/",
+        "https://elicense.fireservice.gov.bd/apply"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "permits-fire-noc-enoc",
+      "uuid": "2808dc11-acbf-50a7-92ef-e441b6061bcd",
+      "service_name_bn": "ফায়ার সার্ভিস অনাপত্তি সনদ (e-NOC)",
+      "service_name_en": "Fire Service No Objection Certificate (e-NOC)",
+      "aliases": [
+        "fire NOC",
+        "enoc.fireservice.gov.bd",
+        "fire safety NOC"
+      ],
+      "category": "PERMITS",
+      "subcategory": "fire_noc",
+      "responsible_authority": "Fire Service and Civil Defence Directorate",
+      "authority_id": null,
+      "target_user": [
+        "business",
+        "building_owner",
+        "developer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business",
+        "property"
+      ],
+      "official_source": "https://enoc.fireservice.gov.bd/",
+      "discovery_sources": [
+        "https://enoc.fireservice.gov.bd/",
+        "https://enoc.fireservice.gov.bd/register"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "permits-fire-safety-firm-registration",
+      "uuid": "f705d6d3-f10e-5266-a298-c0f4406a09b8",
+      "service_name_bn": "ফায়ার সেফটি ফার্ম নিবন্ধন",
+      "service_name_en": "Fire Safety Firm Registration",
+      "aliases": [
+        "safety firm registration fire service"
+      ],
+      "category": "PERMITS",
+      "subcategory": "fire_safety_firm",
+      "responsible_authority": "Fire Service and Civil Defence Directorate",
+      "authority_id": null,
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business"
+      ],
+      "official_source": "https://enoc.fireservice.gov.bd/safety_firm/register",
+      "discovery_sources": [
+        "https://enoc.fireservice.gov.bd/safety_firm/register"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "permits-forest-timber-transit",
+      "uuid": "ee8ddc41-6815-5b56-8116-250027079e2f",
+      "service_name_bn": "বন/transit permit",
+      "service_name_en": "Forest Timber Transit Permit",
+      "aliases": [
+        "forest department permit",
+        "timber transit pass"
+      ],
+      "category": "PERMITS",
+      "subcategory": "forest",
+      "responsible_authority": "Forest Department, Ministry of Environment & Forest",
+      "authority_id": null,
+      "target_user": [
+        "business",
+        "farmer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business"
+      ],
+      "official_source": "https://bforest.gov.bd/",
+      "discovery_sources": [
+        "https://bforest.gov.bd/",
+        "https://www.mygov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "police-clearance-certificate",
       "uuid": "f943b497-ac11-5430-8469-35890c9912d2",
       "service_name_bn": "পুলিশ ক্লিয়ারেন্স সার্টিফিকেট",
@@ -7083,6 +8406,34 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "police-general-diary-online",
+      "uuid": "416f1a97-38ec-59b7-80d7-f844a7171cb4",
+      "service_name_bn": "অনলাইন GD (General Diary)",
+      "service_name_en": "Online General Diary (GD) Filing",
+      "aliases": [
+        "online GD police",
+        "e-GD Bangladesh"
+      ],
+      "category": "POLICE",
+      "subcategory": "general_diary",
+      "responsible_authority": "Bangladesh Police",
+      "authority_id": "police",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": null,
+      "discovery_sources": [
+        "https://www.mygov.bd/"
+      ],
+      "status": "NEEDS_VERIFICATION",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "police-nid-address-verification",
       "uuid": "545502a4-0229-5287-ae07-b5a588fef79c",
       "service_name_bn": "NID/ঠিকানা ভিত্তিক পুলিশ ভেরিফিকেশন",
@@ -7108,6 +8459,34 @@
       "status": "LIKELY",
       "canonical_service_id": null,
       "notes": "PCC and verification use NID/birth ID/ward councillor certificate when passport lacks address.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "police-passport-police-verification",
+      "uuid": "a148ea2c-4f73-5c1d-bd94-4abd9d01593e",
+      "service_name_bn": "পাসপোর্ট পুলিশ ভেরিফিকেশন",
+      "service_name_en": "Passport Police Verification",
+      "aliases": [
+        "passport verification police",
+        "PV report passport"
+      ],
+      "category": "POLICE",
+      "subcategory": "verification",
+      "responsible_authority": "Bangladesh Police (Special Branch / Passport Wing)",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://www.dip.gov.bd/",
+      "discovery_sources": [
+        "https://www.dip.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -7496,6 +8875,159 @@
         "https://bdpost.gov.bd/site/page/34b7ea83-3911-429f-8ec5-58f0367c53bd/-"
       ],
       "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "professional-bar-council-enrolment",
+      "uuid": "c6339f21-b9a8-55dd-8afe-df34d197df7b",
+      "service_name_bn": "বাংলাদেশ বার কাউন্সিল ভর্তি",
+      "service_name_en": "Bangladesh Bar Council Advocate Enrolment",
+      "aliases": [
+        "bar council enrolment",
+        "advocate registration"
+      ],
+      "category": "PROFESSIONAL",
+      "subcategory": "legal_profession",
+      "responsible_authority": "Bangladesh Bar Council",
+      "authority_id": null,
+      "target_user": [
+        "lawyer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment"
+      ],
+      "official_source": "https://www.barcouncil.gov.bd/",
+      "discovery_sources": [
+        "https://www.barcouncil.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "professional-bmdc-doctor-registration",
+      "uuid": "a7eef888-6f8d-55e5-939c-05807924847e",
+      "service_name_bn": "BMDC চিকিৎসক নিবন্ধন",
+      "service_name_en": "BMDC Doctor Registration",
+      "aliases": [
+        "medical council registration",
+        "doctor licence BMDC"
+      ],
+      "category": "PROFESSIONAL",
+      "subcategory": "medical_profession",
+      "responsible_authority": "Bangladesh Medical and Dental Council (BMDC)",
+      "authority_id": "bmdc",
+      "target_user": [
+        "doctor"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment",
+        "healthcare"
+      ],
+      "official_source": "https://www.bmdc.org.bd/",
+      "discovery_sources": [
+        "https://www.bmdc.org.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": "Distinct from BMDC certificate verification services already catalogued.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "professional-engineer-registration",
+      "uuid": "625f8557-2fe2-50c7-898a-6b76e4677ae9",
+      "service_name_bn": "ইঞ্জিনিয়ার নিবন্ধন (IEB/BPDB)",
+      "service_name_en": "Professional Engineer Registration",
+      "aliases": [
+        "IEB registration",
+        "engineer council Bangladesh"
+      ],
+      "category": "PROFESSIONAL",
+      "subcategory": "engineering_profession",
+      "responsible_authority": "Institution of Engineers Bangladesh (IEB)",
+      "authority_id": null,
+      "target_user": [
+        "engineer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment"
+      ],
+      "official_source": "https://www.ieb.org.bd/",
+      "discovery_sources": [
+        "https://www.ieb.org.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "professional-nursing-council-registration",
+      "uuid": "bae4cf5d-d14f-5fab-b2dc-55e1c9dd0dcf",
+      "service_name_bn": "নার্সিং ও মিডওয়াইফারি কাউন্সিল নিবন্ধন",
+      "service_name_en": "Nursing and Midwifery Council Registration",
+      "aliases": [
+        "BNMC registration",
+        "nurse registration Bangladesh"
+      ],
+      "category": "PROFESSIONAL",
+      "subcategory": "nursing_profession",
+      "responsible_authority": "Bangladesh Nursing and Midwifery Council (BNMC)",
+      "authority_id": null,
+      "target_user": [
+        "nurse"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment",
+        "healthcare"
+      ],
+      "official_source": "https://www.bnmc.gov.bd/",
+      "discovery_sources": [
+        "https://www.bnmc.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "professional-pharmacy-council-registration",
+      "uuid": "d5850de3-4a00-5540-b11a-5d4660280c65",
+      "service_name_bn": "ফার্মেসি কাউন্সিল নিবন্ধন",
+      "service_name_en": "Pharmacy Council Pharmacist Registration",
+      "aliases": [
+        "pharmacist registration",
+        "PCB registration"
+      ],
+      "category": "PROFESSIONAL",
+      "subcategory": "pharmacy_profession",
+      "responsible_authority": "Pharmacy Council of Bangladesh",
+      "authority_id": null,
+      "target_user": [
+        "pharmacist"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "employment",
+        "healthcare"
+      ],
+      "official_source": "https://www.pcb.gov.bd/",
+      "discovery_sources": [
+        "https://www.pcb.gov.bd/"
+      ],
+      "status": "LIKELY",
       "canonical_service_id": null,
       "notes": null,
       "discovered_at": "2026-08-24",
@@ -11735,6 +13267,43 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "social-allowance-online-application",
+      "uuid": "5dd7febd-50f7-5d43-a30d-14fc98807e0d",
+      "service_name_bn": "ভাতা ও উপবৃত্তি অনলাইন আবেদন (mis.bhata)",
+      "service_name_en": "Social Allowance and Stipend Online Application",
+      "aliases": [
+        "bhata online application",
+        "old age allowance application",
+        "disability allowance application",
+        "widow allowance application"
+      ],
+      "category": "SOCIAL_PROTECTION",
+      "subcategory": "allowance_application",
+      "responsible_authority": "Department of Social Services (DSS)",
+      "authority_id": "dss",
+      "target_user": [
+        "citizen",
+        "student",
+        "elderly"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "social_protection",
+        "retirement",
+        "family"
+      ],
+      "official_source": "https://mis.bhata.gov.bd/online-application",
+      "discovery_sources": [
+        "https://mis.bhata.gov.bd/online-application",
+        "https://outlookbangla.com/2026/07/03/online-applications-for-allowances-stipends-to-begin-on-aug-1/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": "Citizen application portal for old-age, widow, disability allowances and related stipends; distinct from SSPS programme inventory entries.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "tax-challan-payment",
       "uuid": "94e98317-01be-52be-8194-7fb58081ee64",
       "service_name_bn": "কর/ভ্যাট চালান পরিশোধ",
@@ -11851,6 +13420,70 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "tax-income-tax-return-filing",
+      "uuid": "11844b49-89f9-55ea-ae28-3f6c8a95f5ab",
+      "service_name_bn": "আয়কর রিটার্ন দাখিল",
+      "service_name_en": "Income Tax Return Filing",
+      "aliases": [
+        "tax return Bangladesh",
+        "IT return NBR"
+      ],
+      "category": "TAX",
+      "subcategory": "income_tax",
+      "responsible_authority": "National Board of Revenue (NBR)",
+      "authority_id": "nbr",
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "tax",
+        "employment"
+      ],
+      "official_source": "https://nbr.gov.bd/",
+      "discovery_sources": [
+        "https://nbr.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "tax-source-tax-deduction-certificate",
+      "uuid": "896e74fa-4e2e-54a6-8c24-813328f5c137",
+      "service_name_bn": "উৎস কর সনদ (TDS/AIT certificate)",
+      "service_name_en": "Tax Deduction at Source Certificate",
+      "aliases": [
+        "TDS certificate",
+        "AIT certificate",
+        "source tax certificate"
+      ],
+      "category": "TAX",
+      "subcategory": "withholding",
+      "responsible_authority": "National Board of Revenue (NBR)",
+      "authority_id": "nbr",
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "tax"
+      ],
+      "official_source": "https://nbr.gov.bd/",
+      "discovery_sources": [
+        "https://nbr.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "titas-domestic-gas-connection",
       "uuid": "16089c12-5a36-5dc9-807b-c1c98f7ca985",
       "service_name_bn": "তিতাস গ্যাস গৃহস্থ সংযোগ",
@@ -11903,6 +13536,100 @@
       "status": "LIKELY",
       "canonical_service_id": null,
       "notes": "Titas One-Stop-Service module for industry/captive power; login-gated portal.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "trade-bsti-standard-certification",
+      "uuid": "306f248a-8f01-5adc-8f5b-3b7a2b917569",
+      "service_name_bn": "BSTI standard certification (CM mark)",
+      "service_name_en": "BSTI Product Standard Certification",
+      "aliases": [
+        "BSTI certification",
+        "CM mark Bangladesh",
+        "standard mark"
+      ],
+      "category": "TRADE",
+      "subcategory": "standardization",
+      "responsible_authority": "Bangladesh Standards and Testing Institution (BSTI)",
+      "authority_id": null,
+      "target_user": [
+        "business",
+        "manufacturer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business"
+      ],
+      "official_source": "https://bsti.gov.bd/",
+      "discovery_sources": [
+        "https://bsti.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "trade-dpd-patent-registration",
+      "uuid": "dbbdda3c-cbce-508d-845d-528be5135945",
+      "service_name_bn": "পেটেন্ট নিবন্ধন",
+      "service_name_en": "Patent Registration",
+      "aliases": [
+        "patent application Bangladesh",
+        "DPDT patent"
+      ],
+      "category": "REGISTRATIONS",
+      "subcategory": "intellectual_property",
+      "responsible_authority": "Department of Patents, Designs and Trademarks (DPDT)",
+      "authority_id": null,
+      "target_user": [
+        "business",
+        "inventor"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business"
+      ],
+      "official_source": "https://dpdt.gov.bd/",
+      "discovery_sources": [
+        "https://dpdt.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "trade-dpd-trademark-registration",
+      "uuid": "69bef78a-cdea-5b6a-b5c2-716b8b9a695d",
+      "service_name_bn": "ট্রেডমার্ক নিবন্ধন (DPDT)",
+      "service_name_en": "Trademark Registration",
+      "aliases": [
+        "trademark Bangladesh",
+        "DPDT trademark",
+        "brand registration"
+      ],
+      "category": "REGISTRATIONS",
+      "subcategory": "intellectual_property",
+      "responsible_authority": "Department of Patents, Designs and Trademarks (DPDT)",
+      "authority_id": null,
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business"
+      ],
+      "official_source": "https://dpdt.gov.bd/",
+      "discovery_sources": [
+        "https://dpdt.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -11992,6 +13719,68 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "transport-driving-school-licence",
+      "uuid": "08bce755-0dc4-58c1-bfbc-2460a0024ad2",
+      "service_name_bn": "ড্রাইভিং স্কুল/প্রশিক্ষণ কেন্দ্র লাইসেন্স",
+      "service_name_en": "Driving School / Training Centre Licence",
+      "aliases": [
+        "driving school licence BRTA"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "driving_school",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business",
+        "vehicle"
+      ],
+      "official_source": "https://bsp.brta.gov.bd/",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "transport-route-permit",
+      "uuid": "e03cf7f6-115f-566d-9129-c63b2f8dfdb9",
+      "service_name_bn": "রুট permit (BRTA)",
+      "service_name_en": "Route Permit (BRTA)",
+      "aliases": [
+        "route permit Bangladesh",
+        "bus route permit"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "route_permit",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "business",
+        "operator"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business",
+        "vehicle"
+      ],
+      "official_source": "https://bsp.brta.gov.bd/",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "vat-bin-registration",
       "uuid": "ebc12e2c-c221-5527-8a7a-f5e344da848c",
       "service_name_bn": "ভ্যাট/টার্নওভার ট্যাক্স নিবন্ধন (BIN)",
@@ -12019,6 +13808,37 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Turnover above 8 million BDT requires registration.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "vat-return-filing",
+      "uuid": "eda03439-8a86-56c1-ae5b-b484c833f949",
+      "service_name_bn": "ভ্যাট রিটার্ন দাখিল",
+      "service_name_en": "VAT Return Filing",
+      "aliases": [
+        "VAT return NBR",
+        "Mushak return"
+      ],
+      "category": "VAT",
+      "subcategory": "return_filing",
+      "responsible_authority": "National Board of Revenue (NBR)",
+      "authority_id": "nbr",
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "tax",
+        "business"
+      ],
+      "official_source": "https://nbr.gov.bd/",
+      "discovery_sources": [
+        "https://nbr.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },
@@ -12309,6 +14129,38 @@
       "catalogue_version": "0.1.0-discovery"
     },
     {
+      "service_id": "women-child-helpline-1098",
+      "uuid": "f8e22716-a2a2-594f-8bc2-511aa3bd162a",
+      "service_name_bn": "শিশু সহায়তা হেল্পলাইন ১০৯৮",
+      "service_name_en": "Child Helpline 1098",
+      "aliases": [
+        "1098 helpline",
+        "child protection helpline"
+      ],
+      "category": "WOMEN_CHILDREN",
+      "subcategory": "helpline",
+      "responsible_authority": "Ministry of Women & Children Affairs",
+      "authority_id": null,
+      "target_user": [
+        "child",
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "childhood",
+        "family"
+      ],
+      "official_source": "https://mowca.gov.bd/",
+      "discovery_sources": [
+        "https://mowca.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
       "service_id": "women-distressed-fund",
       "uuid": "a1c96f64-9bf2-5d49-accc-5399b12f959d",
       "service_name_bn": "দুঃস্থ মহিলা ও শিশু সাহায্য তহবিল",
@@ -12452,6 +14304,38 @@
       "status": "LIKELY",
       "canonical_service_id": null,
       "notes": "Online registration link listed on DWA internal e-services.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "women-one-stop-crisis-centre",
+      "uuid": "c702795b-7d16-5c0b-b5cb-dbaa72e72188",
+      "service_name_bn": "ওয়ান স্টপ ক্রাইসিস সেন্টার (OCC)",
+      "service_name_en": "One Stop Crisis Centre (OCC) Services",
+      "aliases": [
+        "OCC Bangladesh",
+        "violence against women support centre"
+      ],
+      "category": "WOMEN_CHILDREN",
+      "subcategory": "crisis_support",
+      "responsible_authority": "Ministry of Women & Children Affairs",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "woman"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "family",
+        "healthcare"
+      ],
+      "official_source": "https://mowca.gov.bd/",
+      "discovery_sources": [
+        "https://mowca.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     },

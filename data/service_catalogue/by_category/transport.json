@@ -1,6 +1,6 @@
 {
   "category": "TRANSPORT",
-  "count": 25,
+  "count": 27,
   "services": [
     {
       "service_id": "brta-advance-income-tax",
@@ -731,6 +731,68 @@
         "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09"
       ],
       "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "transport-driving-school-licence",
+      "uuid": "08bce755-0dc4-58c1-bfbc-2460a0024ad2",
+      "service_name_bn": "ড্রাইভিং স্কুল/প্রশিক্ষণ কেন্দ্র লাইসেন্স",
+      "service_name_en": "Driving School / Training Centre Licence",
+      "aliases": [
+        "driving school licence BRTA"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "driving_school",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business",
+        "vehicle"
+      ],
+      "official_source": "https://bsp.brta.gov.bd/",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "transport-route-permit",
+      "uuid": "e03cf7f6-115f-566d-9129-c63b2f8dfdb9",
+      "service_name_bn": "রুট permit (BRTA)",
+      "service_name_en": "Route Permit (BRTA)",
+      "aliases": [
+        "route permit Bangladesh",
+        "bus route permit"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "route_permit",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "business",
+        "operator"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business",
+        "vehicle"
+      ],
+      "official_source": "https://bsp.brta.gov.bd/",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/"
+      ],
+      "status": "LIKELY",
       "canonical_service_id": null,
       "notes": null,
       "discovered_at": "2026-08-24",

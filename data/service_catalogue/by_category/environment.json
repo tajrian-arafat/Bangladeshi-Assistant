@@ -1,6 +1,6 @@
 {
   "category": "ENVIRONMENT",
-  "count": 6,
+  "count": 7,
   "services": [
     {
       "service_id": "env-ecc-certificate-verification",
@@ -177,6 +177,38 @@
       "status": "CONFIRMED",
       "canonical_service_id": null,
       "notes": "Official DoE EIA guidelines PDF on national portal.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "environment-forest-clearance",
+      "uuid": "5611ab5d-e594-5104-a862-474f1c6a4d98",
+      "service_name_bn": "বন/forest clearance",
+      "service_name_en": "Forest Clearance Certificate",
+      "aliases": [
+        "forest clearance Bangladesh",
+        "tree felling permission"
+      ],
+      "category": "ENVIRONMENT",
+      "subcategory": "forest_clearance",
+      "responsible_authority": "Forest Department, Ministry of Environment & Forest",
+      "authority_id": null,
+      "target_user": [
+        "business",
+        "developer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "business",
+        "property"
+      ],
+      "official_source": "https://bforest.gov.bd/",
+      "discovery_sources": [
+        "https://bforest.gov.bd/"
+      ],
+      "status": "LIKELY",
+      "canonical_service_id": null,
+      "notes": null,
       "discovered_at": "2026-08-24",
       "catalogue_version": "0.1.0-discovery"
     }
