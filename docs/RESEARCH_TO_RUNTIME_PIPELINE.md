@@ -133,7 +133,13 @@ All mutating actions write `audit_logs`.
 
 ## Batch 1 status
 
-Batch 1 remains **STAGING ONLY** with **0 VERIFIED** claims. Catalogue→runtime sync may create empty/DRAFT Service shells for Batch 1 CONFIRMED ids; that is **not** knowledge publication.
+Batch 1 **claim-level publication** completed 2026-08-24 (local/dev runtime only):
+
+- 69 claims synced; 27 published (`is_published=true`)
+- 9 fees, 1 checklist item, 5 procedure steps, 1 verified URL, 1 practical claim
+- See `docs/research/batch-01-publication-report.md`
+
+Catalogue→runtime sync creates/ maps Service shells separately; publication does not deploy or expose public URLs.
 
 ---
 
