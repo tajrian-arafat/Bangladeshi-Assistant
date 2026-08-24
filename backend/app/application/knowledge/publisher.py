@@ -21,6 +21,17 @@ from app.application.knowledge.publication_gate import (
     can_populate_procedure_step,
     evaluate_official_publication,
 )
+from app.application.knowledge.verification_sync import (
+    build_fee_structured_by_claim,
+    claim_type_from_verification,
+    domain_from_url,
+    evidence_excerpt_from_verification,
+    hash_snapshot,
+    load_verification_index,
+    parse_verified_at,
+    pipeline_status_for_claim,
+    verification_dir,
+)
 from app.core.exceptions import ValidationError
 from app.domain.enums import (
     CatalogueMappingReviewStatus,
@@ -43,6 +54,7 @@ from app.domain.models.knowledge import (
     Procedure,
     ProcedureStep,
     Service,
+    ServiceLink,
     Source,
     SourceVersion,
 )
@@ -67,12 +79,39 @@ class PublishReport:
     published_fees: int = 0
     published_checklist: int = 0
     published_steps: int = 0
+    published_urls: int = 0
+    published_practical: int = 0
     synced_claims: int = 0
     skipped: int = 0
+    eligible_count: int = 0
+    rejected_by_gate_count: int = 0
+    post_readiness: dict[str, str] = field(default_factory=dict)
 
     @property
     def ok(self) -> bool:
         return not self.errors
+
+    def audit_summary(self) -> dict[str, Any]:
+        """Dry-run / post-publish audit payload."""
+        eligible = [a for a in self.actions if a.get("action", "").startswith(("would_publish", "mark_claim_published"))]
+        rejected = [a for a in self.actions if a.get("action") == "reject_gate"]
+        skipped_actions = [a for a in self.actions if a.get("action", "").startswith("skip_")]
+        return {
+            "eligible_for_publication": len(eligible),
+            "rejected_by_gate": len(rejected),
+            "skipped": self.skipped,
+            "published_fees": self.published_fees,
+            "published_checklist": self.published_checklist,
+            "published_steps": self.published_steps,
+            "published_urls": self.published_urls,
+            "practical_stored": self.published_practical,
+            "synced_claims": self.synced_claims,
+            "errors": self.errors,
+            "rejected_samples": rejected[:15],
+            "eligible_samples": eligible[:15],
+            "skipped_samples": skipped_actions[:15],
+            "post_readiness": self.post_readiness,
+        }
 
 
 class KnowledgePublisher:
@@ -175,7 +214,11 @@ class KnowledgePublisher:
         return service
 
     async def sync_claims_from_staging(self, batch_id: str) -> PublishReport:
-        """Upsert Source/SourceVersion/Claim/Evidence/Gaps. Never auto-VERIFIES."""
+        """Upsert Source/SourceVersion/Claim/Evidence/Gaps.
+
+        Applies independent verification statuses from verification/batch-01.
+        Never promotes claims to VERIFIED without a verification record.
+        """
         report = PublishReport(dry_run=self.dry_run, batch_id=batch_id)
         staging = self.staging_dir(batch_id)
         sources = json.loads((staging / "sources.json").read_text(encoding="utf-8"))["sources"]
@@ -185,19 +228,32 @@ class KnowledgePublisher:
         claims = json.loads((staging / "claims.json").read_text(encoding="utf-8"))["claims"]
         evidence = json.loads((staging / "evidence.json").read_text(encoding="utf-8"))["evidence"]
         mappings = await self.load_mappings()
+        verification_index = load_verification_index(self.repo_root, batch_id)
+        fee_structured = build_fee_structured_by_claim(staging)
+        vdir = verification_dir(self.repo_root, batch_id)
 
-        # Ensure mappings cannot invent VERIFIED
+        if not verification_index:
+            report.errors.append(
+                f"No independent verification index found for {batch_id}; "
+                "run verify_batch01_claims.py before publication"
+            )
+            return report
+
+        # Block staging-only VERIFIED without matching verification record
         for c in claims:
             if c.get("pipeline_status") == ClaimPipelineStatus.VERIFIED.value:
-                report.errors.append(
-                    f"Staging claim {c.get('claim_id')} has VERIFIED status; "
-                    "research must not auto-verify. Demote before sync."
-                )
+                v = verification_index.get(c.get("claim_id"))
+                if not v or v.get("verification_status") != "VERIFIED":
+                    report.errors.append(
+                        f"Staging claim {c.get('claim_id')} has VERIFIED status without "
+                        "independent verification; demote before sync."
+                    )
         if report.errors:
             return report
 
         source_id_map: dict[str, UUID] = {}
         version_id_map: dict[str, UUID] = {}
+        url_to_version_id: dict[str, UUID] = {}
 
         for s in sources:
             domain = s.get("domain") or urlparse(s.get("source_url", "")).netloc
@@ -206,7 +262,6 @@ class KnowledgePublisher:
             )
             row = existing.scalar_one_or_none()
             if not row:
-                # also match by domain alone if title differs
                 existing2 = await self.session.execute(
                     select(Source).where(Source.domain == domain).limit(1)
                 )
@@ -223,23 +278,42 @@ class KnowledgePublisher:
                 )
                 self.session.add(row)
                 await self.session.flush()
-            else:
-                # Never auto-change authority tier by LLM/script if already set differently
-                # Only set if missing/default — keep existing tier
-                pass
             source_id_map[s["source_id"]] = row.id
+
+        # Index verification snapshots by source_url for hash enrichment
+        snapshot_hash_by_url: dict[str, str] = {}
+        for vrec in verification_index.values():
+            for ev in vrec.get("evidence", []):
+                url = ev.get("source_url") or ev.get("wayback_url")
+                snap = ev.get("snapshot")
+                if url and snap:
+                    h = hash_snapshot(self.repo_root, snap)
+                    if h:
+                        snapshot_hash_by_url[url] = h
 
         for v in versions:
             sid = source_id_map.get(v["source_id"])
             if not sid:
                 continue
+            content_hash = v.get("content_hash") or snapshot_hash_by_url.get(v.get("url"))
+            raw_pointer = v.get("raw_pointer")
+            if not content_hash and vdir:
+                # Try verification snapshot via source_id
+                for vrec in verification_index.values():
+                    for ev in vrec.get("evidence", []):
+                        if ev.get("source_id") == v.get("source_id") and ev.get("snapshot"):
+                            content_hash = hash_snapshot(self.repo_root, ev["snapshot"])
+                            raw_pointer = raw_pointer or ev["snapshot"]
+                            break
             if self.dry_run:
-                version_id_map[v["source_version_id"]] = uuid4()
+                vid = uuid4()
+                version_id_map[v["source_version_id"]] = vid
+                url_to_version_id[v["url"]] = vid
                 report.actions.append(
                     {
                         "action": "would_create_source_version",
                         "url": v.get("url"),
-                        "content_hash": v.get("content_hash"),
+                        "content_hash": content_hash,
                     }
                 )
                 continue
@@ -254,18 +328,23 @@ class KnowledgePublisher:
                     source_id=sid,
                     url=v["url"],
                     canonical_url=v.get("canonical_url") or v["url"],
-                    content_hash=v.get("content_hash"),
+                    content_hash=content_hash,
                     retrieved_at=_parse_iso(v.get("retrieved_at")),
                     fetched_at=_parse_iso(v.get("retrieved_at")),
                     retrieval_method=v.get("fetched_method") or v.get("retrieval_method"),
                     http_status=v.get("http_status"),
                     title=None,
-                    raw_content_path=v.get("raw_pointer"),
+                    raw_content_path=raw_pointer,
                     metadata_json={"research_source_version_id": v["source_version_id"]},
                 )
                 self.session.add(row)
                 await self.session.flush()
+            elif content_hash and not row.content_hash:
+                row.content_hash = content_hash
+                if raw_pointer and not row.raw_content_path:
+                    row.raw_content_path = raw_pointer
             version_id_map[v["source_version_id"]] = row.id
+            url_to_version_id[v["url"]] = row.id
 
         evidence_by_claim: dict[str, list[dict]] = {}
         for e in evidence:
@@ -277,15 +356,31 @@ class KnowledgePublisher:
                 continue
             service = await self.resolve_runtime_service(catalogue_id, mappings, report)
             if not service:
-                # For new_canonical without runtime row, skip without hard error if already noted
-                continue
-
-            status = c.get("pipeline_status") or ClaimPipelineStatus.DISCOVERED.value
-            if status == ClaimPipelineStatus.VERIFIED.value:
-                report.errors.append(f"Refusing to sync auto-VERIFIED claim {c['claim_id']}")
                 continue
 
             research_key = c["claim_id"]
+            verification = verification_index.get(research_key)
+            status = pipeline_status_for_claim(c, verification)
+            claim_type = claim_type_from_verification(c, verification)
+            info_class = (
+                (verification or {}).get("information_class")
+                or c.get("information_class")
+                or InformationClass.DISCOVERY.value
+            )
+            verified_at = None
+            if status == ClaimPipelineStatus.VERIFIED.value and verification:
+                verified_at = parse_verified_at(verification.get("verified_at"))
+
+            fee_rows = fee_structured.get(research_key, [])
+            structured_value = None
+            if fee_rows:
+                structured_value = fee_rows[0] if len(fee_rows) == 1 else {"fee_tiers": fee_rows}
+            elif verification and verification.get("condition"):
+                structured_value = {
+                    "condition": verification["condition"],
+                    "applicability": verification.get("applicability"),
+                }
+
             if self.dry_run:
                 report.synced_claims += 1
                 report.actions.append(
@@ -293,7 +388,10 @@ class KnowledgePublisher:
                         "action": "would_upsert_claim",
                         "research_claim_key": research_key,
                         "pipeline_status": status,
+                        "claim_type": claim_type,
+                        "information_class": info_class,
                         "runtime_slug": service.slug,
+                        "verification_status": (verification or {}).get("verification_status"),
                     }
                 )
                 continue
@@ -309,26 +407,31 @@ class KnowledgePublisher:
                 claim = Claim(
                     service_id=service.id,
                     research_claim_key=research_key,
-                    claim_type=_map_claim_type(c),
+                    claim_type=claim_type,
                     subject=subject,
                     predicate=predicate,
                     value=c.get("claim_text") or c.get("claim") or "",
-                    structured_value=c.get("structured_value"),
-                    information_class=c.get("information_class") or InformationClass.DISCOVERY.value,
+                    structured_value=structured_value,
+                    information_class=info_class,
                     pipeline_status=status,
                     confidence=c.get("confidence"),
+                    verified_at=verified_at,
+                    review_notes=(verification or {}).get("reasoning"),
                 )
                 self.session.add(claim)
                 await self.session.flush()
             else:
-                # Do not upgrade status toward VERIFIED via sync
                 claim.pipeline_status = status
+                claim.claim_type = claim_type
                 claim.confidence = c.get("confidence")
                 claim.value = c.get("claim_text") or claim.value
-                claim.information_class = (
-                    c.get("information_class") or claim.information_class
-                )
+                claim.information_class = info_class
+                claim.structured_value = structured_value or claim.structured_value
+                claim.verified_at = verified_at
+                if verification:
+                    claim.review_notes = verification.get("reasoning")
 
+            # Staging evidence links
             for e in evidence_by_claim.get(research_key, []):
                 svid = version_id_map.get(e.get("source_version_id"))
                 if not svid:
@@ -339,7 +442,10 @@ class KnowledgePublisher:
                         ClaimEvidence.source_version_id == svid,
                     )
                 )
-                if existing_ev.scalar_one_or_none():
+                ev_row = existing_ev.scalar_one_or_none()
+                if ev_row:
+                    if not ev_row.evidence_excerpt and e.get("excerpt"):
+                        ev_row.evidence_excerpt = e.get("excerpt")
                     continue
                 self.session.add(
                     ClaimEvidence(
@@ -349,37 +455,126 @@ class KnowledgePublisher:
                         locator=e.get("locator"),
                         retrieved_at=_parse_iso(e.get("captured_at")),
                         evidence_strength=e.get("strength") or "WEAK",
+                        verified_at=verified_at,
                     )
                 )
+
+            # Verification evidence (primary for gate)
+            if verification:
+                for ev in verification.get("evidence", []):
+                    url = ev.get("source_url") or ev.get("wayback_url")
+                    if not url:
+                        continue
+                    svid = url_to_version_id.get(url)
+                    if not svid and not self.dry_run:
+                        domain = domain_from_url(url)
+                        src_existing = await self.session.execute(
+                            select(Source).where(Source.domain == domain).limit(1)
+                        )
+                        src_row = src_existing.scalar_one_or_none()
+                        if not src_row:
+                            src_row = Source(
+                                domain=domain,
+                                title=ev.get("source_id") or domain,
+                                tier=int(ev.get("authority_tier") or 6),
+                            )
+                            self.session.add(src_row)
+                            await self.session.flush()
+                        snap = ev.get("snapshot")
+                        ch = hash_snapshot(self.repo_root, snap) if snap else None
+                        sv_existing = await self.session.execute(
+                            select(SourceVersion).where(
+                                SourceVersion.source_id == src_row.id,
+                                SourceVersion.url == url,
+                            )
+                        )
+                        sv_row = sv_existing.scalar_one_or_none()
+                        if not sv_row:
+                            sv_row = SourceVersion(
+                                source_id=src_row.id,
+                                url=url,
+                                canonical_url=url,
+                                content_hash=ch,
+                                retrieved_at=parse_verified_at(ev.get("retrieved_live_at")),
+                                fetched_at=parse_verified_at(ev.get("retrieved_live_at")),
+                                retrieval_method=ev.get("retrieved_via") or "independent_verification",
+                                http_status=ev.get("live_http_status"),
+                                raw_content_path=snap,
+                                metadata_json={"verification_source_id": ev.get("source_id")},
+                            )
+                            self.session.add(sv_row)
+                            await self.session.flush()
+                        elif ch and not sv_row.content_hash:
+                            sv_row.content_hash = ch
+                        svid = sv_row.id
+                        url_to_version_id[url] = svid
+
+                    if not svid:
+                        continue
+                    excerpt = evidence_excerpt_from_verification(ev, verification)
+                    locator = ev.get("evidence_location") or url
+                    existing_ev = await self.session.execute(
+                        select(ClaimEvidence).where(
+                            ClaimEvidence.claim_id == claim.id,
+                            ClaimEvidence.source_version_id == svid,
+                        )
+                    )
+                    ev_row = existing_ev.scalar_one_or_none()
+                    if ev_row:
+                        if not ev_row.evidence_excerpt:
+                            ev_row.evidence_excerpt = excerpt
+                        if not ev_row.locator:
+                            ev_row.locator = locator
+                        if verified_at and not ev_row.verified_at:
+                            ev_row.verified_at = verified_at
+                        ev_row.evidence_strength = "STRONG"
+                        continue
+                    self.session.add(
+                        ClaimEvidence(
+                            claim_id=claim.id,
+                            source_version_id=svid,
+                            evidence_excerpt=excerpt,
+                            locator=locator,
+                            retrieved_at=parse_verified_at(
+                                ev.get("retrieved_live_at") or verification.get("verified_at")
+                            ),
+                            evidence_strength="STRONG",
+                            verified_at=verified_at,
+                        )
+                    )
 
             report.synced_claims += 1
             await self._audit(
                 "sync_claim",
                 "claim",
                 str(claim.id),
-                {"research_claim_key": research_key, "pipeline_status": status},
+                {
+                    "research_claim_key": research_key,
+                    "pipeline_status": status,
+                    "verification_status": (verification or {}).get("verification_status"),
+                },
             )
 
-        # Gaps from conflicts
-        conflicts_path = staging / "conflicts.json"
-        if conflicts_path.exists() and not self.dry_run:
-            conflicts = json.loads(conflicts_path.read_text(encoding="utf-8")).get(
-                "conflicts", []
-            )
-            for conf in conflicts:
-                catalogue_id = conf.get("service_id")
+        # Knowledge gaps from verification
+        gaps_path = (
+            verification_dir(self.repo_root, batch_id) or Path()
+        ) / "knowledge_gaps.json"
+        if gaps_path.exists() and not self.dry_run:
+            gaps = json.loads(gaps_path.read_text(encoding="utf-8")).get("gaps", [])
+            for gap in gaps:
+                catalogue_id = gap.get("service_id")
                 service = await self.resolve_runtime_service(catalogue_id, mappings, report)
                 if not service:
                     continue
                 self.session.add(
                     KnowledgeGap(
                         service_id=service.id,
-                        gap_type=KnowledgeGapType.CONFLICTING_SOURCES.value,
-                        priority=KnowledgeGapPriority.HIGH.value,
-                        description=conf.get("topic") or conf.get("resolution") or "Conflict",
-                        discovered_by="batch_research_sync",
+                        gap_type=gap.get("gap_type") or KnowledgeGapType.OTHER.value,
+                        priority=gap.get("priority") or KnowledgeGapPriority.MEDIUM.value,
+                        description=gap.get("description") or gap.get("gap_id") or "Gap",
+                        discovered_by="batch01_verification",
                         status=KnowledgeGapStatus.OPEN.value,
-                        resolution_notes=json.dumps(conf, ensure_ascii=False)[:2000],
+                        resolution_notes=json.dumps(gap, ensure_ascii=False)[:2000],
                     )
                 )
 
@@ -388,15 +583,17 @@ class KnowledgePublisher:
         return report
 
     async def publish_verified(self, batch_id: str) -> PublishReport:
-        """Publish only gate-eligible VERIFIED OFFICIAL claims into Fee/Checklist/Steps."""
+        """Publish only gate-eligible VERIFIED OFFICIAL claims into Fee/Checklist/Steps/URLs."""
         report = PublishReport(dry_run=self.dry_run, batch_id=batch_id)
         mappings = await self.load_mappings()
         staging = self.staging_dir(batch_id)
-        # Operate on DB claims for mapped services in this batch
+        fee_structured = build_fee_structured_by_claim(staging)
         services_meta = json.loads((staging / "services.json").read_text(encoding="utf-8"))[
             "services"
         ]
         catalogue_ids = [s["service_id"] for s in services_meta]
+        verification_index = load_verification_index(self.repo_root, batch_id)
+        processed_service_ids: set[UUID] = set()
 
         for catalogue_id in catalogue_ids:
             mapping = mappings.get(catalogue_id)
@@ -405,6 +602,9 @@ class KnowledgePublisher:
             service = await self.resolve_runtime_service(catalogue_id, mappings, report)
             if not service:
                 continue
+            if service.id in processed_service_ids:
+                continue
+            processed_service_ids.add(service.id)
 
             result = await self.session.execute(
                 select(Claim)
@@ -413,7 +613,6 @@ class KnowledgePublisher:
             )
             claims = list(result.scalars().all())
 
-            # Conflict gate: if any CONFLICTING fee/document claims, mark service
             conflicting = [
                 c for c in claims if c.pipeline_status == ClaimPipelineStatus.CONFLICTING.value
             ]
@@ -421,14 +620,68 @@ class KnowledgePublisher:
                 service.status = "CONFLICTED"
                 service.review_state = "PENDING_REVIEW"
 
+            published_official = 0
+            critical_gaps = 0
+
             for claim in claims:
+                vrec = verification_index.get(claim.research_claim_key or "")
+                vstatus = (vrec or {}).get("verification_status")
+
+                # PRACTICAL layer — store non-authoritative tips; never MUST NEED / fees
+                if claim.information_class == InformationClass.PRACTICAL.value:
+                    if claim.pipeline_status not in {
+                        ClaimPipelineStatus.VERIFIED.value,
+                        ClaimPipelineStatus.PARTIALLY_VERIFIED.value,
+                    }:
+                        report.skipped += 1
+                        report.actions.append(
+                            {
+                                "action": "skip_practical_unverified",
+                                "claim_id": str(claim.id),
+                                "research_claim_key": claim.research_claim_key,
+                                "status": claim.pipeline_status,
+                            }
+                        )
+                        continue
+                    if not self.dry_run:
+                        claim.is_published = True
+                        claim.published_at = datetime.now(timezone.utc)
+                    report.published_practical += 1
+                    report.actions.append(
+                        {
+                            "action": "would_publish_practical"
+                            if self.dry_run
+                            else "publish_practical",
+                            "claim_id": str(claim.id),
+                            "research_claim_key": claim.research_claim_key,
+                            "pipeline_status": claim.pipeline_status,
+                        }
+                    )
+                    continue
+
+                # Never publish non-VERIFIED official claims as authoritative
                 if claim.pipeline_status != ClaimPipelineStatus.VERIFIED.value:
                     report.skipped += 1
                     report.actions.append(
                         {
                             "action": "skip_unverified",
                             "claim_id": str(claim.id),
+                            "research_claim_key": claim.research_claim_key,
                             "status": claim.pipeline_status,
+                            "verification_status": vstatus,
+                        }
+                    )
+                    continue
+
+                # Block news/static NID fee amounts explicitly
+                if claim.research_claim_key and "fee-amount-news" in claim.research_claim_key:
+                    report.skipped += 1
+                    report.actions.append(
+                        {
+                            "action": "skip_unresolved_fee_amount",
+                            "claim_id": str(claim.id),
+                            "research_claim_key": claim.research_claim_key,
+                            "reason": "Unresolved NID static fee amounts must not publish",
                         }
                     )
                     continue
@@ -457,22 +710,29 @@ class KnowledgePublisher:
                 )
                 if not gate.allowed:
                     report.skipped += 1
+                    report.rejected_by_gate_count += 1
                     report.actions.append(
                         {
                             "action": "reject_gate",
                             "claim_id": str(claim.id),
+                            "research_claim_key": claim.research_claim_key,
+                            "claim_type": claim.claim_type,
                             "reasons": gate.reasons,
                         }
                     )
+                    if claim.claim_type in {
+                        ClaimType.FEE.value,
+                        ClaimType.DOCUMENT.value,
+                        ClaimType.APPLICATION_URL.value,
+                    }:
+                        critical_gaps += 1
                     continue
 
-                # MVP seed overwrite protection for structured fields
-                if service.slug in MVP_SEED_SLUGS and not mapping.get("allow_overwrite_seed"):
-                    report.errors.append(
-                        f"Refusing to overwrite MVP seed {service.slug} from claim {claim.id}; "
-                        "set allow_overwrite_seed after review"
-                    )
-                    continue
+                report.eligible_count += 1
+                seed_block_structured = (
+                    service.slug in MVP_SEED_SLUGS
+                    and not mapping.get("allow_overwrite_seed")
+                )
 
                 if claim.claim_type == ClaimType.FEE.value:
                     fee_gate = can_populate_fee(
@@ -483,7 +743,34 @@ class KnowledgePublisher:
                     if not fee_gate.allowed:
                         report.skipped += 1
                         continue
-                    await self._publish_fee(service, claim, report)
+                    if seed_block_structured:
+                        report.actions.append(
+                            {
+                                "action": "skip_mvp_seed_fee_overwrite",
+                                "claim_id": str(claim.id),
+                                "service_slug": service.slug,
+                            }
+                        )
+                        report.skipped += 1
+                        continue
+                    fee_rows = fee_structured.get(claim.research_claim_key or "", [])
+                    if not fee_rows and claim.structured_value:
+                        if claim.structured_value.get("fee_tiers"):
+                            fee_rows = claim.structured_value["fee_tiers"]
+                        else:
+                            fee_rows = [claim.structured_value]
+                    if not fee_rows:
+                        report.actions.append(
+                            {
+                                "action": "skip_fee_no_structured_value",
+                                "claim_id": str(claim.id),
+                            }
+                        )
+                        report.skipped += 1
+                        continue
+                    for fee_payload in fee_rows:
+                        await self._publish_fee(service, claim, report, fee_payload)
+                    published_official += 1
                 elif claim.claim_type in {
                     ClaimType.DOCUMENT.value,
                     ClaimType.CONDITIONAL_DOCUMENT.value,
@@ -496,7 +783,18 @@ class KnowledgePublisher:
                     if not must_gate.allowed:
                         report.skipped += 1
                         continue
-                    await self._publish_checklist(service, claim, report)
+                    if seed_block_structured:
+                        report.actions.append(
+                            {
+                                "action": "skip_mvp_seed_checklist_overwrite",
+                                "claim_id": str(claim.id),
+                                "service_slug": service.slug,
+                            }
+                        )
+                        report.skipped += 1
+                        continue
+                    await self._publish_checklist(service, claim, report, vrec)
+                    published_official += 1
                 elif claim.claim_type == ClaimType.PROCEDURE_STEP.value:
                     step_gate = can_populate_procedure_step(
                         gate=gate, information_class=claim.information_class
@@ -504,9 +802,22 @@ class KnowledgePublisher:
                     if not step_gate.allowed:
                         report.skipped += 1
                         continue
+                    if seed_block_structured:
+                        report.actions.append(
+                            {
+                                "action": "skip_mvp_seed_step_overwrite",
+                                "claim_id": str(claim.id),
+                                "service_slug": service.slug,
+                            }
+                        )
+                        report.skipped += 1
+                        continue
                     await self._publish_step(service, claim, report)
+                    published_official += 1
+                elif claim.claim_type == ClaimType.APPLICATION_URL.value:
+                    await self._publish_application_url(service, claim, report, vrec)
+                    published_official += 1
                 else:
-                    # Mark claim published for non-structural types without inventing fields
                     if not self.dry_run:
                         claim.is_published = True
                         claim.published_at = datetime.now(timezone.utc)
@@ -515,8 +826,27 @@ class KnowledgePublisher:
                             "action": "mark_claim_published_metadata_only",
                             "claim_id": str(claim.id),
                             "claim_type": claim.claim_type,
+                            "research_claim_key": claim.research_claim_key,
                         }
                     )
+                    published_official += 1
+
+            report.post_readiness[catalogue_id] = self._compute_readiness(
+                claims=claims,
+                published_official=published_official,
+                critical_gaps=critical_gaps,
+            )
+            if not self.dry_run:
+                readiness = report.post_readiness[catalogue_id]
+                if readiness == "GREEN":
+                    service.status = "ACTIVE"
+                    service.review_state = "APPROVED"
+                elif readiness == "YELLOW":
+                    service.status = "UNDER_REVIEW"
+                    service.review_state = "PENDING_REVIEW"
+                elif readiness == "RED":
+                    service.status = "CONFLICTED"
+                    service.review_state = "PENDING_REVIEW"
 
         if report.errors:
             if not self.dry_run:
@@ -526,6 +856,31 @@ class KnowledgePublisher:
         if not self.dry_run:
             await self.session.flush()
         return report
+
+    def _compute_readiness(
+        self,
+        *,
+        claims: list[Claim],
+        published_official: int,
+        critical_gaps: int,
+    ) -> str:
+        """Post-publication readiness from published claim coverage."""
+        if critical_gaps > 0:
+            return "RED"
+        verified = [
+            c
+            for c in claims
+            if c.pipeline_status == ClaimPipelineStatus.VERIFIED.value
+            and c.information_class == InformationClass.OFFICIAL.value
+        ]
+        if not verified:
+            return "RED"
+        published = [c for c in verified if c.is_published]
+        if len(published) >= len(verified) and published_official > 0:
+            return "GREEN"
+        if published_official > 0:
+            return "YELLOW"
+        return "RED"
 
     async def _claim_context(
         self, claim: Claim
@@ -563,56 +918,95 @@ class KnowledgePublisher:
                 provenance_ok = False
         return tiers, evidence_dicts, provenance_ok, (hash_present if evidence_dicts else None), retrieved
 
-    async def _publish_fee(self, service: Service, claim: Claim, report: PublishReport) -> None:
-        amount = None
-        currency = "BDT"
-        if claim.structured_value and "amount" in claim.structured_value:
-            amount = str(claim.structured_value["amount"])
-            currency = claim.structured_value.get("currency", "BDT")
+    async def _publish_fee(
+        self,
+        service: Service,
+        claim: Claim,
+        report: PublishReport,
+        fee_payload: dict[str, Any] | None = None,
+    ) -> None:
+        payload = fee_payload or claim.structured_value or {}
+        currency = payload.get("currency", "BDT")
+        label = payload.get("description") or claim.subject or claim.value[:120]
+
+        if payload.get("fee_mode") == "calculator" or (
+            payload.get("amount") is None and payload.get("fee_mode") != "fixed"
+        ):
+            amount = "USE_OFFICIAL_CALCULATOR"
+            calc_url = payload.get("calculator_url") or "https://services.nidw.gov.bd/nid-pub/fees"
+            notes_en = (
+                f"Official fee must be calculated via the portal calculator: {calc_url}. "
+                f"Published from claim {claim.research_claim_key}."
+            )
+        elif payload.get("amount") is not None:
+            amount = str(payload["amount"])
+            notes_en = f"Published from claim {claim.research_claim_key}"
+            calc_url = None
         else:
-            # Do not invent amount from prose
             report.errors.append(
-                f"Fee claim {claim.id} missing structured_value.amount; refusing invent"
+                f"Fee claim {claim.id} missing structured amount/calculator; refusing invent"
             )
             return
+
         if self.dry_run:
             report.published_fees += 1
             report.actions.append(
-                {"action": "would_publish_fee", "claim_id": str(claim.id), "amount": amount}
+                {
+                    "action": "would_publish_fee",
+                    "claim_id": str(claim.id),
+                    "research_claim_key": claim.research_claim_key,
+                    "amount": amount,
+                    "calculator_url": calc_url,
+                    "condition": payload.get("condition"),
+                }
             )
             return
         fee = Fee(
             service_id=service.id,
-            label_bn=claim.subject,
-            label_en=claim.subject,
+            label_bn=label[:512],
+            label_en=label[:512],
             amount=amount,
             currency=currency,
             effective_date=claim.effective_from,
             claim_id=claim.id,
             verified_at=claim.verified_at,
-            notes_en=f"Published from claim {claim.id}",
+            notes_en=notes_en,
         )
         self.session.add(fee)
         claim.is_published = True
         claim.published_at = datetime.now(timezone.utc)
         report.published_fees += 1
-        await self._audit("publish_fee", "fee", str(claim.id), {"amount": amount})
+        await self._audit(
+            "publish_fee",
+            "fee",
+            str(claim.id),
+            {"amount": amount, "calculator_url": calc_url},
+        )
 
     async def _publish_checklist(
-        self, service: Service, claim: Claim, report: PublishReport
+        self,
+        service: Service,
+        claim: Claim,
+        report: PublishReport,
+        verification: dict[str, Any] | None = None,
     ) -> None:
         item_type = (
             "CONDITIONAL"
             if claim.claim_type == ClaimType.CONDITIONAL_DOCUMENT.value
             else "REQUIRED"
         )
+        conditions = (claim.structured_value or {}).get("condition")
+        if verification and verification.get("condition"):
+            conditions = verification["condition"]
         if self.dry_run:
             report.published_checklist += 1
             report.actions.append(
                 {
                     "action": "would_publish_checklist",
                     "claim_id": str(claim.id),
+                    "research_claim_key": claim.research_claim_key,
                     "item_type": item_type,
+                    "condition": conditions,
                 }
             )
             return
@@ -624,13 +1018,77 @@ class KnowledgePublisher:
             label_en=claim.value[:512],
             claim_id=claim.id,
             confidence=claim.confidence,
-            conditions=(claim.structured_value or {}).get("condition"),
+            conditions=conditions,
         )
         self.session.add(item)
         claim.is_published = True
         claim.published_at = datetime.now(timezone.utc)
         report.published_checklist += 1
-        await self._audit("publish_checklist", "checklist_item", str(claim.id), {"type": item_type})
+        await self._audit(
+            "publish_checklist",
+            "checklist_item",
+            str(claim.id),
+            {"type": item_type, "condition": conditions},
+        )
+
+    async def _publish_application_url(
+        self,
+        service: Service,
+        claim: Claim,
+        report: PublishReport,
+        verification: dict[str, Any] | None = None,
+    ) -> None:
+        url = None
+        if verification:
+            for ev in verification.get("evidence", []):
+                if ev.get("source_url"):
+                    url = ev["source_url"]
+                    break
+        if not url:
+            text = claim.value
+            for token in text.split():
+                if token.startswith("http"):
+                    url = token.rstrip(".,)")
+                    break
+        if not url:
+            report.actions.append(
+                {
+                    "action": "skip_url_missing",
+                    "claim_id": str(claim.id),
+                    "research_claim_key": claim.research_claim_key,
+                }
+            )
+            return
+        if self.dry_run:
+            report.published_urls += 1
+            report.actions.append(
+                {
+                    "action": "would_publish_url",
+                    "claim_id": str(claim.id),
+                    "research_claim_key": claim.research_claim_key,
+                    "url": url,
+                }
+            )
+            return
+        existing = await self.session.execute(
+            select(ServiceLink).where(ServiceLink.service_id == service.id, ServiceLink.url == url)
+        )
+        if not existing.scalar_one_or_none():
+            self.session.add(
+                ServiceLink(
+                    service_id=service.id,
+                    link_type="APPLICATION",
+                    label_bn=claim.subject[:512] or "আবেদন পোর্টাল",
+                    label_en=claim.subject[:512] or "Application portal",
+                    url=url,
+                    is_verified=True,
+                    last_checked_at=claim.verified_at,
+                )
+            )
+        claim.is_published = True
+        claim.published_at = datetime.now(timezone.utc)
+        report.published_urls += 1
+        await self._audit("publish_url", "service_link", str(claim.id), {"url": url})
 
     async def _publish_step(self, service: Service, claim: Claim, report: PublishReport) -> None:
         if self.dry_run:

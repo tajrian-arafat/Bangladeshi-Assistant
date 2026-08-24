@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from datetime import datetime, timezone
 from uuid import uuid4
 
@@ -157,7 +158,8 @@ async def agency_service(test_session: AsyncSession):
 
 
 @pytest.mark.asyncio
-async def test_failed_publication_rolls_back(test_session: AsyncSession, agency_service, tmp_path):
+async def test_mvp_seed_blocks_structured_fee_publish(test_session: AsyncSession, agency_service, tmp_path):
+    """MVP seed structured overwrites are skipped; publish completes without error."""
     _, service = agency_service
     service_id = service.id
     assert service.slug in MVP_SEED_SLUGS
@@ -200,12 +202,12 @@ async def test_failed_publication_rolls_back(test_session: AsyncSession, agency_
     )
     await test_session.commit()
 
-    # Build minimal staging + mapping that refuses MVP overwrite
     staging = tmp_path / "data" / "research" / "staging" / "batch-01"
     staging.mkdir(parents=True)
     (staging / "services.json").write_text(
         '{"services":[{"service_id":"civil-birth-registration"}]}', encoding="utf-8"
     )
+    (staging / "fees.json").write_text('{"fees":[]}', encoding="utf-8")
     mapping_path = tmp_path / "data" / "research" / "catalogue_runtime_mappings.json"
     mapping_path.parent.mkdir(parents=True, exist_ok=True)
     mapping_path.write_text(
@@ -220,12 +222,18 @@ async def test_failed_publication_rolls_back(test_session: AsyncSession, agency_
         }""",
         encoding="utf-8",
     )
+    vdir = tmp_path / "data" / "research" / "verification" / "batch-01"
+    vdir.mkdir(parents=True)
+    (vdir / "claims_verification.json").write_text(
+        json.dumps({"claims": []}),
+        encoding="utf-8",
+    )
 
     publisher = KnowledgePublisher(test_session, repo_root=tmp_path, dry_run=False)
-    with pytest.raises(ValidationError):
-        await publisher.publish_verified("batch-01")
+    report = await publisher.publish_verified("batch-01")
+    assert report.ok
+    assert any(a.get("action") == "skip_mvp_seed_fee_overwrite" for a in report.actions)
 
-    # Fee must not have been committed from failed publish
     from sqlalchemy import select
 
     fees = (
