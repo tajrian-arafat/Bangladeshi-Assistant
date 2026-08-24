@@ -302,6 +302,42 @@
       "aliases_bn": ["টিন"],
       "aliases_banglish": ["tin registration"],
       "intent_boost": {"application": 25}
+    },
+    {
+      "service_slug": "local-character-certificate",
+      "domain": "civil_registration",
+      "service_type": "certificate",
+      "variants": {"actions": ["application", "office"]},
+      "intent_capabilities": ["office_locator", "procedure_inquiry", "document_list", "general_info"],
+      "capability_keywords": ["character certificate", "citizenship certificate", "local certificate"],
+      "aliases_en": ["character certificate", "local character certificate", "citizenship and character certificate"],
+      "aliases_bn": ["চারিত্রিক সনদ"],
+      "aliases_banglish": ["character certificate"],
+      "intent_boost": {"office_locator": 35, "document_list": 20}
+    },
+    {
+      "service_slug": "civil-marriage-registrar-muslim-list",
+      "domain": "civil_registration",
+      "service_type": "registry_list",
+      "variants": {"actions": ["list"]},
+      "intent_capabilities": ["general_info", "application_url", "document_list"],
+      "capability_keywords": ["muslim marriage registrar", "muslim registrar list", "nikah registrar"],
+      "aliases_en": ["muslim marriage registrar list", "muslim registrar list"],
+      "aliases_bn": ["মুসলিম বিবাহ রেজিস্ট্রার"],
+      "aliases_banglish": ["muslim marriage registrar"],
+      "intent_boost": {"general_info": 30}
+    },
+    {
+      "service_slug": "civil-marriage-registrar-hindu-list",
+      "domain": "civil_registration",
+      "service_type": "registry_list",
+      "variants": {"actions": ["list"]},
+      "intent_capabilities": ["general_info", "application_url", "document_list"],
+      "capability_keywords": ["hindu marriage registrar", "hindu registrar list"],
+      "aliases_en": ["hindu marriage registrar list", "hindu registrar list"],
+      "aliases_bn": ["হিন্দু বিবাহ রেজিস্ট্রার"],
+      "aliases_banglish": ["hindu marriage registrar"],
+      "intent_boost": {"general_info": 30}
     }
   ]
 }

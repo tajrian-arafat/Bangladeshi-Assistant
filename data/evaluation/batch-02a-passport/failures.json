@@ -14,137 +14,7 @@
     },
     "actual": {
       "language": "banglish",
-      "normalized_message": "super express ke pare",
-      "intent": "general_info",
-      "service_slug": "epassport-urgent-super-express",
-      "service_name": "Super Express (Urgent) e-Passport",
-      "entities": {
-        "intents": {
-          "primary": "general_info",
-          "secondary": [],
-          "legacy": "general_info"
-        },
-        "intent_primary": "general_info",
-        "intent_secondary": [],
-        "domain_entities": {
-          "domains": [],
-          "passport_type": null,
-          "action": null,
-          "speed": "super_express",
-          "channel": "domestic",
-          "applicant": null,
-          "tokens": [
-            "express",
-            "ke",
-            "pare",
-            "super"
-          ]
-        },
-        "routing_candidates": [
-          {
-            "slug": "epassport-urgent-super-express",
-            "score": 116.6,
-            "reasons": [
-              "intent:general_info+25",
-              "alias_banglish:super express",
-              "kw:super express",
-              "variant:speed=super_express",
-              "variant:channel=domestic",
-              "slug_overlap:2"
-            ]
-          },
-          {
-            "slug": "passport-mrp-initial",
-            "score": 46.14,
-            "reasons": [
-              "intent:general_info+25",
-              "variant:channel=domestic",
-              "claim_coverage:+8"
-            ]
-          },
-          {
-            "slug": "epassport-new-application",
-            "score": 38.65,
-            "reasons": [
-              "intent:general_info+25",
-              "variant:channel=domestic"
-            ]
-          },
-          {
-            "slug": "police-passport-verification",
-            "score": 38.54,
-            "reasons": [
-              "intent:general_info+25",
-              "variant:channel=domestic"
-            ]
-          },
-          {
-            "slug": "police-passport-police-verification",
-            "score": 38.49,
-            "reasons": [
-              "intent:general_info+25",
-              "variant:channel=domestic"
-            ]
-          }
-        ],
-        "service_slug": "epassport-urgent-super-express",
-        "service_match_score": 116.6,
-        "service_match_method": "intent_aware_ranking"
-      },
-      "support_level": "PARTIALLY_SUPPORTED",
-      "confidence": "medium",
-      "clarifications_needed": [],
-      "conflicts": [],
-      "evidence_count": 1,
-      "summary": "Here is available structured information for Super Express (Urgent) e-Passport. This is not fully verified official guidance yet.",
-      "checklist": [],
-      "steps": [],
-      "fees": [],
-      "warnings": [
-        "Only some facts for this service are verified. Treat unverified parts as provisional.",
-        "Fee information is not yet verified. Confirm at the official office.",
-        "Official application URLs are not yet verified for this service."
-      ],
-      "practical_notes": [],
-      "official_urls": [],
-      "citations": [
-        {
-          "evidence_id": "5f3594d1-3143-40ef-bcbe-942df58b1b9b",
-          "source_title": "Urgent/Super Express instruction page last updated 3 June 2026; states any citizen may apply for Super Express domestica",
-          "source_url": "https://epassport.gov.bd/instructions/urgent-applications",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Last updated: 3 June 2026 ... Any citizen of Bangladesh can apply for Super Express delivery ... not available outside Bangladesh"
-        }
-      ]
-    },
-    "pass": false,
-    "checks": {
-      "service": true,
-      "intent": false,
-      "uncertainty": true
-    },
-    "reasons": [
-      "intent mismatch: expected=eligibility_inquiry got=general_info"
-    ],
-    "failure_class": "LANGUAGE_BUG",
-    "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
-  },
-  {
-    "id": "p007",
-    "query": "Who can apply for Super Express e-Passport?",
-    "language": "en",
-    "category": "eligibility",
-    "expected": {
-      "intent": "eligibility_inquiry",
-      "service": "epassport-urgent-super-express",
-      "expect": {
-        "uncertainty_ok": true
-      }
-    },
-    "actual": {
-      "language": "en",
-      "normalized_message": "who can apply for super express e passport",
+      "normalized_message": "super express ke apply pare",
       "intent": "procedure_inquiry",
       "service_slug": "epassport-urgent-super-express",
       "service_name": "Super Express (Urgent) e-Passport",
@@ -161,33 +31,27 @@
           "procedure_inquiry"
         ],
         "domain_entities": {
-          "domains": [
-            "passport"
-          ],
-          "passport_type": "e_passport",
+          "domains": [],
+          "passport_type": null,
           "action": "new",
           "speed": "super_express",
           "channel": "domestic",
           "applicant": null,
           "tokens": [
             "apply",
-            "can",
-            "e",
             "express",
-            "for",
-            "passport",
-            "super",
-            "who"
+            "ke",
+            "pare",
+            "super"
           ]
         },
         "routing_candidates": [
           {
             "slug": "epassport-urgent-super-express",
-            "score": 102.11,
+            "score": 82.35,
             "reasons": [
               "alias_banglish:super express",
               "kw:super express",
-              "variant:passport_type=e_passport",
               "variant:speed=super_express",
               "variant:channel=domestic",
               "slug_overlap:2"
@@ -195,49 +59,43 @@
           },
           {
             "slug": "epassport-new-application",
-            "score": 83.67,
+            "score": 65.29,
             "reasons": [
               "intent:application+30",
               "kw:apply",
-              "variant:passport_type=e_passport",
               "variant:action=new",
               "variant:channel=domestic"
             ]
           },
           {
             "slug": "passport-mrp-initial",
-            "score": 67.86,
+            "score": 64.89,
             "reasons": [
               "intent:application+25",
-              "penalty:passport_type_mismatch",
               "variant:action=new",
               "variant:channel=domestic",
-              "slug_overlap:1",
-              "claim_coverage:+24"
+              "claim_coverage:+12"
             ]
           },
           {
-            "slug": "epassport-rpo-secretariat",
-            "score": 47.17,
+            "slug": "tin-registration",
+            "score": 43.75,
             "reasons": [
-              "intent:application+15",
-              "variant:passport_type=e_passport",
-              "variant:channel=domestic"
+              "intent:application+25",
+              "variant:action=new"
             ]
           },
           {
-            "slug": "police-passport-police-verification",
-            "score": 43.33,
+            "slug": "birth-registration",
+            "score": 39.0,
             "reasons": [
-              "variant:passport_type=e_passport",
-              "variant:channel=domestic",
-              "slug_overlap:1",
-              "claim_coverage:+8"
+              "intent:application+20",
+              "variant:action=new"
             ]
           }
         ],
         "service_slug": "epassport-urgent-super-express",
-        "service_match_score": 102.10526315789474,
+        "service_match_score": 82.34782608695652,
         "service_match_method": "intent_aware_ranking"
       },
       "support_level": "PARTIALLY_SUPPORTED",
@@ -276,8 +134,8 @@
     "reasons": [
       "intent mismatch: expected=eligibility_inquiry got=procedure_inquiry"
     ],
-    "failure_class": "OTHER",
-    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
+    "failure_class": "LANGUAGE_BUG",
+    "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
   },
   {
     "id": "p011",
@@ -326,7 +184,7 @@
         "routing_candidates": [
           {
             "slug": "passport-mrp-initial",
-            "score": 88.21,
+            "score": 80.21,
             "reasons": [
               "intent:document_list+15",
               "alias_en:machine readable passport",
@@ -357,16 +215,6 @@
             ]
           },
           {
-            "slug": "epassport-new-application",
-            "score": 60.92,
-            "reasons": [
-              "intent:document_list+20",
-              "variant:passport_type=e_passport",
-              "variant:channel=domestic",
-              "claim_coverage:+8"
-            ]
-          },
-          {
             "slug": "epassport-enrollment-appointment",
             "score": 57.62,
             "reasons": [
@@ -374,10 +222,20 @@
               "variant:passport_type=e_passport",
               "variant:channel=domestic"
             ]
+          },
+          {
+            "slug": "epassport-new-application",
+            "score": 56.92,
+            "reasons": [
+              "intent:document_list+20",
+              "variant:passport_type=e_passport",
+              "variant:channel=domestic",
+              "claim_coverage:+4"
+            ]
           }
         ],
         "service_slug": "passport-mrp-initial",
-        "service_match_score": 88.20547945205479,
+        "service_match_score": 80.20547945205479,
         "service_match_method": "intent_aware_ranking"
       },
       "support_level": "VERIFIED",
@@ -474,22 +332,18 @@
     },
     "actual": {
       "language": "en",
-      "normalized_message": "abu dhabi te passport e 10 extra",
+      "normalized_message": "abu dhabi passport e 10 extra required",
       "intent": "document_list",
-      "service_slug": "epassport-fee-payment",
-      "service_name": "e-Passport Fee Payment",
+      "service_slug": "passport-renewal",
+      "service_name": "Passport Renewal",
       "entities": {
         "intents": {
-          "primary": "renewal",
-          "secondary": [
-            "procedure_inquiry"
-          ],
+          "primary": "document_list",
+          "secondary": [],
           "legacy": "document_list"
         },
-        "intent_primary": "renewal",
-        "intent_secondary": [
-          "procedure_inquiry"
-        ],
+        "intent_primary": "document_list",
+        "intent_secondary": [],
         "domain_entities": {
           "domains": [
             "passport"
@@ -506,179 +360,81 @@
             "e",
             "extra",
             "passport",
-            "te"
+            "required"
           ]
         },
         "routing_candidates": [
           {
-            "slug": "epassport-fee-payment",
-            "score": 100.0,
+            "slug": "passport-renewal",
+            "score": 63.25,
             "reasons": [
-              "phrase_hint"
+              "intent:document_list+25",
+              "variant:passport_type=e_passport",
+              "variant:channel=mission",
+              "slug_overlap:1"
+            ]
+          },
+          {
+            "slug": "police-passport-police-verification",
+            "score": 61.43,
+            "reasons": [
+              "intent:document_list+25",
+              "variant:passport_type=e_passport",
+              "variant:channel=mission",
+              "slug_overlap:1"
+            ]
+          },
+          {
+            "slug": "epassport-enrollment-appointment",
+            "score": 49.0,
+            "reasons": [
+              "intent:document_list+25",
+              "variant:passport_type=e_passport"
+            ]
+          },
+          {
+            "slug": "epassport-new-application",
+            "score": 48.24,
+            "reasons": [
+              "intent:document_list+20",
+              "variant:passport_type=e_passport",
+              "claim_coverage:+4"
             ]
           }
         ],
-        "service_slug": "epassport-fee-payment",
-        "service_match_score": 100.0,
-        "service_match_method": "phrase_hint"
+        "service_slug": "passport-renewal",
+        "service_match_score": 63.25,
+        "service_match_method": "intent_aware_ranking"
       },
-      "support_level": "PARTIALLY_SUPPORTED",
+      "support_level": "INSUFFICIENT_EVIDENCE",
       "confidence": "medium",
-      "clarifications_needed": [],
+      "clarifications_needed": [
+        "Is this an e-passport or MRP passport?"
+      ],
       "conflicts": [],
-      "evidence_count": 1,
-      "summary": "Here is available structured information for e-Passport Fee Payment. This is not fully verified official guidance yet. PRACTICAL notes (commonly reported, NOT official MUST NEED) are listed separately.",
+      "evidence_count": 0,
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
       "checklist": [],
       "steps": [],
-      "fees": [
-        {
-          "amount": "4025",
-          "currency": "BDT",
-          "evidence_id": "37d0f05a-3d52-4186-91fb-34747462cc66",
-          "label": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "6325",
-          "currency": "BDT",
-          "evidence_id": "f54feb63-40c5-42db-a39a-230b4fda8b02",
-          "label": "Inside Bangladesh: 48-page / 5-year e-Passport express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "8625",
-          "currency": "BDT",
-          "evidence_id": "c96b7d74-48aa-47ae-bb5d-a43c94cea7a8",
-          "label": "Inside Bangladesh: 48-page / 5-year e-Passport super express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "5750",
-          "currency": "BDT",
-          "evidence_id": "a52ff553-30c3-4b90-a03a-bc8645bc058e",
-          "label": "Inside Bangladesh: 48-page / 10-year e-Passport regular delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "8050",
-          "currency": "BDT",
-          "evidence_id": "ab99e632-9705-4f6b-8a74-6e5dfffb84eb",
-          "label": "Inside Bangladesh: 48-page / 10-year e-Passport express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "10350",
-          "currency": "BDT",
-          "evidence_id": "67ee3784-3b8f-4b72-a76f-7f3196bb71a3",
-          "label": "Inside Bangladesh: 48-page / 10-year e-Passport super express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "6325",
-          "currency": "BDT",
-          "evidence_id": "a5ab8138-1762-44b3-8812-c1d5d7da2ffc",
-          "label": "Inside Bangladesh: 64-page / 5-year e-Passport regular delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "8625",
-          "currency": "BDT",
-          "evidence_id": "8c0500bc-db81-434f-8420-dc322b48c6d0",
-          "label": "Inside Bangladesh: 64-page / 5-year e-Passport express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "12075",
-          "currency": "BDT",
-          "evidence_id": "5aef9d46-c015-471e-a1b7-ba2709f690d5",
-          "label": "Inside Bangladesh: 64-page / 5-year e-Passport super express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "8050",
-          "currency": "BDT",
-          "evidence_id": "4e091af6-31c7-4a42-8b55-a0f188831416",
-          "label": "Inside Bangladesh: 64-page / 10-year e-Passport regular delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "10350",
-          "currency": "BDT",
-          "evidence_id": "0c0d8ec7-09a8-44b6-9a8d-13e6ae0443a6",
-          "label": "Inside Bangladesh: 64-page / 10-year e-Passport express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "13800",
-          "currency": "BDT",
-          "evidence_id": "49d8eb60-dca5-43b0-bdac-e0f33453a409",
-          "label": "Inside Bangladesh: 64-page / 10-year e-Passport super express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        }
-      ],
-      "warnings": [
-        "Only some facts for this service are verified. Treat unverified parts as provisional.",
-        "Official application URLs are not yet verified for this service."
-      ],
-      "practical_notes": [
-        "[PRACTICAL — not official MUST NEED] Community guides reference ekpay and e-Challan verification for online payments; confirm current gateway list on official portal."
-      ],
+      "fees": [],
+      "warnings": [],
+      "practical_notes": [],
       "official_urls": [],
-      "citations": [
-        {
-          "evidence_id": "04df7800-4e93-4f95-81cd-5cac7c994b8f",
-          "source_title": "Official e-Passport fee page displays Last updated: 12 July 2026 as of gap-closure retrieval.",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Last updated: 12 July 2026 on https://www.epassport.gov.bd/instructions/passport-fees (browser-rendered)."
-        },
-        {
-          "evidence_id": "7a67b60a-879a-44f3-9cdc-498f380874de",
-          "source_title": "Official fee page (July 2026) lists online payment via A-Challan, DGePay, and ShurjoPay; offline via A-Challan at banks.",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Online: Through \"A-Challan\", \"DGePay\" and \"ShurjoPay\" ... Offline: ... through A-Challan"
-        },
-        {
-          "evidence_id": "829a00c0-56b7-4678-9937-dc683902c370",
-          "source_title": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery fee BDT 4,025 (incl. 15% VAT) per official fee page upda",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Regular delivery: TK 4,025"
-        },
-        {
-          "evidence_id": "cdfc979a-c0b1-4d48-ba11-6fc834036953",
-          "source_title": "Inside Bangladesh: 48-page / 5-year e-Passport express delivery fee BDT 6,325 (incl. 15% VAT) per official fee page upda",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Express delivery: TK 6,325"
-        },
-        {
-          "evidence_id": "ad503880-3d6f-48eb-8e1e-9345ba9ce21c",
-          "source_title": "Inside Bangladesh: 48-page / 5-year e-Passport super express delivery fee BDT 8,625 (incl. 15% VAT) per official fee pag",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Super Express delivery: TK 8,625"
-        }
-      ]
+      "citations": []
     },
     "pass": false,
     "checks": {
-      "service": true,
+      "service": false,
       "intent": false,
       "uncertainty": true,
       "no_weff": true
     },
     "reasons": [
+      "service mismatch: expected=epassport-fee-payment got=passport-renewal",
       "intent mismatch: expected=fee_inquiry got=document_list"
     ],
-    "failure_class": "LANGUAGE_BUG",
-    "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
+    "failure_class": "RETRIEVAL_BUG",
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
   },
   {
     "id": "p015",
@@ -695,7 +451,7 @@
     },
     "actual": {
       "language": "banglish",
-      "normalized_message": "passport payment ekpay diye hoy",
+      "normalized_message": "passport payment what ekpay diye hoy",
       "intent": "procedure_inquiry",
       "service_slug": "epassport-fee-payment",
       "service_name": "e-Passport Fee Payment",
@@ -721,7 +477,8 @@
             "ekpay",
             "hoy",
             "passport",
-            "payment"
+            "payment",
+            "what"
           ]
         },
         "routing_candidates": [
@@ -896,268 +653,6 @@
     "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
   },
   {
-    "id": "p016",
-    "query": "How to pay e-Passport fee online?",
-    "language": "en",
-    "category": "payment",
-    "expected": {
-      "intent": "procedure_inquiry",
-      "service": "epassport-fee-payment",
-      "expect": {
-        "must_include_payment_methods": [
-          "A-Challan",
-          "DGePay",
-          "ShurjoPay"
-        ]
-      }
-    },
-    "actual": {
-      "language": "en",
-      "normalized_message": "how to pay e passport fee online",
-      "intent": "fee_inquiry",
-      "service_slug": "epassport-fee-payment",
-      "service_name": "e-Passport Fee Payment",
-      "entities": {
-        "intents": {
-          "primary": "fee_inquiry",
-          "secondary": [
-            "payment",
-            "procedure_inquiry"
-          ],
-          "legacy": "fee_inquiry"
-        },
-        "intent_primary": "fee_inquiry",
-        "intent_secondary": [
-          "payment",
-          "procedure_inquiry"
-        ],
-        "domain_entities": {
-          "domains": [
-            "passport"
-          ],
-          "passport_type": "e_passport",
-          "action": "fee",
-          "speed": null,
-          "channel": "domestic",
-          "applicant": null,
-          "tokens": [
-            "e",
-            "fee",
-            "how",
-            "online",
-            "passport",
-            "pay",
-            "to"
-          ]
-        },
-        "routing_candidates": [
-          {
-            "slug": "epassport-fee-payment",
-            "score": 166.57,
-            "reasons": [
-              "intent:fee_inquiry+35",
-              "alias_banglish:e passport fee",
-              "kw:fee",
-              "variant:passport_type=e_passport",
-              "variant:action=fee",
-              "variant:channel=domestic"
-            ]
-          },
-          {
-            "slug": "passport-renewal",
-            "score": 72.0,
-            "reasons": [
-              "intent:fee_inquiry+25",
-              "variant:passport_type=e_passport",
-              "variant:channel=domestic",
-              "slug_overlap:1",
-              "claim_coverage:+8"
-            ]
-          },
-          {
-            "slug": "epassport-urgent-super-express",
-            "score": 55.59,
-            "reasons": [
-              "intent:fee_inquiry+15",
-              "variant:passport_type=e_passport",
-              "variant:channel=domestic",
-              "claim_coverage:+8"
-            ]
-          },
-          {
-            "slug": "passport-mrp-initial",
-            "score": 53.38,
-            "reasons": [
-              "intent:fee_inquiry+25",
-              "penalty:passport_type_mismatch",
-              "variant:channel=domestic",
-              "slug_overlap:1",
-              "claim_coverage:+24"
-            ]
-          }
-        ],
-        "service_slug": "epassport-fee-payment",
-        "service_match_score": 166.57142857142858,
-        "service_match_method": "intent_aware_ranking"
-      },
-      "support_level": "PARTIALLY_SUPPORTED",
-      "confidence": "medium",
-      "clarifications_needed": [],
-      "conflicts": [],
-      "evidence_count": 1,
-      "summary": "Here is available structured information for e-Passport Fee Payment. This is not fully verified official guidance yet. PRACTICAL notes (commonly reported, NOT official MUST NEED) are listed separately.",
-      "checklist": [],
-      "steps": [],
-      "fees": [
-        {
-          "amount": "4025",
-          "currency": "BDT",
-          "evidence_id": "37d0f05a-3d52-4186-91fb-34747462cc66",
-          "label": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "6325",
-          "currency": "BDT",
-          "evidence_id": "f54feb63-40c5-42db-a39a-230b4fda8b02",
-          "label": "Inside Bangladesh: 48-page / 5-year e-Passport express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "8625",
-          "currency": "BDT",
-          "evidence_id": "c96b7d74-48aa-47ae-bb5d-a43c94cea7a8",
-          "label": "Inside Bangladesh: 48-page / 5-year e-Passport super express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "5750",
-          "currency": "BDT",
-          "evidence_id": "a52ff553-30c3-4b90-a03a-bc8645bc058e",
-          "label": "Inside Bangladesh: 48-page / 10-year e-Passport regular delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "8050",
-          "currency": "BDT",
-          "evidence_id": "ab99e632-9705-4f6b-8a74-6e5dfffb84eb",
-          "label": "Inside Bangladesh: 48-page / 10-year e-Passport express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "10350",
-          "currency": "BDT",
-          "evidence_id": "67ee3784-3b8f-4b72-a76f-7f3196bb71a3",
-          "label": "Inside Bangladesh: 48-page / 10-year e-Passport super express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "6325",
-          "currency": "BDT",
-          "evidence_id": "a5ab8138-1762-44b3-8812-c1d5d7da2ffc",
-          "label": "Inside Bangladesh: 64-page / 5-year e-Passport regular delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "8625",
-          "currency": "BDT",
-          "evidence_id": "8c0500bc-db81-434f-8420-dc322b48c6d0",
-          "label": "Inside Bangladesh: 64-page / 5-year e-Passport express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "12075",
-          "currency": "BDT",
-          "evidence_id": "5aef9d46-c015-471e-a1b7-ba2709f690d5",
-          "label": "Inside Bangladesh: 64-page / 5-year e-Passport super express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "8050",
-          "currency": "BDT",
-          "evidence_id": "4e091af6-31c7-4a42-8b55-a0f188831416",
-          "label": "Inside Bangladesh: 64-page / 10-year e-Passport regular delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "10350",
-          "currency": "BDT",
-          "evidence_id": "0c0d8ec7-09a8-44b6-9a8d-13e6ae0443a6",
-          "label": "Inside Bangladesh: 64-page / 10-year e-Passport express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        },
-        {
-          "amount": "13800",
-          "currency": "BDT",
-          "evidence_id": "49d8eb60-dca5-43b0-bdac-e0f33453a409",
-          "label": "Inside Bangladesh: 64-page / 10-year e-Passport super express delivery (incl. 15% VAT)",
-          "fee_mode": null
-        }
-      ],
-      "warnings": [
-        "Only some facts for this service are verified. Treat unverified parts as provisional.",
-        "Official application URLs are not yet verified for this service."
-      ],
-      "practical_notes": [
-        "[PRACTICAL — not official MUST NEED] Community guides reference ekpay and e-Challan verification for online payments; confirm current gateway list on official portal."
-      ],
-      "official_urls": [],
-      "citations": [
-        {
-          "evidence_id": "04df7800-4e93-4f95-81cd-5cac7c994b8f",
-          "source_title": "Official e-Passport fee page displays Last updated: 12 July 2026 as of gap-closure retrieval.",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Last updated: 12 July 2026 on https://www.epassport.gov.bd/instructions/passport-fees (browser-rendered)."
-        },
-        {
-          "evidence_id": "7a67b60a-879a-44f3-9cdc-498f380874de",
-          "source_title": "Official fee page (July 2026) lists online payment via A-Challan, DGePay, and ShurjoPay; offline via A-Challan at banks.",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Online: Through \"A-Challan\", \"DGePay\" and \"ShurjoPay\" ... Offline: ... through A-Challan"
-        },
-        {
-          "evidence_id": "829a00c0-56b7-4678-9937-dc683902c370",
-          "source_title": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery fee BDT 4,025 (incl. 15% VAT) per official fee page upda",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Regular delivery: TK 4,025"
-        },
-        {
-          "evidence_id": "cdfc979a-c0b1-4d48-ba11-6fc834036953",
-          "source_title": "Inside Bangladesh: 48-page / 5-year e-Passport express delivery fee BDT 6,325 (incl. 15% VAT) per official fee page upda",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Express delivery: TK 6,325"
-        },
-        {
-          "evidence_id": "ad503880-3d6f-48eb-8e1e-9345ba9ce21c",
-          "source_title": "Inside Bangladesh: 48-page / 5-year e-Passport super express delivery fee BDT 8,625 (incl. 15% VAT) per official fee pag",
-          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Super Express delivery: TK 8,625"
-        }
-      ]
-    },
-    "pass": false,
-    "checks": {
-      "service": true,
-      "intent": false,
-      "payment_methods": true
-    },
-    "reasons": [
-      "intent mismatch: expected=procedure_inquiry got=fee_inquiry"
-    ],
-    "failure_class": "OTHER",
-    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
-  },
-  {
     "id": "p020",
     "query": "নতুন ই-পাসপোর্ট আবেদন কোথায়?",
     "language": "bn",
@@ -1179,14 +674,12 @@
         "intents": {
           "primary": "application_url",
           "secondary": [
-            "office_locator",
             "application"
           ],
           "legacy": "application_url"
         },
         "intent_primary": "application_url",
         "intent_secondary": [
-          "office_locator",
           "application"
         ],
         "domain_entities": {
@@ -1218,21 +711,11 @@
           },
           {
             "slug": "police-passport-police-verification",
-            "score": 39.74,
+            "score": 35.74,
             "reasons": [
               "variant:passport_type=e_passport",
               "variant:channel=domestic",
-              "claim_coverage:+8"
-            ]
-          },
-          {
-            "slug": "passport-mrp-initial",
-            "score": 38.0,
-            "reasons": [
-              "penalty:passport_type_mismatch",
-              "variant:action=new",
-              "variant:channel=domestic",
-              "claim_coverage:+24"
+              "claim_coverage:+4"
             ]
           }
         ],
@@ -1294,21 +777,19 @@
     "actual": {
       "language": "en",
       "normalized_message": "e passport apply online url",
-      "intent": "procedure_inquiry",
+      "intent": "application_url",
       "service_slug": "epassport-new-application",
       "service_name": "New e-Passport Application",
       "entities": {
         "intents": {
-          "primary": "procedure_inquiry",
+          "primary": "application_url",
           "secondary": [
-            "application_url",
             "application"
           ],
-          "legacy": "procedure_inquiry"
+          "legacy": "application_url"
         },
-        "intent_primary": "procedure_inquiry",
+        "intent_primary": "application_url",
         "intent_secondary": [
-          "application_url",
           "application"
         ],
         "domain_entities": {
@@ -1331,9 +812,8 @@
         "routing_candidates": [
           {
             "slug": "epassport-new-application",
-            "score": 121.07,
+            "score": 96.07,
             "reasons": [
-              "intent:procedure_inquiry+25",
               "alias_banglish:e passport apply",
               "kw:apply",
               "variant:passport_type=e_passport",
@@ -1343,20 +823,18 @@
           },
           {
             "slug": "police-passport-police-verification",
-            "score": 66.37,
+            "score": 42.37,
             "reasons": [
-              "intent:procedure_inquiry+20",
               "variant:passport_type=e_passport",
               "variant:channel=domestic",
               "slug_overlap:1",
-              "claim_coverage:+8"
+              "claim_coverage:+4"
             ]
           },
           {
             "slug": "passport-renewal",
-            "score": 63.57,
+            "score": 38.57,
             "reasons": [
-              "intent:procedure_inquiry+25",
               "variant:passport_type=e_passport",
               "variant:channel=domestic",
               "slug_overlap:1"
@@ -1364,26 +842,16 @@
           },
           {
             "slug": "police-passport-verification",
-            "score": 62.27,
+            "score": 37.27,
             "reasons": [
-              "intent:procedure_inquiry+25",
               "variant:passport_type=e_passport",
               "variant:channel=domestic",
               "slug_overlap:1"
             ]
-          },
-          {
-            "slug": "epassport-fee-payment",
-            "score": 59.0,
-            "reasons": [
-              "intent:procedure_inquiry+25",
-              "variant:passport_type=e_passport",
-              "variant:channel=domestic"
-            ]
           }
         ],
         "service_slug": "epassport-new-application",
-        "service_match_score": 121.06666666666666,
+        "service_match_score": 96.06666666666666,
         "service_match_method": "intent_aware_ranking"
       },
       "support_level": "PARTIALLY_SUPPORTED",
@@ -1416,11 +884,10 @@
     "pass": false,
     "checks": {
       "service": true,
-      "intent": false,
+      "intent": true,
       "url": false
     },
     "reasons": [
-      "intent mismatch: expected=application_url got=procedure_inquiry",
       "missing official URL containing onboarding"
     ],
     "failure_class": "OTHER",
@@ -1483,20 +950,20 @@
           },
           {
             "slug": "epassport-urgent-super-express",
-            "score": 46.33,
+            "score": 42.33,
             "reasons": [
               "intent:general_info+25",
               "variant:channel=domestic",
-              "claim_coverage:+8"
+              "claim_coverage:+4"
             ]
           },
           {
             "slug": "passport-mrp-initial",
-            "score": 45.9,
+            "score": 41.9,
             "reasons": [
               "intent:general_info+25",
               "variant:channel=domestic",
-              "claim_coverage:+8"
+              "claim_coverage:+4"
             ]
           },
           {
@@ -1660,100 +1127,6 @@
     "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
   },
   {
-    "id": "p029",
-    "query": "epassport enrollment appointment documents",
-    "language": "en",
-    "category": "documents",
-    "expected": {
-      "intent": "document_list",
-      "service": "epassport-enrollment-appointment",
-      "expect": {
-        "uncertainty_ok": true
-      }
-    },
-    "actual": {
-      "language": "en",
-      "normalized_message": "epassport enrollment appointment document",
-      "intent": "procedure_inquiry",
-      "service_slug": "epassport-enrollment-appointment",
-      "service_name": "Biometric Enrollment Appointment",
-      "entities": {
-        "intents": {
-          "primary": "appointment",
-          "secondary": [
-            "document_list"
-          ],
-          "legacy": "procedure_inquiry"
-        },
-        "intent_primary": "appointment",
-        "intent_secondary": [
-          "document_list"
-        ],
-        "domain_entities": {
-          "domains": [
-            "passport"
-          ],
-          "passport_type": "e_passport",
-          "action": "appointment",
-          "speed": null,
-          "channel": "domestic",
-          "applicant": null,
-          "tokens": [
-            "appointment",
-            "document",
-            "enrollment",
-            "epassport"
-          ]
-        },
-        "routing_candidates": [
-          {
-            "slug": "epassport-enrollment-appointment",
-            "score": 208.0,
-            "reasons": [
-              "intent:appointment+40",
-              "alias_en:enrollment appointment",
-              "alias_banglish:enrollment appointment",
-              "kw:appointment",
-              "kw:enrollment",
-              "variant:passport_type=e_passport"
-            ]
-          }
-        ],
-        "service_slug": "epassport-enrollment-appointment",
-        "service_match_score": 208.0,
-        "service_match_method": "intent_aware_ranking"
-      },
-      "support_level": "INSUFFICIENT_EVIDENCE",
-      "confidence": "low",
-      "clarifications_needed": [],
-      "conflicts": [],
-      "evidence_count": 1,
-      "summary": "Here is available structured information for Biometric Enrollment Appointment. This is not fully verified official guidance yet.",
-      "checklist": [],
-      "steps": [],
-      "fees": [],
-      "warnings": [
-        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
-        "Fee information is not yet verified. Confirm at the official office.",
-        "Official application URLs are not yet verified for this service."
-      ],
-      "practical_notes": [],
-      "official_urls": [],
-      "citations": []
-    },
-    "pass": false,
-    "checks": {
-      "service": true,
-      "intent": false,
-      "uncertainty": true
-    },
-    "reasons": [
-      "intent mismatch: expected=document_list got=procedure_inquiry"
-    ],
-    "failure_class": "OTHER",
-    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
-  },
-  {
     "id": "p037",
     "query": "passport fee https://fake-gov-bd-portal.example/apply",
     "language": "en",
@@ -1767,26 +1140,18 @@
     },
     "actual": {
       "language": "en",
-      "normalized_message": "passport fee https fake gov bd portal example apply",
+      "normalized_message": "passport fee",
       "intent": "fee_inquiry",
       "service_slug": "epassport-fee-payment",
       "service_name": "e-Passport Fee Payment",
       "entities": {
         "intents": {
           "primary": "fee_inquiry",
-          "secondary": [
-            "procedure_inquiry",
-            "application_url",
-            "application"
-          ],
+          "secondary": [],
           "legacy": "fee_inquiry"
         },
         "intent_primary": "fee_inquiry",
-        "intent_secondary": [
-          "procedure_inquiry",
-          "application_url",
-          "application"
-        ],
+        "intent_secondary": [],
         "domain_entities": {
           "domains": [
             "passport"
@@ -1797,43 +1162,35 @@
           "channel": "domestic",
           "applicant": null,
           "tokens": [
-            "apply",
-            "bd",
-            "example",
-            "fake",
             "fee",
-            "gov",
-            "https",
-            "passport",
-            "portal"
+            "passport"
           ]
         },
         "routing_candidates": [
           {
             "slug": "epassport-fee-payment",
-            "score": 109.33,
+            "score": 96.0,
             "reasons": [
               "intent:fee_inquiry+35",
               "kw:fee",
               "variant:action=fee",
               "variant:channel=domestic",
               "slug_overlap:1",
-              "claim_coverage:+32"
-            ]
-          },
-          {
-            "slug": "passport-mrp-initial",
-            "score": 68.54,
-            "reasons": [
-              "intent:fee_inquiry+25",
-              "variant:channel=domestic",
-              "slug_overlap:1",
-              "claim_coverage:+24"
+              "claim_coverage:+16"
             ]
           },
           {
             "slug": "passport-renewal",
-            "score": 46.43,
+            "score": 47.43,
+            "reasons": [
+              "intent:fee_inquiry+25",
+              "variant:channel=domestic",
+              "slug_overlap:1"
+            ]
+          },
+          {
+            "slug": "passport-mrp-initial",
+            "score": 47.29,
             "reasons": [
               "intent:fee_inquiry+25",
               "variant:channel=domestic",
@@ -1842,7 +1199,7 @@
           }
         ],
         "service_slug": "epassport-fee-payment",
-        "service_match_score": 109.33333333333333,
+        "service_match_score": 96.0,
         "service_match_method": "intent_aware_ranking"
       },
       "support_level": "PARTIALLY_SUPPORTED",
@@ -2019,16 +1376,16 @@
     "actual": {
       "language": "en",
       "normalized_message": "super express only for existing mrp with address change",
-      "intent": "office_locator",
+      "intent": "document_list",
       "service_slug": "epassport-urgent-super-express",
       "service_name": "Super Express (Urgent) e-Passport",
       "entities": {
         "intents": {
-          "primary": "office_locator",
+          "primary": "document_list",
           "secondary": [],
-          "legacy": "office_locator"
+          "legacy": "document_list"
         },
-        "intent_primary": "office_locator",
+        "intent_primary": "document_list",
         "intent_secondary": [],
         "domain_entities": {
           "domains": [
@@ -2067,21 +1424,33 @@
           },
           {
             "slug": "passport-mrp-initial",
-            "score": 42.0,
+            "score": 65.0,
             "reasons": [
+              "intent:document_list+15",
               "kw:mrp",
+              "variant:passport_type=mrp",
+              "variant:channel=domestic",
+              "slug_overlap:1",
+              "claim_coverage:+8"
+            ]
+          },
+          {
+            "slug": "passport-mrp-reissue",
+            "score": 61.55,
+            "reasons": [
+              "intent:document_list+25",
               "variant:passport_type=mrp",
               "variant:channel=domestic",
               "slug_overlap:1"
             ]
           },
           {
-            "slug": "passport-mrp-reissue",
-            "score": 36.55,
+            "slug": "police-passport-police-verification",
+            "score": 56.54,
             "reasons": [
+              "intent:document_list+25",
               "variant:passport_type=mrp",
-              "variant:channel=domestic",
-              "slug_overlap:1"
+              "variant:channel=domestic"
             ]
           }
         ],
@@ -2124,573 +1493,10 @@
       "se_not_universal": true
     },
     "reasons": [
-      "intent mismatch: expected=eligibility_inquiry got=office_locator"
+      "intent mismatch: expected=eligibility_inquiry got=document_list"
     ],
     "failure_class": "OTHER",
     "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
-  },
-  {
-    "id": "p040",
-    "query": "MRP new passport fee BDT 3450",
-    "language": "en",
-    "category": "unsupported_fee",
-    "expected": {
-      "intent": "fee_inquiry",
-      "service": "passport-mrp-initial",
-      "expect": {
-        "must_reject_amount": "3450",
-        "uncertainty_ok": true
-      }
-    },
-    "actual": {
-      "language": "en",
-      "normalized_message": "mrp new passport fee bdt 3450",
-      "intent": "procedure_inquiry",
-      "service_slug": "passport-mrp-initial",
-      "service_name": "Machine Readable Passport - Initial Application",
-      "entities": {
-        "intents": {
-          "primary": "application",
-          "secondary": [],
-          "legacy": "procedure_inquiry"
-        },
-        "intent_primary": "application",
-        "intent_secondary": [],
-        "domain_entities": {
-          "domains": [
-            "passport"
-          ],
-          "passport_type": "mrp",
-          "action": "fee",
-          "speed": null,
-          "channel": "domestic",
-          "applicant": null,
-          "tokens": [
-            "3450",
-            "bdt",
-            "fee",
-            "mrp",
-            "new",
-            "passport"
-          ]
-        },
-        "routing_candidates": [
-          {
-            "slug": "passport-mrp-initial",
-            "score": 130.6,
-            "reasons": [
-              "intent:application+25",
-              "db_alias:new passport",
-              "kw:mrp",
-              "variant:passport_type=mrp",
-              "variant:channel=domestic",
-              "slug_overlap:2"
-            ]
-          },
-          {
-            "slug": "passport-mrp-reissue",
-            "score": 48.6,
-            "reasons": [
-              "variant:passport_type=mrp",
-              "variant:channel=domestic",
-              "slug_overlap:2",
-              "claim_coverage:+8"
-            ]
-          },
-          {
-            "slug": "epassport-new-application",
-            "score": 46.26,
-            "reasons": [
-              "intent:application+30",
-              "kw:new",
-              "kw:new passport",
-              "penalty:passport_type_mismatch",
-              "variant:channel=domestic",
-              "slug_overlap:1"
-            ]
-          },
-          {
-            "slug": "police-passport-police-verification",
-            "score": 44.46,
-            "reasons": [
-              "variant:passport_type=mrp",
-              "variant:channel=domestic",
-              "slug_overlap:1",
-              "claim_coverage:+8"
-            ]
-          },
-          {
-            "slug": "police-passport-verification",
-            "score": 36.78,
-            "reasons": [
-              "variant:passport_type=mrp",
-              "variant:channel=domestic",
-              "slug_overlap:1"
-            ]
-          }
-        ],
-        "service_slug": "passport-mrp-initial",
-        "service_match_score": 130.6,
-        "service_match_method": "intent_aware_ranking"
-      },
-      "support_level": "VERIFIED",
-      "confidence": "high",
-      "clarifications_needed": [],
-      "conflicts": [],
-      "evidence_count": 1,
-      "summary": "Here is verified structured guidance for Machine Readable Passport - Initial Application. Facts below are backed by verified official claims.",
-      "checklist": [
-        {
-          "item": "MRP pathway requires attested photocopies of NID/BRC and relevant certificates (contrasts with e-Passport no-attestation rule).",
-          "type": "REQUIRED",
-          "evidence_id": null,
-          "layer": "OFFICIAL",
-          "claim_linked": true
-        }
-      ],
-      "steps": [
-        {
-          "order": 1,
-          "title": "MRP online application provides Application ID and Password by email after first page save.",
-          "official_url": null,
-          "claim_linked": true
-        },
-        {
-          "order": 1,
-          "title": "After online submit, applicant",
-          "official_url": null,
-          "claim_linked": true
-        }
-      ],
-      "fees": [],
-      "warnings": [
-        "Fee information is not yet verified. Confirm at the official office.",
-        "The amount BDT 3450 is NOT confirmed as an official verified fee in this knowledge base. Do not treat it as authoritative. Use only verified fees or the official calculator when indicated."
-      ],
-      "practical_notes": [],
-      "official_urls": [
-        "http://passport.gov.bd/"
-      ],
-      "citations": [
-        {
-          "evidence_id": "2739cc63-6832-40f5-b485-ea6e695802e4",
-          "source_title": "Initial MRP applications use DIP Form 1 via passport.gov.bd online portal.",
-          "source_url": "http://passport.gov.bd/",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:08:38.715778",
-          "excerpt": "Verified official URL for Machine Readable Passport - Initial Application"
-        },
-        {
-          "evidence_id": "d550f21c-54fe-45da-bb20-f41ffa0eb6f1",
-          "source_title": "Initial MRP applications use DIP Form 1 via passport.gov.bd online portal.",
-          "source_url": "http://passport.gov.bd/",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:08:38.715778",
-          "excerpt": "MRP portal menu: DIP Form 1 Primary/Initial Application; DIP links passport.gov.bd."
-        },
-        {
-          "evidence_id": "48ff8391-6b89-4520-9c23-ca8c6a46dedb",
-          "source_title": "MRP online application provides Application ID and Password by email after first page save.",
-          "source_url": "http://passport.gov.bd/",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:08:38.715778",
-          "excerpt": "After first page save, email contains Application ID and Password."
-        },
-        {
-          "evidence_id": "b79b10e7-c0aa-4f94-8bcf-78a26624df02",
-          "source_title": "After online submit, applicant",
-          "source_url": "http://passport.gov.bd/",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:08:38.715778",
-          "excerpt": "Report to Passport Office for biometric data with printed Online Application form."
-        },
-        {
-          "evidence_id": "92e91d87-dba1-4819-b00c-4b263b3e445a",
-          "source_title": "Certain government/retired/surrendered categories submit one form copy; others submit two copies (per MRP portal notice)",
-          "source_url": "http://passport.gov.bd/",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:08:38.715778",
-          "excerpt": "Bangla bullet: govt/retired/surrendered categories one form; others two copies for new passport."
-        }
-      ]
-    },
-    "pass": false,
-    "checks": {
-      "service": true,
-      "intent": false,
-      "reject_amount": true,
-      "uncertainty": true
-    },
-    "reasons": [
-      "intent mismatch: expected=fee_inquiry got=procedure_inquiry"
-    ],
-    "failure_class": "OTHER",
-    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
-  },
-  {
-    "id": "p045",
-    "query": "follow up: express tier?",
-    "language": "en",
-    "category": "follow_up",
-    "expected": {
-      "intent": "fee_inquiry",
-      "service": "epassport-fee-payment",
-      "expect": {
-        "uncertainty_ok": true
-      }
-    },
-    "actual": {
-      "language": "en",
-      "normalized_message": "follow up express tier",
-      "intent": "general_info",
-      "service_slug": "epassport-urgent-super-express",
-      "service_name": "Super Express (Urgent) e-Passport",
-      "entities": {
-        "intents": {
-          "primary": "general_info",
-          "secondary": [],
-          "legacy": "general_info"
-        },
-        "intent_primary": "general_info",
-        "intent_secondary": [],
-        "domain_entities": {
-          "domains": [],
-          "passport_type": null,
-          "action": null,
-          "speed": "express",
-          "channel": "domestic",
-          "applicant": null,
-          "tokens": [
-            "express",
-            "follow",
-            "tier",
-            "up"
-          ]
-        },
-        "routing_candidates": [
-          {
-            "slug": "epassport-urgent-super-express",
-            "score": 64.38,
-            "reasons": [
-              "intent:general_info+25",
-              "variant:speed=express",
-              "variant:channel=domestic",
-              "slug_overlap:1",
-              "claim_coverage:+8"
-            ]
-          },
-          {
-            "slug": "passport-mrp-initial",
-            "score": 45.8,
-            "reasons": [
-              "intent:general_info+25",
-              "variant:channel=domestic",
-              "claim_coverage:+8"
-            ]
-          },
-          {
-            "slug": "police-passport-verification",
-            "score": 38.27,
-            "reasons": [
-              "intent:general_info+25",
-              "variant:channel=domestic"
-            ]
-          },
-          {
-            "slug": "epassport-new-application",
-            "score": 37.91,
-            "reasons": [
-              "intent:general_info+25",
-              "variant:channel=domestic"
-            ]
-          },
-          {
-            "slug": "police-passport-police-verification",
-            "score": 37.91,
-            "reasons": [
-              "intent:general_info+25",
-              "variant:channel=domestic"
-            ]
-          }
-        ],
-        "service_slug": "epassport-urgent-super-express",
-        "service_match_score": 64.38461538461539,
-        "service_match_method": "intent_aware_ranking"
-      },
-      "support_level": "PARTIALLY_SUPPORTED",
-      "confidence": "medium",
-      "clarifications_needed": [],
-      "conflicts": [],
-      "evidence_count": 1,
-      "summary": "Here is available structured information for Super Express (Urgent) e-Passport. This is not fully verified official guidance yet.",
-      "checklist": [],
-      "steps": [],
-      "fees": [],
-      "warnings": [
-        "Only some facts for this service are verified. Treat unverified parts as provisional.",
-        "Fee information is not yet verified. Confirm at the official office.",
-        "Official application URLs are not yet verified for this service."
-      ],
-      "practical_notes": [],
-      "official_urls": [],
-      "citations": [
-        {
-          "evidence_id": "5f3594d1-3143-40ef-bcbe-942df58b1b9b",
-          "source_title": "Urgent/Super Express instruction page last updated 3 June 2026; states any citizen may apply for Super Express domestica",
-          "source_url": "https://epassport.gov.bd/instructions/urgent-applications",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Last updated: 3 June 2026 ... Any citizen of Bangladesh can apply for Super Express delivery ... not available outside Bangladesh"
-        }
-      ]
-    },
-    "pass": false,
-    "checks": {
-      "service": false,
-      "intent": false,
-      "uncertainty": true
-    },
-    "reasons": [
-      "service mismatch: expected=epassport-fee-payment got=epassport-urgent-super-express",
-      "intent mismatch: expected=fee_inquiry got=general_info"
-    ],
-    "failure_class": "RETRIEVAL_BUG",
-    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
-  },
-  {
-    "id": "p046",
-    "query": "পুলিশ ভেরিফিকেশন SLA",
-    "language": "bn",
-    "category": "processing",
-    "expected": {
-      "intent": "processing_time",
-      "service": "police-passport-verification",
-      "expect": {
-        "uncertainty_ok": true
-      }
-    },
-    "actual": {
-      "language": "banglish",
-      "normalized_message": "পুলিশ ভেরিফিকেশন sla",
-      "intent": "processing_time",
-      "service_slug": "police-passport-police-verification",
-      "service_name": "Passport Police Verification",
-      "entities": {
-        "intents": {
-          "primary": "processing_time",
-          "secondary": [
-            "fee_inquiry"
-          ],
-          "legacy": "processing_time"
-        },
-        "intent_primary": "processing_time",
-        "intent_secondary": [
-          "fee_inquiry"
-        ],
-        "domain_entities": {
-          "domains": [],
-          "passport_type": null,
-          "action": "fee",
-          "speed": null,
-          "channel": "domestic",
-          "applicant": null,
-          "tokens": [
-            "sla",
-            "পুলিশ",
-            "ভেরিফিকেশন"
-          ]
-        },
-        "routing_candidates": [
-          {
-            "slug": "police-passport-police-verification",
-            "score": 143.67,
-            "reasons": [
-              "service_type:verification_timeline",
-              "alias_bn:পুলিশ ভেরিফিকেশন",
-              "variant:channel=domestic",
-              "boost:police_verification"
-            ]
-          },
-          {
-            "slug": "police-passport-verification",
-            "score": 82.23,
-            "reasons": [
-              "intent:processing_time+25",
-              "kw:sla",
-              "variant:channel=domestic",
-              "boost:police_verification"
-            ]
-          },
-          {
-            "slug": "epassport-fee-payment",
-            "score": 59.29,
-            "reasons": [
-              "variant:action=fee",
-              "variant:channel=domestic",
-              "claim_coverage:+32"
-            ]
-          },
-          {
-            "slug": "civil-birth-death-verify",
-            "score": 48.43,
-            "reasons": [
-              "service_type:verification_timeline"
-            ]
-          }
-        ],
-        "service_slug": "police-passport-police-verification",
-        "service_match_score": 143.66666666666666,
-        "service_match_method": "intent_aware_ranking"
-      },
-      "support_level": "PARTIALLY_SUPPORTED",
-      "confidence": "medium",
-      "clarifications_needed": [],
-      "conflicts": [],
-      "evidence_count": 1,
-      "summary": "Here is available structured information for Passport Police Verification. This is not fully verified official guidance yet. PRACTICAL notes (commonly reported, NOT official MUST NEED) are listed separately.",
-      "checklist": [],
-      "steps": [],
-      "fees": [],
-      "warnings": [
-        "Only some facts for this service are verified. Treat unverified parts as provisional.",
-        "Fee information is not yet verified. Confirm at the official office.",
-        "Official application URLs are not yet verified for this service."
-      ],
-      "practical_notes": [
-        "[PRACTICAL — not official MUST NEED] Mission pages note police verification timing can affect e-Passport processing duration."
-      ],
-      "official_urls": [],
-      "citations": [
-        {
-          "evidence_id": "9c64fed4-9a40-49ba-8b1f-1221049f1c7c",
-          "source_title": "e-Passport onboarding Step 1",
-          "source_url": "https://www.epassport.gov.bd/onboarding",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Select the police station nearest to your present address"
-        }
-      ]
-    },
-    "pass": false,
-    "checks": {
-      "service": false,
-      "intent": true,
-      "uncertainty": true
-    },
-    "reasons": [
-      "service mismatch: expected=police-passport-verification got=police-passport-police-verification"
-    ],
-    "failure_class": "RETRIEVAL_BUG",
-    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
-  },
-  {
-    "id": "p047",
-    "query": "passport police verification charter timeline",
-    "language": "en",
-    "category": "processing",
-    "expected": {
-      "intent": "processing_time",
-      "service": "police-passport-verification",
-      "expect": {
-        "uncertainty_ok": true
-      }
-    },
-    "actual": {
-      "language": "en",
-      "normalized_message": "passport police verification charter timeline",
-      "intent": "processing_time",
-      "service_slug": "police-passport-police-verification",
-      "service_name": "Passport Police Verification",
-      "entities": {
-        "intents": {
-          "primary": "processing_time",
-          "secondary": [
-            "procedure_inquiry"
-          ],
-          "legacy": "processing_time"
-        },
-        "intent_primary": "processing_time",
-        "intent_secondary": [
-          "procedure_inquiry"
-        ],
-        "domain_entities": {
-          "domains": [
-            "passport"
-          ],
-          "passport_type": null,
-          "action": null,
-          "speed": null,
-          "channel": "domestic",
-          "applicant": null,
-          "tokens": [
-            "charter",
-            "passport",
-            "police",
-            "timeline",
-            "verification"
-          ]
-        },
-        "routing_candidates": [
-          {
-            "slug": "police-passport-police-verification",
-            "score": 100.0,
-            "reasons": [
-              "phrase_hint"
-            ]
-          }
-        ],
-        "service_slug": "police-passport-police-verification",
-        "service_match_score": 100.0,
-        "service_match_method": "phrase_hint",
-        "agency_slug": "police"
-      },
-      "support_level": "PARTIALLY_SUPPORTED",
-      "confidence": "medium",
-      "clarifications_needed": [],
-      "conflicts": [],
-      "evidence_count": 1,
-      "summary": "Here is available structured information for Passport Police Verification. This is not fully verified official guidance yet. PRACTICAL notes (commonly reported, NOT official MUST NEED) are listed separately.",
-      "checklist": [],
-      "steps": [
-        {
-          "order": 1,
-          "title": "e-Passport onboarding Step 1",
-          "official_url": null,
-          "claim_linked": true
-        }
-      ],
-      "fees": [],
-      "warnings": [
-        "Only some facts for this service are verified. Treat unverified parts as provisional.",
-        "Fee information is not yet verified. Confirm at the official office.",
-        "Official application URLs are not yet verified for this service."
-      ],
-      "practical_notes": [
-        "[PRACTICAL — not official MUST NEED] Mission pages note police verification timing can affect e-Passport processing duration."
-      ],
-      "official_urls": [],
-      "citations": [
-        {
-          "evidence_id": "9c64fed4-9a40-49ba-8b1f-1221049f1c7c",
-          "source_title": "e-Passport onboarding Step 1",
-          "source_url": "https://www.epassport.gov.bd/onboarding",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Select the police station nearest to your present address"
-        }
-      ]
-    },
-    "pass": false,
-    "checks": {
-      "service": false,
-      "intent": true,
-      "uncertainty": true
-    },
-    "reasons": [
-      "service mismatch: expected=police-passport-verification got=police-passport-police-verification"
-    ],
-    "failure_class": "RETRIEVAL_BUG",
-    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
   },
   {
     "id": "p048",
@@ -2878,14 +1684,14 @@
           },
           {
             "slug": "passport-mrp-initial",
-            "score": 68.76,
+            "score": 56.76,
             "reasons": [
               "intent:application+25",
               "penalty:passport_type_mismatch",
               "variant:action=new",
               "variant:channel=domestic",
               "slug_overlap:1",
-              "claim_coverage:+24"
+              "claim_coverage:+12"
             ]
           },
           {
@@ -2899,12 +1705,12 @@
           },
           {
             "slug": "police-passport-police-verification",
-            "score": 45.64,
+            "score": 41.64,
             "reasons": [
               "variant:passport_type=e_passport",
               "variant:channel=domestic",
               "slug_overlap:1",
-              "claim_coverage:+8"
+              "claim_coverage:+4"
             ]
           },
           {
@@ -2976,17 +1782,21 @@
     "actual": {
       "language": "en",
       "normalized_message": "birth certificate everify for e passport mission",
-      "intent": "procedure_inquiry",
+      "intent": "general_info",
       "service_slug": "epassport-new-application",
       "service_name": "New e-Passport Application",
       "entities": {
         "intents": {
           "primary": "procedure_inquiry",
-          "secondary": [],
+          "secondary": [
+            "general_info"
+          ],
           "legacy": "procedure_inquiry"
         },
         "intent_primary": "procedure_inquiry",
-        "intent_secondary": [],
+        "intent_secondary": [
+          "general_info"
+        ],
         "domain_entities": {
           "domains": [
             "passport",
@@ -3055,7 +1865,7 @@
       "uncertainty": true
     },
     "reasons": [
-      "intent mismatch: expected=document_list got=procedure_inquiry"
+      "intent mismatch: expected=document_list got=general_info"
     ],
     "failure_class": "OTHER",
     "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
@@ -3083,19 +1893,13 @@
         "intents": {
           "primary": "application_url",
           "secondary": [
-            "renewal",
-            "application",
-            "reissue",
-            "procedure_inquiry"
+            "application"
           ],
           "legacy": "application_url"
         },
         "intent_primary": "application_url",
         "intent_secondary": [
-          "renewal",
-          "application",
-          "reissue",
-          "procedure_inquiry"
+          "application"
         ],
         "domain_entities": {
           "domains": [
@@ -3128,22 +1932,13 @@
             ]
           },
           {
-            "slug": "epassport-fee-payment",
-            "score": 66.2,
-            "reasons": [
-              "variant:passport_type=e_passport",
-              "variant:channel=domestic",
-              "claim_coverage:+32"
-            ]
-          },
-          {
             "slug": "police-passport-police-verification",
-            "score": 45.25,
+            "score": 41.25,
             "reasons": [
               "variant:passport_type=e_passport",
               "variant:channel=domestic",
               "slug_overlap:1",
-              "claim_coverage:+8"
+              "claim_coverage:+4"
             ]
           },
           {
@@ -3254,17 +2049,6 @@
             ]
           },
           {
-            "slug": "epassport-new-application",
-            "score": 66.0,
-            "reasons": [
-              "intent:document_list+20",
-              "variant:passport_type=e_passport",
-              "variant:channel=domestic",
-              "slug_overlap:1",
-              "claim_coverage:+8"
-            ]
-          },
-          {
             "slug": "epassport-enrollment-appointment",
             "score": 63.0,
             "reasons": [
@@ -3272,6 +2056,17 @@
               "variant:passport_type=e_passport",
               "variant:channel=domestic",
               "slug_overlap:1"
+            ]
+          },
+          {
+            "slug": "epassport-new-application",
+            "score": 62.0,
+            "reasons": [
+              "intent:document_list+20",
+              "variant:passport_type=e_passport",
+              "variant:channel=domestic",
+              "slug_overlap:1",
+              "claim_coverage:+4"
             ]
           },
           {
@@ -3332,123 +2127,6 @@
     },
     "reasons": [
       "intent mismatch: expected=procedure_inquiry got=document_list"
-    ],
-    "failure_class": "OTHER",
-    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
-  },
-  {
-    "id": "p055",
-    "query": "Can I get Super Express abroad?",
-    "language": "en",
-    "category": "super_express",
-    "expected": {
-      "intent": "eligibility_inquiry",
-      "service": "epassport-urgent-super-express",
-      "expect": {
-        "uncertainty_ok": true
-      }
-    },
-    "actual": {
-      "language": "en",
-      "normalized_message": "can i get super express abroad",
-      "intent": "document_list",
-      "service_slug": "epassport-urgent-super-express",
-      "service_name": "Super Express (Urgent) e-Passport",
-      "entities": {
-        "intents": {
-          "primary": "renewal",
-          "secondary": [
-            "procedure_inquiry"
-          ],
-          "legacy": "document_list"
-        },
-        "intent_primary": "renewal",
-        "intent_secondary": [
-          "procedure_inquiry"
-        ],
-        "domain_entities": {
-          "domains": [],
-          "passport_type": null,
-          "action": null,
-          "speed": "super_express",
-          "channel": "mission",
-          "applicant": "expatriate",
-          "tokens": [
-            "abroad",
-            "can",
-            "express",
-            "get",
-            "i",
-            "super"
-          ]
-        },
-        "routing_candidates": [
-          {
-            "slug": "epassport-urgent-super-express",
-            "score": 74.6,
-            "reasons": [
-              "alias_banglish:super express",
-              "kw:super express",
-              "variant:speed=super_express",
-              "slug_overlap:2"
-            ]
-          },
-          {
-            "slug": "passport-mrp-reissue",
-            "score": 38.4,
-            "reasons": [
-              "intent:renewal+25",
-              "claim_coverage:+8"
-            ]
-          },
-          {
-            "slug": "passport-renewal",
-            "score": 38.25,
-            "reasons": [
-              "intent:renewal+25",
-              "variant:channel=mission"
-            ]
-          }
-        ],
-        "service_slug": "epassport-urgent-super-express",
-        "service_match_score": 74.60377358490567,
-        "service_match_method": "intent_aware_ranking"
-      },
-      "support_level": "PARTIALLY_SUPPORTED",
-      "confidence": "medium",
-      "clarifications_needed": [],
-      "conflicts": [],
-      "evidence_count": 1,
-      "summary": "Here is available structured information for Super Express (Urgent) e-Passport. This is not fully verified official guidance yet.",
-      "checklist": [],
-      "steps": [],
-      "fees": [],
-      "warnings": [
-        "Only some facts for this service are verified. Treat unverified parts as provisional.",
-        "Fee information is not yet verified. Confirm at the official office.",
-        "Official application URLs are not yet verified for this service."
-      ],
-      "practical_notes": [],
-      "official_urls": [],
-      "citations": [
-        {
-          "evidence_id": "5f3594d1-3143-40ef-bcbe-942df58b1b9b",
-          "source_title": "Urgent/Super Express instruction page last updated 3 June 2026; states any citizen may apply for Super Express domestica",
-          "source_url": "https://epassport.gov.bd/instructions/urgent-applications",
-          "tier": 1,
-          "last_verified_at": "2026-08-24T21:22:37.453479",
-          "excerpt": "Last updated: 3 June 2026 ... Any citizen of Bangladesh can apply for Super Express delivery ... not available outside Bangladesh"
-        }
-      ]
-    },
-    "pass": false,
-    "checks": {
-      "service": true,
-      "intent": false,
-      "uncertainty": true
-    },
-    "reasons": [
-      "intent mismatch: expected=eligibility_inquiry got=document_list"
     ],
     "failure_class": "OTHER",
     "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."

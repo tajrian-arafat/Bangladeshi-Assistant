@@ -62,7 +62,14 @@ class ClaimRetrieval:
         intents: IntentResult,
     ) -> list[Fee]:
         await self.session.refresh(service, ["fees"])
-        if intents.primary not in {"fee_inquiry", "payment", "renewal", "reissue"} and "fee_inquiry" not in intents.secondary:
+        if intents.primary not in {
+            "fee_inquiry",
+            "payment",
+            "renewal",
+            "reissue",
+            "lost_document",
+            "procedure_inquiry",
+        } and "fee_inquiry" not in intents.secondary:
             return []
 
         fee_claim_ids = {

@@ -55,7 +55,55 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
     def bump(intent: str, weight: float) -> None:
         scored[intent] = scored.get(intent, 0.0) + weight
 
+    has_document_signal = any(
+        w in text
+        for w in [
+            "document",
+            "lagbe",
+            "lage",
+            "paper",
+            "required",
+            "what",
+            "ki ki",
+            "কী কী",
+            "কি কি",
+            "কাগজ",
+            "দলিল",
+            "প্রয়োজন",
+            "প্রয়োজন",
+            "লাগে",
+            "লাগবে",
+        ]
+    )
+    has_procedure_signal = any(
+        w in text
+        for w in [
+            "how",
+            "kivabe",
+            "procedure",
+            "step",
+            "process",
+            "korbo",
+            "apply",
+            "কিভাবে",
+            "কীভাবে",
+            "প্রক্রিয়া",
+            "প্রক্রিয়া",
+            "পদ্ধতি",
+            "ধাপ",
+            "কী করতে হবে",
+            "কি করতে হবে",
+            "করতে হয়",
+            "করতে হয়",
+            "verify",
+            "verification",
+            "everify",
+        ]
+    )
+
     # Fee inquiry — strong signal
+    if hits.get("fee") or re.search(r"\b(free|ফ্রি)\b", text):
+        bump("fee_inquiry", 40)
     if hits.get("fee") or re.search(r"\b\d{2,5}\s*(bdt|taka|টাকা)?\b", text):
         if hits.get("fee") or re.search(r"\b\d{2,5}\s*(bdt|taka)\b", text):
             bump("fee_inquiry", 40)
@@ -68,12 +116,19 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
 
     # Payment (distinct from fee amount questions)
     if hits.get("payment") and any(
-        w in text for w in ["kivabe", "how", "method", "gateway", "pay", "payment", "পেমেন্ট"]
+        w in text for w in ["kivabe", "how", "method", "gateway", "pay", "payment", "পেমেন্ট", "online"]
     ):
         bump("payment", 35)
+        if "fee" in text or "passport fee" in text:
+            bump("procedure_inquiry", 20)
 
-    # Application URL
-    if any(
+    # Application URL — prefer general_info for list/download URL availability questions
+    url_list_query = any(w in text for w in ["list", "download"]) and any(
+        w in text for w in ["url", "official", "website", "portal"]
+    )
+    if url_list_query and not any(w in text for w in ["apply", "application", "register", "onboarding"]):
+        bump("general_info", 35)
+    elif any(
         w in text
         for w in [
             "url",
@@ -99,19 +154,46 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
     # Office / location
     if any(
         w in text
-        for w in ["where", "kothay", "office", "location", "address", "কোথায়", "কোথায়", "অফিস", "ঠিকানা"]
+        for w in ["where", "kothay", "office", "location", "কোথায়", "কোথায়", "অফিস", "ঠিকানা"]
     ):
         bump("office_locator", 35)
+    elif "address" in text and not any(
+        w in text for w in ["eligible", "eligibility", "only for", "who can", "can i"]
+    ):
+        bump("office_locator", 20)
 
     # Eligibility
-    if any(w in text for w in ["eligible", "eligibility", "joggo", "qualify", "যোগ্য", "কে করতে পারে"]):
-        bump("eligibility", 35)
+    if any(
+        w in text
+        for w in [
+            "eligible",
+            "eligibility",
+            "joggo",
+            "qualify",
+            "যোগ্য",
+            "কে করতে পারে",
+            "ke pare",
+            "ke korte pare",
+            "korte pare",
+            "who can",
+            "can i get",
+        ]
+    ):
+        bump("eligibility", 45)
 
-    # Lost / damaged
+    # Lost / damaged — procedure beats document when how-to is present
     if hits.get("lost"):
-        bump("lost_document", 40)
+        if has_procedure_signal:
+            bump("procedure_inquiry", 42)
+            bump("lost_document", 30)
+        else:
+            bump("lost_document", 40)
     if any(w in text for w in ["হারালে", "হারিয়ে", "হারিয়ে", "harano", "hariye"]):
-        bump("lost_document", 38)
+        if has_procedure_signal:
+            bump("procedure_inquiry", 40)
+            bump("lost_document", 28)
+        else:
+            bump("lost_document", 38)
     if any(w in text for w in ["damaged", "damage", "torn", "ছিঁড়ে", "নষ্ট"]):
         bump("damaged_document", 35)
 
@@ -126,85 +208,83 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
             bump("reissue", 25)
 
     # Application (new)
-    if hits.get("application") or any(w in text for w in ["korte chai", "apply", "new passport", "new e-passport"]):
-        bump("application", 30)
+    if hits.get("application") or any(
+        w in text for w in ["korte chai", "apply", "new passport", "new e-passport"]
+    ):
+        if "ke pare" not in text and "ke korte pare" not in text and "who can" not in text:
+            bump("application", 30)
     if any(w in text for w in ["korte chai", "korbo", "korte hobe"]) and "status" not in text:
-        bump("application", 20)
+        if has_document_signal:
+            bump("document_list", 25)
+        elif "ke pare" not in text and "ke korte pare" not in text:
+            bump("application", 20)
     if re.search(r"\bnew\b", text) and any(
         w in text for w in ["korte chai", "korbo", "passport", "e-passport", "e passport"]
     ):
         bump("application", 40)
 
-    # Documents / requirements
-    if any(
-        w in text
-        for w in [
-            "document",
-            "lagbe",
-            "lage",
-            "paper",
-            "required",
-            "ki ki",
-            "কী কী",
-            "কি কি",
-            "কাগজ",
-            "দলিল",
-            "প্রয়োজন",
-            "প্রয়োজন",
-            "লাগে",
-            "লাগবে",
-        ]
-    ):
-        bump("document_list", 35)
+    # Documents / requirements — beats processing_time for first-time queries
+    if has_document_signal:
+        bump("document_list", 38)
 
     # Procedure / how-to
-    if any(
-        w in text
-        for w in [
-            "how",
-            "kivabe",
-            "procedure",
-            "step",
-            "process",
-            "korbo",
-            "apply",
-            "কিভাবে",
-            "কীভাবে",
-            "প্রক্রিয়া",
-            "প্রক্রিয়া",
-            "পদ্ধতি",
-            "ধাপ",
-            "কী করতে হবে",
-            "কি করতে হবে",
-            "করতে হয়",
-            "করতে হয়",
-        ]
-    ):
-        bump("procedure_inquiry", 25)
+    if has_procedure_signal:
+        bump("procedure_inquiry", 28)
 
-    # Processing time
-    if any(w in text for w in ["time", "days", "weeks", "koto din", "processing", "sla", "কত দিন"]):
-        bump("processing_time", 25)
+    # Processing time — only when explicit SLA/time question, not bare "first time"
+    time_markers = [
+        "processing time",
+        "how long",
+        "koto din",
+        "কত দিন",
+        "sla",
+        "weeks",
+        "months",
+    ]
+    if any(w in text for w in time_markers):
+        bump("processing_time", 30)
+    elif re.search(r"\b\d+\s*(day|days|week|weeks)\b", text):
+        bump("processing_time", 28)
+    elif "time" in text.split() and not has_document_signal:
+        # Avoid "first time" → processing_time unless other time context exists
+        if any(w in text for w in ["processing", "take", "long", "delivery"]):
+            bump("processing_time", 22)
 
-    # Comparison
+    # Education certificate verification (not BDRIS/police)
+    if any(w in text for w in ["ssc", "hsc", "transcript"]) and "verification" in text:
+        bump("general_info", 42)
     if any(w in text for w in ["difference", " vs ", "compare", "mrp naki", "naki e-passport"]):
         bump("comparison", 25)
 
-    # Verification / URL
-    if any(w in text for w in ["verify", "verification", "everify", "url", "website", "portal", "যাচাই", "লিংক"]):
-        bump("procedure_inquiry", 15)
-        bump("general_info", 10)
+    # Verification portal questions
+    if any(w in text for w in ["verify", "verification", "everify", "যাচাই"]):
+        if "everify" in text or "bdris" in text:
+            bump("general_info", 30)
+        bump("procedure_inquiry", 12)
+
+    # Online account registration flows
+    if "registration" in text and any(w in text for w in ["online", "account", "portal"]):
+        bump("procedure_inquiry", 30)
+        bump("application_url", 10)
+
+    # New application URL questions
+    if any(w in text for w in ["apply online", "application url", "onboarding", "আবেদন কোথায়", "কোথায়"]):
+        if any(w in text for w in ["passport", "e-passport", "epassport", "ই-পাসপোর্ট", "পাসপোর্ট"]):
+            bump("application_url", 40)
+            bump("application", 25)
 
     # Mission / abroad context
     if hits.get("mission"):
         bump("renewal", 10)
         bump("procedure_inquiry", 10)
 
-    # Police verification
-    if hits.get("police_verification"):
-        bump("procedure_inquiry", 25)
-        bump("eligibility", 15)
-        bump("processing_time", 20)
+    # Police verification SLA / charter
+    if any(w in text for w in ["police verification", "police verif", "pv", "পুলিশ ভেরিফিকেশন"]):
+        if any(w in text for w in ["sla", "charter", "timeline", "processing time", "koto din"]):
+            bump("processing_time", 45)
+            bump("procedure_inquiry", 10)
+        else:
+            bump("procedure_inquiry", 25)
 
     # Clarification overrides
     if clarifications.get("passport_type") == "mrp":
@@ -212,6 +292,12 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
     if clarifications.get("application_type") in {"renewal", "reissue"}:
         bump("renewal", 15)
         bump("reissue", 15)
+    if clarifications.get("correction_type") == "dob":
+        bump("fee_inquiry", 10)
+        bump("correction", 10)
+    if clarifications.get("correction_type") == "name":
+        bump("fee_inquiry", 10)
+        bump("correction", 10)
 
     if not scored:
         # Domain keyword fallback
@@ -222,6 +308,14 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
     ranked = sorted(scored.items(), key=lambda kv: kv[1], reverse=True)
     primary = ranked[0][0]
     secondary = [intent for intent, score in ranked[1:] if score >= ranked[0][1] * 0.6]
+
+    # Multi-intent: fee + documents commonly co-occur
+    if "fee_inquiry" in scored and "document_list" in scored:
+        if "document_list" not in [primary, *secondary] and scored["document_list"] >= 30:
+            secondary.append("document_list")
+        if primary != "fee_inquiry" and scored.get("fee_inquiry", 0) >= 30:
+            secondary.append("fee_inquiry")
+
     return IntentResult(primary=primary, secondary=secondary)
 
 

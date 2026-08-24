@@ -24,6 +24,7 @@ os.chdir(BACKEND_DIR)
 
 from app.ai.orchestrator import Orchestrator  # noqa: E402
 from app.ai.routing.claim_retrieval import ClaimRetrieval  # noqa: E402
+from app.ai.routing.intent_canonical import intent_matches as canonical_intent_matches  # noqa: E402
 from app.ai.routing.intent_classifier import IntentResult, classify_intents  # noqa: E402
 from app.core.database import get_session_factory  # noqa: E402
 from app.domain.models.claims import Claim  # noqa: E402
@@ -36,19 +37,9 @@ PREV_BATCH02_SUMMARY = REPO_ROOT / "data" / "evaluation" / "batch-02a-passport" 
 
 
 def intent_matches(expected: str, actual_primary: str, actual_legacy: str) -> bool:
-    if actual_primary == expected or actual_legacy == expected:
-        return True
-    accept = {
-        "application": {"application", "procedure_inquiry", "application_url"},
-        "payment": {"payment", "fee_inquiry", "procedure_inquiry"},
-        "appointment": {"appointment", "procedure_inquiry", "office_locator"},
-        "status": {"status", "procedure_inquiry"},
-        "renewal": {"renewal", "reissue", "document_list"},
-        "reissue": {"reissue", "renewal", "document_list"},
-        "lost_document": {"lost_document", "document_list", "procedure_inquiry"},
-        "correction": {"correction", "document_list"},
-    }
-    return expected in accept.get(actual_primary, {actual_primary})
+    return canonical_intent_matches(expected, actual_legacy) or canonical_intent_matches(
+        expected, actual_primary
+    )
 
 
 async def run_case(session_factory, case: dict) -> dict[str, Any]:
@@ -65,10 +56,10 @@ async def run_case(session_factory, case: dict) -> dict[str, Any]:
         if case.get("service_expected") and not service_ok:
             reasons.append(f"service: expected one of {acceptable}, got {svc}")
 
-        intent_ok = intent_matches(
+        intent_ok = canonical_intent_matches(
             case["intent_expected"],
-            intents.primary,
-            intents.legacy_primary(),
+            ctx.intent,
+            secondary=(ctx.intents.secondary if ctx.intents else None),
         )
         if not intent_ok:
             reasons.append(

@@ -330,17 +330,102 @@ class ServiceRouter:
             score += overlap * 4
             reasons.append(f"slug_overlap:{overlap}")
 
-        # Claim coverage (only after semantic compatibility)
+        # Claim coverage (only after semantic compatibility) — capped secondary signal
         if claim_count and score > 0:
-            coverage_boost = min(claim_count * 8, 32)
+            coverage_boost = min(claim_count * 4, 16)
             score += coverage_boost
             reasons.append(f"claim_coverage:+{coverage_boost}")
+
+        # Cross-domain fee hijack guard: fee intent without domain must not win on claims alone
+        if intents.primary == "fee_inquiry" and not entities.domains:
+            if profile.get("domain") == "passport" and "birth" in text:
+                score -= 60
+                reasons.append("penalty:passport_fee_without_passport_domain")
+            if profile.get("service_type") == "fee_payment" and profile.get("domain") != "identity":
+                if any(t in text for t in ("birth", "brth", "registration", "registraton", "jonmo", "nibondhon")):
+                    score -= 50
+                    reasons.append("penalty:fee_payment_domain_mismatch")
+
+        # Fact-check / validation queries about NID correction fees
+        if "is this" in text or "information correct" in text or "always" in text:
+            if service.slug == "nid-correction":
+                score += 45
+                reasons.append("boost:nid_correction_validation")
+            if service.slug == "nid-fee-calculator":
+                score -= 35
+                reasons.append("penalty:calculator_on_correction_validation")
+        if entities.action == "correction" and "nid" in text and intents.primary == "fee_inquiry":
+            if service.slug == "nid-correction":
+                score += 30
+                reasons.append("boost:nid_correction_action")
+            if service.slug == "nid-fee-calculator" and ("correct" in text or "always" in text):
+                score -= 25
+                reasons.append("penalty:calculator_vs_correction_fee")
+
+        # Religion disambiguation for registrar lists
+        if "muslim" in text and "hindu" in service.slug:
+            score -= 80
+            reasons.append("penalty:religion_mismatch")
+        if "hindu" in text and "muslim" in service.slug:
+            score -= 80
+            reasons.append("penalty:religion_mismatch")
+        if "muslim" in text and "muslim" in service.slug:
+            score += 30
+            reasons.append("boost:religion_match")
+        if "hindu" in text and "hindu" in service.slug:
+            score += 30
+            reasons.append("boost:religion_match")
+
+        # Fee matrix / speed tier queries should hit fee payment service not urgent-only service
+        if intents.primary == "fee_inquiry":
+            if service.slug == "epassport-fee-payment" and entities.speed:
+                score += 25
+                reasons.append("boost:fee_payment_speed_tier")
+            if service.slug == "epassport-urgent-super-express" and entities.speed in {
+                "express",
+                "super_express",
+            }:
+                score -= 35
+                reasons.append("penalty:urgent_service_for_fee_matrix")
+
+        # Mission fee questions stay on fee payment
+        if intents.primary == "fee_inquiry" and entities.channel == "mission":
+            if service.slug == "epassport-fee-payment":
+                score += 35
+                reasons.append("boost:mission_fee_payment")
+            if service.slug == "passport-renewal":
+                score -= 40
+                reasons.append("penalty:renewal_for_fee_query")
+        if intents.primary == "fee_inquiry" and any(w in text for w in ("extra", "10%", "surcharge", "abudhabi", "abu dhabi")):
+            if service.slug == "epassport-fee-payment":
+                score += 30
+                reasons.append("boost:mission_surcharge_fee")
+            if service.slug == "passport-renewal":
+                score -= 35
+                reasons.append("penalty:renewal_for_surcharge_fee")
+        if intents.primary == "office_locator" and "character" in text and "certificate" in text:
+            if service.slug == "local-character-certificate":
+                score += 45
+                reasons.append("boost:character_certificate")
+            if "passport" in service.slug or "epassport" in service.slug:
+                score -= 40
+                reasons.append("penalty:passport_not_character_cert")
 
         # Police verification context overrides renewal/reissue affinity
         if _query_mentions_police_verification(text):
             if "police" in service.slug and "passport" in service.slug:
                 score += 35
                 reasons.append("boost:police_verification")
+            if service.slug == "police-passport-verification" and any(
+                w in text for w in ("sla", "charter", "timeline", "processing")
+            ):
+                score += 40
+                reasons.append("boost:pv_sla_service")
+            if service.slug == "police-passport-police-verification" and any(
+                w in text for w in ("sla", "charter", "timeline")
+            ):
+                score -= 30
+                reasons.append("penalty:pv_passport_for_sla_query")
             if service.slug in {"passport-renewal", "passport-mrp-reissue", "passport-mrp-initial"}:
                 score -= 40
                 reasons.append("penalty:pv_over_renewal")

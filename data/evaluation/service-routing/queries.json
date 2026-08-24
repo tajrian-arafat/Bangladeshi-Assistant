@@ -188,5 +188,155 @@
     "service_expected": "tin-registration",
     "acceptable_services": ["tin-registration"],
     "expected_claim_types": ["procedure_step", "application_url"]
+  },
+  {
+    "id": "sr-x01",
+    "query": "death registration kivabe korbo?",
+    "language": "banglish",
+    "domain": "civil_registration",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "civil-death-registration",
+    "acceptable_services": ["civil-death-registration"],
+    "expected_claim_types": ["procedure_step"]
+  },
+  {
+    "id": "sr-x02",
+    "query": "মৃত্যু নিবন্ধন ফি কত?",
+    "language": "bn",
+    "domain": "civil_registration",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "civil-death-registration",
+    "acceptable_services": ["civil-death-registration"],
+    "expected_claim_types": ["fee"]
+  },
+  {
+    "id": "sr-x03",
+    "query": "brta driving licence renewal fee",
+    "language": "en",
+    "domain": "transport",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "driving-licence-renewal",
+    "acceptable_services": ["driving-licence-renewal"],
+    "expected_claim_types": ["fee"]
+  },
+  {
+    "id": "sr-x04",
+    "query": "brta learner licence apply",
+    "language": "en",
+    "domain": "transport",
+    "intent_expected": "application",
+    "service_expected": "brta-learner-driving-license",
+    "acceptable_services": ["brta-learner-driving-license", "driving-licence-renewal"],
+    "expected_claim_types": ["procedure_step", "application_url"]
+  },
+  {
+    "id": "sr-x05",
+    "query": "e-tin certificate download",
+    "language": "en",
+    "domain": "tax",
+    "intent_expected": "document_list",
+    "service_expected": "tin-registration",
+    "acceptable_services": ["tin-registration"],
+    "expected_claim_types": ["application_url", "other"]
+  },
+  {
+    "id": "sr-x06",
+    "query": "birth registration correction fee",
+    "language": "en",
+    "domain": "civil_registration",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "civil-birth-registration-correction",
+    "acceptable_services": ["civil-birth-registration-correction"],
+    "expected_claim_types": ["fee"]
+  },
+  {
+    "id": "sr-x07",
+    "query": "NID online account registration",
+    "language": "en",
+    "domain": "identity",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "nid-online-account-registration",
+    "acceptable_services": ["nid-online-account-registration"],
+    "expected_claim_types": ["procedure_step"]
+  },
+  {
+    "id": "sr-x08",
+    "query": "new voter registration documents",
+    "language": "en",
+    "domain": "identity",
+    "intent_expected": "document_list",
+    "service_expected": "nid-new-voter-registration",
+    "acceptable_services": ["nid-new-voter-registration"],
+    "expected_claim_types": ["document"]
+  },
+  {
+    "id": "sr-x09",
+    "query": "character certificate where locally",
+    "language": "en",
+    "domain": "civil_registration",
+    "intent_expected": "office_locator",
+    "service_expected": "local-character-certificate",
+    "acceptable_services": ["local-character-certificate"],
+    "expected_claim_types": ["office"]
+  },
+  {
+    "id": "sr-x10",
+    "query": "muslim marriage registrar list",
+    "language": "en",
+    "domain": "civil_registration",
+    "intent_expected": "general_info",
+    "service_expected": "civil-marriage-registrar-muslim-list",
+    "acceptable_services": ["civil-marriage-registrar-muslim-list"],
+    "expected_claim_types": ["other"]
+  },
+  {
+    "id": "sr-x11",
+    "query": "passport police verification timeline",
+    "language": "en",
+    "domain": "passport",
+    "intent_expected": "processing_time",
+    "service_expected": "police-passport-verification",
+    "acceptable_services": ["police-passport-verification", "police-passport-police-verification"],
+    "expected_claim_types": ["processing_time", "procedure_step"]
+  },
+  {
+    "id": "sr-x12",
+    "query": "epassport vs mrp difference",
+    "language": "en",
+    "domain": "passport",
+    "intent_expected": "general_info",
+    "service_expected": "epassport-new-application",
+    "acceptable_services": ["epassport-new-application", "passport-mrp-initial", "passport-renewal", "epassport-fee-payment"],
+    "expected_claim_types": ["other", "availability"]
+  },
+  {
+    "id": "sr-x13",
+    "query": "SSC certificate verification",
+    "language": "en",
+    "domain": "education",
+    "intent_expected": "general_info",
+    "service_expected": "education-ssc-certificate",
+    "acceptable_services": ["education-ssc-certificate"],
+    "expected_claim_types": ["other"]
+  },
+  {
+    "id": "sr-x14",
+    "query": "disability allowance application",
+    "language": "en",
+    "domain": "social_protection",
+    "intent_expected": "application",
+    "service_expected": "snp-allowances-for-the-financially-insolvent-disabled",
+    "acceptable_services": ["snp-allowances-for-the-financially-insolvent-disabled", "social-allowance-online-application"],
+    "expected_claim_types": ["procedure_step", "document"]
+  },
+  {
+    "id": "sr-x15",
+    "query": "land mutation fee koto",
+    "language": "banglish",
+    "domain": "land",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "land-mutation-apply",
+    "acceptable_services": ["land-mutation-apply", "land-mutation-dcr"],
+    "expected_claim_types": ["fee"]
   }
 ]

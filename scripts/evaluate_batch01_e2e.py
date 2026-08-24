@@ -29,6 +29,7 @@ sys.path.insert(0, str(BACKEND_DIR))
 os.chdir(BACKEND_DIR)
 
 from app.ai.orchestrator import Orchestrator  # noqa: E402
+from app.ai.routing.intent_canonical import intent_matches as canonical_intent_matches  # noqa: E402
 from app.core.database import get_session_factory  # noqa: E402
 from app.schemas.chat import ChatRequest  # noqa: E402
 
@@ -126,9 +127,15 @@ def evaluate_case(case: dict, actual: dict) -> dict[str, Any]:
 
     # Intent
     if case.get("intent_expected"):
-        accept = set(expect.get("intent_accept") or [case["intent_expected"]])
-        accept.add(case["intent_expected"])
-        ok = intent in accept
+        accept_list = list(expect.get("intent_accept") or [])
+        accept_list.append(case["intent_expected"])
+        secondary = (actual.get("entities") or {}).get("intent_secondary") or []
+        ok = canonical_intent_matches(
+            case["intent_expected"],
+            intent or "",
+            accept=set(accept_list),
+            secondary=secondary,
+        )
         if not ok and case["intent_expected"] in {"document_list", "procedure_inquiry", "general_info"}:
             if intent in {"document_list", "procedure_inquiry", "general_info"} and case.get("category") in {
                 "vague",

@@ -18,7 +18,9 @@ from app.ai.pipeline.intent import classify_intent, classify_intents
 from app.ai.pipeline.language import detect_language
 from app.ai.pipeline.safety import validate_safety
 from app.ai.routing.claim_retrieval import ClaimRetrieval
+from app.ai.routing.intent_canonical import public_intent
 from app.ai.routing.intent_classifier import IntentResult
+from app.ai.routing.query_sanitize import sanitize_for_routing
 from app.application.engines.checklist_engine import ChecklistEngine
 from app.application.engines.procedure_engine import ProcedureEngine
 from app.application.knowledge.claim_review_service import ClaimReviewService
@@ -75,15 +77,23 @@ class Orchestrator:
         conv_ctx = conversation_context or ConversationContext()
 
         ctx.language = detect_language(request.message, request.language_preference)
-        ctx.normalized_message = normalize_banglish(request.message)
-        ctx.intents = classify_intents(ctx.normalized_message, request.clarifications)
-        ctx.intent = ctx.intents.legacy_primary()
-        # Also classify on raw message for Bangla script intents
-        if ctx.intent == "general_info":
-            raw_intents = classify_intents(request.message, request.clarifications)
-            if raw_intents.primary != "general_info":
-                ctx.intents = raw_intents
-                ctx.intent = raw_intents.legacy_primary()
+        routing_message = sanitize_for_routing(request.message)
+        ctx.normalized_message = normalize_banglish(routing_message)
+        merged_clarifications = dict(request.clarifications or {})
+        merged_clarifications.update(self._infer_clarifications(ctx.normalized_message, request.message))
+        ctx.intents = classify_intents(ctx.normalized_message, merged_clarifications)
+        # Bangla script may carry intents lost during romanization
+        if ctx.intents.primary in {"general_info", "document_list"}:
+            raw_intents = classify_intents(routing_message, merged_clarifications)
+            if raw_intents.primary not in {"general_info"} or ctx.intents.primary == "general_info":
+                if raw_intents.all_intents != ctx.intents.all_intents:
+                    ctx.intents = raw_intents
+        ctx.intent = public_intent(ctx.intents.primary, ctx.intents.secondary)
+        if merged_clarifications.get("service") == "epassport-fee-payment" and merged_clarifications.get(
+            "speed"
+        ):
+            ctx.intents = IntentResult(primary="fee_inquiry", secondary=["payment"])
+            ctx.intent = "fee_inquiry"
         if conv_ctx.intent and ctx.intent == "general_info":
             ctx.intent = conv_ctx.intent
             ctx.intents = IntentResult(primary=conv_ctx.intent)
@@ -92,15 +102,22 @@ class Orchestrator:
             self.session,
             ctx.normalized_message,
             intents=ctx.intents,
-            clarifications=request.clarifications,
+            clarifications=merged_clarifications,
         )
         if not ctx.entities.get("service") and not ctx.entities.get("routing_clarification"):
             ctx.entities = await extract_entities(
                 self.session,
-                request.message.lower(),
+                routing_message,
                 intents=ctx.intents,
-                clarifications=request.clarifications,
+                clarifications=merged_clarifications,
             )
+
+        if merged_clarifications.get("service"):
+            svc = await self._service_by_slug(str(merged_clarifications["service"]))
+            if svc:
+                ctx.entities["service"] = svc
+                ctx.entities["service_slug"] = svc.slug
+                ctx.entities["service_match_method"] = "clarification_context"
 
         if not ctx.entities.get("service") and conv_ctx.service_slug:
             if ConversationContextService.is_follow_up_message(request.message):
@@ -110,14 +127,7 @@ class Orchestrator:
                     ctx.entities["service_slug"] = svc.slug
                     ctx.entities["service_match_method"] = "conversation_context"
 
-        clarifications = request.clarifications or {}
-        if not ctx.entities.get("service") and clarifications.get("service"):
-            svc = await self._service_by_slug(str(clarifications["service"]))
-            if svc:
-                ctx.entities["service"] = svc
-                ctx.entities["service_slug"] = svc.slug
-                ctx.entities["service_match_method"] = "clarification_context"
-
+        clarifications = merged_clarifications
         ctx.service = ctx.entities.get("service")
         ctx.clarifications_needed = self._clarifications_needed(ctx, request)
         routing_clarification = ctx.entities.get("routing_clarification")
@@ -175,11 +185,28 @@ class Orchestrator:
         result = await self.session.execute(select(Service).where(Service.slug == slug))
         return result.scalar_one_or_none()
 
+    def _infer_clarifications(self, normalized_message: str, raw_message: str) -> dict[str, str]:
+        """Infer clarification slots already present in the user message."""
+        msg = f"{raw_message} {normalized_message}".lower()
+        inferred: dict[str, str] = {}
+        if any(w in msg for w in ("dob", "date of birth", "birth date", "জন্ম তারিখ", "tarikh")):
+            inferred["correction_type"] = "dob"
+        elif any(w in msg for w in ("name", "naam", "নাম", "name correction", "নাম ভুল")):
+            inferred["correction_type"] = "name"
+        if "super express" in msg or ("super" in msg and "express" in msg):
+            inferred["speed"] = "super_express"
+        elif "express" in msg or "tier" in msg:
+            inferred["speed"] = "express"
+        elif "regular" in msg:
+            inferred["speed"] = "regular"
+        return inferred
+
     def _clarifications_needed(self, ctx: PipelineContext, request: ChatRequest) -> list[str]:
         if not ctx.service:
             return []
         slug = ctx.service.slug
-        clarifications = request.clarifications or {}
+        clarifications = dict(request.clarifications or {})
+        clarifications.update(self._infer_clarifications(ctx.normalized_message, ctx.message))
         if slug in {"passport-renewal", "passport-reissue"}:
             if "passport_type" not in clarifications:
                 return ["Is this an e-passport or MRP passport?"]
@@ -254,6 +281,8 @@ class Orchestrator:
             "payment",
             "renewal",
             "reissue",
+            "lost_document",
+            "procedure_inquiry",
         } or "fee_inquiry" in intents.secondary
 
         checklist = []
@@ -273,18 +302,34 @@ class Orchestrator:
         fees: list[FeeResponse] = []
         if include_fees:
             intent_fees = await claim_retrieval.fees_for_intent(ctx.service, intents)
+            correction_type = clarifications.get("correction_type")
             for fee in intent_fees:
+                label = fee.label_en or ""
+                label_l = label.lower()
+                if ctx.service.slug == "civil-birth-registration-correction" and correction_type:
+                    if correction_type == "dob" and "dob" not in label_l and "date-of-birth" not in label_l:
+                        continue
+                    if correction_type == "name" and "dob" in label_l:
+                        continue
+                if ctx.service.slug == "epassport-fee-payment" and clarifications.get("speed"):
+                    speed = clarifications["speed"]
+                    if speed == "express" and "express" not in label_l:
+                        continue
+                    if speed == "super_express" and "super express" not in label_l:
+                        continue
+                    if speed == "regular" and "regular" not in label_l:
+                        continue
                 fee_mode = None
-                label = fee.label_en
+                display_label = label
                 if fee.amount == "USE_OFFICIAL_CALCULATOR":
                     fee_mode = "calculator"
-                    label = fee.label_en or "Use official fee calculator"
+                    display_label = label or "Use official fee calculator"
                 fees.append(
                     FeeResponse(
                         amount=fee.amount,
                         currency=fee.currency,
                         evidence_id=str(fee.claim_id),
-                        label=label,
+                        label=display_label,
                         fee_mode=fee_mode,
                     )
                 )

@@ -40,6 +40,12 @@ FOLLOW_UP_TOKENS = {
     "reissue",
     "motorcycle",
     "car",
+    "express",
+    "regular",
+    "super",
+    "tier",
+    "urgent",
+    "follow",
 }
 
 

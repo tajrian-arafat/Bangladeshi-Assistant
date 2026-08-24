@@ -2,9 +2,9 @@
   "schema": "bda.routing.capability_aliases/1.0",
   "capability_groups": {
     "fee": {
-      "synonyms_en": ["fee", "fees", "charge", "cost", "price", "how much", "amount"],
-      "synonyms_bn": ["ফি", "খরচ", "টাকা", "মূল্য", "চার্জ"],
-      "synonyms_banglish": ["koto", "koto taka", "koto lage", "taka", "bdt", "fee"]
+      "synonyms_en": ["fee", "fees", "charge", "cost", "price", "how much", "amount", "free"],
+      "synonyms_bn": ["ফি", "খরচ", "টাকা", "মূল্য", "চার্জ", "ফ্রি"],
+      "synonyms_banglish": ["koto", "koto taka", "koto lage", "taka", "bdt", "fee", "free"]
     },
     "payment": {
       "synonyms_en": ["payment", "pay", "pay online", "gateway", "online payment"],
@@ -72,7 +72,7 @@
       "tokens": ["passport", "epassport", "e-passport", "e passport", "mrp", "পাসপোর্ট", "ই-পাসপোর্ট", "ই পাসপোর্ট"]
     },
     "civil_registration": {
-      "tokens": ["birth", "death", "bdris", "everify", "marriage", "জন্ম", "মৃত্যু", "নিবন্ধন", "বিবাহ"]
+      "tokens": ["birth", "death", "bdris", "everify", "marriage", "জন্ম", "মৃত্যু", "নিবন্ধন", "বিবাহ", "brth", "registraton", "registration", "registrar", "muslim", "hindu", "character certificate"]
     },
     "identity": {
       "tokens": ["nid", "national id", "voter", "এনআইডি", "voter slip"]
@@ -82,6 +82,15 @@
     },
     "tax": {
       "tokens": ["tin", "tax", "e-tin", "etin"]
+    },
+    "land": {
+      "tokens": ["land", "khatian", "mutation", "deed", "dlrms", "জমি", "খতিয়ান"]
+    },
+    "social_protection": {
+      "tokens": ["allowance", "disability", "social protection", "snp", "widow", "lactating"]
+    },
+    "education": {
+      "tokens": ["ssc", "hsc", "education", "school", "certificate", "transcript", "admission"]
     }
   }
 }
