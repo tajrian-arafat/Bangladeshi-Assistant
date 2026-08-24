@@ -99,10 +99,24 @@ def normalize_banglish(message: str) -> str:
     text = message.lower().strip()
     tokens = re.findall(r"[\u0980-\u09FF]+|[a-z0-9']+", text)
     normalized: list[str] = []
-    for token in tokens:
+    i = 0
+    while i < len(tokens):
+        token = tokens[i]
+        # "koto din" = how many days (processing time), not fee inquiry
+        if token == "koto" and i + 1 < len(tokens) and tokens[i + 1] in {
+            "din",
+            "day",
+            "days",
+            "somoy",
+            "time",
+        }:
+            normalized.extend(["processing", "time"])
+            i += 2
+            continue
         mapped = DOMAIN_MAP.get(token, token)
         if mapped:
             normalized.append(mapped)
+        i += 1
     if not normalized:
         return text
     return " ".join(normalized)

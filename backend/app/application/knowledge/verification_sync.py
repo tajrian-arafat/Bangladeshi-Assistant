@@ -30,6 +30,10 @@ def verification_dir(repo_root: Path, batch_id: str) -> Path | None:
         candidates.append(repo_root / "data" / "research" / "verification" / "batch-01")
     if batch_id.startswith("batch-02a"):
         candidates.append(repo_root / "data" / "research" / "verification" / "batch-02a-passport")
+    if batch_id.startswith("batch-02b"):
+        candidates.append(
+            repo_root / "data" / "research" / "verification" / "batch-02b-police-immigration"
+        )
     for path in candidates:
         if (path / "claims_verification.json").exists():
             return path

@@ -70,6 +70,54 @@ MVP_SEED_SLUGS = {
     "tin-registration",
 }
 
+# Batch 2B: never publish as authoritative facts
+BATCH_02B_BLOCKLIST_TOKENS = (
+    "c-offline-fee-500-chalan",
+    "c-gd-all-types-expansion",
+    "c-gd-not-all-types-historically",
+    "c-visa-mrv-fees-page",
+    "c-practical-fee-confusion",
+    "c-visa-types-freshness-2022",
+)
+
+
+def _claim_applicability(claim: Claim) -> str | None:
+    sv = claim.structured_value or {}
+    if isinstance(sv.get("applicability"), str):
+        return sv["applicability"]
+    cond = sv.get("condition")
+    if isinstance(cond, dict):
+        if isinstance(cond.get("channel"), str):
+            return cond["channel"]
+        if isinstance(cond.get("applicability"), str):
+            return cond["applicability"]
+    return None
+
+
+def _has_material_unresolved_conflict(claim: Claim, claims: list[Claim]) -> bool:
+    """True when an unresolved CONFLICTING sibling blocks authoritative publish."""
+    rk = claim.research_claim_key or ""
+    if rk == "police-clearance-certificate::c-online-fee-1500":
+        # Channel-specific online fee — offline CONFLICTING row must not block
+        return False
+    for other in claims:
+        if other.id == claim.id:
+            continue
+        if other.pipeline_status != ClaimPipelineStatus.CONFLICTING.value:
+            continue
+        if other.claim_type != claim.claim_type:
+            continue
+        other_rk = other.research_claim_key or ""
+        if rk == "police-clearance-certificate::c-online-fee-1500" and "offline-fee" in other_rk:
+            continue
+        mine = _claim_applicability(claim)
+        theirs = _claim_applicability(other)
+        if mine and theirs and mine != theirs:
+            # Channel-specific fee/document rows do not block each other
+            continue
+        return True
+    return False
+
 
 @dataclass
 class PublishReport:
@@ -134,6 +182,9 @@ class KnowledgePublisher:
             self.staging_root / batch_id,
             self.staging_root / "batch-01" if batch_id.startswith("batch-01") else None,
             self.staging_root / "batch-02a-passport" if batch_id.startswith("batch-02a") else None,
+            self.staging_root / "batch-02b-police-immigration"
+            if batch_id.startswith("batch-02b")
+            else None,
         ]
         for c in candidates:
             if c and c.exists():
@@ -387,11 +438,17 @@ class KnowledgePublisher:
             structured_value = None
             if fee_rows:
                 structured_value = fee_rows[0] if len(fee_rows) == 1 else {"fee_tiers": fee_rows}
-            elif verification and verification.get("condition"):
-                structured_value = {
-                    "condition": verification["condition"],
-                    "applicability": verification.get("applicability"),
-                }
+            elif c.get("structured_value"):
+                structured_value = dict(c["structured_value"])
+            if verification:
+                if verification.get("applicability"):
+                    base = dict(structured_value or {})
+                    base["applicability"] = verification["applicability"]
+                    structured_value = base
+                if verification.get("condition") and not fee_rows:
+                    base = dict(structured_value or {})
+                    base["condition"] = verification["condition"]
+                    structured_value = base
 
             if self.dry_run:
                 report.synced_claims += 1
@@ -712,6 +769,7 @@ class KnowledgePublisher:
                         "c-mission-weff-surcharge",
                         "c-mrp-fee-page-historical",
                         "c-abudhabi-epassport-page-empty",
+                        *BATCH_02B_BLOCKLIST_TOKENS,
                     )
                 ):
                     report.skipped += 1
@@ -787,12 +845,7 @@ class KnowledgePublisher:
                 tiers, evidence_dicts, provenance_ok, hash_ok, retrieved = await self._claim_context(
                     claim
                 )
-                has_conflict = any(
-                    c.pipeline_status == ClaimPipelineStatus.CONFLICTING.value
-                    and c.claim_type == claim.claim_type
-                    for c in claims
-                    if c.id != claim.id
-                )
+                has_conflict = _has_material_unresolved_conflict(claim, claims)
                 gate = evaluate_official_publication(
                     pipeline_status=claim.pipeline_status,
                     information_class=claim.information_class,

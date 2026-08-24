@@ -39,6 +39,61 @@ from app.schemas.chat import (
 )
 
 
+def _detect_pcc_fee_channel(message: str) -> str | None:
+    msg = message.lower()
+    if any(
+        w in msg
+        for w in (
+            "online pcc",
+            "online clearance",
+            "pcc.police",
+            "pcc portal",
+            "online police clearance",
+            "অনলাইন",
+            "অনলাইনে",
+        )
+    ):
+        return "online_pcc"
+    if any(
+        w in msg
+        for w in (
+            "offline",
+            "paper",
+            "chalan",
+            "challan",
+            "superintendent",
+            "sp office",
+            "commissioner",
+        )
+    ):
+        return "offline_paper_pcc_channel"
+    return None
+
+
+def _query_asks_gd_all_types(message: str) -> bool:
+    msg = message.lower()
+    return any(
+        w in msg
+        for w in (
+            "shob dhoron",
+            "all types",
+            "every type",
+            "সব ধরন",
+            "সকল ধরন",
+            "all gd",
+            "nationwide",
+        )
+    )
+
+
+def _fee_is_channel_specific(fee, channel: str) -> bool:
+    label = (fee.label_en or "").lower()
+    notes = (fee.notes_en or "").lower()
+    if channel == "online_pcc":
+        return "online" in label or "online" in notes or fee.amount == "1500"
+    return False
+
+
 @dataclass
 class PipelineContext:
     message: str
@@ -351,13 +406,56 @@ class Orchestrator:
 
         seed_fees_hidden = [f for f in ctx.service.fees if f.claim_id is None]
         warnings = list(ctx.conflicts)
+        msg_blob = f"{ctx.message} {ctx.normalized_message}".lower()
+        pcc_channel = (
+            _detect_pcc_fee_channel(msg_blob) if ctx.service.slug == "police-clearance-certificate" else None
+        )
 
         if ctx.support_level == AnswerSupportLevel.CONFLICTED:
-            warnings.append(
-                "Conflicting information exists for this service. "
-                "Authoritative fees/documents are withheld until review resolves the conflict."
-            )
-            fees = []
+            if ctx.service.slug == "police-clearance-certificate" and pcc_channel == "online_pcc":
+                channel_fees = [
+                    f
+                    for f in ctx.service.fees
+                    if f.claim_id is not None and _fee_is_channel_specific(f, "online_pcc")
+                ]
+                if channel_fees:
+                    fees = [
+                        FeeResponse(
+                            amount=f.amount,
+                            currency=f.currency,
+                            evidence_id=str(f.claim_id),
+                            label=f.label_en or "Online PCC fee (online channel only)",
+                        )
+                        for f in channel_fees
+                    ]
+                    warnings.append(
+                        "PCC fees differ between online and offline official sources. "
+                        "Showing online-channel verified fee only — not a universal PCC fee."
+                    )
+                else:
+                    fees = []
+                    warnings.append(
+                        "Conflicting PCC fee information exists. "
+                        "No universal fee is published; online-channel amount not available."
+                    )
+            elif ctx.service.slug == "police-clearance-certificate" and pcc_channel == "offline_paper_pcc_channel":
+                fees = []
+                warnings.append(
+                    "Offline/paper PCC fee sources conflict with the online portal (BDT 1,500). "
+                    "BDT 500 on police.gov.bd is not published as the current universal fee."
+                )
+            elif ctx.service.slug == "police-clearance-certificate" and ctx.intent == "fee_inquiry":
+                fees = []
+                warnings.append(
+                    "PCC fee differs between online (BDT 1,500 on pcc.police.gov.bd) and a legacy "
+                    "offline police.gov.bd page (BDT 500). No single universal fee is published."
+                )
+            else:
+                warnings.append(
+                    "Conflicting information exists for this service. "
+                    "Authoritative fees/documents are withheld until review resolves the conflict."
+                )
+                fees = []
         elif ctx.support_level == AnswerSupportLevel.INSUFFICIENT_EVIDENCE:
             warnings.append(
                 "Guidance below is incomplete or not yet verified from official sources. "
@@ -367,6 +465,22 @@ class Orchestrator:
             warnings.append(
                 "Only some facts for this service are verified. Treat unverified parts as provisional."
             )
+
+        if ctx.service.slug in {"police-general-diary", "police-general-diary-online"} and _query_asks_gd_all_types(
+            msg_blob
+        ):
+            warnings.append(
+                "Whether every GD complaint type can be filed online nationwide is not verified "
+                "from Tier 1–2 official sources. Charter confirms an online channel exists."
+            )
+
+        if ctx.service.slug == "migration-visa-application-dip" and any(
+            w in msg_blob for w in ("mrv fee", "mrv", "visa fee koto", "visa fee")
+        ):
+            if not fees:
+                warnings.append(
+                    "MRV/visa fee amounts are not verified from machine-readable official sources."
+                )
 
         if seed_fees_hidden:
             warnings.append(
