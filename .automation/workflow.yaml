@@ -1,0 +1,35 @@
+# BDA Automation Workflow
+{
+  "version": "1.0.0",
+  "phases": [
+    "RESEARCH",
+    "VERIFICATION",
+    "GAP_CLOSURE",
+    "PUBLICATION",
+    "E2E",
+    "REGRESSION",
+    "STABILIZATION"
+  ],
+  "transitions": {
+    "READY": [
+      "RUNNING"
+    ],
+    "RUNNING": [
+      "WAITING_FOR_RESULT"
+    ],
+    "WAITING_FOR_RESULT": [
+      "VALIDATING_RESULT"
+    ],
+    "VALIDATING_RESULT": [
+      "AUTO_CONTINUE",
+      "RETRY",
+      "GAP_CLOSURE",
+      "SUPERVISOR_REVIEW",
+      "HUMAN_APPROVAL_REQUIRED",
+      "BLOCKED",
+      "COMPLETE"
+    ]
+  },
+  "publication_mode": "LOCAL_DEV_ONLY",
+  "merge_policy": "MANUAL_ONLY"
+}
