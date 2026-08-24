@@ -1,0 +1,117 @@
+{
+  "service_id": "police-passport-police-verification",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Passport Police Verification",
+  "service_name_bn": "পাসপোর্ট পুলিশ ভেরিফিকেশন",
+  "aliases": [
+    "passport verification police",
+    "PV report passport"
+  ],
+  "banglish_variants": [],
+  "category_id": "police",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police (Special Branch / Passport Wing)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://www.dip.gov.bd/",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "police-passport-police-verification::c-pv-e-passport-pathway-sb",
+      "legacy_claim_id": "c-pv-e-passport-pathway-sb",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "availability",
+      "claim_text": "Passport police verification for e-Passport processing routes through Special Branch per DIP/police pathway.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-sb",
+        "src-dip-home",
+        "src-batch-02a-passport-research"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-e-passport-pathway-sb-src-police-sb"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-onboarding-station-select",
+      "legacy_claim_id": "c-pv-onboarding-station-select",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "e-Passport onboarding requires applicant to select nearest police station for verification routing (Batch 2A cross-reference).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-batch-02a-passport-research"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-onboarding-station-select-src-batch-02a-passport-research"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-not-universal-all-police-services",
+      "legacy_claim_id": "c-pv-not-universal-all-police-services",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "restriction",
+      "claim_text": "Passport onboarding police-station selection rule applies to e-Passport pathway only; must not be generalized to employment PCC or GD services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal",
+        "src-batch-02a-passport-research"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-not-universal-all-police-services-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-online-pcc-domestic-employment-elsewhere",
+      "legacy_claim_id": "c-pv-online-pcc-domestic-employment-elsewhere",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Domestic employment police clearance uses district DSB/metro CSB, not e-Passport onboarding station selection.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "purpose_domestic_employment"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-online-pcc-domestic-employment-elsewhere-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-02a-passport partial claims exist for police-passport-* services"
+}

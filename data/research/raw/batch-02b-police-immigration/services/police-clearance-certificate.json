@@ -1,0 +1,559 @@
+{
+  "service_id": "police-clearance-certificate",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Police Clearance Certificate (PCC)",
+  "service_name_bn": "পুলিশ ক্লিয়ারেন্স সার্টিফিকেট",
+  "aliases": [
+    "PCC",
+    "police clearance",
+    "character certificate police"
+  ],
+  "banglish_variants": [],
+  "category_id": "police",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police",
+  "target_applicant": [
+    "citizen",
+    "expatriate",
+    "foreigner"
+  ],
+  "official_application_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "police-clearance-certificate::c-online-portal-url",
+      "legacy_claim_id": "c-online-portal-url",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Online Police Clearance Certificate applications are submitted at pcc.police.gov.bd (Oracle APEX portal).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-portal-url-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-fee-1500",
+      "legacy_claim_id": "c-online-fee-1500",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "fee",
+      "claim_text": "Online PCC application fee is BDT 1,500 payable via treasury challan code 1-7301-0001-2681 (Sonali Bank/Bangladesh Bank) or online card payment with service charges.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 1500,
+        "currency": "BDT",
+        "treasury_code": "1-7301-0001-2681"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-fee-1500-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-passport-validity",
+      "legacy_claim_id": "c-online-passport-validity",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Online PCC applicant must hold a passport valid for at least 3 months.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-passport-validity-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-jurisdiction-address",
+      "legacy_claim_id": "c-online-jurisdiction-address",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Applicant present address must fall under same metropolitan/district police jurisdiction as permanent or emergency contact address on passport (foreign passport holders: present address = Bangladesh stay address).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-jurisdiction-address-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-no-address-nid-birth-ward",
+      "legacy_claim_id": "c-online-no-address-nid-birth-ward",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "If passport has no address, present address must be supported by NID, Birth ID, or ward councillor certificate attested by class-one gazetted officer.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "passport_lacks_address"
+      },
+      "source_ids": [
+        "src-pcc-portal",
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-no-address-nid-birth-ward-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-eligible-populations",
+      "legacy_claim_id": "c-online-eligible-populations",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Online system issues PCC to Bangladeshi nationals going/residing abroad and foreign nationals who departed Bangladesh after their stay.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-eligible-populations-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-not-for-domestic-employment",
+      "legacy_claim_id": "c-online-not-for-domestic-employment",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "restriction",
+      "claim_text": "PCC for employment or other work within Bangladesh is not handled through online portal; applicant must contact district DSB or metropolitan City Special Branch per portal terms.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "purpose_domestic_employment"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-not-for-domestic-employment-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-abroad-attestation-bd-national",
+      "legacy_claim_id": "c-online-abroad-attestation-bd-national",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Bangladeshi nationals applying from abroad must upload passport bio/address pages attested by Bangladesh High Commission of present country of residence.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "applicant_abroad",
+        "applicant_type": "bangladeshi_national"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-abroad-attestation-bd-national-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-abroad-attestation-foreigner",
+      "legacy_claim_id": "c-online-abroad-attestation-foreigner",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Foreign passport holders applying from abroad must upload passport pages attested by Justice of the Peace in country of present residence.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "applicant_abroad",
+        "applicant_type": "foreign_passport"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-abroad-attestation-foreigner-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-expatriate-auth-letter",
+      "legacy_claim_id": "c-online-expatriate-auth-letter",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Expatriate applicants must upload authorization letter naming collector and collector NID; local applicants must send same permission letter to collector at certificate acceptance.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "representative_collection"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-expatriate-auth-letter-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-arrival-stamp",
+      "legacy_claim_id": "c-online-arrival-stamp",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Bangladeshi citizens/expatriates who issued/reissued passport outside Bangladesh must upload latest arrival stamp page when seeking PCC after arriving in Bangladesh.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "passport_issued_abroad_and_applicant_in_bangladesh"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-arrival-stamp-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-apply-steps",
+      "legacy_claim_id": "c-online-apply-steps",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Online PCC workflow: register → login → Apply → personal/address pages → upload documents → review/submit (no edit after final submit) → pay fee.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-apply-steps-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-status-sms",
+      "legacy_claim_id": "c-online-status-sms",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Application status check: SMS 'PCC S' + application reference number to 26969.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-status-sms-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-helpdesk",
+      "legacy_claim_id": "c-online-helpdesk",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "office",
+      "claim_text": "PCC portal helpdesk Sun–Thu 9:00–16:00 (excl. public holidays): 01320001824, 01320001825; email ssaphq@gmail.com.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-helpdesk-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-charter-online-fee-sla",
+      "legacy_claim_id": "c-charter-online-fee-sla",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter lists online police clearance fee BDT 1,500 to government and service time 3–7 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 3,
+        "official_sla_days_max": 7,
+        "fee_bdt": 1500
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-charter-online-fee-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-offline-sp-application",
+      "legacy_claim_id": "c-offline-sp-application",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Offline PCC: written application addressed to Superintendent of Police or Police Commissioner (metropolitan) on white paper.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-offline-sp-application-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-offline-fee-500-chalan",
+      "legacy_claim_id": "c-offline-fee-500-chalan",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "fee",
+      "claim_text": "Offline PCC page cites treasury chalan Tk 500 to code 1-2201-0001-2681 (Bangladesh Bank/Sonali Bank).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 500,
+        "currency": "BDT",
+        "treasury_code": "1-2201-0001-2681",
+        "channel": "offline_paper"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-offline-fee-500-chalan-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-offline-passport-attested-copy",
+      "legacy_claim_id": "c-offline-passport-attested-copy",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "document",
+      "claim_text": "Offline PCC requires passport photocopy attested by first-class gazetted officer; renewed pages must be included; expired passport not accepted.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-offline-passport-attested-copy-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-offline-relative-abroad",
+      "legacy_claim_id": "c-offline-relative-abroad",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Persons staying abroad may apply through relative with embassy/high commission attested passport copy.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "applicant_abroad"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-offline-relative-abroad-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-destination-spain-extra",
+      "legacy_claim_id": "c-destination-spain-extra",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "PCC for Spain requires three passport-size photos submitted to Home Ministry immigration section-3 addressing the Secretary (per offline police page).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "destination_country",
+        "value": "Spain"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-destination-spain-extra-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-dmp-token-collection",
+      "legacy_claim_id": "c-dmp-token-collection",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "DMP provides token with serial number and collection date for PCC pickup (metropolitan-specific).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "LOCATION_SPECIFIC",
+        "if": "jurisdiction",
+        "value": "DMP"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-dmp-token-collection-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-certificate-language-attestation",
+      "legacy_claim_id": "c-certificate-language-attestation",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "PCC issued in English; applications may be Bangla or English; certificates attested by officials concerned in foreign ministry.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-certificate-language-attestation-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-practical-fee-confusion",
+      "legacy_claim_id": "c-practical-fee-confusion",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "practical_tip",
+      "claim_text": "Secondary media guides still reference Tk 500 PCC fee; treat as potentially stale vs current online portal 1500 BDT until independently verified.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-unb-pcc-guide"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-practical-fee-confusion-src-unb-pcc-guide"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": null
+}

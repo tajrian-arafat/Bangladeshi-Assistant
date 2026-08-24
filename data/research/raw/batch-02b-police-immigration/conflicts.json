@@ -1,0 +1,64 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "conflict-pcc-fee-online-vs-offline",
+      "service_ids": [
+        "police-clearance-certificate"
+      ],
+      "topic": "pcc_fee_amount",
+      "claim_ids": [
+        "police-clearance-certificate::c-online-fee-1500",
+        "police-clearance-certificate::c-offline-fee-500-chalan"
+      ],
+      "description": "Online PCC portal requires BDT 1,500 (code 1-7301-0001-2681) while police.gov.bd offline instruction page still cites Tk 500 (code 1-2201-0001-2681).",
+      "hypotheses": [
+        "channel_specific_fee",
+        "fee_revision_not_reflected_on_static_page",
+        "offline_procedure_deprecated"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-pcc-treasury-code",
+      "service_ids": [
+        "police-clearance-certificate"
+      ],
+      "topic": "treasury_challan_code",
+      "description": "Online portal uses treasury code 1-7301-0001-2681; offline page uses 1-2201-0001-2681.",
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-gd-online-scope-timeline",
+      "service_ids": [
+        "police-general-diary",
+        "police-general-diary-online"
+      ],
+      "topic": "online_gd_complaint_types",
+      "description": "2025 Police HQ communications claim all GD types online nationwide; older reporting and partial rollout referenced lost-and-found-only online GD.",
+      "hypotheses": [
+        "policy_expansion_2025",
+        "regional_rollout_lag"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-passport-verification-vs-pcc",
+      "service_ids": [
+        "police-passport-verification",
+        "police-clearance-certificate"
+      ],
+      "topic": "verification_service_boundaries",
+      "description": "Citizen charter 'passport verification' (15–21 days) differs from online PCC (3–7 days charter SLA); purposes and channels overlap in public language but are distinct services.",
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-pcc-portal-url-variants",
+      "service_ids": [
+        "police-clearance-certificate"
+      ],
+      "topic": "application_url",
+      "description": "Catalogue and portal use pcc.police.gov.bd/ords/r/pcc/pcc/9; police.gov.bd menu links alternate APEX paths (e.g. f?p=500:1).",
+      "status": "UNRESOLVED"
+    }
+  ]
+}
