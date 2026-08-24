@@ -182,13 +182,17 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
         bump("eligibility", 45)
 
     # Lost / damaged — procedure beats document when how-to is present
-    if hits.get("lost"):
+    lost_context = hits.get("lost") or any(
+        w in text for w in ["হারালে", "হারিয়ে", "হারিয়ে", "harano", "hariye", "stolen", "missing passport"]
+    )
+    gd_context = hits.get("general_diary") or re.search(r"\bgd\b", text)
+    if hits.get("lost") and lost_context and not (gd_context and not lost_context):
         if has_procedure_signal:
             bump("procedure_inquiry", 42)
             bump("lost_document", 30)
         else:
             bump("lost_document", 40)
-    if any(w in text for w in ["হারালে", "হারিয়ে", "হারিয়ে", "harano", "hariye"]):
+    if any(w in text for w in ["হারালে", "হারিয়ে", "হারিয়ে", "harano", "hariye"]) and not gd_context:
         if has_procedure_signal:
             bump("procedure_inquiry", 40)
             bump("lost_document", 28)
@@ -231,7 +235,16 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
     if has_procedure_signal:
         bump("procedure_inquiry", 28)
 
-    # Processing time — only when explicit SLA/time question, not bare "first time"
+    # General Diary (distinct from lost-passport GD context)
+    if gd_context and not lost_context:
+        bump("procedure_inquiry", 42)
+        if hits.get("feasibility") or any(
+            w in text for w in ["kora jay", "procedure inquiry", "can i", "is it possible", "allowed"]
+        ):
+            bump("procedure_inquiry", 12)
+            bump("eligibility", 8)
+
+    # Processing time — explicit phrase (incl. banglish normalization) wins over generic verification
     time_markers = [
         "processing time",
         "how long",
@@ -241,14 +254,21 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
         "weeks",
         "months",
     ]
-    if any(w in text for w in time_markers):
+    if "processing time" in text:
+        bump("processing_time", 55)
+    elif any(w in text for w in time_markers):
         bump("processing_time", 30)
     elif re.search(r"\b\d+\s*(day|days|week|weeks)\b", text):
         bump("processing_time", 28)
     elif "time" in text.split() and not has_document_signal:
-        # Avoid "first time" → processing_time unless other time context exists
         if any(w in text for w in ["processing", "take", "long", "delivery"]):
             bump("processing_time", 22)
+
+    # Passport/police verification SLA queries
+    if hits.get("passport_verification_sla") or (
+        "passport verification" in text and ("processing time" in text or "koto din" in text)
+    ):
+        bump("processing_time", 40)
 
     # Education certificate verification (not BDRIS/police)
     if any(w in text for w in ["ssc", "hsc", "transcript"]) and "verification" in text:
@@ -279,7 +299,9 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
         bump("procedure_inquiry", 10)
 
     # Police verification SLA / charter
-    if any(w in text for w in ["police verification", "police verif", "pv", "পুলিশ ভেরিফিকেশন"]):
+    if any(w in text for w in ["police verification", "police verif", "pv", "পুলিশ ভেরিফিকেশন"]) or (
+        "passport verification" in text and "police" in text
+    ):
         if any(w in text for w in ["sla", "charter", "timeline", "processing time", "koto din"]):
             bump("processing_time", 45)
             bump("procedure_inquiry", 10)
@@ -307,7 +329,17 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
 
     ranked = sorted(scored.items(), key=lambda kv: kv[1], reverse=True)
     primary = ranked[0][0]
-    secondary = [intent for intent, score in ranked[1:] if score >= ranked[0][1] * 0.6]
+
+    # Explicit processing-time phrase must beat generic verification→procedure signal
+    if "processing time" in text and scored.get("processing_time", 0) >= 30:
+        if scored.get("procedure_inquiry", 0) > scored.get("processing_time", 0):
+            primary = "processing_time"
+
+    secondary = [
+        intent
+        for intent, score in ranked
+        if intent != primary and score >= scored.get(primary, ranked[0][1]) * 0.6
+    ]
 
     # Multi-intent: fee + documents commonly co-occur
     if "fee_inquiry" in scored and "document_list" in scored:

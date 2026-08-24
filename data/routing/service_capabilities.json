@@ -338,6 +338,97 @@
       "aliases_bn": ["হিন্দু বিবাহ রেজিস্ট্রার"],
       "aliases_banglish": ["hindu marriage registrar"],
       "intent_boost": {"general_info": 30}
+    },
+    {
+      "service_slug": "police-general-diary",
+      "catalogue_service_id": "police-general-diary",
+      "domain": "police",
+      "service_type": "application",
+      "variants": {"channels": ["domestic", "offline"], "actions": ["procedure", "application"]},
+      "intent_capabilities": ["procedure_inquiry", "fee_inquiry", "processing_time", "document_list", "general_info"],
+      "capability_keywords": ["general diary", "gd", "thana", "police station diary"],
+      "aliases_en": ["general diary", "gd at police station", "file gd"],
+      "aliases_bn": ["জিডি", "সাধারণ ডায়েরি"],
+      "aliases_banglish": ["gd", "general diary", "genaral diary"],
+      "intent_boost": {"procedure_inquiry": 25, "processing_time": 20}
+    },
+    {
+      "service_slug": "police-general-diary-online",
+      "catalogue_service_id": "police-general-diary-online",
+      "domain": "police",
+      "service_type": "application",
+      "variants": {"channels": ["online"], "actions": ["procedure", "application"]},
+      "intent_capabilities": ["procedure_inquiry", "application_url", "fee_inquiry", "processing_time", "document_list"],
+      "capability_keywords": ["online gd", "gd online", "gd portal", "gd.police.gov.bd"],
+      "aliases_en": ["online general diary", "online gd", "gd online portal"],
+      "aliases_bn": ["অনলাইন জিডি"],
+      "aliases_banglish": ["online gd", "gd online", "online gd kora jay"],
+      "intent_boost": {"procedure_inquiry": 30, "application_url": 25}
+    },
+    {
+      "service_slug": "police-clearance-certificate",
+      "catalogue_service_id": "police-clearance-certificate",
+      "domain": "police",
+      "service_type": "application",
+      "variants": {"channels": ["online", "offline"], "actions": ["application", "fee"]},
+      "intent_capabilities": ["fee_inquiry", "procedure_inquiry", "processing_time", "document_list", "application_url", "eligibility"],
+      "capability_keywords": ["police clearance", "pcc", "clearance certificate"],
+      "aliases_en": ["police clearance certificate", "pcc", "police clearance"],
+      "aliases_bn": ["পুলিশ ক্লিয়ারেন্স", "পুলিশ ক্লিয়ারেন্স"],
+      "aliases_banglish": ["pcc", "police clearance", "police clearence"],
+      "intent_boost": {"fee_inquiry": 30, "processing_time": 25}
+    },
+    {
+      "service_slug": "police-employment-verification",
+      "catalogue_service_id": "police-employment-verification",
+      "domain": "police",
+      "service_type": "verification",
+      "variants": {"channels": ["domestic"], "actions": ["verification", "processing_time"]},
+      "intent_capabilities": ["procedure_inquiry", "fee_inquiry", "processing_time", "document_list"],
+      "capability_keywords": ["employment verification", "employer verification", "special branch employment"],
+      "aliases_en": ["employment verification", "employer verification"],
+      "aliases_bn": ["চাকরির ভেরিফিকেশন"],
+      "aliases_banglish": ["employment verification"],
+      "intent_boost": {"processing_time": 20, "procedure_inquiry": 20}
+    },
+    {
+      "service_slug": "migration-visa-application-dip",
+      "catalogue_service_id": "migration-visa-application-dip",
+      "domain": "immigration",
+      "service_type": "application",
+      "variants": {"channels": ["online", "domestic"], "actions": ["application", "fee"]},
+      "intent_capabilities": ["application_url", "fee_inquiry", "document_list", "procedure_inquiry", "general_info"],
+      "capability_keywords": ["visa application", "mrv", "dip", "visa.gov.bd", "immigration department"],
+      "aliases_en": ["bangladesh visa", "mrv visa", "visa application dip", "department of immigration"],
+      "aliases_bn": ["ভিসা আবেদন", "ইমিগ্রেশন"],
+      "aliases_banglish": ["mrv fee", "mrv visa", "visa application kothay"],
+      "intent_boost": {"application_url": 25, "fee_inquiry": 30, "document_list": 20}
+    },
+    {
+      "service_slug": "police-firearms-license",
+      "catalogue_service_id": "police-firearms-license",
+      "domain": "police",
+      "service_type": "licence",
+      "variants": {"channels": ["domestic"], "actions": ["application", "processing_time"]},
+      "intent_capabilities": ["procedure_inquiry", "fee_inquiry", "processing_time", "document_list", "general_info"],
+      "capability_keywords": ["firearms license", "gun license", "arms license"],
+      "aliases_en": ["firearms license", "gun license"],
+      "aliases_bn": ["আগ্নেয়াস্ত্র লাইসেন্স"],
+      "aliases_banglish": ["fire arms license", "gun license"],
+      "intent_boost": {"processing_time": 20, "procedure_inquiry": 20}
+    },
+    {
+      "service_slug": "police-expatriate-services",
+      "catalogue_service_id": "police-expatriate-services",
+      "domain": "police",
+      "service_type": "office",
+      "variants": {"channels": ["domestic"], "actions": ["application"]},
+      "intent_capabilities": ["general_info", "procedure_inquiry", "fee_inquiry"],
+      "capability_keywords": ["expatriate cell", "probashi cell", "expatriate services"],
+      "aliases_en": ["expatriate cell", "expatriate services police"],
+      "aliases_bn": ["প্রবাসী সেল"],
+      "aliases_banglish": ["probashi cell", "expatriate cell"],
+      "intent_boost": {"general_info": 25}
     }
   ]
 }

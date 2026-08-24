@@ -26,7 +26,7 @@ from app.application.engines.procedure_engine import ProcedureEngine
 from app.application.knowledge.claim_review_service import ClaimReviewService
 from app.application.services.conversation_context import ConversationContext, ConversationContextService
 from app.domain.enums import AnswerSupportLevel, ClaimPipelineStatus, InformationClass
-from app.domain.models.claims import Claim
+from app.domain.models.claims import Claim, ServiceCatalogueMapping
 from app.domain.models.knowledge import Service, ServiceLink
 from app.retrieval.hybrid_search import HybridSearchService
 from app.schemas.chat import (
@@ -522,6 +522,16 @@ class Orchestrator:
             for link in (ctx.service.service_links or [])
             if link.is_verified
         ]
+        catalogue_urls = await self._catalogue_reference_urls(ctx.service)
+        for url in catalogue_urls:
+            if url not in official_urls:
+                official_urls.append(url)
+        if catalogue_urls and not any(
+            link.is_verified for link in (ctx.service.service_links or [])
+        ):
+            warnings.append(
+                "Application URL is from the service catalogue reference; live portal verification is pending."
+            )
         if not official_urls and not any(s.official_url for s in steps):
             warnings.append("Official application URLs are not yet verified for this service.")
 
@@ -573,6 +583,20 @@ class Orchestrator:
             practical_notes=practical_notes,
             official_urls=official_urls,
         )
+
+    async def _catalogue_reference_urls(self, service: Service) -> list[str]:
+        result = await self.session.execute(
+            select(ServiceCatalogueMapping).where(
+                ServiceCatalogueMapping.runtime_service_id == service.id
+            )
+        )
+        urls: list[str] = []
+        for row in result.scalars().all():
+            prov = row.provenance_json or {}
+            src = prov.get("official_source")
+            if isinstance(src, str) and src.startswith("http") and src not in urls:
+                urls.append(src)
+        return urls
 
     async def _practical_notes(self, service_id) -> list[str]:
         result = await self.session.execute(

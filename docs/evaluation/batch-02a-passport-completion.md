@@ -1,6 +1,6 @@
 # Batch 2A Passport — Completion & Evaluation Normalization (Step 16)
 
-**Generated:** 2026-08-24T23:03:38.927777+00:00
+**Generated:** 2026-08-24T23:13:45.398229+00:00
 **Mode:** Local/development only — no deployment, no Batch 2B
 
 ## Headline metrics

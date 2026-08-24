@@ -209,8 +209,28 @@ class ServiceRouter:
                 if self._profiles.get(s.slug, {}).get("domain") == "passport"
                 or (s.slug not in self._profiles and s.category == cat)
             ]
-            if passport:
+            if passport and "police" not in entities.domains:
                 return passport
+
+        if "police" in entities.domains:
+            police = [
+                s
+                for s in services
+                if self._profiles.get(s.slug, {}).get("domain") == "police"
+                or s.category in {"POLICE", "EXPATRIATE", "LICENCES"}
+            ]
+            if police:
+                return police
+
+        if "immigration" in entities.domains:
+            immigration = [
+                s
+                for s in services
+                if self._profiles.get(s.slug, {}).get("domain") == "immigration"
+                or s.category == domain_category("immigration")
+            ]
+            if immigration:
+                return immigration
 
         return services
 
@@ -430,47 +450,8 @@ class ServiceRouter:
                 score -= 40
                 reasons.append("penalty:pv_over_renewal")
 
-        # Batch 2B police + immigration routing (narrow boosts)
-        if any(w in text for w in ("police clearance", "pcc", "clearance certificate", "police certificate")):
-            if service.slug == "police-clearance-certificate":
-                score += 45
-                reasons.append("boost:police_clearance")
-            if "passport" in service.slug and "police" in service.slug:
-                score -= 25
-                reasons.append("penalty:clearance_not_passport_pv")
-        if any(w in text for w in ("general diary", " gd ", "gd online", "online gd", "জিডি")):
-            if service.slug in {"police-general-diary", "police-general-diary-online"}:
-                score += 40
-                reasons.append("boost:general_diary")
-        if "employment verification" in text or "employer verification" in text:
-            if service.slug == "police-employment-verification":
-                score += 40
-                reasons.append("boost:employment_verification")
-        if any(w in text for w in ("mrv visa", "visa application dip", "visa.gov.bd", "bangladesh visa")):
-            if service.slug == "migration-visa-application-dip":
-                score += 40
-                reasons.append("boost:dip_visa")
-        if "mrv" in text:
-            if service.slug == "migration-visa-application-dip":
-                score += 50
-                reasons.append("boost:mrv_visa_fee")
-            if service.slug == "epassport-fee-payment":
-                score -= 60
-                reasons.append("penalty:passport_fee_for_mrv")
-            if service.slug == "nid-fee-calculator":
-                score -= 80
-                reasons.append("penalty:nid_calculator_for_mrv")
-        if "firearms license" in text or "gun license" in text or "arms license" in text:
-            if service.slug == "police-firearms-license":
-                score += 40
-                reasons.append("boost:firearms_license")
-        if "police clearance" in text and any(w in text for w in ("koto din", "processing", "sla", "time")):
-            if service.slug == "police-clearance-certificate":
-                score += 25
-                reasons.append("boost:pcc_sla")
-            if service.slug == "police-passport-verification":
-                score -= 30
-                reasons.append("penalty:pv_not_pcc_sla")
+        # Batch 2B police + immigration routing — handled via service_capabilities.json,
+        # phrase_hints.json, and domain_entities channel variants (no inline phrase hacks).
 
         # Minor applicant → new e-passport application
         if any(w in text for w in ["minor", "child", "parent nid", "বাচ্চা", "শিশু"]):
@@ -552,8 +533,14 @@ class ServiceRouter:
         if entities.channel:
             channels = variants.get("channels") or []
             if entities.channel in channels:
-                bonus += 8
+                bonus += 12
                 reasons.append(f"variant:channel={entities.channel}")
+            elif channels and entities.channel == "online" and "online" not in channels:
+                bonus -= 18
+                reasons.append("penalty:channel_online_mismatch")
+            elif channels and entities.channel not in channels:
+                bonus -= 8
+                reasons.append(f"penalty:channel={entities.channel}")
 
         return bonus
 

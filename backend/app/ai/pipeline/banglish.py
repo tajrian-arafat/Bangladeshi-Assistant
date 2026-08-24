@@ -75,6 +75,10 @@ DOMAIN_MAP: dict[str, str] = {
     "kothay": "where",
     "kivabe": "how",
     "how": "how",
+    "kora": "procedure",
+    "jay": "procedure",
+    "jabe": "procedure",
+    "pari": "procedure",
     "process": "procedure",
     "procedure": "procedure",
     "step": "procedure",
@@ -111,6 +115,16 @@ def normalize_banglish(message: str) -> str:
             "time",
         }:
             normalized.extend(["processing", "time"])
+            i += 2
+            continue
+        # "kora jay" / feasibility (can it be done?) — procedure, not lost-document
+        if token in {"kora", "procedure"} and i + 1 < len(tokens) and tokens[i + 1] in {
+            "jay",
+            "jabe",
+            "pari",
+            "procedure",
+        }:
+            normalized.extend(["procedure", "inquiry"])
             i += 2
             continue
         mapped = DOMAIN_MAP.get(token, token)

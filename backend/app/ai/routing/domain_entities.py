@@ -83,6 +83,8 @@ def extract_domain_entities(message: str) -> DomainEntities:
 
     if _group_hit(text, groups.get("mission", {})):
         entities.channel = "mission"
+    elif any(w in text for w in ["online", "অনলাইন", "অনলাইনে"]):
+        entities.channel = "online"
     else:
         entities.channel = "domestic"
 

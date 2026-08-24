@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-24T23:04:42.370996+00:00",
+  "generated_at": "2026-08-24T23:13:02.775181+00:00",
   "batch_id": "batch-02b-police-immigration",
   "total_tests": 67,
-  "passed": 35,
-  "raw_passed": 33,
-  "pass_rate_pct": 52.2,
-  "raw_pass_rate_pct": 49.3,
+  "passed": 52,
+  "raw_passed": 50,
+  "pass_rate_pct": 77.6,
+  "raw_pass_rate_pct": 74.6,
   "hallucinations": 0,
-  "correct_uncertainty": 19,
+  "correct_uncertainty": 22,
   "correct_refusal": 3,
   "outcome_counts": {
-    "ANSWER_SUPPORTED": 13,
-    "CORRECT_UNCERTAINTY": 19,
-    "PRODUCT_FAILURE": 32,
+    "ANSWER_SUPPORTED": 27,
+    "CORRECT_UNCERTAINTY": 22,
+    "PRODUCT_FAILURE": 15,
     "CORRECT_REFUSAL": 3
   },
   "dryrun_gate_pass": true,
@@ -320,29 +320,31 @@
       },
       "actual": {
         "language": "en",
-        "normalized_message": "online gd kora jay",
-        "intent": "document_list",
-        "service_slug": "police-general-diary",
+        "normalized_message": "online gd procedure inquiry",
+        "intent": "procedure_inquiry",
+        "service_slug": "police-general-diary-online",
         "support_level": "PARTIALLY_SUPPORTED",
         "confidence": "medium",
-        "summary": "Here is available structured information for Online General Diary (GD). This is not fully verified official guidance yet.",
+        "summary": "Here is available structured information for Online General Diary (GD) Filing. This is not fully verified official guidance yet.",
         "fees": [
           {
             "amount": "0",
             "currency": "BDT",
-            "evidence_id": "3b050b7a-5d77-407b-ba5b-e597d3070243",
+            "evidence_id": "677dfcbf-07d8-4180-bb8c-d5e818f37d50",
             "label": "Citizen charter lists GD service fee as free (\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7).",
             "fee_mode": null
           }
         ],
         "warnings": [
           "Only some facts for this service are verified. Treat unverified parts as provisional.",
-          "Official application URLs are not yet verified for this service."
+          "Application URL is from the service catalogue reference; live portal verification is pending."
         ],
-        "official_urls": [],
+        "official_urls": [
+          "https://gd.police.gov.bd/"
+        ],
         "citations": [
           {
-            "evidence_id": "e530fd5a-55e5-458b-9c53-1da0aaa6bd84",
+            "evidence_id": "700ffee5-e8f9-4dd7-bbf2-082b6dfb139f",
             "source_title": "Citizen charter lists GD service fee as free (\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7).",
             "source_url": null,
             "tier": 1,
@@ -350,7 +352,7 @@
             "excerpt": "Charter row 3: GD fee '\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7'."
           },
           {
-            "evidence_id": "43c33f05-0973-44ff-92d9-6ddbae45b879",
+            "evidence_id": "8961da42-3e53-40ae-ab9d-efdab5d45924",
             "source_title": "Citizen charter official SLA for GD: 1\u20137 days.",
             "source_url": null,
             "tier": 1,
@@ -358,7 +360,7 @@
             "excerpt": "Charter row 3: GD service time '\u09e7-\u09ed \u09a6\u09bf\u09a8'."
           },
           {
-            "evidence_id": "76e68131-1fc7-4df5-b895-c1ad8659b5ba",
+            "evidence_id": "e9e56ea3-8baa-4105-8546-926d21123a4f",
             "source_title": "Citizen charter states GD available directly at police station and online.",
             "source_url": null,
             "tier": 1,
@@ -366,7 +368,7 @@
             "excerpt": "Charter row 3: '\u09b8\u09b0\u09be\u09b8\u09b0\u09bf \u0993 \u0985\u09a8\u09b2\u09be\u0987\u09a8\u09c7'."
           },
           {
-            "evidence_id": "181e9400-2133-4243-9b5d-b96ab9d9055e",
+            "evidence_id": "1f4eb6e9-77f3-4688-8afa-0327bfe6602b",
             "source_title": "GD handled at relevant police station / unit (\u09a5\u09be\u09a8\u09be).",
             "source_url": null,
             "tier": 1,
@@ -375,25 +377,20 @@
           }
         ]
       },
-      "pass": false,
-      "raw_pass": false,
+      "pass": true,
+      "raw_pass": true,
       "expected_outcome": "ANSWER_SUPPORTED",
-      "actual_outcome": "PRODUCT_FAILURE",
-      "counts_as_product_failure": true,
+      "actual_outcome": "ANSWER_SUPPORTED",
+      "counts_as_product_failure": false,
       "checks": {
-        "service": false,
-        "intent": false,
-        "url": false,
-        "official_url": false
+        "service": true,
+        "intent": true,
+        "url": true,
+        "official_url": true
       },
-      "reasons": [
-        "service mismatch: expected=police-general-diary-online got=police-general-diary",
-        "intent mismatch: expected=procedure_inquiry got=document_list",
-        "missing official URL containing gd.police.gov.bd",
-        "missing official URL containing gd.police.gov.bd"
-      ],
-      "failure_class": "RETRIEVAL_BUG",
-      "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
     },
     {
       "id": "b005",
@@ -413,17 +410,17 @@
       },
       "actual": {
         "language": "en",
-        "normalized_message": "shob dhoroner gd online kora jay",
-        "intent": "document_list",
-        "service_slug": "police-general-diary",
+        "normalized_message": "shob dhoroner gd online procedure inquiry",
+        "intent": "procedure_inquiry",
+        "service_slug": "police-general-diary-online",
         "support_level": "PARTIALLY_SUPPORTED",
         "confidence": "medium",
-        "summary": "Here is available structured information for Online General Diary (GD). This is not fully verified official guidance yet.",
+        "summary": "Here is available structured information for Online General Diary (GD) Filing. This is not fully verified official guidance yet.",
         "fees": [
           {
             "amount": "0",
             "currency": "BDT",
-            "evidence_id": "3b050b7a-5d77-407b-ba5b-e597d3070243",
+            "evidence_id": "677dfcbf-07d8-4180-bb8c-d5e818f37d50",
             "label": "Citizen charter lists GD service fee as free (\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7).",
             "fee_mode": null
           }
@@ -431,12 +428,14 @@
         "warnings": [
           "Only some facts for this service are verified. Treat unverified parts as provisional.",
           "Whether every GD complaint type can be filed online nationwide is not verified from Tier 1\u20132 official sources. Charter confirms an online channel exists.",
-          "Official application URLs are not yet verified for this service."
+          "Application URL is from the service catalogue reference; live portal verification is pending."
         ],
-        "official_urls": [],
+        "official_urls": [
+          "https://gd.police.gov.bd/"
+        ],
         "citations": [
           {
-            "evidence_id": "e530fd5a-55e5-458b-9c53-1da0aaa6bd84",
+            "evidence_id": "700ffee5-e8f9-4dd7-bbf2-082b6dfb139f",
             "source_title": "Citizen charter lists GD service fee as free (\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7).",
             "source_url": null,
             "tier": 1,
@@ -444,7 +443,7 @@
             "excerpt": "Charter row 3: GD fee '\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7'."
           },
           {
-            "evidence_id": "43c33f05-0973-44ff-92d9-6ddbae45b879",
+            "evidence_id": "8961da42-3e53-40ae-ab9d-efdab5d45924",
             "source_title": "Citizen charter official SLA for GD: 1\u20137 days.",
             "source_url": null,
             "tier": 1,
@@ -452,7 +451,7 @@
             "excerpt": "Charter row 3: GD service time '\u09e7-\u09ed \u09a6\u09bf\u09a8'."
           },
           {
-            "evidence_id": "76e68131-1fc7-4df5-b895-c1ad8659b5ba",
+            "evidence_id": "e9e56ea3-8baa-4105-8546-926d21123a4f",
             "source_title": "Citizen charter states GD available directly at police station and online.",
             "source_url": null,
             "tier": 1,
@@ -460,7 +459,7 @@
             "excerpt": "Charter row 3: '\u09b8\u09b0\u09be\u09b8\u09b0\u09bf \u0993 \u0985\u09a8\u09b2\u09be\u0987\u09a8\u09c7'."
           },
           {
-            "evidence_id": "181e9400-2133-4243-9b5d-b96ab9d9055e",
+            "evidence_id": "1f4eb6e9-77f3-4688-8afa-0327bfe6602b",
             "source_title": "GD handled at relevant police station / unit (\u09a5\u09be\u09a8\u09be).",
             "source_url": null,
             "tier": 1,
@@ -475,8 +474,8 @@
       "actual_outcome": "CORRECT_UNCERTAINTY",
       "counts_as_product_failure": false,
       "checks": {
-        "service": false,
-        "intent": false,
+        "service": true,
+        "intent": true,
         "uncertainty": true,
         "no_gd_all_types_official": true
       },
@@ -503,7 +502,7 @@
       "actual": {
         "language": "en",
         "normalized_message": "police passport verification processing time",
-        "intent": "procedure_inquiry",
+        "intent": "processing_time",
         "service_slug": "police-passport-verification",
         "support_level": "PARTIALLY_SUPPORTED",
         "confidence": "medium",
@@ -512,9 +511,11 @@
         "warnings": [
           "Only some facts for this service are verified. Treat unverified parts as provisional.",
           "Fee information is not yet verified. Confirm at the official office.",
-          "Official application URLs are not yet verified for this service."
+          "Application URL is from the service catalogue reference; live portal verification is pending."
         ],
-        "official_urls": [],
+        "official_urls": [
+          "https://www.police.gov.bd/index.php/en/citizen_charter"
+        ],
         "citations": [
           {
             "evidence_id": "f1ca8876-3bde-4b64-985c-82e4b89b85c1",
@@ -550,21 +551,19 @@
           }
         ]
       },
-      "pass": false,
-      "raw_pass": false,
+      "pass": true,
+      "raw_pass": true,
       "expected_outcome": "ANSWER_SUPPORTED",
-      "actual_outcome": "PRODUCT_FAILURE",
-      "counts_as_product_failure": true,
+      "actual_outcome": "ANSWER_SUPPORTED",
+      "counts_as_product_failure": false,
       "checks": {
         "service": true,
-        "intent": false,
+        "intent": true,
         "expected_sla": true
       },
-      "reasons": [
-        "intent mismatch: expected=processing_time got=procedure_inquiry"
-      ],
-      "failure_class": "LANGUAGE_BUG",
-      "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
     },
     {
       "id": "b007",
@@ -674,7 +673,7 @@
       "actual": {
         "language": "en",
         "normalized_message": "employment verification processing time",
-        "intent": "procedure_inquiry",
+        "intent": "processing_time",
         "service_slug": "police-employment-verification",
         "support_level": "PARTIALLY_SUPPORTED",
         "confidence": "medium",
@@ -683,9 +682,11 @@
         "warnings": [
           "Only some facts for this service are verified. Treat unverified parts as provisional.",
           "Fee information is not yet verified. Confirm at the official office.",
-          "Official application URLs are not yet verified for this service."
+          "Application URL is from the service catalogue reference; live portal verification is pending."
         ],
-        "official_urls": [],
+        "official_urls": [
+          "https://www.police.gov.bd/index.php/en/citizen_charter"
+        ],
         "citations": [
           {
             "evidence_id": "272cad22-bc1c-4131-b2ab-d70efeba1ada",
@@ -712,7 +713,7 @@
       "counts_as_product_failure": false,
       "checks": {
         "service": true,
-        "intent": false,
+        "intent": true,
         "no_invention": true,
         "uncertainty": true
       },
