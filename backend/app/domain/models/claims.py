@@ -166,9 +166,13 @@ class ServiceCatalogueMapping(Base):
     )
     runtime_slug: Mapped[str | None] = mapped_column(String(128), nullable=True)
     mapping_type: Mapped[str] = mapped_column(String(32))
+    mapping_status: Mapped[str] = mapped_column(
+        String(32), default="UNRESOLVED", index=True
+    )
     review_status: Mapped[str] = mapped_column(String(32), default="PENDING")
     notes: Mapped[str | None] = mapped_column(Text, nullable=True)
     allow_overwrite_seed: Mapped[bool] = mapped_column(Boolean, default=False)
+    provenance_json: Mapped[dict | None] = mapped_column(JSONType, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )

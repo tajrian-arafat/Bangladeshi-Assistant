@@ -150,6 +150,17 @@ class CatalogueMappingReviewStatus(StrEnum):
     BLOCKED = "BLOCKED"
 
 
+class CatalogueMappingStatus(StrEnum):
+    """Outcome of catalogue ↔ runtime synchronization."""
+
+    EXACT_MATCH = "EXACT_MATCH"
+    ALIAS_MATCH = "ALIAS_MATCH"
+    MERGED_MATCH = "MERGED_MATCH"
+    NEW_RUNTIME_SERVICE = "NEW_RUNTIME_SERVICE"
+    UNRESOLVED = "UNRESOLVED"
+    REVIEW_REQUIRED = "REVIEW_REQUIRED"
+
+
 class LanguageCode(StrEnum):
     BN = "bn"
     EN = "en"

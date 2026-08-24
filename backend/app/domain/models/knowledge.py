@@ -53,6 +53,9 @@ class Service(Base):
     aliases: Mapped[list | None] = mapped_column(JSONType, nullable=True)
     agency_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("agencies.id", ondelete="CASCADE"))
     category: Mapped[str] = mapped_column(String(64))
+    catalogue_service_id: Mapped[str | None] = mapped_column(
+        String(128), unique=True, nullable=True, index=True
+    )
     status: Mapped[str] = mapped_column(String(32), default="UNDER_REVIEW")
     eligibility: Mapped[dict | None] = mapped_column(JSONType, nullable=True)
     required_documents: Mapped[list | None] = mapped_column(JSONType, nullable=True)
