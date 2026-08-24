@@ -1,0 +1,65 @@
+{
+  "category": "VAT",
+  "count": 2,
+  "services": [
+    {
+      "service_id": "vat-bin-registration",
+      "uuid": "ebc12e2c-c221-5527-8a7a-f5e344da848c",
+      "service_name_bn": "ভ্যাট/টার্নওভার ট্যাক্স নিবন্ধন (BIN)",
+      "service_name_en": "VAT Registration (Business Identification Number)",
+      "aliases": [
+        "BIN registration",
+        "VAT 2.1",
+        "Mushak 2.1"
+      ],
+      "category": "VAT",
+      "subcategory": "registration",
+      "responsible_authority": "National Board of Revenue (NBR)",
+      "authority_id": "nbr",
+      "target_user": [
+        "business",
+        "importer",
+        "exporter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://nbr.gov.bd/faq/vat-faq/eng",
+      "discovery_sources": [
+        "https://nbr.gov.bd/faq/vat-faq/eng"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Turnover above 8 million BDT requires registration.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "vat-turnover-enlistment",
+      "uuid": "1db4124c-e1d6-5cbf-a0bc-a52e7ea0e774",
+      "service_name_bn": "টার্নওভার ট্যাক্স তালিকাভুক্তি",
+      "service_name_en": "Turnover Tax Enlistment",
+      "aliases": [
+        "VAT enlistment",
+        "BIN enlistment"
+      ],
+      "category": "VAT",
+      "subcategory": "enlistment",
+      "responsible_authority": "National Board of Revenue (NBR)",
+      "authority_id": "nbr",
+      "target_user": [
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://nbr.gov.bd/faq/vat-faq/eng",
+      "discovery_sources": [
+        "https://nbr.gov.bd/faq/vat-faq/eng"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "For turnover 3-8 million BDT per 12 months.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    }
+  ]
+}

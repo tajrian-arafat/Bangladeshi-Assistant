@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bangladeshi-assistant.local/schemas/service-catalogue-entry.json",
+  "title": "Bangladeshi Assistant Master Service Catalogue Entry",
+  "description": "Discovery-phase inventory entry. Does not include detailed requirements, fees, or procedures.",
+  "type": "object",
+  "required": [
+    "service_id",
+    "service_name_bn",
+    "service_name_en",
+    "aliases",
+    "category",
+    "subcategory",
+    "responsible_authority",
+    "target_user",
+    "geographic_scope",
+    "official_source",
+    "discovery_sources",
+    "status"
+  ],
+  "properties": {
+    "service_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{2,127}$",
+      "description": "Stable slug identifier (immutable)"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Optional UUID for database import"
+    },
+    "service_name_bn": {
+      "type": ["string", "null"]
+    },
+    "service_name_en": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "category": {
+      "type": "string",
+      "description": "Primary taxonomy domain"
+    },
+    "subcategory": {
+      "type": "string"
+    },
+    "responsible_authority": {
+      "type": "string",
+      "description": "Human-readable authority name"
+    },
+    "authority_id": {
+      "type": "string",
+      "description": "Reference to authorities.json slug"
+    },
+    "target_user": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "geographic_scope": {
+      "type": "string",
+      "enum": ["NATIONAL", "DIVISION", "DISTRICT", "UPAZILA", "LOCAL"]
+    },
+    "lifecycle_stage": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional lifecycle tags: birth, childhood, education, employment, marriage, property, business, vehicle, tax, healthcare, family, social_protection, retirement, death"
+    },
+    "official_source": {
+      "type": ["string", "null"],
+      "description": "Primary official URL confirming service exists (null if not yet verified)"
+    },
+    "discovery_sources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "URLs or document references used during discovery"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["CONFIRMED", "LIKELY", "NEEDS_VERIFICATION", "DEPRECATED", "DUPLICATE"]
+    },
+    "canonical_service_id": {
+      "type": ["string", "null"],
+      "description": "If status=DUPLICATE, points to canonical service_id"
+    },
+    "notes": {
+      "type": ["string", "null"]
+    },
+    "discovered_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "catalogue_version": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

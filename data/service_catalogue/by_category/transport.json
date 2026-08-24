@@ -1,0 +1,740 @@
+{
+  "category": "TRANSPORT",
+  "count": 25,
+  "services": [
+    {
+      "service_id": "brta-advance-income-tax",
+      "uuid": "49ae43d8-f5ff-5bba-ac9e-c9f2f0c11983",
+      "service_name_bn": "অগ্রিম আয়কর পরিশোধ",
+      "service_name_en": "Advance Income Tax Payment (Motor Vehicle)",
+      "aliases": [
+        "AIT payment",
+        "advance tax BRTA"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "tax",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Available via BSP and BRTA Seba mobile app.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-bsp-user-registration",
+      "uuid": "56441a1e-5515-5081-b4dc-b2cdd2f2a711",
+      "service_name_bn": "বিআরটিএ সেবা পোর্টাল ব্যবহারকারী নিবন্ধন",
+      "service_name_en": "BRTA Service Portal User Registration",
+      "aliases": [
+        "BSP registration",
+        "BRTA portal signup",
+        "driver owner dealer registration"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "brta_portal",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "driver",
+        "vehicle_owner",
+        "vehicle_dealer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/register",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/register"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Register as driver, owner, or vehicle dealer using NID-linked mobile number.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-color-change",
+      "uuid": "5a22b00f-9c2a-5c02-a506-0625eb03b549",
+      "service_name_bn": "যানবাহনের রং পরিবর্তন",
+      "service_name_en": "Vehicle Color Change",
+      "aliases": [
+        "colour change",
+        "vehicle repaint registration"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "vehicle_modification",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-dctc-exam-result",
+      "uuid": "6d019251-3a29-5aa0-a45a-7f5fa45f6c66",
+      "service_name_bn": "ড্রাইভিং পরীক্ষার (ডিসিটিসি) ফলাফল",
+      "service_name_en": "Driving Test (DCTC) Result",
+      "aliases": [
+        "DCTC result",
+        "driving exam result"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "driving_license",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "driver"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/dctbResult",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/dctbResult"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Division and district-wise results published on BSP.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-digital-registration-certificate",
+      "uuid": "0edb3927-097b-59ed-8fba-b15ad1975728",
+      "service_name_bn": "ডিজিটাল রেজিস্ট্রেশন সার্টিফিকেট (ডিআরসি)",
+      "service_name_en": "Digital Registration Certificate (DRC)",
+      "aliases": [
+        "DRC",
+        "digital RC"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "vehicle_registration",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Requires biometrics (photo, signature, fingerprints).",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-driving-instructor-license",
+      "uuid": "884d2342-4fa5-5b40-907d-0e1dae23122e",
+      "service_name_bn": "ড্রাইভিং ইন্সট্রাক্টর লাইসেন্স",
+      "service_name_en": "Driving Instructor License",
+      "aliases": [
+        "motor driving instructor license"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "driving_license",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "driving_instructor"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922db6c933eb65569e0a116",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922db6c933eb65569e0a116"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Listed under driving instructor license services on BRTA portal.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-driving-license-renewal",
+      "uuid": "e7bed07d-b0ab-5438-852b-e6b90e0f4515",
+      "service_name_bn": "ড্রাইভিং লাইসেন্স নবায়ন",
+      "service_name_en": "Driving License Renewal",
+      "aliases": [
+        "DL renewal",
+        "license renewal BSP"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "driving_license",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "driver"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/bsp/?lan=en",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/bsp/?lan=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-driving-school-registration",
+      "uuid": "088ead7b-5791-5bc3-b92c-666ae9b69105",
+      "service_name_bn": "ড্রাইভিং ট্রেনিং স্কুল নিবন্ধন",
+      "service_name_en": "Motor Driving Training School Registration",
+      "aliases": [
+        "driving school registration",
+        "driving training centre registration"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "driving_school",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "business",
+        "driving_school"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/roadSafety",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/roadSafety"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "BRTA mandates registration of motor driving training schools.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-duplicate-driving-license",
+      "uuid": "49087303-3107-556b-b0f9-33fa6e6aba77",
+      "service_name_bn": "ডুপ্লিকেট ড্রাইভিং লাইসেন্স",
+      "service_name_en": "Duplicate Driving License",
+      "aliases": [
+        "lost driving license",
+        "replacement DL"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "driving_license",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "driver"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/bsp/?lan=en",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/bsp/?lan=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-e-document-verification",
+      "uuid": "39d8156f-8302-592c-9e18-bcf67f1fc404",
+      "service_name_bn": "ই-ট্যাক্স টোকেন/ই-লাইসেন্স যাচাই",
+      "service_name_en": "E-Tax Token and E-License Verification",
+      "aliases": [
+        "e-license verification",
+        "digital document check"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "brta_portal",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "law_enforcement"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/bsp/?lan=en",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/bsp/?lan=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-engine-change",
+      "uuid": "2e5a75fb-7386-53af-af15-8e96b79ca5b7",
+      "service_name_bn": "ইঞ্জিন পরিবর্তন",
+      "service_name_en": "Vehicle Engine Change",
+      "aliases": [
+        "engine replacement registration"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "vehicle_modification",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-fee-calculator",
+      "uuid": "73939cd0-78f1-57be-82cc-ab99ce23746e",
+      "service_name_bn": "ফি ক্যালকুলেটর",
+      "service_name_en": "BRTA Fee Calculator",
+      "aliases": [
+        "registration fee calculator",
+        "BSP fee calculator"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "brta_portal",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner",
+        "driver"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/feeCalculator",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/feeCalculator"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Covers new/registered vehicle, license, fitness, route permit fees.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-fitness-certificate",
+      "uuid": "3a1e392d-ba40-5338-a1ad-3ad81676d279",
+      "service_name_bn": "ফিটনেস সার্টিফিকেট ইস্যু ও নবায়ন",
+      "service_name_en": "Vehicle Fitness Certificate Issue and Renewal",
+      "aliases": [
+        "fitness renewal",
+        "e-fitness",
+        "VIC fitness"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "fitness",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "E-Fitness results viewable on BSP.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-learner-driving-license",
+      "uuid": "72d501a8-5aa7-5cbf-b0ad-762c5dd528c4",
+      "service_name_bn": "লার্নার/শিক্ষানবিশ ড্রাইভিং লাইসেন্স",
+      "service_name_en": "Learner Driving License Application",
+      "aliases": [
+        "learner license",
+        "provisional driving license",
+        "শিক্ষানবিশ লাইসেন্স"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "driving_license",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "driver"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/drivingLicense/?lan=en",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/drivingLicense/?lan=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Prerequisite for driving training and smart card license; apply at circle office via BSP.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-mv-tax-payment",
+      "uuid": "671d3a67-16ec-5dea-b681-6a03b9b237c1",
+      "service_name_bn": "মোটরযান কর (এমভি ট্যাক্স)",
+      "service_name_en": "Motor Vehicle Tax (MV Tax) Payment",
+      "aliases": [
+        "MV tax",
+        "mvtax BRTA"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "tax",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://brta.cnsbd.com/mvtax_brta",
+      "discovery_sources": [
+        "https://brta.cnsbd.com/mvtax_brta"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Linked from BRTA portal internal e-services.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-new-vehicle-registration",
+      "uuid": "85b6d264-4612-50a2-8e05-cf08d541bb89",
+      "service_name_bn": "নতুন মোটরযান নিবন্ধন",
+      "service_name_en": "New Motor Vehicle Registration",
+      "aliases": [
+        "vehicle registration",
+        "motor registration",
+        "DRC issuance"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "vehicle_registration",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner",
+        "vehicle_dealer"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Includes inspection, fitness certificate, tax token, and DRC biometrics.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-ownership-transfer",
+      "uuid": "cbf8c3b1-1386-5dae-8981-0e4ec81e80fd",
+      "service_name_bn": "মালিকানা বদল/হস্তান্তর",
+      "service_name_en": "Motor Vehicle Ownership Transfer",
+      "aliases": [
+        "transfer of ownership",
+        "TO TTO",
+        "vehicle sale transfer"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "vehicle_registration",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Requires TO/TTO forms, original registration certificate, buyer TIN, affidavits.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-payment-verification",
+      "uuid": "7c4892f3-eb55-5bc2-b5c3-4b804023d6ff",
+      "service_name_bn": "পেমেন্ট যাচাই",
+      "service_name_en": "BRTA Payment Verification",
+      "aliases": [
+        "fee payment verification",
+        "BSP payment check"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "brta_portal",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner",
+        "driver"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/bsp/?lan=en",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/bsp/?lan=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-retro-reflective-number-plate",
+      "uuid": "317fdb58-33ac-5a02-a9fa-70cbe8309a8a",
+      "service_name_bn": "রেট্রো-রিফ্লেক্টিভ নম্বর প্লেট",
+      "service_name_en": "Retro-Reflective Number Plate",
+      "aliases": [
+        "reflective plate",
+        "number plate upgrade"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "vehicle_registration",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-route-permit",
+      "uuid": "54f58813-df7f-58dc-b0d6-bc57b2d24a9f",
+      "service_name_bn": "রুট পারমিট ইস্যু ও নবায়ন",
+      "service_name_en": "Route Permit Issue and Renewal",
+      "aliases": [
+        "route permit",
+        "transport route authorization"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "route_permit",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "business",
+        "transport_operator"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-smart-card-driving-license",
+      "uuid": "9cd6bbf7-d946-57b2-9d9b-767910f4e795",
+      "service_name_bn": "স্মার্ট কার্ড ড্রাইভিং লাইসেন্স",
+      "service_name_en": "Smart Card Driving License",
+      "aliases": [
+        "e-driving license",
+        "professional driving license",
+        "non-professional license"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "driving_license",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "driver"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/bsp/?lan=en",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/bsp/?lan=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Issued after learner period and DCTC written/oral/field tests.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-tax-token",
+      "uuid": "9f7aa134-6d46-59b0-8b64-7efc61079d61",
+      "service_name_bn": "ট্যাক্স টোকেন ইস্যু ও নবায়ন",
+      "service_name_en": "Motor Vehicle Tax Token Issue and Renewal",
+      "aliases": [
+        "tax token",
+        "e-tax token",
+        "MV tax token"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "tax_token",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-tire-size-change",
+      "uuid": "1d1a43fc-1d22-5d23-828c-59ee51e383fd",
+      "service_name_bn": "টায়ার সাইজ (প্রস্থ) পরিবর্তন",
+      "service_name_en": "Vehicle Tire Size Change",
+      "aliases": [
+        "tyre width change",
+        "wheel modification"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "vehicle_modification",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-trustee-board-certificate",
+      "uuid": "07ce2784-0383-50dc-8a67-2e48cf3ed4ad",
+      "service_name_bn": "ট্রাস্টি বোর্ড সনদ ডাউনলোড",
+      "service_name_en": "Trustee Board Certificate Download",
+      "aliases": [
+        "trust board certificate",
+        "TBC download"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "vehicle_registration",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://bsp.brta.gov.bd/tbc/",
+      "discovery_sources": [
+        "https://bsp.brta.gov.bd/tbc/"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "brta-vehicle-info-correction",
+      "uuid": "3b0bb05c-e37b-57b4-8ddc-4cee6bb54f08",
+      "service_name_bn": "মোটরযান তথ্য সংশোধন",
+      "service_name_en": "Vehicle Registration Information Correction",
+      "aliases": [
+        "registration data correction"
+      ],
+      "category": "TRANSPORT",
+      "subcategory": "vehicle_registration",
+      "responsible_authority": "Bangladesh Road Transport Authority (BRTA)",
+      "authority_id": "brta",
+      "target_user": [
+        "citizen",
+        "vehicle_owner"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+      "discovery_sources": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    }
+  ]
+}

@@ -1,0 +1,496 @@
+{
+  "category": "PASSPORT_IMMIGRATION",
+  "count": 17,
+  "services": [
+    {
+      "service_id": "epassport-application-status",
+      "uuid": "ef956754-b837-5a04-810a-d1f06eebc1d6",
+      "service_name_bn": "ই-পাসপোর্ট আবেদনের অবস্থা",
+      "service_name_en": "e-Passport Application Status Check",
+      "aliases": [
+        "passport status",
+        "OID status check"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "status",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://www.epassport.gov.bd/authorization/application-status",
+      "discovery_sources": [
+        "https://www.epassport.gov.bd/authorization/application-status"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Requires Application ID or Online Registration ID (OID) and date of birth.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "epassport-enrollment-appointment",
+      "uuid": "5de9b2bc-74e0-5f95-a525-2268921d1dbb",
+      "service_name_bn": "বায়োমেট্রিক এনরোলমেন্ট/অ্যাপয়েন্টমেন্ট",
+      "service_name_en": "Biometric Enrollment Appointment",
+      "aliases": [
+        "passport office appointment",
+        "enrollment slot"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "epassport_enrollment",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://epassport.gov.bd/instructions/instructions",
+      "discovery_sources": [
+        "https://epassport.gov.bd/instructions/instructions"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Bring printed application summary with appointment and original NID/BRC.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "epassport-fee-payment",
+      "uuid": "4389d2b0-aa88-5a63-8d19-3c3efa05b239",
+      "service_name_bn": "ই-পাসপোর্ট ফি পরিশোধ",
+      "service_name_en": "e-Passport Fee Payment",
+      "aliases": [
+        "ekpay passport",
+        "passport payment online"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "epassport_payment",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://epassport.gov.bd/instructions/passport-fees",
+      "discovery_sources": [
+        "https://epassport.gov.bd/instructions/passport-fees"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Payment via ekpay; regular, express, and super express delivery tiers.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "epassport-new-application",
+      "uuid": "cc312050-f4f7-5c54-bf8e-177674b92b05",
+      "service_name_bn": "নতুন ই-পাসপোর্ট আবেদন",
+      "service_name_en": "New e-Passport Application",
+      "aliases": [
+        "e-passport apply",
+        "online passport Bangladesh"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "epassport_new",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://www.epassport.gov.bd/onboarding",
+      "discovery_sources": [
+        "https://www.epassport.gov.bd/onboarding"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Online form using NID or online birth certificate (BRC English).",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "epassport-reissue",
+      "uuid": "652a512a-c659-5964-a2f1-d2c98ace0ffb",
+      "service_name_bn": "ই-পাসপোর্ট পুন:ইssue/রি-ইস্যু",
+      "service_name_en": "e-Passport Re-issue",
+      "aliases": [
+        "passport renewal e-passport",
+        "re-issue passport"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "epassport_reissue",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://epassport.gov.bd/landing",
+      "discovery_sources": [
+        "https://epassport.gov.bd/landing"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Apply online for e-Passport / Re-Issue from landing portal.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "epassport-rpo-secretariat",
+      "uuid": "f851fe01-23b9-57ec-9461-37f75a71bf94",
+      "service_name_bn": "বাংলাদেশ সচিবালয় আঞ্চলিক পাসপোর্ট অফিসে আবেদন",
+      "service_name_en": "Application at RPO Bangladesh Secretariat",
+      "aliases": [
+        "secretariat passport office"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "epassport_enrollment",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://epassport.gov.bd/instructions/application-form",
+      "discovery_sources": [
+        "https://epassport.gov.bd/instructions/application-form"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "epassport-urgent-super-express",
+      "uuid": "185f9f92-313a-52de-9643-e2ced50d4100",
+      "service_name_bn": "সুপার এক্সপ্রেস (জরুরি) ই-পাসপোর্ট",
+      "service_name_en": "Super Express (Urgent) e-Passport",
+      "aliases": [
+        "urgent passport",
+        "2-day passport"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "epassport_urgent",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://epassport.gov.bd/instructions/urgent-applications",
+      "discovery_sources": [
+        "https://epassport.gov.bd/instructions/urgent-applications"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Pickup only at Divisional Passport and Visa Office, Agargaon; not available at missions.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "mofa-attestation-application-form",
+      "uuid": "1fb35774-f6bc-5da7-ab52-fbff43010de7",
+      "service_name_bn": "MOFA attestation আবেদন ফর্ম",
+      "service_name_en": "MOFA Attestation Application Form",
+      "aliases": [
+        "attestation form MOFA",
+        "MOFA Attestation Application Form"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "attestation",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA) - Consular Section",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://file.mofa.gov.bd/media/22ce79d9-3031-45af-abbe-c9e2f99bbdb5/uploaded-files/form-attestation-certificate.pdf",
+      "discovery_sources": [
+        "https://file.mofa.gov.bd/media/22ce79d9-3031-45af-abbe-c9e2f99bbdb5/uploaded-files/form-attestation-certificate.pdf"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "mofa-citizen-eservices",
+      "uuid": "9f4d82e8-5e4f-59f8-ad61-f148ea3992f0",
+      "service_name_bn": "MOFA নাগরিক ই-সেবা",
+      "service_name_en": "Ministry of Foreign Affairs Citizen e-Services",
+      "aliases": [
+        "MOFA e-services",
+        "foreign ministry portal",
+        "Ministry of Foreign Affairs Citizen e-Services"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "consular",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://mofa.portal.gov.bd/",
+      "discovery_sources": [
+        "https://mofa.portal.gov.bd/"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "mofa-csat",
+      "uuid": "f1dc3103-76a6-5a47-9942-fbf178c5273c",
+      "service_name_bn": "MOFA CSAT (Consular Service Appointment)",
+      "service_name_en": "MOFA Consular Service Appointment (CSAT)",
+      "aliases": [
+        "MOFA appointment consular",
+        "MOFA Consular Service Appointment (CSAT)"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "consular",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://csat.mofa.gov.bd/",
+      "discovery_sources": [
+        "https://csat.mofa.gov.bd/"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "mofa-document-attestation-requirements",
+      "uuid": "68c1df82-07a9-5be3-ab13-f23b3ccb3898",
+      "service_name_bn": "MOFA নথি/prattyoyon সাধারণ নির্দেশিকা",
+      "service_name_en": "MOFA Document Attestation General Requirements",
+      "aliases": [
+        "MOFA attestation requirements",
+        "consular attestation Dhaka",
+        "MOFA Document Attestation General Requirements"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "attestation",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA) - Consular Section",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "student",
+        "expatriate"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [
+        "education",
+        "employment"
+      ],
+      "official_source": "https://file.mofa.gov.bd/media/ea12c69b-b861-499a-a54f-ff0fb0fd6539/Attestation/General-Requiremnts-for-Documents-Attestation.pdf",
+      "discovery_sources": [
+        "https://file.mofa.gov.bd/media/ea12c69b-b861-499a-a54f-ff0fb0fd6539/Attestation/General-Requiremnts-for-Documents-Attestation.pdf"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Documents originating in Bangladesh must be MOFA-attested before foreign mission use.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "mofa-education-attestation-chain",
+      "uuid": "02abf0f4-1d72-51fb-84f9-9ee37935a23b",
+      "service_name_bn": "শিক্ষা সনদ MOFA attestation (Ministry of Education chain)",
+      "service_name_en": "Educational Certificate MOFA Attestation (via Ministry of Education)",
+      "aliases": [
+        "degree attestation MOFA",
+        "education certificate attestation",
+        "Educational Certificate MOFA Attestation (via Ministry of Education)"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "attestation",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "student"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation",
+      "discovery_sources": [
+        "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Board/university certificates require Ministry of Education attestation before MOFA.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "mofa-mygov-services",
+      "uuid": "f26077d2-11d1-55fd-aef9-ddb773a79589",
+      "service_name_bn": "MOFA myGov সেবা ডিরেক্টরি",
+      "service_name_en": "MOFA myGov Service Directory",
+      "aliases": [
+        "MOFA myGov services",
+        "MOFA myGov Service Directory"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "consular",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://www.mygov.bd/serviceByOffice/?agent=np&domain=mofa.gov.bd",
+      "discovery_sources": [
+        "https://www.mygov.bd/serviceByOffice/?agent=np&domain=mofa.gov.bd"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "mofa-nv-loi-application",
+      "uuid": "4a048fcb-bf08-57a8-bd3a-927913371af0",
+      "service_name_bn": "Note Verbale / LOI আবেদন",
+      "service_name_en": "Note Verbale and Letter of Introduction (LOI) Application",
+      "aliases": [
+        "nvloi MOFA",
+        "diplomatic note application",
+        "Note Verbale and Letter of Introduction (LOI) Application"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "diplomatic",
+      "responsible_authority": "Ministry of Foreign Affairs (MOFA)",
+      "authority_id": null,
+      "target_user": [
+        "citizen",
+        "government",
+        "business"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://nvloi.mofa.gov.bd/",
+      "discovery_sources": [
+        "https://nvloi.mofa.gov.bd/"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "passport-application-status",
+      "uuid": "4fae8b78-f3c5-5ada-a37d-e529fc12806c",
+      "service_name_bn": "পাসপোর্ট আবেদনের অবস্থা",
+      "service_name_en": "Passport Application Status Check",
+      "aliases": [
+        "MRP status",
+        "passport tracking"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "status",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://passport.gov.bd/OnlineStatus.aspx",
+      "discovery_sources": [
+        "http://passport.gov.bd/OnlineStatus.aspx"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "passport-mrp-initial",
+      "uuid": "8bfc8da5-3491-569d-a90a-f6f9cb0de8a4",
+      "service_name_bn": "পাসপোর্ট প্রাথমিক/নতুন আবেদন (MRP)",
+      "service_name_en": "Machine Readable Passport - Initial Application",
+      "aliases": [
+        "new passport",
+        "DIP Form 1",
+        "MRP application"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "passport_new",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://passport.gov.bd/",
+      "discovery_sources": [
+        "http://passport.gov.bd/"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "passport-mrp-reissue",
+      "uuid": "08e67430-bb79-5fb1-80e8-cb994139caa8",
+      "service_name_bn": "পাসপোর্ট পুন:ইssue/সংশোধন (MRP)",
+      "service_name_en": "Machine Readable Passport - Reissue/Correction",
+      "aliases": [
+        "passport renewal",
+        "DIP Form 2",
+        "passport correction"
+      ],
+      "category": "PASSPORT_IMMIGRATION",
+      "subcategory": "passport_reissue",
+      "responsible_authority": "Department of Immigration and Passports (DIP)",
+      "authority_id": "dip",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "http://passport.gov.bd/UserHome.aspx",
+      "discovery_sources": [
+        "http://passport.gov.bd/UserHome.aspx"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    }
+  ]
+}

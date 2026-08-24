@@ -1,0 +1,349 @@
+{
+  "category": "IDENTITY",
+  "count": 12,
+  "services": [
+    {
+      "service_id": "nid-card-info-correction",
+      "uuid": "495608a8-c20b-5d97-a8b1-2fcd70ce6b13",
+      "service_name_bn": "জাতীয় পরিচয়পত্র তথ্য সংশোধন",
+      "service_name_en": "NID Card Information Correction",
+      "aliases": [
+        "NID correction",
+        "voter ID correction"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_correction",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "voter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/fees",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/fees"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Fee type: জাতীয় পরিচয়পত্র সংশোধন.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-claim-account",
+      "uuid": "dad17c6f-3257-5762-9f22-9f4c94159a02",
+      "service_name_bn": "অ্যাকাউন্ট দাবি (ক্লেইম)",
+      "service_name_en": "Claim NID Online Account",
+      "aliases": [
+        "claim account",
+        "existing NID registration online"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_portal",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "For citizens who already have NID but no online account.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-combined-correction",
+      "uuid": "c83729a8-31af-5c03-967c-4db996fb78c4",
+      "service_name_bn": "কার্ড ও অন্যান্য তথ্য একত্রে সংশোধন",
+      "service_name_en": "Combined NID and Other Information Correction",
+      "aliases": [
+        "full NID correction"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_correction",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "voter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/fees",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/fees"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Fee type: জাতীয় পরিচয়পত্র ও অন্যান্য তথ্য সংশোধন.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-download-copy",
+      "uuid": "87e554fc-2703-5b98-87b5-602c61df5512",
+      "service_name_bn": "এনআইডি কপি ডাউনলোড",
+      "service_name_en": "Download NID Card Copy",
+      "aliases": [
+        "NID PDF download",
+        "digital NID copy"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_delivery",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "voter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "For registered voters including those pending physical card delivery.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-expatriate-registration",
+      "uuid": "23d35a95-9cff-51ea-9849-734f21a59237",
+      "service_name_bn": "প্রবাসী বাংলাদেশি এনআইডি আবেদন",
+      "service_name_en": "Expatriate Bangladeshi NID Application",
+      "aliases": [
+        "NID for overseas Bangladeshis"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_registration",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "expatriate"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "OTP and notifications sent via email only for expatriate applicants.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-fee-calculator",
+      "uuid": "9601b2c8-731d-51a7-8bce-f95aa066b723",
+      "service_name_bn": "এনআইডি সেবা ফি হিসাব",
+      "service_name_en": "NID Service Fee Calculator",
+      "aliases": [
+        "NID fee estimate"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_portal",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "voter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/fees",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/fees"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-new-voter-registration",
+      "uuid": "3153e54e-d9af-5533-a70b-977e15a691f6",
+      "service_name_bn": "নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন",
+      "service_name_en": "New Voter and National ID Registration",
+      "aliases": [
+        "new NID",
+        "voter registration",
+        "NID application"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_registration",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/register-account?locale=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "For citizens aged 10+ without prior registration; biometric at upazila/thana election office.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-online-account-registration",
+      "uuid": "eabf86db-ed3c-5d0e-aa99-e7eb454b2836",
+      "service_name_bn": "ভোটার অনলাইন অ্যাকাউন্ট নিবন্ধন",
+      "service_name_en": "Voter Online Account Registration",
+      "aliases": [
+        "NID portal signup",
+        "NIDW registration"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_portal",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "voter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Requires NID number, mobile/email, DOB; face verification via NID Wallet app.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-other-info-correction",
+      "uuid": "1b6e5a02-2c6a-5ebb-941b-cfe3223fce66",
+      "service_name_bn": "অন্যান্য তথ্য সংশোধন",
+      "service_name_en": "NID Other Information Correction",
+      "aliases": [
+        "non-printed NID field correction"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_correction",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "voter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/fees",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/fees"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "For data not printed on card; fee type: অন্যান্য তথ্য সংশোধন.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-photo-signature-appointment",
+      "uuid": "8fcf6ed5-7362-5ee7-b7c5-b47f68b27fda",
+      "service_name_bn": "ছবি/স্বাক্ষর পরিবর্তনের অ্যাপয়েন্টমেন্ট",
+      "service_name_en": "Photo or Signature Change Appointment",
+      "aliases": [
+        "biometric update appointment"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_correction",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "voter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Requires in-person visit to NID registration wing for unclear photo cases.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-reissue-lost",
+      "uuid": "6185a2c2-59df-5df2-bb48-fe3e33d909c0",
+      "service_name_bn": "হারানো/নষ্ট এনআইডি পুনর্মুদ্রণ (রিইস্যু)",
+      "service_name_en": "NID Reissue for Lost or Damaged Card",
+      "aliases": [
+        "duplicate NID",
+        "lost voter ID",
+        "NID reprint"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "nid_reissue",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "voter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "Cannot combine reissue and correction in same application.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    },
+    {
+      "service_id": "nid-voter-area-change",
+      "uuid": "b8365689-842a-5c55-bd34-a729e317a311",
+      "service_name_bn": "ভোটার এলাকা/ঠিকানা পরিবর্তন (ফর্ম ১৩)",
+      "service_name_en": "Voter Area or Address Change (Form 13)",
+      "aliases": [
+        "address migration",
+        "voter transfer"
+      ],
+      "category": "IDENTITY",
+      "subcategory": "voter_registration",
+      "responsible_authority": "Bangladesh Election Commission (NID Wing)",
+      "authority_id": "ec-nid",
+      "target_user": [
+        "citizen",
+        "voter"
+      ],
+      "geographic_scope": "NATIONAL",
+      "lifecycle_stage": [],
+      "official_source": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "discovery_sources": [
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "notes": "For relocation to different voter area; spelling corrections use general correction form.",
+      "discovered_at": "2026-08-24",
+      "catalogue_version": "0.1.0-discovery"
+    }
+  ]
+}
