@@ -128,10 +128,11 @@ class KnowledgePublisher:
         self.staging_root = repo_root / "data" / "research" / "staging"
 
     def staging_dir(self, batch_id: str) -> Path:
-        # accept batch-01 or batch-01-identity-civil-registration
+        # accept batch-01, batch-02a-passport, or legacy aliases
         candidates = [
             self.staging_root / batch_id,
             self.staging_root / "batch-01" if batch_id.startswith("batch-01") else None,
+            self.staging_root / "batch-02a-passport" if batch_id.startswith("batch-02a") else None,
         ]
         for c in candidates:
             if c and c.exists():
@@ -350,6 +351,16 @@ class KnowledgePublisher:
         for e in evidence:
             evidence_by_claim.setdefault(e["claim_id"], []).append(e)
 
+        # Staging supersession keys (research_claim_key → superseded_by / supersedes)
+        superseded_by_key: dict[str, str | None] = {}
+        supersedes_key: dict[str, str | None] = {}
+        for c in claims:
+            rk = c["claim_id"]
+            superseded_by_key[rk] = c.get("superseded_by_claim_key")
+            supersedes_key[rk] = c.get("supersedes_claim_key")
+
+        claim_rows_by_key: dict[str, Claim] = {}
+
         for c in claims:
             catalogue_id = c.get("service_id")
             if not catalogue_id:
@@ -544,6 +555,7 @@ class KnowledgePublisher:
                     )
 
             report.synced_claims += 1
+            claim_rows_by_key[research_key] = claim
             await self._audit(
                 "sync_claim",
                 "claim",
@@ -553,7 +565,18 @@ class KnowledgePublisher:
                     "pipeline_status": status,
                     "verification_status": (verification or {}).get("verification_status"),
                 },
-            )
+                )
+
+        # Link supersession lineage after all claims exist
+        if not self.dry_run:
+            for rk, old_key in supersedes_key.items():
+                if not old_key:
+                    continue
+                current = claim_rows_by_key.get(rk)
+                prior = claim_rows_by_key.get(old_key)
+                if current and prior:
+                    current.supersedes_claim_id = prior.id
+                    prior.superseded_by_claim_id = current.id
 
         # Knowledge gaps from verification
         gaps_path = (
@@ -563,38 +586,53 @@ class KnowledgePublisher:
             gap_data = json.loads(gaps_path.read_text(encoding="utf-8"))
             gaps = gap_data.get("knowledge_gaps") or gap_data.get("gaps") or []
             for gap in gaps:
-                catalogue_id = gap.get("service_id")
-                if not catalogue_id and gap.get("related_claims"):
+                catalogue_ids: list[str | None] = []
+                if gap.get("service_id"):
+                    catalogue_ids = [gap.get("service_id")]
+                elif gap.get("service_ids"):
+                    catalogue_ids = list(gap.get("service_ids") or [])
+                elif gap.get("related_claims"):
                     rc = gap["related_claims"][0]
-                    catalogue_id = rc.split("::")[0] if "::" in rc else None
-                service = await self.resolve_runtime_service(catalogue_id, mappings, report)
-                if not service:
-                    continue
-                gap_type_raw = gap.get("gap_type") or gap.get("gap_id") or KnowledgeGapType.OTHER.value
-                gap_type = gap_type_raw.lower() if isinstance(gap_type_raw, str) else KnowledgeGapType.OTHER.value
-                if gap_type.startswith("missing_"):
-                    pass
-                elif gap_type.startswith("MISSING_"):
-                    gap_type = gap_type.lower()
-                existing_gap = await self.session.execute(
-                    select(KnowledgeGap).where(
-                        KnowledgeGap.service_id == service.id,
-                        KnowledgeGap.description == (gap.get("notes") or gap.get("gap_id") or "")[:500],
-                    ).limit(1)
-                )
-                if existing_gap.scalar_one_or_none():
-                    continue
-                self.session.add(
-                    KnowledgeGap(
-                        service_id=service.id,
-                        gap_type=gap_type if gap_type in {e.value for e in KnowledgeGapType} else KnowledgeGapType.OTHER.value,
-                        priority=gap.get("priority") or KnowledgeGapPriority.MEDIUM.value,
-                        description=gap.get("notes") or gap.get("gap_id") or gap.get("description") or "Gap",
-                        discovered_by="batch01_verification",
-                        status=KnowledgeGapStatus.OPEN.value,
-                        resolution_notes=json.dumps(gap, ensure_ascii=False)[:2000],
+                    catalogue_ids = [rc.split("::")[0] if "::" in rc else None]
+                for catalogue_id in catalogue_ids:
+                    if not catalogue_id:
+                        continue
+                    service = await self.resolve_runtime_service(catalogue_id, mappings, report)
+                    if not service:
+                        continue
+                    gap_type_raw = gap.get("gap_type") or gap.get("gap_id") or gap.get("classification") or KnowledgeGapType.OTHER.value
+                    gap_type = gap_type_raw.lower() if isinstance(gap_type_raw, str) else KnowledgeGapType.OTHER.value
+                    if gap_type.startswith("missing_"):
+                        pass
+                    elif gap_type.startswith("MISSING_"):
+                        gap_type = gap_type.lower()
+                    desc = (
+                        gap.get("notes")
+                        or gap.get("gap_id")
+                        or gap.get("description")
+                        or "Gap"
+                    )[:500]
+                    existing_gap = await self.session.execute(
+                        select(KnowledgeGap).where(
+                            KnowledgeGap.service_id == service.id,
+                            KnowledgeGap.description == desc,
+                        ).limit(1)
                     )
-                )
+                    if existing_gap.scalar_one_or_none():
+                        continue
+                    self.session.add(
+                        KnowledgeGap(
+                            service_id=service.id,
+                            gap_type=gap_type
+                            if gap_type in {e.value for e in KnowledgeGapType}
+                            else KnowledgeGapType.OTHER.value,
+                            priority=gap.get("priority") or KnowledgeGapPriority.MEDIUM.value,
+                            description=desc,
+                            discovered_by=f"{batch_id}_verification",
+                            status=KnowledgeGapStatus.OPEN.value,
+                            resolution_notes=json.dumps(gap, ensure_ascii=False)[:2000],
+                        )
+                    )
 
         if not self.dry_run:
             await self.session.flush()
@@ -650,6 +688,41 @@ class KnowledgePublisher:
             for claim in claims:
                 vrec = verification_index.get(claim.research_claim_key or "")
                 vstatus = (vrec or {}).get("verification_status")
+
+                # Never publish superseded historical claims as current authoritative facts
+                if claim.superseded_by_claim_id is not None:
+                    report.skipped += 1
+                    report.actions.append(
+                        {
+                            "action": "skip_superseded",
+                            "claim_id": str(claim.id),
+                            "research_claim_key": claim.research_claim_key,
+                            "superseded_by_claim_id": str(claim.superseded_by_claim_id),
+                        }
+                    )
+                    continue
+
+                # Explicit blocklist for batch-02a unresolved / rejected paths
+                rk = claim.research_claim_key or ""
+                if any(
+                    token in rk
+                    for token in (
+                        "c-payment-ekpay-official",
+                        "c-mission-weff-surcharge",
+                        "c-mrp-fee-page-historical",
+                        "c-abudhabi-epassport-page-empty",
+                    )
+                ):
+                    report.skipped += 1
+                    report.actions.append(
+                        {
+                            "action": "skip_blocklisted_claim",
+                            "claim_id": str(claim.id),
+                            "research_claim_key": rk,
+                            "reason": "Unresolved/rejected mission or payment path",
+                        }
+                    )
+                    continue
 
                 # PRACTICAL layer — store non-authoritative tips; never MUST NEED / fees
                 if claim.information_class == InformationClass.PRACTICAL.value:

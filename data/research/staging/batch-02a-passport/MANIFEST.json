@@ -1,0 +1,63 @@
+{
+  "batch_id": "batch-02a-passport",
+  "normalized_at": "2026-08-24",
+  "claim_count": 78,
+  "original_claims": 55,
+  "gap_closure_claims": 23,
+  "fee_tiers_staged": 12,
+  "supersession_pairs": [
+    {
+      "old": "epassport-fee-payment::c-fee-48p-5y-regular",
+      "current": "gap-closure::c-fee-domestic-48p_5y-regular-current"
+    },
+    {
+      "old": "epassport-fee-payment::c-fee-48p-10y-regular",
+      "current": "gap-closure::c-fee-domestic-48p_10y-regular-current"
+    },
+    {
+      "old": "epassport-fee-payment::c-fee-64p-5y-regular",
+      "current": "gap-closure::c-fee-domestic-64p_5y-regular-current"
+    },
+    {
+      "old": "epassport-fee-payment::c-fee-64p-10y-regular",
+      "current": "gap-closure::c-fee-domestic-64p_10y-regular-current"
+    },
+    {
+      "old": "epassport-fee-payment::c-payment-ekpay-official",
+      "current": "gap-closure::c-payment-gateways-achallan-dgepay-shurjopay"
+    },
+    {
+      "old": "epassport-fee-payment::c-payment-ekpay-official",
+      "current": "gap-closure::c-payment-gateways-achallan-dgepay-shurjopay"
+    },
+    {
+      "old": "epassport-fee-payment::c-fee-48p-5y-regular",
+      "current": "gap-closure::c-fee-domestic-48p_5y-regular-current"
+    },
+    {
+      "old": "epassport-fee-payment::c-fee-48p-10y-regular",
+      "current": "gap-closure::c-fee-domestic-48p_10y-regular-current"
+    },
+    {
+      "old": "epassport-fee-payment::c-fee-64p-5y-regular",
+      "current": "gap-closure::c-fee-domestic-64p_5y-regular-current"
+    },
+    {
+      "old": "epassport-fee-payment::c-fee-64p-10y-regular",
+      "current": "gap-closure::c-fee-domestic-64p_10y-regular-current"
+    }
+  ],
+  "pipeline_status_counts": {
+    "PARTIALLY_VERIFIED": 37,
+    "VERIFIED": 32,
+    "OUTDATED": 5,
+    "UNVERIFIED": 3,
+    "REJECTED": 1
+  },
+  "publication_rules": [
+    "Publish only VERIFIED + OFFICIAL + complete evidence",
+    "Skip OUTDATED/PARTIAL/UNVERIFIED/REJECTED as authoritative",
+    "Skip claims with superseded_by_claim_key",
+    "July 2026 fees from gap-closure browser snapshot only"
+  ]
+}

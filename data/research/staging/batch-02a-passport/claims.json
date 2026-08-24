@@ -1,0 +1,2559 @@
+{
+  "claims": [
+    {
+      "claim_id": "epassport-new-application::c-apply-online",
+      "service_id": "epassport-new-application",
+      "claim_text": "New e-Passport applications are submitted online at www.epassport.gov.bd/onboarding.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-apply-online-src-dip-home",
+        "ev-epassport-new-application::c-apply-online-src-epassport-landing",
+        "ev-epassport-new-application::c-apply-online-src-epassport-onboarding"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Official epassport.gov.bd instructional routes return Angular SPA shells from live fetch, Wayback, and verifier network (onboarding 403). Indexed search excerpts cite the official URL but are NOT equivalent to direct page evidence per verification policy. Onboarding URL is catalogue-official but returned 403 here; cannot confirm Step-1 UI text live. DIP Tier-1 link corroborates e-Passport as official channel."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-no-attestation-online",
+      "service_id": "epassport-new-application",
+      "claim_text": "Online e-Passport application does not require attested documents or photo upload at application stage.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-no-attestation-online-src-epassport-instructions"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Official epassport.gov.bd instructional routes return Angular SPA shells from live fetch, Wayback, and verifier network (onboarding 403). Indexed search excerpts cite the official URL but are NOT equivalent to direct page evidence per verification policy. Wording matches indexed official instructions URL; no direct HTML/PDF snapshot."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-id-nid-or-brc",
+      "service_id": "epassport-new-application",
+      "claim_text": "Applicant must use NID or 17-digit online-verifiable Birth Registration Certificate (English) matching portal rules.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-instructions",
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-id-nid-or-brc-src-epassport-instructions",
+        "ev-epassport-new-application::c-id-nid-or-brc-src-mofa-dubai-epassport",
+        "ev-epassport-new-application::c-id-nid-or-brc-src-epassport-enrollment-docs"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Tier-2 Dubai page live-confirms NID/BRC requirement. Tier-1 instructions text only via index excerpt."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-minor-parent-nid",
+      "service_id": "epassport-new-application",
+      "claim_text": "Applicants under 18 without own NID must provide father or mother NID number in application.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "age",
+        "op": "lt",
+        "value": 18
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-minor-parent-nid-src-epassport-instructions"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Official epassport.gov.bd instructional routes return Angular SPA shells from live fetch, Wayback, and verifier network (onboarding 403). Indexed search excerpts cite the official URL but are NOT equivalent to direct page evidence per verification policy. Conditional rule plausible and indexed; not directly snapshotted."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-minor-3r-photo",
+      "service_id": "epassport-new-application",
+      "claim_text": "Applicants under 6 years must submit 3R size lab-print photo at enrollment.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "age",
+        "op": "lt",
+        "value": 6
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-minor-3r-photo-src-epassport-instructions"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Official epassport.gov.bd instructional routes return Angular SPA shells from live fetch, Wayback, and verifier network (onboarding 403). Indexed search excerpts cite the official URL but are NOT equivalent to direct page evidence per verification policy. Indexed-only evidence for age<6 photo rule."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-police-station-select",
+      "service_id": "epassport-new-application",
+      "claim_text": "Applicant selects nearest police station to present address during online onboarding.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-police-station-select-src-epassport-onboarding"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Police station selection is standard e-Passport onboarding step per indexed portal UI; live onboarding blocked; not independently readable."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-govt-noc",
+      "service_id": "epassport-new-application",
+      "claim_text": "Government employees must provide GO/NOC at enrollment when applicable.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "employment_type",
+        "op": "eq",
+        "value": "government"
+      },
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-govt-noc-src-epassport-enrollment-docs",
+        "ev-epassport-new-application::c-govt-noc-src-epassport-instructions"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Enrollment notice list indexed (updated 7 May 2025 on page label); SPA body not captured."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-enrollment-docs-list",
+      "service_id": "epassport-new-application",
+      "claim_text": "Enrollment requires printed application summary with appointment, original NID/BRC, printed application form, previous passport if any.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-enrollment-docs-list-src-epassport-enrollment-docs"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Notice 34 document checklist matches claim; evidence is search-index excerpt only (Tier-1 URL)."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-five-step-workflow",
+      "service_id": "epassport-new-application",
+      "claim_text": "Official portal documents a five-step e-Passport application workflow from online apply through enrollment to collection.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-five-steps",
+        "src-epassport-landing"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-five-step-workflow-src-epassport-landing"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Five-step page existence inferred from landing route reference; step content not captured."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-expatriate-onboarding-no",
+      "service_id": "epassport-new-application",
+      "claim_text": "Expatriate applicants select 'No' for applying from Bangladesh and choose mission/country during onboarding Step 1.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding",
+        "src-mofa-abudhabi-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-expatriate-onboarding-no-src-epassport-onboarding",
+        "ev-epassport-new-application::c-expatriate-onboarding-no-src-mofa-dubai-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Expatriate flow (No → mission/country) indexed on onboarding; live page blocked. Dubai Tier-2 corroborates abroad application via epassport.gov.bd."
+      }
+    },
+    {
+      "claim_id": "epassport-new-application::c-brc-everify",
+      "service_id": "epassport-new-application",
+      "claim_text": "Mission guidance requires 17-digit online-verifiable Birth Registration Certificate (English) verifiable at everify.bdris.gov.bd when BRC used instead of NID.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "id_document_type",
+        "op": "eq",
+        "value": "brc"
+      },
+      "source_ids": [
+        "src-mofa-dubai-epassport",
+        "src-mofa-abudhabi-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-brc-everify-src-mofa-dubai-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Tier-2 mission page live-confirms everify requirement when BRC used."
+      }
+    },
+    {
+      "claim_id": "epassport-reissue::c-reissue-portal",
+      "service_id": "epassport-reissue",
+      "claim_text": "e-Passport re-issue applications are made via epassport.gov.bd landing Apply Online for e-Passport / Re-Issue.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-landing"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-reissue-portal-src-epassport-landing",
+        "ev-epassport-reissue::c-reissue-portal-src-dip-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Re-issue entry on landing not readable in shell; official channel confirmed via DIP."
+      }
+    },
+    {
+      "claim_id": "epassport-reissue::c-show-previous-passport",
+      "service_id": "epassport-reissue",
+      "claim_text": "For re-issue, original previous passport must be presented at enrollment.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "application_type",
+        "op": "in",
+        "value": [
+          "reissue",
+          "renewal"
+        ]
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-show-previous-passport-src-epassport-enrollment-docs",
+        "ev-epassport-reissue::c-show-previous-passport-src-mofa-dubai-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Enrollment/previous passport requirement supported by notice index + Dubai live page."
+      }
+    },
+    {
+      "claim_id": "epassport-reissue::c-lost-gd-copy",
+      "service_id": "epassport-reissue",
+      "claim_text": "For lost passport re-issue, GD copy must be presented/submitted at application.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "application_type",
+        "op": "eq",
+        "value": "lost"
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-lost-gd-copy-src-epassport-instructions"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Official epassport.gov.bd instructional routes return Angular SPA shells from live fetch, Wayback, and verifier network (onboarding 403). Indexed search excerpts cite the official URL but are NOT equivalent to direct page evidence per verification policy. Lost-passport GD rule indexed on Tier-1 instructions; not directly snapshotted."
+      }
+    },
+    {
+      "claim_id": "epassport-reissue::c-lost-gd-immediate",
+      "service_id": "epassport-reissue",
+      "claim_text": "If passport is lost or damaged, citizen should file GD promptly at nearest police station before re-application.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-lost-gd-immediate-src-epassport-instructions"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Procedural advice indexed on Tier-1 URL; treat as official guidance pending direct capture."
+      }
+    },
+    {
+      "claim_id": "epassport-reissue::c-correction-extra-docs",
+      "service_id": "epassport-reissue",
+      "claim_text": "Information correction may require additional supporting documents depending on correction type.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "application_type",
+        "op": "eq",
+        "value": "correction"
+      },
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-correction-extra-docs-src-epassport-enrollment-docs"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Conditional correction docs explicitly deferred to case type in notice index."
+      }
+    },
+    {
+      "claim_id": "epassport-reissue::c-mission-lost-report",
+      "service_id": "epassport-reissue",
+      "claim_text": "Expatriate lost passport applicants at missions may need local police lost report (mission-specific).",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_location",
+        "op": "eq",
+        "value": "foreign_mission"
+      },
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-mission-lost-report-src-mofa-dubai-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Mission-specific lost report rule live-verified for Dubai/UAE context."
+      }
+    },
+    {
+      "claim_id": "epassport-reissue::c-dubai-mrp-validity-limit",
+      "service_id": "epassport-reissue",
+      "claim_text": "Dubai consulate states e-Passport not accepted if existing MRP has more than one year validity remaining.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_location",
+        "op": "eq",
+        "value": "dubai_mission"
+      },
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-dubai-mrp-validity-limit-src-mofa-dubai-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Live Dubai consulate page explicitly states MRP validity gate."
+      }
+    },
+    {
+      "claim_id": "epassport-reissue::c-mission-biometric-presence",
+      "service_id": "epassport-reissue",
+      "claim_text": "Mission pages state physical presence mandatory for biometric enrollment (age thresholds vary by mission; Dubai cites under-5 exemption).",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mofa-dubai-epassport",
+        "src-mofa-singapore-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-mission-biometric-presence-src-mofa-dubai-epassport",
+        "ev-epassport-reissue::c-mission-biometric-presence-src-mofa-singapore-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Dubai live-verified under-5 exemption. Singapore source URL 404 — cannot verify Singapore-specific wording; do not merge into universal rule."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-48p-5y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery fee BDT 4025 (incl. 15% VAT).",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "OUTDATED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 4025,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 48,
+        "validity_years": 5,
+        "regular_bdt": 4025,
+        "express_bdt": 6325,
+        "super_express_bdt": 8625
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-48p-5y-regular-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": "gap-closure::c-fee-domestic-48p_5y-regular-current",
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "OUTDATED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Amount matches indexed excerpt of Tier-1 fee URL, but page last-updated date is March 2023 and no newer official fee gazette/notice superseding it was captured in this verification pass. Do not publish as current fee without fresh Tier-1 snapshot or calculator."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-48p-10y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 48-page / 10-year e-Passport regular delivery fee BDT 5750 (incl. 15% VAT).",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "OUTDATED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 5750,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 48,
+        "validity_years": 10,
+        "regular_bdt": 5750,
+        "express_bdt": 8050,
+        "super_express_bdt": 10350
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-48p-10y-regular-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": "gap-closure::c-fee-domestic-48p_10y-regular-current",
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "OUTDATED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Amount matches indexed excerpt of Tier-1 fee URL, but page last-updated date is March 2023 and no newer official fee gazette/notice superseding it was captured in this verification pass. Do not publish as current fee without fresh Tier-1 snapshot or calculator."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-64p-5y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 64-page / 5-year e-Passport regular delivery fee BDT 6325 (incl. 15% VAT).",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "OUTDATED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 6325,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 64,
+        "validity_years": 5,
+        "regular_bdt": 6325,
+        "express_bdt": 8625,
+        "super_express_bdt": 12075
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-64p-5y-regular-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": "gap-closure::c-fee-domestic-64p_5y-regular-current",
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "OUTDATED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Amount matches indexed excerpt of Tier-1 fee URL, but page last-updated date is March 2023 and no newer official fee gazette/notice superseding it was captured in this verification pass. Do not publish as current fee without fresh Tier-1 snapshot or calculator."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-64p-10y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 64-page / 10-year e-Passport regular delivery fee BDT 8050 (incl. 15% VAT).",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "OUTDATED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 8050,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 64,
+        "validity_years": 10,
+        "regular_bdt": 8050,
+        "express_bdt": 10350,
+        "super_express_bdt": 13800
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-64p-10y-regular-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": "gap-closure::c-fee-domestic-64p_10y-regular-current",
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "OUTDATED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Amount matches indexed excerpt of Tier-1 fee URL, but page last-updated date is March 2023 and no newer official fee gazette/notice superseding it was captured in this verification pass. Do not publish as current fee without fresh Tier-1 snapshot or calculator."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-vat-included",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Published inside-Bangladesh e-Passport fees include 15% VAT.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-vat-included-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "VAT inclusion stated on indexed Tier-1 fee page; direct page not captured."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-mission-general-usd",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Mission general applicant fees published in USD by page count, validity, and delivery tier on official fee page.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-mission-general-usd-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Mission USD schedule structure indexed; individual amounts not independently snapshotted."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-mission-labor-student-usd",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Mission labor/student applicant fees published separately in USD on official fee page.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-mission-labor-student-usd-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Separate labor/student fee table referenced on indexed Tier-1 page; amounts not snapshotted."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-payment-online-offline",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Fees may be paid online (payment gateways) or offline via bank/A-Challan per official instructions.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-payment-online-offline-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Payment channel types indexed on Tier-1 fee page; gateway enumeration incomplete."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-payment-slip-offline-only",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Payment slip required at enrollment for offline payment only.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "payment_method",
+        "op": "eq",
+        "value": "offline"
+      },
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-payment-slip-offline-only-src-epassport-enrollment-docs"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Conditional payment slip rule in notice index; SPA not captured."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-practical-ekpay-mention",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Community guides reference ekpay and e-Challan verification for online payments; confirm current gateway list on official portal.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-practical-qna-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-practical-ekpay-mention-src-practical-qna-fees",
+        "ev-epassport-fee-payment::c-practical-ekpay-mention-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "PRACTICAL claim appropriately warns to confirm gateways; not promoted to MUST_NEED."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-regular-delivery-sla",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Regular delivery stated as within 15 working days / 21 days from biometric enrolment date on official fee page.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-regular-delivery-sla-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "SLA wording indexed on fee page (March 2023 label); not live-snapshotted."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-payment-ekpay-official",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Official fee page states fees can be paid online via ekpay platform or offline at participating banks using A-Challan.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-payment-ekpay-official-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": "gap-closure::c-payment-gateways-achallan-dgepay-shurjopay",
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "ekpay named on indexed Tier-1 fee page; full gateway list not verified."
+      }
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-mission-weff-surcharge",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Abu Dhabi mission page notes 10% surcharge on consular fees under Wage Earners' Welfare Board Act 2018 Section 14(e).",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_location",
+        "op": "eq",
+        "value": "foreign_mission"
+      },
+      "source_ids": [
+        "src-mofa-abudhabi-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-mission-weff-surcharge-src-mofa-abudhabi-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "10% WEWB surcharge not independently confirmed; Abu Dhabi page content unavailable."
+      }
+    },
+    {
+      "claim_id": "epassport-enrollment-appointment::c-appointment-required",
+      "service_id": "epassport-enrollment-appointment",
+      "claim_text": "Biometric enrollment at passport office requires printed application summary including appointment when scheduled.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-enrollment-docs",
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-enrollment-appointment::c-appointment-required-src-epassport-enrollment-docs"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Appointment/summary requirement in notice index; biometric appointment mechanics not snapshotted."
+      }
+    },
+    {
+      "claim_id": "epassport-enrollment-appointment::c-bring-original-id",
+      "service_id": "epassport-enrollment-appointment",
+      "claim_text": "Original NID or Birth Certificate must be carried to enrollment.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-enrollment-appointment::c-bring-original-id-src-epassport-enrollment-docs",
+        "ev-epassport-enrollment-appointment::c-bring-original-id-src-mofa-dubai-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Original ID at enrollment supported by notice index + Dubai live page."
+      }
+    },
+    {
+      "claim_id": "epassport-application-status::c-status-portal",
+      "service_id": "epassport-application-status",
+      "claim_text": "e-Passport application status is checked at epassport.gov.bd authorization application-status.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-status"
+      ],
+      "evidence_ids": [
+        "ev-epassport-application-status::c-status-portal-src-dip-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Status route not independently tested (SPA); official URL from catalogue + DIP link family."
+      }
+    },
+    {
+      "claim_id": "epassport-application-status::c-status-oid-dob",
+      "service_id": "epassport-application-status",
+      "claim_text": "Status check requires Application ID or Online Registration ID (OID) and date of birth.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-status"
+      ],
+      "evidence_ids": [],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Input field requirements not captured from live or archived SPA."
+      }
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-2-days",
+      "service_id": "epassport-urgent-super-express",
+      "claim_text": "Super Express (urgent) passport issued within 2 working days under stated conditions.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-2-days-src-epassport-urgent",
+        "ev-epassport-urgent-super-express::c-super-express-2-days-src-epassport-fees"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "2-day SLA indexed on official urgent + fee pages (Oct 2022 / Mar 2023 labels); SPA not captured."
+      }
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-domestic-only",
+      "service_id": "epassport-urgent-super-express",
+      "claim_text": "Super Express service not available at Bangladesh Missions abroad.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-domestic-only-src-epassport-urgent"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Mission exclusion indexed on urgent page; not directly snapshotted."
+      }
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-pickup-agargaon",
+      "service_id": "epassport-urgent-super-express",
+      "claim_text": "Super Express passports picked up only at Divisional Passport and Visa Office, Agargaon, Dhaka.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-pickup-agargaon-src-epassport-urgent"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Agargaon-only pickup indexed on urgent page."
+      }
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-mrp-no-address-change",
+      "service_id": "epassport-urgent-super-express",
+      "claim_text": "Current note: Super Express available only for e-Passport issuance where applicant already holds MRP without changing permanent address.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "super_express_eligibility",
+        "op": "requires",
+        "value": "existing_mrp_no_permanent_address_change"
+      },
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-mrp-no-address-change-src-epassport-urgent"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Conflict #1 resolved as conditional eligibility (see conflicts_resolution.json). Headline 'any citizen' vs NOTE is applicant-path distinction, not publishable universal rule."
+      }
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-fee-tier",
+      "service_id": "epassport-urgent-super-express",
+      "claim_text": "Super Express delivery uses Super Express fee tier on official fee schedule.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees",
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-fee-tier-src-epassport-fees",
+        "ev-epassport-urgent-super-express::c-super-express-fee-tier-src-epassport-urgent"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Fee tier existence supported; specific super-express amounts marked OUTDATED separately."
+      }
+    },
+    {
+      "claim_id": "epassport-rpo-secretariat::c-rpo-secretariat-form",
+      "service_id": "epassport-rpo-secretariat",
+      "claim_text": "RPO Bangladesh Secretariat application guidance published on epassport application-form instructions page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-app-form"
+      ],
+      "evidence_ids": [
+        "ev-epassport-rpo-secretariat::c-rpo-secretariat-form-src-epassport-landing"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Secretariat guidance route linked from landing; page body not captured (SPA)."
+      }
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-form1",
+      "service_id": "passport-mrp-initial",
+      "claim_text": "Initial MRP applications use DIP Form 1 via passport.gov.bd online portal.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-form1-src-mrp-home",
+        "ev-passport-mrp-initial::c-mrp-form1-src-dip-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Live MRP portal and DIP both confirm Form 1 initial channel operational."
+      }
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-email-credentials",
+      "service_id": "passport-mrp-initial",
+      "claim_text": "MRP online application provides Application ID and Password by email after first page save.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-email-credentials-src-mrp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Explicit English instruction bullet on live MRP home page."
+      }
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-biometric-visit",
+      "service_id": "passport-mrp-initial",
+      "claim_text": "After online submit, applicant must visit passport office with printed form for biometric enrollment.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-biometric-visit-src-mrp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Live MRP portal instruction."
+      }
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-govt-single-form",
+      "service_id": "passport-mrp-initial",
+      "claim_text": "Certain government/retired/surrendered categories submit one form copy; others submit two copies (per MRP portal notice).",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_category",
+        "op": "in",
+        "value": [
+          "government",
+          "retired_government",
+          "surrendered"
+        ]
+      },
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-govt-single-form-src-mrp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Live Bangla instruction on MRP home distinguishes form copy count by category."
+      }
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-attested-copies",
+      "service_id": "passport-mrp-initial",
+      "claim_text": "MRP pathway requires attested photocopies of NID/BRC and relevant certificates (contrasts with e-Passport no-attestation rule).",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home",
+        "src-mrp-form-pdf"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-attested-copies-src-mrp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Live MRP portal explicitly requires attestation — contrasts with e-Passport no-attestation rule."
+      }
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-appointment-validity",
+      "service_id": "passport-mrp-initial",
+      "claim_text": "MRP online application appointment validity stated as 5 days from system generation (per MRP portal).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "REJECTED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-reissue"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-appointment-validity-src-mrp-home",
+        "ev-passport-mrp-initial::c-mrp-appointment-validity-src-mrp-reissue"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "REJECTED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Claim states 5 days; live portal states 15 days. Wrong duration and wrong source attribution."
+      }
+    },
+    {
+      "claim_id": "passport-mrp-reissue::c-mrp-form2",
+      "service_id": "passport-mrp-reissue",
+      "claim_text": "MRP reissue/correction/alternation uses DIP Form 2 via passport.gov.bd UserHome.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-reissue"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-reissue::c-mrp-form2-src-mrp-reissue"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Live MRP UserHome confirms Form 2 channel."
+      }
+    },
+    {
+      "claim_id": "passport-application-status::c-mrp-status-portal",
+      "service_id": "passport-application-status",
+      "claim_text": "Legacy MRP application status checked at passport.gov.bd OnlineStatus.aspx.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-status"
+      ],
+      "evidence_ids": [
+        "ev-passport-application-status::c-mrp-status-portal-src-mrp-status"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Live status portal reachable and matches claim URL."
+      }
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-pathway-exists",
+      "service_id": "police-passport-police-verification",
+      "claim_text": "Passport police verification is part of e-Passport processing pathway via Special Branch.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-home",
+        "src-police-sb"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-pathway-exists-src-mofa-dubai-epassport",
+        "ev-police-passport-police-verification::c-pv-pathway-exists-src-police-charter",
+        "ev-police-passport-police-verification::c-pv-pathway-exists-src-dip-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "PV pathway exists per citizen charter and Dubai mission. Universal requirement for all e-Passport applicants NOT verified — Dubai states first-time only; Feb 2025 policy changes reported in news but no Tier-1 circular captured here."
+      }
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-station-onboarding",
+      "service_id": "police-passport-police-verification",
+      "claim_text": "Applicant selects nearest police station during e-Passport onboarding for verification routing.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-station-onboarding-src-epassport-onboarding"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Police station selection indexed; onboarding not readable live."
+      }
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-delay-note",
+      "service_id": "police-passport-police-verification",
+      "claim_text": "Mission pages note police verification timing can affect e-Passport processing duration.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-delay-note-src-mofa-dubai-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "PRACTICAL timing impact supported by mission text; not an official SLA."
+      }
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-charter-sla",
+      "service_id": "police-passport-verification",
+      "claim_text": "Citizen charter cites normal passport verification 15-21 days and urgent 7 days (requires live charter verification).",
+      "claim_type": "other",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-charter-sla-src-police-charter"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "Live citizen charter table row explicitly states passport verification SLAs."
+      }
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-district-scope",
+      "service_id": "police-passport-verification",
+      "claim_text": "District-level passport verification service under Bangladesh Police citizen charter.",
+      "claim_type": "other",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-district-scope-src-police-charter"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:08:38.715778+00:00",
+        "reasoning": "District/SB scope live-verified in citizen charter."
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-epassport-fee-page-current-date",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Official e-Passport fee page displays Last updated: 12 July 2026 as of gap-closure retrieval.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-epassport-fee-page-current-date-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459033+00:00",
+        "reasoning": "Last updated: 12 July 2026 on https://www.epassport.gov.bd/instructions/passport-fees (browser-rendered)."
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-payment-gateways-achallan-dgepay-shurjopay",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Official fee page (July 2026) lists online payment via A-Challan, DGePay, and ShurjoPay; offline via A-Challan at banks.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-payment-gateways-achallan-dgepay-shurjopay-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": "epassport-fee-payment::c-payment-ekpay-official",
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459054+00:00",
+        "reasoning": "Online: Through \"A-Challan\", \"DGePay\" and \"ShurjoPay\" ... Offline: ... through A-Challan"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-48p_5y-regular-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery fee BDT 4,025 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 4025,
+        "currency": "BDT",
+        "pages": 48,
+        "validity_years": 5,
+        "delivery": "regular",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-48p_5y-regular-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": "epassport-fee-payment::c-fee-48p-5y-regular",
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459068+00:00",
+        "reasoning": "Regular delivery: TK 4,025"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-48p_5y-express-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 48-page / 5-year e-Passport express delivery fee BDT 6,325 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 6325,
+        "currency": "BDT",
+        "pages": 48,
+        "validity_years": 5,
+        "delivery": "express",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-48p_5y-express-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459077+00:00",
+        "reasoning": "Express delivery: TK 6,325"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-48p_5y-super_express-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 48-page / 5-year e-Passport super express delivery fee BDT 8,625 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 8625,
+        "currency": "BDT",
+        "pages": 48,
+        "validity_years": 5,
+        "delivery": "super_express",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-48p_5y-super_express-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459087+00:00",
+        "reasoning": "Super Express delivery: TK 8,625"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-48p_10y-regular-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 48-page / 10-year e-Passport regular delivery fee BDT 5,750 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 5750,
+        "currency": "BDT",
+        "pages": 48,
+        "validity_years": 10,
+        "delivery": "regular",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-48p_10y-regular-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": "epassport-fee-payment::c-fee-48p-10y-regular",
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459094+00:00",
+        "reasoning": "Regular delivery: TK 5,750"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-48p_10y-express-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 48-page / 10-year e-Passport express delivery fee BDT 8,050 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 8050,
+        "currency": "BDT",
+        "pages": 48,
+        "validity_years": 10,
+        "delivery": "express",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-48p_10y-express-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459102+00:00",
+        "reasoning": "Express delivery: TK 8,050"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-48p_10y-super_express-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 48-page / 10-year e-Passport super express delivery fee BDT 10,350 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 10350,
+        "currency": "BDT",
+        "pages": 48,
+        "validity_years": 10,
+        "delivery": "super_express",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-48p_10y-super_express-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459108+00:00",
+        "reasoning": "Super Express delivery: TK 10,350"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-64p_5y-regular-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 64-page / 5-year e-Passport regular delivery fee BDT 6,325 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 6325,
+        "currency": "BDT",
+        "pages": 64,
+        "validity_years": 5,
+        "delivery": "regular",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-64p_5y-regular-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": "epassport-fee-payment::c-fee-64p-5y-regular",
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459116+00:00",
+        "reasoning": "Regular delivery: TK 6,325"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-64p_5y-express-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 64-page / 5-year e-Passport express delivery fee BDT 8,625 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 8625,
+        "currency": "BDT",
+        "pages": 64,
+        "validity_years": 5,
+        "delivery": "express",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-64p_5y-express-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459124+00:00",
+        "reasoning": "Express delivery: TK 8,625"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-64p_5y-super_express-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 64-page / 5-year e-Passport super express delivery fee BDT 12,075 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 12075,
+        "currency": "BDT",
+        "pages": 64,
+        "validity_years": 5,
+        "delivery": "super_express",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-64p_5y-super_express-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459131+00:00",
+        "reasoning": "Super Express delivery: TK 12,075"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-64p_10y-regular-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 64-page / 10-year e-Passport regular delivery fee BDT 8,050 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 8050,
+        "currency": "BDT",
+        "pages": 64,
+        "validity_years": 10,
+        "delivery": "regular",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-64p_10y-regular-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": "epassport-fee-payment::c-fee-64p-10y-regular",
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459138+00:00",
+        "reasoning": "Regular delivery: TK 8,050"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-64p_10y-express-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 64-page / 10-year e-Passport express delivery fee BDT 10,350 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 10350,
+        "currency": "BDT",
+        "pages": 64,
+        "validity_years": 10,
+        "delivery": "express",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-64p_10y-express-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459145+00:00",
+        "reasoning": "Express delivery: TK 10,350"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-fee-domestic-64p_10y-super_express-current",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Inside Bangladesh: 64-page / 10-year e-Passport super express delivery fee BDT 13,800 (incl. 15% VAT) per official fee page updated 12 July 2026.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": {
+        "amount": 13800,
+        "currency": "BDT",
+        "pages": 64,
+        "validity_years": 10,
+        "delivery": "super_express",
+        "effective_evidence_date": "2026-07-12",
+        "vat_included": true
+      },
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-fees-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-fee-domestic-64p_10y-super_express-current-src-gap-epassport-fees-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459153+00:00",
+        "reasoning": "Super Express delivery: TK 13,800"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-pv-requirement-classification",
+      "service_id": "police-passport-police-verification",
+      "claim_text": "Police verification requirement for e-Passport is CONDITIONAL: Dubai mission (Tier 2) states PV is mandatory for first-time Bangladeshi passport/e-Passport applications and may not be required when no PV is needed and there is no NID/BRC data mismatch on reissue.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-pv-requirement-classification-src-mofa-dubai-epassport"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459160+00:00",
+        "reasoning": "For first-time ... police verification is mandatory ... If no police verification is required ... expected within 15 days (domestic) / 4-6 weeks (mission)."
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-onboarding-police-station-verified",
+      "service_id": "police-passport-police-verification",
+      "claim_text": "e-Passport onboarding Step 1 requires selecting the police station nearest to present address (domestic applicants).",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-onboarding-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-onboarding-police-station-verified-src-gap-epassport-onboarding-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459168+00:00",
+        "reasoning": "Select the police station nearest to your present address"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-epassport-status-check-fields",
+      "service_id": "epassport-application-status",
+      "claim_text": "e-Passport portal FAQ instructs applicants to use Status Check on the home page with Application ID or Online Registration ID plus applicant date of birth.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-faq-api"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-epassport-status-check-fields-src-gap-epassport-faq-api"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459175+00:00",
+        "reasoning": "Go to the Status Check on the ePassport portal home page. Enter your Application ID or Online Registration ID and date of birth"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-mrp-status-portal-fields",
+      "service_id": "passport-application-status",
+      "claim_text": "MRP online status portal at passport.gov.bd/OnlineStatus.aspx requires Enrolment ID and Date of Birth plus captcha.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-status"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-mrp-status-portal-fields-src-mrp-status"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459181+00:00",
+        "reasoning": "Enrolment ID: * Date of Birth: * Enter above Captcha code"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-lost-passport-gd-instructions-2026",
+      "service_id": "epassport-reissue",
+      "claim_text": "Official e-Passport instructions (updated 3 August 2026) require filing GD at nearest police station for lost/stolen passport and submitting GD copy with re-application.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-instructions-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-lost-passport-gd-instructions-2026-src-gap-epassport-instructions-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459188+00:00",
+        "reasoning": "পাসপোর্ট হারিয়ে গেলে ... নিকটস্থ থানায় জিডি ... জিডি কপিসহ আবেদনপত্র দাখিল"
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-damaged-passport-not-distinct",
+      "service_id": "epassport-reissue",
+      "claim_text": "Official e-Passport instructions (Aug 2026) enumerate lost/stolen passport GD rules but do not separately enumerate damaged-passport documentary rules.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-instructions-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-damaged-passport-not-distinct-src-gap-epassport-instructions-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459196+00:00",
+        "reasoning": "Lost/stolen GD rule present at item 20; no distinct damaged-passport section in rendered instructions."
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-abudhabi-epassport-page-empty-cms",
+      "service_id": "epassport-fee-payment",
+      "claim_text": "Abu Dhabi mission static page for E-Passport Issue/Reissue exists (last content update 15 Oct 2024) but rendered instructional body is empty in gap-closure browser capture.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gap-abudhabi-epassport-static"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-abudhabi-epassport-page-empty-cms-src-gap-abudhabi-epassport-static"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459202+00:00",
+        "reasoning": "Title 'E-Passport Issue/ Reissue:' with 'Content: Pages' only; no fee/WEF surcharge text in live render."
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-mrp-fee-page-historical-empty",
+      "service_id": "passport-mrp-initial",
+      "claim_text": "DIP official MRP fee (Bangladesh) page last content-updated 15 February 2017; captured page contains title only with no machine-readable fee table in browser render.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "OUTDATED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gap-dip-mrp-fee-page"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-mrp-fee-page-historical-empty-src-gap-dip-mrp-fee-page"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "OUTDATED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459211+00:00",
+        "reasoning": "মেশিন রিডেবল পাসপোর্ট (MRP) ফি (বাংলাদেশ) — content last updated Feb 2017; no fee amounts in visible text."
+      }
+    },
+    {
+      "claim_id": "gap-closure::c-super-express-updated-june-2026",
+      "service_id": "epassport-urgent-super-express",
+      "claim_text": "Urgent/Super Express instruction page last updated 3 June 2026; states any citizen may apply for Super Express domestically; pickup only at Agargaon.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gap-epassport-urgent-browser"
+      ],
+      "evidence_ids": [
+        "ev-gap-closure::c-super-express-updated-june-2026-src-gap-epassport-urgent-browser"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-02a-passport",
+        "normalized_at": "2026-08-24",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-24T21:43:03.459218+00:00",
+        "reasoning": "Last updated: 3 June 2026 ... Any citizen of Bangladesh can apply for Super Express delivery ... not available outside Bangladesh"
+      }
+    }
+  ]
+}

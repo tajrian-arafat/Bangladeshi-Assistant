@@ -25,14 +25,82 @@ VERIFICATION_STATUS_TO_PIPELINE: dict[str, str] = {
 def verification_dir(repo_root: Path, batch_id: str) -> Path | None:
     candidates = [
         repo_root / "data" / "research" / "verification" / batch_id,
-        repo_root / "data" / "research" / "verification" / "batch-01",
     ]
     if batch_id.startswith("batch-01"):
-        candidates.insert(0, repo_root / "data" / "research" / "verification" / "batch-01")
+        candidates.append(repo_root / "data" / "research" / "verification" / "batch-01")
+    if batch_id.startswith("batch-02a"):
+        candidates.append(repo_root / "data" / "research" / "verification" / "batch-02a-passport")
     for path in candidates:
         if (path / "claims_verification.json").exists():
             return path
     return None
+
+
+def _gap_closure_sources(repo_root: Path) -> dict[str, dict[str, Any]]:
+    path = (
+        repo_root
+        / "data"
+        / "research"
+        / "verification"
+        / "batch-02a-passport-gap-closure"
+        / "new_sources.json"
+    )
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {s["source_id"]: s for s in data.get("sources", [])}
+
+
+def _gap_closure_to_verification(
+    gc: dict[str, Any], sources: dict[str, dict[str, Any]]
+) -> dict[str, Any]:
+    """Convert gap-closure claim record to independent verification shape."""
+    claim_type = gc.get("claim_type") or "other"
+    type_map = {
+        "conditional_document": "conditional_document",
+        "application_url": "application_url",
+        "procedure_step": "procedure_step",
+        "document": "document",
+        "fee": "fee",
+        "payment_method": "other",
+        "eligibility_rule": "other",
+        "procedure": "procedure_step",
+        "portal_function": "application_url",
+        "official_metadata": "other",
+        "procedure_gap": "other",
+        "mission_evidence": "other",
+    }
+    evidence = []
+    for sid in gc.get("source_ids") or []:
+        src = sources.get(sid, {})
+        evidence.append(
+            {
+                "source_id": sid,
+                "source_url": src.get("source_url"),
+                "authority_tier": src.get("authority_tier", 1),
+                "retrieved_via": src.get("retrieval_method") or "puppeteer_headless_chrome",
+                "snapshot": src.get("snapshot"),
+                "retrieved_live_at": src.get("retrieved_at"),
+                "evidence_excerpt": gc.get("evidence_excerpt"),
+            }
+        )
+    return {
+        "claim_id": gc["claim_id"],
+        "service_id": gc.get("service_id"),
+        "claim_text": gc.get("claim_text"),
+        "verification_status": gc.get("verification_status"),
+        "information_class": "OFFICIAL",
+        "claim_type": type_map.get(claim_type, claim_type),
+        "reasoning": gc.get("evidence_excerpt") or gc.get("note") or gc.get("evidence_limitation"),
+        "evidence": evidence,
+        "evidence_excerpt": gc.get("evidence_excerpt"),
+        "condition": gc.get("condition"),
+        "applicability": gc.get("applicability"),
+        "fee_metadata": gc.get("fee_metadata"),
+        "verified_at": gc.get("verified_at") or "2026-08-24T21:22:37.453479+00:00",
+        "verifier": "batch-02a-gap-closure",
+        "publication_status": "STAGING_ONLY",
+    }
 
 
 def load_verification_index(repo_root: Path, batch_id: str) -> dict[str, dict[str, Any]]:
@@ -40,7 +108,24 @@ def load_verification_index(repo_root: Path, batch_id: str) -> dict[str, dict[st
     if not vdir:
         return {}
     data = json.loads((vdir / "claims_verification.json").read_text(encoding="utf-8"))
-    return {c["claim_id"]: c for c in data.get("claims", [])}
+    index = {c["claim_id"]: c for c in data.get("claims", [])}
+
+    if batch_id.startswith("batch-02a"):
+        gap_path = (
+            repo_root
+            / "data"
+            / "research"
+            / "verification"
+            / "batch-02a-passport-gap-closure"
+            / "new_claims.json"
+        )
+        if gap_path.exists():
+            gap_data = json.loads(gap_path.read_text(encoding="utf-8"))
+            sources = _gap_closure_sources(repo_root)
+            for gc in gap_data.get("claims", []):
+                cid = gc["claim_id"]
+                index[cid] = _gap_closure_to_verification(gc, sources)
+    return index
 
 
 def hash_snapshot(repo_root: Path, snapshot_ref: str | None) -> str | None:

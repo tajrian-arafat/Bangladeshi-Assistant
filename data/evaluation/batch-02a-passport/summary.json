@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-08-24T21:45:34.152830+00:00",
+  "batch_id": "batch-02a-passport",
+  "publication_mode": "local_dev_only",
+  "total_tests": 57,
+  "passed": 9,
+  "failed": 48,
+  "pass_rate_pct": 15.8,
+  "hallucinations": 0,
+  "citation_failures": 0,
+  "failure_class_counts": {
+    "RETRIEVAL_BUG": 38,
+    "LANGUAGE_BUG": 3,
+    "OTHER": 7
+  },
+  "metrics": {
+    "hallucination_suite_pass_pct": 0.0,
+    "unsupported_query_pass_pct": 16.7,
+    "fee_query_count": 11,
+    "fee_query_pass": 1
+  },
+  "remaining_gaps": [
+    "Universal police verification Tier-1 rule unresolved (CONDITIONAL only)",
+    "Super Express eligibility wording conflict (June 2026 vs Oct 2022)",
+    "MRP current fee schedule not machine-readable on DIP page",
+    "Abu Dhabi WEFF 10% surcharge unverified (empty CMS render)",
+    "Singapore mission e-passport rules URL 404",
+    "Damaged passport distinct documentary rules not enumerated Tier-1"
+  ],
+  "service_readiness": {
+    "epassport-new-application": "GREEN",
+    "epassport-reissue": "YELLOW",
+    "epassport-fee-payment": "GREEN",
+    "epassport-enrollment-appointment": "RED",
+    "epassport-application-status": "RED",
+    "epassport-urgent-super-express": "GREEN",
+    "epassport-rpo-secretariat": "RED",
+    "passport-mrp-initial": "GREEN",
+    "passport-mrp-reissue": "GREEN",
+    "passport-application-status": "YELLOW",
+    "police-passport-police-verification": "GREEN",
+    "police-passport-verification": "RED"
+  },
+  "targets": {
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "unsupported_current_fee_answers": 0,
+    "accidental_outdated_publication": 0
+  }
+}
