@@ -1,0 +1,2097 @@
+{
+  "claims": [
+    {
+      "claim_id": "civil-bdris-application-print::c-print",
+      "legacy_claim_id": "c-print",
+      "service_id": "civil-bdris-application-print",
+      "claim_text": "BDRIS provides an application print endpoint for applicants.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-bdris-application-print::c-print-src-bdris-br-app",
+        "ev-civil-bdris-application-print::c-print-src-orgbdr"
+      ],
+      "source_ids": [
+        "src-bdris-br-app",
+        "src-orgbdr"
+      ],
+      "source_version_ids": [
+        "sv-src-bdris-br-app",
+        "sv-src-orgbdr"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-print",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-death-verify::c-verify",
+      "legacy_claim_id": "c-verify",
+      "service_id": "civil-birth-death-verify",
+      "claim_text": "Birth and death records can be verified via everify.bdris.gov.bd.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-birth-death-verify::c-verify-src-orgbdr",
+        "ev-civil-birth-death-verify::c-verify-src-everify"
+      ],
+      "source_ids": [
+        "src-orgbdr",
+        "src-everify"
+      ],
+      "source_version_ids": [
+        "sv-src-orgbdr",
+        "sv-src-everify"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-verify",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-portal",
+      "legacy_claim_id": "c-br-portal",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Birth registration applications are submitted via BDRIS at bdris.gov.bd; applicant chooses registration address type (birth place / permanent / present).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-birth-registration::c-br-portal-src-bdris-br-app"
+      ],
+      "source_ids": [
+        "src-bdris-br-app"
+      ],
+      "source_version_ids": [
+        "sv-src-bdris-br-app"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-portal",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-upload",
+      "legacy_claim_id": "c-br-upload",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Only image files (.jpg/.jpeg/.png) may be uploaded; maximum 2 MB per file (application page).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-civil-birth-registration::c-br-upload-src-bdris-br-app"
+      ],
+      "source_ids": [
+        "src-bdris-br-app"
+      ],
+      "source_version_ids": [
+        "sv-src-bdris-br-app"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-upload",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-fee-free45",
+      "legacy_claim_id": "c-br-fee-free45",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Registration within 45 days of birth is free of charge (domestic and abroad) per LGD-referenced fee schedule republished via MOFA mission notice.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-civil-birth-registration::c-br-fee-free45-src-mofa-ankara-bdr",
+        "ev-civil-birth-registration::c-br-fee-free45-src-bdservicerules-fee"
+      ],
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "source_version_ids": [
+        "sv-src-mofa-ankara-bdr",
+        "sv-src-bdservicerules-fee"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-fee-free45",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-fee-late",
+      "legacy_claim_id": "c-br-fee-late",
+      "service_id": "civil-birth-registration",
+      "claim_text": "After 45 days to 5 years: BDT 25 (domestic) / USD 1 (abroad); after 5 years: BDT 50 (domestic) / USD 1 (abroad), per LGD-referenced schedule.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-civil-birth-registration::c-br-fee-late-src-mofa-ankara-bdr",
+        "ev-civil-birth-registration::c-br-fee-late-src-bdservicerules-fee"
+      ],
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "source_version_ids": [
+        "sv-src-mofa-ankara-bdr",
+        "sv-src-bdservicerules-fee"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-fee-late",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-fee-conflict-500",
+      "legacy_claim_id": "c-br-fee-conflict-500",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Some secondary guides claim BDT 500 for registration after 10 years; this conflicts with the LGD-referenced schedule (BDT 50 after 5 years) and is not adopted as official.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-civil-birth-registration::c-br-fee-conflict-500-src-legalclarity-birth"
+      ],
+      "source_ids": [
+        "src-legalclarity-birth"
+      ],
+      "source_version_ids": [
+        "sv-src-legalclarity-birth"
+      ],
+      "legacy_verification_status": "UNVERIFIED",
+      "do_not_promote_to_must": true,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-fee-conflict-500",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-helpline",
+      "legacy_claim_id": "c-br-helpline",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Registrar General office operates call centre 16152; support emails support@bdris.gov.bd / help@bdris.gov.bd.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-birth-registration::c-br-helpline-src-orgbdr"
+      ],
+      "source_ids": [
+        "src-orgbdr"
+      ],
+      "source_version_ids": [
+        "sv-src-orgbdr"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-helpline",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-docs-practical",
+      "legacy_claim_id": "c-br-docs-practical",
+      "service_id": "civil-birth-registration",
+      "claim_text": "Guides commonly list hospital birth certificate/midwife certificate and parents' NID/birth certificates; treat as practical/conditional pending full official checklist PDF retrieval.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "EXTRACTED",
+      "confidence": 0.4,
+      "evidence_ids": [
+        "ev-civil-birth-registration::c-br-docs-practical-src-legalclarity-birth",
+        "ev-civil-birth-registration::c-br-docs-practical-src-mofa-ankara-bdr"
+      ],
+      "source_ids": [
+        "src-legalclarity-birth",
+        "src-mofa-ankara-bdr"
+      ],
+      "source_version_ids": [
+        "sv-src-legalclarity-birth",
+        "sv-src-mofa-ankara-bdr"
+      ],
+      "legacy_verification_status": "UNVERIFIED",
+      "do_not_promote_to_must": true,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-br-docs-practical",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration-copy::c-copy-fee",
+      "legacy_claim_id": "c-copy-fee",
+      "service_id": "civil-birth-registration-copy",
+      "claim_text": "Issuance of duplicate certificate copy in Bangla & English: BDT 50 domestic / USD 1 abroad; original certificate issuance free.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-birth-registration-copy::c-copy-fee-src-mofa-ankara-bdr",
+        "ev-civil-birth-registration-copy::c-copy-fee-src-bdservicerules-fee"
+      ],
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "source_version_ids": [
+        "sv-src-mofa-ankara-bdr",
+        "sv-src-bdservicerules-fee"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-copy-fee",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration-correction::c-corr-fee-dob",
+      "legacy_claim_id": "c-corr-fee-dob",
+      "service_id": "civil-birth-registration-correction",
+      "claim_text": "Application fee for date-of-birth correction: BDT 100 domestic / USD 2 abroad (LGD-referenced schedule).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-civil-birth-registration-correction::c-corr-fee-dob-src-mofa-ankara-bdr",
+        "ev-civil-birth-registration-correction::c-corr-fee-dob-src-bdservicerules-fee"
+      ],
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "source_version_ids": [
+        "sv-src-mofa-ankara-bdr",
+        "sv-src-bdservicerules-fee"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-corr-fee-dob",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration-correction::c-corr-fee-other",
+      "legacy_claim_id": "c-corr-fee-other",
+      "service_id": "civil-birth-registration-correction",
+      "claim_text": "Application fee for other information correction (name, parents, address, etc.): BDT 50 domestic / USD 1 abroad (LGD-referenced schedule).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-civil-birth-registration-correction::c-corr-fee-other-src-mofa-ankara-bdr",
+        "ev-civil-birth-registration-correction::c-corr-fee-other-src-bdservicerules-fee"
+      ],
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "source_version_ids": [
+        "sv-src-mofa-ankara-bdr",
+        "sv-src-bdservicerules-fee"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-corr-fee-other",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-dup-cancel",
+      "legacy_claim_id": "c-dup-cancel",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_text": "orgbdr.gov.bd lists cancellation of multiple birth certificates as a service linked through BDRIS login/application print flows.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-birth-registration-duplicate-cancel::c-dup-cancel-src-orgbdr"
+      ],
+      "source_ids": [
+        "src-orgbdr"
+      ],
+      "source_version_ids": [
+        "sv-src-orgbdr"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-dup-cancel",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-death-registration::c-dr-portal",
+      "legacy_claim_id": "c-dr-portal",
+      "service_id": "civil-death-registration",
+      "claim_text": "Death registration applications are available at bdris.gov.bd/dr/application.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-death-registration::c-dr-portal-src-orgbdr"
+      ],
+      "source_ids": [
+        "src-orgbdr"
+      ],
+      "source_version_ids": [
+        "sv-src-orgbdr"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-dr-portal",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-death-registration::c-dr-fees",
+      "legacy_claim_id": "c-dr-fees",
+      "service_id": "civil-death-registration",
+      "claim_text": "Death registration fee tiers mirror birth registration (free ≤45 days; BDT 25 after 45 days to 5 years; BDT 50 after 5 years) per LGD-referenced schedule.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-death-registration::c-dr-fees-src-mofa-ankara-bdr",
+        "ev-civil-death-registration::c-dr-fees-src-bdservicerules-fee"
+      ],
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "source_version_ids": [
+        "sv-src-mofa-ankara-bdr",
+        "sv-src-bdservicerules-fee"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-dr-fees",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-death-registration-copy::c-copy-fee",
+      "legacy_claim_id": "c-copy-fee",
+      "service_id": "civil-death-registration-copy",
+      "claim_text": "Issuance of duplicate certificate copy in Bangla & English: BDT 50 domestic / USD 1 abroad; original certificate issuance free.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-death-registration-copy::c-copy-fee-src-mofa-ankara-bdr",
+        "ev-civil-death-registration-copy::c-copy-fee-src-bdservicerules-fee"
+      ],
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "source_version_ids": [
+        "sv-src-mofa-ankara-bdr",
+        "sv-src-bdservicerules-fee"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-copy-fee",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-corr-fee-dob",
+      "legacy_claim_id": "c-corr-fee-dob",
+      "service_id": "civil-death-registration-correction",
+      "claim_text": "Application fee for date-of-birth correction: BDT 100 domestic / USD 2 abroad (LGD-referenced schedule).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-civil-death-registration-correction::c-corr-fee-dob-src-mofa-ankara-bdr",
+        "ev-civil-death-registration-correction::c-corr-fee-dob-src-bdservicerules-fee"
+      ],
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "source_version_ids": [
+        "sv-src-mofa-ankara-bdr",
+        "sv-src-bdservicerules-fee"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-corr-fee-dob",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-corr-fee-other",
+      "legacy_claim_id": "c-corr-fee-other",
+      "service_id": "civil-death-registration-correction",
+      "claim_text": "Application fee for other information correction (name, parents, address, etc.): BDT 50 domestic / USD 1 abroad (LGD-referenced schedule).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-civil-death-registration-correction::c-corr-fee-other-src-mofa-ankara-bdr",
+        "ev-civil-death-registration-correction::c-corr-fee-other-src-bdservicerules-fee"
+      ],
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "source_version_ids": [
+        "sv-src-mofa-ankara-bdr",
+        "sv-src-bdservicerules-fee"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-corr-fee-other",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-death-registration-duplicate-cancel::c-dup-cancel",
+      "legacy_claim_id": "c-dup-cancel",
+      "service_id": "civil-death-registration-duplicate-cancel",
+      "claim_text": "orgbdr.gov.bd lists cancellation of multiple birth certificates as a service linked through BDRIS login/application print flows.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-death-registration-duplicate-cancel::c-dup-cancel-src-orgbdr"
+      ],
+      "source_ids": [
+        "src-orgbdr"
+      ],
+      "source_version_ids": [
+        "sv-src-orgbdr"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-dup-cancel",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-divorce-registration::c-div-portal",
+      "legacy_claim_id": "c-div-portal",
+      "service_id": "civil-divorce-registration",
+      "claim_text": "CRVS Marriage & Divorce portal user manual covers divorce-related registrar workflows alongside marriage.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-divorce-registration::c-div-portal-src-marriage-manual"
+      ],
+      "source_ids": [
+        "src-marriage-manual"
+      ],
+      "source_version_ids": [
+        "sv-src-marriage-manual"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-div-portal",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-marriage-registrar-hindu-list::c-reg-list",
+      "legacy_claim_id": "c-reg-list",
+      "service_id": "civil-marriage-registrar-hindu-list",
+      "claim_text": "marriage.gov.bd provides registrar list/search functions for Muslim/Hindu registrars.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-marriage-registrar-hindu-list::c-reg-list-src-marriage-portal"
+      ],
+      "source_ids": [
+        "src-marriage-portal"
+      ],
+      "source_version_ids": [
+        "sv-src-marriage-portal"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-reg-list",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-marriage-registrar-muslim-list::c-reg-list",
+      "legacy_claim_id": "c-reg-list",
+      "service_id": "civil-marriage-registrar-muslim-list",
+      "claim_text": "marriage.gov.bd provides registrar list/search functions for Muslim/Hindu registrars.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-marriage-registrar-muslim-list::c-reg-list-src-marriage-portal"
+      ],
+      "source_ids": [
+        "src-marriage-portal"
+      ],
+      "source_version_ids": [
+        "sv-src-marriage-portal"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-reg-list",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-mm-mandatory",
+      "legacy_claim_id": "c-mm-mandatory",
+      "service_id": "civil-marriage-registration",
+      "claim_text": "Every marriage solemnized under Muslim law shall be registered under the 1974 Act.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-marriage-registration::c-mm-mandatory-src-law-muslim-marriage"
+      ],
+      "source_ids": [
+        "src-law-muslim-marriage"
+      ],
+      "source_version_ids": [
+        "sv-src-law-muslim-marriage"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-mm-mandatory",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-hm-optional",
+      "legacy_claim_id": "c-hm-optional",
+      "service_id": "civil-marriage-registration",
+      "claim_text": "Hindu marriage registration is provided for under the 2012 Act (registration framework; widely described as optional vs Muslim mandatory).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-marriage-registration::c-hm-optional-src-law-hindu-marriage"
+      ],
+      "source_ids": [
+        "src-law-hindu-marriage"
+      ],
+      "source_version_ids": [
+        "sv-src-law-hindu-marriage"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-hm-optional",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-portal",
+      "legacy_claim_id": "c-portal",
+      "service_id": "civil-marriage-registration",
+      "claim_text": "CRVS Marriage & Divorce portal supports civilian registration/login and multi-step marriage registration forms; registrars manage applications (official user manual).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-marriage-registration::c-portal-src-marriage-manual",
+        "ev-civil-marriage-registration::c-portal-src-marriage-portal"
+      ],
+      "source_ids": [
+        "src-marriage-manual",
+        "src-marriage-portal"
+      ],
+      "source_version_ids": [
+        "sv-src-marriage-manual",
+        "sv-src-marriage-portal"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-portal",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-report-30",
+      "legacy_claim_id": "c-report-30",
+      "service_id": "civil-marriage-registration",
+      "claim_text": "Where marriage is solemnized by someone other than the Nikah Registrar, the bridegroom must report within 30 days for registration.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-civil-marriage-registration::c-report-30-src-law-muslim-marriage"
+      ],
+      "source_ids": [
+        "src-law-muslim-marriage"
+      ],
+      "source_version_ids": [
+        "sv-src-law-muslim-marriage"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-report-30",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-dc-attestation-photocopy-exists",
+      "legacy_claim_id": "c-dc-attestation-photocopy-exists",
+      "service_id": "dc-attestation-photocopy",
+      "claim_text": "Example official/LGI URL referenced: https://www.dhaka.gov.bd/en. Treat as geographic instance, not national fee/doc schedule.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "EXTRACTED",
+      "confidence": 0.4,
+      "evidence_ids": [],
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "source_version_ids": [],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-dc-attestation-photocopy-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "dc-guardianship-certificate::c-dc-guardianship-certificate-exists",
+      "legacy_claim_id": "c-dc-guardianship-certificate-exists",
+      "service_id": "dc-guardianship-certificate",
+      "claim_text": "Example official/LGI URL referenced: https://www.dhaka.gov.bd/en. Treat as geographic instance, not national fee/doc schedule.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "EXTRACTED",
+      "confidence": 0.4,
+      "evidence_ids": [],
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "source_version_ids": [],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-dc-guardianship-certificate-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "identity-voter-slip-download::c-slip",
+      "legacy_claim_id": "c-slip",
+      "service_id": "identity-voter-slip-download",
+      "claim_text": "Online account services include election-time vote centre related information.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-identity-voter-slip-download::c-slip-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-slip",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "local-character-certificate::c-local-character-certificate-exists",
+      "legacy_claim_id": "c-local-character-certificate-exists",
+      "service_id": "local-character-certificate",
+      "claim_text": "Example official/LGI URL referenced: https://www.chandanpurup.gov.bd/new/application/citizen. Treat as geographic instance, not national fee/doc schedule.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "EXTRACTED",
+      "confidence": 0.4,
+      "evidence_ids": [],
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "source_version_ids": [],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-character-certificate-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "local-death-certificate-union::c-local-death-certificate-union-exists",
+      "legacy_claim_id": "c-local-death-certificate-union-exists",
+      "service_id": "local-death-certificate-union",
+      "claim_text": "Example official/LGI URL referenced: https://www.chandanpurup.gov.bd/new/application/citizen. Treat as geographic instance, not national fee/doc schedule.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "EXTRACTED",
+      "confidence": 0.4,
+      "evidence_ids": [],
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "source_version_ids": [],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-death-certificate-union-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "local-death-certificate-union::c-local-death-vs-bdris",
+      "legacy_claim_id": "c-local-death-vs-bdris",
+      "service_id": "local-death-certificate-union",
+      "claim_text": "Local union death certificate is distinct from BDRIS death registration (catalogue/finalization notes).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "EXTRACTED",
+      "confidence": 0.4,
+      "evidence_ids": [],
+      "source_ids": [],
+      "source_version_ids": [],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-death-vs-bdris",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "local-nationality-certificate::c-local-nationality-certificate-exists",
+      "legacy_claim_id": "c-local-nationality-certificate-exists",
+      "service_id": "local-nationality-certificate",
+      "claim_text": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "EXTRACTED",
+      "confidence": 0.4,
+      "evidence_ids": [],
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "source_version_ids": [],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-nationality-certificate-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "local-passport-attestation::c-local-passport-attestation-exists",
+      "legacy_claim_id": "c-local-passport-attestation-exists",
+      "service_id": "local-passport-attestation",
+      "claim_text": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "EXTRACTED",
+      "confidence": 0.4,
+      "evidence_ids": [],
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "source_version_ids": [],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-passport-attestation-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "local-voter-transfer-attestation::c-local-voter-transfer-attestation-exists",
+      "legacy_claim_id": "c-local-voter-transfer-attestation-exists",
+      "service_id": "local-voter-transfer-attestation",
+      "claim_text": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "EXTRACTED",
+      "confidence": 0.4,
+      "evidence_ids": [],
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "source_version_ids": [],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-local-voter-transfer-attestation-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-channel",
+      "legacy_claim_id": "c-nid-card-info-correction-channel",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-card-info-correction::c-nid-card-info-correction-channel-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-channel",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-ssc-priority",
+      "legacy_claim_id": "c-nid-card-info-correction-ssc-priority",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-card-info-correction::c-nid-card-info-correction-ssc-priority-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-ssc-priority",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-once",
+      "legacy_claim_id": "c-nid-card-info-correction-once",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-nid-card-info-correction::c-nid-card-info-correction-once-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-once",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-fee-exists",
+      "legacy_claim_id": "c-nid-card-info-correction-fee-exists",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-nid-card-info-correction::c-nid-card-info-correction-fee-exists-src-nid-faq-correction",
+        "ev-nid-card-info-correction::c-nid-card-info-correction-fee-exists-src-nid-fees"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction",
+        "sv-src-nid-fees"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-fee-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-fee-amount-news",
+      "legacy_claim_id": "c-nid-card-info-correction-fee-amount-news",
+      "service_id": "nid-card-info-correction",
+      "claim_text": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-nid-card-info-correction::c-nid-card-info-correction-fee-amount-news-src-sib-nid-fees"
+      ],
+      "source_ids": [
+        "src-sib-nid-fees"
+      ],
+      "source_version_ids": [
+        "sv-src-sib-nid-fees"
+      ],
+      "legacy_verification_status": "UNVERIFIED",
+      "do_not_promote_to_must": true,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-card-info-correction-fee-amount-news",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-claim-account::c-claim",
+      "legacy_claim_id": "c-claim",
+      "service_id": "nid-claim-account",
+      "claim_text": "If registered as voter but no NID number received, use Claim Account with form number, date of birth, captcha and required info, then login to download NID copy.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-claim-account::c-claim-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-claim",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-channel",
+      "legacy_claim_id": "c-nid-combined-correction-channel",
+      "service_id": "nid-combined-correction",
+      "claim_text": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-combined-correction::c-nid-combined-correction-channel-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-channel",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-ssc-priority",
+      "legacy_claim_id": "c-nid-combined-correction-ssc-priority",
+      "service_id": "nid-combined-correction",
+      "claim_text": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-combined-correction::c-nid-combined-correction-ssc-priority-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-ssc-priority",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-once",
+      "legacy_claim_id": "c-nid-combined-correction-once",
+      "service_id": "nid-combined-correction",
+      "claim_text": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-nid-combined-correction::c-nid-combined-correction-once-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-once",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-fee-exists",
+      "legacy_claim_id": "c-nid-combined-correction-fee-exists",
+      "service_id": "nid-combined-correction",
+      "claim_text": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-nid-combined-correction::c-nid-combined-correction-fee-exists-src-nid-faq-correction",
+        "ev-nid-combined-correction::c-nid-combined-correction-fee-exists-src-nid-fees"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction",
+        "sv-src-nid-fees"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-fee-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-fee-amount-news",
+      "legacy_claim_id": "c-nid-combined-correction-fee-amount-news",
+      "service_id": "nid-combined-correction",
+      "claim_text": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-nid-combined-correction::c-nid-combined-correction-fee-amount-news-src-sib-nid-fees"
+      ],
+      "source_ids": [
+        "src-sib-nid-fees"
+      ],
+      "source_version_ids": [
+        "sv-src-sib-nid-fees"
+      ],
+      "legacy_verification_status": "UNVERIFIED",
+      "do_not_promote_to_must": true,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-combined-correction-fee-amount-news",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-download-copy::c-dl",
+      "legacy_claim_id": "c-dl",
+      "service_id": "nid-download-copy",
+      "claim_text": "Citizens with online account can download NID card copy from the download menu after login.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-download-copy::c-dl-src-nid-faq",
+        "ev-nid-download-copy::c-dl-src-nid-home"
+      ],
+      "source_ids": [
+        "src-nid-faq",
+        "src-nid-home"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq",
+        "sv-src-nid-home"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-dl",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-expatriate-registration::c-exp-otp",
+      "legacy_claim_id": "c-exp-otp",
+      "service_id": "nid-expatriate-registration",
+      "claim_text": "OTP and notifications for expatriate Bangladeshi applicants are sent via email only.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-expatriate-registration::c-exp-otp-src-nid-home"
+      ],
+      "source_ids": [
+        "src-nid-home"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-home"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-exp-otp",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-expatriate-registration::c-exp-apply",
+      "legacy_claim_id": "c-exp-apply",
+      "service_id": "nid-expatriate-registration",
+      "claim_text": "Applicants abroad who missed registration may apply online any time (FAQ).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-expatriate-registration::c-exp-apply-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-exp-apply",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-fee-calculator::c-fee-types",
+      "legacy_claim_id": "c-fee-types",
+      "service_id": "nid-fee-calculator",
+      "claim_text": "Fee calculator supports application types: NID card correction; other info correction; combined correction; reissue — plus delivery type.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-fee-calculator::c-fee-types-src-nid-fees"
+      ],
+      "source_ids": [
+        "src-nid-fees"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-fees"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-fee-types",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-age10",
+      "legacy_claim_id": "c-nid-new-age10",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "Citizens aged 10 years or more who are not yet registered as voters may apply online and provide biometrics at the relevant Upazila/Thana election office.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-nid-new-voter-registration::c-nid-new-age10-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-new-age10",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-voter18",
+      "legacy_claim_id": "c-nid-new-voter18",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "If age is 18 years on or before 1 January of the current year, the applicant will be included in the voter list.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-nid-new-voter-registration::c-nid-new-voter18-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-new-voter18",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-docs",
+      "legacy_claim_id": "c-nid-new-docs",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "At biometric appointment, applicants need printed online form, age-proof document(s), address proof, and other supporting IDs as applicable.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-new-voter-registration::c-nid-new-docs-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-new-docs",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-duplicate-crime",
+      "legacy_claim_id": "c-nid-new-duplicate-crime",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "Re-applying when already registered is a punishable offence.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-nid-new-voter-registration::c-nid-new-duplicate-crime-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-new-duplicate-crime",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-ssc-priority",
+      "legacy_claim_id": "c-nid-ssc-priority",
+      "service_id": "nid-new-voter-registration",
+      "claim_text": "For name/age, SSC or equivalent certificate gets priority when the person is SSC-qualified.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-nid-new-voter-registration::c-nid-ssc-priority-src-nid-faq",
+        "ev-nid-new-voter-registration::c-nid-ssc-priority-src-nidw-main"
+      ],
+      "source_ids": [
+        "src-nid-faq",
+        "src-nidw-main"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq",
+        "sv-src-nidw-main"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-ssc-priority",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-online-account-registration::c-acct-reg",
+      "legacy_claim_id": "c-acct-reg",
+      "service_id": "nid-online-account-registration",
+      "claim_text": "Voters with NID can register an online account using card number, active mobile/email, date of birth, and address-related info.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-online-account-registration::c-acct-reg-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-acct-reg",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-online-account-registration::c-acct-wallet",
+      "legacy_claim_id": "c-acct-wallet",
+      "service_id": "nid-online-account-registration",
+      "claim_text": "After registration, download NID Wallet app and complete face verification to log in.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-online-account-registration::c-acct-wallet-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-acct-wallet",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-channel",
+      "legacy_claim_id": "c-nid-other-info-correction-channel",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-other-info-correction::c-nid-other-info-correction-channel-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-channel",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-ssc-priority",
+      "legacy_claim_id": "c-nid-other-info-correction-ssc-priority",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-other-info-correction::c-nid-other-info-correction-ssc-priority-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-ssc-priority",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-once",
+      "legacy_claim_id": "c-nid-other-info-correction-once",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-nid-other-info-correction::c-nid-other-info-correction-once-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-once",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-fee-exists",
+      "legacy_claim_id": "c-nid-other-info-correction-fee-exists",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-nid-other-info-correction::c-nid-other-info-correction-fee-exists-src-nid-faq-correction",
+        "ev-nid-other-info-correction::c-nid-other-info-correction-fee-exists-src-nid-fees"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction",
+        "sv-src-nid-fees"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-fee-exists",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-fee-amount-news",
+      "legacy_claim_id": "c-nid-other-info-correction-fee-amount-news",
+      "service_id": "nid-other-info-correction",
+      "claim_text": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "CONFLICTING",
+      "confidence": 0.35,
+      "evidence_ids": [
+        "ev-nid-other-info-correction::c-nid-other-info-correction-fee-amount-news-src-sib-nid-fees"
+      ],
+      "source_ids": [
+        "src-sib-nid-fees"
+      ],
+      "source_version_ids": [
+        "sv-src-sib-nid-fees"
+      ],
+      "legacy_verification_status": "UNVERIFIED",
+      "do_not_promote_to_must": true,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-nid-other-info-correction-fee-amount-news",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-photo-signature-appointment::c-photo",
+      "legacy_claim_id": "c-photo",
+      "service_id": "nid-photo-signature-appointment",
+      "claim_text": "Photo/signature change appointment is listed among online account services; unclear photo may require in-person application at National Identity Registration Wing.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-photo-signature-appointment::c-photo-src-nid-faq"
+      ],
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-photo",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-photo-signature-appointment::c-sign-once",
+      "legacy_claim_id": "c-sign-once",
+      "service_id": "nid-photo-signature-appointment",
+      "claim_text": "Signature change requires sample with acceptable proof; signature may be changed only once.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-photo-signature-appointment::c-sign-once-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-sign-once",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-online",
+      "legacy_claim_id": "c-reissue-online",
+      "service_id": "nid-reissue-lost",
+      "claim_text": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-reissue-lost::c-reissue-online-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-reissue-online",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-law",
+      "legacy_claim_id": "c-reissue-law",
+      "service_id": "nid-reissue-lost",
+      "claim_text": "If NID is lost or damaged, citizen may apply in prescribed manner with prescribed fees for a fresh card.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-reissue-lost::c-reissue-law-src-nidw-duplicate"
+      ],
+      "source_ids": [
+        "src-nidw-duplicate"
+      ],
+      "source_version_ids": [
+        "sv-src-nidw-duplicate"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-reissue-law",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-no-combo",
+      "legacy_claim_id": "c-reissue-no-combo",
+      "service_id": "nid-reissue-lost",
+      "claim_text": "Lost-card reissue and correction cannot be done together; reissue first.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-reissue-lost::c-reissue-no-combo-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-reissue-no-combo",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-fee",
+      "legacy_claim_id": "c-reissue-fee",
+      "service_id": "nid-reissue-lost",
+      "claim_text": "Fees apply; use official fee calculator (application type: reissue).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-reissue-lost::c-reissue-fee-src-nid-faq-correction",
+        "ev-nid-reissue-lost::c-reissue-fee-src-nid-fees"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction",
+        "sv-src-nid-fees"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-reissue-fee",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    },
+    {
+      "claim_id": "nid-voter-area-change::c-f13",
+      "legacy_claim_id": "c-f13",
+      "service_id": "nid-voter-area-change",
+      "claim_text": "For change of residence, apply with Form 13 at the Upazila/Thana election office of the current residence area. Spelling/detail fixes within same voter area use ordinary correction form.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.6,
+      "evidence_ids": [
+        "ev-nid-voter-area-change::c-f13-src-nid-faq-correction"
+      ],
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "source_version_ids": [
+        "sv-src-nid-faq-correction"
+      ],
+      "legacy_verification_status": "VERIFIED",
+      "do_not_promote_to_must": false,
+      "provenance": {
+        "batch_id": "batch-01-identity-civil-registration",
+        "discovered_at": "2026-08-24",
+        "normalized_at": "2026-08-24",
+        "raw_pointer": "data/research/raw/batch-01/claims.json#c-f13",
+        "verifier_id": null,
+        "verified_at": null,
+        "publication_status": "STAGING_ONLY"
+      }
+    }
+  ]
+}

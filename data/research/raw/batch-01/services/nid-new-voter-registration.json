@@ -1,0 +1,368 @@
+{
+  "service_id": "nid-new-voter-registration",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "New Voter and National ID Registration",
+  "service_name_bn": "নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন",
+  "aliases": [
+    "new NID",
+    "voter registration",
+    "NID application"
+  ],
+  "banglish_variants": [
+    "nid registration",
+    "voter registration",
+    "new nid",
+    "notun nid"
+  ],
+  "category_id": "identity",
+  "responsible_ministry": "Bangladesh Election Commission",
+  "responsible_agency": "NID Wing, Bangladesh Election Commission",
+  "target_applicant": [
+    "citizen"
+  ],
+  "eligibility": [
+    "Bangladeshi citizen",
+    "Age 10+ for NID application pathway; voter roll inclusion if age ≥18 as of 1 January of the year (per FAQ)"
+  ],
+  "prerequisites": [],
+  "application_methods": [
+    "online_form_then_in_person_biometric",
+    "hybrid"
+  ],
+  "online_application": true,
+  "offline_application": true,
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+  "official_information_urls": [
+    "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+    "https://nidw.gov.bd/"
+  ],
+  "official_forms": [],
+  "requirements": [
+    {
+      "requirement_id": "r-print-form",
+      "name_en": "Printed copy of online registration form",
+      "name_bn": "অনলাইনে পূরণকৃত ফর্মের প্রিন্ট কপি",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [
+        "c-nid-new-docs"
+      ],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-ssc",
+      "name_en": "SSC/equivalent certificate (age/name proof)",
+      "name_bn": "এস.এস.সি সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "claim_ids": [
+        "c-nid-new-docs",
+        "c-nid-ssc-priority"
+      ],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-birth-reg",
+      "name_en": "Birth registration certificate (age proof)",
+      "name_bn": "জন্ম নিবন্ধন সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "any": [
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "use_birth_certificate_as_age_proof",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "claim_ids": [
+        "c-nid-new-docs"
+      ],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-passport-dl-tin",
+      "name_en": "Passport / Driving licence / TIN (age proof alternative)",
+      "name_bn": "পাসপোর্ট / ড্রাইভিং লাইসেন্স / টি.আই.এন",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "age_proof_document",
+        "op": "in",
+        "value": [
+          "passport",
+          "driving_licence",
+          "tin"
+        ]
+      },
+      "claim_ids": [
+        "c-nid-new-docs"
+      ],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-address-proof",
+      "name_en": "Utility bill / house rent receipt / holding tax receipt (address proof)",
+      "name_bn": "ইউটিলিটি বিল/বাড়ী ভাড়ার রশিদ/হোল্ডিং ট্যাক্স রশিদ",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [
+        "c-nid-new-docs"
+      ],
+      "notes": "FAQ lists as proof of habitual residence in the area."
+    },
+    {
+      "requirement_id": "r-citizenship",
+      "name_en": "Citizenship certificate",
+      "name_bn": "নাগরিকত্বের সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "citizenship_certificate_applicable",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [
+        "c-nid-new-docs"
+      ],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-family-nid",
+      "name_en": "Copy of father/mother/spouse NID",
+      "name_bn": "বাবা, মা, স্বামী/স্ত্রীর এনআইডি কার্ডের কপি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "family_nid_applicable",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [
+        "c-nid-new-docs"
+      ],
+      "notes": null
+    }
+  ],
+  "fees": [
+    {
+      "fee_id": "f-new-reg-forms",
+      "description": "Forms for applications — FAQ states forms themselves have no charge",
+      "amount": 0,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [],
+      "verification_status": "VERIFIED",
+      "notes": "FAQ Q18: forms have no fee. Card issuance fee schedule not confirmed on Tier-1 page in this pass.",
+      "retrieved_at": "2026-08-24"
+    }
+  ],
+  "payment_methods": [],
+  "processing_time": {
+    "value": null,
+    "unit": null,
+    "verification_status": "UNVERIFIED",
+    "notes": "Official FAQ does not state a fixed processing duration for new registration."
+  },
+  "procedure_steps": [
+    {
+      "step_id": "s1",
+      "order": 1,
+      "title": "Fill online registration form",
+      "description": "Complete personal, other, and address steps in Bangla Unicode (except own full name field rules per FAQ).",
+      "claim_ids": [
+        "c-nid-new-docs"
+      ]
+    },
+    {
+      "step_id": "s2",
+      "order": 2,
+      "title": "Preview and print PDF",
+      "description": "Verify all information, generate PDF, print.",
+      "claim_ids": []
+    },
+    {
+      "step_id": "s3",
+      "order": 3,
+      "title": "Submit at election office with documents",
+      "description": "Submit printed form and supporting documents at nearest election office.",
+      "claim_ids": []
+    },
+    {
+      "step_id": "s4",
+      "order": 4,
+      "title": "Biometric capture",
+      "description": "Provide biometrics as scheduled at Upazila/Thana election office.",
+      "claim_ids": []
+    },
+    {
+      "step_id": "s5",
+      "order": 5,
+      "title": "Receive notification and collect/download card",
+      "description": "After processing, receive SMS/email; register online account and download/collect card.",
+      "claim_ids": []
+    }
+  ],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [],
+  "office_locations": [],
+  "geographic_limitations": [],
+  "service_availability": "AVAILABLE",
+  "related_services": [
+    "nid-online-account-registration",
+    "nid-claim-account",
+    "nid-download-copy",
+    "civil-birth-registration"
+  ],
+  "dependencies": [
+    "Birth registration often used as age proof when SSC unavailable"
+  ],
+  "renewal_rules": [],
+  "correction_rules": [],
+  "replacement_rules": [],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [],
+  "common_mistakes": [],
+  "practical_experience": [
+    {
+      "text": "News reporting describes long backlogs and middlemen for NID processes generally; not specific official guidance for new registration.",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-tbs-nid-corrections"
+      ],
+      "verification_status": "UNVERIFIED",
+      "do_not_promote_to_must": true
+    }
+  ],
+  "warnings": [
+    "Do not apply again if already registered — punishable offence (official FAQ).",
+    "False information may lead to imprisonment and/or fine (official FAQ)."
+  ],
+  "legal_basis": [],
+  "claims": [
+    {
+      "claim_id": "c-nid-new-age10",
+      "claim": "Citizens aged 10 years or more who are not yet registered as voters may apply online and provide biometrics at the relevant Upazila/Thana election office.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": "আপনার বয়স যদি ১০ বছর বা বেশি হয়ে থাকে কিন্তু এখনও ভোটার হিসেবে নিবন্ধিত হননি",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-nid-new-voter18",
+      "claim": "If age is 18 years on or before 1 January of the current year, the applicant will be included in the voter list.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": "আপনার বয়স যদি চলতি বছরের ১ জানুয়ারী বা তার পূর্বে ১৮ বছর হয়ে থাকে",
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-nid-new-docs",
+      "claim": "At biometric appointment, applicants need printed online form, age-proof document(s), address proof, and other supporting IDs as applicable.",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-nid-new-duplicate-crime",
+      "claim": "Re-applying when already registered is a punishable offence.",
+      "field": "warnings",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": "নিবন্ধিত ব্যাক্তি পুনরায় আবেদন করলে সেটি দন্ডনীয় অপরাধ",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-nid-ssc-priority",
+      "claim": "For name/age, SSC or equivalent certificate gets priority when the person is SSC-qualified.",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq",
+        "src-nidw-main"
+      ],
+      "evidence_excerpt": "এসএসসি অথবা সমমানের পরীক্ষার সনদে উল্লেখিত বয়স ও নাম",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [],
+  "research_status": "SUBSTANTIAL",
+  "missing_information": [
+    "Exact new-registration card fee amount not published as a static table on retrieved Tier-1 pages (fee calculator covers correction/reissue types).",
+    "Exact biometric appointment booking URL/workflow details beyond FAQ summary.",
+    "District-wise office hours beyond national helpline hours."
+  ],
+  "manual_review_required": [
+    "Confirm whether any fee applies for first-time NID issuance vs correction/reissue only."
+  ],
+  "knowledge_quality": {
+    "knowledge_quality_score": 80.5,
+    "dimensions": {
+      "coverage": 78,
+      "authority": 92,
+      "freshness": 85,
+      "consistency": 90,
+      "usability": 50
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Strong Tier-1 FAQ coverage for eligibility/docs/steps; fee amount for first issuance incomplete.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24"
+}

@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
-"""Build Batch 1 structured knowledge (Identity & Civil Registration).
+"""Build Batch 1 DISCOVERY dump (Identity & Civil Registration).
 
-Stores services, requirements (MUST/CONDITIONAL/RECOMMENDED), fees, procedures,
-sources, claims/evidence, conflicts, and KQS — without fabricating facts.
+WARNING: Output under data/knowledge/batch-01/ is a research discovery dump.
+It is NOT the verified knowledge SoT and must NOT be loaded into the runtime DB.
+
+After running this script, always run:
+  python3 scripts/normalize_batch01_to_staging.py
+which demotes premature VERIFIED labels and writes the provenance chain to
+data/research/staging/batch-01/ (publication_status=STAGING_ONLY).
+
+Stores candidate services, requirements (MUST/CONDITIONAL/RECOMMENDED), fees,
+procedures, sources, claims/evidence, conflicts, and research-only KQS —
+without fabricating facts and without publishing.
 """
 
 from __future__ import annotations

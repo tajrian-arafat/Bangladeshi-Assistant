@@ -1,0 +1,1006 @@
+{
+  "requirements": [
+    {
+      "requirement_id": "civil-birth-registration::r-br-hospital",
+      "service_id": "civil-birth-registration",
+      "name_en": "Hospital birth certificate or midwife certificate",
+      "name_bn": "হাসপাতাল/মিডওয়াইফ সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "birth_place_type",
+        "op": "in",
+        "value": [
+          "hospital",
+          "clinic",
+          "home_with_midwife"
+        ]
+      },
+      "claim_ids": [
+        "civil-birth-registration::c-br-docs-practical"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "civil-birth-registration::r-br-parents-id",
+      "service_id": "civil-birth-registration",
+      "name_en": "Parents' NID or birth registration certificates",
+      "name_bn": "পিতা-মাতার এনআইডি/জন্ম সনদ",
+      "classification": "RECOMMENDED",
+      "condition": null,
+      "claim_ids": [
+        "civil-birth-registration::c-br-docs-practical"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "civil-birth-registration::r-br-guardian-proof",
+      "service_id": "civil-birth-registration",
+      "name_en": "Guardian proof if applicant is not father/mother",
+      "name_bn": "অভিভাবকের উপযুক্ত প্রমাণক",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "applicant_relation",
+        "op": "not_in",
+        "value": [
+          "father",
+          "mother"
+        ]
+      },
+      "claim_ids": [
+        "civil-birth-registration::c-br-portal"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "civil-birth-registration::r-br-images",
+      "service_id": "civil-birth-registration",
+      "name_en": "Supporting scans as JPG/JPEG/PNG ≤ 2MB each",
+      "name_bn": "ইমেজ আপলোড সীমা",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [
+        "civil-birth-registration::c-br-upload"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "civil-marriage-registration::r-nikah",
+      "service_id": "civil-marriage-registration",
+      "name_en": "Nikahnama / kabinnama details and witnesses as applicable",
+      "name_bn": "কাবিননামা/সাক্ষী",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "civil-marriage-registration::r-registrar",
+      "service_id": "civil-marriage-registration",
+      "name_en": "Registration via licensed Nikah Registrar / Hindu Marriage Registrar as applicable",
+      "name_bn": "নিবন্ধক",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "dc-attestation-photocopy::r-local-nid",
+      "service_id": "dc-attestation-photocopy",
+      "name_en": "Applicant NID / identity proof",
+      "name_bn": "জাতীয় পরিচয়পত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "lgi_requires_nid",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "dc-attestation-photocopy::r-local-application",
+      "service_id": "dc-attestation-photocopy",
+      "name_en": "Application via local citizen certificate portal or office form",
+      "name_bn": "স্থানীয় আবেদন",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "dc-guardianship-certificate::r-local-nid",
+      "service_id": "dc-guardianship-certificate",
+      "name_en": "Applicant NID / identity proof",
+      "name_bn": "জাতীয় পরিচয়পত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "lgi_requires_nid",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "dc-guardianship-certificate::r-local-application",
+      "service_id": "dc-guardianship-certificate",
+      "name_en": "Application via local citizen certificate portal or office form",
+      "name_bn": "স্থানীয় আবেদন",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-character-certificate::r-local-nid",
+      "service_id": "local-character-certificate",
+      "name_en": "Applicant NID / identity proof",
+      "name_bn": "জাতীয় পরিচয়পত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "lgi_requires_nid",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-character-certificate::r-local-application",
+      "service_id": "local-character-certificate",
+      "name_en": "Application via local citizen certificate portal or office form",
+      "name_bn": "স্থানীয় আবেদন",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-death-certificate-union::r-local-nid",
+      "service_id": "local-death-certificate-union",
+      "name_en": "Applicant NID / identity proof",
+      "name_bn": "জাতীয় পরিচয়পত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "lgi_requires_nid",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-death-certificate-union::r-local-application",
+      "service_id": "local-death-certificate-union",
+      "name_en": "Application via local citizen certificate portal or office form",
+      "name_bn": "স্থানীয় আবেদন",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-nationality-certificate::r-local-nid",
+      "service_id": "local-nationality-certificate",
+      "name_en": "Applicant NID / identity proof",
+      "name_bn": "জাতীয় পরিচয়পত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "lgi_requires_nid",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-nationality-certificate::r-local-application",
+      "service_id": "local-nationality-certificate",
+      "name_en": "Application via local citizen certificate portal or office form",
+      "name_bn": "স্থানীয় আবেদন",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-passport-attestation::r-local-nid",
+      "service_id": "local-passport-attestation",
+      "name_en": "Applicant NID / identity proof",
+      "name_bn": "জাতীয় পরিচয়পত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "lgi_requires_nid",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-passport-attestation::r-local-application",
+      "service_id": "local-passport-attestation",
+      "name_en": "Application via local citizen certificate portal or office form",
+      "name_bn": "স্থানীয় আবেদন",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-voter-transfer-attestation::r-local-nid",
+      "service_id": "local-voter-transfer-attestation",
+      "name_en": "Applicant NID / identity proof",
+      "name_bn": "জাতীয় পরিচয়পত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "lgi_requires_nid",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "local-voter-transfer-attestation::r-local-application",
+      "service_id": "local-voter-transfer-attestation",
+      "name_en": "Application via local citizen certificate portal or office form",
+      "name_bn": "স্থানীয় আবেদন",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-card-info-correction::r-corr-ssc",
+      "service_id": "nid-card-info-correction",
+      "name_en": "SSC/equivalent certificate",
+      "name_bn": "এসএসসি/সমমান সনদপত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "correction_fields",
+            "op": "in",
+            "value": [
+              "name",
+              "date_of_birth"
+            ]
+          },
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "claim_ids": [
+        "nid-card-info-correction::c-nid-card-info-correction-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-card-info-correction::r-corr-alt-age-name",
+      "service_id": "nid-card-info-correction",
+      "name_en": "Passport / birth registration / driving licence / trade licence / certified kabinnama copy",
+      "name_bn": "পাসপোর্ট/জন্ম নিবন্ধন/ড্রাইভিং লাইসেন্স/ট্রেড লাইসেন্স/কাবিননামা",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "correction_fields",
+            "op": "in",
+            "value": [
+              "name",
+              "date_of_birth"
+            ]
+          },
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "claim_ids": [
+        "nid-card-info-correction::c-nid-card-info-correction-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-card-info-correction::r-corr-name-change-affidavit",
+      "service_id": "nid-card-info-correction",
+      "name_en": "Magistrate court affidavit + national daily newspaper notice",
+      "name_bn": "ম্যাজিস্ট্রেট আদালত হলফনামা ও জাতীয় দৈনিক পত্রিকায় বিজ্ঞপ্তি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "name_change_type",
+        "op": "eq",
+        "value": "fundamental_name_change"
+      },
+      "claim_ids": [
+        "nid-card-info-correction::c-nid-card-info-correction-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-card-info-correction::r-corr-marriage-title",
+      "service_id": "nid-card-info-correction",
+      "name_en": "Certified kabinnama / talaknama / death certificate / affidavit / divorce decree",
+      "name_bn": "কাবিননামা/তালাকনামা/মৃত্যু সনদ/হলফনামা/বিবাহ বিচ্ছেদ ডিক্রি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_reason",
+        "op": "in",
+        "value": [
+          "marriage",
+          "divorce",
+          "spouse_title"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-card-info-correction::r-corr-parents",
+      "service_id": "nid-card-info-correction",
+      "name_en": "Applicant SSC/HSC (if parents named) + certified copies of parents/siblings NID",
+      "name_bn": "পিতা/মাতার নাম সংশোধনে এসএসসি/এইচএসসি ও পিতা-মাতা-ভাই-বোনের এনআইডি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "father_name",
+          "mother_name"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-card-info-correction::r-corr-deceased-marker",
+      "service_id": "nid-card-info-correction",
+      "name_en": "Death certificate OR NID + UP Chairman/Mayor/Councillor certification of being alive",
+      "name_bn": "মৃত সংযোজন/বিয়োজনে মৃত্যু সনদ বা জীবিত প্রত্যয়ন",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "parent_deceased_marker"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-card-info-correction::r-corr-address",
+      "service_id": "nid-card-info-correction",
+      "name_en": "Deed / telephone-gas-water bill / rent agreement / rent receipt (certified)",
+      "name_bn": "ঠিকানা সংশোধনে দলিল/ইউটিলিটি বিল/ভাড়া চুক্তি/রশিদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "address_detail"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-card-info-correction::r-corr-blood",
+      "service_id": "nid-card-info-correction",
+      "name_en": "Medical certificate for blood group",
+      "name_bn": "রক্তের গ্রুপের ডাক্তারী সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "blood_group"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-card-info-correction::r-corr-attestation",
+      "service_id": "nid-card-info-correction",
+      "name_en": "Supporting copies attested by authorized persons (MP, elected LGI, gazetted officer, or secondary/higher secondary head)",
+      "name_bn": "সত্যায়িত অনুলিপি",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-combined-correction::r-corr-ssc",
+      "service_id": "nid-combined-correction",
+      "name_en": "SSC/equivalent certificate",
+      "name_bn": "এসএসসি/সমমান সনদপত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "correction_fields",
+            "op": "in",
+            "value": [
+              "name",
+              "date_of_birth"
+            ]
+          },
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "claim_ids": [
+        "nid-combined-correction::c-nid-combined-correction-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-combined-correction::r-corr-alt-age-name",
+      "service_id": "nid-combined-correction",
+      "name_en": "Passport / birth registration / driving licence / trade licence / certified kabinnama copy",
+      "name_bn": "পাসপোর্ট/জন্ম নিবন্ধন/ড্রাইভিং লাইসেন্স/ট্রেড লাইসেন্স/কাবিননামা",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "correction_fields",
+            "op": "in",
+            "value": [
+              "name",
+              "date_of_birth"
+            ]
+          },
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "claim_ids": [
+        "nid-combined-correction::c-nid-combined-correction-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-combined-correction::r-corr-name-change-affidavit",
+      "service_id": "nid-combined-correction",
+      "name_en": "Magistrate court affidavit + national daily newspaper notice",
+      "name_bn": "ম্যাজিস্ট্রেট আদালত হলফনামা ও জাতীয় দৈনিক পত্রিকায় বিজ্ঞপ্তি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "name_change_type",
+        "op": "eq",
+        "value": "fundamental_name_change"
+      },
+      "claim_ids": [
+        "nid-combined-correction::c-nid-combined-correction-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-combined-correction::r-corr-marriage-title",
+      "service_id": "nid-combined-correction",
+      "name_en": "Certified kabinnama / talaknama / death certificate / affidavit / divorce decree",
+      "name_bn": "কাবিননামা/তালাকনামা/মৃত্যু সনদ/হলফনামা/বিবাহ বিচ্ছেদ ডিক্রি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_reason",
+        "op": "in",
+        "value": [
+          "marriage",
+          "divorce",
+          "spouse_title"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-combined-correction::r-corr-parents",
+      "service_id": "nid-combined-correction",
+      "name_en": "Applicant SSC/HSC (if parents named) + certified copies of parents/siblings NID",
+      "name_bn": "পিতা/মাতার নাম সংশোধনে এসএসসি/এইচএসসি ও পিতা-মাতা-ভাই-বোনের এনআইডি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "father_name",
+          "mother_name"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-combined-correction::r-corr-deceased-marker",
+      "service_id": "nid-combined-correction",
+      "name_en": "Death certificate OR NID + UP Chairman/Mayor/Councillor certification of being alive",
+      "name_bn": "মৃত সংযোজন/বিয়োজনে মৃত্যু সনদ বা জীবিত প্রত্যয়ন",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "parent_deceased_marker"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-combined-correction::r-corr-address",
+      "service_id": "nid-combined-correction",
+      "name_en": "Deed / telephone-gas-water bill / rent agreement / rent receipt (certified)",
+      "name_bn": "ঠিকানা সংশোধনে দলিল/ইউটিলিটি বিল/ভাড়া চুক্তি/রশিদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "address_detail"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-combined-correction::r-corr-blood",
+      "service_id": "nid-combined-correction",
+      "name_en": "Medical certificate for blood group",
+      "name_bn": "রক্তের গ্রুপের ডাক্তারী সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "blood_group"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-combined-correction::r-corr-attestation",
+      "service_id": "nid-combined-correction",
+      "name_en": "Supporting copies attested by authorized persons (MP, elected LGI, gazetted officer, or secondary/higher secondary head)",
+      "name_bn": "সত্যায়িত অনুলিপি",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-new-voter-registration::r-print-form",
+      "service_id": "nid-new-voter-registration",
+      "name_en": "Printed copy of online registration form",
+      "name_bn": "অনলাইনে পূরণকৃত ফর্মের প্রিন্ট কপি",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [
+        "nid-new-voter-registration::c-nid-new-docs"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-new-voter-registration::r-ssc",
+      "service_id": "nid-new-voter-registration",
+      "name_en": "SSC/equivalent certificate (age/name proof)",
+      "name_bn": "এস.এস.সি সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "claim_ids": [
+        "nid-new-voter-registration::c-nid-new-docs",
+        "nid-new-voter-registration::c-nid-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-new-voter-registration::r-birth-reg",
+      "service_id": "nid-new-voter-registration",
+      "name_en": "Birth registration certificate (age proof)",
+      "name_bn": "জন্ম নিবন্ধন সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "any": [
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "use_birth_certificate_as_age_proof",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "claim_ids": [
+        "nid-new-voter-registration::c-nid-new-docs"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-new-voter-registration::r-passport-dl-tin",
+      "service_id": "nid-new-voter-registration",
+      "name_en": "Passport / Driving licence / TIN (age proof alternative)",
+      "name_bn": "পাসপোর্ট / ড্রাইভিং লাইসেন্স / টি.আই.এন",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "age_proof_document",
+        "op": "in",
+        "value": [
+          "passport",
+          "driving_licence",
+          "tin"
+        ]
+      },
+      "claim_ids": [
+        "nid-new-voter-registration::c-nid-new-docs"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-new-voter-registration::r-address-proof",
+      "service_id": "nid-new-voter-registration",
+      "name_en": "Utility bill / house rent receipt / holding tax receipt (address proof)",
+      "name_bn": "ইউটিলিটি বিল/বাড়ী ভাড়ার রশিদ/হোল্ডিং ট্যাক্স রশিদ",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [
+        "nid-new-voter-registration::c-nid-new-docs"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-new-voter-registration::r-citizenship",
+      "service_id": "nid-new-voter-registration",
+      "name_en": "Citizenship certificate",
+      "name_bn": "নাগরিকত্বের সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "citizenship_certificate_applicable",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [
+        "nid-new-voter-registration::c-nid-new-docs"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-new-voter-registration::r-family-nid",
+      "service_id": "nid-new-voter-registration",
+      "name_en": "Copy of father/mother/spouse NID",
+      "name_bn": "বাবা, মা, স্বামী/স্ত্রীর এনআইডি কার্ডের কপি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "family_nid_applicable",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [
+        "nid-new-voter-registration::c-nid-new-docs"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-other-info-correction::r-corr-ssc",
+      "service_id": "nid-other-info-correction",
+      "name_en": "SSC/equivalent certificate",
+      "name_bn": "এসএসসি/সমমান সনদপত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "correction_fields",
+            "op": "in",
+            "value": [
+              "name",
+              "date_of_birth"
+            ]
+          },
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "claim_ids": [
+        "nid-other-info-correction::c-nid-other-info-correction-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-other-info-correction::r-corr-alt-age-name",
+      "service_id": "nid-other-info-correction",
+      "name_en": "Passport / birth registration / driving licence / trade licence / certified kabinnama copy",
+      "name_bn": "পাসপোর্ট/জন্ম নিবন্ধন/ড্রাইভিং লাইসেন্স/ট্রেড লাইসেন্স/কাবিননামা",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "correction_fields",
+            "op": "in",
+            "value": [
+              "name",
+              "date_of_birth"
+            ]
+          },
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "claim_ids": [
+        "nid-other-info-correction::c-nid-other-info-correction-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-other-info-correction::r-corr-name-change-affidavit",
+      "service_id": "nid-other-info-correction",
+      "name_en": "Magistrate court affidavit + national daily newspaper notice",
+      "name_bn": "ম্যাজিস্ট্রেট আদালত হলফনামা ও জাতীয় দৈনিক পত্রিকায় বিজ্ঞপ্তি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "name_change_type",
+        "op": "eq",
+        "value": "fundamental_name_change"
+      },
+      "claim_ids": [
+        "nid-other-info-correction::c-nid-other-info-correction-ssc-priority"
+      ],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-other-info-correction::r-corr-marriage-title",
+      "service_id": "nid-other-info-correction",
+      "name_en": "Certified kabinnama / talaknama / death certificate / affidavit / divorce decree",
+      "name_bn": "কাবিননামা/তালাকনামা/মৃত্যু সনদ/হলফনামা/বিবাহ বিচ্ছেদ ডিক্রি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_reason",
+        "op": "in",
+        "value": [
+          "marriage",
+          "divorce",
+          "spouse_title"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-other-info-correction::r-corr-parents",
+      "service_id": "nid-other-info-correction",
+      "name_en": "Applicant SSC/HSC (if parents named) + certified copies of parents/siblings NID",
+      "name_bn": "পিতা/মাতার নাম সংশোধনে এসএসসি/এইচএসসি ও পিতা-মাতা-ভাই-বোনের এনআইডি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "father_name",
+          "mother_name"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-other-info-correction::r-corr-deceased-marker",
+      "service_id": "nid-other-info-correction",
+      "name_en": "Death certificate OR NID + UP Chairman/Mayor/Councillor certification of being alive",
+      "name_bn": "মৃত সংযোজন/বিয়োজনে মৃত্যু সনদ বা জীবিত প্রত্যয়ন",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "parent_deceased_marker"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-other-info-correction::r-corr-address",
+      "service_id": "nid-other-info-correction",
+      "name_en": "Deed / telephone-gas-water bill / rent agreement / rent receipt (certified)",
+      "name_bn": "ঠিকানা সংশোধনে দলিল/ইউটিলিটি বিল/ভাড়া চুক্তি/রশিদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "address_detail"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-other-info-correction::r-corr-blood",
+      "service_id": "nid-other-info-correction",
+      "name_en": "Medical certificate for blood group",
+      "name_bn": "রক্তের গ্রুপের ডাক্তারী সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "blood_group"
+        ]
+      },
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-other-info-correction::r-corr-attestation",
+      "service_id": "nid-other-info-correction",
+      "name_en": "Supporting copies attested by authorized persons (MP, elected LGI, gazetted officer, or secondary/higher secondary head)",
+      "name_bn": "সত্যায়িত অনুলিপি",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-reissue-lost::r-online-account",
+      "service_id": "nid-reissue-lost",
+      "name_en": "Registered NID online account",
+      "name_bn": "অনলাইন একাউন্ট",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [
+        "nid-reissue-lost::c-reissue-online"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    },
+    {
+      "requirement_id": "nid-reissue-lost::r-gd-practical",
+      "service_id": "nid-reissue-lost",
+      "name_en": "Police GD for lost card",
+      "name_bn": "হারানোর জিডি",
+      "classification": "RECOMMENDED",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "checklist_items"
+    }
+  ]
+}

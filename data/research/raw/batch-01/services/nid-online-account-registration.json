@@ -1,0 +1,143 @@
+{
+  "service_id": "nid-online-account-registration",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Voter Online Account Registration",
+  "service_name_bn": "ভোটার অনলাইন অ্যাকাউন্ট নিবন্ধন",
+  "aliases": [
+    "NID portal signup",
+    "NIDW registration"
+  ],
+  "banglish_variants": [],
+  "category_id": "identity",
+  "responsible_ministry": "Bangladesh Election Commission",
+  "responsible_agency": "NID Wing, Bangladesh Election Commission",
+  "target_applicant": [
+    "citizen",
+    "voter"
+  ],
+  "eligibility": [],
+  "prerequisites": [],
+  "application_methods": [],
+  "online_application": null,
+  "offline_application": null,
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+  "official_information_urls": [
+    "https://services.nidw.gov.bd/nid-pub/?locale=en",
+    "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+  ],
+  "official_forms": [],
+  "requirements": [],
+  "fees": [],
+  "payment_methods": [],
+  "processing_time": null,
+  "procedure_steps": [
+    {
+      "step_id": "a1",
+      "order": 1,
+      "title": "Fill account registration",
+      "description": "Provide card and contact details.",
+      "claim_ids": [
+        "c-acct-reg"
+      ]
+    },
+    {
+      "step_id": "a2",
+      "order": 2,
+      "title": "Activate via OTP",
+      "description": "Enter activation code from mobile/email.",
+      "claim_ids": [
+        "c-acct-reg"
+      ]
+    },
+    {
+      "step_id": "a3",
+      "order": 3,
+      "title": "Face verification via NID Wallet",
+      "description": "Login after face verification.",
+      "claim_ids": [
+        "c-acct-wallet"
+      ]
+    }
+  ],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [],
+  "office_locations": [],
+  "geographic_limitations": [],
+  "service_availability": "AVAILABLE",
+  "related_services": [
+    "nid-new-voter-registration",
+    "nid-card-info-correction",
+    "nid-reissue-lost"
+  ],
+  "dependencies": [],
+  "renewal_rules": [],
+  "correction_rules": [],
+  "replacement_rules": [],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [],
+  "common_mistakes": [],
+  "practical_experience": [],
+  "warnings": [],
+  "legal_basis": [],
+  "claims": [
+    {
+      "claim_id": "c-acct-reg",
+      "claim": "Voters with NID can register an online account using card number, active mobile/email, date of birth, and address-related info.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-acct-wallet",
+      "claim": "After registration, download NID Wallet app and complete face verification to log in.",
+      "field": "procedure",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [],
+  "research_status": "SUBSTANTIAL",
+  "missing_information": [],
+  "manual_review_required": [],
+  "knowledge_quality": {
+    "knowledge_quality_score": 80.0,
+    "dimensions": {
+      "coverage": 70,
+      "authority": 95,
+      "freshness": 85,
+      "consistency": 95,
+      "usability": 50.0
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Account registration well covered by FAQ.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24"
+}

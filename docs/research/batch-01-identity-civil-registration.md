@@ -3,8 +3,17 @@
 **Batch ID:** `batch-01-identity-civil-registration`  
 **Researched at:** 2026-08-24  
 **Catalogue version:** `1.0.0-finalized`  
-**Structured output:** `data/knowledge/batch-01/`  
-**Builder:** `scripts/build_batch01_knowledge.py`
+**Discovery dump (legacy):** `data/knowledge/batch-01/` — **not verified SoT**  
+**Authoritative research staging:** `data/research/staging/batch-01/`  
+**Pipeline status:** `docs/research/batch-01-pipeline-status.md`  
+**Builder:** `scripts/build_batch01_knowledge.py`  
+**Normalizer:** `scripts/normalize_batch01_to_staging.py`
+
+> **Guardrail (2026-08-24):** The discovery dump incorrectly labeled many claims
+> `VERIFIED` because a source was found. Those labels are **invalid for
+> publication**. Staging demoted them (`VERIFIED` emitted: **0**). Nothing from
+> Batch 1 was written to the runtime database. Do not treat research KQS as
+> publication readiness.
 
 ---
 
@@ -101,21 +110,32 @@ No service is marked fully researched. Even high-KQS NID services still lack a r
 
 ---
 
-## 4. Structured knowledge storage
+## 4. Structured research storage (staging — not runtime SoT)
 
-Primary database is structured JSON (not prose):
+**Runtime DB (`backend` SQLAlchemy) was not populated.** Claim/Evidence tables
+do not exist yet; see `docs/research/batch-01-pipeline-status.md`.
+
+Primary **staging** database is structured JSON:
 
 ```
-data/knowledge/batch-01/
-├── metadata.json
+data/research/staging/batch-01/
 ├── sources.json
-├── claims.json
+├── source_versions.json
+├── evidence.json
+├── claims.json          # pipeline_status ≠ VERIFIED
+├── services.json        # publication_status: STAGING_ONLY
+├── requirements.json
+├── fees.json
+├── procedure_steps.json
 ├── conflicts.json
-├── services_index.json
-└── services/<service_id>.json
+└── pipeline_summary.json
+
+data/research/raw/batch-01/          # immutable discovery copy
+data/knowledge/batch-01/             # legacy discovery dump (do not publish)
 ```
 
-Each service record supports (where populated): identity fields, eligibility, requirements with **MUST / CONDITIONAL / RECOMMENDED / N/A**, fees with conditions, procedures, official vs practical layers on claims, geography hooks, related services, missing_information, manual_review_required, and `knowledge_quality` scoring.
+Each staging claim carries: evidence_ids → source_version_ids → sources,
+`pipeline_status`, `confidence`, and `provenance.publication_status=STAGING_ONLY`.
 
 ### Document requirement engine
 
@@ -209,7 +229,10 @@ Non-exhaustive; full claim→evidence chains are in `claims.json` + per-service 
 | Voter slip dedicated download URL/steps | Incomplete beyond account benefits notes |
 | Processing SLAs for many correction paths | Often absent on Tier-1 pages |
 
-**Claims requiring manual verification:** **5** (`verification_status: UNVERIFIED` in `claims.json`).
+**Claims requiring manual verification:** all staging claims remain non-`VERIFIED`;
+see demotion log + `PENDING_REVIEW` / `CONFLICTING` / `CROSS_CHECKED` counts in
+`docs/research/batch-01-pipeline-status.md`. Legacy dump had 5 `UNVERIFIED` plus
+64 premature `VERIFIED` labels that were demoted.
 
 ---
 
@@ -310,6 +333,6 @@ Services with explicit `manual_review_required` notes include (representative):
 5. **Number of sources:** 21  
 6. **Number of official sources (Tier 1–2):** 15  
 7. **Number of practical/community sources (Tier 5+):** 6  
-8. **Claims requiring manual verification:** 5  
-9. **Average Knowledge Quality Score:** 67.7  
-10. **Major research gaps:** EC fee gazette; BDRIS Guidelines 2021 full extract; marriage/divorce fee-doc matrices; per-LGI certificate schedules; expatriate NID workflows; processing SLAs
+8. **Claims requiring manual verification:** 69 staging claims (0 `VERIFIED`); 64 demoted from premature discovery `VERIFIED`  
+9. **Average Knowledge Quality Score:** 67.7 (**research completeness only** — not publication confidence)  
+10. **Major research gaps:** EC fee gazette; BDRIS Guidelines 2021 full extract; marriage/divorce fee-doc matrices; per-LGI certificate schedules; expatriate NID workflows; processing SLAs; missing Claim/ClaimEvidence runtime tables; null SourceVersion content hashes

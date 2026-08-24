@@ -1,0 +1,32 @@
+{
+  "batch_id": "batch-01-identity-civil-registration",
+  "normalized_at": "2026-08-24",
+  "layer": "research/staging",
+  "publication_status": "STAGING_ONLY",
+  "published_to_runtime_db": false,
+  "frontend_changed": false,
+  "rag_implemented": false,
+  "embeddings_generated": false,
+  "counts": {
+    "sources": 21,
+    "source_versions": 21,
+    "evidence": 80,
+    "claims": 69,
+    "services": 34,
+    "requirements": 56,
+    "fees": 22,
+    "procedure_steps": 16,
+    "conflicts": 6,
+    "demoted_from_verified": 64
+  },
+  "claim_pipeline_status_counts": {
+    "NORMALIZED": 39,
+    "CROSS_CHECKED": 8,
+    "CONFLICTING": 13,
+    "EXTRACTED": 9
+  },
+  "verified_claims_emitted": 0,
+  "raw_discovery_path": "data/research/raw/batch-01",
+  "staging_path": "data/research/staging/batch-01",
+  "legacy_discovery_path_note": "data/knowledge/batch-01 is a legacy discovery dump and must not be treated as verified SoT. Prefer data/research/staging/batch-01."
+}
