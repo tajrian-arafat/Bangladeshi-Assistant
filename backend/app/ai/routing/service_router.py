@@ -41,6 +41,18 @@ class ServiceRoutingResult:
     domain_entities: DomainEntities | None = None
 
 
+def _query_is_passport_verification_context(text: str) -> bool:
+    if "pcc" in text or "clearance certificate" in text:
+        return False
+    return "passport verification" in text or (
+        "verification" in text and "passport" in text and "police" in text
+    )
+
+
+def _query_is_gd_context(text: str) -> bool:
+    return bool(re.search(r"\bgd\b", text)) or "general diary" in text or "genaral diary" in text
+
+
 def _query_mentions_police_verification(text: str) -> bool:
     markers = [
         "police verification",
@@ -231,6 +243,17 @@ class ServiceRouter:
             ]
             if immigration:
                 return immigration
+
+        if "firearms" in entities.domains:
+            firearms = [
+                s
+                for s in services
+                if self._profiles.get(s.slug, {}).get("domain") == "police"
+                and self._profiles.get(s.slug, {}).get("service_type") == "licence"
+                and "firearms" in s.slug
+            ]
+            if firearms:
+                return firearms
 
         return services
 
@@ -432,23 +455,67 @@ class ServiceRouter:
                 reasons.append("penalty:passport_not_character_cert")
 
         # Police verification context overrides renewal/reissue affinity
-        if _query_mentions_police_verification(text):
+        if _query_mentions_police_verification(text) or _query_is_passport_verification_context(text):
             if "police" in service.slug and "passport" in service.slug:
                 score += 35
                 reasons.append("boost:police_verification")
             if service.slug == "police-passport-verification" and any(
-                w in text for w in ("sla", "charter", "timeline", "processing", "din", "day", "time")
+                w in text for w in ("sla", "charter", "timeline", "processing", "din", "day", "time", "urgent")
             ):
-                score += 45
+                score += 55
                 reasons.append("boost:pv_sla_service")
             if service.slug == "police-passport-police-verification" and any(
-                w in text for w in ("sla", "charter", "timeline")
+                w in text for w in ("sla", "charter", "timeline", "urgent")
             ):
                 score -= 30
                 reasons.append("penalty:pv_passport_for_sla_query")
             if service.slug in {"passport-renewal", "passport-mrp-reissue", "passport-mrp-initial"}:
                 score -= 40
                 reasons.append("penalty:pv_over_renewal")
+            if service.slug == "epassport-urgent-super-express" and _query_is_passport_verification_context(
+                text
+            ):
+                score -= 65
+                reasons.append("penalty:epassport_urgent_for_pv_sla")
+
+        # Passport verification vs PCC comparison
+        if "same as" in text and "passport verification" in text:
+            if service.slug == "police-passport-verification":
+                score += 45
+                reasons.append("boost:pv_comparison")
+            if service.slug == "police-clearance-certificate":
+                score -= 25
+                reasons.append("penalty:pcc_for_pv_comparison")
+
+        # GD online channel preference
+        if _query_is_gd_context(text) and entities.channel == "online":
+            if service.slug == "police-general-diary-online":
+                score += 35
+                reasons.append("boost:gd_online_channel")
+            if service.slug == "police-general-diary":
+                score -= 25
+                reasons.append("penalty:gd_offline_for_online_query")
+
+        # Firearms vs driving licence disambiguation
+        if "firearms" in entities.domains or any(
+            w in text for w in ("firearms", "fire arms", "gun license", "arms license", "আগ্নেয়াস্ত্র")
+        ):
+            if service.slug == "police-firearms-license":
+                score += 45
+                reasons.append("boost:firearms_licence")
+            if service.slug == "driving-licence-renewal":
+                score -= 80
+                reasons.append("penalty:driving_for_firearms")
+            if "brta" in service.slug and "firearms" in entities.domains:
+                score -= 60
+                reasons.append("penalty:brta_for_firearms")
+
+        # Generic licence word must not alone select driving when firearms context present
+        if "license" in text or "licence" in text:
+            if "firearms" in entities.domains or "gun" in text or "fire arms" in text:
+                if service.slug == "driving-licence-renewal":
+                    score -= 50
+                    reasons.append("penalty:generic_licence_firearms_bleed")
 
         # Batch 2B police + immigration routing — handled via service_capabilities.json,
         # phrase_hints.json, and domain_entities channel variants (no inline phrase hacks).

@@ -106,14 +106,12 @@ def normalize_banglish(message: str) -> str:
     i = 0
     while i < len(tokens):
         token = tokens[i]
-        # "koto din" = how many days (processing time), not fee inquiry
-        if token == "koto" and i + 1 < len(tokens) and tokens[i + 1] in {
-            "din",
-            "day",
-            "days",
-            "somoy",
-            "time",
-        }:
+        # "koto din valid" = validity, not fee/time
+        if token == "koto" and i + 1 < len(tokens) and tokens[i + 1] in {"din", "day", "days"}:
+            if i + 2 < len(tokens) and tokens[i + 2] in {"valid", "validity"}:
+                normalized.extend(["validity", "inquiry"])
+                i += 3
+                continue
             normalized.extend(["processing", "time"])
             i += 2
             continue

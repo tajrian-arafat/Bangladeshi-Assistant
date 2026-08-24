@@ -43,7 +43,12 @@
     },
     "eligibility": {
       "claim_types": ["eligibility", "restriction", "conditional_document"],
-      "capability_tokens": ["eligibility", "eligible", "qualify", "who can"],
+      "capability_tokens": ["eligibility", "eligible", "qualify", "who can", "valid", "validity"],
+      "legacy_alias": "eligibility_inquiry"
+    },
+    "validity": {
+      "claim_types": ["eligibility", "restriction", "conditional_document"],
+      "capability_tokens": ["valid", "validity", "expires", "expiry", "valid for"],
       "legacy_alias": "eligibility_inquiry"
     },
     "office_locator": {

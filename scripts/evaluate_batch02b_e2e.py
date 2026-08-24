@@ -19,6 +19,7 @@ sys.path.insert(0, str(BACKEND_DIR))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 os.chdir(BACKEND_DIR)
 
+from app.application.services.conversation_context import ConversationContext  # noqa: E402
 from app.ai.orchestrator import Orchestrator  # noqa: E402
 from app.core.database import get_session_factory  # noqa: E402
 from app.schemas.chat import ChatRequest  # noqa: E402
@@ -68,8 +69,22 @@ def evaluate_case(case: dict, actual: dict) -> dict[str, Any]:
 
 async def run_one(session_factory, case: dict) -> dict[str, Any]:
     async with session_factory() as session:
-        req = ChatRequest(message=case["query"], language_preference="auto")
-        answer, confidence, intent, citations, ctx = await Orchestrator(session).run(req)
+        req = ChatRequest(
+            message=case["query"],
+            language_preference="auto",
+            clarifications=case.get("clarifications") or {},
+        )
+        conv_ctx = ConversationContext()
+        if case.get("clarifications"):
+            conv_ctx = ConversationContext(
+                service_slug=case["clarifications"].get("service"),
+                clarifications=case.get("clarifications") or {},
+            )
+            if case["query"].lower().startswith(("follow up", "follow-up")):
+                conv_ctx.intent = case.get("intent_expected")
+        answer, confidence, intent, citations, ctx = await Orchestrator(session).run(
+            req, conversation_context=conv_ctx
+        )
         actual = {
             "language": ctx.language,
             "normalized_message": ctx.normalized_message,

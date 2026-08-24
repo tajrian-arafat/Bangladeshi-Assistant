@@ -4,7 +4,7 @@
     "fee": {
       "synonyms_en": ["fee", "fees", "charge", "cost", "price", "how much", "amount", "free"],
       "synonyms_bn": ["ফি", "খরচ", "টাকা", "মূল্য", "চার্জ", "ফ্রি"],
-      "synonyms_banglish": ["koto", "koto taka", "koto lage", "taka", "bdt", "fee", "free"]
+      "synonyms_banglish": ["koto taka", "koto lage", "taka", "bdt", "fee", "free"]
     },
     "payment": {
       "synonyms_en": ["payment", "pay", "pay online", "gateway", "online payment"],
@@ -80,6 +80,46 @@
       "synonyms_en": ["police verification", "pv", "police clearance"],
       "synonyms_bn": ["পুলিশ ভেরিফিকেশন"],
       "synonyms_banglish": ["police verification", "pv"]
+    },
+    "location_inquiry": {
+      "synonyms_en": ["where", "location", "kothay", "where to apply", "where can i"],
+      "synonyms_bn": ["কোথায়", "কোথায়", "কোথায় পাব", "ঠিকানা"],
+      "synonyms_banglish": ["kothay", "kothay pabo", "where", "kothay apply"]
+    },
+    "time_inquiry": {
+      "synonyms_en": ["how long", "processing time", "sla", "timeline", "takes how long"],
+      "synonyms_bn": ["কত দিন", "কতদিন", "কতদিন লাগে", "সময়"],
+      "synonyms_banglish": ["koto din", "koto din lage", "koto din lage?", "how long"]
+    },
+    "validity_inquiry": {
+      "synonyms_en": ["valid", "validity", "expires", "expiry", "valid for", "valid how long"],
+      "synonyms_bn": ["মেয়াদ", "মেয়াদ", "কতদিন valid", "কতদিন চলবে", "valid thakte"],
+      "synonyms_banglish": ["valid koto din", "valid thakte hobe", "valid thakbe", "validity"]
+    },
+    "document_requirement": {
+      "synonyms_en": ["documents needed", "documents list", "required documents", "what documents", "papers needed"],
+      "synonyms_bn": ["কাগজ", "কি কাগজ", "কী কাগজ", "দলিল"],
+      "synonyms_banglish": ["lagbe", "lage", "documents list", "nid lagbe", "paper lagbe"]
+    },
+    "procedure_inquiry": {
+      "synonyms_en": ["how to", "procedure", "steps", "process", "how do i"],
+      "synonyms_bn": ["কিভাবে", "কীভাবে", "পদ্ধতি", "প্রক্রিয়া"],
+      "synonyms_banglish": ["kivabe", "kora jay", "how to apply", "procedure"]
+    },
+    "firearms": {
+      "synonyms_en": ["firearms license", "firearms licence", "gun license", "arms license", "fire arms"],
+      "synonyms_bn": ["আগ্নেয়াস্ত্র", "আগ্নেয়াস্ত্র", "বন্দুক"],
+      "synonyms_banglish": ["fire arms", "gun license", "firearms license"]
+    },
+    "driving_licence": {
+      "synonyms_en": ["driving licence", "driving license", "learner licence", "brta licence"],
+      "synonyms_bn": ["ড্রাইভিং লাইসেন্স", "ড্রাইভিং লাইসেন্স"],
+      "synonyms_banglish": ["driving licence", "driving license", "brta licence"]
+    },
+    "visa_types": {
+      "synonyms_en": ["business visa", "tourist visa", "mrv visa", "visa application"],
+      "synonyms_bn": ["ব্যবসায়িক ভিসা", "ভিসা আবেদন"],
+      "synonyms_banglish": ["business visa", "tourist visa", "mrv visa"]
     }
   },
   "domain_triggers": {
@@ -111,7 +151,10 @@
       "tokens": ["police", "pcc", "clearance certificate", "general diary", " gd ", "gd online", "special branch", "পুলিশ", "জিডি", "ক্লিয়ারেন্স"]
     },
     "immigration": {
-      "tokens": ["visa", "mrv", "immigration", "dip.gov", "visa.gov", "department of immigration", "ভিসা", "ইমিগ্রেশন", "probashi cell", "expatriate cell"]
+      "tokens": ["visa", "mrv", "immigration", "dip.gov", "visa.gov", "department of immigration", "ভিসা", "ইমিগ্রেশন", "probashi cell", "expatriate cell", "business visa", "tourist visa"]
+    },
+    "firearms": {
+      "tokens": ["firearms", "fire arms", "gun license", "arms license", "আগ্নেয়াস্ত্র", "আগ্নেয়াস্ত্র", "বন্দুক"]
     }
   }
 }

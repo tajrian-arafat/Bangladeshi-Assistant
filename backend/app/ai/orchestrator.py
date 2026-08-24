@@ -17,6 +17,12 @@ from app.ai.pipeline.entities import extract_entities
 from app.ai.pipeline.intent import classify_intent, classify_intents
 from app.ai.pipeline.language import detect_language
 from app.ai.pipeline.safety import validate_safety
+from app.ai.routing.context_resolution import (
+    apply_context_clarifications,
+    merge_clarifications,
+    resolve_follow_up_intent,
+    should_inherit_service,
+)
 from app.ai.routing.claim_retrieval import ClaimRetrieval
 from app.ai.routing.intent_canonical import public_intent
 from app.ai.routing.intent_classifier import IntentResult
@@ -134,22 +140,44 @@ class Orchestrator:
         ctx.language = detect_language(request.message, request.language_preference)
         routing_message = sanitize_for_routing(request.message)
         ctx.normalized_message = normalize_banglish(routing_message)
-        merged_clarifications = dict(request.clarifications or {})
-        merged_clarifications.update(self._infer_clarifications(ctx.normalized_message, request.message))
-        ctx.intents = classify_intents(ctx.normalized_message, merged_clarifications)
+        merged_clarifications = merge_clarifications(request.clarifications, conv_ctx)
+        merged_clarifications = apply_context_clarifications(
+            request.message, merged_clarifications, conv_ctx
+        )
+        merged_clarifications.update(
+            self._infer_clarifications(ctx.normalized_message, request.message)
+        )
+        ctx.intents = classify_intents(
+            ctx.normalized_message,
+            merged_clarifications,
+            raw_message=routing_message,
+        )
         # Bangla script may carry intents lost during romanization
         if ctx.intents.primary in {"general_info", "document_list"}:
-            raw_intents = classify_intents(routing_message, merged_clarifications)
+            raw_intents = classify_intents(
+                routing_message, merged_clarifications, raw_message=routing_message
+            )
             if raw_intents.primary not in {"general_info"} or ctx.intents.primary == "general_info":
                 if raw_intents.all_intents != ctx.intents.all_intents:
                     ctx.intents = raw_intents
+
+        follow_up_intent = None
+        if ConversationContextService.is_follow_up_message(request.message):
+            follow_up_intent = resolve_follow_up_intent(
+                request.message, conv_ctx, ctx.intents
+            )
+        if follow_up_intent:
+            ctx.intents = follow_up_intent
+
         ctx.intent = public_intent(ctx.intents.primary, ctx.intents.secondary)
         if merged_clarifications.get("service") == "epassport-fee-payment" and merged_clarifications.get(
             "speed"
         ):
             ctx.intents = IntentResult(primary="fee_inquiry", secondary=["payment"])
             ctx.intent = "fee_inquiry"
-        if conv_ctx.intent and ctx.intent == "general_info":
+        elif conv_ctx.intent and ctx.intent == "general_info" and should_inherit_service(
+            request.message, conv_ctx
+        ):
             ctx.intent = conv_ctx.intent
             ctx.intents = IntentResult(primary=conv_ctx.intent)
 
@@ -175,7 +203,7 @@ class Orchestrator:
                 ctx.entities["service_match_method"] = "clarification_context"
 
         if not ctx.entities.get("service") and conv_ctx.service_slug:
-            if ConversationContextService.is_follow_up_message(request.message):
+            if should_inherit_service(request.message, conv_ctx):
                 svc = await self._service_by_slug(conv_ctx.service_slug)
                 if svc:
                     ctx.entities["service"] = svc
@@ -269,7 +297,18 @@ class Orchestrator:
             inferred["passport_type"] = "mrp"
         if any(token in msg for token in ("reissue", "re-issue", "renewal", "renew")):
             inferred["application_type"] = "reissue"
+        if infer_channel_from_message := self._infer_channel_clarification(msg):
+            inferred["channel"] = infer_channel_from_message
+            if "online" in infer_channel_from_message:
+                inferred["pcc_channel"] = "online"
         return inferred
+
+    def _infer_channel_clarification(self, msg: str) -> str | None:
+        if "online channel" in msg or "online pcc" in msg:
+            return "online"
+        if "offline channel" in msg or "offline pcc" in msg:
+            return "offline"
+        return None
 
     def _clarifications_needed(self, ctx: PipelineContext, request: ChatRequest) -> list[str]:
         if not ctx.service:

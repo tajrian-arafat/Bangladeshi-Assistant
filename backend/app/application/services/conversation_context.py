@@ -46,6 +46,10 @@ FOLLOW_UP_TOKENS = {
     "tier",
     "urgent",
     "follow",
+    "channel",
+    "online",
+    "offline",
+    "eta",
 }
 
 
@@ -225,11 +229,17 @@ class ConversationContextService:
         text = message.strip().lower()
         if not text:
             return False
+        if text.startswith("follow up") or text.startswith("follow-up"):
+            return True
+        words = text.replace(".", "").replace("?", "").split()
+        # Full standalone questions are not follow-ups even if they contain short tokens
+        if len(words) > 5:
+            return False
         if len(text) <= FOLLOW_UP_MAX_LEN:
-            tokens = set(text.replace(".", "").replace("?", "").split())
+            tokens = set(words)
             if tokens & FOLLOW_UP_TOKENS:
                 return True
-            if len(text.split()) <= 3:
+            if len(words) <= 3:
                 return True
         return False
 

@@ -1,18 +1,17 @@
 {
-  "generated_at": "2026-08-24T23:13:02.775181+00:00",
+  "generated_at": "2026-08-24T23:25:53.862247+00:00",
   "batch_id": "batch-02b-police-immigration",
   "total_tests": 67,
-  "passed": 52,
-  "raw_passed": 50,
-  "pass_rate_pct": 77.6,
-  "raw_pass_rate_pct": 74.6,
+  "passed": 67,
+  "raw_passed": 65,
+  "pass_rate_pct": 100.0,
+  "raw_pass_rate_pct": 97.0,
   "hallucinations": 0,
-  "correct_uncertainty": 22,
+  "correct_uncertainty": 24,
   "correct_refusal": 3,
   "outcome_counts": {
-    "ANSWER_SUPPORTED": 27,
-    "CORRECT_UNCERTAINTY": 22,
-    "PRODUCT_FAILURE": 15,
+    "ANSWER_SUPPORTED": 40,
+    "CORRECT_UNCERTAINTY": 24,
     "CORRECT_REFUSAL": 3
   },
   "dryrun_gate_pass": true,
@@ -739,7 +738,7 @@
       "actual": {
         "language": "banglish",
         "normalized_message": "bangladesh visa application where",
-        "intent": "office_locator",
+        "intent": "application_url",
         "service_slug": "migration-visa-application-dip",
         "support_level": "PARTIALLY_SUPPORTED",
         "confidence": "medium",
@@ -779,22 +778,20 @@
           }
         ]
       },
-      "pass": false,
-      "raw_pass": false,
+      "pass": true,
+      "raw_pass": true,
       "expected_outcome": "ANSWER_SUPPORTED",
-      "actual_outcome": "PRODUCT_FAILURE",
-      "counts_as_product_failure": true,
+      "actual_outcome": "ANSWER_SUPPORTED",
+      "counts_as_product_failure": false,
       "checks": {
         "service": true,
-        "intent": false,
+        "intent": true,
         "url": true,
         "official_url": true
       },
-      "reasons": [
-        "intent mismatch: expected=application_url got=office_locator"
-      ],
-      "failure_class": "LANGUAGE_BUG",
-      "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
     },
     {
       "id": "b010",

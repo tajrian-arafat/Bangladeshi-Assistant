@@ -24,8 +24,9 @@ INTENT_EQUIVALENTS: dict[str, set[str]] = {
         "service_discovery",
         "processing_time",
     },
-    "eligibility": {"eligibility", "eligibility_inquiry"},
-    "eligibility_inquiry": {"eligibility", "eligibility_inquiry"},
+    "eligibility": {"eligibility", "eligibility_inquiry", "validity"},
+    "eligibility_inquiry": {"eligibility", "eligibility_inquiry", "validity"},
+    "validity": {"validity", "eligibility", "eligibility_inquiry"},
     "office_locator": {"office_locator"},
     "processing_time": {"processing_time"},
     "appointment": {"appointment"},
@@ -111,18 +112,22 @@ def public_intent(primary: str, secondary: list[str] | None = None) -> str:
     if primary == "procedure_inquiry" and "general_info" in secondary:
         return "general_info"
 
-    # Online registration flows
-    if primary == "application_url" and "procedure_inquiry" in secondary:
-        return "procedure_inquiry"
+    # Explicit URL/portal requests stay application_url
+    if primary == "application_url":
+        return "application_url"
 
     # List/download official URL availability
-    if primary == "application_url" and "general_info" in secondary:
-        return "general_info"
 
     if primary in {"application", "procedure_inquiry"} and "eligibility" in secondary:
         return "eligibility_inquiry"
 
+    if primary in {"validity", "eligibility"}:
+        return "eligibility_inquiry"
+
     if primary == "processing_time":
         return "processing_time"
+
+    if primary == "comparison":
+        return "general_info"
 
     return legacy

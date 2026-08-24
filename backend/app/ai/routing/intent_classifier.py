@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from app.ai.routing.loader import load_capability_aliases, load_intent_taxonomy
+from app.ai.routing.semantic_phrases import detect_semantic_signals
 
 
 @dataclass
@@ -45,10 +46,17 @@ def _collect_capability_hits(text: str) -> dict[str, bool]:
     return hits
 
 
-def classify_intents(message: str, clarifications: dict[str, Any] | None = None) -> IntentResult:
+def classify_intents(
+    message: str,
+    clarifications: dict[str, Any] | None = None,
+    *,
+    raw_message: str | None = None,
+) -> IntentResult:
     """Classify primary and secondary intents from normalized or raw message."""
     text = message.lower()
     clarifications = clarifications or {}
+    raw = (raw_message or message).lower()
+    signals = detect_semantic_signals(text, raw)
     hits = _collect_capability_hits(text)
     scored: dict[str, float] = {}
 
@@ -101,12 +109,15 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
         ]
     )
 
-    # Fee inquiry — strong signal
-    if hits.get("fee") or re.search(r"\b(free|ফ্রি)\b", text):
-        bump("fee_inquiry", 40)
-    if hits.get("fee") or re.search(r"\b\d{2,5}\s*(bdt|taka|টাকা)?\b", text):
-        if hits.get("fee") or re.search(r"\b\d{2,5}\s*(bdt|taka)\b", text):
+    # Fee inquiry — strong signal (skip when time/validity semantics present)
+    if not signals.processing_time and not signals.validity:
+        if hits.get("fee") or re.search(r"\b(free|ফ্রি)\b", text):
             bump("fee_inquiry", 40)
+        if hits.get("fee") or re.search(r"\b\d{2,5}\s*(bdt|taka|টাকা)?\b", text):
+            if hits.get("fee") or re.search(r"\b\d{2,5}\s*(bdt|taka)\b", text):
+                bump("fee_inquiry", 40)
+    if re.search(r"কত\s*টাকা", raw) or re.search(r"kot[oa]\s*taka", text):
+        bump("fee_inquiry", 45)
 
     # Fee matrix patterns (passport pages/years)
     if re.search(r"\d+\s*page|\bpage\b", text) and any(
@@ -122,12 +133,16 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
         if "fee" in text or "passport fee" in text:
             bump("procedure_inquiry", 20)
 
-    # Application URL — prefer general_info for list/download URL availability questions
+    # Application URL — prefer over office_locator when asking where to apply online
     url_list_query = any(w in text for w in ["list", "download"]) and any(
         w in text for w in ["url", "official", "website", "portal"]
     )
     if url_list_query and not any(w in text for w in ["apply", "application", "register", "onboarding"]):
         bump("general_info", 35)
+    elif signals.url_request or (
+        signals.application_location and not signals.physical_office
+    ):
+        bump("application_url", 45)
     elif any(
         w in text
         for w in [
@@ -141,7 +156,10 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
             "কোথায়",
         ]
     ):
-        bump("application_url", 35)
+        if signals.application_location or ("application" in text or "apply" in text or "visa" in text):
+            bump("application_url", 40)
+        else:
+            bump("application_url", 35)
 
     # Status
     if hits.get("status") or any(w in text for w in ["status check", "tracking", "track", "kotodur"]):
@@ -151,16 +169,27 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
     if hits.get("appointment"):
         bump("appointment", 40)
 
-    # Office / location
-    if any(
-        w in text
-        for w in ["where", "kothay", "office", "location", "কোথায়", "কোথায়", "অফিস", "ঠিকানা"]
+    # Office / location — physical office only; application location handled above
+    if signals.physical_office or (
+        signals.location
+        and not signals.application_location
+        and not signals.url_request
+        and not ("application" in text or "apply" in text or "visa application" in text)
     ):
-        bump("office_locator", 35)
+        if any(
+            w in text
+            for w in ["where", "kothay", "office", "location", "কোথায়", "কোথায়", "অফিস", "ঠিকানা"]
+        ):
+            bump("office_locator", 35)
     elif "address" in text and not any(
         w in text for w in ["eligible", "eligibility", "only for", "who can", "can i"]
     ):
         bump("office_locator", 20)
+
+    # Validity / eligibility duration (beats processing_time when "valid" present)
+    if signals.validity:
+        bump("validity", 50)
+        bump("eligibility", 45)
 
     # Eligibility
     if any(
@@ -227,13 +256,25 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
     ):
         bump("application", 40)
 
-    # Documents / requirements — beats processing_time for first-time queries
-    if has_document_signal:
-        bump("document_list", 38)
+    # Documents / requirements — not when GD procedure or overview query
+    if has_document_signal and not signals.overview:
+        if gd_context and (has_procedure_signal or "online" in text) and "lost" in text:
+            bump("procedure_inquiry", 35)
+        else:
+            bump("document_list", 38)
 
     # Procedure / how-to
-    if has_procedure_signal:
+    if has_procedure_signal or signals.procedure:
         bump("procedure_inquiry", 28)
+
+    # Overview / responsibility queries
+    if signals.overview:
+        bump("general_info", 48)
+
+    # Comparison queries
+    if signals.comparison or hits.get("comparison"):
+        bump("comparison", 45)
+        bump("general_info", 30)
 
     # General Diary (distinct from lost-passport GD context)
     if gd_context and not lost_context:
@@ -243,8 +284,10 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
         ):
             bump("procedure_inquiry", 12)
             bump("eligibility", 8)
+    elif gd_context and "online" in text and "lost" in text:
+        bump("procedure_inquiry", 48)
 
-    # Processing time — explicit phrase (incl. banglish normalization) wins over generic verification
+    # Processing time — explicit phrase wins; semantic time beats generic procedure
     time_markers = [
         "processing time",
         "how long",
@@ -253,11 +296,14 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
         "sla",
         "weeks",
         "months",
+        "lage",
+        "লাগ",
     ]
-    if "processing time" in text:
+    if signals.processing_time or "processing time" in text:
         bump("processing_time", 55)
-    elif any(w in text for w in time_markers):
-        bump("processing_time", 30)
+    elif any(w in raw for w in time_markers) or any(w in text for w in time_markers):
+        if not signals.validity:
+            bump("processing_time", 35)
     elif re.search(r"\b\d+\s*(day|days|week|weeks)\b", text):
         bump("processing_time", 28)
     elif "time" in text.split() and not has_document_signal:
@@ -287,6 +333,13 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
         bump("procedure_inquiry", 30)
         bump("application_url", 10)
 
+    # Where to complete a procedure (office/thana), not portal URL lookup
+    if signals.location and not signals.url_request and not signals.application_location:
+        if any(w in text for w in ("korte hobe", "korte hoy", "korbo", "verification office")):
+            bump("procedure_inquiry", 40)
+        elif "verification" in text and "office" in text:
+            bump("procedure_inquiry", 35)
+
     # New application URL questions
     if any(w in text for w in ["apply online", "application url", "onboarding", "আবেদন কোথায়", "কোথায়"]):
         if any(w in text for w in ["passport", "e-passport", "epassport", "ই-পাসপোর্ট", "পাসপোর্ট"]):
@@ -309,6 +362,8 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
             bump("procedure_inquiry", 25)
 
     # Clarification overrides
+    if clarifications.get("channel") and clarifications.get("service") == "police-clearance-certificate":
+        bump("fee_inquiry", 50)
     if clarifications.get("passport_type") == "mrp":
         bump("comparison", 5)
     if clarifications.get("application_type") in {"renewal", "reissue"}:
@@ -331,9 +386,41 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
     primary = ranked[0][0]
 
     # Explicit processing-time phrase must beat generic verification→procedure signal
-    if "processing time" in text and scored.get("processing_time", 0) >= 30:
+    if (signals.processing_time or "processing time" in text) and scored.get("processing_time", 0) >= 30:
         if scored.get("procedure_inquiry", 0) > scored.get("processing_time", 0):
             primary = "processing_time"
+
+    # Validity beats processing_time when both scored
+    if signals.validity and scored.get("validity", 0) >= scored.get("processing_time", 0):
+        primary = "validity" if scored.get("validity", 0) >= scored.get("eligibility", 0) else "eligibility"
+
+    # Application URL beats office_locator for apply/visa location questions
+    if signals.application_location and scored.get("application_url", 0) >= 35:
+        if scored.get("office_locator", 0) > scored.get("application_url", 0):
+            primary = "application_url"
+
+    # URL request beats procedure
+    if signals.url_request and scored.get("application_url", 0) >= 30:
+        primary = "application_url"
+
+    # Overview beats document_list
+    if signals.overview and scored.get("general_info", 0) >= 40:
+        primary = "general_info"
+
+    # Comparison beats procedure
+    if signals.comparison and scored.get("comparison", 0) >= 40:
+        primary = "comparison"
+
+    # Procedure location beats office_locator for verification/thana queries
+    if signals.location and not signals.application_location and not signals.url_request:
+        if scored.get("procedure_inquiry", 0) >= 35 and scored.get("procedure_inquiry", 0) >= scored.get(
+            "office_locator", 0
+        ):
+            primary = "procedure_inquiry"
+
+    # GD online lost-item filing — procedure, not document list
+    if gd_context and "online" in text and "lost" in text and scored.get("procedure_inquiry", 0) >= 40:
+        primary = "procedure_inquiry"
 
     secondary = [
         intent
@@ -351,6 +438,11 @@ def classify_intents(message: str, clarifications: dict[str, Any] | None = None)
     return IntentResult(primary=primary, secondary=secondary)
 
 
-def classify_intent(message: str, clarifications: dict[str, Any] | None = None) -> str:
+def classify_intent(
+    message: str,
+    clarifications: dict[str, Any] | None = None,
+    *,
+    raw_message: str | None = None,
+) -> str:
     """Backward-compatible single-intent classifier returning legacy alias."""
-    return classify_intents(message, clarifications).legacy_primary()
+    return classify_intents(message, clarifications, raw_message=raw_message).legacy_primary()

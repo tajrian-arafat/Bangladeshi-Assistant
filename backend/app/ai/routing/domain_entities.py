@@ -70,6 +70,16 @@ def extract_domain_entities(message: str) -> DomainEntities:
         entities.action = "lost"
     if _group_hit(text, groups.get("correction", {})):
         entities.action = "correction"
+    if _group_hit(text, groups.get("firearms", {})):
+        if "firearms" not in entities.domains:
+            entities.domains.append("firearms")
+        # Firearms licence is not transport/driving
+        if "transport" in entities.domains:
+            entities.domains.remove("transport")
+    elif _group_hit(text, groups.get("driving_licence", {})):
+        if "transport" not in entities.domains:
+            entities.domains.append("transport")
+
     if _group_hit(text, groups.get("fee", {})):
         entities.action = entities.action or "fee"
     if _group_hit(text, groups.get("payment", {})):
