@@ -17,18 +17,23 @@ class ChecklistItemResponse(BaseModel):
     item: str
     type: str
     evidence_id: str | None = None
+    layer: str = "OFFICIAL"
+    claim_linked: bool = False
 
 
 class ProcedureStepResponse(BaseModel):
     order: int
     title: str
     official_url: str | None = None
+    claim_linked: bool = False
 
 
 class FeeResponse(BaseModel):
     amount: str
     currency: str
     evidence_id: str | None = None
+    label: str | None = None
+    fee_mode: str | None = None
 
 
 class AnswerPayload(BaseModel):
@@ -39,6 +44,8 @@ class AnswerPayload(BaseModel):
     warnings: list[str] = Field(default_factory=list)
     clarifications_needed: list[str] = Field(default_factory=list)
     support_level: str | None = None
+    practical_notes: list[str] = Field(default_factory=list)
+    official_urls: list[str] = Field(default_factory=list)
 
 
 class CitationResponse(BaseModel):

@@ -14,10 +14,24 @@ def test_detect_language_bangla() -> None:
 
 
 def test_normalize_banglish() -> None:
-    result = normalize_banglish("passport renew korte ki ki lagbe")
+    result = normalize_banglish("passport renew korte ki ki lage")
     assert "passport" in result
     assert "renewal" in result
 
 
+def test_normalize_banglish_jonmo() -> None:
+    result = normalize_banglish("jonmo nibondhon korte ki ki lage?")
+    assert "birth" in result
+    assert "registration" in result
+
+
 def test_classify_intent_documents() -> None:
     assert classify_intent("passport renew documents lagbe") == "document_list"
+
+
+def test_classify_intent_bangla_documents() -> None:
+    assert classify_intent("জন্ম নিবন্ধন করতে কী কী লাগে?") == "document_list"
+
+
+def test_classify_intent_fee() -> None:
+    assert classify_intent("NID correction fee koto?") == "fee_inquiry"

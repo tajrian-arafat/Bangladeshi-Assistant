@@ -67,7 +67,14 @@ async def test_chat_passport_match(client: AsyncClient, test_session) -> None:
     assert response.status_code == 200
     body = response.json()
     assert body["metadata"]["service_slug"] == "passport-renewal"
-    assert len(body["answer"]["checklist"]) >= 1
+    # Seed checklist without claim_id must not appear as official MUST NEED
+    assert body["answer"]["checklist"] == []
+    assert body["answer"]["support_level"] in {
+        "INSUFFICIENT_EVIDENCE",
+        "PARTIALLY_SUPPORTED",
+        "CONFLICTED",
+    }
+    assert any("not yet verified" in w.lower() or "incomplete" in w.lower() for w in body["answer"]["warnings"])
 
 
 @pytest.mark.asyncio

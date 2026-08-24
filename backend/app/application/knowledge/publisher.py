@@ -845,7 +845,8 @@ class KnowledgePublisher:
                     service.status = "UNDER_REVIEW"
                     service.review_state = "PENDING_REVIEW"
                 elif readiness == "RED":
-                    service.status = "CONFLICTED"
+                    # Incomplete coverage — not the same as material claim CONFLICT
+                    service.status = "UNDER_REVIEW"
                     service.review_state = "PENDING_REVIEW"
 
         if report.errors:
