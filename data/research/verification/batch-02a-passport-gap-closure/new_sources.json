@@ -1,0 +1,87 @@
+{
+  "sources": [
+    {
+      "source_id": "src-gap-epassport-fees-browser",
+      "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+      "source_title": "e-Passport Fees and Payment Options (browser-rendered)",
+      "authority_tier": 1,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-24",
+      "source_last_updated": "2026-07-12",
+      "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/epassport_fees.txt",
+      "evidence_limitation": null
+    },
+    {
+      "source_id": "src-gap-epassport-fees-api",
+      "source_url": "https://www.epassport.gov.bd/api/v1/landing/instruction/passportFees",
+      "source_title": "e-Passport fee instruction API (observed during browser session)",
+      "authority_tier": 1,
+      "retrieval_method": "browser_network_intercept",
+      "retrieved_at": "2026-08-24",
+      "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/scrape_results.json",
+      "evidence_limitation": "Direct curl to API returns 403; JSON captured from SPA network call during puppeteer session"
+    },
+    {
+      "source_id": "src-gap-epassport-instructions-browser",
+      "source_url": "https://www.epassport.gov.bd/instructions/instructions",
+      "source_title": "e-Passport form instructions (browser-rendered)",
+      "authority_tier": 1,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-24",
+      "source_last_updated": "2026-08-03",
+      "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/epassport_instructions.txt"
+    },
+    {
+      "source_id": "src-gap-epassport-urgent-browser",
+      "source_url": "https://epassport.gov.bd/instructions/urgent-applications",
+      "source_title": "Urgent / Super Express applications (browser-rendered)",
+      "authority_tier": 1,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-24",
+      "source_last_updated": "2026-06-03",
+      "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/https_epassport_gov_bd_instructions_urgent_applications.txt"
+    },
+    {
+      "source_id": "src-gap-epassport-faq-api",
+      "source_url": "https://www.epassport.gov.bd/api/v1/landing/faq?lang=eng",
+      "source_title": "e-Passport portal FAQ API (status check fields)",
+      "authority_tier": 1,
+      "retrieval_method": "browser_network_intercept",
+      "retrieved_at": "2026-08-24",
+      "source_last_updated": "2020-08-28",
+      "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/scrape_results.json",
+      "evidence_limitation": "FAQ status-check entry last modified 2020-08-28; dedicated status route returned 404/403 in probes"
+    },
+    {
+      "source_id": "src-gap-dip-mrp-fee-page",
+      "source_url": "http://dip.gov.bd/site/page/389cbca1-6356-4fb7-b1a1-8f1d67e85463/-",
+      "source_title": "DIP MRP fee (Bangladesh) page",
+      "authority_tier": 1,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-24",
+      "source_last_updated": "2017-02-15",
+      "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/http_dip_gov_bd_site_page_389cbca1_6356_4fb7_b1a1_8f1d67e854.txt",
+      "evidence_limitation": "Page title present but fee table body not rendered in captured text"
+    },
+    {
+      "source_id": "src-gap-abudhabi-epassport-static",
+      "source_url": "https://abudhabi.mofa.gov.bd/pages/static-pages/6952667d35ce18e1c05a9876",
+      "source_title": "Abu Dhabi Embassy E-Passport Issue/Reissue (static CMS page)",
+      "authority_tier": 2,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-24",
+      "source_last_updated": "2024-10-15",
+      "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/abudhabi_epassport_static.txt",
+      "evidence_limitation": "CMS shell loads; instructional body text empty ('Content: Pages' only). Legacy /en/site/page/ URLs return 404."
+    },
+    {
+      "source_id": "src-gap-epassport-onboarding-browser",
+      "source_url": "https://www.epassport.gov.bd/onboarding",
+      "source_title": "e-Passport onboarding Step 1 (browser-rendered)",
+      "authority_tier": 1,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-24",
+      "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/epassport_onboarding.txt"
+    }
+  ]
+}
