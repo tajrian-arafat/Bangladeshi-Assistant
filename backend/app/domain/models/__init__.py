@@ -60,6 +60,7 @@ from app.domain.models.operations import (
     ModelRegistry,
     ReviewQueueItem,
 )
+from app.domain.models.seed_replacement import SeedReplacement
 from app.domain.models.types import EmbeddingType
 
 __all__ = [
@@ -100,6 +101,7 @@ __all__ = [
     "RefreshToken",
     "ReviewQueueItem",
     "Role",
+    "SeedReplacement",
     "RolePermission",
     "Service",
     "ServiceCatalogueMapping",

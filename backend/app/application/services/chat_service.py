@@ -8,6 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.ai.llm_client import LLMClient
 from app.ai.orchestrator import Orchestrator
+from app.application.services.conversation_context import ConversationContextService
 from app.core.config import get_settings
 from app.domain.models.conversation import Conversation, Message
 from app.schemas.chat import ChatMetadata, ChatRequest, ChatResponse
@@ -19,11 +20,16 @@ class ChatService:
         self.settings = get_settings()
         self.orchestrator = Orchestrator(session)
         self.llm = LLMClient(self.settings)
+        self.context_service = ConversationContextService(session)
 
     async def process_chat(self, request: ChatRequest) -> ChatResponse:
         start = time.perf_counter()
 
         conversation = await self._get_or_create_conversation(request.conversation_id)
+        conversation_context = await self.context_service.load(conversation.id)
+        merged_clarifications = conversation_context.merge_clarifications(request.clarifications)
+        enriched_request = request.model_copy(update={"clarifications": merged_clarifications})
+
         user_message = Message(
             conversation_id=conversation.id,
             role="user",
@@ -33,7 +39,9 @@ class ChatService:
         self.session.add(user_message)
         await self.session.flush()
 
-        answer, confidence, intent, citations, ctx = await self.orchestrator.run(request)
+        answer, confidence, intent, citations, ctx = await self.orchestrator.run(
+            enriched_request, conversation_context=conversation_context
+        )
 
         llm_used = False
         if self.llm.enabled and not answer.clarifications_needed:
@@ -59,6 +67,17 @@ class ChatService:
         )
         self.session.add(assistant_message)
         await self.session.flush()
+
+        await self.context_service.persist(
+            conversation.id,
+            service_slug=ctx.service.slug if ctx.service else conversation_context.service_slug,
+            intent=intent,
+            entities=ctx.entities,
+            clarifications=merged_clarifications,
+            pending_clarifications=answer.clarifications_needed,
+            language=ctx.language,
+            user_message=request.message,
+        )
 
         return ChatResponse(
             conversation_id=conversation.id,

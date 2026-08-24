@@ -560,18 +560,36 @@ class KnowledgePublisher:
             verification_dir(self.repo_root, batch_id) or Path()
         ) / "knowledge_gaps.json"
         if gaps_path.exists() and not self.dry_run:
-            gaps = json.loads(gaps_path.read_text(encoding="utf-8")).get("gaps", [])
+            gap_data = json.loads(gaps_path.read_text(encoding="utf-8"))
+            gaps = gap_data.get("knowledge_gaps") or gap_data.get("gaps") or []
             for gap in gaps:
                 catalogue_id = gap.get("service_id")
+                if not catalogue_id and gap.get("related_claims"):
+                    rc = gap["related_claims"][0]
+                    catalogue_id = rc.split("::")[0] if "::" in rc else None
                 service = await self.resolve_runtime_service(catalogue_id, mappings, report)
                 if not service:
+                    continue
+                gap_type_raw = gap.get("gap_type") or gap.get("gap_id") or KnowledgeGapType.OTHER.value
+                gap_type = gap_type_raw.lower() if isinstance(gap_type_raw, str) else KnowledgeGapType.OTHER.value
+                if gap_type.startswith("missing_"):
+                    pass
+                elif gap_type.startswith("MISSING_"):
+                    gap_type = gap_type.lower()
+                existing_gap = await self.session.execute(
+                    select(KnowledgeGap).where(
+                        KnowledgeGap.service_id == service.id,
+                        KnowledgeGap.description == (gap.get("notes") or gap.get("gap_id") or "")[:500],
+                    ).limit(1)
+                )
+                if existing_gap.scalar_one_or_none():
                     continue
                 self.session.add(
                     KnowledgeGap(
                         service_id=service.id,
-                        gap_type=gap.get("gap_type") or KnowledgeGapType.OTHER.value,
+                        gap_type=gap_type if gap_type in {e.value for e in KnowledgeGapType} else KnowledgeGapType.OTHER.value,
                         priority=gap.get("priority") or KnowledgeGapPriority.MEDIUM.value,
-                        description=gap.get("description") or gap.get("gap_id") or "Gap",
+                        description=gap.get("notes") or gap.get("gap_id") or gap.get("description") or "Gap",
                         discovered_by="batch01_verification",
                         status=KnowledgeGapStatus.OPEN.value,
                         resolution_notes=json.dumps(gap, ensure_ascii=False)[:2000],
@@ -582,9 +600,15 @@ class KnowledgePublisher:
             await self.session.flush()
         return report
 
-    async def publish_verified(self, batch_id: str) -> PublishReport:
+    async def publish_verified(
+        self,
+        batch_id: str,
+        *,
+        approved_seed_replacement_claim_ids: set[UUID] | None = None,
+    ) -> PublishReport:
         """Publish only gate-eligible VERIFIED OFFICIAL claims into Fee/Checklist/Steps/URLs."""
         report = PublishReport(dry_run=self.dry_run, batch_id=batch_id)
+        approved_replacements = approved_seed_replacement_claim_ids or set()
         mappings = await self.load_mappings()
         staging = self.staging_dir(batch_id)
         fee_structured = build_fee_structured_by_claim(staging)
@@ -732,6 +756,7 @@ class KnowledgePublisher:
                 seed_block_structured = (
                     service.slug in MVP_SEED_SLUGS
                     and not mapping.get("allow_overwrite_seed")
+                    and claim.id not in approved_replacements
                 )
 
                 if claim.claim_type == ClaimType.FEE.value:

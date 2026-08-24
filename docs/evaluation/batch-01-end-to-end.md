@@ -1,6 +1,6 @@
 # Batch 1 End-to-End Assistant Evaluation
 
-**Generated:** 2026-08-24T20:23:28.917402+00:00
+**Generated:** 2026-08-24T20:37:38.923147+00:00
 **Mode:** Local/development only — no deployment
 
 ## Headline results
@@ -8,9 +8,9 @@
 | Metric | Value |
 |--------|------:|
 | Total tests | 55 |
-| Passed | 55 |
-| Failed | 0 |
-| Pass rate | 100.0% |
+| Passed | 53 |
+| Failed | 2 |
+| Pass rate | 96.4% |
 | Hallucinations | 0 |
 | Citation failures | 0 |
 | Retrieval failures | 0 |
@@ -22,7 +22,7 @@
 
 - **service_identification_accuracy_pct:** 100.0
 - **intent_accuracy_pct:** 100.0
-- **bangla_pass_pct:** 100.0
+- **bangla_pass_pct:** 88.9
 - **banglish_pass_pct:** 100.0
 - **hallucination_suite_pass_pct:** 100.0
 - **unsupported_claim_rate_pct:** 0.0
@@ -31,9 +31,11 @@
 
 ## Failure classification
 
+- `CLAIM_SELECTION_BUG`: 2
 
 ## Highest-priority fixes
 
+1. `CLAIM_SELECTION_BUG`
 
 ## Pipeline under test
 
@@ -51,6 +53,18 @@ USER QUERY → language → Banglish normalize → intent → service ID → ent
 8. Stale `CONFLICTED` service status no longer forced without conflicting claims
 
 ## Sample failures
+
+### q008 — `CLAIM_SELECTION_BUG`
+- Query: Birth registration DOB correction fee how much?
+- Expected service: `civil-birth-registration-correction` / got `civil-birth-registration-correction`
+- Reasons: fee amount missing: expected 100 in []
+- Fix: Select only VERIFIED OFFICIAL fee claims; prefer calculator path for NID.
+
+### q009 — `CLAIM_SELECTION_BUG`
+- Query: জন্ম সনদে নাম ভুল — সংশোধন করতে কত খরচ?
+- Expected service: `civil-birth-registration-correction` / got `civil-birth-registration-correction`
+- Reasons: fee amount missing: expected 50 in []
+- Fix: Select only VERIFIED OFFICIAL fee claims; prefer calculator path for NID.
 
 ## Machine-readable artifacts
 

@@ -239,6 +239,20 @@ class AuditAction(StrEnum):
     LOGOUT = "logout"
 
 
+class SeedReplacementStatus(StrEnum):
+    PENDING = "PENDING"
+    APPROVED = "APPROVED"
+    APPLIED = "APPLIED"
+    ROLLED_BACK = "ROLLED_BACK"
+    REJECTED = "REJECTED"
+
+
+class SeedReplacementKind(StrEnum):
+    FEE = "fee"
+    CHECKLIST = "checklist"
+    PROCEDURE_STEP = "procedure_step"
+
+
 class GeographyAliasType(StrEnum):
     DISTRICT = "district"
     DIVISION = "division"

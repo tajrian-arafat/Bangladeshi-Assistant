@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "id": "q008",
+    "query": "Birth registration DOB correction fee how much?",
+    "language": "en",
+    "category": "fee",
+    "expected": {
+      "intent": "fee_inquiry",
+      "service": "civil-birth-registration-correction",
+      "expect": {
+        "fee_amount_expected": "100"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "birth registration dob correction fee how much",
+      "intent": "fee_inquiry",
+      "service_slug": "civil-birth-registration-correction",
+      "service_name": "Birth Registration Information Correction",
+      "entities": {
+        "service_slug": "civil-birth-registration-correction",
+        "service_match_score": 100.0,
+        "service_match_method": "phrase_hint"
+      },
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "clarifications_needed": [
+        "Which birth certificate correction do you need (name, date of birth, or other field)?"
+      ],
+      "conflicts": [],
+      "evidence_count": 0,
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [],
+      "practical_notes": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "checks": {
+      "service": true,
+      "intent": true,
+      "fee_amount": false
+    },
+    "reasons": [
+      "fee amount missing: expected 100 in []"
+    ],
+    "failure_class": "CLAIM_SELECTION_BUG",
+    "recommended_fix": "Select only VERIFIED OFFICIAL fee claims; prefer calculator path for NID."
+  },
+  {
+    "id": "q009",
+    "query": "জন্ম সনদে নাম ভুল — সংশোধন করতে কত খরচ?",
+    "language": "bn",
+    "category": "correction",
+    "expected": {
+      "intent": "fee_inquiry",
+      "service": "civil-birth-registration-correction",
+      "expect": {
+        "fee_amount_expected": "50"
+      }
+    },
+    "actual": {
+      "language": "bn",
+      "normalized_message": "জন্ম সনদে নাম ভুল সংশোধন করতে কত খরচ",
+      "intent": "fee_inquiry",
+      "service_slug": "civil-birth-registration-correction",
+      "service_name": "Birth Registration Information Correction",
+      "entities": {
+        "service_slug": "civil-birth-registration-correction",
+        "service_match_score": 100.0,
+        "service_match_method": "phrase_hint"
+      },
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "clarifications_needed": [
+        "Which birth certificate correction do you need (name, date of birth, or other field)?"
+      ],
+      "conflicts": [],
+      "evidence_count": 0,
+      "summary": "Apnar jonno shothik tottho dite, ekti follow-up proshno ache.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [],
+      "practical_notes": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "checks": {
+      "service": true,
+      "intent": true,
+      "fee_amount": false
+    },
+    "reasons": [
+      "fee amount missing: expected 50 in []"
+    ],
+    "failure_class": "CLAIM_SELECTION_BUG",
+    "recommended_fix": "Select only VERIFIED OFFICIAL fee claims; prefer calculator path for NID."
+  }
+]

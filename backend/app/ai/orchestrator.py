@@ -20,6 +20,7 @@ from app.ai.pipeline.safety import validate_safety
 from app.application.engines.checklist_engine import ChecklistEngine
 from app.application.engines.procedure_engine import ProcedureEngine
 from app.application.knowledge.claim_review_service import ClaimReviewService
+from app.application.services.conversation_context import ConversationContext, ConversationContextService
 from app.domain.enums import AnswerSupportLevel, ClaimPipelineStatus, InformationClass
 from app.domain.models.claims import Claim
 from app.domain.models.knowledge import Service, ServiceLink
@@ -57,7 +58,10 @@ class Orchestrator:
         self.procedure_engine = ProcedureEngine(session)
 
     async def run(
-        self, request: ChatRequest
+        self,
+        request: ChatRequest,
+        *,
+        conversation_context: ConversationContext | None = None,
     ) -> tuple[AnswerPayload, str, str, list[CitationResponse], PipelineContext]:
         ctx = PipelineContext(
             message=request.message,
@@ -65,6 +69,7 @@ class Orchestrator:
             language="auto",
             intent="unsupported",
         )
+        conv_ctx = conversation_context or ConversationContext()
 
         ctx.language = detect_language(request.message, request.language_preference)
         ctx.normalized_message = normalize_banglish(request.message)
@@ -72,10 +77,21 @@ class Orchestrator:
         # Also classify on raw message for Bangla script intents
         if ctx.intent == "general_info":
             ctx.intent = classify_intent(request.message, request.clarifications)
+        if conv_ctx.intent and ctx.intent == "general_info":
+            ctx.intent = conv_ctx.intent
+
         ctx.entities = await extract_entities(self.session, ctx.normalized_message)
         if not ctx.entities.get("service"):
-            # Retry entity extraction on original message (Bangla names / URLs)
             ctx.entities = await extract_entities(self.session, request.message.lower())
+
+        if not ctx.entities.get("service") and conv_ctx.service_slug:
+            if ConversationContextService.is_follow_up_message(request.message):
+                svc = await self._service_by_slug(conv_ctx.service_slug)
+                if svc:
+                    ctx.entities["service"] = svc
+                    ctx.entities["service_slug"] = svc.slug
+                    ctx.entities["service_match_method"] = "conversation_context"
+
         ctx.service = ctx.entities.get("service")
         ctx.clarifications_needed = self._clarifications_needed(ctx, request)
 
@@ -126,6 +142,10 @@ class Orchestrator:
         )
         return result.scalar_one_or_none() is not None
 
+    async def _service_by_slug(self, slug: str) -> Service | None:
+        result = await self.session.execute(select(Service).where(Service.slug == slug))
+        return result.scalar_one_or_none()
+
     def _clarifications_needed(self, ctx: PipelineContext, request: ChatRequest) -> list[str]:
         if not ctx.service:
             return []
@@ -138,6 +158,16 @@ class Orchestrator:
                 return ["Is this renewal, reissue, or first-time application?"]
         if slug == "driving-licence-renewal" and "licence_class" not in clarifications:
             return ["Which licence class are you renewing (e.g., motorcycle, car)?"]
+        if slug == "civil-birth-registration-correction" and "correction_type" not in clarifications:
+            return [
+                "Which birth certificate correction do you need (name, date of birth, or other field)?"
+            ]
+        if slug == "birth-registration" and "correction_type" not in clarifications:
+            msg = (ctx.message + " " + ctx.normalized_message).lower()
+            if any(w in msg for w in ("vul", "wrong", "correction", "correct", "সংশোধন", "ভুল", "naam", "name", "নাম")):
+                return [
+                    "Which birth certificate correction do you need (name, date of birth, or other field)?"
+                ]
         return []
 
     def _clarification_prompt(self, ctx: PipelineContext) -> str:
