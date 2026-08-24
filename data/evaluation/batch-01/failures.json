@@ -1,5 +1,96 @@
 [
   {
+    "id": "q006",
+    "query": "জন্ম নিবন্ধন ৪৫ দিনের মধ্যে ফ্রি তো?",
+    "language": "bn",
+    "category": "fee",
+    "expected": {
+      "intent": "fee_inquiry",
+      "service": "birth-registration",
+      "expect": {
+        "uncertainty_ok": true,
+        "note": "Verified fee claim exists but MVP seed blocked Fee row publish"
+      }
+    },
+    "actual": {
+      "language": "bn",
+      "normalized_message": "জন্ম নিবন্ধন ৪৫ দিনের মধ্যে ফ্রি তো",
+      "intent": "document_list",
+      "service_slug": "birth-registration",
+      "service_name": "Birth Registration",
+      "entities": {
+        "intents": {
+          "primary": "document_list",
+          "secondary": [],
+          "legacy": "document_list"
+        },
+        "intent_primary": "document_list",
+        "intent_secondary": [],
+        "domain_entities": {
+          "domains": [
+            "civil_registration"
+          ],
+          "passport_type": null,
+          "action": null,
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "জন্ম",
+            "তো",
+            "দিনের",
+            "নিবন্ধন",
+            "ফ্রি",
+            "মধ্যে",
+            "৪৫"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "birth-registration",
+            "score": 100.0,
+            "reasons": [
+              "phrase_hint"
+            ]
+          }
+        ],
+        "service_slug": "birth-registration",
+        "service_match_score": 100.0,
+        "service_match_method": "phrase_hint"
+      },
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 1,
+      "summary": "জন্ম নিবন্ধন সম্পর্কে উপলব্ধ তথ্য নিচে দেওয়া হয়েছে। এটি এখনো fully verified official guidance নয়। PRACTICAL notes (commonly reported, NOT official MUST NEED) are listed separately.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [
+        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [
+        "[PRACTICAL — not official MUST NEED] Guides commonly list hospital birth certificate/midwife certificate and parents' NID/birth certificates; treat as practical/conditional pending full official checklist PDF retrieval."
+      ],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "checks": {
+      "service": true,
+      "intent": false,
+      "uncertainty": true
+    },
+    "reasons": [
+      "intent mismatch: expected=fee_inquiry got=document_list"
+    ],
+    "failure_class": "LANGUAGE_BUG",
+    "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
+  },
+  {
     "id": "q008",
     "query": "Birth registration DOB correction fee how much?",
     "language": "en",
@@ -18,6 +109,47 @@
       "service_slug": "civil-birth-registration-correction",
       "service_name": "Birth Registration Information Correction",
       "entities": {
+        "intents": {
+          "primary": "fee_inquiry",
+          "secondary": [
+            "correction",
+            "procedure_inquiry"
+          ],
+          "legacy": "fee_inquiry"
+        },
+        "intent_primary": "fee_inquiry",
+        "intent_secondary": [
+          "correction",
+          "procedure_inquiry"
+        ],
+        "domain_entities": {
+          "domains": [
+            "civil_registration"
+          ],
+          "passport_type": null,
+          "action": "correction",
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "birth",
+            "correction",
+            "dob",
+            "fee",
+            "how",
+            "much",
+            "registration"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "civil-birth-registration-correction",
+            "score": 100.0,
+            "reasons": [
+              "phrase_hint"
+            ]
+          }
+        ],
         "service_slug": "civil-birth-registration-correction",
         "service_match_score": 100.0,
         "service_match_method": "phrase_hint"
@@ -69,6 +201,46 @@
       "service_slug": "civil-birth-registration-correction",
       "service_name": "Birth Registration Information Correction",
       "entities": {
+        "intents": {
+          "primary": "fee_inquiry",
+          "secondary": [
+            "correction"
+          ],
+          "legacy": "fee_inquiry"
+        },
+        "intent_primary": "fee_inquiry",
+        "intent_secondary": [
+          "correction"
+        ],
+        "domain_entities": {
+          "domains": [
+            "civil_registration"
+          ],
+          "passport_type": null,
+          "action": "correction",
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "কত",
+            "করতে",
+            "খরচ",
+            "জন্ম",
+            "নাম",
+            "ভুল",
+            "সংশোধন",
+            "সনদে"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "civil-birth-registration-correction",
+            "score": 100.0,
+            "reasons": [
+              "phrase_hint"
+            ]
+          }
+        ],
         "service_slug": "civil-birth-registration-correction",
         "service_match_score": 100.0,
         "service_match_method": "phrase_hint"
@@ -100,5 +272,1225 @@
     ],
     "failure_class": "CLAIM_SELECTION_BUG",
     "recommended_fix": "Select only VERIFIED OFFICIAL fee claims; prefer calculator path for NID."
+  },
+  {
+    "id": "q010",
+    "query": "everify.bdris.gov.bd te verify korte pari?",
+    "language": "banglish",
+    "category": "official_url",
+    "expected": {
+      "intent": "general_info",
+      "service": "civil-birth-death-verify",
+      "expect": {
+        "must_include_url": "everify.bdris.gov.bd",
+        "citation_must_support": true
+      }
+    },
+    "actual": {
+      "language": "banglish",
+      "normalized_message": "everify bdris gov bd te verify",
+      "intent": "procedure_inquiry",
+      "service_slug": "civil-birth-death-verify",
+      "service_name": "Birth and Death Record Verification",
+      "entities": {
+        "intents": {
+          "primary": "procedure_inquiry",
+          "secondary": [
+            "general_info"
+          ],
+          "legacy": "procedure_inquiry"
+        },
+        "intent_primary": "procedure_inquiry",
+        "intent_secondary": [
+          "general_info"
+        ],
+        "domain_entities": {
+          "domains": [
+            "civil_registration"
+          ],
+          "passport_type": null,
+          "action": null,
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "bd",
+            "bdris",
+            "everify",
+            "gov",
+            "te",
+            "verify"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "civil-birth-death-verify",
+            "score": 100.0,
+            "reasons": [
+              "phrase_hint"
+            ]
+          }
+        ],
+        "service_slug": "civil-birth-death-verify",
+        "service_match_score": 100.0,
+        "service_match_method": "phrase_hint",
+        "agency_slug": "bdris"
+      },
+      "support_level": "VERIFIED",
+      "confidence": "high",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 3,
+      "summary": "Here is verified structured guidance for Birth and Death Record Verification. Facts below are backed by verified official claims.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [
+        "Fee information is not yet verified. Confirm at the official office."
+      ],
+      "practical_notes": [],
+      "official_urls": [
+        "https://everify.bdris.gov.bd/"
+      ],
+      "citations": [
+        {
+          "evidence_id": "393d2a99-0220-4e8f-bca9-ed99443f4c60",
+          "source_title": "Birth and death records can be verified via everify.bdris.gov.bd.",
+          "source_url": "https://everify.bdris.gov.bd/",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Verified official URL for Birth and Death Record Verification"
+        },
+        {
+          "evidence_id": "b201930b-a4be-413f-ada7-446ff312f6f2",
+          "source_title": "Birth and death records can be verified via everify.bdris.gov.bd.",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Birth and death records can be verified via everify.bdris.gov.bd."
+        }
+      ]
+    },
+    "pass": false,
+    "checks": {
+      "service": true,
+      "intent": false,
+      "url": true,
+      "citation": true
+    },
+    "reasons": [
+      "intent mismatch: expected=general_info got=procedure_inquiry"
+    ],
+    "failure_class": "LANGUAGE_BUG",
+    "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
+  },
+  {
+    "id": "q017",
+    "query": "lost NID reissue korbo kivabe?",
+    "language": "banglish",
+    "category": "lost_document",
+    "expected": {
+      "intent": "procedure_inquiry",
+      "service": "nid-reissue-lost",
+      "expect": {
+        "fee_mode_calculator": true
+      }
+    },
+    "actual": {
+      "language": "banglish",
+      "normalized_message": "lost nid reissue how",
+      "intent": "document_list",
+      "service_slug": "nid-reissue-lost",
+      "service_name": "NID Reissue for Lost or Damaged Card",
+      "entities": {
+        "intents": {
+          "primary": "lost_document",
+          "secondary": [
+            "renewal",
+            "reissue",
+            "procedure_inquiry"
+          ],
+          "legacy": "document_list"
+        },
+        "intent_primary": "lost_document",
+        "intent_secondary": [
+          "renewal",
+          "reissue",
+          "procedure_inquiry"
+        ],
+        "domain_entities": {
+          "domains": [
+            "identity"
+          ],
+          "passport_type": null,
+          "action": "lost",
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "how",
+            "lost",
+            "nid",
+            "reissue"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "nid-reissue-lost",
+            "score": 100.0,
+            "reasons": [
+              "phrase_hint"
+            ]
+          }
+        ],
+        "service_slug": "nid-reissue-lost",
+        "service_match_score": 100.0,
+        "service_match_method": "phrase_hint"
+      },
+      "support_level": "PARTIALLY_SUPPORTED",
+      "confidence": "medium",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 7,
+      "summary": "Here is available structured information for NID Reissue for Lost or Damaged Card. This is not fully verified official guidance yet.",
+      "checklist": [],
+      "steps": [
+        {
+          "order": 1,
+          "title": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online.",
+          "official_url": null,
+          "claim_linked": true
+        }
+      ],
+      "fees": [],
+      "warnings": [
+        "Only some facts for this service are verified. Treat unverified parts as provisional.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [],
+      "official_urls": [],
+      "citations": [
+        {
+          "evidence_id": "017fd91b-9d5e-4d64-925d-b8a13ba0e889",
+          "source_title": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online.",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online."
+        },
+        {
+          "evidence_id": "1d28aadf-0589-41cf-88b5-12ef8cbd4f83",
+          "source_title": "Lost-card reissue and correction cannot be done together; reissue first.",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Lost-card reissue and correction cannot be done together; reissue first."
+        },
+        {
+          "evidence_id": "3abca4ef-93a8-4963-92f3-37c5f029daf3",
+          "source_title": "Fees apply; use official fee calculator (application type: reissue).",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Fees apply; use official fee calculator (application type: reissue)."
+        }
+      ]
+    },
+    "pass": false,
+    "checks": {
+      "service": true,
+      "intent": false,
+      "calculator_fee": false
+    },
+    "reasons": [
+      "intent mismatch: expected=procedure_inquiry got=document_list",
+      "calculator fee path not surfaced"
+    ],
+    "failure_class": "LANGUAGE_BUG",
+    "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
+  },
+  {
+    "id": "q019",
+    "query": "হারানো এনআইডি পুনরায় পেতে কী করতে হবে?",
+    "language": "bn",
+    "category": "lost_document",
+    "expected": {
+      "intent": "procedure_inquiry",
+      "service": "nid-reissue-lost",
+      "expect": {
+        "service_must_match": true
+      }
+    },
+    "actual": {
+      "language": "bn",
+      "normalized_message": "হারানো এনআইডি পুনরায় পেতে কী করতে হবে",
+      "intent": "document_list",
+      "service_slug": "nid-reissue-lost",
+      "service_name": "NID Reissue for Lost or Damaged Card",
+      "entities": {
+        "intents": {
+          "primary": "lost_document",
+          "secondary": [
+            "procedure_inquiry"
+          ],
+          "legacy": "document_list"
+        },
+        "intent_primary": "lost_document",
+        "intent_secondary": [
+          "procedure_inquiry"
+        ],
+        "domain_entities": {
+          "domains": [
+            "identity"
+          ],
+          "passport_type": null,
+          "action": "lost",
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "এনআইডি",
+            "করতে",
+            "কী",
+            "পুনরায়",
+            "পেতে",
+            "হবে",
+            "হারানো"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "nid-reissue-lost",
+            "score": 100.0,
+            "reasons": [
+              "phrase_hint"
+            ]
+          }
+        ],
+        "service_slug": "nid-reissue-lost",
+        "service_match_score": 100.0,
+        "service_match_method": "phrase_hint"
+      },
+      "support_level": "PARTIALLY_SUPPORTED",
+      "confidence": "medium",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 7,
+      "summary": "হারানো/নষ্ট এনআইডি পুনর্মুদ্রণ (রিইস্যু) সম্পর্কে উপলব্ধ তথ্য নিচে দেওয়া হয়েছে। এটি এখনো fully verified official guidance নয়।",
+      "checklist": [],
+      "steps": [
+        {
+          "order": 1,
+          "title": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online.",
+          "official_url": null,
+          "claim_linked": true
+        }
+      ],
+      "fees": [],
+      "warnings": [
+        "Only some facts for this service are verified. Treat unverified parts as provisional.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [],
+      "official_urls": [],
+      "citations": [
+        {
+          "evidence_id": "017fd91b-9d5e-4d64-925d-b8a13ba0e889",
+          "source_title": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online.",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online."
+        },
+        {
+          "evidence_id": "1d28aadf-0589-41cf-88b5-12ef8cbd4f83",
+          "source_title": "Lost-card reissue and correction cannot be done together; reissue first.",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Lost-card reissue and correction cannot be done together; reissue first."
+        },
+        {
+          "evidence_id": "3abca4ef-93a8-4963-92f3-37c5f029daf3",
+          "source_title": "Fees apply; use official fee calculator (application type: reissue).",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Fees apply; use official fee calculator (application type: reissue)."
+        }
+      ]
+    },
+    "pass": false,
+    "checks": {
+      "service": true,
+      "intent": false
+    },
+    "reasons": [
+      "intent mismatch: expected=procedure_inquiry got=document_list"
+    ],
+    "failure_class": "LANGUAGE_BUG",
+    "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
+  },
+  {
+    "id": "q031",
+    "query": "Is this information correct: NID fee is always 230?",
+    "language": "en",
+    "category": "hallucination",
+    "expected": {
+      "intent": "fee_inquiry",
+      "service": "nid-correction",
+      "expect": {
+        "must_reject_amount": "230",
+        "is_this_correct": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "is this information correction nid fee is always 230",
+      "intent": "fee_inquiry",
+      "service_slug": "nid-fee-calculator",
+      "service_name": "NID Service Fee Calculator",
+      "entities": {
+        "intents": {
+          "primary": "fee_inquiry",
+          "secondary": [
+            "correction"
+          ],
+          "legacy": "fee_inquiry"
+        },
+        "intent_primary": "fee_inquiry",
+        "intent_secondary": [
+          "correction"
+        ],
+        "domain_entities": {
+          "domains": [
+            "identity"
+          ],
+          "passport_type": null,
+          "action": "correction",
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "230",
+            "always",
+            "correction",
+            "fee",
+            "information",
+            "is",
+            "nid",
+            "this"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "nid-fee-calculator",
+            "score": 56.33,
+            "reasons": [
+              "intent:fee_inquiry+35",
+              "kw:nid fee",
+              "slug_overlap:2"
+            ]
+          },
+          {
+            "slug": "nid-correction",
+            "score": 53.29,
+            "reasons": [
+              "intent:fee_inquiry+20",
+              "variant:action=correction",
+              "slug_overlap:2"
+            ]
+          },
+          {
+            "slug": "nid-reissue-lost",
+            "score": 51.75,
+            "reasons": [
+              "intent:fee_inquiry+25",
+              "slug_overlap:1",
+              "claim_coverage:+16"
+            ]
+          }
+        ],
+        "service_slug": "nid-fee-calculator",
+        "service_match_score": 56.333333333333336,
+        "service_match_method": "intent_aware_ranking"
+      },
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 1,
+      "summary": "Here is available structured information for NID Service Fee Calculator. This is not fully verified official guidance yet.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [
+        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
+        "No verified official fee amount is available for this service in the knowledge base. Do not rely on unofficial quoted amounts.",
+        "The amount BDT 230 is NOT confirmed as an official verified fee in this knowledge base. Do not treat it as authoritative. Use only verified fees or the official calculator when indicated.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "reject_amount": true
+    },
+    "reasons": [
+      "service mismatch: expected=nid-correction got=nid-fee-calculator"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "q035",
+    "query": "brth registraton fee",
+    "language": "en",
+    "category": "spelling",
+    "expected": {
+      "intent": "fee_inquiry",
+      "service": "birth-registration",
+      "expect": {
+        "service_must_match": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "brth registraton fee",
+      "intent": "fee_inquiry",
+      "service_slug": "epassport-fee-payment",
+      "service_name": "e-Passport Fee Payment",
+      "entities": {
+        "intents": {
+          "primary": "fee_inquiry",
+          "secondary": [],
+          "legacy": "fee_inquiry"
+        },
+        "intent_primary": "fee_inquiry",
+        "intent_secondary": [],
+        "domain_entities": {
+          "domains": [],
+          "passport_type": null,
+          "action": "fee",
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "brth",
+            "fee",
+            "registraton"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "epassport-fee-payment",
+            "score": 105.82,
+            "reasons": [
+              "intent:fee_inquiry+35",
+              "kw:fee",
+              "variant:action=fee",
+              "variant:channel=domestic",
+              "slug_overlap:1",
+              "claim_coverage:+32"
+            ]
+          },
+          {
+            "slug": "nid-fee-calculator",
+            "score": 59.22,
+            "reasons": [
+              "intent:fee_inquiry+35",
+              "variant:action=fee",
+              "slug_overlap:1"
+            ]
+          },
+          {
+            "slug": "civil-birth-registration-correction",
+            "score": 51.46,
+            "reasons": [
+              "intent:fee_inquiry+25",
+              "claim_coverage:+16"
+            ]
+          },
+          {
+            "slug": "passport-renewal",
+            "score": 38.33,
+            "reasons": [
+              "intent:fee_inquiry+25",
+              "variant:channel=domestic"
+            ]
+          },
+          {
+            "slug": "nid-reissue-lost",
+            "score": 38.33,
+            "reasons": [
+              "intent:fee_inquiry+25",
+              "claim_coverage:+8"
+            ]
+          }
+        ],
+        "service_slug": "epassport-fee-payment",
+        "service_match_score": 105.81818181818181,
+        "service_match_method": "intent_aware_ranking"
+      },
+      "support_level": "PARTIALLY_SUPPORTED",
+      "confidence": "medium",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 1,
+      "summary": "Here is available structured information for e-Passport Fee Payment. This is not fully verified official guidance yet. PRACTICAL notes (commonly reported, NOT official MUST NEED) are listed separately.",
+      "checklist": [],
+      "steps": [],
+      "fees": [
+        {
+          "amount": "4025",
+          "currency": "BDT",
+          "evidence_id": "37d0f05a-3d52-4186-91fb-34747462cc66",
+          "label": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "6325",
+          "currency": "BDT",
+          "evidence_id": "f54feb63-40c5-42db-a39a-230b4fda8b02",
+          "label": "Inside Bangladesh: 48-page / 5-year e-Passport express delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "8625",
+          "currency": "BDT",
+          "evidence_id": "c96b7d74-48aa-47ae-bb5d-a43c94cea7a8",
+          "label": "Inside Bangladesh: 48-page / 5-year e-Passport super express delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "5750",
+          "currency": "BDT",
+          "evidence_id": "a52ff553-30c3-4b90-a03a-bc8645bc058e",
+          "label": "Inside Bangladesh: 48-page / 10-year e-Passport regular delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "8050",
+          "currency": "BDT",
+          "evidence_id": "ab99e632-9705-4f6b-8a74-6e5dfffb84eb",
+          "label": "Inside Bangladesh: 48-page / 10-year e-Passport express delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "10350",
+          "currency": "BDT",
+          "evidence_id": "67ee3784-3b8f-4b72-a76f-7f3196bb71a3",
+          "label": "Inside Bangladesh: 48-page / 10-year e-Passport super express delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "6325",
+          "currency": "BDT",
+          "evidence_id": "a5ab8138-1762-44b3-8812-c1d5d7da2ffc",
+          "label": "Inside Bangladesh: 64-page / 5-year e-Passport regular delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "8625",
+          "currency": "BDT",
+          "evidence_id": "8c0500bc-db81-434f-8420-dc322b48c6d0",
+          "label": "Inside Bangladesh: 64-page / 5-year e-Passport express delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "12075",
+          "currency": "BDT",
+          "evidence_id": "5aef9d46-c015-471e-a1b7-ba2709f690d5",
+          "label": "Inside Bangladesh: 64-page / 5-year e-Passport super express delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "8050",
+          "currency": "BDT",
+          "evidence_id": "4e091af6-31c7-4a42-8b55-a0f188831416",
+          "label": "Inside Bangladesh: 64-page / 10-year e-Passport regular delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "10350",
+          "currency": "BDT",
+          "evidence_id": "0c0d8ec7-09a8-44b6-9a8d-13e6ae0443a6",
+          "label": "Inside Bangladesh: 64-page / 10-year e-Passport express delivery (incl. 15% VAT)",
+          "fee_mode": null
+        },
+        {
+          "amount": "13800",
+          "currency": "BDT",
+          "evidence_id": "49d8eb60-dca5-43b0-bdac-e0f33453a409",
+          "label": "Inside Bangladesh: 64-page / 10-year e-Passport super express delivery (incl. 15% VAT)",
+          "fee_mode": null
+        }
+      ],
+      "warnings": [
+        "Only some facts for this service are verified. Treat unverified parts as provisional.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [
+        "[PRACTICAL — not official MUST NEED] Community guides reference ekpay and e-Challan verification for online payments; confirm current gateway list on official portal."
+      ],
+      "official_urls": [],
+      "citations": [
+        {
+          "evidence_id": "04df7800-4e93-4f95-81cd-5cac7c994b8f",
+          "source_title": "Official e-Passport fee page displays Last updated: 12 July 2026 as of gap-closure retrieval.",
+          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T21:22:37.453479",
+          "excerpt": "Last updated: 12 July 2026 on https://www.epassport.gov.bd/instructions/passport-fees (browser-rendered)."
+        },
+        {
+          "evidence_id": "7a67b60a-879a-44f3-9cdc-498f380874de",
+          "source_title": "Official fee page (July 2026) lists online payment via A-Challan, DGePay, and ShurjoPay; offline via A-Challan at banks.",
+          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T21:22:37.453479",
+          "excerpt": "Online: Through \"A-Challan\", \"DGePay\" and \"ShurjoPay\" ... Offline: ... through A-Challan"
+        },
+        {
+          "evidence_id": "829a00c0-56b7-4678-9937-dc683902c370",
+          "source_title": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery fee BDT 4,025 (incl. 15% VAT) per official fee page upda",
+          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T21:22:37.453479",
+          "excerpt": "Regular delivery: TK 4,025"
+        },
+        {
+          "evidence_id": "cdfc979a-c0b1-4d48-ba11-6fc834036953",
+          "source_title": "Inside Bangladesh: 48-page / 5-year e-Passport express delivery fee BDT 6,325 (incl. 15% VAT) per official fee page upda",
+          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T21:22:37.453479",
+          "excerpt": "Express delivery: TK 6,325"
+        },
+        {
+          "evidence_id": "ad503880-3d6f-48eb-8e1e-9345ba9ce21c",
+          "source_title": "Inside Bangladesh: 48-page / 5-year e-Passport super express delivery fee BDT 8,625 (incl. 15% VAT) per official fee pag",
+          "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T21:22:37.453479",
+          "excerpt": "Super Express delivery: TK 8,625"
+        }
+      ]
+    },
+    "pass": false,
+    "checks": {
+      "service": false,
+      "intent": true
+    },
+    "reasons": [
+      "service mismatch: expected=birth-registration got=epassport-fee-payment"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "q046",
+    "query": "online account registration for NID portal",
+    "language": "en",
+    "category": "online_application",
+    "expected": {
+      "intent": "procedure_inquiry",
+      "service": "nid-online-account-registration",
+      "expect": {
+        "service_must_match": true,
+        "intent_accept": [
+          "procedure_inquiry",
+          "general_info",
+          "document_list"
+        ]
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "online account registration for nid portal",
+      "intent": "application_url",
+      "service_slug": "nid-online-account-registration",
+      "service_name": "Voter Online Account Registration",
+      "entities": {
+        "intents": {
+          "primary": "application_url",
+          "secondary": [],
+          "legacy": "application_url"
+        },
+        "intent_primary": "application_url",
+        "intent_secondary": [],
+        "domain_entities": {
+          "domains": [
+            "identity"
+          ],
+          "passport_type": null,
+          "action": null,
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "account",
+            "for",
+            "nid",
+            "online",
+            "portal",
+            "registration"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "nid-online-account-registration",
+            "score": 100.0,
+            "reasons": [
+              "phrase_hint"
+            ]
+          }
+        ],
+        "service_slug": "nid-online-account-registration",
+        "service_match_score": 100.0,
+        "service_match_method": "phrase_hint"
+      },
+      "support_level": "VERIFIED",
+      "confidence": "high",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 2,
+      "summary": "Here is verified structured guidance for Voter Online Account Registration. Facts below are backed by verified official claims.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [],
+      "official_urls": [],
+      "citations": [
+        {
+          "evidence_id": "ab51125c-b34c-408c-b888-9e0fe5b9f903",
+          "source_title": "Voters with NID can register an online account using card number, active mobile/email, date of birth, and address-relate",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Live FAQ account registration requirements match."
+        },
+        {
+          "evidence_id": "0a54361e-306a-4ec6-879b-13adc9a73bf3",
+          "source_title": "After registration, download NID Wallet app and complete face verification to log in.",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Live FAQ instructs NID Wallet download + face verification after registration."
+        }
+      ]
+    },
+    "pass": false,
+    "checks": {
+      "service": true,
+      "intent": false
+    },
+    "reasons": [
+      "intent mismatch: expected=procedure_inquiry got=application_url"
+    ],
+    "failure_class": "OTHER",
+    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
+  },
+  {
+    "id": "q047",
+    "query": "new voter registration eligibility Bangladesh",
+    "language": "en",
+    "category": "eligibility",
+    "expected": {
+      "intent": "eligibility",
+      "service": "nid-new-voter-registration",
+      "expect": {
+        "uncertainty_ok": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "new voter registration eligibility bangladesh",
+      "intent": "eligibility_inquiry",
+      "service_slug": "nid-new-voter-registration",
+      "service_name": "New Voter and National ID Registration",
+      "entities": {
+        "intents": {
+          "primary": "eligibility",
+          "secondary": [],
+          "legacy": "eligibility_inquiry"
+        },
+        "intent_primary": "eligibility",
+        "intent_secondary": [],
+        "domain_entities": {
+          "domains": [
+            "identity"
+          ],
+          "passport_type": null,
+          "action": "new",
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "bangladesh",
+            "eligibility",
+            "new",
+            "registration",
+            "voter"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "nid-new-voter-registration",
+            "score": 90.0,
+            "reasons": [
+              "db_alias:voter registration",
+              "slug_overlap:3",
+              "claim_coverage:+32"
+            ]
+          }
+        ],
+        "service_slug": "nid-new-voter-registration",
+        "service_match_score": 90.0,
+        "service_match_method": "intent_aware_ranking"
+      },
+      "support_level": "PARTIALLY_SUPPORTED",
+      "confidence": "medium",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 5,
+      "summary": "Here is available structured information for New Voter and National ID Registration. This is not fully verified official guidance yet.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [
+        "Only some facts for this service are verified. Treat unverified parts as provisional.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [],
+      "official_urls": [],
+      "citations": [
+        {
+          "evidence_id": "fe72f697-36fe-40ee-8f9a-ac5bc2397abb",
+          "source_title": "Citizens aged 10 years or more who",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "আপনার বয়স যদি ১০ বছর বা বেশি হয়ে থাকে কিন্তু এখনও ভোটার হিসেবে নিবন্ধিত হননি"
+        },
+        {
+          "evidence_id": "42606792-1eed-4044-97e0-5d44ee6cbe22",
+          "source_title": "If age",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "আপনার বয়স যদি চলতি বছরের ১ জানুয়ারী বা তার পূর্বে ১৮ বছর হয়ে থাকে"
+        },
+        {
+          "evidence_id": "d50ef81a-2963-415a-94fd-d059dc8fc512",
+          "source_title": "Re-applying when already registered",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "নিবন্ধিত ব্যাক্তি পুনরায় আবেদন করলে সেটি দন্ডনীয় অপরাধ"
+        },
+        {
+          "evidence_id": "cfd33f68-baaa-4b1a-ae35-2a108dad3f30",
+          "source_title": "For name/age, SSC or equivalent certificate gets priority when the person",
+          "source_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "এসএসসি অথবা সমমানের পরীক্ষার সনদে উল্লেখিত বয়স ও নাম"
+        }
+      ]
+    },
+    "pass": false,
+    "checks": {
+      "service": true,
+      "intent": false,
+      "uncertainty": true
+    },
+    "reasons": [
+      "intent mismatch: expected=eligibility got=eligibility_inquiry"
+    ],
+    "failure_class": "OTHER",
+    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
+  },
+  {
+    "id": "q051",
+    "query": "ami first time jonmo nibondhon korbo — ki ki lagbe bhai?",
+    "language": "banglish",
+    "category": "first_time",
+    "expected": {
+      "intent": "document_list",
+      "service": "birth-registration",
+      "expect": {
+        "practical_must_be_labeled": true,
+        "must_not_show_seed_checklist_as_official": true
+      }
+    },
+    "actual": {
+      "language": "banglish",
+      "normalized_message": "ami first time birth registration bhai",
+      "intent": "processing_time",
+      "service_slug": "birth-registration",
+      "service_name": "Birth Registration",
+      "entities": {
+        "intents": {
+          "primary": "processing_time",
+          "secondary": [],
+          "legacy": "processing_time"
+        },
+        "intent_primary": "processing_time",
+        "intent_secondary": [],
+        "domain_entities": {
+          "domains": [
+            "civil_registration"
+          ],
+          "passport_type": null,
+          "action": null,
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "ami",
+            "bhai",
+            "birth",
+            "first",
+            "registration",
+            "time"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "birth-registration",
+            "score": 100.0,
+            "reasons": [
+              "phrase_hint"
+            ]
+          }
+        ],
+        "service_slug": "birth-registration",
+        "service_match_score": 100.0,
+        "service_match_method": "phrase_hint"
+      },
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 1,
+      "summary": "Here is available structured information for Birth Registration. This is not fully verified official guidance yet. PRACTICAL notes (commonly reported, NOT official MUST NEED) are listed separately.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [
+        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [
+        "[PRACTICAL — not official MUST NEED] Guides commonly list hospital birth certificate/midwife certificate and parents' NID/birth certificates; treat as practical/conditional pending full official checklist PDF retrieval."
+      ],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "checks": {
+      "service": true,
+      "intent": false,
+      "no_seed_must_need": true,
+      "practical_labeled": true
+    },
+    "reasons": [
+      "intent mismatch: expected=document_list got=processing_time"
+    ],
+    "failure_class": "LANGUAGE_BUG",
+    "recommended_fix": "Expand Banglish glossary and Bangla intent keywords."
+  },
+  {
+    "id": "q053",
+    "query": "Where can I get a character certificate locally?",
+    "language": "en",
+    "category": "office",
+    "expected": {
+      "intent": "office_locator",
+      "service": "local-character-certificate",
+      "expect": {
+        "uncertainty_ok": true,
+        "knowledge_gap_ok": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "where can i get a character certificate locally",
+      "intent": "office_locator",
+      "service_slug": "epassport-rpo-secretariat",
+      "service_name": "Application at RPO Bangladesh Secretariat",
+      "entities": {
+        "intents": {
+          "primary": "office_locator",
+          "secondary": [],
+          "legacy": "office_locator"
+        },
+        "intent_primary": "office_locator",
+        "intent_secondary": [],
+        "domain_entities": {
+          "domains": [],
+          "passport_type": null,
+          "action": null,
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "a",
+            "can",
+            "certificate",
+            "character",
+            "get",
+            "i",
+            "locally",
+            "where"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "epassport-rpo-secretariat",
+            "score": 38.76,
+            "reasons": [
+              "intent:office_locator+25",
+              "variant:channel=domestic"
+            ]
+          }
+        ],
+        "service_slug": "epassport-rpo-secretariat",
+        "service_match_score": 38.76,
+        "service_match_method": "intent_aware_ranking"
+      },
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 1,
+      "summary": "Here is available structured information for Application at RPO Bangladesh Secretariat. This is not fully verified official guidance yet.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [
+        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "uncertainty": true
+    },
+    "reasons": [
+      "service mismatch: expected=local-character-certificate got=epassport-rpo-secretariat"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "q054",
+    "query": "Muslim marriage registrar list download official URL",
+    "language": "en",
+    "category": "knowledge_gap",
+    "expected": {
+      "intent": "general_info",
+      "service": "civil-marriage-registrar-muslim-list",
+      "expect": {
+        "uncertainty_ok": true,
+        "must_not_invent_url": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "muslim marriage registrar list download official url",
+      "intent": "application_url",
+      "service_slug": "civil-marriage-registrar-hindu-list",
+      "service_name": "Hindu Marriage Registrar List",
+      "entities": {
+        "intents": {
+          "primary": "application_url",
+          "secondary": [],
+          "legacy": "application_url"
+        },
+        "intent_primary": "application_url",
+        "intent_secondary": [],
+        "domain_entities": {
+          "domains": [
+            "civil_registration"
+          ],
+          "passport_type": null,
+          "action": null,
+          "speed": null,
+          "channel": "domestic",
+          "applicant": null,
+          "tokens": [
+            "download",
+            "list",
+            "marriage",
+            "muslim",
+            "official",
+            "registrar",
+            "url"
+          ]
+        },
+        "routing_candidates": [
+          {
+            "slug": "civil-marriage-registrar-hindu-list",
+            "score": 86.21,
+            "reasons": [
+              "fallback_fuzzy"
+            ]
+          }
+        ],
+        "service_slug": "civil-marriage-registrar-hindu-list",
+        "service_match_score": 86.20689655172413,
+        "service_match_method": "fallback_fuzzy"
+      },
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "clarifications_needed": [],
+      "conflicts": [],
+      "evidence_count": 1,
+      "summary": "Here is available structured information for Hindu Marriage Registrar List. This is not fully verified official guidance yet.",
+      "checklist": [],
+      "steps": [],
+      "fees": [],
+      "warnings": [
+        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Official application URLs are not yet verified for this service."
+      ],
+      "practical_notes": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "no_invention": true,
+      "uncertainty": true
+    },
+    "reasons": [
+      "service mismatch: expected=civil-marriage-registrar-muslim-list got=civil-marriage-registrar-hindu-list",
+      "intent mismatch: expected=general_info got=application_url"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
   }
 ]

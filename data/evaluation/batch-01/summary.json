@@ -1,31 +1,37 @@
 {
-  "generated_at": "2026-08-24T20:37:38.923147+00:00",
+  "generated_at": "2026-08-24T22:00:42.533538+00:00",
   "batch_id": "batch-01",
   "publication_mode": "local_dev_only",
   "total_tests": 55,
-  "passed": 53,
-  "failed": 2,
-  "pass_rate_pct": 96.4,
+  "passed": 42,
+  "failed": 13,
+  "pass_rate_pct": 76.4,
   "hallucinations": 0,
   "citation_failures": 0,
-  "retrieval_failures": 0,
+  "retrieval_failures": 4,
   "rule_failures": 0,
   "seed_data_issues": 0,
   "knowledge_gaps": 0,
   "failure_class_counts": {
-    "CLAIM_SELECTION_BUG": 2
+    "LANGUAGE_BUG": 5,
+    "CLAIM_SELECTION_BUG": 2,
+    "RETRIEVAL_BUG": 4,
+    "OTHER": 2
   },
   "metrics": {
-    "service_identification_accuracy_pct": 100.0,
-    "intent_accuracy_pct": 100.0,
-    "bangla_pass_pct": 88.9,
-    "banglish_pass_pct": 100.0,
-    "hallucination_suite_pass_pct": 100.0,
+    "service_identification_accuracy_pct": 92.3,
+    "intent_accuracy_pct": 85.5,
+    "bangla_pass_pct": 66.7,
+    "banglish_pass_pct": 70.0,
+    "hallucination_suite_pass_pct": 85.7,
     "unsupported_claim_rate_pct": 0.0,
-    "unanswered_rate_pct": 1.8,
+    "unanswered_rate_pct": 0.0,
     "appropriate_uncertainty_pct": 100.0
   },
   "highest_priority_fixes": [
-    "CLAIM_SELECTION_BUG"
+    "LANGUAGE_BUG",
+    "RETRIEVAL_BUG",
+    "CLAIM_SELECTION_BUG",
+    "OTHER"
   ]
 }

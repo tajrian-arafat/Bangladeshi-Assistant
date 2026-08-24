@@ -1,0 +1,87 @@
+{
+  "schema": "bda.routing.capability_aliases/1.0",
+  "capability_groups": {
+    "fee": {
+      "synonyms_en": ["fee", "fees", "charge", "cost", "price", "how much", "amount"],
+      "synonyms_bn": ["ফি", "খরচ", "টাকা", "মূল্য", "চার্জ"],
+      "synonyms_banglish": ["koto", "koto taka", "koto lage", "taka", "bdt", "fee"]
+    },
+    "payment": {
+      "synonyms_en": ["payment", "pay", "pay online", "gateway", "online payment"],
+      "synonyms_bn": ["পেমেন্ট", "পরিশোধ"],
+      "synonyms_banglish": ["payment", "pay", "kivabe korbo", "kivabe dibo"]
+    },
+    "status": {
+      "synonyms_en": ["status", "tracking", "track", "application status", "check status", "progress"],
+      "synonyms_bn": ["অবস্থা", "স্ট্যাটাস"],
+      "synonyms_banglish": ["status", "check", "kotodur", "kothay ache"]
+    },
+    "appointment": {
+      "synonyms_en": ["appointment", "booking", "enrollment", "biometric", "slot"],
+      "synonyms_bn": ["অ্যাপয়েন্টমেন্ট", "এনরোলমেন্ট"],
+      "synonyms_banglish": ["appointment", "booking", "enrollment date"]
+    },
+    "application": {
+      "synonyms_en": ["apply", "application", "new application", "onboarding"],
+      "synonyms_bn": ["আবেদন"],
+      "synonyms_banglish": ["apply", "application", "korte chai", "korbo"]
+    },
+    "e_passport": {
+      "synonyms_en": ["e-passport", "epassport", "e passport", "electronic passport"],
+      "synonyms_bn": ["ই-পাসপোর্ট", "ই পাসপোর্ট"],
+      "synonyms_banglish": ["e passport", "epassport", "e-passport"]
+    },
+    "mrp": {
+      "synonyms_en": ["mrp", "machine readable passport", "machine-readable passport"],
+      "synonyms_bn": ["এমআরপি"],
+      "synonyms_banglish": ["mrp"]
+    },
+    "express": {
+      "synonyms_en": ["express", "super express", "urgent", "fast delivery"],
+      "synonyms_bn": ["এক্সপ্রেস", "সুপার এক্সপ্রেস", "জরুরি"],
+      "synonyms_banglish": ["express", "super express", "urgent"]
+    },
+    "reissue": {
+      "synonyms_en": ["reissue", "re-issue", "renewal", "renew"],
+      "synonyms_bn": ["পুনঃইssue", "রি-ইস্যু", "নবায়ন"],
+      "synonyms_banglish": ["reissue", "renew", "renewal"]
+    },
+    "lost": {
+      "synonyms_en": ["lost", "stolen", "missing passport", "gd"],
+      "synonyms_bn": ["হারিয়ে", "হারানো", "হারালে", "হারিয়ে", "চুরি"],
+      "synonyms_banglish": ["lost", "hariye", "harano", "haralo"]
+    },
+    "correction": {
+      "synonyms_en": ["correction", "correct", "name change", "amend"],
+      "synonyms_bn": ["সংশোধন", "নাম"],
+      "synonyms_banglish": ["correction", "naam", "name correction"]
+    },
+    "mission": {
+      "synonyms_en": ["dubai", "singapore", "abu dhabi", "embassy", "mission", "expatriate", "abroad"],
+      "synonyms_bn": ["দুবাই", "সিঙ্গাপুর", "দূতাবাস"],
+      "synonyms_banglish": ["dubai", "singapore", "mission", "bidesh theke"]
+    },
+    "police_verification": {
+      "synonyms_en": ["police verification", "pv", "police clearance"],
+      "synonyms_bn": ["পুলিশ ভেরিফিকেশন"],
+      "synonyms_banglish": ["police verification", "pv"]
+    }
+  },
+  "domain_triggers": {
+    "passport": {
+      "tokens": ["passport", "epassport", "e-passport", "e passport", "mrp", "পাসপোর্ট", "ই-পাসপোর্ট", "ই পাসপোর্ট"]
+    },
+    "civil_registration": {
+      "tokens": ["birth", "death", "bdris", "everify", "marriage", "জন্ম", "মৃত্যু", "নিবন্ধন", "বিবাহ"]
+    },
+    "identity": {
+      "tokens": ["nid", "national id", "voter", "এনআইডি", "voter slip"]
+    },
+    "transport": {
+      "tokens": ["driving", "licence", "license", "brta", "vehicle"]
+    },
+    "tax": {
+      "tokens": ["tin", "tax", "e-tin", "etin"]
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "bda.routing.intent_taxonomy/1.0",
+  "intents": {
+    "fee_inquiry": {
+      "claim_types": ["fee"],
+      "capability_tokens": ["fee", "payment", "taka", "charge", "cost", "price"],
+      "legacy_alias": "fee_inquiry"
+    },
+    "payment": {
+      "claim_types": ["other", "procedure_step"],
+      "capability_tokens": ["payment", "pay", "gateway", "online payment"],
+      "legacy_alias": "procedure_inquiry"
+    },
+    "document_list": {
+      "claim_types": ["document", "conditional_document"],
+      "capability_tokens": ["document", "required", "papers"],
+      "legacy_alias": "document_list"
+    },
+    "procedure_inquiry": {
+      "claim_types": ["procedure_step", "application_url"],
+      "capability_tokens": ["procedure", "process", "how", "apply"],
+      "legacy_alias": "procedure_inquiry"
+    },
+    "application": {
+      "claim_types": ["application_url", "procedure_step"],
+      "capability_tokens": ["application", "apply", "onboarding", "portal"],
+      "legacy_alias": "procedure_inquiry"
+    },
+    "application_url": {
+      "claim_types": ["application_url"],
+      "capability_tokens": ["url", "portal", "website", "online apply", "onboarding"],
+      "legacy_alias": "application_url"
+    },
+    "status": {
+      "claim_types": ["application_url", "procedure_step", "other"],
+      "capability_tokens": ["status", "tracking", "check", "progress"],
+      "legacy_alias": "procedure_inquiry"
+    },
+    "appointment": {
+      "claim_types": ["procedure_step", "application_url"],
+      "capability_tokens": ["appointment", "enrollment", "biometric", "booking"],
+      "legacy_alias": "procedure_inquiry"
+    },
+    "eligibility": {
+      "claim_types": ["eligibility", "restriction", "conditional_document"],
+      "capability_tokens": ["eligibility", "eligible", "qualify", "who can"],
+      "legacy_alias": "eligibility_inquiry"
+    },
+    "office_locator": {
+      "claim_types": ["office"],
+      "capability_tokens": ["office", "location", "where", "address"],
+      "legacy_alias": "office_locator"
+    },
+    "processing_time": {
+      "claim_types": ["processing_time", "deadline"],
+      "capability_tokens": ["time", "days", "weeks", "sla", "processing"],
+      "legacy_alias": "processing_time"
+    },
+    "renewal": {
+      "claim_types": ["procedure_step", "document", "fee"],
+      "capability_tokens": ["renewal", "renew", "reissue"],
+      "legacy_alias": "document_list"
+    },
+    "reissue": {
+      "claim_types": ["procedure_step", "document", "fee"],
+      "capability_tokens": ["reissue", "re-issue"],
+      "legacy_alias": "document_list"
+    },
+    "correction": {
+      "claim_types": ["document", "conditional_document", "procedure_step"],
+      "capability_tokens": ["correction", "correct", "amend"],
+      "legacy_alias": "document_list"
+    },
+    "lost_document": {
+      "claim_types": ["document", "procedure_step", "conditional_document"],
+      "capability_tokens": ["lost", "stolen", "missing", "gd"],
+      "legacy_alias": "document_list"
+    },
+    "damaged_document": {
+      "claim_types": ["document", "procedure_step"],
+      "capability_tokens": ["damaged", "damage", "torn"],
+      "legacy_alias": "document_list"
+    },
+    "comparison": {
+      "claim_types": ["other", "availability"],
+      "capability_tokens": ["difference", "vs", "compare", "mrp", "e-passport"],
+      "legacy_alias": "general_info"
+    },
+    "general_info": {
+      "claim_types": ["other", "availability", "application_url"],
+      "capability_tokens": [],
+      "legacy_alias": "general_info"
+    },
+    "service_discovery": {
+      "claim_types": [],
+      "capability_tokens": [],
+      "legacy_alias": "general_info"
+    },
+    "practical_guidance": {
+      "claim_types": ["practical_tip"],
+      "capability_tokens": ["tip", "advice"],
+      "legacy_alias": "general_info"
+    },
+    "contact": {
+      "claim_types": ["office", "other"],
+      "capability_tokens": ["contact", "phone", "helpline"],
+      "legacy_alias": "general_info"
+    }
+  },
+  "domain_categories": {
+    "passport": "PASSPORT_IMMIGRATION",
+    "civil_registration": "CIVIL_REGISTRATION",
+    "identity": "IDENTITY",
+    "transport": "TRANSPORT",
+    "tax": "TAX"
+  }
+}

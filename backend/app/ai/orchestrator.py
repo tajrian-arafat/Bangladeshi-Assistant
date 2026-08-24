@@ -14,9 +14,11 @@ from app.ai.pipeline.banglish import normalize_banglish
 from app.ai.pipeline.confidence import calculate_confidence
 from app.ai.pipeline.conflict import detect_conflicts
 from app.ai.pipeline.entities import extract_entities
-from app.ai.pipeline.intent import classify_intent
+from app.ai.pipeline.intent import classify_intent, classify_intents
 from app.ai.pipeline.language import detect_language
 from app.ai.pipeline.safety import validate_safety
+from app.ai.routing.claim_retrieval import ClaimRetrieval
+from app.ai.routing.intent_classifier import IntentResult
 from app.application.engines.checklist_engine import ChecklistEngine
 from app.application.engines.procedure_engine import ProcedureEngine
 from app.application.knowledge.claim_review_service import ClaimReviewService
@@ -41,6 +43,7 @@ class PipelineContext:
     normalized_message: str
     language: str
     intent: str
+    intents: IntentResult | None = None
     entities: dict[str, Any] = field(default_factory=dict)
     service: Service | None = None
     evidence: list[dict[str, Any]] = field(default_factory=list)
@@ -73,16 +76,31 @@ class Orchestrator:
 
         ctx.language = detect_language(request.message, request.language_preference)
         ctx.normalized_message = normalize_banglish(request.message)
-        ctx.intent = classify_intent(ctx.normalized_message, request.clarifications)
+        ctx.intents = classify_intents(ctx.normalized_message, request.clarifications)
+        ctx.intent = ctx.intents.legacy_primary()
         # Also classify on raw message for Bangla script intents
         if ctx.intent == "general_info":
-            ctx.intent = classify_intent(request.message, request.clarifications)
+            raw_intents = classify_intents(request.message, request.clarifications)
+            if raw_intents.primary != "general_info":
+                ctx.intents = raw_intents
+                ctx.intent = raw_intents.legacy_primary()
         if conv_ctx.intent and ctx.intent == "general_info":
             ctx.intent = conv_ctx.intent
+            ctx.intents = IntentResult(primary=conv_ctx.intent)
 
-        ctx.entities = await extract_entities(self.session, ctx.normalized_message)
-        if not ctx.entities.get("service"):
-            ctx.entities = await extract_entities(self.session, request.message.lower())
+        ctx.entities = await extract_entities(
+            self.session,
+            ctx.normalized_message,
+            intents=ctx.intents,
+            clarifications=request.clarifications,
+        )
+        if not ctx.entities.get("service") and not ctx.entities.get("routing_clarification"):
+            ctx.entities = await extract_entities(
+                self.session,
+                request.message.lower(),
+                intents=ctx.intents,
+                clarifications=request.clarifications,
+            )
 
         if not ctx.entities.get("service") and conv_ctx.service_slug:
             if ConversationContextService.is_follow_up_message(request.message):
@@ -92,8 +110,19 @@ class Orchestrator:
                     ctx.entities["service_slug"] = svc.slug
                     ctx.entities["service_match_method"] = "conversation_context"
 
+        clarifications = request.clarifications or {}
+        if not ctx.entities.get("service") and clarifications.get("service"):
+            svc = await self._service_by_slug(str(clarifications["service"]))
+            if svc:
+                ctx.entities["service"] = svc
+                ctx.entities["service_slug"] = svc.slug
+                ctx.entities["service_match_method"] = "clarification_context"
+
         ctx.service = ctx.entities.get("service")
         ctx.clarifications_needed = self._clarifications_needed(ctx, request)
+        routing_clarification = ctx.entities.get("routing_clarification")
+        if routing_clarification and not ctx.clarifications_needed:
+            ctx.clarifications_needed = [routing_clarification]
 
         if ctx.clarifications_needed:
             return (
@@ -190,30 +219,75 @@ class Orchestrator:
         if ctx.language == "bn":
             clarifications["_lang"] = "bn"
 
-        checklist = await self.checklist_engine.build(
-            ctx.service, clarifications, authoritative_only=True
+        intents = ctx.intents or IntentResult(primary=ctx.intent)
+        claim_retrieval = ClaimRetrieval(self.session)
+        primary_intent = intents.primary
+
+        include_checklist = primary_intent in {
+            "document_list",
+            "eligibility",
+            "correction",
+            "lost_document",
+            "damaged_document",
+            "renewal",
+            "reissue",
+            "application",
+        } or "document_list" in intents.secondary
+
+        include_steps = primary_intent in {
+            "procedure_inquiry",
+            "status",
+            "appointment",
+            "application",
+            "payment",
+            "renewal",
+            "reissue",
+            "correction",
+            "lost_document",
+        } or any(
+            i in intents.secondary
+            for i in {"procedure_inquiry", "status", "appointment", "payment"}
         )
-        steps = await self.procedure_engine.build_steps(ctx.service, claim_linked_only=True)
+
+        include_fees = primary_intent in {
+            "fee_inquiry",
+            "payment",
+            "renewal",
+            "reissue",
+        } or "fee_inquiry" in intents.secondary
+
+        checklist = []
+        if include_checklist:
+            checklist = await self.checklist_engine.build(
+                ctx.service, clarifications, authoritative_only=True
+            )
+
+        steps = []
+        if include_steps:
+            steps = await self.procedure_engine.build_steps(
+                ctx.service, claim_linked_only=True
+            )
+
         await self.session.refresh(ctx.service, ["fees", "service_links"])
 
         fees: list[FeeResponse] = []
-        for fee in ctx.service.fees:
-            if fee.claim_id is None:
-                continue
-            fee_mode = None
-            label = fee.label_en
-            if fee.amount == "USE_OFFICIAL_CALCULATOR":
-                fee_mode = "calculator"
-                label = fee.label_en or "Use official fee calculator"
-            fees.append(
-                FeeResponse(
-                    amount=fee.amount,
-                    currency=fee.currency,
-                    evidence_id=str(fee.claim_id),
-                    label=label,
-                    fee_mode=fee_mode,
+        if include_fees:
+            intent_fees = await claim_retrieval.fees_for_intent(ctx.service, intents)
+            for fee in intent_fees:
+                fee_mode = None
+                label = fee.label_en
+                if fee.amount == "USE_OFFICIAL_CALCULATOR":
+                    fee_mode = "calculator"
+                    label = fee.label_en or "Use official fee calculator"
+                fees.append(
+                    FeeResponse(
+                        amount=fee.amount,
+                        currency=fee.currency,
+                        evidence_id=str(fee.claim_id),
+                        label=label,
+                        fee_mode=fee_mode,
+                    )
                 )
-            )
 
         seed_fees_hidden = [f for f in ctx.service.fees if f.claim_id is None]
         warnings = list(ctx.conflicts)
@@ -278,7 +352,7 @@ class Orchestrator:
             warnings.append("Official application URLs are not yet verified for this service.")
 
         # Practical layer (never merged into MUST NEED)
-        practical_notes = await self._practical_notes(ctx.service.id)
+        practical_notes = await claim_retrieval.practical_notes(ctx.service.id)
 
         if ctx.support_level == AnswerSupportLevel.VERIFIED:
             summary = (
