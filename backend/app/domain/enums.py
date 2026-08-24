@@ -264,8 +264,11 @@ class GeographyAliasType(StrEnum):
 class ServiceLinkType(StrEnum):
     APPLICATION = "application"
     INFORMATION = "information"
-    FORM = "form"
+    APPOINTMENT = "appointment"
+    STATUS = "status"
     PAYMENT = "payment"
+    FEE_CALCULATOR = "fee_calculator"
+    FORM = "form"
     OTHER = "other"
 
 

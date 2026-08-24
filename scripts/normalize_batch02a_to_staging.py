@@ -339,6 +339,8 @@ def main() -> None:
                 "effective_evidence_date": fm.get("effective_evidence_date"),
                 "vat_included": fm.get("vat_included"),
             }
+        elif gc.get("claim_type") == "application_url" and gc.get("link_type"):
+            structured = {"link_type": gc.get("link_type")}
 
         verification = {
             "claim_id": cid,

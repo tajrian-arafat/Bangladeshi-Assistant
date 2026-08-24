@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -1138,17 +1139,16 @@ class KnowledgePublisher:
         verification: dict[str, Any] | None = None,
     ) -> None:
         url = None
-        if verification:
+        text = claim.value or ""
+        for match in re.finditer(r"https?://[^\s,)\"']+", text):
+            url = match.group(0).rstrip(".,)")
+            break
+        if not url and verification:
             for ev in verification.get("evidence", []):
-                if ev.get("source_url"):
-                    url = ev["source_url"]
-                    break
-        if not url:
-            text = claim.value
-            for token in text.split():
-                if token.startswith("http"):
-                    url = token.rstrip(".,)")
-                    break
+                if ev.get("source_url") and ev.get("source_url").startswith("http"):
+                    candidate = ev["source_url"]
+                    if "onboarding" in candidate or "landing" in candidate or not url:
+                        url = candidate
         if not url:
             report.actions.append(
                 {
@@ -1158,6 +1158,24 @@ class KnowledgePublisher:
                 }
             )
             return
+
+        link_type = "APPLICATION"
+        structured = claim.structured_value or {}
+        raw_link = structured.get("link_type") or (verification or {}).get("link_type")
+        if raw_link:
+            link_type = str(raw_link).upper()
+            if link_type not in {
+                "APPLICATION",
+                "INFORMATION",
+                "APPOINTMENT",
+                "STATUS",
+                "PAYMENT",
+                "FEE_CALCULATOR",
+                "FORM",
+                "OTHER",
+            }:
+                link_type = "APPLICATION"
+
         if self.dry_run:
             report.published_urls += 1
             report.actions.append(
@@ -1166,6 +1184,7 @@ class KnowledgePublisher:
                     "claim_id": str(claim.id),
                     "research_claim_key": claim.research_claim_key,
                     "url": url,
+                    "link_type": link_type,
                 }
             )
             return
@@ -1176,7 +1195,7 @@ class KnowledgePublisher:
             self.session.add(
                 ServiceLink(
                     service_id=service.id,
-                    link_type="APPLICATION",
+                    link_type=link_type,
                     label_bn=claim.subject[:512] or "আবেদন পোর্টাল",
                     label_en=claim.subject[:512] or "Application portal",
                     url=url,
@@ -1187,7 +1206,9 @@ class KnowledgePublisher:
         claim.is_published = True
         claim.published_at = datetime.now(timezone.utc)
         report.published_urls += 1
-        await self._audit("publish_url", "service_link", str(claim.id), {"url": url})
+        await self._audit(
+            "publish_url", "service_link", str(claim.id), {"url": url, "link_type": link_type}
+        )
 
     async def _publish_step(self, service: Service, claim: Claim, report: PublishReport) -> None:
         if self.dry_run:

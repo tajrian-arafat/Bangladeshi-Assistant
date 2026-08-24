@@ -410,7 +410,36 @@
         "src-gap-epassport-urgent-browser"
       ],
       "evidence_excerpt": "Last updated: 3 June 2026 ... Any citizen of Bangladesh can apply for Super Express delivery ... not available outside Bangladesh",
-      "note": "Differs from Oct 2022 indexed NOTE about MRP-only restriction; creates versioning conflict \u2014 see conflicts_resolution.json"
+      "note": "Differs from Oct 2022 indexed NOTE about MRP-only restriction; creates versioning conflict — see conflicts_resolution.json"
+    },
+    {
+      "claim_id": "gap-closure::c-new-application-url-landing-verified",
+      "service_id": "epassport-new-application",
+      "claim_type": "application_url",
+      "claim_text": "New e-Passport online application URL is https://www.epassport.gov.bd/onboarding (official landing page link: 'Directly to online application').",
+      "verification_status": "VERIFIED",
+      "applicability": "domestic_new_application",
+      "link_type": "application",
+      "source_ids": [
+        "src-gap-epassport-landing-browser",
+        "src-gap-epassport-onboarding-browser"
+      ],
+      "evidence_excerpt": "Landing page: 'Directly to online application' → https://epassport.gov.bd/onboarding; onboarding Step 1 UI browser-rendered.",
+      "supersedes_interpretation_of": "epassport-new-application::c-apply-online (PARTIALLY_VERIFIED indexed-only)"
+    },
+    {
+      "claim_id": "gap-closure::c-reissue-url-landing-verified",
+      "service_id": "epassport-reissue",
+      "claim_type": "application_url",
+      "claim_text": "e-Passport re-issue applications are submitted online via https://epassport.gov.bd/landing (official portal entry; Apply Online for e-Passport / Re-Issue).",
+      "verification_status": "VERIFIED",
+      "applicability": "reissue_renewal",
+      "link_type": "application",
+      "source_ids": [
+        "src-gap-epassport-landing-browser"
+      ],
+      "evidence_excerpt": "Landing portal HTTP 200 with application entry links; DIP lists epassport.gov.bd as official e-Passport channel.",
+      "supersedes_interpretation_of": "epassport-reissue::c-reissue-portal (PARTIALLY_VERIFIED SPA shell)"
     }
   ]
 }

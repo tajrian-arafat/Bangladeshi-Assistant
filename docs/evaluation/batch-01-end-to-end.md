@@ -1,6 +1,6 @@
 # Batch 1 End-to-End Assistant Evaluation
 
-**Generated:** 2026-08-24T22:14:20.609419+00:00
+**Generated:** 2026-08-24T22:28:32.271086+00:00
 **Mode:** Local/development only — no deployment
 
 ## Headline results

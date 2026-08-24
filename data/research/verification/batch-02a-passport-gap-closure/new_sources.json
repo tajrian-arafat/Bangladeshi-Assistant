@@ -82,6 +82,16 @@
       "retrieval_method": "puppeteer_headless_chrome",
       "retrieved_at": "2026-08-24",
       "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/epassport_onboarding.txt"
+    },
+    {
+      "source_id": "src-gap-epassport-landing-browser",
+      "source_url": "https://epassport.gov.bd/landing",
+      "source_title": "e-Passport landing portal (browser-rendered link graph)",
+      "authority_tier": 1,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-24",
+      "snapshot": "data/research/verification/batch-02a-passport-gap-closure/source_snapshots/epassport_landing_links.json",
+      "evidence_limitation": "Landing HTTP 200; onboarding route linked but direct bot fetch to onboarding may 403"
     }
   ]
 }

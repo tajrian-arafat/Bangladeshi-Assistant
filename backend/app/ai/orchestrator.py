@@ -199,6 +199,21 @@ class Orchestrator:
             inferred["speed"] = "express"
         elif "regular" in msg:
             inferred["speed"] = "regular"
+        if any(
+            token in msg
+            for token in (
+                "e passport",
+                "e-passport",
+                "epassport",
+                "ই-পাসপোর্ট",
+                "ই পাসপোর্ট",
+            )
+        ):
+            inferred["passport_type"] = "e_passport"
+        elif any(token in msg for token in ("mrp", "machine readable")):
+            inferred["passport_type"] = "mrp"
+        if any(token in msg for token in ("reissue", "re-issue", "renewal", "renew")):
+            inferred["application_type"] = "reissue"
         return inferred
 
     def _clarifications_needed(self, ctx: PipelineContext, request: ChatRequest) -> list[str]:
