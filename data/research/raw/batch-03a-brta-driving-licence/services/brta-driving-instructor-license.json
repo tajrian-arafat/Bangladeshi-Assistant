@@ -1,0 +1,224 @@
+{
+  "service_id": "brta-driving-instructor-license",
+  "batch_id": "batch-03a-brta-driving-licence",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Driving Instructor License",
+  "service_name_bn": "ড্রাইভিং ইন্সট্রাক্টর লাইসেন্স",
+  "aliases": [
+    "motor driving instructor license"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "driving_instructor"
+  ],
+  "official_application_url": "http://brta.portal.gov.bd/pages/static-pages/6922db6c933eb65569e0a116",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-driving-instructor-license::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-driving-instructor-license",
+      "claim_type": "application_url",
+      "claim_text": "Driving instructor license service information and application guidance published on BRTA portal static page (brta.portal.gov.bd).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-portal-url-src-brta-instructor-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-listed-on-brta-portal",
+      "legacy_claim_id": "c-listed-on-brta-portal",
+      "service_id": "brta-driving-instructor-license",
+      "claim_type": "availability",
+      "claim_text": "Driving instructor license listed under driving license services on official BRTA national portal (catalogue confirmed).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-listed-on-brta-portal-src-brta-instructor-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-valid-license-prerequisite",
+      "legacy_claim_id": "c-valid-license-prerequisite",
+      "service_id": "brta-driving-instructor-license",
+      "claim_type": "eligibility",
+      "claim_text": "Applicant must hold valid professional driving license with adequate experience before instructor license consideration.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-instructor-page",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-valid-license-prerequisite-src-brta-instructor-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-training-school-affiliation",
+      "legacy_claim_id": "c-training-school-affiliation",
+      "service_id": "brta-driving-instructor-license",
+      "claim_type": "eligibility",
+      "claim_text": "Instructor license typically tied to registered motor driving training school operation (BRTA road safety/training school framework).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "instructor_at_registered_school"
+      },
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-training-school-affiliation-src-brta-instructor-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-circle-office-application",
+      "legacy_claim_id": "c-circle-office-application",
+      "service_id": "brta-driving-instructor-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Instructor license applications submitted to relevant BRTA circle office with prescribed forms and supporting documents.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-circle-office-application-src-brta-instructor-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-documents-not-fully-captured",
+      "legacy_claim_id": "c-documents-not-fully-captured",
+      "service_id": "brta-driving-instructor-license",
+      "claim_type": "document",
+      "claim_text": "Full document checklist for instructor license not machine-read from BRTA portal page in this research pass (JS-rendered content).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-documents-not-fully-captured-src-brta-instructor-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-fee-not-enumerated",
+      "legacy_claim_id": "c-fee-not-enumerated",
+      "service_id": "brta-driving-instructor-license",
+      "claim_type": "fee",
+      "claim_text": "Instructor license fee amount not found on Tier 1–2 sources reviewed; may require circle office fee schedule or fee calculator category not captured.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-fee-not-enumerated-src-brta-instructor-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-not-bsp-primary-channel",
+      "legacy_claim_id": "c-not-bsp-primary-channel",
+      "service_id": "brta-driving-instructor-license",
+      "claim_type": "restriction",
+      "claim_text": "Instructor license primary channel is BRTA portal/circle office guidance; not listed as standalone BSP e-service in catalogue official_source.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-not-bsp-primary-channel-src-brta-instructor-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-practical-contact-circle-first",
+      "legacy_claim_id": "c-practical-contact-circle-first",
+      "service_id": "brta-driving-instructor-license",
+      "claim_type": "practical_tip",
+      "claim_text": "Contact local BRTA circle office for current instructor license form set and training school endorsement requirements before applying.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-practical-contact-circle-first-src-brta-instructor-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Listed under driving instructor license services on BRTA portal.",
+  "prior_batch_research": null
+}

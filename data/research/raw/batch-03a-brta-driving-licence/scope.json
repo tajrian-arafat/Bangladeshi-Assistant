@@ -10,6 +10,79 @@
     "brta-driving-instructor-license",
     "brta-dctc-exam-result"
   ],
-  "out_of_scope_noted": [],
-  "generated_by": "automation.orchestrator"
+  "out_of_scope_noted": [
+    {
+      "service_id": "brta-bsp-user-registration",
+      "reason": "BSP account registration prerequisite; covered as cross-cutting claim not standalone service batch"
+    },
+    {
+      "service_id": "brta-new-vehicle-registration",
+      "reason": "Vehicle registration; scheduled for batch-03b-brta-vehicle"
+    },
+    {
+      "service_id": "brta-driving-school-registration",
+      "reason": "Driving school operator registration; separate business-facing batch scope"
+    },
+    {
+      "service_id": "brta-fee-calculator",
+      "reason": "Cross-cutting fee tool; referenced as source for licence fee claims"
+    },
+    {
+      "service_id": "driving-licence-renewal",
+      "reason": "Legacy MVP seed slug; superseded by brta-driving-license-renewal catalogue entry"
+    }
+  ],
+  "subprocess_coverage": [
+    {
+      "topic": "learner_license_bsp",
+      "catalogue_services": [
+        "brta-learner-driving-license"
+      ]
+    },
+    {
+      "topic": "license_renewal_bsp",
+      "catalogue_services": [
+        "brta-driving-license-renewal"
+      ]
+    },
+    {
+      "topic": "duplicate_license_bsp",
+      "catalogue_services": [
+        "brta-duplicate-driving-license"
+      ]
+    },
+    {
+      "topic": "smart_card_license_pathway",
+      "catalogue_services": [
+        "brta-smart-card-driving-license"
+      ]
+    },
+    {
+      "topic": "dctc_exam_results",
+      "catalogue_services": [
+        "brta-dctc-exam-result"
+      ]
+    },
+    {
+      "topic": "instructor_license_portal",
+      "catalogue_services": [
+        "brta-driving-instructor-license"
+      ]
+    },
+    {
+      "topic": "bsp_registration_prerequisite",
+      "catalogue_services": [
+        "brta-learner-driving-license"
+      ]
+    },
+    {
+      "topic": "fee_calculator_cross_cutting",
+      "catalogue_services": [
+        "brta-learner-driving-license",
+        "brta-driving-license-renewal",
+        "brta-duplicate-driving-license",
+        "brta-smart-card-driving-license"
+      ]
+    }
+  ]
 }
