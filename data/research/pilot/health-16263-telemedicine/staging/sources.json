@@ -1,0 +1,71 @@
+{
+  "sources": [
+    {
+      "source_id": "src-health-16263-telemedicine-official",
+      "service_id": "health-16263-telemedicine",
+      "url": "http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update",
+      "title": "\u09ac\u09be\u0982\u09b2\u09be\u09a6\u09c7\u09b6 \u09ae\u09c7\u09a1\u09bf\u0995\u09c7\u09b2 \u098f\u09a8\u09cd\u09a1 \u09a1\u09c7\u09a8\u09cd\u099f\u09be\u09b2 \u0995\u09be\u0989\u09a8\u09cd\u09b8\u09bf\u09b2 \u098f \u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09a8\u0995\u09c3\u09a4 \u09b8\u0995\u09b2 \u09ae\u09c7\u09a1\u09bf\u0995\u09c7\u09b2/\u09a1\u09c7\u09a8\u09cd\u099f\u09be\u09b2 \u099a\u09bf\u0995\u09bf\u2018\u09b8\u0995\u09a6\u09c7\u09b0 Profile Update \u09b8\u0982\u0995\u09cd\u09b0\u09be\u09a8\u09cd\u09a4 \u09ac\u09bf\u099c\u09cd\u099e\u09aa\u09cd\u09a4\u09bf",
+      "authority_id": "dghs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update",
+        "status_code": 200,
+        "reachable": true,
+        "title": "\u09ac\u09be\u0982\u09b2\u09be\u09a6\u09c7\u09b6 \u09ae\u09c7\u09a1\u09bf\u0995\u09c7\u09b2 \u098f\u09a8\u09cd\u09a1 \u09a1\u09c7\u09a8\u09cd\u099f\u09be\u09b2 \u0995\u09be\u0989\u09a8\u09cd\u09b8\u09bf\u09b2 \u098f \u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09a8\u0995\u09c3\u09a4 \u09b8\u0995\u09b2 \u09ae\u09c7\u09a1\u09bf\u0995\u09c7\u09b2/\u09a1\u09c7\u09a8\u09cd\u099f\u09be\u09b2 \u099a\u09bf\u0995\u09bf\u2018\u09b8\u0995\u09a6\u09c7\u09b0 Profile Update \u09b8\u0982\u0995\u09cd\u09b0\u09be\u09a8\u09cd\u09a4 \u09ac\u09bf\u099c\u09cd\u099e\u09aa\u09cd\u09a4\u09bf",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "d8f4d239e5f09771",
+        "retrieved_at": "2026-08-25T03:12:21.564144+00:00"
+      },
+      "evidence_locator": "probe:http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update"
+    },
+    {
+      "source_id": "src-health-16263-telemedicine-alt-1",
+      "service_id": "health-16263-telemedicine",
+      "url": "http://old.dghs.gov.bd/",
+      "title": "\u09a8\u09c0\u09a1\u09bc \u09aa\u09be\u09a4\u09be",
+      "authority_id": "dghs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://old.dghs.gov.bd/index.php/bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "\u09a8\u09c0\u09a1\u09bc \u09aa\u09be\u09a4\u09be",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "86bf1258359f88cc",
+        "retrieved_at": "2026-08-25T03:12:22.400917+00:00"
+      }
+    },
+    {
+      "source_id": "src-health-16263-telemedicine-alt-2",
+      "service_id": "health-16263-telemedicine",
+      "url": "https://dghs.gov.bd/",
+      "title": "\u09b9\u09cb\u09ae | \u09b8\u09cd\u09ac\u09be\u09b8\u09cd\u09a5\u09cd\u09af \u0985\u09a7\u09bf\u09a6\u09aa\u09cd\u09a4\u09b0",
+      "authority_id": "dghs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dghs.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "\u09b9\u09cb\u09ae | \u09b8\u09cd\u09ac\u09be\u09b8\u09cd\u09a5\u09cd\u09af \u0985\u09a7\u09bf\u09a6\u09aa\u09cd\u09a4\u09b0",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "031c2ad361ff94fc",
+        "retrieved_at": "2026-08-25T03:12:24.506841+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

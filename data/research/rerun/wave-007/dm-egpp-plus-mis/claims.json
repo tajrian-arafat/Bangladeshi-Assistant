@@ -1,0 +1,72 @@
+{
+  "service_id": "dm-egpp-plus-mis",
+  "claims": [
+    {
+      "claim_id": "dm-egpp-plus-mis::c-catalogue-authority",
+      "service_id": "dm-egpp-plus-mis",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Disaster Management and Relief.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-egpp-plus-mis::c-official-portal",
+      "service_id": "dm-egpp-plus-mis",
+      "claim_type": "application_url",
+      "claim_text": "EGPP+ Management Information System official information is published at https://egppplus.ddm.gov.bd/ (page title: Ministry of Disaster Management and Relief).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://egppplus.ddm.gov.bd/"
+      },
+      "source_ids": [
+        "src-dm-egpp-plus-mis-official"
+      ],
+      "evidence_ids": [
+        "ev-dm-egpp-plus-mis::c-official-portal-src-dm-egpp-plus-mis-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-egpp-plus-mis::c-procedure-overview",
+      "service_id": "dm-egpp-plus-mis",
+      "claim_type": "procedure_step",
+      "claim_text": "EGPP+ Management Information System is a government service under Ministry of Disaster Management and Relief (relief programme). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-egpp-plus-mis-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-egpp-plus-mis::c-service-identity",
+      "service_id": "dm-egpp-plus-mis",
+      "claim_type": "eligibility",
+      "claim_text": "EGPP+ Management Information System (EGPP+ MIS (দুর্যোগ ত্রাণ/কাজ)) is a confirmed government service in category disaster_relief, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-egpp-plus-mis-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

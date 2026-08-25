@@ -1,0 +1,23 @@
+{
+  "status": "KNOWLEDGE_INCOMPLETE",
+  "updated_at": "2026-08-25T03:52:00.000000+00:00",
+  "deployment_allowed": false,
+  "auto_merge": false,
+  "step_31_partial_depth_analysis": {
+    "status": "COMPLETE",
+    "partial_services_analyzed": 416,
+    "primary_bottleneck": "RESEARCH",
+    "secondary_bottlenecks": ["RETRIEVAL", "E2E"],
+    "deep_research_pilot_services": 12,
+    "avg_supported_coverage_before": 0.0,
+    "avg_supported_coverage_after": 0.75,
+    "regression_passed": true,
+    "artifacts": {
+      "taxonomy": "data/audit/partial-knowledge-taxonomy.json",
+      "user_value_matrix": "data/audit/service-user-value-matrix.json",
+      "bottlenecks": "data/audit/partial-knowledge-bottlenecks.json",
+      "pilot_summary": "data/research/deep-research-pilot/pilot-summary.json",
+      "report": "docs/evaluation/partial-knowledge-depth-analysis.md"
+    }
+  }
+}

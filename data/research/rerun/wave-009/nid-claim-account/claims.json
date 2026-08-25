@@ -1,0 +1,72 @@
+{
+  "service_id": "nid-claim-account",
+  "claims": [
+    {
+      "claim_id": "nid-claim-account::c-catalogue-authority",
+      "service_id": "nid-claim-account",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-claim-account::c-official-portal",
+      "service_id": "nid-claim-account",
+      "claim_type": "application_url",
+      "claim_text": "Claim NID Online Account official information is published at https://services.nidw.gov.bd/nid-pub/?locale=en (page title: Bangladesh NID Application System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/?locale=en"
+      },
+      "source_ids": [
+        "src-nid-claim-account-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-claim-account::c-official-portal-src-nid-claim-account-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-claim-account::c-procedure-overview",
+      "service_id": "nid-claim-account",
+      "claim_type": "procedure_step",
+      "claim_text": "Claim NID Online Account is a government service under Bangladesh Election Commission (NID Wing) (nid portal). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-claim-account-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-claim-account::c-service-identity",
+      "service_id": "nid-claim-account",
+      "claim_type": "eligibility",
+      "claim_text": "Claim NID Online Account (অ্যাকাউন্ট দাবি (ক্লেইম)) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-claim-account-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

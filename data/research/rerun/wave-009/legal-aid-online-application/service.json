@@ -1,0 +1,134 @@
+{
+  "service_id": "legal-aid-online-application",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "National Legal Aid Online Application",
+  "service_name_bn": "আইনগত সহায়তা অনলাইন আবেদন",
+  "aliases": [
+    "NLASO online application",
+    "legal aid apply",
+    "National Legal Aid Online Application"
+  ],
+  "category_id": "legal_aid",
+  "profile_key": "JUDICIARY",
+  "responsible_agency": "National Legal Aid Services Organization (NLASO)",
+  "official_application_url": "https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "legal-aid-online-application::c-catalogue-authority",
+      "service_id": "legal-aid-online-application",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Legal Aid Services Organization (NLASO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-online-application::c-official-portal",
+      "service_id": "legal-aid-online-application",
+      "claim_type": "application_url",
+      "claim_text": "National Legal Aid Online Application official information is published at https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx (page title: DBLA | Office Management System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx"
+      },
+      "source_ids": [
+        "src-legal-aid-online-application-official"
+      ],
+      "evidence_ids": [
+        "ev-legal-aid-online-application::c-official-portal-src-legal-aid-online-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-online-application::c-procedure-overview",
+      "service_id": "legal-aid-online-application",
+      "claim_type": "procedure_step",
+      "claim_text": "National Legal Aid Online Application is a government service under National Legal Aid Services Organization (NLASO) (application). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-online-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-online-application::c-service-identity",
+      "service_id": "legal-aid-online-application",
+      "claim_type": "eligibility",
+      "claim_text": "National Legal Aid Online Application (আইনগত সহায়তা অনলাইন আবেদন) is a confirmed government service in category legal_aid, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-online-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-legal-aid-online-application-official",
+      "service_id": "legal-aid-online-application",
+      "url": "https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx",
+      "title": "DBLA | Office Management System",
+      "authority_id": "national-legal-aid-services-organization-nlaso",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DBLA | Office Management System",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "023d5efb17359401",
+        "retrieved_at": "2026-08-25T03:28:14.251268+00:00"
+      },
+      "evidence_locator": "probe:https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-legal-aid-online-application-fee-unverified",
+      "service_id": "legal-aid-online-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for National Legal Aid Online Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-legal-aid-online-application-documents-unverified",
+      "service_id": "legal-aid-online-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for National Legal Aid Online Application.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

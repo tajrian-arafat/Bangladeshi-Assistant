@@ -1,0 +1,44 @@
+{
+  "service_id": "election-candidate-nomination",
+  "batch_id": "batch-14-remaining",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Election Candidate Nomination and Schedule Services",
+  "service_name_bn": "প্রার্থী মনোনয়ন/নির্বাচনী তফসিল",
+  "aliases": [
+    "nomination paper EC",
+    "election candidate registration"
+  ],
+  "category_id": "identity",
+  "responsible_agency": "Bangladesh Election Commission",
+  "official_application_url": "https://www.ecs.gov.bd/",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "election-candidate-nomination::c-application-portal",
+      "service_id": "election-candidate-nomination",
+      "claim_type": "application_url",
+      "claim_text": "Election Candidate Nomination and Schedule Services is associated with NBR e-service portal https://www.ecs.gov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-election-candidate-nomination",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "election-candidate-nomination::c-responsible-authority",
+      "service_id": "election-candidate-nomination",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Election Commission.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

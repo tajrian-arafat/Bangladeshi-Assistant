@@ -1,0 +1,20 @@
+{
+  "service_id": "identity-voter-slip-download",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-identity-voter-slip-download-fee-unverified",
+      "service_id": "identity-voter-slip-download",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Voter Information Slip Download.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-identity-voter-slip-download-documents-unverified",
+      "service_id": "identity-voter-slip-download",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Voter Information Slip Download.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

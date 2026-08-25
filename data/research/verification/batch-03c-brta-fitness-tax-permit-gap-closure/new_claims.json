@@ -1,0 +1,145 @@
+{
+  "schema": "bda.research.gap_closure.claims/1.0",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "created_at": "2026-08-25T03:41:07.414061+00:00",
+  "claims": [
+    {
+      "claim_id": "gap-closure::c-brta-portal-cms-body-empty",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "official_metadata",
+      "claim_text": "BRTA portal static pages for fitness, tax token, route permit, advance income tax, and vehicle modifications load with verified page titles and last-updated metadata, but rendered CMS instructional body shows 'Content: Pages' / 'কন্টেন্ট: পাতা' placeholder only — procedural checklists not captured in innerText.",
+      "verification_status": "VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-brta-fitness-browser",
+        "src-gap-brta-tax-token-browser",
+        "src-gap-brta-route-permit-browser",
+        "src-gap-brta-advance-income-tax-browser",
+        "src-gap-brta-color-change-browser",
+        "src-gap-brta-engine-change-browser",
+        "src-gap-brta-tire-size-change-browser"
+      ],
+      "evidence_excerpt": "Rendered text includes page title then 'কন্টেন্ট: পাতা' with no checklist steps",
+      "related_prior_claim_ids": [
+        "brta-fitness-certificate::c-physical-inspection-required",
+        "brta-tax-token::c-circle-office-collection",
+        "brta-route-permit::c-circle-office-submission"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-fitness-validity-unresolved",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "eligibility_rule",
+      "claim_text": "Fitness certificate validity periods by vehicle class (private car, motorcycle, bus, truck, etc.) and commercial-vs-private inspection intervals remain UNRESOLVED. Browser render captured page title 'ফিটনেস নবায়ন' but no validity matrix — do NOT invent durations (e.g. '5 years for private car').",
+      "verification_status": "UNVERIFIED",
+      "information_class": "OFFICIAL",
+      "structured_value": {
+        "fitness_validity_by_class": "UNRESOLVED",
+        "commercial_vs_private_rules": "UNRESOLVED"
+      },
+      "source_ids": [
+        "src-gap-brta-fitness-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence_excerpt": "Portal title captured; no validity period table or class matrix in render",
+      "related_prior_claim_ids": [
+        "brta-fitness-certificate::c-validity-by-class-unverified",
+        "brta-fitness-certificate::c-commercial-vs-private-rules-differ"
+      ],
+      "resolves_cross_batch_dependency": "dep-03b-fitness-validity-03c"
+    },
+    {
+      "claim_id": "gap-closure::c-bsp-subportals-temporarily-unavailable",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "availability",
+      "claim_text": "BSP feeCalculator, bsp/home, and roadSafety URLs returned HTTP 200 during 2026-08-25 browser probe — portals RENDERED. Fee calculator shell captured but interactive fee matrix not extractable (no select elements); numeric amounts remain CALCULATOR_DERIVED.",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-bsp-fee-calculator-browser",
+        "src-gap-bsp-home-browser",
+        "src-gap-bsp-road-safety-browser",
+        "src-gap-scrape-results-index",
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_excerpt": "fee_calculator_probe: captured=False, note=No select elements found; calculator may require login or different UI",
+      "supersedes_interpretation_of": "404 interpreted as invalid URL",
+      "related_prior_claim_ids": [
+        "brta-fee-calculator::c-portal-url",
+        "brta-bsp-user-registration::c-portal-url",
+        "brta-driving-school-registration::c-portal-url"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-fitness-tax-fees-calculator-derived",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "fee",
+      "claim_text": "Fitness, tax token, route permit, advance income tax, and vehicle modification fees are CALCULATOR_DERIVED via BSP feeCalculator; no static fee matrix published. Calculator shell RENDERED but interactive matrix not extractable — numeric amounts remain UNVERIFIED.",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "information_class": "OFFICIAL",
+      "structured_value": {
+        "amount": "CALCULATOR_DERIVED",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "source": "src-gap-bsp-fee-calculator-browser"
+      },
+      "source_ids": [
+        "src-gap-bsp-fee-calculator-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence_excerpt": "No select elements found; calculator may require login or different UI",
+      "related_prior_claim_ids": [
+        "brta-fitness-certificate::c-fitness-fee-calculator",
+        "brta-tax-token::c-tax-token-fee-calculator",
+        "brta-route-permit::c-route-permit-fee-calculator"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-route-permit-type-matrix-unresolved",
+      "service_id": "brta-route-permit",
+      "claim_type": "eligibility_rule",
+      "claim_text": "Route permit categories (inter-district, city, long-route, special permit types) and applicability by vehicle class remain UNRESOLVED. Portal page title captured but route-type matrix not in browser render.",
+      "verification_status": "UNVERIFIED",
+      "information_class": "OFFICIAL",
+      "structured_value": {
+        "route_permit_type_matrix": "UNRESOLVED"
+      },
+      "source_ids": [
+        "src-gap-brta-route-permit-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence_excerpt": "Route permit portal metadata only; no route-type enumeration in innerText",
+      "related_prior_claim_ids": [
+        "brta-route-permit::c-route-type-matrix-unverified",
+        "transport-route-permit::c-crossref-brta-route-permit"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-mv-tax-portal-shell-captured",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "application_url",
+      "claim_text": "MV tax payment portal at https://brta.cnsbd.com/mvtax_brta could not be reached during browser probe (net::ERR_NAME_NOT_RESOLVED at https://brta.cnsbd.com/mvtax_brta). URL remains catalogue-confirmed but live snapshot not captured in this pass.",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-mv-tax-portal-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence_excerpt": "net::ERR_NAME_NOT_RESOLVED at https://brta.cnsbd.com/mvtax_brta",
+      "related_prior_claim_ids": [
+        "brta-mv-tax-payment::c-portal-url"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-fitness-page-title-verified",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "official_metadata",
+      "claim_text": "BRTA fitness renewal portal page title 'ফিটনেস নবায়ন | পাতা | বাংলাদেশ সড়ক পরিবহন কর্তৃপক্ষ' verified via browser-rendered capture (Batch 03C gap-closure probe).",
+      "verification_status": "VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-brta-fitness-browser"
+      ],
+      "evidence_excerpt": "Page heading 'ফিটনেস নবায়ন' in innerText after 15s render wait"
+    }
+  ]
+}

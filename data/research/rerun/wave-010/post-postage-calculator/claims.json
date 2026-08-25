@@ -1,0 +1,72 @@
+{
+  "service_id": "post-postage-calculator",
+  "claims": [
+    {
+      "claim_id": "post-postage-calculator::c-catalogue-authority",
+      "service_id": "post-postage-calculator",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-postage-calculator::c-official-portal",
+      "service_id": "post-postage-calculator",
+      "claim_type": "application_url",
+      "claim_text": "Postal Postage Calculator official information is published at https://booking.bpodms.gov.bd/mashul (page title: Bangladesh Post).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://booking.bpodms.gov.bd/mashul"
+      },
+      "source_ids": [
+        "src-post-postage-calculator-official"
+      ],
+      "evidence_ids": [
+        "ev-post-postage-calculator::c-official-portal-src-post-postage-calculator-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-postage-calculator::c-procedure-overview",
+      "service_id": "post-postage-calculator",
+      "claim_type": "procedure_step",
+      "claim_text": "Postal Postage Calculator is a government service under Bangladesh Post Office (Directorate of Posts) (tools). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-postage-calculator-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-postage-calculator::c-service-identity",
+      "service_id": "post-postage-calculator",
+      "claim_type": "eligibility",
+      "claim_text": "Postal Postage Calculator (ডাক মাশুল ক্যালকুলেটর) is a confirmed government service in category post, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-postage-calculator-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

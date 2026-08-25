@@ -1,0 +1,72 @@
+{
+  "service_id": "bida-invest-bangladesh-oss",
+  "claims": [
+    {
+      "claim_id": "bida-invest-bangladesh-oss::c-catalogue-authority",
+      "service_id": "bida-invest-bangladesh-oss",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Investment Development Authority (BIDA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-invest-bangladesh-oss::c-official-portal",
+      "service_id": "bida-invest-bangladesh-oss",
+      "claim_type": "application_url",
+      "claim_text": "Invest Bangladesh OSS Portal official information is published at https://investbangladesh.gov.bd/faq (page title: Invest Bangladesh FAQ | Answers to Investment, Visa, Tax &amp; Business Setup Queries).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://investbangladesh.gov.bd/faq"
+      },
+      "source_ids": [
+        "src-bida-invest-bangladesh-oss-official"
+      ],
+      "evidence_ids": [
+        "ev-bida-invest-bangladesh-oss::c-official-portal-src-bida-invest-bangladesh-oss-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-invest-bangladesh-oss::c-procedure-overview",
+      "service_id": "bida-invest-bangladesh-oss",
+      "claim_type": "procedure_step",
+      "claim_text": "Invest Bangladesh OSS Portal is a government service under Bangladesh Investment Development Authority (BIDA) (oss). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-invest-bangladesh-oss-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-invest-bangladesh-oss::c-service-identity",
+      "service_id": "bida-invest-bangladesh-oss",
+      "claim_type": "eligibility",
+      "claim_text": "Invest Bangladesh OSS Portal (Invest Bangladesh OSS) is a confirmed government service in category investment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-invest-bangladesh-oss-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

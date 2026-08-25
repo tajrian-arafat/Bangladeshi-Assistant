@@ -1,0 +1,74 @@
+{
+  "claims": [
+    {
+      "claim_id": "agri-bamis-farmer-registration::c-official-portal",
+      "service_id": "agri-bamis-farmer-registration",
+      "claim_type": "application_url",
+      "claim_text": "BAMIS Farmer Registration official information is published at https://www.bamis.gov.bd/en/registration/farmer/ (page title: Bangladesh Agro-Meteorological Information Service (BAMIS)).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.bamis.gov.bd/en/registration/farmer/"
+      },
+      "source_ids": [
+        "src-agri-bamis-farmer-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-agri-bamis-farmer-registration::c-official-portal-src-agri-bamis-farmer-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-bamis-farmer-registration::c-procedure-overview",
+      "service_id": "agri-bamis-farmer-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Farmer registration under BAMIS (Bangladesh Agricultural Management Information System) for agriculture services.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-bamis-farmer-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-bamis-farmer-registration::c-document-overview",
+      "service_id": "agri-bamis-farmer-registration",
+      "claim_type": "document",
+      "claim_text": "Land ownership/lease documents and NID typically required for farmer registration.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-agri-bamis-farmer-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-bamis-farmer-registration::c-service-identity",
+      "service_id": "agri-bamis-farmer-registration",
+      "claim_type": "eligibility",
+      "claim_text": "BAMIS Farmer Registration (\u09ac\u09be\u09ae\u09bf\u09b8 \u0995\u09c3\u09b7\u0995 \u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09a8) is a confirmed government service in category agriculture, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-bamis-farmer-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

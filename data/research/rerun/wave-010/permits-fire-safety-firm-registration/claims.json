@@ -1,0 +1,72 @@
+{
+  "service_id": "permits-fire-safety-firm-registration",
+  "claims": [
+    {
+      "claim_id": "permits-fire-safety-firm-registration::c-catalogue-authority",
+      "service_id": "permits-fire-safety-firm-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Fire Service and Civil Defence Directorate.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-safety-firm-registration::c-official-portal",
+      "service_id": "permits-fire-safety-firm-registration",
+      "claim_type": "application_url",
+      "claim_text": "Fire Safety Firm Registration official information is published at https://enoc.fireservice.gov.bd/safety_firm/register (page title: Fire Safety Firm Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://enoc.fireservice.gov.bd/safety_firm/register"
+      },
+      "source_ids": [
+        "src-permits-fire-safety-firm-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-permits-fire-safety-firm-registration::c-official-portal-src-permits-fire-safety-firm-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-safety-firm-registration::c-procedure-overview",
+      "service_id": "permits-fire-safety-firm-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Fire Safety Firm Registration is a government service under Fire Service and Civil Defence Directorate (fire safety firm). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-safety-firm-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-safety-firm-registration::c-service-identity",
+      "service_id": "permits-fire-safety-firm-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Fire Safety Firm Registration (ফায়ার সেফটি ফার্ম নিবন্ধন) is a confirmed government service in category permits, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-safety-firm-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

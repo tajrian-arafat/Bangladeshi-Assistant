@@ -1,0 +1,20 @@
+{
+  "service_id": "bida-irms-platform",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-bida-irms-platform-fee-unverified",
+      "service_id": "bida-irms-platform",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BIDA Investment Relationship Management System (IRMS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-irms-platform-documents-unverified",
+      "service_id": "bida-irms-platform",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BIDA Investment Relationship Management System (IRMS).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

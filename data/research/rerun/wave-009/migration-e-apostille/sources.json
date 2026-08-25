@@ -1,0 +1,53 @@
+{
+  "service_id": "migration-e-apostille",
+  "sources": [
+    {
+      "source_id": "src-migration-e-apostille-official",
+      "service_id": "migration-e-apostille",
+      "url": "https://apostille.mygov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://apostille.mygov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "b38cb93998585304",
+        "retrieved_at": "2026-08-25T03:28:26.315212+00:00"
+      },
+      "evidence_locator": "probe:https://apostille.mygov.bd/"
+    },
+    {
+      "source_id": "src-migration-e-apostille-alt-1",
+      "service_id": "migration-e-apostille",
+      "url": "https://mofa-servicedirectory.apostille.mygov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mofa-servicedirectory.apostille.mygov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "cf59b6c4ef8db51e",
+        "retrieved_at": "2026-08-25T03:28:26.355433+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

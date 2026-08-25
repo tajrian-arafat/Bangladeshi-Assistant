@@ -1,0 +1,215 @@
+{
+  "batch_id": "batch-10-employment-migration",
+  "sources": [
+    {
+      "source_id": "src-employment-boesl-overseas-recruitment",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "url": "https://brms.boesl.gov.bd/",
+      "portal_url": null,
+      "title": "BOESL Overseas Job Seeker Registration",
+      "authority_id": "bangladesh-overseas-employment-and-services-ltd-boesl",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://brms.boesl.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-employment-labour-court-adr",
+      "service_id": "employment-labour-court-adr",
+      "url": "https://mole.gov.bd/",
+      "portal_url": null,
+      "title": "Labour Court Alternative Dispute Resolution",
+      "authority_id": "ministry-of-labour-employment",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mole.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-employment-trade-union-registration",
+      "service_id": "employment-trade-union-registration",
+      "url": "https://mole.gov.bd/",
+      "portal_url": null,
+      "title": "Trade Union Registration",
+      "authority_id": "department-of-labour-ministry-of-labour-employment",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mole.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-expatriate-bmet-training",
+      "service_id": "expatriate-bmet-training",
+      "url": "https://old.bmet.gov.bd/BMET/downloadAction",
+      "portal_url": null,
+      "title": "BMET Skill Development Training",
+      "authority_id": "bmet",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://old.bmet.gov.bd/BMET/downloadAction",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-expatriate-emigration-clearance",
+      "service_id": "expatriate-emigration-clearance",
+      "url": "https://oc.bmet.gov.bd/bmet_clr/rlEnrollment",
+      "portal_url": null,
+      "title": "Emigration Clearance for Overseas Employment",
+      "authority_id": "bmet",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://oc.bmet.gov.bd/bmet_clr/rlEnrollment",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-expatriate-recruiting-agent-verify",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "url": "https://old.bmet.gov.bd/BMET/agentlistpreview",
+      "portal_url": null,
+      "title": "Recruiting Agent Verification",
+      "authority_id": "bmet",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://old.bmet.gov.bd/BMET/agentlistpreview",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-expatriate-worker-registration",
+      "service_id": "expatriate-worker-registration",
+      "url": "https://old.bmet.gov.bd/BMET/downloadAction",
+      "portal_url": null,
+      "title": "Overseas Worker Registration",
+      "authority_id": "bmet",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://old.bmet.gov.bd/BMET/downloadAction",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-migration-e-apostille",
+      "service_id": "migration-e-apostille",
+      "url": "https://apostille.mygov.bd/",
+      "portal_url": null,
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://apostille.mygov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-mofa-csat",
+      "service_id": "mofa-csat",
+      "url": "https://csat.mofa.gov.bd/",
+      "portal_url": null,
+      "title": "CSAT | Ministry of Foreign Affairs",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://csat.mofa.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "CSAT | Ministry of Foreign Affairs",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-mofa-document-attestation",
+      "service_id": "mofa-document-attestation",
+      "url": "https://csat.mofa.gov.bd/",
+      "portal_url": null,
+      "title": "CSAT | Ministry of Foreign Affairs",
+      "authority_id": "mofa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://csat.mofa.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "CSAT | Ministry of Foreign Affairs",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-mofa-education-attestation-chain",
+      "service_id": "mofa-education-attestation-chain",
+      "url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation",
+      "portal_url": null,
+      "title": "Educational Certificate MOFA Attestation (via Ministry of Education)",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-mofa-nv-loi-application",
+      "service_id": "mofa-nv-loi-application",
+      "url": "https://nvloi.mofa.gov.bd/",
+      "portal_url": null,
+      "title": "Note verbale | myGov",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nvloi.mofa.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Note verbale | myGov",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

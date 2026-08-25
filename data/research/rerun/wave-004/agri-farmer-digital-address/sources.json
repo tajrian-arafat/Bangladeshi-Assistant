@@ -1,0 +1,31 @@
+{
+  "service_id": "agri-farmer-digital-address",
+  "sources": [
+    {
+      "source_id": "src-agri-farmer-digital-address-official",
+      "service_id": "agri-farmer-digital-address",
+      "url": "https://dae.kishoreganj.gov.bd/en",
+      "title": "Farmer Digital Address",
+      "authority_id": "department-of-agricultural-extension-dae",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dae.kishoreganj.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:08.404619+00:00"
+      },
+      "evidence_locator": "probe:https://dae.kishoreganj.gov.bd/en"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

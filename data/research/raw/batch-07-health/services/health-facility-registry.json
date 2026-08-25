@@ -1,0 +1,44 @@
+{
+  "service_id": "health-facility-registry",
+  "batch_id": "batch-07-health",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Health Facility Registry (HRIS)",
+  "service_name_bn": "স্বাস্থ্য প্রতিষ্ঠান রেজিস্ট্রি",
+  "aliases": [
+    "facility registry DGHS",
+    "HRIS facility lookup"
+  ],
+  "category_id": "health",
+  "responsible_agency": "Directorate General of Health Services (DGHS)",
+  "official_application_url": "https://hrm.dghs.gov.bd/public/facility-registry/reports/organization-list",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "health-facility-registry::c-application-portal",
+      "service_id": "health-facility-registry",
+      "claim_type": "application_url",
+      "claim_text": "Health Facility Registry (HRIS) is associated with NBR e-service portal https://hrm.dghs.gov.bd/public/facility-registry/reports/organization-list.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-health-facility-registry",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-facility-registry::c-responsible-authority",
+      "service_id": "health-facility-registry",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Directorate General of Health Services (DGHS).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

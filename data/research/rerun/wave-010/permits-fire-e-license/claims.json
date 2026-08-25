@@ -1,0 +1,72 @@
+{
+  "service_id": "permits-fire-e-license",
+  "claims": [
+    {
+      "claim_id": "permits-fire-e-license::c-catalogue-authority",
+      "service_id": "permits-fire-e-license",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Fire Service and Civil Defence Directorate.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-e-license::c-official-portal",
+      "service_id": "permits-fire-e-license",
+      "claim_type": "application_url",
+      "claim_text": "e-Fire License Application official information is published at https://elicense.fireservice.gov.bd/ (page title: লগইন - বাংলাদেশ ফায়ার সার্ভিস ও সিভিল ডিফেন্স).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://elicense.fireservice.gov.bd/"
+      },
+      "source_ids": [
+        "src-permits-fire-e-license-official"
+      ],
+      "evidence_ids": [
+        "ev-permits-fire-e-license::c-official-portal-src-permits-fire-e-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-e-license::c-procedure-overview",
+      "service_id": "permits-fire-e-license",
+      "claim_type": "procedure_step",
+      "claim_text": "e-Fire License Application is a government service under Fire Service and Civil Defence Directorate (fire license). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-e-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-e-license::c-service-identity",
+      "service_id": "permits-fire-e-license",
+      "claim_type": "eligibility",
+      "claim_text": "e-Fire License Application (ই-ফায়ার লাইসেন্স) is a confirmed government service in category permits, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-e-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

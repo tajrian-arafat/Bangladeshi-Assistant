@@ -1,0 +1,124 @@
+{
+  "service_id": "snp-old-age-allowance",
+  "claims": [
+    {
+      "claim_id": "snp-old-age-allowance::c-catalogue-authority",
+      "service_id": "snp-old-age-allowance",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Social Welfare.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-old-age-allowance::c-official-portal",
+      "service_id": "snp-old-age-allowance",
+      "claim_type": "application_url",
+      "claim_text": "Old Age Allowance official information is published at https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/ (page title: All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/"
+      },
+      "source_ids": [
+        "src-snp-old-age-allowance-official"
+      ],
+      "evidence_ids": [
+        "ev-snp-old-age-allowance::c-official-portal-src-snp-old-age-allowance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-old-age-allowance::c-procedure-overview",
+      "service_id": "snp-old-age-allowance",
+      "claim_type": "procedure_step",
+      "claim_text": "Old-age allowance under social protection programmes is applied through Union Parishad/DSS channels for eligible elderly citizens.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-old-age-allowance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-old-age-allowance::c-document-overview",
+      "service_id": "snp-old-age-allowance",
+      "claim_type": "document",
+      "claim_text": "Applicant NID/birth certificate, age proof, and Union Parishad application form are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-snp-old-age-allowance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-old-age-allowance::c-service-identity",
+      "service_id": "snp-old-age-allowance",
+      "claim_type": "eligibility",
+      "claim_text": "Old Age Allowance () is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-old-age-allowance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-old-age-allowance::c-eligibility-deep",
+      "service_id": "snp-old-age-allowance",
+      "claim_type": "eligibility",
+      "claim_text": "Elderly citizens meeting DSS age and vulnerability criteria for the Old Age Allowance programme.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-old-age-allowance-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-old-age-allowance::c-document-must-need",
+      "service_id": "snp-old-age-allowance",
+      "claim_type": "document",
+      "claim_text": "Applicant NID/birth certificate, age proof, and Union Parishad application form are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-old-age-allowance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

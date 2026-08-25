@@ -1,0 +1,72 @@
+{
+  "service_id": "snp-rural-livelihood-2nd-phase",
+  "claims": [
+    {
+      "claim_id": "snp-rural-livelihood-2nd-phase::c-catalogue-authority",
+      "service_id": "snp-rural-livelihood-2nd-phase",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Rural Development & Cooperatives Division, MoLGRD&C.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-rural-livelihood-2nd-phase::c-official-portal",
+      "service_id": "snp-rural-livelihood-2nd-phase",
+      "claim_type": "application_url",
+      "claim_text": "Rural Livelihood (2nd Phase) official information is published at https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/ (page title: All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/"
+      },
+      "source_ids": [
+        "src-snp-rural-livelihood-2nd-phase-official"
+      ],
+      "evidence_ids": [
+        "ev-snp-rural-livelihood-2nd-phase::c-official-portal-src-snp-rural-livelihood-2nd-phase-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-rural-livelihood-2nd-phase::c-procedure-overview",
+      "service_id": "snp-rural-livelihood-2nd-phase",
+      "claim_type": "procedure_step",
+      "claim_text": "Rural Livelihood (2nd Phase) is a government service under Rural Development & Cooperatives Division, MoLGRD&C (social security program). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-rural-livelihood-2nd-phase-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-rural-livelihood-2nd-phase::c-service-identity",
+      "service_id": "snp-rural-livelihood-2nd-phase",
+      "claim_type": "eligibility",
+      "claim_text": "Rural Livelihood (2nd Phase) () is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-rural-livelihood-2nd-phase-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

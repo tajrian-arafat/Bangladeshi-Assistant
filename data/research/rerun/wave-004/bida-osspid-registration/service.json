@@ -1,0 +1,140 @@
+{
+  "service_id": "bida-osspid-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "OSSPID Account Registration (BIDA)",
+  "service_name_bn": "OSSPID নিবন্ধন (BIDA)",
+  "aliases": [
+    "BIDA investor account",
+    "OSS PID signup",
+    "OSSPID Account Registration (BIDA)"
+  ],
+  "category_id": "investment",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Bangladesh Investment Development Authority (BIDA)",
+  "official_application_url": "https://irms.bida.gov.bd/set-registration-type/investor",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "bida-osspid-registration::c-catalogue-authority",
+      "service_id": "bida-osspid-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Investment Development Authority (BIDA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-osspid-registration::c-official-url-documented",
+      "service_id": "bida-osspid-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://irms.bida.gov.bd/set-registration-type/investor for OSSPID Account Registration (BIDA); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://irms.bida.gov.bd/set-registration-type/investor"
+      },
+      "source_ids": [
+        "src-bida-osspid-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-osspid-registration::c-procedure-overview",
+      "service_id": "bida-osspid-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "OSSPID Account Registration (BIDA) is a government service under Bangladesh Investment Development Authority (BIDA) (registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-osspid-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-osspid-registration::c-service-identity",
+      "service_id": "bida-osspid-registration",
+      "claim_type": "eligibility",
+      "claim_text": "OSSPID Account Registration (BIDA) (OSSPID নিবন্ধন (BIDA)) is a confirmed government service in category investment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-osspid-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-bida-osspid-registration-official",
+      "service_id": "bida-osspid-registration",
+      "url": "https://irms.bida.gov.bd/set-registration-type/investor",
+      "title": "Just a moment...",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://osspid.org/user/create?client_id=aa8a367e918753e3643af625217601a933df0c7f&cs=YzFhZDA1NzliNTBiZTJlMjVjN2E2Mjg2YmNiZDg4ZDc0NTA5NjhlOTo6wsx4yaSqAvC4hKE0ILR0VA&callback_url=https://irms.bida.gov.bd/osspid-callback",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "ace395a295ab98bf",
+        "retrieved_at": "2026-08-25T03:23:19.739662+00:00"
+      },
+      "evidence_locator": "probe:https://irms.bida.gov.bd/set-registration-type/investor"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-bida-osspid-registration-portal-unreachable",
+      "service_id": "bida-osspid-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for OSSPID Account Registration (BIDA).",
+      "severity": "MEDIUM",
+      "url": "https://irms.bida.gov.bd/set-registration-type/investor"
+    },
+    {
+      "gap_id": "gap-bida-osspid-registration-fee-unverified",
+      "service_id": "bida-osspid-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for OSSPID Account Registration (BIDA).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-osspid-registration-documents-unverified",
+      "service_id": "bida-osspid-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for OSSPID Account Registration (BIDA).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

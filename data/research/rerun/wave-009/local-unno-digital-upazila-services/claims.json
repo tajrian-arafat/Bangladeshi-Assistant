@@ -1,0 +1,51 @@
+{
+  "service_id": "local-unno-digital-upazila-services",
+  "claims": [
+    {
+      "claim_id": "local-unno-digital-upazila-services::c-catalogue-authority",
+      "service_id": "local-unno-digital-upazila-services",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Upazila Nirbahi Officer (UNO) Office.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-unno-digital-upazila-services::c-procedure-overview",
+      "service_id": "local-unno-digital-upazila-services",
+      "claim_type": "procedure_step",
+      "claim_text": "Upazila Nirbahi Officer (UNO) Digital Citizen Services is a government service under Upazila Nirbahi Officer (UNO) Office (upazila administration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-unno-digital-upazila-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-unno-digital-upazila-services::c-service-identity",
+      "service_id": "local-unno-digital-upazila-services",
+      "claim_type": "eligibility",
+      "claim_text": "Upazila Nirbahi Officer (UNO) Digital Citizen Services (উন্নত উপজেলা (UNO) ডিজিটাল সেবা) is a confirmed government service in category local_government, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-unno-digital-upazila-services-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

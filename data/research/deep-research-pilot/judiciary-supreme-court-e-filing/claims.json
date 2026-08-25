@@ -1,0 +1,124 @@
+{
+  "service_id": "judiciary-supreme-court-e-filing",
+  "claims": [
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-catalogue-authority",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Supreme Court of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-official-portal",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "application_url",
+      "claim_text": "Supreme Court e-Filing (Lawyers Panel) official information is published at https://apps.supremecourt.gov.bd/mycase (page title: MyCase : E-Filing System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://apps.supremecourt.gov.bd/mycase"
+      },
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official"
+      ],
+      "evidence_ids": [
+        "ev-judiciary-supreme-court-e-filing::c-official-portal-src-judiciary-supreme-court-e-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-procedure-overview",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "procedure_step",
+      "claim_text": "Supreme Court e-filing enables litigants/advocates to submit cases and documents through the judiciary e-Courts platform where enabled.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-document-overview",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "document",
+      "claim_text": "Case documents, advocate enrollment (where applicable), and prescribed court forms are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-service-identity",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Supreme Court e-Filing (Lawyers Panel) (সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel)) is a confirmed government service in category judiciary, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-eligibility-deep",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Litigants and enrolled advocates filing cases before the Supreme Court of Bangladesh via e-filing.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-document-must-need",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "document",
+      "claim_text": "Case documents, advocate enrollment (where applicable), and prescribed court forms are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

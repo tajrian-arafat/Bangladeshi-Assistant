@@ -1,0 +1,27 @@
+{
+  "service_id": "fisheries-fioc-user-registration",
+  "gaps": [
+    {
+      "gap_id": "gap-fisheries-fioc-user-registration-portal-unreachable",
+      "service_id": "fisheries-fioc-user-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for FIQC e-Certification User Registration.",
+      "severity": "MEDIUM",
+      "url": "https://www.ecertificate.fisheries.gov.bd/"
+    },
+    {
+      "gap_id": "gap-fisheries-fioc-user-registration-fee-unverified",
+      "service_id": "fisheries-fioc-user-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for FIQC e-Certification User Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-fisheries-fioc-user-registration-documents-unverified",
+      "service_id": "fisheries-fioc-user-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for FIQC e-Certification User Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

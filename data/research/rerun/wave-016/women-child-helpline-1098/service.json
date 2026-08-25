@@ -1,0 +1,136 @@
+{
+  "service_id": "women-child-helpline-1098",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Child Helpline 1098",
+  "service_name_bn": "শিশু সহায়তা হেল্পলাইন ১০৯৮",
+  "aliases": [
+    "1098 helpline",
+    "child protection helpline"
+  ],
+  "category_id": "women_children",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Ministry of Women & Children Affairs",
+  "official_application_url": "https://mowca.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "women-child-helpline-1098::c-catalogue-authority",
+      "service_id": "women-child-helpline-1098",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Women & Children Affairs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-child-helpline-1098::c-official-url-documented",
+      "service_id": "women-child-helpline-1098",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://mowca.gov.bd/ for Child Helpline 1098; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://mowca.gov.bd/"
+      },
+      "source_ids": [
+        "src-women-child-helpline-1098-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-child-helpline-1098::c-procedure-overview",
+      "service_id": "women-child-helpline-1098",
+      "claim_type": "procedure_step",
+      "claim_text": "Child Helpline 1098 is a government service under Ministry of Women & Children Affairs (helpline). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-child-helpline-1098-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-child-helpline-1098::c-service-identity",
+      "service_id": "women-child-helpline-1098",
+      "claim_type": "eligibility",
+      "claim_text": "Child Helpline 1098 (শিশু সহায়তা হেল্পলাইন ১০৯৮) is a confirmed government service in category women_children, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-child-helpline-1098-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-women-child-helpline-1098-official",
+      "service_id": "women-child-helpline-1098",
+      "url": "https://mowca.gov.bd/",
+      "title": "Child Helpline 1098",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mowca.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:37:24.254840+00:00"
+      },
+      "evidence_locator": "probe:https://mowca.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-women-child-helpline-1098-portal-unreachable",
+      "service_id": "women-child-helpline-1098",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Child Helpline 1098.",
+      "severity": "MEDIUM",
+      "url": "https://mowca.gov.bd/"
+    },
+    {
+      "gap_id": "gap-women-child-helpline-1098-fee-unverified",
+      "service_id": "women-child-helpline-1098",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Child Helpline 1098.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-child-helpline-1098-documents-unverified",
+      "service_id": "women-child-helpline-1098",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Child Helpline 1098.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "trade-erc-registration",
+  "claims": [
+    {
+      "claim_id": "trade-erc-registration::c-catalogue-authority",
+      "service_id": "trade-erc-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Office of the Chief Controller of Imports and Exports (CCI&E).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-erc-registration::c-official-portal",
+      "service_id": "trade-erc-registration",
+      "claim_type": "application_url",
+      "claim_text": "Export Registration Certificate (ERC) official information is published at https://olm.ccie.gov.bd/ (page title: CCI&amp;E - OLM).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://olm.ccie.gov.bd/"
+      },
+      "source_ids": [
+        "src-trade-erc-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-trade-erc-registration::c-official-portal-src-trade-erc-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-erc-registration::c-procedure-overview",
+      "service_id": "trade-erc-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Export Registration Certificate (ERC) is a government service under Office of the Chief Controller of Imports and Exports (CCI&E) (export registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-erc-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-erc-registration::c-service-identity",
+      "service_id": "trade-erc-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Export Registration Certificate (ERC) (রপ্তানি নিবন্ধন সনদ (ERC)) is a confirmed government service in category trade, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-erc-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

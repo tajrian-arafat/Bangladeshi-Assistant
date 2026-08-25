@@ -1,0 +1,66 @@
+{
+  "service_id": "judiciary-case-status-tracking",
+  "sources": [
+    {
+      "source_id": "src-judiciary-case-status-tracking-official",
+      "service_id": "judiciary-case-status-tracking",
+      "url": "https://supremecourt.gov.bd/",
+      "title": "Court Case Status Tracking",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://supremecourt.gov.bd/",
+        "reachable": false,
+        "error": "The read operation timed out",
+        "retrieved_at": "2026-08-25T03:12:53.057544+00:00"
+      },
+      "evidence_locator": "probe:https://supremecourt.gov.bd/"
+    },
+    {
+      "source_id": "src-judiciary-case-status-tracking-alt-1",
+      "service_id": "judiciary-case-status-tracking",
+      "url": "https://www.supremecourt.gov.bd/",
+      "title": "Home : Supreme Court of Bangladesh",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.supremecourt.gov.bd/web/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Home : Supreme Court of Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "e5decda8a88bfb6f",
+        "retrieved_at": "2026-08-25T03:12:55.218886+00:00"
+      }
+    },
+    {
+      "source_id": "src-judiciary-case-status-tracking-alt-2",
+      "service_id": "judiciary-case-status-tracking",
+      "url": "https://ecourts.gov.bd/",
+      "title": "Court Case Status Tracking",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecourts.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:12:55.233071+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

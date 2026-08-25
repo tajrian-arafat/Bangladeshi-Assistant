@@ -1,0 +1,28 @@
+{
+  "service_id": "mofa-education-attestation-chain",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-mofa-education-attestation-chain-portal-unreachable",
+      "service_id": "mofa-education-attestation-chain",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Educational Certificate MOFA Attestation (via Ministry of Education).",
+      "severity": "MEDIUM",
+      "url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation"
+    },
+    {
+      "gap_id": "gap-mofa-education-attestation-chain-fee-unverified",
+      "service_id": "mofa-education-attestation-chain",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Educational Certificate MOFA Attestation (via Ministry of Education).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-mofa-education-attestation-chain-documents-unverified",
+      "service_id": "mofa-education-attestation-chain",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Educational Certificate MOFA Attestation (via Ministry of Education).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

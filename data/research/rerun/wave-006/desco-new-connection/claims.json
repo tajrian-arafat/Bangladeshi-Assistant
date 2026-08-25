@@ -1,0 +1,72 @@
+{
+  "service_id": "desco-new-connection",
+  "claims": [
+    {
+      "claim_id": "desco-new-connection::c-catalogue-authority",
+      "service_id": "desco-new-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Electric Supply Company Limited (DESCO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-new-connection::c-official-portal",
+      "service_id": "desco-new-connection",
+      "claim_type": "application_url",
+      "claim_text": "DESCO New Electricity Connection official information is published at https://ocsms.desco.org.bd/publicinfo/processflow/view?id=c16ac52e-1db4-46f1-a372-53d01ffa4b66 (page title: Preview of Process Flow | DESCO).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=c16ac52e-1db4-46f1-a372-53d01ffa4b66"
+      },
+      "source_ids": [
+        "src-desco-new-connection-official"
+      ],
+      "evidence_ids": [
+        "ev-desco-new-connection::c-official-portal-src-desco-new-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-new-connection::c-procedure-overview",
+      "service_id": "desco-new-connection",
+      "claim_type": "procedure_step",
+      "claim_text": "DESCO New Electricity Connection is a government service under Dhaka Electric Supply Company Limited (DESCO) (electricity connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-new-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-new-connection::c-service-identity",
+      "service_id": "desco-new-connection",
+      "claim_type": "eligibility",
+      "claim_text": "DESCO New Electricity Connection (ডেসকো নতুন বিদ্যুৎ সংযোগ) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-new-connection-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

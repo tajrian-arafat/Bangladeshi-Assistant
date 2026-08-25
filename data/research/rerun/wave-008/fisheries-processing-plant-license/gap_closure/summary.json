@@ -1,0 +1,28 @@
+{
+  "service_id": "fisheries-processing-plant-license",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-fisheries-processing-plant-license-portal-unreachable",
+      "service_id": "fisheries-processing-plant-license",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Fish Processing Plant Licence.",
+      "severity": "MEDIUM",
+      "url": "https://www.ecertificate.fisheries.gov.bd/"
+    },
+    {
+      "gap_id": "gap-fisheries-processing-plant-license-fee-unverified",
+      "service_id": "fisheries-processing-plant-license",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Fish Processing Plant Licence.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-fisheries-processing-plant-license-documents-unverified",
+      "service_id": "fisheries-processing-plant-license",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Fish Processing Plant Licence.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

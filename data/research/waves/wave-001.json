@@ -1,0 +1,1383 @@
+{
+  "wave_id": "wave-001",
+  "wave_number": 1,
+  "run_id": "wave-001-a817e6f7",
+  "commit_sha": "0abc805b3f71",
+  "generated_at": "2026-08-25T03:20:16.153841+00:00",
+  "wave_size": 10,
+  "services_attempted": [
+    "health-blood-bank-license",
+    "health-bmdc-additional-qualification",
+    "health-bmdc-eligibility-certificate",
+    "health-bmdc-full-registration",
+    "health-bmdc-registration-verify",
+    "health-diagnostic-center-license",
+    "health-facility-registry",
+    "health-good-standing-certificate",
+    "health-hospital-birth-notification",
+    "health-immunization-card-mcv"
+  ],
+  "service_results": [
+    {
+      "service_id": "health-blood-bank-license",
+      "service_name_en": "Blood Bank Licence",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-blood-bank-license",
+        "service_name_en": "Blood Bank Licence",
+        "service_name_bn": "ব্লাড ব্যাংক লাইসেন্স",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Directorate General of Health Services (DGHS)",
+          "dghs"
+        ],
+        "known_official_domains": [
+          "dghs.gov.bd"
+        ],
+        "service_aliases": [
+          "blood bank registration"
+        ],
+        "official_source": "https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-blood-bank-license",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-blood-bank-license-en-procedure",
+            "query": "How do I apply for Blood Bank Licence?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-blood-bank-license-bn-procedure",
+            "query": "ব্লাড ব্যাংক লাইসেন্স কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-blood-bank-license-fee",
+            "query": "What is the fee for Blood Bank Licence?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-blood-bank-license-documents",
+            "query": "What documents are needed for Blood Bank Licence?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-blood-bank-license-url",
+            "query": "What is the official website for Blood Bank Licence?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-blood-bank-license",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-bmdc-additional-qualification",
+      "service_name_en": "BMDC Additional Qualification Registration",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-bmdc-additional-qualification",
+        "service_name_en": "BMDC Additional Qualification Registration",
+        "service_name_bn": "BMDC অতিরিক্ত যোগ্যতা নিবন্ধন",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Medical and Dental Council (BMDC)",
+          "bmdc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "specialist qualification registration"
+        ],
+        "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-bmdc-additional-qualification",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-bmdc-additional-qualification-en-procedure",
+            "query": "How do I apply for BMDC Additional Qualification Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-additional-qualification-bn-procedure",
+            "query": "BMDC অতিরিক্ত যোগ্যতা নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-additional-qualification-fee",
+            "query": "What is the fee for BMDC Additional Qualification Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-additional-qualification-documents",
+            "query": "What documents are needed for BMDC Additional Qualification Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-additional-qualification-url",
+            "query": "What is the official website for BMDC Additional Qualification Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-bmdc-additional-qualification",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-bmdc-eligibility-certificate",
+      "service_name_en": "BMDC Eligibility Certificate",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-bmdc-eligibility-certificate",
+        "service_name_en": "BMDC Eligibility Certificate",
+        "service_name_bn": "BMDC যোগ্যতা সনদ",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Medical and Dental Council (BMDC)",
+          "bmdc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "eligibility certificate medical"
+        ],
+        "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-bmdc-eligibility-certificate",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-bmdc-eligibility-certificate-en-procedure",
+            "query": "How do I apply for BMDC Eligibility Certificate?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-eligibility-certificate-bn-procedure",
+            "query": "BMDC যোগ্যতা সনদ কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-eligibility-certificate-fee",
+            "query": "What is the fee for BMDC Eligibility Certificate?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-eligibility-certificate-documents",
+            "query": "What documents are needed for BMDC Eligibility Certificate?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-eligibility-certificate-url",
+            "query": "What is the official website for BMDC Eligibility Certificate?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-bmdc-eligibility-certificate",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-bmdc-full-registration",
+      "service_name_en": "BMDC Full Registration (MBBS/BDS)",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-bmdc-full-registration",
+        "service_name_en": "BMDC Full Registration (MBBS/BDS)",
+        "service_name_bn": "BMDC পূর্ণ নিবন্ধন (MBBS/BDS)",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Medical and Dental Council (BMDC)",
+          "bmdc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "medical council registration",
+          "doctor registration"
+        ],
+        "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-bmdc-full-registration",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-bmdc-full-registration-en-procedure",
+            "query": "How do I apply for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-full-registration-bn-procedure",
+            "query": "BMDC পূর্ণ নিবন্ধন (MBBS/BDS) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-full-registration-fee",
+            "query": "What is the fee for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-full-registration-documents",
+            "query": "What documents are needed for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-full-registration-url",
+            "query": "What is the official website for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-bmdc-full-registration",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-bmdc-registration-verify",
+      "service_name_en": "BMDC Registration Verification",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-bmdc-registration-verify",
+        "service_name_en": "BMDC Registration Verification",
+        "service_name_bn": "BMDC নিবন্ধন যাচাই",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Medical and Dental Council (BMDC)",
+          "bmdc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "doctor registration check",
+          "BMDC verify"
+        ],
+        "official_source": "https://verify.bmdc.org.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-bmdc-registration-verify",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-bmdc-registration-verify-en-procedure",
+            "query": "How do I apply for BMDC Registration Verification?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-registration-verify-bn-procedure",
+            "query": "BMDC নিবন্ধন যাচাই কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-registration-verify-fee",
+            "query": "What is the fee for BMDC Registration Verification?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-registration-verify-documents",
+            "query": "What documents are needed for BMDC Registration Verification?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-registration-verify-url",
+            "query": "What is the official website for BMDC Registration Verification?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-bmdc-registration-verify",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-diagnostic-center-license",
+      "service_name_en": "Diagnostic/Pathology Center Licence",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-diagnostic-center-license",
+        "service_name_en": "Diagnostic/Pathology Center Licence",
+        "service_name_bn": "ডায়াগনostic/প্যাথলজি সেন্টার লাইসেন্স",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Directorate General of Health Services (DGHS)",
+          "dghs"
+        ],
+        "known_official_domains": [
+          "dghs.gov.bd"
+        ],
+        "service_aliases": [
+          "pathology center license",
+          "diagnostic center registration"
+        ],
+        "official_source": "https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-diagnostic-center-license",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-diagnostic-center-license-en-procedure",
+            "query": "How do I apply for Diagnostic/Pathology Center Licence?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-diagnostic-center-license-bn-procedure",
+            "query": "ডায়াগনostic/প্যাথলজি সেন্টার লাইসেন্স কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-diagnostic-center-license-fee",
+            "query": "What is the fee for Diagnostic/Pathology Center Licence?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-diagnostic-center-license-documents",
+            "query": "What documents are needed for Diagnostic/Pathology Center Licence?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-diagnostic-center-license-url",
+            "query": "What is the official website for Diagnostic/Pathology Center Licence?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-diagnostic-center-license",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-facility-registry",
+      "service_name_en": "Health Facility Registry (HRIS)",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-facility-registry",
+        "service_name_en": "Health Facility Registry (HRIS)",
+        "service_name_bn": "স্বাস্থ্য প্রতিষ্ঠান রেজিস্ট্রি",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Directorate General of Health Services (DGHS)",
+          "dghs"
+        ],
+        "known_official_domains": [
+          "dghs.gov.bd"
+        ],
+        "service_aliases": [
+          "facility registry DGHS",
+          "HRIS facility lookup"
+        ],
+        "official_source": "https://hrm.dghs.gov.bd/public/facility-registry/reports/organization-list",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-facility-registry",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-facility-registry-en-procedure",
+            "query": "How do I apply for Health Facility Registry (HRIS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-facility-registry-bn-procedure",
+            "query": "স্বাস্থ্য প্রতিষ্ঠান রেজিস্ট্রি কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-facility-registry-fee",
+            "query": "What is the fee for Health Facility Registry (HRIS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-facility-registry-documents",
+            "query": "What documents are needed for Health Facility Registry (HRIS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-facility-registry-url",
+            "query": "What is the official website for Health Facility Registry (HRIS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-facility-registry",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-good-standing-certificate",
+      "service_name_en": "Certificate of Good Standing (BMDC)",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-good-standing-certificate",
+        "service_name_en": "Certificate of Good Standing (BMDC)",
+        "service_name_bn": "Certificate of Good Standing (BMDC)",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Medical and Dental Council (BMDC)",
+          "bmdc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "good standing medical council"
+        ],
+        "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-good-standing-certificate",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-good-standing-certificate-en-procedure",
+            "query": "How do I apply for Certificate of Good Standing (BMDC)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-good-standing-certificate-bn-procedure",
+            "query": "Certificate of Good Standing (BMDC) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-good-standing-certificate-fee",
+            "query": "What is the fee for Certificate of Good Standing (BMDC)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-good-standing-certificate-documents",
+            "query": "What documents are needed for Certificate of Good Standing (BMDC)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-good-standing-certificate-url",
+            "query": "What is the official website for Certificate of Good Standing (BMDC)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-good-standing-certificate",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-hospital-birth-notification",
+      "service_name_en": "Hospital Birth Notification (for BDRIS registration)",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-hospital-birth-notification",
+        "service_name_en": "Hospital Birth Notification (for BDRIS registration)",
+        "service_name_bn": "হাসপাতালে জন্ম নিবেদন",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Directorate General of Health Services (DGHS)",
+          "dghs"
+        ],
+        "known_official_domains": [
+          "dghs.gov.bd"
+        ],
+        "service_aliases": [
+          "hospital birth report",
+          "birth notification form"
+        ],
+        "official_source": "https://bdris.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-hospital-birth-notification",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-hospital-birth-notification-en-procedure",
+            "query": "How do I apply for Hospital Birth Notification (for BDRIS registration)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-hospital-birth-notification-bn-procedure",
+            "query": "হাসপাতালে জন্ম নিবেদন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-hospital-birth-notification-fee",
+            "query": "What is the fee for Hospital Birth Notification (for BDRIS registration)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-hospital-birth-notification-documents",
+            "query": "What documents are needed for Hospital Birth Notification (for BDRIS registration)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-hospital-birth-notification-url",
+            "query": "What is the official website for Hospital Birth Notification (for BDRIS registration)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-hospital-birth-notification",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-immunization-card-mcv",
+      "service_name_en": "Immunization / Vaccination Card (EPI)",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-immunization-card-mcv",
+        "service_name_en": "Immunization / Vaccination Card (EPI)",
+        "service_name_bn": "টিকা/card (EPI/MCV)",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Directorate General of Health Services (DGHS) / EPI",
+          "directorate-general-of-health-services-dghs-epi"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "vaccination card",
+          "EPI card",
+          "child immunization record"
+        ],
+        "official_source": "https://dghs.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-immunization-card-mcv",
+        "wave_id": "wave-001",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-immunization-card-mcv-en-procedure",
+            "query": "How do I apply for Immunization / Vaccination Card (EPI)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-immunization-card-mcv-bn-procedure",
+            "query": "টিকা/card (EPI/MCV) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-immunization-card-mcv-fee",
+            "query": "What is the fee for Immunization / Vaccination Card (EPI)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-immunization-card-mcv-documents",
+            "query": "What documents are needed for Immunization / Vaccination Card (EPI)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-immunization-card-mcv-url",
+            "query": "What is the official website for Immunization / Vaccination Card (EPI)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-immunization-card-mcv",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    }
+  ],
+  "status_counts": {
+    "COMPLETE": 0,
+    "PARTIAL": 10,
+    "DEFERRED": 0,
+    "BLOCKED": 0
+  },
+  "verified_claims": 24,
+  "partial_claims": 6,
+  "conflicts": 0,
+  "knowledge_gaps": 26,
+  "staging_path": "/workspace/data/research/waves/wave-001/staging",
+  "e2e_summary": {
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "answer_supported": 0
+  },
+  "regression": {
+    "passed": true,
+    "metrics": {
+      "hallucinations": 0,
+      "citation_failures": 0,
+      "batch_01_pass_pct": 100.0,
+      "passport_pass_pct": 100.0,
+      "batch_02b_pass_pct": 100.0,
+      "routing_pass_pct": 100.0,
+      "pytest_failed": 0,
+      "batch_03a_pass_pct": 100.0,
+      "batch_03b_pass_pct": 100.0,
+      "batch_03c_pass_pct": 100.0
+    },
+    "failures": [],
+    "automation_exit_code": 0
+  },
+  "wave_quality": {
+    "passed": true,
+    "wave_id": "wave-001",
+    "services_total": 10,
+    "false_completion_count": 0,
+    "services_with_sources": 10,
+    "services_with_verified_claims": 10,
+    "source_rate": 1.0,
+    "verified_rate": 1.0,
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "regression_failures": [],
+    "blocking_reasons": [],
+    "service_statuses": {
+      "health-blood-bank-license": "PARTIAL",
+      "health-bmdc-additional-qualification": "PARTIAL",
+      "health-bmdc-eligibility-certificate": "PARTIAL",
+      "health-bmdc-full-registration": "PARTIAL",
+      "health-bmdc-registration-verify": "PARTIAL",
+      "health-diagnostic-center-license": "PARTIAL",
+      "health-facility-registry": "PARTIAL",
+      "health-good-standing-certificate": "PARTIAL",
+      "health-hospital-birth-notification": "PARTIAL",
+      "health-immunization-card-mcv": "PARTIAL"
+    }
+  },
+  "quality_passed": true
+}

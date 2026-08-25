@@ -1,0 +1,74 @@
+{
+  "claims": [
+    {
+      "claim_id": "disability-dis-registration::c-official-portal",
+      "service_id": "disability-dis-registration",
+      "claim_type": "application_url",
+      "claim_text": "Disability Registration and Identity Card (DIS) official information is published at https://www.dis.gov.bd/ (page title: DIS - \u09b9\u09cb\u09ae).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.dis.gov.bd/"
+      },
+      "source_ids": [
+        "src-disability-dis-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-disability-dis-registration::c-official-portal-src-disability-dis-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "disability-dis-registration::c-procedure-overview",
+      "service_id": "disability-dis-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Disability identification and registration is managed by the Department of Social Services (DIS).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-disability-dis-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "disability-dis-registration::c-document-overview",
+      "service_id": "disability-dis-registration",
+      "claim_type": "document",
+      "claim_text": "Medical assessment report and NID are typically required for disability registration.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-disability-dis-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "disability-dis-registration::c-service-identity",
+      "service_id": "disability-dis-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Disability Registration and Identity Card (DIS) (\u09aa\u09cd\u09b0\u09a4\u09bf\u09ac\u09a8\u09cd\u09a7\u09c0 \u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09a8 \u0993 \u09aa\u09b0\u09bf\u099a\u09af\u09bc\u09aa\u09a4\u09cd\u09b0 (DIS)) is a confirmed government service in category disability, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-disability-dis-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

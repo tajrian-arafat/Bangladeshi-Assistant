@@ -1,0 +1,28 @@
+{
+  "service_id": "expatriate-worker-registration",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-expatriate-worker-registration-portal-unreachable",
+      "service_id": "expatriate-worker-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Overseas Worker Registration.",
+      "severity": "MEDIUM",
+      "url": "https://old.bmet.gov.bd/BMET/downloadAction"
+    },
+    {
+      "gap_id": "gap-expatriate-worker-registration-fee-unverified",
+      "service_id": "expatriate-worker-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Overseas Worker Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-expatriate-worker-registration-documents-unverified",
+      "service_id": "expatriate-worker-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Overseas Worker Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

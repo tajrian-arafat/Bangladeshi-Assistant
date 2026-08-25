@@ -1,0 +1,28 @@
+{
+  "service_id": "land-mutation-khatian-search",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-land-mutation-khatian-search-portal-unreachable",
+      "service_id": "land-mutation-khatian-search",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Mutation Khatian Search.",
+      "severity": "MEDIUM",
+      "url": "https://dlrms.land.gov.bd/"
+    },
+    {
+      "gap_id": "gap-land-mutation-khatian-search-fee-unverified",
+      "service_id": "land-mutation-khatian-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mutation Khatian Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mutation-khatian-search-documents-unverified",
+      "service_id": "land-mutation-khatian-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Mutation Khatian Search.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

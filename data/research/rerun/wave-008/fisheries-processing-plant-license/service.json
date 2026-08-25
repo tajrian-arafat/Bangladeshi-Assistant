@@ -1,0 +1,136 @@
+{
+  "service_id": "fisheries-processing-plant-license",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Fish Processing Plant Licence",
+  "service_name_bn": "মাছ/prcessing plant লাইসেন্স",
+  "aliases": [
+    "fish processing license DOF",
+    "Fish Processing Plant Licence"
+  ],
+  "category_id": "fisheries",
+  "profile_key": "FISHERIES",
+  "responsible_agency": "Department of Fisheries (FIQC)",
+  "official_application_url": "https://www.ecertificate.fisheries.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "fisheries-processing-plant-license::c-catalogue-authority",
+      "service_id": "fisheries-processing-plant-license",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Fisheries (FIQC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-processing-plant-license::c-official-url-documented",
+      "service_id": "fisheries-processing-plant-license",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.ecertificate.fisheries.gov.bd/ for Fish Processing Plant Licence; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/"
+      },
+      "source_ids": [
+        "src-fisheries-processing-plant-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-processing-plant-license::c-procedure-overview",
+      "service_id": "fisheries-processing-plant-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Fish Processing Plant Licence is a government service under Department of Fisheries (FIQC) (licence). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-fisheries-processing-plant-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-processing-plant-license::c-service-identity",
+      "service_id": "fisheries-processing-plant-license",
+      "claim_type": "eligibility",
+      "claim_text": "Fish Processing Plant Licence (মাছ/prcessing plant লাইসেন্স) is a confirmed government service in category fisheries, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-fisheries-processing-plant-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-fisheries-processing-plant-license-official",
+      "service_id": "fisheries-processing-plant-license",
+      "url": "https://www.ecertificate.fisheries.gov.bd/",
+      "title": "Fish Processing Plant Licence",
+      "authority_id": "department-of-fisheries-fiqc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:27:26.394500+00:00"
+      },
+      "evidence_locator": "probe:https://www.ecertificate.fisheries.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-fisheries-processing-plant-license-portal-unreachable",
+      "service_id": "fisheries-processing-plant-license",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Fish Processing Plant Licence.",
+      "severity": "MEDIUM",
+      "url": "https://www.ecertificate.fisheries.gov.bd/"
+    },
+    {
+      "gap_id": "gap-fisheries-processing-plant-license-fee-unverified",
+      "service_id": "fisheries-processing-plant-license",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Fish Processing Plant Licence.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-fisheries-processing-plant-license-documents-unverified",
+      "service_id": "fisheries-processing-plant-license",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Fish Processing Plant Licence.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,502 @@
+{
+  "wave_id": "wave-005",
+  "sources": [
+    {
+      "source_id": "src-btrc-dnams-official",
+      "service_id": "btrc-dnams",
+      "url": "https://dnams.btrc.gov.bd/",
+      "title": "Welcome",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dnams.btrc.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Welcome",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "920014a868643cad",
+        "retrieved_at": "2026-08-25T03:23:45.947418+00:00"
+      },
+      "evidence_locator": "probe:https://dnams.btrc.gov.bd/"
+    },
+    {
+      "source_id": "src-btrc-lims-license-official",
+      "service_id": "btrc-lims-license",
+      "url": "https://lims.btrc.gov.bd/",
+      "title": "Bangladesh Telecommunication Regulatory Commission",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://lims.btrc.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh Telecommunication Regulatory Commission",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "e5f87a14365a6044",
+        "retrieved_at": "2026-08-25T03:23:47.545232+00:00"
+      },
+      "evidence_locator": "probe:https://lims.btrc.gov.bd/"
+    },
+    {
+      "source_id": "src-btrc-neir-device-registration-official",
+      "service_id": "btrc-neir-device-registration",
+      "url": "https://neir.btrc.gov.bd/",
+      "title": "Mobile Device Registration (NEIR)",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://neir.btrc.gov.bd/",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out",
+        "retrieved_at": "2026-08-25T03:23:57.875251+00:00"
+      },
+      "evidence_locator": "probe:https://neir.btrc.gov.bd/"
+    },
+    {
+      "source_id": "src-btrc-neir-imei-check-official",
+      "service_id": "btrc-neir-imei-check",
+      "url": "https://neir.btrc.gov.bd/",
+      "title": "NEIR Citizen",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://neir.btrc.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "NEIR Citizen",
+        "content_type": "text/html",
+        "content_hash": "bf759b0caa56910c",
+        "retrieved_at": "2026-08-25T03:23:58.906395+00:00"
+      },
+      "evidence_locator": "probe:https://neir.btrc.gov.bd/"
+    },
+    {
+      "source_id": "src-btrc-nid-sim-check-official",
+      "service_id": "btrc-nid-sim-check",
+      "url": "https://neir.btrc.gov.bd/homepage",
+      "title": "SIM Numbers Registered Under NID Check",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://neir.btrc.gov.bd/homepage",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out",
+        "retrieved_at": "2026-08-25T03:24:08.944680+00:00"
+      },
+      "evidence_locator": "probe:https://neir.btrc.gov.bd/homepage"
+    },
+    {
+      "source_id": "src-business-company-incorporation-official",
+      "service_id": "business-company-incorporation",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+      "title": "Company Incorporation",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:09.538241+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/Guidlines/Introduction.htm"
+    },
+    {
+      "source_id": "src-business-cooperative-society-registration-official",
+      "service_id": "business-cooperative-society-registration",
+      "url": "https://service.rdcd.gov.bd/",
+      "title": "আবেদনের জন্য দপ্তর ভিত্তিক সেবা নির্বাচন | পল্লী উন্নয়ন ও সমবায় বিভাগ সেবা | RDCD Services",
+      "authority_id": "department-of-cooperatives-rdcd",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://service.rdcd.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "আবেদনের জন্য দপ্তর ভিত্তিক সেবা নির্বাচন | পল্লী উন্নয়ন ও সমবায় বিভাগ সেবা | RDCD Services",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "0423b5e5de7879f6",
+        "retrieved_at": "2026-08-25T03:24:11.119030+00:00"
+      },
+      "evidence_locator": "probe:https://service.rdcd.gov.bd/"
+    },
+    {
+      "source_id": "src-business-cooperative-society-registration-alt-1",
+      "service_id": "business-cooperative-society-registration",
+      "url": "https://coop.gov.bd/",
+      "title": "Cooperative Society Registration",
+      "authority_id": "department-of-cooperatives-rdcd",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://coop.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:12.200281+00:00"
+      }
+    },
+    {
+      "source_id": "src-business-cooperative-society-registration-alt-2",
+      "service_id": "business-cooperative-society-registration",
+      "url": "https://dashboard.rdcd.gov.bd/tutorial/6",
+      "title": "Turorials - RDCD",
+      "authority_id": "department-of-cooperatives-rdcd",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dashboard.rdcd.gov.bd/tutorial/6?id=HTKKWKsykqw",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Turorials - RDCD",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "96845da8f4b0c465",
+        "retrieved_at": "2026-08-25T03:24:13.715120+00:00"
+      }
+    },
+    {
+      "source_id": "src-business-entity-name-search-official",
+      "service_id": "business-entity-name-search",
+      "url": "https://app.roc.gov.bd/psp/nc_search",
+      "title": "Entity Name Search",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/psp/nc_search",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:14.289685+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/psp/nc_search"
+    },
+    {
+      "source_id": "src-business-foreign-company-registration-official",
+      "service_id": "business-foreign-company-registration",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+      "title": "Foreign Company Registration (Branch/Liaison)",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:14.868903+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/Guidlines/Introduction.htm"
+    },
+    {
+      "source_id": "src-business-name-clearance-official",
+      "service_id": "business-name-clearance",
+      "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
+      "title": "Company Name Clearance",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:15.451866+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm"
+    },
+    {
+      "source_id": "src-business-ngoab-ngo-registration-official",
+      "service_id": "business-ngoab-ngo-registration",
+      "url": "https://ngoa.gov.bd/",
+      "title": "NGO Registration (NGO Affairs Bureau)",
+      "authority_id": "ngo-affairs-bureau",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ngoa.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:24:15.747425+00:00"
+      },
+      "evidence_locator": "probe:https://ngoa.gov.bd/"
+    },
+    {
+      "source_id": "src-business-partnership-registration-official",
+      "service_id": "business-partnership-registration",
+      "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+      "title": "Partnership Firm Registration",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:16.314824+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/Guidlines/Download/Downloads.htm"
+    },
+    {
+      "source_id": "src-business-rjsc-certified-copy-official",
+      "service_id": "business-rjsc-certified-copy",
+      "url": "https://app.roc.gov.bd/psp/RJSC_Fees",
+      "title": "RJSC Certified Copy of Documents",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/psp/RJSC_Fees",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:16.874240+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/psp/RJSC_Fees"
+    },
+    {
+      "source_id": "src-business-society-registration-official",
+      "service_id": "business-society-registration",
+      "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+      "title": "Society Registration",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:17.456403+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/Guidlines/Download/Downloads.htm"
+    },
+    {
+      "source_id": "src-business-trade-organization-registration-official",
+      "service_id": "business-trade-organization-registration",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+      "title": "Trade Organization Registration",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:18.018517+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/Guidlines/Introduction.htm"
+    },
+    {
+      "source_id": "src-civil-birth-registration-copy-official",
+      "service_id": "civil-birth-registration-copy",
+      "url": "https://bdris.gov.bd/br/reprint/add",
+      "title": "Birth Registration Copy (Reprint)",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/br/reprint/add",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null,
+        "content_hash": "b531159ca46f89ab",
+        "retrieved_at": "2026-08-25T03:24:19.177086+00:00"
+      },
+      "evidence_locator": "probe:https://bdris.gov.bd/br/reprint/add"
+    },
+    {
+      "source_id": "src-civil-birth-registration-copy-alt-1",
+      "service_id": "civil-birth-registration-copy",
+      "url": "https://bdris.gov.bd",
+      "title": "হোমপেজ",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোমপেজ",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "155ded2ccd5a0981",
+        "retrieved_at": "2026-08-25T03:24:21.509303+00:00"
+      }
+    },
+    {
+      "source_id": "src-civil-birth-registration-duplicate-cancel-official",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "url": "https://bdris.gov.bd/application/print",
+      "title": "Cancellation of Duplicate Birth Registrations",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/application/print",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null,
+        "content_hash": "b531159ca46f89ab",
+        "retrieved_at": "2026-08-25T03:24:22.711023+00:00"
+      },
+      "evidence_locator": "probe:https://bdris.gov.bd/application/print"
+    },
+    {
+      "source_id": "src-civil-birth-registration-duplicate-cancel-alt-1",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "url": "https://bdris.gov.bd",
+      "title": "হোমপেজ",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোমপেজ",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "fcf94b5edcbb94a9",
+        "retrieved_at": "2026-08-25T03:24:24.725381+00:00"
+      }
+    },
+    {
+      "source_id": "src-civil-death-registration-copy-official",
+      "service_id": "civil-death-registration-copy",
+      "url": "https://bdris.gov.bd/dr/reprint/add",
+      "title": "Death Registration Copy (Reprint)",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/dr/reprint/add",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null,
+        "content_hash": "b531159ca46f89ab",
+        "retrieved_at": "2026-08-25T03:24:25.881440+00:00"
+      },
+      "evidence_locator": "probe:https://bdris.gov.bd/dr/reprint/add"
+    },
+    {
+      "source_id": "src-civil-death-registration-copy-alt-1",
+      "service_id": "civil-death-registration-copy",
+      "url": "https://bdris.gov.bd",
+      "title": "হোমপেজ",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোমপেজ",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "3d733e594e71613e",
+        "retrieved_at": "2026-08-25T03:24:27.894357+00:00"
+      }
+    },
+    {
+      "source_id": "src-civil-death-registration-correction-official",
+      "service_id": "civil-death-registration-correction",
+      "url": "https://bdris.gov.bd/dr/correction",
+      "title": "Death Registration Information Correction",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/dr/correction",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null,
+        "content_hash": "b531159ca46f89ab",
+        "retrieved_at": "2026-08-25T03:24:28.810849+00:00"
+      },
+      "evidence_locator": "probe:https://bdris.gov.bd/dr/correction"
+    },
+    {
+      "source_id": "src-civil-death-registration-correction-alt-1",
+      "service_id": "civil-death-registration-correction",
+      "url": "https://bdris.gov.bd",
+      "title": "হোমপেজ",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোমপেজ",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "5d006d07db3e38c0",
+        "retrieved_at": "2026-08-25T03:24:30.898912+00:00"
+      }
+    },
+    {
+      "source_id": "src-civil-death-registration-duplicate-cancel-official",
+      "service_id": "civil-death-registration-duplicate-cancel",
+      "url": "https://bdris.gov.bd/application/print",
+      "title": "Cancellation of Duplicate Death Registrations",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/application/print",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null,
+        "content_hash": "b531159ca46f89ab",
+        "retrieved_at": "2026-08-25T03:24:32.373239+00:00"
+      },
+      "evidence_locator": "probe:https://bdris.gov.bd/application/print"
+    },
+    {
+      "source_id": "src-civil-death-registration-duplicate-cancel-alt-1",
+      "service_id": "civil-death-registration-duplicate-cancel",
+      "url": "https://bdris.gov.bd",
+      "title": "হোমপেজ",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোমপেজ",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "869b6bd3fbcf76ef",
+        "retrieved_at": "2026-08-25T03:24:33.862455+00:00"
+      }
+    }
+  ]
+}

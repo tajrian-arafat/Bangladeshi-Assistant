@@ -1,0 +1,31 @@
+{
+  "service_id": "fisheries-fioc-user-registration",
+  "sources": [
+    {
+      "source_id": "src-fisheries-fioc-user-registration-official",
+      "service_id": "fisheries-fioc-user-registration",
+      "url": "https://www.ecertificate.fisheries.gov.bd/",
+      "title": "FIQC e-Certification User Registration",
+      "authority_id": "department-of-fisheries-fiqc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:27:26.296817+00:00"
+      },
+      "evidence_locator": "probe:https://www.ecertificate.fisheries.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

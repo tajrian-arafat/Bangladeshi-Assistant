@@ -1,0 +1,20 @@
+{
+  "service_id": "nid-voter-area-change",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-nid-voter-area-change-fee-unverified",
+      "service_id": "nid-voter-area-change",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Voter Area or Address Change (Form 13).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-nid-voter-area-change-documents-unverified",
+      "service_id": "nid-voter-area-change",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Voter Area or Address Change (Form 13).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

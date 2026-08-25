@@ -1,0 +1,22 @@
+{
+  "dependencies": [
+    {
+      "dependency_id": "dep-03b-fitness-validity-03c",
+      "from_batch": "BATCH_03B",
+      "to_batch": "BATCH_03C",
+      "from_service_ids": [
+        "brta-new-vehicle-registration",
+        "brta-ownership-transfer"
+      ],
+      "to_service_id": "brta-fitness-certificate",
+      "claim_id": "gap-closure::c-fitness-validity-unresolved",
+      "requirements": [
+        "Fitness validity period by vehicle class",
+        "Commercial vs private inspection rules",
+        "Renewal interval and grace rules"
+      ],
+      "status": "PARTIALLY_RESOLVED"
+    }
+  ],
+  "closed_at": "2026-08-25T03:41:07.414061+00:00"
+}

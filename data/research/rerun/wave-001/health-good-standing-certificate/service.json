@@ -1,0 +1,138 @@
+{
+  "service_id": "health-good-standing-certificate",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Certificate of Good Standing (BMDC)",
+  "service_name_bn": "Certificate of Good Standing (BMDC)",
+  "aliases": [
+    "good standing medical council"
+  ],
+  "category_id": "health",
+  "profile_key": "HEALTH",
+  "responsible_agency": "Bangladesh Medical and Dental Council (BMDC)",
+  "official_application_url": "https://payment.bmdc.org.bd/home/page/form-list",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "health-good-standing-certificate::c-catalogue-authority",
+      "service_id": "health-good-standing-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Medical and Dental Council (BMDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-good-standing-certificate::c-official-url-documented",
+      "service_id": "health-good-standing-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://payment.bmdc.org.bd/home/page/form-list for Certificate of Good Standing (BMDC); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://payment.bmdc.org.bd/home/page/form-list"
+      },
+      "source_ids": [
+        "src-health-good-standing-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-good-standing-certificate::c-procedure-overview",
+      "service_id": "health-good-standing-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Certificate of Good Standing (BMDC) is a government service under Bangladesh Medical and Dental Council (BMDC) (professional certificate). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-good-standing-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-good-standing-certificate::c-service-identity",
+      "service_id": "health-good-standing-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Certificate of Good Standing (BMDC) (Certificate of Good Standing (BMDC)) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-good-standing-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-health-good-standing-certificate-official",
+      "service_id": "health-good-standing-certificate",
+      "url": "https://payment.bmdc.org.bd/home/page/form-list",
+      "title": "Just a moment...",
+      "authority_id": "bmdc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://payment.bmdc.org.bd/home/page/form-list",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "cc12fccc20be8a30",
+        "retrieved_at": "2026-08-25T03:19:47.358350+00:00"
+      },
+      "evidence_locator": "probe:https://payment.bmdc.org.bd/home/page/form-list"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-health-good-standing-certificate-portal-unreachable",
+      "service_id": "health-good-standing-certificate",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Certificate of Good Standing (BMDC).",
+      "severity": "MEDIUM",
+      "url": "https://payment.bmdc.org.bd/home/page/form-list"
+    },
+    {
+      "gap_id": "gap-health-good-standing-certificate-fee-unverified",
+      "service_id": "health-good-standing-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Certificate of Good Standing (BMDC).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-good-standing-certificate-documents-unverified",
+      "service_id": "health-good-standing-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Certificate of Good Standing (BMDC).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

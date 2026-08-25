@@ -1,0 +1,133 @@
+{
+  "service_id": "nid-online-account-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Voter Online Account Registration",
+  "service_name_bn": "ভোটার অনলাইন অ্যাকাউন্ট নিবন্ধন",
+  "aliases": [
+    "NID portal signup",
+    "NIDW registration"
+  ],
+  "category_id": "identity",
+  "profile_key": "IDENTITY_CIVIL",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "nid-online-account-registration::c-catalogue-authority",
+      "service_id": "nid-online-account-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-online-account-registration::c-official-portal",
+      "service_id": "nid-online-account-registration",
+      "claim_type": "application_url",
+      "claim_text": "Voter Online Account Registration official information is published at https://services.nidw.gov.bd/nid-pub/faq?locale=en (page title: Bangladesh NID Application System | Frequently Asked Question).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      },
+      "source_ids": [
+        "src-nid-online-account-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-online-account-registration::c-official-portal-src-nid-online-account-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-online-account-registration::c-procedure-overview",
+      "service_id": "nid-online-account-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Voter Online Account Registration is a government service under Bangladesh Election Commission (NID Wing) (nid portal). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-online-account-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-online-account-registration::c-service-identity",
+      "service_id": "nid-online-account-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Voter Online Account Registration (ভোটার অনলাইন অ্যাকাউন্ট নিবন্ধন) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-online-account-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-nid-online-account-registration-official",
+      "service_id": "nid-online-account-registration",
+      "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "title": "Bangladesh NID Application System | Frequently Asked Question",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | Frequently Asked Question",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "e30bc42f33ed1160",
+        "retrieved_at": "2026-08-25T03:29:11.569644+00:00"
+      },
+      "evidence_locator": "probe:https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-nid-online-account-registration-fee-unverified",
+      "service_id": "nid-online-account-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Voter Online Account Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-nid-online-account-registration-documents-unverified",
+      "service_id": "nid-online-account-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Voter Online Account Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

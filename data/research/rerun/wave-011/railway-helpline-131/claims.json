@@ -1,0 +1,72 @@
+{
+  "service_id": "railway-helpline-131",
+  "claims": [
+    {
+      "claim_id": "railway-helpline-131::c-catalogue-authority",
+      "service_id": "railway-helpline-131",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Railway.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-helpline-131::c-official-portal",
+      "service_id": "railway-helpline-131",
+      "claim_type": "application_url",
+      "claim_text": "Bangladesh Railway Service Helpline (131) official information is published at http://railway.gov.bd/ (page title: হোম | বাংলাদেশ রেলওয়ে).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://railway.gov.bd/"
+      },
+      "source_ids": [
+        "src-railway-helpline-131-official"
+      ],
+      "evidence_ids": [
+        "ev-railway-helpline-131::c-official-portal-src-railway-helpline-131-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-helpline-131::c-procedure-overview",
+      "service_id": "railway-helpline-131",
+      "claim_type": "procedure_step",
+      "claim_text": "Bangladesh Railway Service Helpline (131) is a government service under Bangladesh Railway (customer support). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-helpline-131-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-helpline-131::c-service-identity",
+      "service_id": "railway-helpline-131",
+      "claim_type": "eligibility",
+      "claim_text": "Bangladesh Railway Service Helpline (131) (রেলওয়ে সেবা হেল্পলাইন (১৩১)) is a confirmed government service in category railways, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-helpline-131-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

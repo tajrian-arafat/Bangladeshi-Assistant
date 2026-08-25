@@ -1,0 +1,72 @@
+{
+  "service_id": "tax-challan-payment",
+  "claims": [
+    {
+      "claim_id": "tax-challan-payment::c-catalogue-authority",
+      "service_id": "tax-challan-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-challan-payment::c-official-portal",
+      "service_id": "tax-challan-payment",
+      "claim_type": "application_url",
+      "claim_text": "Tax/VAT Challan Payment official information is published at https://nbr.gov.bd/all-eservices/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/all-eservices/eng"
+      },
+      "source_ids": [
+        "src-tax-challan-payment-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-challan-payment::c-official-portal-src-tax-challan-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-challan-payment::c-procedure-overview",
+      "service_id": "tax-challan-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "Tax/VAT Challan Payment is a government service under National Board of Revenue (NBR) (challan). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-challan-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-challan-payment::c-service-identity",
+      "service_id": "tax-challan-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Tax/VAT Challan Payment (কর/ভ্যাট চালান পরিশোধ) is a confirmed government service in category government_payments, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-challan-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

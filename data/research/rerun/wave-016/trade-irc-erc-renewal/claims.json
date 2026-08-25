@@ -1,0 +1,72 @@
+{
+  "service_id": "trade-irc-erc-renewal",
+  "claims": [
+    {
+      "claim_id": "trade-irc-erc-renewal::c-catalogue-authority",
+      "service_id": "trade-irc-erc-renewal",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Office of the Chief Controller of Imports and Exports (CCI&E).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-irc-erc-renewal::c-official-portal",
+      "service_id": "trade-irc-erc-renewal",
+      "claim_type": "application_url",
+      "claim_text": "IRC/ERC Renewal official information is published at https://olm.ccie.gov.bd/ (page title: CCI&amp;E - OLM).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://olm.ccie.gov.bd/"
+      },
+      "source_ids": [
+        "src-trade-irc-erc-renewal-official"
+      ],
+      "evidence_ids": [
+        "ev-trade-irc-erc-renewal::c-official-portal-src-trade-irc-erc-renewal-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-irc-erc-renewal::c-procedure-overview",
+      "service_id": "trade-irc-erc-renewal",
+      "claim_type": "procedure_step",
+      "claim_text": "IRC/ERC Renewal is a government service under Office of the Chief Controller of Imports and Exports (CCI&E) (renewal). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-irc-erc-renewal-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-irc-erc-renewal::c-service-identity",
+      "service_id": "trade-irc-erc-renewal",
+      "claim_type": "eligibility",
+      "claim_text": "IRC/ERC Renewal (IRC/ERC নবায়ন) is a confirmed government service in category trade, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-irc-erc-renewal-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

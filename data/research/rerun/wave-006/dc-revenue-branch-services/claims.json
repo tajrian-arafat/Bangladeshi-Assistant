@@ -1,0 +1,70 @@
+{
+  "service_id": "dc-revenue-branch-services",
+  "claims": [
+    {
+      "claim_id": "dc-revenue-branch-services::c-catalogue-authority",
+      "service_id": "dc-revenue-branch-services",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Deputy Commissioner Office (Revenue Branch).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-revenue-branch-services::c-official-url-documented",
+      "service_id": "dc-revenue-branch-services",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://file-dhaka.portal.gov.bd/uploads/c744821c-aa9f-44f9-a403-07fc560350c2/61d/d71/949/61dd71949329c483376321.pdf for DC Office Revenue Branch Services; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://file-dhaka.portal.gov.bd/uploads/c744821c-aa9f-44f9-a403-07fc560350c2/61d/d71/949/61dd71949329c483376321.pdf"
+      },
+      "source_ids": [
+        "src-dc-revenue-branch-services-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-revenue-branch-services::c-procedure-overview",
+      "service_id": "dc-revenue-branch-services",
+      "claim_type": "procedure_step",
+      "claim_text": "DC Office Revenue Branch Services is a government service under Deputy Commissioner Office (Revenue Branch) (revenue branch). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-revenue-branch-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-revenue-branch-services::c-service-identity",
+      "service_id": "dc-revenue-branch-services",
+      "claim_type": "eligibility",
+      "claim_text": "DC Office Revenue Branch Services (জেলা প্রশাসক কার্যালয় রাজস্ব শাখা সেবা) is a confirmed government service in category local_government, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-revenue-branch-services-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

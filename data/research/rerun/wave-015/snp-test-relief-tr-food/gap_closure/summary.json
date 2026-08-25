@@ -1,0 +1,20 @@
+{
+  "service_id": "snp-test-relief-tr-food",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-snp-test-relief-tr-food-fee-unverified",
+      "service_id": "snp-test-relief-tr-food",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Test Relief (TR) Food.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-test-relief-tr-food-documents-unverified",
+      "service_id": "snp-test-relief-tr-food",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Test Relief (TR) Food.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

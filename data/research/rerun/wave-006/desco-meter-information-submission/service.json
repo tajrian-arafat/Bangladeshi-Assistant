@@ -1,0 +1,132 @@
+{
+  "service_id": "desco-meter-information-submission",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "DESCO Meter Information Submission",
+  "service_name_bn": "ডেসকো মিটার তথ্য জমা",
+  "aliases": [
+    "meter details upload DESCO"
+  ],
+  "category_id": "utilities",
+  "profile_key": "UTILITIES",
+  "responsible_agency": "Dhaka Electric Supply Company Limited (DESCO)",
+  "official_application_url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=e6fb7cdc-88e7-4a13-9917-ae22d3d91e05",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "desco-meter-information-submission::c-catalogue-authority",
+      "service_id": "desco-meter-information-submission",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Electric Supply Company Limited (DESCO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-meter-information-submission::c-official-portal",
+      "service_id": "desco-meter-information-submission",
+      "claim_type": "application_url",
+      "claim_text": "DESCO Meter Information Submission official information is published at https://ocsms.desco.org.bd/publicinfo/processflow/view?id=e6fb7cdc-88e7-4a13-9917-ae22d3d91e05 (page title: Preview of Process Flow | DESCO).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=e6fb7cdc-88e7-4a13-9917-ae22d3d91e05"
+      },
+      "source_ids": [
+        "src-desco-meter-information-submission-official"
+      ],
+      "evidence_ids": [
+        "ev-desco-meter-information-submission::c-official-portal-src-desco-meter-information-submission-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-meter-information-submission::c-procedure-overview",
+      "service_id": "desco-meter-information-submission",
+      "claim_type": "procedure_step",
+      "claim_text": "DESCO Meter Information Submission is a government service under Dhaka Electric Supply Company Limited (DESCO) (electricity connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-meter-information-submission-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-meter-information-submission::c-service-identity",
+      "service_id": "desco-meter-information-submission",
+      "claim_type": "eligibility",
+      "claim_text": "DESCO Meter Information Submission (ডেসকো মিটার তথ্য জমা) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-meter-information-submission-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-desco-meter-information-submission-official",
+      "service_id": "desco-meter-information-submission",
+      "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=e6fb7cdc-88e7-4a13-9917-ae22d3d91e05",
+      "title": "Preview of Process Flow | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=e6fb7cdc-88e7-4a13-9917-ae22d3d91e05",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Preview of Process Flow | DESCO",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "6c77b4a1006d642f",
+        "retrieved_at": "2026-08-25T03:25:34.005239+00:00"
+      },
+      "evidence_locator": "probe:https://ocsms.desco.org.bd/publicinfo/processflow/view?id=e6fb7cdc-88e7-4a13-9917-ae22d3d91e05"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-desco-meter-information-submission-fee-unverified",
+      "service_id": "desco-meter-information-submission",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for DESCO Meter Information Submission.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-desco-meter-information-submission-documents-unverified",
+      "service_id": "desco-meter-information-submission",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for DESCO Meter Information Submission.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

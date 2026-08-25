@@ -1,0 +1,41 @@
+{
+  "batch_id": "batch-02a-passport",
+  "phase": "gap-closure",
+  "layer": "research/verification/batch-02a-passport-gap-closure",
+  "publication_status": "STAGING_ONLY",
+  "published": false,
+  "agent": "cursor-cloud-agent",
+  "closed_at": "2026-08-24T21:22:37.453479+00:00",
+  "gaps_investigated": 11,
+  "gaps_resolved": 2,
+  "gaps_partially_resolved": 4,
+  "gaps_unresolved": 5,
+  "new_sources": 8,
+  "new_claims": 23,
+  "new_claim_status_counts": {
+    "VERIFIED": 19,
+    "PARTIALLY_VERIFIED": 2,
+    "UNVERIFIED": 1,
+    "OUTDATED": 1
+  },
+  "conflicts_new_or_updated": 3,
+  "service_readiness": {
+    "green": 1,
+    "yellow": 11,
+    "red": 0
+  },
+  "critical_findings": [
+    "e-Passport fee page browser-rendered with Last updated 12 July 2026 \u2014 domestic BDT amounts verified",
+    "Payment gateways: A-Challan, DGePay, ShurjoPay (ekpay not on current page)",
+    "Police verification: CONDITIONAL (first-time mandatory per Dubai Tier-2; not universal Tier-1 rule)",
+    "Abu Dhabi mission e-passport CMS page shell empty; WEFF surcharge still unverified",
+    "MRP DIP fee page Feb 2017 with no fee table",
+    "Super Express eligibility text changed between Oct 2022 NOTE and June 2026 page"
+  ],
+  "evidence_limitations": [
+    "epassport.gov.bd API endpoints return 403 to curl; browser render required",
+    "Status check dedicated route 404/403; FAQ API dated 2020 for field names",
+    "Abu Dhabi/Singapore mission CMS pages incomplete or 404",
+    "Bright Data MCP unavailable (401)"
+  ]
+}

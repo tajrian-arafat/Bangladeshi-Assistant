@@ -1,0 +1,27 @@
+{
+  "service_id": "health-bmdc-registration-verify",
+  "gaps": [
+    {
+      "gap_id": "gap-health-bmdc-registration-verify-portal-unreachable",
+      "service_id": "health-bmdc-registration-verify",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for BMDC Registration Verification.",
+      "severity": "MEDIUM",
+      "url": "https://verify.bmdc.org.bd/"
+    },
+    {
+      "gap_id": "gap-health-bmdc-registration-verify-fee-unverified",
+      "service_id": "health-bmdc-registration-verify",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BMDC Registration Verification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-bmdc-registration-verify-documents-unverified",
+      "service_id": "health-bmdc-registration-verify",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BMDC Registration Verification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

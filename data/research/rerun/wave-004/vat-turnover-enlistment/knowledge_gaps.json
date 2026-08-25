@@ -1,0 +1,19 @@
+{
+  "service_id": "vat-turnover-enlistment",
+  "gaps": [
+    {
+      "gap_id": "gap-vat-turnover-enlistment-fee-unverified",
+      "service_id": "vat-turnover-enlistment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Turnover Tax Enlistment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-vat-turnover-enlistment-documents-unverified",
+      "service_id": "vat-turnover-enlistment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Turnover Tax Enlistment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

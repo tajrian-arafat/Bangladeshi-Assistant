@@ -1,0 +1,72 @@
+{
+  "claims": [
+    {
+      "claim_id": "dc-attestation-photocopy::c-official-url-documented",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.dhaka.gov.bd/en for DC Office Document Attestation/Photocopy Certification; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.dhaka.gov.bd/en"
+      },
+      "source_ids": [
+        "src-dc-attestation-photocopy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-procedure-overview",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "procedure_step",
+      "claim_text": "Deputy Commissioner (DC) office attestation of photocopies is a local government service at the district level.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-attestation-photocopy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-document-overview",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "document",
+      "claim_text": "Original document and photocopy to be attested; applicant NID typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-dc-attestation-photocopy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-service-identity",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "eligibility",
+      "claim_text": "DC Office Document Attestation/Photocopy Certification (\u099c\u09c7\u09b2\u09be \u09aa\u09cd\u09b0\u09b6\u09be\u09b8\u0995 \u0995\u09be\u09b0\u09cd\u09af\u09be\u09b2\u09af\u09bc\u09c7 \u09ab\u099f\u09cb\u0995\u09aa\u09bf/prattyoyon) is a confirmed government service in category local_government, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-attestation-photocopy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

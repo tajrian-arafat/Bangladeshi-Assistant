@@ -1,0 +1,133 @@
+{
+  "service_id": "mofa-csat",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "MOFA Consular Service Appointment (CSAT)",
+  "service_name_bn": "MOFA CSAT (Consular Service Appointment)",
+  "aliases": [
+    "MOFA appointment consular",
+    "MOFA Consular Service Appointment (CSAT)"
+  ],
+  "category_id": "passport_immigration",
+  "profile_key": "POLICE",
+  "responsible_agency": "Ministry of Foreign Affairs (MOFA)",
+  "official_application_url": "https://csat.mofa.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "mofa-csat::c-catalogue-authority",
+      "service_id": "mofa-csat",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-csat::c-official-portal",
+      "service_id": "mofa-csat",
+      "claim_type": "application_url",
+      "claim_text": "MOFA Consular Service Appointment (CSAT) official information is published at https://csat.mofa.gov.bd/ (page title: CSAT | Ministry of Foreign Affairs).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://csat.mofa.gov.bd/"
+      },
+      "source_ids": [
+        "src-mofa-csat-official"
+      ],
+      "evidence_ids": [
+        "ev-mofa-csat::c-official-portal-src-mofa-csat-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-csat::c-procedure-overview",
+      "service_id": "mofa-csat",
+      "claim_type": "procedure_step",
+      "claim_text": "MOFA Consular Service Appointment (CSAT) is a government service under Ministry of Foreign Affairs (MOFA) (consular). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-csat-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-csat::c-service-identity",
+      "service_id": "mofa-csat",
+      "claim_type": "eligibility",
+      "claim_text": "MOFA Consular Service Appointment (CSAT) (MOFA CSAT (Consular Service Appointment)) is a confirmed government service in category passport_immigration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-csat-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mofa-csat-official",
+      "service_id": "mofa-csat",
+      "url": "https://csat.mofa.gov.bd/",
+      "title": "CSAT | Ministry of Foreign Affairs",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://csat.mofa.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "CSAT | Ministry of Foreign Affairs",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "e866baed2cba41aa",
+        "retrieved_at": "2026-08-25T03:28:27.591089+00:00"
+      },
+      "evidence_locator": "probe:https://csat.mofa.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-mofa-csat-fee-unverified",
+      "service_id": "mofa-csat",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for MOFA Consular Service Appointment (CSAT).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-mofa-csat-documents-unverified",
+      "service_id": "mofa-csat",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for MOFA Consular Service Appointment (CSAT).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

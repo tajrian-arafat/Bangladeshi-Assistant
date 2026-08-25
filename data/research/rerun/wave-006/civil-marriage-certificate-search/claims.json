@@ -1,0 +1,72 @@
+{
+  "service_id": "civil-marriage-certificate-search",
+  "claims": [
+    {
+      "claim_id": "civil-marriage-certificate-search::c-catalogue-authority",
+      "service_id": "civil-marriage-certificate-search",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Law, Justice and Parliamentary Affairs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-marriage-certificate-search::c-official-portal",
+      "service_id": "civil-marriage-certificate-search",
+      "claim_type": "application_url",
+      "claim_text": "Completed Marriage Certificate Search official information is published at https://marriage.gov.bd/docs/CRVS_User_Manual.pdf (page title: Completed Marriage Certificate Search).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+      },
+      "source_ids": [
+        "src-civil-marriage-certificate-search-official"
+      ],
+      "evidence_ids": [
+        "ev-civil-marriage-certificate-search::c-official-portal-src-civil-marriage-certificate-search-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-marriage-certificate-search::c-procedure-overview",
+      "service_id": "civil-marriage-certificate-search",
+      "claim_type": "procedure_step",
+      "claim_text": "Completed Marriage Certificate Search is a government service under Ministry of Law, Justice and Parliamentary Affairs (marriage certificate). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-marriage-certificate-search-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-marriage-certificate-search::c-service-identity",
+      "service_id": "civil-marriage-certificate-search",
+      "claim_type": "eligibility",
+      "claim_text": "Completed Marriage Certificate Search (নিবন্ধিত বিবাহ সনদ অনুসন্ধান) is a confirmed government service in category certificates, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-marriage-certificate-search-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

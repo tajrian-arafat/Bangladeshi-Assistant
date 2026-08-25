@@ -1,0 +1,72 @@
+{
+  "service_id": "digital-centre-helpdesk",
+  "claims": [
+    {
+      "claim_id": "digital-centre-helpdesk::c-catalogue-authority",
+      "service_id": "digital-centre-helpdesk",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Aspire to Innovate (a2i), ICT Division.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-helpdesk::c-official-portal",
+      "service_id": "digital-centre-helpdesk",
+      "claim_type": "application_url",
+      "claim_text": "Digital Centre Support Helpdesk official information is published at https://support.digitalcentre.gov.bd/ (page title: My Helpdesk).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://support.digitalcentre.gov.bd/"
+      },
+      "source_ids": [
+        "src-digital-centre-helpdesk-official"
+      ],
+      "evidence_ids": [
+        "ev-digital-centre-helpdesk::c-official-portal-src-digital-centre-helpdesk-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-helpdesk::c-procedure-overview",
+      "service_id": "digital-centre-helpdesk",
+      "claim_type": "procedure_step",
+      "claim_text": "Digital Centre Support Helpdesk is a government service under Aspire to Innovate (a2i), ICT Division (digital centre). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-centre-helpdesk-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-helpdesk::c-service-identity",
+      "service_id": "digital-centre-helpdesk",
+      "claim_type": "eligibility",
+      "claim_text": "Digital Centre Support Helpdesk (ডিজিটাল সেন্টার/একসেবা হেল্পডেস্ক) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-centre-helpdesk-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

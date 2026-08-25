@@ -1,0 +1,70 @@
+{
+  "service_id": "land-partition-consolidation",
+  "claims": [
+    {
+      "claim_id": "land-partition-consolidation::c-catalogue-authority",
+      "service_id": "land-partition-consolidation",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-partition-consolidation::c-official-url-documented",
+      "service_id": "land-partition-consolidation",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.land.gov.bd/nagorik-subidha for Land Partition and Consolidation (Record Correction); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.land.gov.bd/nagorik-subidha"
+      },
+      "source_ids": [
+        "src-land-partition-consolidation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-partition-consolidation::c-procedure-overview",
+      "service_id": "land-partition-consolidation",
+      "claim_type": "procedure_step",
+      "claim_text": "Land Partition and Consolidation (Record Correction) is a government service under Ministry of Land (partition consolidation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-partition-consolidation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-partition-consolidation::c-service-identity",
+      "service_id": "land-partition-consolidation",
+      "claim_type": "eligibility",
+      "claim_text": "Land Partition and Consolidation (Record Correction) (জমাভাগ ও জমা একত্রিকরণ) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-partition-consolidation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

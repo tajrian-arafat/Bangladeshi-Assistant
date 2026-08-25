@@ -1,0 +1,19 @@
+{
+  "service_id": "local-certificate-verify",
+  "gaps": [
+    {
+      "gap_id": "gap-local-certificate-verify-fee-unverified",
+      "service_id": "local-certificate-verify",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Union Certificate Verification Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-certificate-verify-documents-unverified",
+      "service_id": "local-certificate-verify",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Union Certificate Verification Search.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

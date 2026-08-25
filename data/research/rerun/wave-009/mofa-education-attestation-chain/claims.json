@@ -1,0 +1,70 @@
+{
+  "service_id": "mofa-education-attestation-chain",
+  "claims": [
+    {
+      "claim_id": "mofa-education-attestation-chain::c-catalogue-authority",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-education-attestation-chain::c-official-url-documented",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://istanbul.mofa.gov.bd/en/site/page/Document-attestation for Educational Certificate MOFA Attestation (via Ministry of Education); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation"
+      },
+      "source_ids": [
+        "src-mofa-education-attestation-chain-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-education-attestation-chain::c-procedure-overview",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "procedure_step",
+      "claim_text": "Educational Certificate MOFA Attestation (via Ministry of Education) is a government service under Ministry of Foreign Affairs (MOFA) (attestation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-education-attestation-chain-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-education-attestation-chain::c-service-identity",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "eligibility",
+      "claim_text": "Educational Certificate MOFA Attestation (via Ministry of Education) (শিক্ষা সনদ MOFA attestation (Ministry of Education chain)) is a confirmed government service in category passport_immigration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-education-attestation-chain-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

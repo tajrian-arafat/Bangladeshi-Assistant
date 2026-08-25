@@ -1,0 +1,72 @@
+{
+  "service_id": "permits-fire-noc-enoc",
+  "claims": [
+    {
+      "claim_id": "permits-fire-noc-enoc::c-catalogue-authority",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Fire Service and Civil Defence Directorate.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-official-portal",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "application_url",
+      "claim_text": "Fire Service No Objection Certificate (e-NOC) official information is published at https://enoc.fireservice.gov.bd/ (page title: Fire Service No Objection Certificate (e-NOC)).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://enoc.fireservice.gov.bd/"
+      },
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official"
+      ],
+      "evidence_ids": [
+        "ev-permits-fire-noc-enoc::c-official-portal-src-permits-fire-noc-enoc-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-procedure-overview",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "procedure_step",
+      "claim_text": "Fire Service No Objection Certificate (e-NOC) is a government service under Fire Service and Civil Defence Directorate (fire noc). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-service-identity",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "eligibility",
+      "claim_text": "Fire Service No Objection Certificate (e-NOC) (ফায়ার সার্ভিস অনাপত্তি সনদ (e-NOC)) is a confirmed government service in category permits, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "service_id": "env-ecc-online-application",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Environmental Clearance Certificate (ECC) Online Application",
+  "service_name_bn": "পরিবেশ ছাড়পত্র (ECC) অনলাইন আবেদন",
+  "aliases": [
+    "environment clearance",
+    "DoE ECC",
+    "Environmental Clearance Certificate (ECC) Online Application"
+  ],
+  "category_id": "environment",
+  "profile_key": "OTHER",
+  "responsible_agency": "Department of Environment (DoE)",
+  "official_application_url": "https://ecc-beta.doe.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "env-ecc-online-application::c-catalogue-authority",
+      "service_id": "env-ecc-online-application",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Environment (DoE).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "env-ecc-online-application::c-official-portal",
+      "service_id": "env-ecc-online-application",
+      "claim_type": "application_url",
+      "claim_text": "Environmental Clearance Certificate (ECC) Online Application official information is published at https://ecc-beta.doe.gov.bd/ (page title: DoE ECC System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ecc-beta.doe.gov.bd/"
+      },
+      "source_ids": [
+        "src-env-ecc-online-application-official"
+      ],
+      "evidence_ids": [
+        "ev-env-ecc-online-application::c-official-portal-src-env-ecc-online-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "env-ecc-online-application::c-procedure-overview",
+      "service_id": "env-ecc-online-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Environmental Clearance Certificate (ECC) Online Application is a government service under Department of Environment (DoE) (clearance). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-env-ecc-online-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "env-ecc-online-application::c-service-identity",
+      "service_id": "env-ecc-online-application",
+      "claim_type": "eligibility",
+      "claim_text": "Environmental Clearance Certificate (ECC) Online Application (পরিবেশ ছাড়পত্র (ECC) অনলাইন আবেদন) is a confirmed government service in category environment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-env-ecc-online-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-env-ecc-online-application-official",
+      "service_id": "env-ecc-online-application",
+      "url": "https://ecc-beta.doe.gov.bd/",
+      "title": "DoE ECC System",
+      "authority_id": "department-of-environment-doe",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecc-beta.doe.gov.bd/login",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DoE ECC System",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "76e18ccffe55299c",
+        "retrieved_at": "2026-08-25T03:27:11.672153+00:00"
+      },
+      "evidence_locator": "probe:https://ecc-beta.doe.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-env-ecc-online-application-fee-unverified",
+      "service_id": "env-ecc-online-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Environmental Clearance Certificate (ECC) Online Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-env-ecc-online-application-documents-unverified",
+      "service_id": "env-ecc-online-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Environmental Clearance Certificate (ECC) Online Application.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

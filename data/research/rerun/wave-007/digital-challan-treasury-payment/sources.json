@@ -1,0 +1,50 @@
+{
+  "service_id": "digital-challan-treasury-payment",
+  "sources": [
+    {
+      "source_id": "src-digital-challan-treasury-payment-official",
+      "service_id": "digital-challan-treasury-payment",
+      "url": "https://www.achallan.gov.bd/",
+      "title": "Treasury Challan Online Payment (aChallan)",
+      "authority_id": "finance-division-office-of-the-controller-general-of-accounts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.achallan.gov.bd/",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out",
+        "retrieved_at": "2026-08-25T03:26:16.960573+00:00"
+      },
+      "evidence_locator": "probe:https://www.achallan.gov.bd/"
+    },
+    {
+      "source_id": "src-digital-challan-treasury-payment-alt-1",
+      "service_id": "digital-challan-treasury-payment",
+      "url": "https://www.mygov.bd/",
+      "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+      "authority_id": "finance-division-office-of-the-controller-general-of-accounts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.mygov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d2bbaab6c11c14a1",
+        "retrieved_at": "2026-08-25T03:26:19.069361+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

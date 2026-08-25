@@ -1,0 +1,28 @@
+{
+  "service_id": "land-mouza-map",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-land-mouza-map-portal-unreachable",
+      "service_id": "land-mouza-map",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Mouza Map Request.",
+      "severity": "MEDIUM",
+      "url": "https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "gap_id": "gap-land-mouza-map-fee-unverified",
+      "service_id": "land-mouza-map",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mouza Map Request.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mouza-map-documents-unverified",
+      "service_id": "land-mouza-map",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Mouza Map Request.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

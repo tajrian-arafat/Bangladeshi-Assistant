@@ -1,0 +1,53 @@
+{
+  "service_id": "mofa-document-attestation",
+  "batch_id": "batch-10-employment-migration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "MOFA Document Attestation",
+  "service_name_bn": "পররাষ্ট্র মন্ত্রণালয় নথি সত্যায়ন",
+  "aliases": [
+    "MOFA attestation",
+    "consular attestation",
+    "document legalization MOFA",
+    "নথি সত্যায়ন",
+    "attestation form MOFA",
+    "MOFA Attestation Application Form",
+    "mofa-attestation-application-form",
+    "MOFA attestation requirements",
+    "consular attestation Dhaka",
+    "MOFA Document Attestation General Requirements",
+    "mofa-document-attestation-requirements"
+  ],
+  "category_id": "passport_immigration",
+  "responsible_agency": "Ministry of Foreign Affairs (MOFA) - Consular Section",
+  "official_application_url": "https://csat.mofa.gov.bd/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "mofa-document-attestation::c-application-portal",
+      "service_id": "mofa-document-attestation",
+      "claim_type": "application_url",
+      "claim_text": "MOFA Document Attestation is associated with NBR e-service portal https://csat.mofa.gov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-mofa-document-attestation",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-document-attestation::c-responsible-authority",
+      "service_id": "mofa-document-attestation",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Ministry of Foreign Affairs (MOFA) - Consular Section.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

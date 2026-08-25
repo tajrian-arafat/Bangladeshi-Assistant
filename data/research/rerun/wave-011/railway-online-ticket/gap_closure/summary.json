@@ -1,0 +1,20 @@
+{
+  "service_id": "railway-online-ticket",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-railway-online-ticket-fee-unverified",
+      "service_id": "railway-online-ticket",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Bangladesh Railway Online Ticket Booking.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-railway-online-ticket-documents-unverified",
+      "service_id": "railway-online-ticket",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Bangladesh Railway Online Ticket Booking.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

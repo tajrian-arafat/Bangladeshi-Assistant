@@ -1,0 +1,70 @@
+{
+  "service_id": "land-mouza-map",
+  "claims": [
+    {
+      "claim_id": "land-mouza-map::c-catalogue-authority",
+      "service_id": "land-mouza-map",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mouza-map::c-official-url-documented",
+      "service_id": "land-mouza-map",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://land.gov.bd/vumisheba-fee for Mouza Map Request; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://land.gov.bd/vumisheba-fee"
+      },
+      "source_ids": [
+        "src-land-mouza-map-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mouza-map::c-procedure-overview",
+      "service_id": "land-mouza-map",
+      "claim_type": "procedure_step",
+      "claim_text": "Mouza Map Request is a government service under Ministry of Land (map). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mouza-map-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mouza-map::c-service-identity",
+      "service_id": "land-mouza-map",
+      "claim_type": "eligibility",
+      "claim_text": "Mouza Map Request (মৌজা ম্যাপ/চিতা) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mouza-map-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

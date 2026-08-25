@@ -1,0 +1,53 @@
+{
+  "service_id": "judiciary-supreme-court-certified-copy",
+  "sources": [
+    {
+      "source_id": "src-judiciary-supreme-court-certified-copy-official",
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "url": "https://supremecourt.gov.bd/",
+      "title": "Home : Supreme Court of Bangladesh",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://supremecourt.gov.bd/web/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Home : Supreme Court of Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "e5decda8a88bfb6f",
+        "retrieved_at": "2026-08-25T03:27:59.672296+00:00"
+      },
+      "evidence_locator": "probe:https://supremecourt.gov.bd/"
+    },
+    {
+      "source_id": "src-judiciary-supreme-court-certified-copy-alt-1",
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "url": "https://supremecourt.gov.bd/web/index.php?lang=&menu=11&page=tutorial.php",
+      "title": "Home : Supreme Court of Bangladesh",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://supremecourt.gov.bd/web/index.php?lang=&menu=11&page=tutorial.php",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Home : Supreme Court of Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "e5decda8a88bfb6f",
+        "retrieved_at": "2026-08-25T03:28:01.329306+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

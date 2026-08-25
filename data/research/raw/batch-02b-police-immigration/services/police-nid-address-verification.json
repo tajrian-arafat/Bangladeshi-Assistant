@@ -1,0 +1,98 @@
+{
+  "service_id": "police-nid-address-verification",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Address/NID-based Police Verification",
+  "service_name_bn": "NID/ঠিকানা ভিত্তিক পুলিশ ভেরিফিকেশন",
+  "aliases": [
+    "tenant verification",
+    "address verification police"
+  ],
+  "banglish_variants": [],
+  "category_id": "police",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police (local unit)",
+  "target_applicant": [
+    "citizen",
+    "employer"
+  ],
+  "official_application_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "police-nid-address-verification::c-nid-verify-when-no-passport-address",
+      "legacy_claim_id": "c-nid-verify-when-no-passport-address",
+      "service_id": "police-nid-address-verification",
+      "claim_type": "conditional_document",
+      "claim_text": "When passport lacks address, NID/birth certificate/ward councillor certificate may establish present address for police verification/PCC (attested).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "passport_lacks_address"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page",
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-nid-address-verification::c-nid-verify-when-no-passport-address-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "CONDITIONAL"
+    },
+    {
+      "claim_id": "police-nid-address-verification::c-nid-address-match",
+      "legacy_claim_id": "c-nid-address-match",
+      "service_id": "police-nid-address-verification",
+      "claim_type": "eligibility",
+      "claim_text": "Present address on NID/birth/ward councillor certificate must match applicant present address for verification purposes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED",
+        "if": "passport_lacks_address"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-nid-address-verification::c-nid-address-match-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-nid-address-verification::c-nid-not-standalone-service-url",
+      "legacy_claim_id": "c-nid-not-standalone-service-url",
+      "service_id": "police-nid-address-verification",
+      "claim_type": "application_url",
+      "claim_text": "No dedicated standalone portal URL for address/NID verification; service routed through local police unit / PCC / verification request context.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter",
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-nid-address-verification::c-nid-not-standalone-service-url-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    }
+  ],
+  "notes": "PCC and verification use NID/birth ID/ward councillor certificate when passport lacks address.",
+  "prior_batch_research": null
+}

@@ -1,0 +1,134 @@
+{
+  "service_id": "btrc-neir-imei-check",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "NEIR IMEI Verification",
+  "service_name_bn": "এনইআইআর আইএমইআই যাচাই",
+  "aliases": [
+    "IMEI check Bangladesh",
+    "KYD 16002",
+    "phone verification BTRC"
+  ],
+  "category_id": "ict",
+  "profile_key": "OTHER",
+  "responsible_agency": "Bangladesh Telecommunication Regulatory Commission (BTRC)",
+  "official_application_url": "https://neir.btrc.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "btrc-neir-imei-check::c-catalogue-authority",
+      "service_id": "btrc-neir-imei-check",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Telecommunication Regulatory Commission (BTRC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-neir-imei-check::c-official-portal",
+      "service_id": "btrc-neir-imei-check",
+      "claim_type": "application_url",
+      "claim_text": "NEIR IMEI Verification official information is published at https://neir.btrc.gov.bd/ (page title: NEIR Citizen).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://neir.btrc.gov.bd/"
+      },
+      "source_ids": [
+        "src-btrc-neir-imei-check-official"
+      ],
+      "evidence_ids": [
+        "ev-btrc-neir-imei-check::c-official-portal-src-btrc-neir-imei-check-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-neir-imei-check::c-procedure-overview",
+      "service_id": "btrc-neir-imei-check",
+      "claim_type": "procedure_step",
+      "claim_text": "NEIR IMEI Verification is a government service under Bangladesh Telecommunication Regulatory Commission (BTRC) (telecom regulation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-neir-imei-check-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-neir-imei-check::c-service-identity",
+      "service_id": "btrc-neir-imei-check",
+      "claim_type": "eligibility",
+      "claim_text": "NEIR IMEI Verification (এনইআইআর আইএমইআই যাচাই) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-neir-imei-check-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-btrc-neir-imei-check-official",
+      "service_id": "btrc-neir-imei-check",
+      "url": "https://neir.btrc.gov.bd/",
+      "title": "NEIR Citizen",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://neir.btrc.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "NEIR Citizen",
+        "content_type": "text/html",
+        "content_hash": "bf759b0caa56910c",
+        "retrieved_at": "2026-08-25T03:23:58.906395+00:00"
+      },
+      "evidence_locator": "probe:https://neir.btrc.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-btrc-neir-imei-check-fee-unverified",
+      "service_id": "btrc-neir-imei-check",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for NEIR IMEI Verification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-btrc-neir-imei-check-documents-unverified",
+      "service_id": "btrc-neir-imei-check",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for NEIR IMEI Verification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

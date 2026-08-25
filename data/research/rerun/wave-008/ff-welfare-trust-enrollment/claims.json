@@ -1,0 +1,72 @@
+{
+  "service_id": "ff-welfare-trust-enrollment",
+  "claims": [
+    {
+      "claim_id": "ff-welfare-trust-enrollment::c-catalogue-authority",
+      "service_id": "ff-welfare-trust-enrollment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Freedom Fighters Welfare Trust (BFFWT).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-welfare-trust-enrollment::c-official-portal",
+      "service_id": "ff-welfare-trust-enrollment",
+      "claim_type": "application_url",
+      "claim_text": "Freedom Fighter Welfare Trust Enrollment Application official information is published at https://tmis.bffwt.gov.bd/applicationform/ (page title: বাংলাদেশ মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট - হোম).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://tmis.bffwt.gov.bd/applicationform/"
+      },
+      "source_ids": [
+        "src-ff-welfare-trust-enrollment-official"
+      ],
+      "evidence_ids": [
+        "ev-ff-welfare-trust-enrollment::c-official-portal-src-ff-welfare-trust-enrollment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-welfare-trust-enrollment::c-procedure-overview",
+      "service_id": "ff-welfare-trust-enrollment",
+      "claim_type": "procedure_step",
+      "claim_text": "Freedom Fighter Welfare Trust Enrollment Application is a government service under Bangladesh Freedom Fighters Welfare Trust (BFFWT) (freedom fighter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-welfare-trust-enrollment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-welfare-trust-enrollment::c-service-identity",
+      "service_id": "ff-welfare-trust-enrollment",
+      "claim_type": "eligibility",
+      "claim_text": "Freedom Fighter Welfare Trust Enrollment Application (মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট তালিকাভুক্তি) is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-welfare-trust-enrollment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

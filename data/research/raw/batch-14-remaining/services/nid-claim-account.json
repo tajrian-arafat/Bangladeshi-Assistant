@@ -1,0 +1,44 @@
+{
+  "service_id": "nid-claim-account",
+  "batch_id": "batch-14-remaining",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Claim NID Online Account",
+  "service_name_bn": "অ্যাকাউন্ট দাবি (ক্লেইম)",
+  "aliases": [
+    "claim account",
+    "existing NID registration online"
+  ],
+  "category_id": "identity",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "nid-claim-account::c-application-portal",
+      "service_id": "nid-claim-account",
+      "claim_type": "application_url",
+      "claim_text": "Claim NID Online Account is associated with NBR e-service portal https://services.nidw.gov.bd/nid-pub/?locale=en.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-nid-claim-account",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-claim-account::c-responsible-authority",
+      "service_id": "nid-claim-account",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Election Commission (NID Wing).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "service_id": "local-certificate-verify",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Union Certificate Verification Search",
+  "service_name_bn": "ইউনিয়ন সনদ যাচাই",
+  "aliases": [
+    "sonod search",
+    "certificate tracking"
+  ],
+  "category_id": "certificates",
+  "profile_key": "OTHER",
+  "responsible_agency": "Union Parishad (Digital Union Tax System)",
+  "official_application_url": "https://uniontax.gov.bd/sonod/search",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "local-certificate-verify::c-catalogue-authority",
+      "service_id": "local-certificate-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad (Digital Union Tax System).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-certificate-verify::c-official-portal",
+      "service_id": "local-certificate-verify",
+      "claim_type": "application_url",
+      "claim_text": "Union Certificate Verification Search official information is published at https://uniontax.gov.bd/sonod/search (page title: ইউনিয়ন পরিষদ ক্যাশলেস সেবা সিস্টেম).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://uniontax.gov.bd/sonod/search"
+      },
+      "source_ids": [
+        "src-local-certificate-verify-official"
+      ],
+      "evidence_ids": [
+        "ev-local-certificate-verify::c-official-portal-src-local-certificate-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-certificate-verify::c-procedure-overview",
+      "service_id": "local-certificate-verify",
+      "claim_type": "procedure_step",
+      "claim_text": "Union Certificate Verification Search is a government service under Union Parishad (Digital Union Tax System) (verification). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-certificate-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-certificate-verify::c-service-identity",
+      "service_id": "local-certificate-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Union Certificate Verification Search (ইউনিয়ন সনদ যাচাই) is a confirmed government service in category certificates, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-certificate-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-local-certificate-verify-official",
+      "service_id": "local-certificate-verify",
+      "url": "https://uniontax.gov.bd/sonod/search",
+      "title": "ইউনিয়ন পরিষদ ক্যাশলেস সেবা সিস্টেম",
+      "authority_id": "union-parishad-digital-union-tax-system",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://uniontax.gov.bd/sonod/search",
+        "status_code": 200,
+        "reachable": true,
+        "title": "ইউনিয়ন পরিষদ ক্যাশলেস সেবা সিস্টেম",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "e0802f2097361131",
+        "retrieved_at": "2026-08-25T03:28:18.392302+00:00"
+      },
+      "evidence_locator": "probe:https://uniontax.gov.bd/sonod/search"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-local-certificate-verify-fee-unverified",
+      "service_id": "local-certificate-verify",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Union Certificate Verification Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-certificate-verify-documents-unverified",
+      "service_id": "local-certificate-verify",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Union Certificate Verification Search.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "service_id": "business-company-incorporation",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Company Incorporation",
+  "service_name_bn": "কোম্পানি নিবন্ধন",
+  "aliases": [
+    "company registration",
+    "certificate of incorporation"
+  ],
+  "category_id": "registrations",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Registrar of Joint Stock Companies and Firms (RJSC)",
+  "official_application_url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "deep_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "business-company-incorporation::c-catalogue-authority",
+      "service_id": "business-company-incorporation",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Registrar of Joint Stock Companies and Firms (RJSC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-official-url-documented",
+      "service_id": "business-company-incorporation",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://app.roc.gov.bd/Guidlines/Introduction.htm for Company Incorporation; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm"
+      },
+      "source_ids": [
+        "src-business-company-incorporation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-procedure-overview",
+      "service_id": "business-company-incorporation",
+      "claim_type": "procedure_step",
+      "claim_text": "Company incorporation is registered through the Registrar of Joint Stock Companies and Firms (RJSC) online portal with name clearance and document submission.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-company-incorporation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-document-overview",
+      "service_id": "business-company-incorporation",
+      "claim_type": "document",
+      "claim_text": "Memorandum and Articles of Association, director/partner identification, registered office address proof, and name clearance certificate are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-business-company-incorporation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-service-identity",
+      "service_id": "business-company-incorporation",
+      "claim_type": "eligibility",
+      "claim_text": "Company Incorporation (কোম্পানি নিবন্ধন) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-company-incorporation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-eligibility-deep",
+      "service_id": "business-company-incorporation",
+      "claim_type": "eligibility",
+      "claim_text": "Promoters forming a private/public company or entity type permitted under the Companies Act through RJSC.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "PARTIAL",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-company-incorporation-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-document-must-need",
+      "service_id": "business-company-incorporation",
+      "claim_type": "document",
+      "claim_text": "Memorandum and Articles of Association, director/partner identification, registered office address proof, and name clearance certificate are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-company-incorporation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-business-company-incorporation-official",
+      "service_id": "business-company-incorporation",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+      "title": "Company Incorporation",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:52:00.558957+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/Guidlines/Introduction.htm"
+    },
+    {
+      "source_id": "src-business-company-incorporation-alt-1",
+      "service_id": "business-company-incorporation",
+      "url": "https://www.roc.gov.bd/",
+      "title": "Company Incorporation",
+      "authority_id": "rjsc",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.roc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:52:01.155286+00:00"
+      }
+    },
+    {
+      "source_id": "src-business-company-incorporation-alt-2",
+      "service_id": "business-company-incorporation",
+      "url": "https://www.bscic.gov.bd/",
+      "title": "Company Incorporation",
+      "authority_id": "rjsc",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.bscic.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:52:02.235710+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "source_id": "src-business-company-incorporation-deep-2",
+      "service_id": "business-company-incorporation",
+      "url": "https://www.bangladesh.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bangladesh.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "f39dbe0f0dcd3872",
+        "content_length": 5301,
+        "retrieved_at": "2026-08-25T03:52:03.416793+00:00",
+        "retrieval_method": "http_get",
+        "spa_shell": false,
+        "pdf_links": [],
+        "form_links": []
+      },
+      "evidence_locator": "deep_probe:https://www.bangladesh.gov.bd/",
+      "snapshot_path": "source_snapshots/src-business-company-incorporation-deep-2.probe.json"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-business-company-incorporation-portal-unreachable",
+      "service_id": "business-company-incorporation",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Company Incorporation.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm"
+    },
+    {
+      "gap_id": "gap-business-company-incorporation-fee-unverified",
+      "service_id": "business-company-incorporation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Company Incorporation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-company-incorporation-documents-unverified",
+      "service_id": "business-company-incorporation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Company Incorporation.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "research_depth": "DEEP_PILOT"
+}

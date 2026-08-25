@@ -1,0 +1,28 @@
+{
+  "service_id": "housing-rajuk-planning-permit",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-housing-rajuk-planning-permit-portal-unreachable",
+      "service_id": "housing-rajuk-planning-permit",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for RAJUK Planning Permit (PP).",
+      "severity": "MEDIUM",
+      "url": "https://ecps.gov.bd/"
+    },
+    {
+      "gap_id": "gap-housing-rajuk-planning-permit-fee-unverified",
+      "service_id": "housing-rajuk-planning-permit",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for RAJUK Planning Permit (PP).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-housing-rajuk-planning-permit-documents-unverified",
+      "service_id": "housing-rajuk-planning-permit",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for RAJUK Planning Permit (PP).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

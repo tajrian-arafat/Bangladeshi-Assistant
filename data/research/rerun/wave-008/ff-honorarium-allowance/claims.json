@@ -1,0 +1,72 @@
+{
+  "service_id": "ff-honorarium-allowance",
+  "claims": [
+    {
+      "claim_id": "ff-honorarium-allowance::c-catalogue-authority",
+      "service_id": "ff-honorarium-allowance",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Liberation War Affairs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-honorarium-allowance::c-official-portal",
+      "service_id": "ff-honorarium-allowance",
+      "claim_type": "application_url",
+      "claim_text": "Freedom Fighter Honorarium Allowance official information is published at https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf (page title: Freedom Fighter Honorarium Allowance).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf"
+      },
+      "source_ids": [
+        "src-ff-honorarium-allowance-official"
+      ],
+      "evidence_ids": [
+        "ev-ff-honorarium-allowance::c-official-portal-src-ff-honorarium-allowance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-honorarium-allowance::c-procedure-overview",
+      "service_id": "ff-honorarium-allowance",
+      "claim_type": "procedure_step",
+      "claim_text": "Freedom Fighter Honorarium Allowance is a government service under Ministry of Liberation War Affairs (freedom fighter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-honorarium-allowance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-honorarium-allowance::c-service-identity",
+      "service_id": "ff-honorarium-allowance",
+      "claim_type": "eligibility",
+      "claim_text": "Freedom Fighter Honorarium Allowance (মুক্তিযোদ্ধা সম্মানি ভাতা) is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-honorarium-allowance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

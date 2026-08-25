@@ -1,0 +1,27 @@
+{
+  "service_id": "election-candidate-nomination",
+  "gaps": [
+    {
+      "gap_id": "gap-election-candidate-nomination-portal-unreachable",
+      "service_id": "election-candidate-nomination",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Election Candidate Nomination and Schedule Services.",
+      "severity": "MEDIUM",
+      "url": "https://www.ecs.gov.bd/"
+    },
+    {
+      "gap_id": "gap-election-candidate-nomination-fee-unverified",
+      "service_id": "election-candidate-nomination",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Election Candidate Nomination and Schedule Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-election-candidate-nomination-documents-unverified",
+      "service_id": "election-candidate-nomination",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Election Candidate Nomination and Schedule Services.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

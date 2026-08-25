@@ -1,0 +1,70 @@
+{
+  "service_id": "land-mutation-khatian-search",
+  "claims": [
+    {
+      "claim_id": "land-mutation-khatian-search::c-catalogue-authority",
+      "service_id": "land-mutation-khatian-search",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land (DLRMS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mutation-khatian-search::c-official-url-documented",
+      "service_id": "land-mutation-khatian-search",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://dlrms.land.gov.bd/ for Mutation Khatian Search; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dlrms.land.gov.bd/"
+      },
+      "source_ids": [
+        "src-land-mutation-khatian-search-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mutation-khatian-search::c-procedure-overview",
+      "service_id": "land-mutation-khatian-search",
+      "claim_type": "procedure_step",
+      "claim_text": "Mutation Khatian Search is a government service under Ministry of Land (DLRMS) (khatian search). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mutation-khatian-search-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mutation-khatian-search::c-service-identity",
+      "service_id": "land-mutation-khatian-search",
+      "claim_type": "eligibility",
+      "claim_text": "Mutation Khatian Search (নামজারি খতিয়ান অনুসন্ধান) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mutation-khatian-search-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

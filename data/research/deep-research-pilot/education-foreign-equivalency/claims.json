@@ -1,0 +1,122 @@
+{
+  "service_id": "education-foreign-equivalency",
+  "claims": [
+    {
+      "claim_id": "education-foreign-equivalency::c-catalogue-authority",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Board of Intermediate and Secondary Education (respective board).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-foreign-equivalency::c-official-url-documented",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://www.educationboard.gov.bd/dhaka/rules_business.php for Foreign Qualification Equivalency; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/dhaka/rules_business.php"
+      },
+      "source_ids": [
+        "src-education-foreign-equivalency-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-foreign-equivalency::c-procedure-overview",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "procedure_step",
+      "claim_text": "Foreign degree equivalency/certificate equivalence is processed through the relevant Education Board or UGC depending on qualification level.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-foreign-equivalency-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-foreign-equivalency::c-document-overview",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "document",
+      "claim_text": "Original foreign certificates, transcripts, passport copy, and translations (where required) are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-education-foreign-equivalency-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-foreign-equivalency::c-service-identity",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "eligibility",
+      "claim_text": "Foreign Qualification Equivalency (বিদেশি ডিগ্রির সমতুল্যতা) is a confirmed government service in category education, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-foreign-equivalency-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-foreign-equivalency::c-eligibility-deep",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "eligibility",
+      "claim_text": "Bangladeshi citizens or residents seeking recognition of foreign academic qualifications.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "PARTIAL",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-foreign-equivalency-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-foreign-equivalency::c-document-must-need",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "document",
+      "claim_text": "Original foreign certificates, transcripts, passport copy, and translations (where required) are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-foreign-equivalency-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "mofa-nv-loi-application",
+  "claims": [
+    {
+      "claim_id": "mofa-nv-loi-application::c-catalogue-authority",
+      "service_id": "mofa-nv-loi-application",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-nv-loi-application::c-official-portal",
+      "service_id": "mofa-nv-loi-application",
+      "claim_type": "application_url",
+      "claim_text": "Note Verbale and Letter of Introduction (LOI) Application official information is published at https://nvloi.mofa.gov.bd/ (page title: Note verbale | myGov).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nvloi.mofa.gov.bd/"
+      },
+      "source_ids": [
+        "src-mofa-nv-loi-application-official"
+      ],
+      "evidence_ids": [
+        "ev-mofa-nv-loi-application::c-official-portal-src-mofa-nv-loi-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-nv-loi-application::c-procedure-overview",
+      "service_id": "mofa-nv-loi-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Note Verbale and Letter of Introduction (LOI) Application is a government service under Ministry of Foreign Affairs (MOFA) (diplomatic). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-nv-loi-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-nv-loi-application::c-service-identity",
+      "service_id": "mofa-nv-loi-application",
+      "claim_type": "eligibility",
+      "claim_text": "Note Verbale and Letter of Introduction (LOI) Application (Note Verbale / LOI আবেদন) is a confirmed government service in category passport_immigration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-nv-loi-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

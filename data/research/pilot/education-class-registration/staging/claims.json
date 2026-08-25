@@ -1,0 +1,54 @@
+{
+  "claims": [
+    {
+      "claim_id": "education-class-registration::c-official-url-documented",
+      "service_id": "education-class-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://www.educationboard.gov.bd/sylhet/activities.php for Class IX/XI Board Registration; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/sylhet/activities.php"
+      },
+      "source_ids": [
+        "src-education-class-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-class-registration::c-procedure-overview",
+      "service_id": "education-class-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Class registration/enrollment is handled through the relevant education authority or institution EMIS portal.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-class-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-class-registration::c-service-identity",
+      "service_id": "education-class-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Class IX/XI Board Registration (\u09a8\u09ac\u09ae/\u098f\u0995\u09be\u09a6\u09b6 \u09b6\u09cd\u09b0\u09c7\u09a3\u09c0 \u09b0\u09c7\u099c\u09bf\u09b8\u09cd\u099f\u09cd\u09b0\u09c7\u09b6\u09a8) is a confirmed government service in category education, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-class-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

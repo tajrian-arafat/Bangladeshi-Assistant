@@ -1,0 +1,20 @@
+{
+  "service_id": "ff-mis-freedom-fighter-list",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-ff-mis-freedom-fighter-list-fee-unverified",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Freedom Fighter List (MIS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-ff-mis-freedom-fighter-list-documents-unverified",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Freedom Fighter List (MIS).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

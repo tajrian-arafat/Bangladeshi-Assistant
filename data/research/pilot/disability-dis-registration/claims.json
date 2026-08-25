@@ -1,0 +1,90 @@
+{
+  "service_id": "disability-dis-registration",
+  "claims": [
+    {
+      "claim_id": "disability-dis-registration::c-catalogue-authority",
+      "service_id": "disability-dis-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Social Services (DSS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "disability-dis-registration::c-official-portal",
+      "service_id": "disability-dis-registration",
+      "claim_type": "application_url",
+      "claim_text": "Disability Registration and Identity Card (DIS) official information is published at https://www.dis.gov.bd/ (page title: DIS - হোম).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.dis.gov.bd/"
+      },
+      "source_ids": [
+        "src-disability-dis-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-disability-dis-registration::c-official-portal-src-disability-dis-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "disability-dis-registration::c-procedure-overview",
+      "service_id": "disability-dis-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Disability identification and registration is managed by the Department of Social Services (DIS).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-disability-dis-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "disability-dis-registration::c-document-overview",
+      "service_id": "disability-dis-registration",
+      "claim_type": "document",
+      "claim_text": "Medical assessment report and NID are typically required for disability registration.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-disability-dis-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "disability-dis-registration::c-service-identity",
+      "service_id": "disability-dis-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Disability Registration and Identity Card (DIS) (প্রতিবন্ধী নিবন্ধন ও পরিচয়পত্র (DIS)) is a confirmed government service in category disability, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-disability-dis-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

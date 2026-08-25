@@ -1,0 +1,28 @@
+{
+  "service_id": "post-cash-card",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-post-cash-card-portal-unreachable",
+      "service_id": "post-cash-card",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Postal Cash Card.",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-"
+    },
+    {
+      "gap_id": "gap-post-cash-card-fee-unverified",
+      "service_id": "post-cash-card",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Postal Cash Card.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-cash-card-documents-unverified",
+      "service_id": "post-cash-card",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Postal Cash Card.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "service_id": "post-cash-card",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Postal Cash Card",
+  "service_name_bn": "পোস্টাল ক্যাশ কার্ড",
+  "aliases": [
+    "post office cash card"
+  ],
+  "category_id": "post",
+  "profile_key": "OTHER",
+  "responsible_agency": "Bangladesh Post Office (Directorate of Posts)",
+  "official_application_url": "https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "post-cash-card::c-catalogue-authority",
+      "service_id": "post-cash-card",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-cash-card::c-official-url-documented",
+      "service_id": "post-cash-card",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/- for Postal Cash Card; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-"
+      },
+      "source_ids": [
+        "src-post-cash-card-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-cash-card::c-procedure-overview",
+      "service_id": "post-cash-card",
+      "claim_type": "procedure_step",
+      "claim_text": "Postal Cash Card is a government service under Bangladesh Post Office (Directorate of Posts) (financial). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-cash-card-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-cash-card::c-service-identity",
+      "service_id": "post-cash-card",
+      "claim_type": "eligibility",
+      "claim_text": "Postal Cash Card (পোস্টাল ক্যাশ কার্ড) is a confirmed government service in category post, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-cash-card-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-post-cash-card-official",
+      "service_id": "post-cash-card",
+      "url": "https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-",
+      "title": "Postal Cash Card",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:29:27.394051+00:00"
+      },
+      "evidence_locator": "probe:https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-post-cash-card-portal-unreachable",
+      "service_id": "post-cash-card",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Postal Cash Card.",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-"
+    },
+    {
+      "gap_id": "gap-post-cash-card-fee-unverified",
+      "service_id": "post-cash-card",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Postal Cash Card.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-cash-card-documents-unverified",
+      "service_id": "post-cash-card",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Postal Cash Card.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

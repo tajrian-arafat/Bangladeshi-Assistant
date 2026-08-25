@@ -1,0 +1,20 @@
+{
+  "service_id": "mofa-document-attestation",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-mofa-document-attestation-fee-unverified",
+      "service_id": "mofa-document-attestation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for MOFA Document Attestation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-mofa-document-attestation-documents-unverified",
+      "service_id": "mofa-document-attestation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for MOFA Document Attestation.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

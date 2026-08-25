@@ -1,0 +1,292 @@
+{
+  "service_id": "brta-ownership-transfer",
+  "batch_id": "batch-03b-brta-vehicle",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Motor Vehicle Ownership Transfer",
+  "service_name_bn": "মালিকানা বদল/হস্তান্তর",
+  "aliases": [
+    "transfer of ownership",
+    "TO TTO",
+    "vehicle sale transfer"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner"
+  ],
+  "official_application_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-ownership-transfer::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "application_url",
+      "claim_text": "Motor vehicle ownership transfer guidance is published on BRTA portal static page for মালিকানা বদল/হস্তান্তর.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-ownership-transfer",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-portal-url-src-brta-portal-ownership-transfer"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-to-tto-forms-required",
+      "legacy_claim_id": "c-to-tto-forms-required",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "document",
+      "claim_text": "Transfer of ownership requires prescribed TO/TTO forms (Transfer Order / Transfer Take Over) per catalogue notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-to-tto-forms-required-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-original-rc-required",
+      "legacy_claim_id": "c-original-rc-required",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "document",
+      "claim_text": "Original registration certificate (RC/DRC) must be submitted for ownership transfer.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-original-rc-required-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-buyer-tin-required",
+      "legacy_claim_id": "c-buyer-tin-required",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "document",
+      "claim_text": "Buyer TIN certificate required for ownership transfer per catalogue discovery notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED",
+        "if": "buyer_is_individual_or_entity_requiring_tin"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-buyer-tin-required-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-affidavits-required",
+      "legacy_claim_id": "c-affidavits-required",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "document",
+      "claim_text": "Seller and/or buyer affidavits required supporting ownership transfer application per catalogue notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-affidavits-required-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-seller-buyer-both-parties",
+      "legacy_claim_id": "c-seller-buyer-both-parties",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "eligibility",
+      "claim_text": "Both seller (current registered owner) and buyer must participate in ownership transfer with identity and ownership proof.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-ownership-transfer",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-seller-buyer-both-parties-src-brta-portal-ownership-transfer"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-transfer-fee-calculator",
+      "legacy_claim_id": "c-transfer-fee-calculator",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "fee",
+      "claim_text": "Ownership transfer fees differ from new registration fees; amounts are vehicle-type dependent via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-ownership-transfer",
+        "vehicle_type": "VARIES",
+        "action": "ownership_transfer",
+        "condition": "vehicle_class_and_transfer_type",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-transfer-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-tax-fitness-current",
+      "legacy_claim_id": "c-tax-fitness-current",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "conditional_document",
+      "claim_text": "Current tax token and valid fitness (where applicable by vehicle class) may be required before transfer is processed.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "vehicle_class_requires_tax_and_fitness"
+      },
+      "source_ids": [
+        "src-brta-portal-ownership-transfer",
+        "src-brta-portal-fitness-crossref"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-tax-fitness-current-src-brta-portal-ownership-transfer"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-circle-office-submission",
+      "legacy_claim_id": "c-circle-office-submission",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "procedure_step",
+      "claim_text": "Ownership transfer application submitted to relevant BRTA circle office with completed forms and supporting documents.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-circle-office-submission-src-brta-portal-ownership-transfer"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-lost-rc-gd-conditional",
+      "legacy_claim_id": "c-lost-rc-gd-conditional",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "conditional_document",
+      "claim_text": "If original RC is lost, General Diary (GD) and replacement/DRC reissue steps may be required before transfer — not a separate catalogue service.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "registration_certificate_lost"
+      },
+      "source_ids": [
+        "src-brta-portal-ownership-transfer",
+        "src-brta-portal-drc"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-lost-rc-gd-conditional-src-brta-portal-ownership-transfer"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-practical-verify-fees-before-visit",
+      "legacy_claim_id": "c-practical-verify-fees-before-visit",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "practical_tip",
+      "claim_text": "Use BSP fee calculator and payment verification before visiting circle office for ownership transfer to avoid rejected applications.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-ownership-transfer::c-practical-verify-fees-before-visit-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Requires TO/TTO forms, original registration certificate, buyer TIN, affidavits.",
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator, hours)"
+}

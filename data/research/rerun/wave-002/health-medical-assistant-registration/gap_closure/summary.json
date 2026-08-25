@@ -1,0 +1,28 @@
+{
+  "service_id": "health-medical-assistant-registration",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-health-medical-assistant-registration-portal-unreachable",
+      "service_id": "health-medical-assistant-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Medical Assistant BMDC Registration.",
+      "severity": "MEDIUM",
+      "url": "https://payment.bmdc.org.bd/home/page/form-list"
+    },
+    {
+      "gap_id": "gap-health-medical-assistant-registration-fee-unverified",
+      "service_id": "health-medical-assistant-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Medical Assistant BMDC Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-medical-assistant-registration-documents-unverified",
+      "service_id": "health-medical-assistant-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Medical Assistant BMDC Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

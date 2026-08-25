@@ -1,0 +1,70 @@
+{
+  "service_id": "housing-nha-allotment-application",
+  "claims": [
+    {
+      "claim_id": "housing-nha-allotment-application::c-catalogue-authority",
+      "service_id": "housing-nha-allotment-application",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Housing Authority (NHA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "housing-nha-allotment-application::c-official-url-documented",
+      "service_id": "housing-nha-allotment-application",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://nha.gov.bd/ for National Housing Authority Flat Allotment Application; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nha.gov.bd/"
+      },
+      "source_ids": [
+        "src-housing-nha-allotment-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "housing-nha-allotment-application::c-procedure-overview",
+      "service_id": "housing-nha-allotment-application",
+      "claim_type": "procedure_step",
+      "claim_text": "National Housing Authority Flat Allotment Application is a government service under National Housing Authority (NHA) (allotment). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-housing-nha-allotment-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "housing-nha-allotment-application::c-service-identity",
+      "service_id": "housing-nha-allotment-application",
+      "claim_type": "eligibility",
+      "claim_text": "National Housing Authority Flat Allotment Application (জাতীয় গৃহায়ন কর্তৃপক্ষ (NHA) flat allotment) is a confirmed government service in category housing, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-housing-nha-allotment-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

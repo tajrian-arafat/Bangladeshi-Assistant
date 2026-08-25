@@ -1,0 +1,72 @@
+{
+  "service_id": "business-cooperative-society-registration",
+  "claims": [
+    {
+      "claim_id": "business-cooperative-society-registration::c-catalogue-authority",
+      "service_id": "business-cooperative-society-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Cooperatives (RDCD).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-cooperative-society-registration::c-official-portal",
+      "service_id": "business-cooperative-society-registration",
+      "claim_type": "application_url",
+      "claim_text": "Cooperative Society Registration official information is published at https://service.rdcd.gov.bd/ (page title: আবেদনের জন্য দপ্তর ভিত্তিক সেবা নির্বাচন | পল্লী উন্নয়ন ও সমবায় বিভাগ সেবা | RDCD Services).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://service.rdcd.gov.bd/"
+      },
+      "source_ids": [
+        "src-business-cooperative-society-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-business-cooperative-society-registration::c-official-portal-src-business-cooperative-society-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-cooperative-society-registration::c-procedure-overview",
+      "service_id": "business-cooperative-society-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Cooperative Society Registration is a government service under Department of Cooperatives (RDCD) (cooperative). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-cooperative-society-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-cooperative-society-registration::c-service-identity",
+      "service_id": "business-cooperative-society-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Cooperative Society Registration (সমবায় সমিতি নিবন্ধন) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-cooperative-society-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

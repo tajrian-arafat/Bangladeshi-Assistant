@@ -1,0 +1,538 @@
+{
+  "generated_at": "2026-08-25T03:13:02.564116+00:00",
+  "pilot_service_count": 10,
+  "pilot_passed": true,
+  "pilot_services": [
+    {
+      "service_id": "land-deed-registration",
+      "category_id": "land",
+      "profile_key": "LAND",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 4,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-deed-registration",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "land-deed-registration",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 4,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "education-class-registration",
+      "category_id": "education",
+      "profile_key": "EDUCATION",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "education-class-registration",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "education-class-registration",
+        "profile_key": "EDUCATION",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "health-16263-telemedicine",
+      "category_id": "health",
+      "profile_key": "HEALTH",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 4,
+      "verified_claims": 4,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-16263-telemedicine",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "health-16263-telemedicine",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 4,
+        "verified_claims": 4,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "ff-g2p-electronic-payment",
+      "category_id": "social_protection",
+      "profile_key": "SOCIAL_PROTECTION",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "ff-g2p-electronic-payment",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "ff-g2p-electronic-payment",
+        "profile_key": "SOCIAL_PROTECTION",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "disability-dis-registration",
+      "category_id": "disability",
+      "profile_key": "DISABILITY",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 4,
+      "verified_claims": 4,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "disability-dis-registration",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "disability-dis-registration",
+        "profile_key": "DISABILITY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 4,
+        "verified_claims": 4,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "vat-bin-registration",
+      "category_id": "vat",
+      "profile_key": "TAX",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "vat-bin-registration",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "vat-bin-registration",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "dc-attestation-photocopy",
+      "category_id": "local_government",
+      "profile_key": "LOCAL_GOVERNMENT",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 4,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "dc-attestation-photocopy",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "dc-attestation-photocopy",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 4,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "judiciary-case-status-tracking",
+      "category_id": "judiciary",
+      "profile_key": "JUDICIARY",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "judiciary-case-status-tracking",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "judiciary-case-status-tracking",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "agri-bamis-farmer-registration",
+      "category_id": "agriculture",
+      "profile_key": "AGRICULTURE",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 4,
+      "verified_claims": 4,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "agri-bamis-farmer-registration",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "agri-bamis-farmer-registration",
+        "profile_key": "AGRICULTURE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 4,
+        "verified_claims": 4,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "employment-boesl-overseas-recruitment",
+      "category_id": "employment",
+      "profile_key": "EMPLOYMENT",
+      "research_status": "RESEARCH_COMPLETE",
+      "pilot_passed": true,
+      "meaningful_claims": 4,
+      "verified_claims": 4,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "employment-boesl-overseas-recruitment",
+        "total": 2,
+        "passed": 2,
+        "answer_supported": 2,
+        "correct_uncertainty": 0,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "note": "Pilot E2E uses artifact-quality checks; full orchestrator E2E blocked until runtime DB populated"
+      },
+      "evaluation": {
+        "service_id": "employment-boesl-overseas-recruitment",
+        "profile_key": "EMPLOYMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 4,
+        "verified_claims": 4,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    }
+  ],
+  "remaining_379_safe_to_rerun": true,
+  "verdict": "PILOT_PASSED",
+  "regression": {
+    "automation_exit_code": 0,
+    "automation_output_tail": [
+      "........................................................................ [100%]",
+      "72 passed in 0.91s"
+    ],
+    "backend_exit_code": 0,
+    "backend_output_tail": [
+      "..............................................................           [100%]",
+      "62 passed in 1.68s"
+    ],
+    "passed": true
+  }
+}

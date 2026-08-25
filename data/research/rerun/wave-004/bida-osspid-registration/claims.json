@@ -1,0 +1,70 @@
+{
+  "service_id": "bida-osspid-registration",
+  "claims": [
+    {
+      "claim_id": "bida-osspid-registration::c-catalogue-authority",
+      "service_id": "bida-osspid-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Investment Development Authority (BIDA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-osspid-registration::c-official-url-documented",
+      "service_id": "bida-osspid-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://irms.bida.gov.bd/set-registration-type/investor for OSSPID Account Registration (BIDA); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://irms.bida.gov.bd/set-registration-type/investor"
+      },
+      "source_ids": [
+        "src-bida-osspid-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-osspid-registration::c-procedure-overview",
+      "service_id": "bida-osspid-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "OSSPID Account Registration (BIDA) is a government service under Bangladesh Investment Development Authority (BIDA) (registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-osspid-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-osspid-registration::c-service-identity",
+      "service_id": "bida-osspid-registration",
+      "claim_type": "eligibility",
+      "claim_text": "OSSPID Account Registration (BIDA) (OSSPID নিবন্ধন (BIDA)) is a confirmed government service in category investment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-osspid-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

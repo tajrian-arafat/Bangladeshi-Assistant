@@ -1,0 +1,34 @@
+{
+  "service_id": "dpdc-online-bill-payment",
+  "sources": [
+    {
+      "source_id": "src-dpdc-online-bill-payment-official",
+      "service_id": "dpdc-online-bill-payment",
+      "url": "https://www.dpdc.org.bd/public/",
+      "title": "Dhaka Power Distribution Company Ltd.",
+      "authority_id": "dhaka-power-distribution-company-limited-dpdc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.dpdc.org.bd/public/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Dhaka Power Distribution Company Ltd.",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "f65b5e8e72c55c68",
+        "retrieved_at": "2026-08-25T03:26:33.741951+00:00"
+      },
+      "evidence_locator": "probe:https://www.dpdc.org.bd/public/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

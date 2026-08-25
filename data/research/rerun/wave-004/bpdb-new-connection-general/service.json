@@ -1,0 +1,136 @@
+{
+  "service_id": "bpdb-new-connection-general",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "BPDB New Electricity Connection (General Customer)",
+  "service_name_bn": "বিপিডিবি নতুন বিদ্যুৎ সংযোগ (সাধারণ গ্রাহক)",
+  "aliases": [
+    "BPDB connection",
+    "rural electricity connection"
+  ],
+  "category_id": "utilities",
+  "profile_key": "UTILITIES",
+  "responsible_agency": "Bangladesh Power Development Board (BPDB)",
+  "official_application_url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "bpdb-new-connection-general::c-catalogue-authority",
+      "service_id": "bpdb-new-connection-general",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Power Development Board (BPDB).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bpdb-new-connection-general::c-official-url-documented",
+      "service_id": "bpdb-new-connection-general",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717 for BPDB New Electricity Connection (General Customer); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717"
+      },
+      "source_ids": [
+        "src-bpdb-new-connection-general-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bpdb-new-connection-general::c-procedure-overview",
+      "service_id": "bpdb-new-connection-general",
+      "claim_type": "procedure_step",
+      "claim_text": "BPDB New Electricity Connection (General Customer) is a government service under Bangladesh Power Development Board (BPDB) (electricity connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bpdb-new-connection-general-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bpdb-new-connection-general::c-service-identity",
+      "service_id": "bpdb-new-connection-general",
+      "claim_type": "eligibility",
+      "claim_text": "BPDB New Electricity Connection (General Customer) (বিপিডিবি নতুন বিদ্যুৎ সংযোগ (সাধারণ গ্রাহক)) is a confirmed government service in category utilities, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bpdb-new-connection-general-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-bpdb-new-connection-general-official",
+      "service_id": "bpdb-new-connection-general",
+      "url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717",
+      "title": "BPDB New Electricity Connection (General Customer)",
+      "authority_id": "bangladesh-power-development-board-bpdb",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:21.224788+00:00"
+      },
+      "evidence_locator": "probe:https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-bpdb-new-connection-general-portal-unreachable",
+      "service_id": "bpdb-new-connection-general",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for BPDB New Electricity Connection (General Customer).",
+      "severity": "MEDIUM",
+      "url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717"
+    },
+    {
+      "gap_id": "gap-bpdb-new-connection-general-fee-unverified",
+      "service_id": "bpdb-new-connection-general",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BPDB New Electricity Connection (General Customer).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bpdb-new-connection-general-documents-unverified",
+      "service_id": "bpdb-new-connection-general",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BPDB New Electricity Connection (General Customer).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

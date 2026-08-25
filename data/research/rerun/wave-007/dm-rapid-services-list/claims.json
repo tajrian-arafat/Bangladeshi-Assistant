@@ -1,0 +1,72 @@
+{
+  "service_id": "dm-rapid-services-list",
+  "claims": [
+    {
+      "claim_id": "dm-rapid-services-list::c-catalogue-authority",
+      "service_id": "dm-rapid-services-list",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Disaster Management (DDM).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-rapid-services-list::c-official-portal",
+      "service_id": "dm-rapid-services-list",
+      "claim_type": "application_url",
+      "claim_text": "DDM RAPID Platform Services official information is published at https://rapid.ddm.gov.bd/service/list (page title: Department of Disaster Management).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://rapid.ddm.gov.bd/service/list"
+      },
+      "source_ids": [
+        "src-dm-rapid-services-list-official"
+      ],
+      "evidence_ids": [
+        "ev-dm-rapid-services-list::c-official-portal-src-dm-rapid-services-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-rapid-services-list::c-procedure-overview",
+      "service_id": "dm-rapid-services-list",
+      "claim_type": "procedure_step",
+      "claim_text": "DDM RAPID Platform Services is a government service under Department of Disaster Management (DDM) (platform). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-rapid-services-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-rapid-services-list::c-service-identity",
+      "service_id": "dm-rapid-services-list",
+      "claim_type": "eligibility",
+      "claim_text": "DDM RAPID Platform Services (DDM RAPID সেবা তালিকা) is a confirmed government service in category disaster_relief, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-rapid-services-list-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

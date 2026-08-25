@@ -1,0 +1,90 @@
+{
+  "service_id": "health-16263-telemedicine",
+  "claims": [
+    {
+      "claim_id": "health-16263-telemedicine::c-catalogue-authority",
+      "service_id": "health-16263-telemedicine",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Health Services (DGHS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-16263-telemedicine::c-official-portal",
+      "service_id": "health-16263-telemedicine",
+      "claim_type": "application_url",
+      "claim_text": "16263 Telemedicine Health Advice official information is published at http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update (page title: বাংলাদেশ মেডিকেল এন্ড ডেন্টাল কাউন্সিল এ নিবন্ধনকৃত সকল মেডিকেল/ডেন্টাল চিকি‘সকদের Profile Update সংক্রান্ত বিজ্ঞপ্তি).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update"
+      },
+      "source_ids": [
+        "src-health-16263-telemedicine-official"
+      ],
+      "evidence_ids": [
+        "ev-health-16263-telemedicine::c-official-portal-src-health-16263-telemedicine-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-16263-telemedicine::c-procedure-overview",
+      "service_id": "health-16263-telemedicine",
+      "claim_type": "procedure_step",
+      "claim_text": "16263 is the national telemedicine/health advice helpline operated under DGHS — citizens dial 16263 for health advice.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-16263-telemedicine-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-16263-telemedicine::c-document-overview",
+      "service_id": "health-16263-telemedicine",
+      "claim_type": "document",
+      "claim_text": "No documents required for helpline consultation; this is a phone-based health advice service.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-health-16263-telemedicine-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-16263-telemedicine::c-service-identity",
+      "service_id": "health-16263-telemedicine",
+      "claim_type": "eligibility",
+      "claim_text": "16263 Telemedicine Health Advice (১৬২৬৩ টেলিমেডিসিন/স্বাস্থ্য পরামর্শ) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-16263-telemedicine-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

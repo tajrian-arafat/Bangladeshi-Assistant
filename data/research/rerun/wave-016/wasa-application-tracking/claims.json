@@ -1,0 +1,72 @@
+{
+  "service_id": "wasa-application-tracking",
+  "claims": [
+    {
+      "claim_id": "wasa-application-tracking::c-catalogue-authority",
+      "service_id": "wasa-application-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Water Supply and Sewerage Authority (DWASA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "wasa-application-tracking::c-official-portal",
+      "service_id": "wasa-application-tracking",
+      "claim_type": "application_url",
+      "claim_text": "WASA Application Tracking official information is published at http://newconnection.dwasa.org.bd/Pages/User/FindTrackingNo.aspx (page title: WASA Application Tracking).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://newconnection.dwasa.org.bd/Pages/User/FindTrackingNo.aspx"
+      },
+      "source_ids": [
+        "src-wasa-application-tracking-official"
+      ],
+      "evidence_ids": [
+        "ev-wasa-application-tracking::c-official-portal-src-wasa-application-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "wasa-application-tracking::c-procedure-overview",
+      "service_id": "wasa-application-tracking",
+      "claim_type": "procedure_step",
+      "claim_text": "WASA Application Tracking is a government service under Dhaka Water Supply and Sewerage Authority (DWASA) (water portal). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-wasa-application-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "wasa-application-tracking::c-service-identity",
+      "service_id": "wasa-application-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "WASA Application Tracking (ওয়াসা আবেদন ট্র্যাকিং) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-wasa-application-tracking-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

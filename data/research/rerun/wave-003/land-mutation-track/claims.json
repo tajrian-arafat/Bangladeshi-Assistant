@@ -1,0 +1,70 @@
+{
+  "service_id": "land-mutation-track",
+  "claims": [
+    {
+      "claim_id": "land-mutation-track::c-catalogue-authority",
+      "service_id": "land-mutation-track",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mutation-track::c-official-url-documented",
+      "service_id": "land-mutation-track",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://mutation.land.gov.bd/search-application for Mutation Application Tracking; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://mutation.land.gov.bd/search-application"
+      },
+      "source_ids": [
+        "src-land-mutation-track-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mutation-track::c-procedure-overview",
+      "service_id": "land-mutation-track",
+      "claim_type": "procedure_step",
+      "claim_text": "Mutation Application Tracking is a government service under Ministry of Land (mutation tracking). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mutation-track-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mutation-track::c-service-identity",
+      "service_id": "land-mutation-track",
+      "claim_type": "eligibility",
+      "claim_text": "Mutation Application Tracking (মিউটেশন আবেদন ট্র্যাকিং) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mutation-track-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

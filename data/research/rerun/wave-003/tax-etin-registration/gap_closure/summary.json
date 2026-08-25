@@ -1,0 +1,20 @@
+{
+  "service_id": "tax-etin-registration",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-tax-etin-registration-fee-unverified",
+      "service_id": "tax-etin-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for e-TIN Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-etin-registration-documents-unverified",
+      "service_id": "tax-etin-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for e-TIN Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

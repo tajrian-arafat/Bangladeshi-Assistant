@@ -1,0 +1,32 @@
+{
+  "batch_id": "batch-02b-police-immigration",
+  "layer": "research/verification",
+  "publication_status": "STAGING_ONLY",
+  "published": false,
+  "verifier": "cursor-cloud-agent",
+  "verified_at": "2026-08-24T22:53:05.228339+00:00",
+  "total_claims": 77,
+  "status_counts": {
+    "VERIFIED": 60,
+    "CONFLICTING": 1,
+    "PARTIALLY_VERIFIED": 10,
+    "UNVERIFIED": 6
+  },
+  "official_claims_verified": 57,
+  "practical_claims": 1,
+  "conflicts_resolved": 2,
+  "conflicts_unresolved": 1,
+  "conflicts_partially_resolved": 2,
+  "knowledge_gaps_open": 10,
+  "services_green": 1,
+  "services_yellow": 10,
+  "services_red": 0,
+  "evidence_coverage_notes": "Live Tier-1: pcc.police.gov.bd (full PCC terms/fees/steps), dip.gov.bd, dip visa-online page. Live Tier-2: police citizen charter (GD/PCC/passport verification/employment/firearms/expatriate rows), police.gov.bd offline PCC page. Official PDFs: DIP visa types Dec 2024 (machine-readable); MRV fees Dec 2024 PDF scanned/unreadable. Failed fetches: gd.police.gov.bd (502), visa.gov.bd (SSL). Tier-5 GD expansion claims left UNVERIFIED.",
+  "verification_coverage": "77/77 claims assigned a primary verification status",
+  "main_limitations": [
+    "PCC offline BDT 500 CONFLICTING with online BDT 1500 \u2014 not published as universal fee",
+    "GD portal unreachable; online scope UNVERIFIED",
+    "visa.gov.bd unreachable; MRV fee amounts UNVERIFIED",
+    "Employment/passport verification numeric fees not on charter"
+  ]
+}

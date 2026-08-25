@@ -1,0 +1,70 @@
+{
+  "service_id": "health-bmdc-registration-verify",
+  "claims": [
+    {
+      "claim_id": "health-bmdc-registration-verify::c-catalogue-authority",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Medical and Dental Council (BMDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-registration-verify::c-official-url-documented",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://verify.bmdc.org.bd/ for BMDC Registration Verification; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://verify.bmdc.org.bd/"
+      },
+      "source_ids": [
+        "src-health-bmdc-registration-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-registration-verify::c-procedure-overview",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "procedure_step",
+      "claim_text": "BMDC Registration Verification is a government service under Bangladesh Medical and Dental Council (BMDC) (verification). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-bmdc-registration-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-registration-verify::c-service-identity",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "eligibility",
+      "claim_text": "BMDC Registration Verification (BMDC নিবন্ধন যাচাই) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-bmdc-registration-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

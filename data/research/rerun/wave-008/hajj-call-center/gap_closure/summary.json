@@ -1,0 +1,28 @@
+{
+  "service_id": "hajj-call-center",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-hajj-call-center-portal-unreachable",
+      "service_id": "hajj-call-center",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Hajj Call Center (16136).",
+      "severity": "MEDIUM",
+      "url": "https://pilgrim.hajj.gov.bd/"
+    },
+    {
+      "gap_id": "gap-hajj-call-center-fee-unverified",
+      "service_id": "hajj-call-center",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Hajj Call Center (16136).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-hajj-call-center-documents-unverified",
+      "service_id": "hajj-call-center",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Hajj Call Center (16136).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "service_id": "professional-engineer-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Professional Engineer Registration",
+  "service_name_bn": "ইঞ্জিনিয়ার নিবন্ধন (IEB/BPDB)",
+  "aliases": [
+    "IEB registration",
+    "engineer council Bangladesh"
+  ],
+  "category_id": "professional",
+  "profile_key": "PROFESSIONAL",
+  "responsible_agency": "Institution of Engineers Bangladesh (IEB)",
+  "official_application_url": "https://www.ieb.org.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "professional-engineer-registration::c-catalogue-authority",
+      "service_id": "professional-engineer-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Institution of Engineers Bangladesh (IEB).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "professional-engineer-registration::c-official-url-documented",
+      "service_id": "professional-engineer-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.ieb.org.bd/ for Professional Engineer Registration; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.ieb.org.bd/"
+      },
+      "source_ids": [
+        "src-professional-engineer-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "professional-engineer-registration::c-procedure-overview",
+      "service_id": "professional-engineer-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Professional Engineer Registration is a government service under Institution of Engineers Bangladesh (IEB) (engineering profession). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-professional-engineer-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "professional-engineer-registration::c-service-identity",
+      "service_id": "professional-engineer-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Professional Engineer Registration (ইঞ্জিনিয়ার নিবন্ধন (IEB/BPDB)) is a confirmed government service in category professional, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-professional-engineer-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-professional-engineer-registration-official",
+      "service_id": "professional-engineer-registration",
+      "url": "https://www.ieb.org.bd/",
+      "title": "Professional Engineer Registration",
+      "authority_id": "institution-of-engineers-bangladesh-ieb",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ieb.org.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:29:39.614711+00:00"
+      },
+      "evidence_locator": "probe:https://www.ieb.org.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-professional-engineer-registration-portal-unreachable",
+      "service_id": "professional-engineer-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Professional Engineer Registration.",
+      "severity": "MEDIUM",
+      "url": "https://www.ieb.org.bd/"
+    },
+    {
+      "gap_id": "gap-professional-engineer-registration-fee-unverified",
+      "service_id": "professional-engineer-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Professional Engineer Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-professional-engineer-registration-documents-unverified",
+      "service_id": "professional-engineer-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Professional Engineer Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

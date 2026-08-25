@@ -1,0 +1,136 @@
+{
+  "service_id": "btrc-neir-device-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Mobile Device Registration (NEIR)",
+  "service_name_bn": "মোবাইল ডিভাইস নিবন্ধন (এনইআইআর)",
+  "aliases": [
+    "IMEI registration",
+    "unregistered phone registration"
+  ],
+  "category_id": "ict",
+  "profile_key": "OTHER",
+  "responsible_agency": "Bangladesh Telecommunication Regulatory Commission (BTRC)",
+  "official_application_url": "https://neir.btrc.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "btrc-neir-device-registration::c-catalogue-authority",
+      "service_id": "btrc-neir-device-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Telecommunication Regulatory Commission (BTRC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-neir-device-registration::c-official-url-documented",
+      "service_id": "btrc-neir-device-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://neir.btrc.gov.bd/ for Mobile Device Registration (NEIR); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://neir.btrc.gov.bd/"
+      },
+      "source_ids": [
+        "src-btrc-neir-device-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-neir-device-registration::c-procedure-overview",
+      "service_id": "btrc-neir-device-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Mobile Device Registration (NEIR) is a government service under Bangladesh Telecommunication Regulatory Commission (BTRC) (telecom regulation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-neir-device-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-neir-device-registration::c-service-identity",
+      "service_id": "btrc-neir-device-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Mobile Device Registration (NEIR) (মোবাইল ডিভাইস নিবন্ধন (এনইআইআর)) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-neir-device-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-btrc-neir-device-registration-official",
+      "service_id": "btrc-neir-device-registration",
+      "url": "https://neir.btrc.gov.bd/",
+      "title": "Mobile Device Registration (NEIR)",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://neir.btrc.gov.bd/",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out",
+        "retrieved_at": "2026-08-25T03:23:57.875251+00:00"
+      },
+      "evidence_locator": "probe:https://neir.btrc.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-btrc-neir-device-registration-portal-unreachable",
+      "service_id": "btrc-neir-device-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Mobile Device Registration (NEIR).",
+      "severity": "MEDIUM",
+      "url": "https://neir.btrc.gov.bd/"
+    },
+    {
+      "gap_id": "gap-btrc-neir-device-registration-fee-unverified",
+      "service_id": "btrc-neir-device-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mobile Device Registration (NEIR).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-btrc-neir-device-registration-documents-unverified",
+      "service_id": "btrc-neir-device-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Mobile Device Registration (NEIR).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

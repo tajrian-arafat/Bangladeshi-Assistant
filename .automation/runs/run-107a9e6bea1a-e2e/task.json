@@ -1,0 +1,292 @@
+{
+  "task_id": "BATCH_10:E2E:run-107a9e6bea1a-e2e",
+  "batch_id": "BATCH_10",
+  "batch_slug": "batch-10-employment-migration",
+  "phase": "E2E",
+  "run_id": "run-107a9e6bea1a-e2e",
+  "service_ids": [
+    "employment-boesl-overseas-recruitment",
+    "employment-labour-court-adr",
+    "employment-trade-union-registration",
+    "expatriate-bmet-training",
+    "expatriate-emigration-clearance",
+    "expatriate-recruiting-agent-verify",
+    "expatriate-worker-registration",
+    "migration-e-apostille",
+    "mofa-csat",
+    "mofa-document-attestation",
+    "mofa-education-attestation-chain",
+    "mofa-nv-loi-application"
+  ],
+  "service_names": {
+    "employment-boesl-overseas-recruitment": "BOESL Overseas Job Seeker Registration",
+    "employment-labour-court-adr": "Labour Court Alternative Dispute Resolution",
+    "employment-trade-union-registration": "Trade Union Registration",
+    "expatriate-bmet-training": "BMET Skill Development Training",
+    "expatriate-emigration-clearance": "Emigration Clearance for Overseas Employment",
+    "expatriate-recruiting-agent-verify": "Recruiting Agent Verification",
+    "expatriate-worker-registration": "Overseas Worker Registration",
+    "migration-e-apostille": "e-Apostille Document Authentication",
+    "mofa-csat": "MOFA Consular Service Appointment (CSAT)",
+    "mofa-document-attestation": "MOFA Document Attestation",
+    "mofa-education-attestation-chain": "Educational Certificate MOFA Attestation (via Ministry of Education)",
+    "mofa-nv-loi-application": "Note Verbale and Letter of Introduction (LOI) Application"
+  },
+  "domain": "employment,expatriate,passport_immigration",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-employment-boesl-overseas-recruitment-fee-unverified",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BOESL Overseas Job Seeker Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-employment-boesl-overseas-recruitment-documents-unverified",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for BOESL Overseas Job Seeker Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-employment-labour-court-adr-portal-unreachable",
+      "service_id": "employment-labour-court-adr",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Labour Court Alternative Dispute Resolution.",
+      "severity": "MEDIUM",
+      "url": "https://mole.gov.bd/"
+    },
+    {
+      "gap_id": "gap-employment-labour-court-adr-fee-unverified",
+      "service_id": "employment-labour-court-adr",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Labour Court Alternative Dispute Resolution.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-employment-labour-court-adr-documents-unverified",
+      "service_id": "employment-labour-court-adr",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Labour Court Alternative Dispute Resolution.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-employment-trade-union-registration-portal-unreachable",
+      "service_id": "employment-trade-union-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Trade Union Registration.",
+      "severity": "MEDIUM",
+      "url": "https://mole.gov.bd/"
+    },
+    {
+      "gap_id": "gap-employment-trade-union-registration-fee-unverified",
+      "service_id": "employment-trade-union-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Trade Union Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-employment-trade-union-registration-documents-unverified",
+      "service_id": "employment-trade-union-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Trade Union Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-expatriate-bmet-training-portal-unreachable",
+      "service_id": "expatriate-bmet-training",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for BMET Skill Development Training.",
+      "severity": "MEDIUM",
+      "url": "https://old.bmet.gov.bd/BMET/downloadAction"
+    },
+    {
+      "gap_id": "gap-expatriate-bmet-training-fee-unverified",
+      "service_id": "expatriate-bmet-training",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BMET Skill Development Training.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-expatriate-bmet-training-documents-unverified",
+      "service_id": "expatriate-bmet-training",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for BMET Skill Development Training.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-expatriate-emigration-clearance-portal-unreachable",
+      "service_id": "expatriate-emigration-clearance",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Emigration Clearance for Overseas Employment.",
+      "severity": "MEDIUM",
+      "url": "https://oc.bmet.gov.bd/bmet_clr/rlEnrollment"
+    },
+    {
+      "gap_id": "gap-expatriate-emigration-clearance-fee-unverified",
+      "service_id": "expatriate-emigration-clearance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Emigration Clearance for Overseas Employment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-expatriate-emigration-clearance-documents-unverified",
+      "service_id": "expatriate-emigration-clearance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Emigration Clearance for Overseas Employment.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-expatriate-recruiting-agent-verify-portal-unreachable",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Recruiting Agent Verification.",
+      "severity": "MEDIUM",
+      "url": "https://old.bmet.gov.bd/BMET/agentlistpreview"
+    },
+    {
+      "gap_id": "gap-expatriate-recruiting-agent-verify-fee-unverified",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Recruiting Agent Verification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-expatriate-recruiting-agent-verify-documents-unverified",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Recruiting Agent Verification.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-expatriate-worker-registration-portal-unreachable",
+      "service_id": "expatriate-worker-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Overseas Worker Registration.",
+      "severity": "MEDIUM",
+      "url": "https://old.bmet.gov.bd/BMET/downloadAction"
+    },
+    {
+      "gap_id": "gap-expatriate-worker-registration-fee-unverified",
+      "service_id": "expatriate-worker-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Overseas Worker Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-expatriate-worker-registration-documents-unverified",
+      "service_id": "expatriate-worker-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Overseas Worker Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-migration-e-apostille-portal-unreachable",
+      "service_id": "migration-e-apostille",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for e-Apostille Document Authentication.",
+      "severity": "MEDIUM",
+      "url": "https://apostille.mygov.bd/"
+    },
+    {
+      "gap_id": "gap-migration-e-apostille-fee-unverified",
+      "service_id": "migration-e-apostille",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for e-Apostille Document Authentication.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-migration-e-apostille-documents-unverified",
+      "service_id": "migration-e-apostille",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for e-Apostille Document Authentication.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-mofa-csat-fee-unverified",
+      "service_id": "mofa-csat",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for MOFA Consular Service Appointment (CSAT).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-mofa-csat-documents-unverified",
+      "service_id": "mofa-csat",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for MOFA Consular Service Appointment (CSAT).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-mofa-document-attestation-fee-unverified",
+      "service_id": "mofa-document-attestation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for MOFA Document Attestation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-mofa-document-attestation-documents-unverified",
+      "service_id": "mofa-document-attestation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for MOFA Document Attestation.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-mofa-education-attestation-chain-portal-unreachable",
+      "service_id": "mofa-education-attestation-chain",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Educational Certificate MOFA Attestation (via Ministry of Education).",
+      "severity": "MEDIUM",
+      "url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation"
+    },
+    {
+      "gap_id": "gap-mofa-education-attestation-chain-fee-unverified",
+      "service_id": "mofa-education-attestation-chain",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Educational Certificate MOFA Attestation (via Ministry of Education).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-mofa-education-attestation-chain-documents-unverified",
+      "service_id": "mofa-education-attestation-chain",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Educational Certificate MOFA Attestation (via Ministry of Education).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-mofa-nv-loi-application-fee-unverified",
+      "service_id": "mofa-nv-loi-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Note Verbale and Letter of Introduction (LOI) Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-mofa-nv-loi-application-documents-unverified",
+      "service_id": "mofa-nv-loi-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Note Verbale and Letter of Introduction (LOI) Application.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/evaluation/batch-10-employment-migration/queries.json",
+    "data/evaluation/batch-10-employment-migration/summary.json",
+    "docs/evaluation/batch-10-employment-migration-publication-e2e.md",
+    ".automation/runs/run-107a9e6bea1a-e2e/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — E2E\n\n**Batch:** BATCH_10 (Employment / Labour / Expatriate / Migration)\n**Run ID:** run-107a9e6bea1a-e2e\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/evaluation/batch-10-employment-migration/queries.json`\n- `data/evaluation/batch-10-employment-migration/summary.json`\n- `docs/evaluation/batch-10-employment-migration-publication-e2e.md`\n- `.automation/runs/run-107a9e6bea1a-e2e/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_10\",\n    \"slug\": \"batch-10-employment-migration\",\n    \"name\": \"Employment / Labour / Expatriate / Migration\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"employment-boesl-overseas-recruitment\",\n      \"employment-labour-court-adr\",\n      \"employment-trade-union-registration\",\n      \"expatriate-bmet-training\",\n      \"expatriate-emigration-clearance\",\n      \"expatriate-recruiting-agent-verify\",\n      \"expatriate-worker-registration\",\n      \"migration-e-apostille\",\n      \"mofa-csat\",\n      \"mofa-document-attestation\",\n      \"mofa-education-attestation-chain\",\n      \"mofa-nv-loi-application\"\n    ],\n    \"service_count\": 12,\n    \"phases_completed\": [\n      \"RESEARCH\",\n      \"VERIFICATION\",\n      \"GAP_CLOSURE\"\n    ]\n  },\n  \"phase\": \"E2E\",\n  \"run_id\": \"run-107a9e6bea1a-e2e\",\n  \"service_ids\": [\n    \"employment-boesl-overseas-recruitment\",\n    \"employment-labour-court-adr\",\n    \"employment-trade-union-registration\",\n    \"expatriate-bmet-training\",\n    \"expatriate-emigration-clearance\",\n    \"expatriate-recruiting-agent-verify\",\n    \"expatriate-worker-registration\",\n    \"migration-e-apostille\",\n    \"mofa-csat\",\n    \"mofa-document-attestation\",\n    \"mofa-education-attestation-chain\",\n    \"mofa-nv-loi-application\"\n  ],\n  \"gaps\": [\n    {\n      \"gap_id\": \"gap-employment-boesl-overseas-recruitment-fee-unverified\",\n      \"service_id\": \"employment-boesl-overseas-recruitment\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for BOESL Overseas Job Seeker Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-employment-boesl-overseas-recruitment-documents-unverified\",\n      \"service_id\": \"employment-boesl-overseas-recruitment\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for BOESL Overseas Job Seeker Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-employment-labour-court-adr-portal-unreachable\",\n      \"service_id\": \"employment-labour-court-adr\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Labour Court Alternative Dispute Resolution.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://mole.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-employment-labour-court-adr-fee-unverified\",\n      \"service_id\": \"employment-labour-court-adr\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Labour Court Alternative Dispute Resolution.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-employment-labour-court-adr-documents-unverified\",\n      \"service_id\": \"employment-labour-court-adr\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Labour Court Alternative Dispute Resolution.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-employment-trade-union-registration-portal-unreachable\",\n      \"service_id\": \"employment-trade-union-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Trade Union Registration.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://mole.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-employment-trade-union-registration-fee-unverified\",\n      \"service_id\": \"employment-trade-union-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Trade Union Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-employment-trade-union-registration-documents-unverified\",\n      \"service_id\": \"employment-trade-union-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Trade Union Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-bmet-training-portal-unreachable\",\n      \"service_id\": \"expatriate-bmet-training\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for BMET Skill Development Training.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://old.bmet.gov.bd/BMET/downloadAction\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-bmet-training-fee-unverified\",\n      \"service_id\": \"expatriate-bmet-training\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for BMET Skill Development Training.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-bmet-training-documents-unverified\",\n      \"service_id\": \"expatriate-bmet-training\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for BMET Skill Development Training.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-emigration-clearance-portal-unreachable\",\n      \"service_id\": \"expatriate-emigration-clearance\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Emigration Clearance for Overseas Employment.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://oc.bmet.gov.bd/bmet_clr/rlEnrollment\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-emigration-clearance-fee-unverified\",\n      \"service_id\": \"expatriate-emigration-clearance\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Emigration Clearance for Overseas Employment.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-emigration-clearance-documents-unverified\",\n      \"service_id\": \"expatriate-emigration-clearance\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Emigration Clearance for Overseas Employment.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-recruiting-agent-verify-portal-unreachable\",\n      \"service_id\": \"expatriate-recruiting-agent-verify\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Recruiting Agent Verification.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://old.bmet.gov.bd/BMET/agentlistpreview\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-recruiting-agent-verify-fee-unverified\",\n      \"service_id\": \"expatriate-recruiting-agent-verify\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Recruiting Agent Verification.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-recruiting-agent-verify-documents-unverified\",\n      \"service_id\": \"expatriate-recruiting-agent-verify\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Recruiting Agent Verification.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-worker-registration-portal-unreachable\",\n      \"service_id\": \"expatriate-worker-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Overseas Worker Registration.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://old.bmet.gov.bd/BMET/downloadAction\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-worker-registration-fee-unverified\",\n      \"service_id\": \"expatriate-worker-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Overseas Worker Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-expatriate-worker-registration-documents-unverified\",\n      \"service_id\": \"expatriate-worker-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Overseas Worker Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-migration-e-apostille-portal-unreachable\",\n      \"service_id\": \"migration-e-apostille\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for e-Apostille Document Authentication.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://apostille.mygov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-migration-e-apostille-fee-unverified\",\n      \"service_id\": \"migration-e-apostille\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for e-Apostille Document Authentication.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-migration-e-apostille-documents-unverified\",\n      \"service_id\": \"migration-e-apostille\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for e-Apostille Document Authentication.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-mofa-csat-fee-unverified\",\n      \"service_id\": \"mofa-csat\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for MOFA Consular Service Appointment (CSAT).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-mofa-csat-documents-unverified\",\n      \"service_id\": \"mofa-csat\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for MOFA Consular Service Appointment (CSAT).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-mofa-document-attestation-fee-unverified\",\n      \"service_id\": \"mofa-document-attestation\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for MOFA Document Attestation.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-mofa-document-attestation-documents-unverified\",\n      \"service_id\": \"mofa-document-attestation\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for MOFA Document Attestation.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-mofa-education-attestation-chain-portal-unreachable\",\n      \"service_id\": \"mofa-education-attestation-chain\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Educational Certificate MOFA Attestation (via Ministry of Education).\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://istanbul.mofa.gov.bd/en/site/page/Document-attestation\"\n    },\n    {\n      \"gap_id\": \"gap-mofa-education-attestation-chain-fee-unverified\",\n      \"service_id\": \"mofa-education-attestation-chain\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Educational Certificate MOFA Attestation (via Ministry of Education).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-mofa-education-attestation-chain-documents-unverified\",\n      \"service_id\": \"mofa-education-attestation-chain\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Educational Certificate MOFA Attestation (via Ministry of Education).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-mofa-nv-loi-application-fee-unverified\",\n      \"service_id\": \"mofa-nv-loi-application\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Note Verbale and Letter of Introduction (LOI) Application.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-mofa-nv-loi-application-documents-unverified\",\n      \"service_id\": \"mofa-nv-loi-application\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Note Verbale and Letter of Introduction (LOI) Application.\",\n      \"severity\": \"MEDIUM\"\n    }\n  ],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# E2E evaluation prompt\n\nGenerate realistic user questions: Bangla, English, Banglish, typos, ambiguity, follow-ups, multi-turn.\n\nCorrect uncertainty/refusal is NOT failure. Wrong factual answers ARE failures.\n\nWrite eval artifacts under `data/evaluation/<batch-slug>/` and `result.json`.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-107a9e6bea1a-e2e/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:47:37.503396+00:00"
+  }
+}

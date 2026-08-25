@@ -1,0 +1,72 @@
+{
+  "service_id": "ff-mis-freedom-fighter-list",
+  "claims": [
+    {
+      "claim_id": "ff-mis-freedom-fighter-list::c-catalogue-authority",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Liberation War Affairs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-mis-freedom-fighter-list::c-official-portal",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "claim_type": "application_url",
+      "claim_text": "Freedom Fighter List (MIS) official information is published at https://mis.molwa.gov.bd/freedom-fighter-list (page title: মুক্তিযোদ্ধা অনুসন্ধান).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://mis.molwa.gov.bd/freedom-fighter-list"
+      },
+      "source_ids": [
+        "src-ff-mis-freedom-fighter-list-official"
+      ],
+      "evidence_ids": [
+        "ev-ff-mis-freedom-fighter-list::c-official-portal-src-ff-mis-freedom-fighter-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-mis-freedom-fighter-list::c-procedure-overview",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "claim_type": "procedure_step",
+      "claim_text": "Freedom Fighter List (MIS) is a government service under Ministry of Liberation War Affairs (freedom fighter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-mis-freedom-fighter-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-mis-freedom-fighter-list::c-service-identity",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "claim_type": "eligibility",
+      "claim_text": "Freedom Fighter List (MIS) (মুক্তিযোদ্ধা তালিকা (MIS)) is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-mis-freedom-fighter-list-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "service_id": "licence-trade-local-government",
+  "sources": [
+    {
+      "source_id": "src-licence-trade-local-government-official",
+      "service_id": "licence-trade-local-government",
+      "url": "https://dncc.gov.bd/",
+      "title": "Local Government Trade Licence",
+      "authority_id": "local-government-institutions",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dncc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:28:16.145194+00:00"
+      },
+      "evidence_locator": "probe:https://dncc.gov.bd/"
+    },
+    {
+      "source_id": "src-licence-trade-local-government-alt-1",
+      "service_id": "licence-trade-local-government",
+      "url": "https://dscc.gov.bd/",
+      "title": "Local Government Trade Licence",
+      "authority_id": "local-government-institutions",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dscc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:28:16.693628+00:00"
+      }
+    },
+    {
+      "source_id": "src-licence-trade-local-government-alt-2",
+      "service_id": "licence-trade-local-government",
+      "url": "https://www.tbsnews.net/bangladesh/jionex-launch-shapla-one-stop-service-revolutionise-citizen-service-sector-chattogram",
+      "title": "tbsnews.net | 502: Bad gateway",
+      "authority_id": "local-government-institutions",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.tbsnews.net/bangladesh/jionex-launch-shapla-one-stop-service-revolutionise-citizen-service-sector-chattogram",
+        "status_code": 502,
+        "reachable": false,
+        "title": "tbsnews.net | 502: Bad gateway",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "626d4b9f7651df20",
+        "retrieved_at": "2026-08-25T03:28:17.905851+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

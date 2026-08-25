@@ -1,0 +1,133 @@
+{
+  "service_id": "legal-aid-panel-lawyer-list",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Panel Lawyer List (District Legal Aid)",
+  "service_name_bn": "প্যানেল আইনজীবী তালিকা",
+  "aliases": [
+    "legal aid lawyers list",
+    "Panel Lawyer List (District Legal Aid)"
+  ],
+  "category_id": "legal_aid",
+  "profile_key": "JUDICIARY",
+  "responsible_agency": "District Legal Aid Office (NLASO)",
+  "official_application_url": "http://nlaso.portal.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "legal-aid-panel-lawyer-list::c-catalogue-authority",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: District Legal Aid Office (NLASO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-panel-lawyer-list::c-official-portal",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "claim_type": "application_url",
+      "claim_text": "Panel Lawyer List (District Legal Aid) official information is published at http://nlaso.portal.gov.bd/ (page title: হোম | বাংলাদেশ আইনগত সহায়তা অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://nlaso.portal.gov.bd/"
+      },
+      "source_ids": [
+        "src-legal-aid-panel-lawyer-list-official"
+      ],
+      "evidence_ids": [
+        "ev-legal-aid-panel-lawyer-list::c-official-portal-src-legal-aid-panel-lawyer-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-panel-lawyer-list::c-procedure-overview",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "claim_type": "procedure_step",
+      "claim_text": "Panel Lawyer List (District Legal Aid) is a government service under District Legal Aid Office (NLASO) (directory). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-panel-lawyer-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-panel-lawyer-list::c-service-identity",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "claim_type": "eligibility",
+      "claim_text": "Panel Lawyer List (District Legal Aid) (প্যানেল আইনজীবী তালিকা) is a confirmed government service in category legal_aid, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-panel-lawyer-list-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-legal-aid-panel-lawyer-list-official",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "url": "http://nlaso.portal.gov.bd/",
+      "title": "হোম | বাংলাদেশ আইনগত সহায়তা অধিদপ্তর",
+      "authority_id": "district-legal-aid-office-nlaso",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://nlaso.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | বাংলাদেশ আইনগত সহায়তা অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "b79a7d15d8ec7d47",
+        "retrieved_at": "2026-08-25T03:28:15.320600+00:00"
+      },
+      "evidence_locator": "probe:http://nlaso.portal.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-legal-aid-panel-lawyer-list-fee-unverified",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Panel Lawyer List (District Legal Aid).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-legal-aid-panel-lawyer-list-documents-unverified",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Panel Lawyer List (District Legal Aid).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

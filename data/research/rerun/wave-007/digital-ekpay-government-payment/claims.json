@@ -1,0 +1,72 @@
+{
+  "service_id": "digital-ekpay-government-payment",
+  "claims": [
+    {
+      "claim_id": "digital-ekpay-government-payment::c-catalogue-authority",
+      "service_id": "digital-ekpay-government-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Aspire to Innovate (a2i), ICT Division.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-ekpay-government-payment::c-official-portal",
+      "service_id": "digital-ekpay-government-payment",
+      "claim_type": "application_url",
+      "claim_text": "Ekpay Unified Government Payment Gateway official information is published at https://ekpay.gov.bd/ (page title: Ekpay).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ekpay.gov.bd/"
+      },
+      "source_ids": [
+        "src-digital-ekpay-government-payment-official"
+      ],
+      "evidence_ids": [
+        "ev-digital-ekpay-government-payment::c-official-portal-src-digital-ekpay-government-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-ekpay-government-payment::c-procedure-overview",
+      "service_id": "digital-ekpay-government-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "Ekpay Unified Government Payment Gateway is a government service under Aspire to Innovate (a2i), ICT Division (payment gateway). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-ekpay-government-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-ekpay-government-payment::c-service-identity",
+      "service_id": "digital-ekpay-government-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Ekpay Unified Government Payment Gateway (Ekpay সরকারি পেমেন্ট) is a confirmed government service in category government_payments, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-ekpay-government-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "service_id": "local-nationality-certificate",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-local-nationality-certificate-fee-unverified",
+      "service_id": "local-nationality-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Nationality Certificate.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-nationality-certificate-documents-unverified",
+      "service_id": "local-nationality-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Nationality Certificate.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

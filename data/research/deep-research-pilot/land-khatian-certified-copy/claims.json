@@ -1,0 +1,122 @@
+{
+  "service_id": "land-khatian-certified-copy",
+  "claims": [
+    {
+      "claim_id": "land-khatian-certified-copy::c-catalogue-authority",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land (DLRMS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-official-url-documented",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://land.gov.bd/vumisheba-fee for Certified Khatian Copy; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://land.gov.bd/vumisheba-fee"
+      },
+      "source_ids": [
+        "src-land-khatian-certified-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-procedure-overview",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "procedure_step",
+      "claim_text": "Certified khatian copies are issued through the Land Ministry e-Porcha/land record services or Union Land Office.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-certified-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-document-overview",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "document",
+      "claim_text": "Applicant NID and khatian/dag identifiers (mouza, khatian number) are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-land-khatian-certified-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-service-identity",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Certified Khatian Copy (সার্টিফাইড/সত্যায়িত খতিয়ান) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-certified-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-eligibility-deep",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Landowners, occupiers, or authorized representatives requesting official land record copies.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "PARTIAL",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-certified-copy-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-document-must-need",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "document",
+      "claim_text": "Applicant NID and khatian/dag identifiers (mouza, khatian number) are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-certified-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

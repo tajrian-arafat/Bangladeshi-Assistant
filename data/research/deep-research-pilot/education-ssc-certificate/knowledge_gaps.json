@@ -1,0 +1,27 @@
+{
+  "service_id": "education-ssc-certificate",
+  "gaps": [
+    {
+      "gap_id": "gap-education-ssc-certificate-portal-unreachable",
+      "service_id": "education-ssc-certificate",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for SSC Certificate Issuance.",
+      "severity": "MEDIUM",
+      "url": "http://www.educationboard.gov.bd/sylhet/activities.php"
+    },
+    {
+      "gap_id": "gap-education-ssc-certificate-fee-unverified",
+      "service_id": "education-ssc-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for SSC Certificate Issuance.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-education-ssc-certificate-documents-unverified",
+      "service_id": "education-ssc-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for SSC Certificate Issuance.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

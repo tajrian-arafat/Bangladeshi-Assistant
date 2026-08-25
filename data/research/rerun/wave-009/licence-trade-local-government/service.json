@@ -1,0 +1,194 @@
+{
+  "service_id": "licence-trade-local-government",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Local Government Trade Licence",
+  "service_name_bn": "স্থানীয় সরকার ট্রেড লাইসেন্স",
+  "aliases": [
+    "trade licence",
+    "trade license",
+    "ট্রেড লাইসেন্স",
+    "business licence LGI",
+    "CCC trade license",
+    "Shapla OSS trade license",
+    "Chattogram City Corporation Trade Licence",
+    "local-ccc-trade-licence",
+    "DNCC trade license",
+    "e-trade license DNCC",
+    "Trade Licence (Dhaka North City Corporation)",
+    "licence-trade-dncc",
+    "DSCC trade license",
+    "Trade Licence (Dhaka South City Corporation)",
+    "licence-trade-dscc",
+    "pourashava trade license",
+    "Trade Licence (Municipality/Pourashava)",
+    "licence-trade-municipality",
+    "union trade license",
+    "business licence union",
+    "Trade Licence (Union Parishad)",
+    "licence-trade-union-parishad",
+    "trade license renewal",
+    "Trade Licence Renewal",
+    "business-trade-license-renewal"
+  ],
+  "category_id": "licences",
+  "profile_key": "OTHER",
+  "responsible_agency": "City Corporation / Municipality / Union Parishad",
+  "official_application_url": "https://dncc.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "licence-trade-local-government::c-catalogue-authority",
+      "service_id": "licence-trade-local-government",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: City Corporation / Municipality / Union Parishad.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "licence-trade-local-government::c-official-url-documented",
+      "service_id": "licence-trade-local-government",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://dncc.gov.bd/ for Local Government Trade Licence; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dncc.gov.bd/"
+      },
+      "source_ids": [
+        "src-licence-trade-local-government-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "licence-trade-local-government::c-procedure-overview",
+      "service_id": "licence-trade-local-government",
+      "claim_type": "procedure_step",
+      "claim_text": "Local Government Trade Licence is a government service under City Corporation / Municipality / Union Parishad (trade licence). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-licence-trade-local-government-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "licence-trade-local-government::c-service-identity",
+      "service_id": "licence-trade-local-government",
+      "claim_type": "eligibility",
+      "claim_text": "Local Government Trade Licence (স্থানীয় সরকার ট্রেড লাইসেন্স) is a confirmed government service in category licences, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-licence-trade-local-government-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-licence-trade-local-government-official",
+      "service_id": "licence-trade-local-government",
+      "url": "https://dncc.gov.bd/",
+      "title": "Local Government Trade Licence",
+      "authority_id": "local-government-institutions",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dncc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:28:16.145194+00:00"
+      },
+      "evidence_locator": "probe:https://dncc.gov.bd/"
+    },
+    {
+      "source_id": "src-licence-trade-local-government-alt-1",
+      "service_id": "licence-trade-local-government",
+      "url": "https://dscc.gov.bd/",
+      "title": "Local Government Trade Licence",
+      "authority_id": "local-government-institutions",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dscc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:28:16.693628+00:00"
+      }
+    },
+    {
+      "source_id": "src-licence-trade-local-government-alt-2",
+      "service_id": "licence-trade-local-government",
+      "url": "https://www.tbsnews.net/bangladesh/jionex-launch-shapla-one-stop-service-revolutionise-citizen-service-sector-chattogram",
+      "title": "tbsnews.net | 502: Bad gateway",
+      "authority_id": "local-government-institutions",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.tbsnews.net/bangladesh/jionex-launch-shapla-one-stop-service-revolutionise-citizen-service-sector-chattogram",
+        "status_code": 502,
+        "reachable": false,
+        "title": "tbsnews.net | 502: Bad gateway",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "626d4b9f7651df20",
+        "retrieved_at": "2026-08-25T03:28:17.905851+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-licence-trade-local-government-portal-unreachable",
+      "service_id": "licence-trade-local-government",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Local Government Trade Licence.",
+      "severity": "MEDIUM",
+      "url": "https://dncc.gov.bd/"
+    },
+    {
+      "gap_id": "gap-licence-trade-local-government-fee-unverified",
+      "service_id": "licence-trade-local-government",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Local Government Trade Licence.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-licence-trade-local-government-documents-unverified",
+      "service_id": "licence-trade-local-government",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Local Government Trade Licence.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

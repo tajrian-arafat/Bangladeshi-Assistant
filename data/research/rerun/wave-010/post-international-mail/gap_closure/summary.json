@@ -1,0 +1,28 @@
+{
+  "service_id": "post-international-mail",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-post-international-mail-portal-unreachable",
+      "service_id": "post-international-mail",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for International Mail Service.",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/1e0924ce-788d-4304-b47a-54d76748abf5/%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%95-%E0%A6%A1%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE"
+    },
+    {
+      "gap_id": "gap-post-international-mail-fee-unverified",
+      "service_id": "post-international-mail",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for International Mail Service.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-international-mail-documents-unverified",
+      "service_id": "post-international-mail",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for International Mail Service.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

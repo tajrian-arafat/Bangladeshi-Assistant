@@ -1,0 +1,70 @@
+{
+  "service_id": "trade-bsti-standard-certification",
+  "claims": [
+    {
+      "claim_id": "trade-bsti-standard-certification::c-catalogue-authority",
+      "service_id": "trade-bsti-standard-certification",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Standards and Testing Institution (BSTI).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-bsti-standard-certification::c-official-url-documented",
+      "service_id": "trade-bsti-standard-certification",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bsti.gov.bd/ for BSTI Product Standard Certification; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bsti.gov.bd/"
+      },
+      "source_ids": [
+        "src-trade-bsti-standard-certification-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-bsti-standard-certification::c-procedure-overview",
+      "service_id": "trade-bsti-standard-certification",
+      "claim_type": "procedure_step",
+      "claim_text": "BSTI Product Standard Certification is a government service under Bangladesh Standards and Testing Institution (BSTI) (standardization). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-bsti-standard-certification-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-bsti-standard-certification::c-service-identity",
+      "service_id": "trade-bsti-standard-certification",
+      "claim_type": "eligibility",
+      "claim_text": "BSTI Product Standard Certification (BSTI standard certification (CM mark)) is a confirmed government service in category trade, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-bsti-standard-certification-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

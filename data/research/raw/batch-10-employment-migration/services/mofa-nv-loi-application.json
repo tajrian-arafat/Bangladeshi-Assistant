@@ -1,0 +1,45 @@
+{
+  "service_id": "mofa-nv-loi-application",
+  "batch_id": "batch-10-employment-migration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Note Verbale and Letter of Introduction (LOI) Application",
+  "service_name_bn": "Note Verbale / LOI আবেদন",
+  "aliases": [
+    "nvloi MOFA",
+    "diplomatic note application",
+    "Note Verbale and Letter of Introduction (LOI) Application"
+  ],
+  "category_id": "passport_immigration",
+  "responsible_agency": "Ministry of Foreign Affairs (MOFA)",
+  "official_application_url": "https://nvloi.mofa.gov.bd/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "mofa-nv-loi-application::c-application-portal",
+      "service_id": "mofa-nv-loi-application",
+      "claim_type": "application_url",
+      "claim_text": "Note Verbale and Letter of Introduction (LOI) Application is associated with NBR e-service portal https://nvloi.mofa.gov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-mofa-nv-loi-application",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-nv-loi-application::c-responsible-authority",
+      "service_id": "mofa-nv-loi-application",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

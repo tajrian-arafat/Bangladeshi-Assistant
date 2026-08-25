@@ -1,0 +1,39 @@
+[
+  {
+    "query": "e-passport fee koto?",
+    "intent_primary": "fee_inquiry",
+    "selected": "epassport-fee-payment",
+    "candidates": [
+      {"slug": "epassport-fee-payment", "score": 168.5, "reasons": ["intent:fee_inquiry+35", "alias_banglish", "service_type:fee_payment"]},
+      {"slug": "passport-renewal", "score": 63.8},
+      {"slug": "passport-mrp-initial", "score": 40.0}
+    ]
+  },
+  {
+    "query": "passport status check korbo kivabe?",
+    "intent_primary": "status",
+    "selected": "epassport-application-status",
+    "candidates": [
+      {"slug": "epassport-application-status", "score": 100.0, "reasons": ["phrase_hint"]},
+      {"slug": "passport-application-status", "score": 75.0}
+    ]
+  },
+  {
+    "query": "passport renew korte police verification lage?",
+    "intent_primary": "procedure_inquiry",
+    "selected": "police-passport-police-verification",
+    "candidates": [
+      {"slug": "police-passport-police-verification", "score": 100.0, "reasons": ["phrase_hint:passport renew korte police"]},
+      {"slug": "passport-renewal", "score": 55.0}
+    ]
+  },
+  {
+    "query": "NID correction fee koto?",
+    "intent_primary": "fee_inquiry",
+    "selected": "nid-correction",
+    "candidates": [
+      {"slug": "nid-correction", "score": 100.0, "reasons": ["phrase_hint"]},
+      {"slug": "nid-fee-calculator", "score": 60.0}
+    ]
+  }
+]

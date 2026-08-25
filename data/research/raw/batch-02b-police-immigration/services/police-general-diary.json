@@ -1,0 +1,158 @@
+{
+  "service_id": "police-general-diary",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Online General Diary (GD)",
+  "service_name_bn": "জিডি (General Diary)",
+  "aliases": [
+    "GD",
+    "online GD",
+    "lost report"
+  ],
+  "banglish_variants": [],
+  "category_id": "police",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://gd.police.gov.bd/",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "police-general-diary::c-gd-portal-url",
+      "legacy_claim_id": "c-gd-portal-url",
+      "service_id": "police-general-diary",
+      "claim_type": "application_url",
+      "claim_text": "Online General Diary is filed via gd.police.gov.bd and/or Online GD mobile app (per catalogue and police communications).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gd-portal",
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-gd-portal-url-src-gd-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-charter-gd-fee-free",
+      "legacy_claim_id": "c-charter-gd-fee-free",
+      "service_id": "police-general-diary",
+      "claim_type": "fee",
+      "claim_text": "Citizen charter lists GD service fee as free (বিনামূল্যে).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 0,
+        "currency": "BDT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-charter-gd-fee-free-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-charter-gd-sla",
+      "legacy_claim_id": "c-charter-gd-sla",
+      "service_id": "police-general-diary",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA for GD: 1–7 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 1,
+        "official_sla_days_max": 7
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-charter-gd-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-charter-gd-channels",
+      "legacy_claim_id": "c-charter-gd-channels",
+      "service_id": "police-general-diary",
+      "claim_type": "procedure_step",
+      "claim_text": "Citizen charter states GD available directly at police station and online.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-charter-gd-channels-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-charter-gd-office",
+      "legacy_claim_id": "c-charter-gd-office",
+      "service_id": "police-general-diary",
+      "claim_type": "office",
+      "claim_text": "GD handled at relevant police station / unit (থানা).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-charter-gd-office-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-gd-not-all-types-historically",
+      "legacy_claim_id": "c-gd-not-all-types-historically",
+      "service_id": "police-general-diary",
+      "claim_type": "restriction",
+      "claim_text": "Prior to 2025 expansion communications, online GD was limited to lost-and-found categories; do not assume all complaint types were always online.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-tbs-online-gd-expansion"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-gd-not-all-types-historically-src-tbs-online-gd-expansion"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": null
+}

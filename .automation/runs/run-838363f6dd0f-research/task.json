@@ -1,0 +1,59 @@
+{
+  "task_id": "BATCH_13:RESEARCH:run-838363f6dd0f-research",
+  "batch_id": "BATCH_13",
+  "batch_slug": "batch-13-judiciary",
+  "phase": "RESEARCH",
+  "run_id": "run-838363f6dd0f-research",
+  "service_ids": [
+    "judiciary-case-status-tracking",
+    "judiciary-supreme-court-certified-copy",
+    "judiciary-supreme-court-e-filing",
+    "judiciary-virtual-court-services",
+    "legal-aid-district-helpline-16430",
+    "legal-aid-government-service",
+    "legal-aid-helpline-16699",
+    "legal-aid-online-application",
+    "legal-aid-panel-lawyer-list"
+  ],
+  "service_names": {
+    "judiciary-case-status-tracking": "Court Case Status Tracking",
+    "judiciary-supreme-court-certified-copy": "Supreme Court Certified Copy of Judgment/Order",
+    "judiciary-supreme-court-e-filing": "Supreme Court e-Filing (Lawyers Panel)",
+    "judiciary-virtual-court-services": "Virtual Court Services",
+    "legal-aid-district-helpline-16430": "District Legal Aid Toll-free Helpline (16430)",
+    "legal-aid-government-service": "Government-funded Legal Aid Service",
+    "legal-aid-helpline-16699": "National Legal Aid Helpline (16699)",
+    "legal-aid-online-application": "National Legal Aid Online Application",
+    "legal-aid-panel-lawyer-list": "Panel Lawyer List (District Legal Aid)"
+  },
+  "domain": "judiciary,legal_aid",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/raw/batch-13-judiciary/scope.json",
+    "data/research/raw/batch-13-judiciary/services_index.json",
+    "data/research/raw/batch-13-judiciary/services/*.json",
+    "data/research/raw/batch-13-judiciary/claims.json",
+    "data/research/raw/batch-13-judiciary/sources.json",
+    "data/research/raw/batch-13-judiciary/conflicts.json",
+    "data/research/raw/batch-13-judiciary/knowledge_gaps.json",
+    "data/research/raw/batch-13-judiciary/metadata.json",
+    "docs/research/batch-13-judiciary-research.md",
+    ".automation/runs/run-838363f6dd0f-research/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — RESEARCH\n\n**Batch:** BATCH_13 (Judiciary / Legal / Courts)\n**Run ID:** run-838363f6dd0f-research\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/raw/batch-13-judiciary/scope.json`\n- `data/research/raw/batch-13-judiciary/services_index.json`\n- `data/research/raw/batch-13-judiciary/services/*.json`\n- `data/research/raw/batch-13-judiciary/claims.json`\n- `data/research/raw/batch-13-judiciary/sources.json`\n- `data/research/raw/batch-13-judiciary/conflicts.json`\n- `data/research/raw/batch-13-judiciary/knowledge_gaps.json`\n- `data/research/raw/batch-13-judiciary/metadata.json`\n- `docs/research/batch-13-judiciary-research.md`\n- `.automation/runs/run-838363f6dd0f-research/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_13\",\n    \"slug\": \"batch-13-judiciary\",\n    \"name\": \"Judiciary / Legal / Courts\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"judiciary-case-status-tracking\",\n      \"judiciary-supreme-court-certified-copy\",\n      \"judiciary-supreme-court-e-filing\",\n      \"judiciary-virtual-court-services\",\n      \"legal-aid-district-helpline-16430\",\n      \"legal-aid-government-service\",\n      \"legal-aid-helpline-16699\",\n      \"legal-aid-online-application\",\n      \"legal-aid-panel-lawyer-list\"\n    ],\n    \"service_count\": 9,\n    \"phases_completed\": []\n  },\n  \"phase\": \"RESEARCH\",\n  \"run_id\": \"run-838363f6dd0f-research\",\n  \"service_ids\": [\n    \"judiciary-case-status-tracking\",\n    \"judiciary-supreme-court-certified-copy\",\n    \"judiciary-supreme-court-e-filing\",\n    \"judiciary-virtual-court-services\",\n    \"legal-aid-district-helpline-16430\",\n    \"legal-aid-government-service\",\n    \"legal-aid-helpline-16699\",\n    \"legal-aid-online-application\",\n    \"legal-aid-panel-lawyer-list\"\n  ],\n  \"gaps\": [],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Research phase prompt\n\nFollow `docs/research/BATCH_RESEARCH_TEMPLATE.md` exactly.\n\n## Goals\n- Identify in-scope services from catalogue\n- Search broadly; prioritize Tier 1–2 official sources\n- Separate official / practical / discovery evidence\n- Create atomic claims with provenance\n- Record conflicts and knowledge gaps\n- **Never publish**\n- **Never mark VERIFIED** because a source merely exists\n\n## Outputs\n- `data/research/raw/<batch-slug>/services/*.json`\n- `data/research/raw/<batch-slug>/claims.json`\n- `data/research/raw/<batch-slug>/sources.json`\n- `data/research/raw/<batch-slug>/conflicts.json`\n- `data/research/raw/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-838363f6dd0f-research/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:49:17.768198+00:00"
+  }
+}

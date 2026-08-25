@@ -1,0 +1,72 @@
+{
+  "service_id": "desco-demand-note-payment",
+  "claims": [
+    {
+      "claim_id": "desco-demand-note-payment::c-catalogue-authority",
+      "service_id": "desco-demand-note-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Electric Supply Company Limited (DESCO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-demand-note-payment::c-official-portal",
+      "service_id": "desco-demand-note-payment",
+      "claim_type": "application_url",
+      "claim_text": "DESCO Demand Note Fee Payment official information is published at https://ocsms.desco.org.bd/publicinfo/processflow (page title: Process Flows | DESCO).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow"
+      },
+      "source_ids": [
+        "src-desco-demand-note-payment-official"
+      ],
+      "evidence_ids": [
+        "ev-desco-demand-note-payment::c-official-portal-src-desco-demand-note-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-demand-note-payment::c-procedure-overview",
+      "service_id": "desco-demand-note-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "DESCO Demand Note Fee Payment is a government service under Dhaka Electric Supply Company Limited (DESCO) (electricity payment). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-demand-note-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-demand-note-payment::c-service-identity",
+      "service_id": "desco-demand-note-payment",
+      "claim_type": "eligibility",
+      "claim_text": "DESCO Demand Note Fee Payment (ডেসকো ডিমান্ড নোট ফি পরিশোধ) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-demand-note-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

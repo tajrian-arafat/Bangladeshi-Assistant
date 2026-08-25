@@ -1,0 +1,394 @@
+{
+  "task_id": "BATCH_05:VERIFICATION:run-8e9d950ab72a-verification",
+  "batch_id": "BATCH_05",
+  "batch_slug": "batch-05-land",
+  "phase": "VERIFICATION",
+  "run_id": "run-8e9d950ab72a-verification",
+  "service_ids": [
+    "land-deed-registration",
+    "land-dlrms-application-track",
+    "land-khatian-certified-copy",
+    "land-khatian-correction",
+    "land-khatian-online-copy",
+    "land-mortgage-info-search",
+    "land-mouza-map",
+    "land-mutation-apply",
+    "land-mutation-dcr",
+    "land-mutation-khatian-search",
+    "land-mutation-review",
+    "land-mutation-track",
+    "land-partition-consolidation",
+    "land-survey-khatian-search",
+    "local-upazila-land-tax-payment"
+  ],
+  "service_names": {
+    "land-deed-registration": "Deed Registration (Sub-Registry)",
+    "land-dlrms-application-track": "Land Record Application Tracking (DLRMS)",
+    "land-khatian-certified-copy": "Certified Khatian Copy",
+    "land-khatian-correction": "Khatian Record Correction",
+    "land-khatian-online-copy": "Online Khatian Copy",
+    "land-mortgage-info-search": "Land Mortgage Information Search",
+    "land-mouza-map": "Mouza Map Request",
+    "land-mutation-apply": "Land Mutation (Namjari)",
+    "land-mutation-dcr": "Mutation DCR and Khatian Download",
+    "land-mutation-khatian-search": "Mutation Khatian Search",
+    "land-mutation-review": "Mutation Review Application",
+    "land-mutation-track": "Mutation Application Tracking",
+    "land-partition-consolidation": "Land Partition and Consolidation (Record Correction)",
+    "land-survey-khatian-search": "Survey Khatian Search",
+    "local-upazila-land-tax-payment": "Upazila Land Development Tax Payment"
+  },
+  "domain": "land",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-land-deed-registration-portal-unreachable",
+      "service_id": "land-deed-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Deed Registration (Sub-Registry).",
+      "severity": "MEDIUM",
+      "url": "https://www.land.gov.bd/poripotro"
+    },
+    {
+      "gap_id": "gap-land-deed-registration-fee-unverified",
+      "service_id": "land-deed-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Deed Registration (Sub-Registry).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-deed-registration-documents-unverified",
+      "service_id": "land-deed-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Deed Registration (Sub-Registry).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-dlrms-application-track-portal-unreachable",
+      "service_id": "land-dlrms-application-track",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Land Record Application Tracking (DLRMS).",
+      "severity": "MEDIUM",
+      "url": "https://dlrms.land.gov.bd/application/track"
+    },
+    {
+      "gap_id": "gap-land-dlrms-application-track-fee-unverified",
+      "service_id": "land-dlrms-application-track",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Land Record Application Tracking (DLRMS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-dlrms-application-track-documents-unverified",
+      "service_id": "land-dlrms-application-track",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Land Record Application Tracking (DLRMS).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-khatian-certified-copy-portal-unreachable",
+      "service_id": "land-khatian-certified-copy",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Certified Khatian Copy.",
+      "severity": "MEDIUM",
+      "url": "https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "gap_id": "gap-land-khatian-certified-copy-fee-unverified",
+      "service_id": "land-khatian-certified-copy",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Certified Khatian Copy.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-khatian-certified-copy-documents-unverified",
+      "service_id": "land-khatian-certified-copy",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Certified Khatian Copy.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-khatian-correction-portal-unreachable",
+      "service_id": "land-khatian-correction",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Khatian Record Correction.",
+      "severity": "MEDIUM",
+      "url": "https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "gap_id": "gap-land-khatian-correction-fee-unverified",
+      "service_id": "land-khatian-correction",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Khatian Record Correction.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-khatian-correction-documents-unverified",
+      "service_id": "land-khatian-correction",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Khatian Record Correction.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-khatian-online-copy-portal-unreachable",
+      "service_id": "land-khatian-online-copy",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Online Khatian Copy.",
+      "severity": "MEDIUM",
+      "url": "https://dlrms.land.gov.bd/"
+    },
+    {
+      "gap_id": "gap-land-khatian-online-copy-fee-unverified",
+      "service_id": "land-khatian-online-copy",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Online Khatian Copy.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-khatian-online-copy-documents-unverified",
+      "service_id": "land-khatian-online-copy",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Online Khatian Copy.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-mortgage-info-search-portal-unreachable",
+      "service_id": "land-mortgage-info-search",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Land Mortgage Information Search.",
+      "severity": "MEDIUM",
+      "url": "https://mutation.land.gov.bd/search-mortgage-info"
+    },
+    {
+      "gap_id": "gap-land-mortgage-info-search-fee-unverified",
+      "service_id": "land-mortgage-info-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Land Mortgage Information Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mortgage-info-search-documents-unverified",
+      "service_id": "land-mortgage-info-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Land Mortgage Information Search.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-mouza-map-portal-unreachable",
+      "service_id": "land-mouza-map",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Mouza Map Request.",
+      "severity": "MEDIUM",
+      "url": "https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "gap_id": "gap-land-mouza-map-fee-unverified",
+      "service_id": "land-mouza-map",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mouza Map Request.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mouza-map-documents-unverified",
+      "service_id": "land-mouza-map",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Mouza Map Request.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-mutation-apply-portal-unreachable",
+      "service_id": "land-mutation-apply",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Land Mutation (Namjari).",
+      "severity": "MEDIUM",
+      "url": "https://mutation.land.gov.bd/"
+    },
+    {
+      "gap_id": "gap-land-mutation-apply-fee-unverified",
+      "service_id": "land-mutation-apply",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Land Mutation (Namjari).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mutation-apply-documents-unverified",
+      "service_id": "land-mutation-apply",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Land Mutation (Namjari).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-mutation-dcr-portal-unreachable",
+      "service_id": "land-mutation-dcr",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Mutation DCR and Khatian Download.",
+      "severity": "MEDIUM",
+      "url": "https://mutation.land.gov.bd/namjari-steps"
+    },
+    {
+      "gap_id": "gap-land-mutation-dcr-fee-unverified",
+      "service_id": "land-mutation-dcr",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mutation DCR and Khatian Download.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mutation-dcr-documents-unverified",
+      "service_id": "land-mutation-dcr",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Mutation DCR and Khatian Download.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-mutation-khatian-search-portal-unreachable",
+      "service_id": "land-mutation-khatian-search",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Mutation Khatian Search.",
+      "severity": "MEDIUM",
+      "url": "https://dlrms.land.gov.bd/"
+    },
+    {
+      "gap_id": "gap-land-mutation-khatian-search-fee-unverified",
+      "service_id": "land-mutation-khatian-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mutation Khatian Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mutation-khatian-search-documents-unverified",
+      "service_id": "land-mutation-khatian-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Mutation Khatian Search.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-mutation-review-portal-unreachable",
+      "service_id": "land-mutation-review",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Mutation Review Application.",
+      "severity": "MEDIUM",
+      "url": "https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "gap_id": "gap-land-mutation-review-fee-unverified",
+      "service_id": "land-mutation-review",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mutation Review Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mutation-review-documents-unverified",
+      "service_id": "land-mutation-review",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Mutation Review Application.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-mutation-track-portal-unreachable",
+      "service_id": "land-mutation-track",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Mutation Application Tracking.",
+      "severity": "MEDIUM",
+      "url": "https://mutation.land.gov.bd/search-application"
+    },
+    {
+      "gap_id": "gap-land-mutation-track-fee-unverified",
+      "service_id": "land-mutation-track",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mutation Application Tracking.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mutation-track-documents-unverified",
+      "service_id": "land-mutation-track",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Mutation Application Tracking.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-partition-consolidation-portal-unreachable",
+      "service_id": "land-partition-consolidation",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Land Partition and Consolidation (Record Correction).",
+      "severity": "MEDIUM",
+      "url": "https://www.land.gov.bd/nagorik-subidha"
+    },
+    {
+      "gap_id": "gap-land-partition-consolidation-fee-unverified",
+      "service_id": "land-partition-consolidation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Land Partition and Consolidation (Record Correction).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-partition-consolidation-documents-unverified",
+      "service_id": "land-partition-consolidation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Land Partition and Consolidation (Record Correction).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-land-survey-khatian-search-portal-unreachable",
+      "service_id": "land-survey-khatian-search",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Survey Khatian Search.",
+      "severity": "MEDIUM",
+      "url": "https://dlrms.land.gov.bd/"
+    },
+    {
+      "gap_id": "gap-land-survey-khatian-search-fee-unverified",
+      "service_id": "land-survey-khatian-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Survey Khatian Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-survey-khatian-search-documents-unverified",
+      "service_id": "land-survey-khatian-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Survey Khatian Search.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-local-upazila-land-tax-payment-official-url",
+      "service_id": "local-upazila-land-tax-payment",
+      "gap_type": "OFFICIAL_URL_MISSING",
+      "description": "No reachable official URL confirmed for Upazila Land Development Tax Payment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-upazila-land-tax-payment-fee-unverified",
+      "service_id": "local-upazila-land-tax-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Upazila Land Development Tax Payment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-upazila-land-tax-payment-documents-unverified",
+      "service_id": "local-upazila-land-tax-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Upazila Land Development Tax Payment.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/verification/batch-05-land/claims_verification.json",
+    "data/research/verification/batch-05-land/summary.json",
+    ".automation/runs/run-8e9d950ab72a-verification/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — VERIFICATION\n\n**Batch:** BATCH_05 (Land & Property Records)\n**Run ID:** run-8e9d950ab72a-verification\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/verification/batch-05-land/claims_verification.json`\n- `data/research/verification/batch-05-land/summary.json`\n- `.automation/runs/run-8e9d950ab72a-verification/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_05\",\n    \"slug\": \"batch-05-land\",\n    \"name\": \"Land & Property Records\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"land-deed-registration\",\n      \"land-dlrms-application-track\",\n      \"land-khatian-certified-copy\",\n      \"land-khatian-correction\",\n      \"land-khatian-online-copy\",\n      \"land-mortgage-info-search\",\n      \"land-mouza-map\",\n      \"land-mutation-apply\",\n      \"land-mutation-dcr\",\n      \"land-mutation-khatian-search\",\n      \"land-mutation-review\",\n      \"land-mutation-track\",\n      \"land-partition-consolidation\",\n      \"land-survey-khatian-search\",\n      \"local-upazila-land-tax-payment\"\n    ],\n    \"service_count\": 15,\n    \"phases_completed\": [\n      \"RESEARCH\"\n    ]\n  },\n  \"phase\": \"VERIFICATION\",\n  \"run_id\": \"run-8e9d950ab72a-verification\",\n  \"service_ids\": [\n    \"land-deed-registration\",\n    \"land-dlrms-application-track\",\n    \"land-khatian-certified-copy\",\n    \"land-khatian-correction\",\n    \"land-khatian-online-copy\",\n    \"land-mortgage-info-search\",\n    \"land-mouza-map\",\n    \"land-mutation-apply\",\n    \"land-mutation-dcr\",\n    \"land-mutation-khatian-search\",\n    \"land-mutation-review\",\n    \"land-mutation-track\",\n    \"land-partition-consolidation\",\n    \"land-survey-khatian-search\",\n    \"local-upazila-land-tax-payment\"\n  ],\n  \"gaps\": [\n    {\n      \"gap_id\": \"gap-land-deed-registration-portal-unreachable\",\n      \"service_id\": \"land-deed-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Deed Registration (Sub-Registry).\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://www.land.gov.bd/poripotro\"\n    },\n    {\n      \"gap_id\": \"gap-land-deed-registration-fee-unverified\",\n      \"service_id\": \"land-deed-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Deed Registration (Sub-Registry).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-deed-registration-documents-unverified\",\n      \"service_id\": \"land-deed-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Deed Registration (Sub-Registry).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-dlrms-application-track-portal-unreachable\",\n      \"service_id\": \"land-dlrms-application-track\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Land Record Application Tracking (DLRMS).\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://dlrms.land.gov.bd/application/track\"\n    },\n    {\n      \"gap_id\": \"gap-land-dlrms-application-track-fee-unverified\",\n      \"service_id\": \"land-dlrms-application-track\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Land Record Application Tracking (DLRMS).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-dlrms-application-track-documents-unverified\",\n      \"service_id\": \"land-dlrms-application-track\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Land Record Application Tracking (DLRMS).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-khatian-certified-copy-portal-unreachable\",\n      \"service_id\": \"land-khatian-certified-copy\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Certified Khatian Copy.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://land.gov.bd/vumisheba-fee\"\n    },\n    {\n      \"gap_id\": \"gap-land-khatian-certified-copy-fee-unverified\",\n      \"service_id\": \"land-khatian-certified-copy\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Certified Khatian Copy.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-khatian-certified-copy-documents-unverified\",\n      \"service_id\": \"land-khatian-certified-copy\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Certified Khatian Copy.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-khatian-correction-portal-unreachable\",\n      \"service_id\": \"land-khatian-correction\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Khatian Record Correction.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://land.gov.bd/vumisheba-fee\"\n    },\n    {\n      \"gap_id\": \"gap-land-khatian-correction-fee-unverified\",\n      \"service_id\": \"land-khatian-correction\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Khatian Record Correction.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-khatian-correction-documents-unverified\",\n      \"service_id\": \"land-khatian-correction\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Khatian Record Correction.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-khatian-online-copy-portal-unreachable\",\n      \"service_id\": \"land-khatian-online-copy\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Online Khatian Copy.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://dlrms.land.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-land-khatian-online-copy-fee-unverified\",\n      \"service_id\": \"land-khatian-online-copy\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Online Khatian Copy.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-khatian-online-copy-documents-unverified\",\n      \"service_id\": \"land-khatian-online-copy\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Online Khatian Copy.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-mortgage-info-search-portal-unreachable\",\n      \"service_id\": \"land-mortgage-info-search\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Land Mortgage Information Search.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://mutation.land.gov.bd/search-mortgage-info\"\n    },\n    {\n      \"gap_id\": \"gap-land-mortgage-info-search-fee-unverified\",\n      \"service_id\": \"land-mortgage-info-search\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Land Mortgage Information Search.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-mortgage-info-search-documents-unverified\",\n      \"service_id\": \"land-mortgage-info-search\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Land Mortgage Information Search.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-mouza-map-portal-unreachable\",\n      \"service_id\": \"land-mouza-map\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Mouza Map Request.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://land.gov.bd/vumisheba-fee\"\n    },\n    {\n      \"gap_id\": \"gap-land-mouza-map-fee-unverified\",\n      \"service_id\": \"land-mouza-map\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Mouza Map Request.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-mouza-map-documents-unverified\",\n      \"service_id\": \"land-mouza-map\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Mouza Map Request.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-apply-portal-unreachable\",\n      \"service_id\": \"land-mutation-apply\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Land Mutation (Namjari).\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://mutation.land.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-apply-fee-unverified\",\n      \"service_id\": \"land-mutation-apply\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Land Mutation (Namjari).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-apply-documents-unverified\",\n      \"service_id\": \"land-mutation-apply\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Land Mutation (Namjari).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-dcr-portal-unreachable\",\n      \"service_id\": \"land-mutation-dcr\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Mutation DCR and Khatian Download.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://mutation.land.gov.bd/namjari-steps\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-dcr-fee-unverified\",\n      \"service_id\": \"land-mutation-dcr\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Mutation DCR and Khatian Download.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-dcr-documents-unverified\",\n      \"service_id\": \"land-mutation-dcr\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Mutation DCR and Khatian Download.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-khatian-search-portal-unreachable\",\n      \"service_id\": \"land-mutation-khatian-search\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Mutation Khatian Search.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://dlrms.land.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-khatian-search-fee-unverified\",\n      \"service_id\": \"land-mutation-khatian-search\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Mutation Khatian Search.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-khatian-search-documents-unverified\",\n      \"service_id\": \"land-mutation-khatian-search\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Mutation Khatian Search.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-review-portal-unreachable\",\n      \"service_id\": \"land-mutation-review\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Mutation Review Application.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://land.gov.bd/vumisheba-fee\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-review-fee-unverified\",\n      \"service_id\": \"land-mutation-review\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Mutation Review Application.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-review-documents-unverified\",\n      \"service_id\": \"land-mutation-review\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Mutation Review Application.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-track-portal-unreachable\",\n      \"service_id\": \"land-mutation-track\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Mutation Application Tracking.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://mutation.land.gov.bd/search-application\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-track-fee-unverified\",\n      \"service_id\": \"land-mutation-track\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Mutation Application Tracking.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-mutation-track-documents-unverified\",\n      \"service_id\": \"land-mutation-track\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Mutation Application Tracking.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-partition-consolidation-portal-unreachable\",\n      \"service_id\": \"land-partition-consolidation\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Land Partition and Consolidation (Record Correction).\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://www.land.gov.bd/nagorik-subidha\"\n    },\n    {\n      \"gap_id\": \"gap-land-partition-consolidation-fee-unverified\",\n      \"service_id\": \"land-partition-consolidation\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Land Partition and Consolidation (Record Correction).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-partition-consolidation-documents-unverified\",\n      \"service_id\": \"land-partition-consolidation\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Land Partition and Consolidation (Record Correction).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-land-survey-khatian-search-portal-unreachable\",\n      \"service_id\": \"land-survey-khatian-search\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Survey Khatian Search.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://dlrms.land.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-land-survey-khatian-search-fee-unverified\",\n      \"service_id\": \"land-survey-khatian-search\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Survey Khatian Search.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-land-survey-khatian-search-documents-unverified\",\n      \"service_id\": \"land-survey-khatian-search\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Survey Khatian Search.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-local-upazila-land-tax-payment-official-url\",\n      \"service_id\": \"local-upazila-land-tax-payment\",\n      \"gap_type\": \"OFFICIAL_URL_MISSING\",\n      \"description\": \"No reachable official URL confirmed for Upazila Land Development Tax Payment.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-local-upazila-land-tax-payment-fee-unverified\",\n      \"service_id\": \"local-upazila-land-tax-payment\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Upazila Land Development Tax Payment.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-local-upazila-land-tax-payment-documents-unverified\",\n      \"service_id\": \"local-upazila-land-tax-payment\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Upazila Land Development Tax Payment.\",\n      \"severity\": \"MEDIUM\"\n    }\n  ],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Verification phase prompt\n\nVerification is **independent** from research.\n\n## Verdicts per claim\nVERIFIED | PARTIALLY_VERIFIED | UNVERIFIED | CONFLICTING | OUTDATED | REJECTED\n\n## High-risk claims require stronger evidence\n- fees, mandatory documents, legal requirements, eligibility\n- official URLs, payment instructions, deadlines, SLAs\n\n## Outputs\n- `data/research/verification/<batch-slug>/claims_verification.json`\n- `data/research/verification/<batch-slug>/conflicts_resolution.json`\n- `data/research/verification/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-8e9d950ab72a-verification/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:44:27.479634+00:00"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "dpdc-prepaid-recharge",
+  "claims": [
+    {
+      "claim_id": "dpdc-prepaid-recharge::c-catalogue-authority",
+      "service_id": "dpdc-prepaid-recharge",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Power Distribution Company Limited (DPDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-prepaid-recharge::c-official-portal",
+      "service_id": "dpdc-prepaid-recharge",
+      "claim_type": "application_url",
+      "claim_text": "DPDC Prepaid Meter Online Recharge official information is published at https://www.dpdc.org.bd/public/ (page title: Dhaka Power Distribution Company Ltd.).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.dpdc.org.bd/public/"
+      },
+      "source_ids": [
+        "src-dpdc-prepaid-recharge-official"
+      ],
+      "evidence_ids": [
+        "ev-dpdc-prepaid-recharge::c-official-portal-src-dpdc-prepaid-recharge-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-prepaid-recharge::c-procedure-overview",
+      "service_id": "dpdc-prepaid-recharge",
+      "claim_type": "procedure_step",
+      "claim_text": "DPDC Prepaid Meter Online Recharge is a government service under Dhaka Power Distribution Company Limited (DPDC) (electricity payment). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-prepaid-recharge-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-prepaid-recharge::c-service-identity",
+      "service_id": "dpdc-prepaid-recharge",
+      "claim_type": "eligibility",
+      "claim_text": "DPDC Prepaid Meter Online Recharge (ডিপিডিসি প্রিপেইড মিটার রিচার্জ) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-prepaid-recharge-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

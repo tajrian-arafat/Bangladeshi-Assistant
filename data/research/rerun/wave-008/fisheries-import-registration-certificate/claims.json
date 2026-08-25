@@ -1,0 +1,70 @@
+{
+  "service_id": "fisheries-import-registration-certificate",
+  "claims": [
+    {
+      "claim_id": "fisheries-import-registration-certificate::c-catalogue-authority",
+      "service_id": "fisheries-import-registration-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Fisheries (FIQC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-import-registration-certificate::c-official-url-documented",
+      "service_id": "fisheries-import-registration-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.ecertificate.fisheries.gov.bd/ for Fisheries Import Registration Certificate; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/"
+      },
+      "source_ids": [
+        "src-fisheries-import-registration-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-import-registration-certificate::c-procedure-overview",
+      "service_id": "fisheries-import-registration-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Fisheries Import Registration Certificate is a government service under Department of Fisheries (FIQC) (import registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-fisheries-import-registration-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-import-registration-certificate::c-service-identity",
+      "service_id": "fisheries-import-registration-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Fisheries Import Registration Certificate (মাছ/মৎস্য আমদানি নিবন্ধন সনদ) is a confirmed government service in category fisheries, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-fisheries-import-registration-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

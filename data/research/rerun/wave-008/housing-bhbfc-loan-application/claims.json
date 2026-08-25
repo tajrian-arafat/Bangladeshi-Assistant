@@ -1,0 +1,70 @@
+{
+  "service_id": "housing-bhbfc-loan-application",
+  "claims": [
+    {
+      "claim_id": "housing-bhbfc-loan-application::c-catalogue-authority",
+      "service_id": "housing-bhbfc-loan-application",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh House Building Finance Corporation (BHBFC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "housing-bhbfc-loan-application::c-official-url-documented",
+      "service_id": "housing-bhbfc-loan-application",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bhbfc.khulna.gov.bd/en/site/page/%E0%A6%AC%E0%A6%BE%E0%A7%9C%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A3-%E0%A6%8B%E0%A6%A3-%E0%A6%B8%E0%A6%82%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A4-%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0 for House Building Loan (BHBFC); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bhbfc.khulna.gov.bd/en/site/page/%E0%A6%AC%E0%A6%BE%E0%A7%9C%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A3-%E0%A6%8B%E0%A6%A3-%E0%A6%B8%E0%A6%82%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A4-%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0"
+      },
+      "source_ids": [
+        "src-housing-bhbfc-loan-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "housing-bhbfc-loan-application::c-procedure-overview",
+      "service_id": "housing-bhbfc-loan-application",
+      "claim_type": "procedure_step",
+      "claim_text": "House Building Loan (BHBFC) is a government service under Bangladesh House Building Finance Corporation (BHBFC) (housing finance). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-housing-bhbfc-loan-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "housing-bhbfc-loan-application::c-service-identity",
+      "service_id": "housing-bhbfc-loan-application",
+      "claim_type": "eligibility",
+      "claim_text": "House Building Loan (BHBFC) (গৃহ নির্মাণ ঋণ (BHBFC)) is a confirmed government service in category housing, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-housing-bhbfc-loan-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}
