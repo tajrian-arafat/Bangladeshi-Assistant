@@ -342,7 +342,8 @@ class PhaseRunner:
         run_dir = self._run_dir(phase_run_id)
         if result_path is None:
             result_path = run_dir / "result.json"
-        self.state_machine.transition(state, WorkflowStatus.VALIDATING_RESULT)
+        if state.workflow_status != WorkflowStatus.VALIDATING_RESULT.value:
+            self.state_machine.transition(state, WorkflowStatus.VALIDATING_RESULT)
 
         from automation.schemas.result import validate_phase_result
 
@@ -409,7 +410,7 @@ class PhaseRunner:
             return self.state_machine.transition(state, WorkflowStatus.GAP_CLOSURE)
 
         if status == "SUCCESS" and not result.get("recommended_next_phase") and phase == WorkflowPhase.REGRESSION.value:
-            return self.advance_phase(state)
+            return self._complete_current_batch(state)
 
         recommended = result.get("recommended_next_phase") or self._next_phase(phase)
         if recommended == "GAP_CLOSURE" and int(result.get("knowledge_gaps") or 0) == 0:
@@ -422,28 +423,40 @@ class PhaseRunner:
 
         return self.state_machine.transition(state, WorkflowStatus.AUTO_CONTINUE)
 
+    def _complete_current_batch(self, state: ProjectState) -> ProjectState:
+        """Mark the active batch complete after REGRESSION (STABILIZATION is optional/skipped)."""
+        batch_id = state.current_batch or ""
+        if batch_id:
+            self.batch_manager.mark_batch_status(batch_id, "COMPLETE")
+            state.last_completed_batch = batch_id
+        next_batch = self.batch_manager.next_ready_batch()
+        if next_batch and batch_id:
+            state.current_batch = next_batch["batch_id"]
+            state.current_phase = WorkflowPhase.RESEARCH.value
+            state.current_run_id = None
+            state.retry_count = 0
+            self.batch_manager.mark_batch_status(next_batch["batch_id"], "IN_PROGRESS")
+            self.state_machine.clear_current_run()
+            self.state_machine.save(state)
+            return self.state_machine.transition(state, WorkflowStatus.READY)
+        state.current_batch = None
+        state.current_phase = None
+        state.current_run_id = None
+        state.retry_count = 0
+        self.state_machine.clear_current_run()
+        self.state_machine.save(state)
+        return self.state_machine.transition(state, WorkflowStatus.COMPLETE)
+
     def advance_phase(self, state: ProjectState) -> ProjectState:
         current = state.current_phase or WorkflowPhase.RESEARCH.value
         nxt = self._next_phase(current)
         if not nxt:
-            self.batch_manager.mark_batch_status(state.current_batch or "", "COMPLETE")
-            state.last_completed_batch = state.current_batch or state.last_completed_batch
-            next_batch = self.batch_manager.next_ready_batch()
-            if next_batch and state.current_batch:
-                state.current_batch = next_batch["batch_id"]
-                state.current_phase = WorkflowPhase.RESEARCH.value
-                state.current_run_id = None
-                state.retry_count = 0
-                self.batch_manager.mark_batch_status(next_batch["batch_id"], "IN_PROGRESS")
-                self.state_machine.clear_current_run()
-                return self.state_machine.transition(state, WorkflowStatus.READY)
-            state.current_batch = None
-            state.current_phase = None
-            state.current_run_id = None
-            self.state_machine.clear_current_run()
-            return self.state_machine.transition(state, WorkflowStatus.COMPLETE)
+            return self._complete_current_batch(state)
         state.current_phase = nxt
         state.retry_count = 0
+        self.state_machine.save(state)
+        if state.workflow_status == WorkflowStatus.VALIDATING_RESULT.value:
+            return self.state_machine.transition(state, WorkflowStatus.AUTO_CONTINUE)
         return self.state_machine.transition(state, WorkflowStatus.RUNNING)
 
     def run_autonomous_step(self, state: ProjectState) -> dict[str, Any]:
@@ -477,6 +490,20 @@ class PhaseRunner:
             WorkflowStatus.GAP_CLOSURE.value,
             WorkflowStatus.AUTO_CONTINUE.value,
         }
+
+        if state.workflow_status == WorkflowStatus.VALIDATING_RESULT.value:
+            phase_run_id = self._phase_run_id(state.current_batch or "", phase, state.current_run_id or "")
+            result_path = self._run_dir(phase_run_id) / "result.json"
+            state = self.validate_and_transition(state, result_path=result_path)
+            return {
+                "status": state.workflow_status,
+                "batch": batch["batch_id"],
+                "phase": phase,
+                "run_id": state.current_run_id,
+                "result_status": "RESUMED_VALIDATION",
+                "summary": "Resumed validation from VALIDATING_RESULT",
+                "next_phase": state.current_phase,
+            }
 
         if state.workflow_status in executable_statuses:
             if state.workflow_status == WorkflowStatus.AUTO_CONTINUE.value:

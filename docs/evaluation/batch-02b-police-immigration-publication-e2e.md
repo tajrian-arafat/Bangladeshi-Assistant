@@ -1,6 +1,6 @@
 # Batch 2B — Publication & E2E Evaluation
 
-**Generated:** 2026-08-24T23:25:53.862247+00:00
+**Generated:** 2026-08-25T01:01:50.961883+00:00
 **Mode:** Local/development only
 
 ## E2E headline results

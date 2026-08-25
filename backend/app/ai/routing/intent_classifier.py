@@ -82,7 +82,10 @@ def classify_intents(
             "লাগে",
             "লাগবে",
         ]
+    ) and not any(
+        w in text for w in ["procedure inquiry", "procedure inquiry before", "before"]
     )
+    raw_lower = raw.lower()
     has_procedure_signal = any(
         w in text
         for w in [
@@ -103,9 +106,24 @@ def classify_intents(
             "কি করতে হবে",
             "করতে হয়",
             "করতে হয়",
+            "কি করব",
+            "কী করব",
             "verify",
             "verification",
             "everify",
+            "pathway",
+            "before",
+        ]
+    ) or any(
+        w in raw_lower
+        for w in [
+            "korar age",
+            "er age ki",
+            "age ki test",
+            "pathway",
+            "পোর্টাল",
+            "portal",
+            "পদ্ধতি",
         ]
     )
 
@@ -340,11 +358,133 @@ def classify_intents(
         elif "verification" in text and "office" in text:
             bump("procedure_inquiry", 35)
 
-    # New application URL questions
-    if any(w in text for w in ["apply online", "application url", "onboarding", "আবেদন কোথায়", "কোথায়"]):
+    # New application URL questions — apply/portal context only
+    if any(w in text for w in ["apply online", "application url", "onboarding", "আবেদন কোথায়", "আবেদন কোথায়"]):
         if any(w in text for w in ["passport", "e-passport", "epassport", "ই-পাসপোর্ট", "পাসপোর্ট"]):
             bump("application_url", 40)
             bump("application", 25)
+        elif any(w in text for w in ["driving", "licence", "license", "learner", "brta", "bsp", "instructor", "ড্রাইভিং", "লাইসেন্স", "লাইসেন্স"]):
+            if any(w in text for w in ["apply", "portal", "online", "website", "url", "ওয়েবসাইট", "পোর্টাল"]):
+                bump("application_url", 42)
+                bump("procedure_inquiry", 15)
+
+    # Firearms licence office location → procedure (special branch workflow)
+    if any(w in text for w in ("firearms", "fire arms", "gun license", "arms license", "আগ্নেয়াস্ত্র", "আগ্নেয়াস্ত্র")):
+        if signals.location and not signals.url_request:
+            bump("procedure_inquiry", 40)
+            bump("office_locator", -25)
+
+    # Authorization / letter document requests
+    if any(w in text for w in ("authorization letter", "auth letter", "letter for")):
+        bump("document_list", 40)
+        bump("procedure_inquiry", -15)
+
+    # Physical office location (কোথায়/kothay without apply/portal/website/online)
+    if signals.location and not signals.url_request and not signals.application_location:
+        if any(
+            w in text or w in raw_lower for w in ["online", "অনলাইন", "অনলাইনে"]
+        ):
+            bump("application_url", 42)
+            bump("office_locator", -25)
+        elif not any(
+            w in text or w in raw_lower
+            for w in ["apply", "portal", "online", "website", "url", "ওয়েবসাইট", "পোর্টাল", "আবেদন", "অনলাইন", "অনলাইনে"]
+        ):
+            bump("office_locator", 42)
+            bump("application_url", -30)
+
+    # Learner/licence apply requests (not how-to) → application URL
+    if re.search(r"\bapply\b", text) and any(
+        w in text for w in ["learner", "licence", "license", "driving", "instructor", "duplicate", "smart card"]
+    ):
+        if not any(w in text for w in ["how", "kivabe", "procedure", "step", "process", "korar age", "before"]):
+            bump("application_url", 44)
+
+    # BRTA portal / renewal URL questions
+    if any(w in text for w in ["portal", "online bangladesh", "bsp.brta", "apply bangladesh"]) or any(
+        w in raw_lower for w in ["portal", "পোর্টাল", "online bangladesh"]
+    ):
+        if any(
+            w in text or w in raw_lower
+            for w in ["driving", "licence", "license", "renewal", "renew", "learner", "smart card", "duplicate", "নবায়ন", "নবায়ন"]
+        ):
+            bump("application_url", 42)
+
+    if any(w in text for w in ["kothay apply", "where apply", "apply korbo", "dekhte hobe"]) and any(
+        w in text for w in ["driving", "licence", "license", "learner", "dctc", "result", "brta"]
+    ):
+        bump("application_url", 40)
+
+    # Instructor licence service entry → application URL when no explicit requirements ask
+    if "instructor" in text and any(w in text for w in ["licence", "license", "bangladesh", "brta"]):
+        if not any(w in text for w in ["requirement", "documents", "document", "lagbe", "lage"]):
+            bump("application_url", 36)
+            bump("general_info", -15)
+
+    # Smart-card pathway / exam prerequisite questions
+    if any(w in text for w in ["pathway", "sequence"]) and any(
+        w in text for w in ["learner", "smart card", "licence", "license"]
+    ):
+        bump("procedure_inquiry", 40)
+        bump("general_info", -20)
+
+    # Instructor requirements → document_list not general_info
+    if "instructor" in text and any(w in text for w in ["requirement", "documents", "lagbe", "lage"]):
+        bump("document_list", 35)
+        bump("general_info", -20)
+
+    # DCTC result queries
+    if any(w in text for w in ["dctc", "dctb", "driving test result", "field test result"]):
+        bump("application_url", 30)
+        bump("procedure_inquiry", 25)
+        bump("status", 20)
+    # DCTC result dekhbo/where-to-check → application URL
+    if any(w in raw_lower for w in ["dekhbo", "dekhte", "dekha", "kothay dekh"]) and any(
+        w in text for w in ["dctc", "dctb", "result", "exam"]
+    ):
+        bump("application_url", 50)
+        bump("office_locator", -30)
+
+    # Appointment location beats generic office_locator
+    if hits.get("appointment") and any(w in text for w in ["kothay", "where", "কোথায়", "কোথায়"]):
+        bump("appointment", 45)
+        bump("office_locator", -30)
+
+    # Lost NID procedure questions
+    if any(w in raw_lower for w in ["harano", "হারানো", "হারিয়ে", "হারালে", "lost", "hariye"]) and any(
+        w in text or w in raw_lower for w in ["nid", "এনআইডি", "national id"]
+    ):
+        if any(w in raw_lower for w in ["ki korbo", "kivabe", "korbo", "কি করব", "কী করব", "কিভাবে", "কীভাবে"]):
+            bump("procedure_inquiry", 55)
+            bump("lost_document", -35)
+
+    # GD online website / portal
+    if any(w in text or w in raw_lower for w in ["gd", "general diary", "জিডি"]) and any(
+        w in text or w in raw_lower for w in ["website", "portal", "url", "ওয়েবসাইট", "পোর্টাল", "online"]
+    ):
+        bump("application_url", 45)
+        bump("procedure_inquiry", -15)
+
+    # Generic verification status without passport/epassport context
+    if "verification" in text and "status" in text and "passport" not in text and "epassport" not in text:
+        bump("procedure_inquiry", 40)
+        bump("status", -25)
+
+    # Lost/harano duplicate licence (Bangla + Banglish)
+    if any(w in raw_lower for w in ["harano", "হারানো", "lost"]) and any(
+        w in text or w in raw_lower for w in ["licence", "license", "driving", "ড্রাইভিং", "লাইসেন্স"]
+    ):
+        bump("procedure_inquiry", 35)
+        bump("lost_document", 25)
+
+    if any(w in raw_lower for w in ["duplicate", "ডুপ্লিকেট", "duplicat"]) and any(
+        w in raw_lower for w in ["licence", "license", "লাইসেন্স", "লাইসেন্স"]
+    ):
+        bump("procedure_inquiry", 32)
+
+    # Short renewal abbreviation queries → portal URL
+    if re.search(r"\b(dl|driving licence|driving license)\s+renew(al)?\b", text):
+        bump("application_url", 40)
 
     # Mission / abroad context
     if hits.get("mission"):
@@ -364,6 +504,9 @@ def classify_intents(
     # Clarification overrides
     if clarifications.get("channel") and clarifications.get("service") == "police-clearance-certificate":
         bump("fee_inquiry", 50)
+    if clarifications.get("intent") in {"application", "application_url"}:
+        bump("application_url", 40)
+        bump("office_locator", -25)
     if clarifications.get("passport_type") == "mrp":
         bump("comparison", 5)
     if clarifications.get("application_type") in {"renewal", "reissue"}:
@@ -376,9 +519,22 @@ def classify_intents(
         bump("fee_inquiry", 10)
         bump("correction", 10)
 
+    # Normalized Banglish document-requirement phrases
+    if "document inquiry" in text:
+        bump("document_list", 52)
+        bump("application_url", -25)
+
     if not scored:
         # Domain keyword fallback
-        if any(w in text for w in ["passport", "nid", "brta", "tin", "birth", "death", "জন্ম", "মৃত্যু", "এনআইডি"]):
+        if any(w in text for w in ["dctc", "dctb"]) and "result" in text:
+            return IntentResult(primary="application_url")
+        if any(w in text for w in ["brta", "driving licence", "driving license", "learner licence"]):
+            if any(w in text for w in ["fee", "koto", "taka"]):
+                return IntentResult(primary="fee_inquiry")
+            if any(w in text for w in ["apply", "portal", "kothay", "url", "online"]):
+                return IntentResult(primary="application_url")
+            return IntentResult(primary="general_info")
+        if any(w in text for w in ["passport", "nid", "tin", "birth", "death", "জন্ম", "মৃত্যু", "এনআইডি"]):
             return IntentResult(primary="document_list")
         return IntentResult(primary="general_info")
 
@@ -397,6 +553,17 @@ def classify_intents(
     # Application URL beats office_locator for apply/visa location questions
     if signals.application_location and scored.get("application_url", 0) >= 35:
         if scored.get("office_locator", 0) > scored.get("application_url", 0):
+            primary = "application_url"
+
+    # Document inquiry beats renewal portal alias
+    if "document inquiry" in text and scored.get("document_list", 0) >= 40:
+        primary = "document_list"
+
+    # Portal/online renewal queries prefer application_url over renewal→document_list alias
+    if scored.get("application_url", 0) >= 38 and scored.get("application_url", 0) >= scored.get(
+        "renewal", 0
+    ):
+        if any(w in raw_lower for w in ["portal", "online", "পোর্টাল", "url", "website", "apply"]):
             primary = "application_url"
 
     # URL request beats procedure
@@ -421,6 +588,28 @@ def classify_intents(
     # GD online lost-item filing — procedure, not document list
     if gd_context and "online" in text and "lost" in text and scored.get("procedure_inquiry", 0) >= 40:
         primary = "procedure_inquiry"
+
+    # NID lost procedure beats lost_document alias
+    if scored.get("procedure_inquiry", 0) >= 50 and scored.get("lost_document", 0) >= 30:
+        if any(w in raw_lower for w in ["nid", "এনআইডি"]) and any(
+            w in raw_lower for w in ["korbo", "কি করব", "কী করব", "kivabe"]
+        ):
+            primary = "procedure_inquiry"
+
+    # Appointment beats office_locator for short location follow-ups
+    if hits.get("appointment") and scored.get("appointment", 0) >= 35:
+        if scored.get("office_locator", 0) > scored.get("appointment", 0):
+            primary = "appointment"
+
+    # DCTC result lookup beats office_locator
+    if any(w in raw_lower for w in ["dekhbo", "dekhte"]) and "result" in text:
+        if scored.get("application_url", 0) >= 40:
+            primary = "application_url"
+
+    # Firearms location beats office_locator
+    if any(w in raw_lower for w in ["firearms", "fire arms", "gun license", "arms license", "আগ্নেয়াস্ত্র", "আগ্নেয়াস্ত্র"]):
+        if scored.get("procedure_inquiry", 0) >= 35 and signals.location:
+            primary = "procedure_inquiry"
 
     secondary = [
         intent

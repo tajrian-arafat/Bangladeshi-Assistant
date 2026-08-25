@@ -141,6 +141,32 @@ def test_e_regression_completes_batch(isolated_state, monkeypatch: pytest.Monkey
     assert loaded.current_phase == "STABILIZATION"
 
 
+def test_e2_regression_success_without_next_phase_completes_batch(
+    isolated_state, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """REGRESSION with empty recommended_next_phase marks batch COMPLETE (skips STABILIZATION)."""
+    runner = PhaseRunner(REPO)
+    state = _state(
+        workflow_status=WorkflowStatus.AUTO_CONTINUE.value,
+        current_phase="REGRESSION",
+        current_run_id="run-batch-complete",
+    )
+    result = PhaseResult.empty_success(
+        run_id="run-batch-complete-regression",
+        batch_id="BATCH_03A",
+        phase="REGRESSION",
+        summary="All regression suites passed",
+        recommended_next_phase="",
+    )
+    monkeypatch.setattr(runner, "execute_current_phase", lambda s, b: result)
+    StateMachine(REPO).save(state)
+    runner.run_autonomous_step(state)
+    loaded = StateMachine(REPO).load()
+    assert loaded.workflow_status == WorkflowStatus.COMPLETE.value
+    assert loaded.last_completed_batch == "BATCH_03A"
+    assert BatchManager(REPO).get_batch("BATCH_03A")["status"] == "COMPLETE"
+
+
 def test_f_critical_conflict_pauses(isolated_state, monkeypatch: pytest.MonkeyPatch) -> None:
     runner = PhaseRunner(REPO)
     state = _state(workflow_status=WorkflowStatus.READY.value, current_phase="VERIFICATION")

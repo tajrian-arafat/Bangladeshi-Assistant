@@ -134,7 +134,7 @@ def detect_semantic_signals(text: str, raw_text: str | None = None) -> SemanticS
     )
 
     signals.url_request = any(
-        w in blob for w in (" url", "url ", "portal", "website", "online url", "application url")
+        w in blob for w in (" url", "url ", "portal", "website", "online url", "application url", "ওয়েবসাইট", "website")
     ) or blob.strip().endswith("url")
 
     signals.comparison = _matches_any(blob, _COMPARISON_PATTERNS)

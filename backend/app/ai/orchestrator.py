@@ -152,8 +152,10 @@ class Orchestrator:
             merged_clarifications,
             raw_message=routing_message,
         )
-        # Bangla script may carry intents lost during romanization
-        if ctx.intents.primary in {"general_info", "document_list"}:
+        # Bangla script may carry intents lost during romanization — do not override
+        # normalized Banglish phrases (e.g. document inquiry) with raw-token scoring.
+        has_bn_script = bool(re.search(r"[\u0980-\u09FF]", routing_message))
+        if has_bn_script and ctx.intents.primary in {"general_info", "document_list"}:
             raw_intents = classify_intents(
                 routing_message, merged_clarifications, raw_message=routing_message
             )
@@ -295,7 +297,22 @@ class Orchestrator:
             inferred["passport_type"] = "e_passport"
         elif any(token in msg for token in ("mrp", "machine readable")):
             inferred["passport_type"] = "mrp"
-        if any(token in msg for token in ("reissue", "re-issue", "renewal", "renew")):
+        passport_context = any(
+            token in msg
+            for token in (
+                "passport",
+                "e-passport",
+                "epassport",
+                "e passport",
+                "mrp",
+                "machine readable",
+                "ই-পাসপোর্ট",
+                "পাসপোর্ট",
+            )
+        )
+        if passport_context and any(
+            token in msg for token in ("reissue", "re-issue", "renewal", "renew")
+        ):
             inferred["application_type"] = "reissue"
         if infer_channel_from_message := self._infer_channel_clarification(msg):
             inferred["channel"] = infer_channel_from_message
@@ -311,6 +328,11 @@ class Orchestrator:
         return None
 
     def _clarifications_needed(self, ctx: PipelineContext, request: ChatRequest) -> list[str]:
+        msg = ctx.normalized_message.strip().lower()
+        if msg in {"passport", "e passport", "epassport", "e-passport"}:
+            return [
+                "What do you need help with (new application, renewal, fee, status, or documents)?"
+            ]
         if not ctx.service:
             return []
         slug = ctx.service.slug
@@ -322,7 +344,26 @@ class Orchestrator:
             if "application_type" not in clarifications:
                 return ["Is this renewal, reissue, or first-time application?"]
         if slug == "driving-licence-renewal" and "licence_class" not in clarifications:
-            return ["Which licence class are you renewing (e.g., motorcycle, car)?"]
+            intent = ctx.intent or ""
+            msg = (ctx.message + " " + ctx.normalized_message).lower()
+            class_sensitive = intent in {"fee_inquiry", "document_list"} or any(
+                w in msg
+                for w in (
+                    "licence class",
+                    "license class",
+                    "class a",
+                    "class b",
+                    "motorcycle",
+                    "car class",
+                    "professional",
+                    "non-professional",
+                )
+            )
+            # Short renewal shorthand (e.g. "DL renew") should surface portal URL without class slot
+            if re.search(r"\b(dl|renew|renewal)\b", msg) and len(msg.split()) <= 3:
+                class_sensitive = False
+            if class_sensitive:
+                return ["Which licence class are you renewing (e.g., motorcycle, car)?"]
         if slug == "civil-birth-registration-correction" and "correction_type" not in clarifications:
             return [
                 "Which birth certificate correction do you need (name, date of birth, or other field)?"

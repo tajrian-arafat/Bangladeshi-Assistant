@@ -1,13 +1,13 @@
 {
-  "steps": 4,
-  "final_status": "BLOCKED",
+  "steps": 3,
+  "final_status": "AUTO_CONTINUE",
   "last": {
-    "status": "BLOCKED",
+    "status": "AUTO_CONTINUE",
     "batch": "BATCH_03A",
-    "phase": "E2E",
-    "run_id": "run-2f560e76b418",
-    "result_status": "BLOCKED",
-    "summary": "E2E: 4/25 passed, hallucinations=0",
+    "phase": "PUBLICATION",
+    "run_id": "run-test123",
+    "result_status": "SUCCESS",
+    "summary": "PUBLICATION ok",
     "next_phase": "E2E"
   },
   "history": [
@@ -15,38 +15,29 @@
       "status": "AUTO_CONTINUE",
       "batch": "BATCH_03A",
       "phase": "RESEARCH",
-      "run_id": "run-2f560e76b418",
+      "run_id": "run-test123",
       "result_status": "SUCCESS",
-      "summary": "Research complete for BATCH_03A: 55 claims",
+      "summary": "RESEARCH ok",
       "next_phase": "VERIFICATION"
     },
     {
       "status": "AUTO_CONTINUE",
       "batch": "BATCH_03A",
       "phase": "VERIFICATION",
-      "run_id": "run-2f560e76b418",
+      "run_id": "run-test123",
       "result_status": "SUCCESS",
-      "summary": "Verification complete: 0 verified, 0 gaps",
+      "summary": "VERIFICATION ok",
       "next_phase": "PUBLICATION"
     },
     {
       "status": "AUTO_CONTINUE",
       "batch": "BATCH_03A",
       "phase": "PUBLICATION",
-      "run_id": "run-2f560e76b418",
+      "run_id": "run-test123",
       "result_status": "SUCCESS",
-      "summary": "Local publication complete for batch-03a-brta-driving-licence",
-      "next_phase": "E2E"
-    },
-    {
-      "status": "BLOCKED",
-      "batch": "BATCH_03A",
-      "phase": "E2E",
-      "run_id": "run-2f560e76b418",
-      "result_status": "BLOCKED",
-      "summary": "E2E: 4/25 passed, hallucinations=0",
+      "summary": "PUBLICATION ok",
       "next_phase": "E2E"
     }
   ],
-  "generated_at": "2026-08-25T00:06:46.851813+00:00"
+  "generated_at": "2026-08-25T01:04:53.618118+00:00"
 }

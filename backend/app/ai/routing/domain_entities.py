@@ -13,9 +13,10 @@ from app.ai.routing.loader import load_capability_aliases
 class DomainEntities:
     domains: list[str] = field(default_factory=list)
     passport_type: str | None = None  # e_passport | mrp
+    licence_type: str | None = None  # learner | renewal | duplicate | smart_card | instructor | dctc_result
     action: str | None = None
     speed: str | None = None  # regular | express | super_express
-    channel: str | None = None  # domestic | mission
+    channel: str | None = None  # domestic | mission | online
     applicant: str | None = None
     tokens: set[str] = field(default_factory=set)
 
@@ -23,6 +24,7 @@ class DomainEntities:
         return {
             "domains": self.domains,
             "passport_type": self.passport_type,
+            "licence_type": self.licence_type,
             "action": self.action,
             "speed": self.speed,
             "channel": self.channel,
@@ -79,6 +81,22 @@ def extract_domain_entities(message: str) -> DomainEntities:
     elif _group_hit(text, groups.get("driving_licence", {})):
         if "transport" not in entities.domains:
             entities.domains.append("transport")
+
+    if _group_hit(text, groups.get("learner_licence", {})):
+        entities.licence_type = "learner"
+    elif _group_hit(text, groups.get("renewal_licence", {})):
+        if "firearms" not in entities.domains and not _group_hit(text, groups.get("firearms", {})):
+            entities.licence_type = "renewal"
+    elif _group_hit(text, groups.get("duplicate_licence", {})):
+        entities.licence_type = "duplicate"
+        entities.action = entities.action or "lost"
+    elif _group_hit(text, groups.get("smart_card_licence", {})):
+        entities.licence_type = "smart_card"
+    elif _group_hit(text, groups.get("instructor_licence", {})):
+        entities.licence_type = "instructor"
+    elif _group_hit(text, groups.get("dctc_result", {})):
+        entities.licence_type = "dctc_result"
+        entities.action = entities.action or "status"
 
     if _group_hit(text, groups.get("fee", {})):
         entities.action = entities.action or "fee"

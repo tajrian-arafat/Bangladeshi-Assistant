@@ -116,6 +116,14 @@ def public_intent(primary: str, secondary: list[str] | None = None) -> str:
     if primary == "application_url":
         return "application_url"
 
+    # Portal-first renewal queries (e.g. BRTA BSP) expose application_url, not document_list alias
+    if primary in {"renewal", "reissue"} and "application_url" in secondary:
+        return "application_url"
+
+    # Procedure-style renewal questions (before/after steps)
+    if primary in {"renewal", "reissue"} and "procedure_inquiry" in secondary:
+        return "procedure_inquiry"
+
     # List/download official URL availability
 
     if primary in {"application", "procedure_inquiry"} and "eligibility" in secondary:

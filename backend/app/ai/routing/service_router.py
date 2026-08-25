@@ -53,6 +53,35 @@ def _query_is_gd_context(text: str) -> bool:
     return bool(re.search(r"\bgd\b", text)) or "general diary" in text or "genaral diary" in text
 
 
+def _query_is_driving_licence_context(text: str) -> bool:
+    markers = [
+        "driving licence",
+        "driving license",
+        "learner licence",
+        "learner license",
+        "brta",
+        "bsp.brta",
+        "bsp register",
+        "smart card licence",
+        "smart card license",
+        "dctc",
+        "dctb",
+        "instructor licence",
+        "instructor license",
+        "ড্রাইভিং",
+        "ড্রাইভিং লাইসেন্স",
+        "ড্রাইভিং লাইসেন্স",
+        "শিক্ষানবিশ",
+    ]
+    return any(m in text for m in markers)
+
+
+def _query_is_dctc_result_context(text: str) -> bool:
+    return "dctc" in text or "dctb" in text or (
+        "driving test" in text and "result" in text
+    ) or ("field test" in text and "result" in text)
+
+
 def _query_mentions_police_verification(text: str) -> bool:
     markers = [
         "police verification",
@@ -84,6 +113,10 @@ class ServiceRouter:
         text = message.lower()
         clarifications = clarifications or {}
         domain_entities = extract_domain_entities(text)
+        if clarifications.get("domain"):
+            domain = str(clarifications["domain"])
+            if domain not in domain_entities.domains:
+                domain_entities.domains.append(domain)
 
         services = (
             await self.session.execute(
@@ -93,7 +126,7 @@ class ServiceRouter:
         by_slug = {s.slug: s for s in services}
 
         # 1) Phrase hints (data-driven, longest first)
-        hinted_slug = self._phrase_hint_match(text, by_slug)
+        hinted_slug = self._phrase_hint_match(text, by_slug, clarifications)
         if hinted_slug:
             svc = by_slug[hinted_slug]
             return ServiceRoutingResult(
@@ -177,10 +210,44 @@ class ServiceRouter:
             domain_entities=domain_entities,
         )
 
-    def _phrase_hint_match(self, text: str, by_slug: dict[str, Service]) -> str | None:
+    def _phrase_hint_match(
+        self,
+        text: str,
+        by_slug: dict[str, Service],
+        clarifications: dict[str, Any] | None = None,
+    ) -> str | None:
+        clarifications = clarifications or {}
+        driving_slugs = {
+            "brta-learner-driving-license",
+            "driving-licence-renewal",
+            "brta-duplicate-driving-license",
+            "brta-smart-card-driving-license",
+            "brta-driving-instructor-license",
+            "brta-dctc-exam-result",
+        }
+        firearms_ctx = (
+            clarifications.get("topic") == "firearms"
+            or clarifications.get("domain") == "firearms"
+            or any(
+                w in text
+                for w in ("firearms", "fire arms", "gun license", "arms license", "আগ্নেয়াস্ত্র")
+            )
+        )
+        ambiguous_driving_phrases = {
+            "licence renewal",
+            "license renewal",
+            "licence renew",
+            "license renew",
+        }
         for phrase, slug in load_phrase_hints():
-            if phrase in text and slug in by_slug:
-                return slug
+            if phrase not in text or slug not in by_slug:
+                continue
+            if slug in driving_slugs and phrase in ambiguous_driving_phrases:
+                if firearms_ctx or (
+                    "document" in text and not _query_is_driving_licence_context(text)
+                ):
+                    continue
+            return slug
         return None
 
     def _url_host_match(self, text: str, services: list[Service]) -> Service | None:
@@ -254,6 +321,53 @@ class ServiceRouter:
             ]
             if firearms:
                 return firearms
+
+        if "transport" in entities.domains or _query_is_driving_licence_context(text):
+            transport = [
+                s
+                for s in services
+                if self._profiles.get(s.slug, {}).get("domain") == "transport"
+                or "brta" in s.slug
+                or s.slug == "driving-licence-renewal"
+            ]
+            if transport:
+                return transport
+
+        if "land" in entities.domains:
+            land = [
+                s
+                for s in services
+                if self._profiles.get(s.slug, {}).get("domain") == "land"
+            ]
+            if land:
+                return land
+
+        if "education" in entities.domains:
+            education = [
+                s
+                for s in services
+                if self._profiles.get(s.slug, {}).get("domain") == "education"
+            ]
+            if education:
+                return education
+
+        if "social_protection" in entities.domains:
+            social = [
+                s
+                for s in services
+                if self._profiles.get(s.slug, {}).get("domain") == "social_protection"
+            ]
+            if social:
+                return social
+
+        if "tax" in entities.domains:
+            tax = [
+                s
+                for s in services
+                if self._profiles.get(s.slug, {}).get("domain") == "tax"
+            ]
+            if tax:
+                return tax
 
         return services
 
@@ -422,13 +536,13 @@ class ServiceRouter:
         # Fee matrix / speed tier queries should hit fee payment service not urgent-only service
         if intents.primary == "fee_inquiry":
             if service.slug == "epassport-fee-payment" and entities.speed:
-                score += 25
+                score += 45
                 reasons.append("boost:fee_payment_speed_tier")
             if service.slug == "epassport-urgent-super-express" and entities.speed in {
                 "express",
                 "super_express",
             }:
-                score -= 35
+                score -= 55
                 reasons.append("penalty:urgent_service_for_fee_matrix")
 
         # Mission fee questions stay on fee payment
@@ -520,6 +634,62 @@ class ServiceRouter:
         # Batch 2B police + immigration routing — handled via service_capabilities.json,
         # phrase_hints.json, and domain_entities channel variants (no inline phrase hacks).
 
+        # Batch 3A BRTA driving licence cross-domain guards
+        if _query_is_driving_licence_context(text):
+            brta_slugs = {
+                "brta-learner-driving-license",
+                "driving-licence-renewal",
+                "brta-duplicate-driving-license",
+                "brta-smart-card-driving-license",
+                "brta-driving-instructor-license",
+                "brta-dctc-exam-result",
+            }
+            if service.slug in brta_slugs:
+                score += 15
+                reasons.append("boost:brta_driving_family")
+            if service.slug == "epassport-fee-payment" and intents.primary == "fee_inquiry":
+                score -= 70
+                reasons.append("penalty:passport_fee_for_driving_fee")
+            if service.slug == "epassport-application-status" and _query_is_dctc_result_context(text):
+                score -= 80
+                reasons.append("penalty:passport_status_for_dctc")
+            if service.slug == "epassport-rpo-secretariat" and _query_is_dctc_result_context(text):
+                score -= 80
+                reasons.append("penalty:passport_office_for_dctc")
+            if service.slug == "civil-birth-death-verify" and (
+                "bsp" in text or ("register" in text and "driver" in text)
+            ):
+                score -= 75
+                reasons.append("penalty:birth_verify_for_bsp_register")
+            if _query_is_gd_context(text) and (
+                entities.licence_type == "duplicate"
+                or any(w in text for w in ("licence", "license", "driving", "dl"))
+            ):
+                if service.slug == "police-general-diary":
+                    score -= 40
+                    reasons.append("penalty:gd_over_duplicate_licence")
+                if service.slug == "brta-duplicate-driving-license":
+                    score += 35
+                    reasons.append("boost:duplicate_over_gd")
+            if _query_is_dctc_result_context(text) and service.slug == "brta-dctc-exam-result":
+                score += 45
+                reasons.append("boost:dctc_result_service")
+            if entities.licence_type == "learner" and service.slug == "brta-learner-driving-license":
+                score += 30
+                reasons.append("boost:learner_variant")
+            if entities.licence_type == "renewal" and service.slug == "driving-licence-renewal":
+                score += 30
+                reasons.append("boost:renewal_variant")
+            if entities.licence_type == "duplicate" and service.slug == "brta-duplicate-driving-license":
+                score += 30
+                reasons.append("boost:duplicate_variant")
+            if entities.licence_type == "smart_card" and service.slug == "brta-smart-card-driving-license":
+                score += 30
+                reasons.append("boost:smart_card_variant")
+            if entities.licence_type == "instructor" and service.slug == "brta-driving-instructor-license":
+                score += 30
+                reasons.append("boost:instructor_variant")
+
         # Minor applicant → new e-passport application
         if any(w in text for w in ["minor", "child", "parent nid", "বাচ্চা", "শিশু"]):
             if service.slug == "epassport-new-application":
@@ -548,6 +718,173 @@ class ServiceRouter:
             score += 20
         if clarifications.get("passport_type") == "e_passport" and "epassport" in service.slug:
             score += 20
+        if clarifications.get("topic") == "firearms" and service.slug == "police-firearms-license":
+            score += 40
+            reasons.append("boost:clarification_firearms")
+        if clarifications.get("domain") == "passport" and service.slug == "epassport-fee-payment":
+            score += 35
+            reasons.append("boost:clarification_passport_fee")
+        if clarifications.get("domain") == "transport" and service.slug == "driving-licence-renewal":
+            score += 35
+            reasons.append("boost:clarification_driving_renewal")
+        if clarifications.get("domain") == "transport" and service.slug == "passport-renewal":
+            score -= 40
+            reasons.append("penalty:passport_renewal_for_transport_clarification")
+
+        # Default e-passport when passport domain without explicit MRP / express product
+        vague_passport = text.strip() in {"passport", "e passport", "epassport", "e-passport"}
+        if "passport" in entities.domains and entities.passport_type != "mrp" and not vague_passport:
+            express_product = entities.speed in {"express", "super_express"} or any(
+                w in text for w in ("super express", "urgent pickup", "urgent", "express passport")
+            )
+            mrp_product = "mrp" in text or "machine readable" in text
+            if not express_product and not mrp_product:
+                if service.slug == "epassport-new-application":
+                    score += 25
+                    reasons.append("boost:default_epassport")
+                if service.slug == "passport-mrp-initial" and "mrp" not in text:
+                    score -= 30
+                    reasons.append("penalty:mrp_without_explicit_type")
+            if express_product and service.slug == "epassport-urgent-super-express":
+                if intents.primary == "fee_inquiry":
+                    score -= 25
+                    reasons.append("penalty:express_product_for_fee_matrix")
+                else:
+                    score += 35
+                    reasons.append("boost:express_passport_product")
+            if intents.primary == "fee_inquiry" and express_product and service.slug == "epassport-fee-payment":
+                score += 35
+                reasons.append("boost:express_fee_matrix")
+            if express_product and service.slug == "epassport-new-application" and intents.primary != "fee_inquiry":
+                score -= 25
+                reasons.append("penalty:generic_app_for_express_product")
+            if mrp_product and service.slug == "passport-mrp-initial":
+                score += 35
+                reasons.append("boost:mrp_product")
+
+        # Police station selection for passport verification
+        if "police station" in text and "passport" in text:
+            if service.slug == "police-passport-police-verification":
+                score += 45
+                reasons.append("boost:passport_pv_station_selection")
+            if service.slug == "epassport-new-application":
+                score -= 35
+                reasons.append("penalty:epassport_for_pv_station_selection")
+
+        # Passport issuance timeline vs police verification timeline
+        if "passport" in entities.domains and intents.primary == "processing_time":
+            if not _query_mentions_police_verification(text) and "verification" not in text:
+                if service.slug == "epassport-new-application":
+                    score += 35
+                    reasons.append("boost:passport_issuance_timeline")
+                if service.slug == "police-passport-police-verification":
+                    score -= 45
+                    reasons.append("penalty:pv_for_passport_issuance_time")
+                if service.slug == "police-passport-verification":
+                    score -= 25
+                    reasons.append("penalty:pv_sla_for_passport_issuance_time")
+
+        # Passport / police verification fee vs e-passport fee payment portal
+        if "verification" in text and "fee" in text and "passport" in text:
+            if service.slug == "police-passport-verification":
+                score += 45
+                reasons.append("boost:passport_verification_fee")
+            if service.slug == "epassport-fee-payment":
+                score -= 50
+                reasons.append("penalty:epassport_fee_for_verification_fee")
+
+        # Domain-scoped fee routing — do not bleed passport fee portal
+        if intents.primary == "fee_inquiry":
+            passport_fee_ctx = (
+                "passport" in entities.domains
+                or "passport" in text
+                or "epassprt" in text
+                or entities.speed in {"express", "super_express"}
+            )
+            if passport_fee_ctx and service.slug == "epassport-fee-payment":
+                score += 40
+                reasons.append("boost:passport_fee_portal")
+            if not passport_fee_ctx:
+                if service.slug == "epassport-fee-payment":
+                    score -= 70
+                    reasons.append("penalty:passport_fee_portal_off_domain")
+            if "land" in entities.domains and service.slug == "land-mutation-apply":
+                score += 40
+                reasons.append("boost:land_mutation_fee")
+            if "tax" in entities.domains and service.slug == "tin-registration":
+                score += 40
+                reasons.append("boost:tin_registration_fee")
+
+        # Validity queries for passport products
+        if intents.primary in {"validity", "eligibility"}:
+            if ("pcc" in text or "clearance" in text or "পিসিসি" in text or "ক্লিয়ারেন্স" in text):
+                if service.slug == "police-clearance-certificate":
+                    score += 50
+                    reasons.append("boost:pcc_passport_validity")
+                if service.slug == "epassport-new-application":
+                    score -= 55
+                    reasons.append("penalty:epassport_for_pcc_validity")
+            elif "passport" in entities.domains or "passport" in text:
+                if service.slug == "epassport-new-application":
+                    score += 35
+                    reasons.append("boost:passport_validity")
+
+        # Generic verification status without passport application context
+        if intents.primary == "status" and "verification" in text:
+            if "passport" not in text and "epassport" not in text:
+                if service.slug in {"police-passport-verification", "police-employment-verification"}:
+                    score += 35
+                    reasons.append("boost:generic_verification_status")
+                if service.slug == "epassport-application-status":
+                    score -= 45
+                    reasons.append("penalty:passport_status_for_generic_verification")
+
+        # NID application documents → correction over new voter registration
+        if "nid" in text and "application" in text and "document" in text:
+            if service.slug == "nid-correction":
+                score += 30
+                reasons.append("boost:nid_application_documents")
+            if service.slug == "nid-new-voter-registration":
+                score -= 20
+                reasons.append("penalty:new_voter_for_nid_application_docs")
+
+        # Generic licence renewal without passport → driving, not passport reissue
+        if re.search(r"\b(licence|license)\s+renew(al)?\b", text) and "passport" not in text:
+            firearms_ctx = (
+                clarifications.get("topic") == "firearms"
+                or "firearms" in entities.domains
+                or any(w in text for w in ("firearms", "fire arms", "gun license", "arms license"))
+            )
+            document_listing = "document" in text and not _query_is_driving_licence_context(text)
+            if not firearms_ctx and not document_listing:
+                if service.slug == "driving-licence-renewal":
+                    score += 38
+                    reasons.append("boost:generic_licence_renewal_driving")
+                if service.slug == "passport-renewal":
+                    score -= 42
+                    reasons.append("penalty:passport_renewal_for_licence_renewal")
+
+        # BSP learner apply online
+        if "bsp" in text and "learner" in text and any(w in text for w in ("apply", "online")):
+            if service.slug == "brta-learner-driving-license":
+                score += 45
+                reasons.append("boost:bsp_learner_apply")
+            if service.slug == "epassport-new-application":
+                score -= 50
+                reasons.append("penalty:epassport_for_bsp_learner")
+
+        # Penalize BRTA family when query has no driving/BRTA context
+        brta_slugs = {
+            "brta-learner-driving-license",
+            "driving-licence-renewal",
+            "brta-duplicate-driving-license",
+            "brta-smart-card-driving-license",
+            "brta-driving-instructor-license",
+            "brta-dctc-exam-result",
+        }
+        if service.slug in brta_slugs and not _query_is_driving_licence_context(text):
+            score -= 80
+            reasons.append("penalty:brta_without_driving_context")
 
         return CandidateScore(service=service, score=score, reasons=reasons)
 
@@ -608,6 +945,15 @@ class ServiceRouter:
             elif channels and entities.channel not in channels:
                 bonus -= 8
                 reasons.append(f"penalty:channel={entities.channel}")
+
+        if entities.licence_type:
+            licence_types = variants.get("licence_type") or []
+            if entities.licence_type in licence_types:
+                bonus += 22
+                reasons.append(f"variant:licence_type={entities.licence_type}")
+            elif licence_types and entities.licence_type not in licence_types:
+                bonus -= 18
+                reasons.append("penalty:licence_type_mismatch")
 
         return bonus
 

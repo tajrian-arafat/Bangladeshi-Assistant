@@ -17,6 +17,30 @@ BRTA_DRIVING_LICENCE_FAMILY = {
     "driving-licence-renewal",
 }
 
+# Catalogue service_id → runtime slug (from catalogue_runtime_mappings.json)
+CATALOGUE_TO_RUNTIME_SLUG = {
+    "brta-driving-license-renewal": "driving-licence-renewal",
+}
+
+
+def _normalize_expected_service(service_expected: str | None) -> str | None:
+    if not service_expected:
+        return None
+    return CATALOGUE_TO_RUNTIME_SLUG.get(service_expected, service_expected)
+
+
+def _service_matches(expected: str | None, actual: str | None) -> bool:
+    if not expected:
+        return True
+    if actual == expected:
+        return True
+    norm = _normalize_expected_service(expected)
+    if norm and actual == norm:
+        return True
+    if actual in BRTA_DRIVING_LICENCE_FAMILY and expected in BRTA_DRIVING_LICENCE_FAMILY:
+        return False  # family match handled separately via allow_brta_driving_family
+    return False
+
 
 def _blob(actual: dict) -> str:
     return json.dumps(actual, ensure_ascii=False).lower()
@@ -57,7 +81,11 @@ def evaluate_batch03a_outcome(case: dict, actual: dict, base: dict) -> dict[str,
         checks["service"] = True
         reasons = [r for r in reasons if "service mismatch" not in r]
 
-    if case.get("service_expected") and svc == case["service_expected"]:
+    expected_svc = _normalize_expected_service(case.get("service_expected"))
+    if expected_svc and svc == expected_svc:
+        checks["service"] = True
+        reasons = [r for r in reasons if "service mismatch" not in r]
+    elif case.get("service_expected") and _service_matches(case["service_expected"], svc):
         checks["service"] = True
         reasons = [r for r in reasons if "service mismatch" not in r]
 
@@ -98,6 +126,23 @@ def evaluate_batch03a_outcome(case: dict, actual: dict, base: dict) -> dict[str,
         checks["dctc_mention"] = ok
         if not ok:
             reasons.append("DCTC examination pathway not mentioned")
+
+    if expect.get("require_citation"):
+        if not citations:
+            checks["citation"] = False
+            reasons.append("citation missing for supported factual answer")
+        elif not all((c.get("source_url") or c.get("url")) for c in citations):
+            checks["citation"] = False
+            reasons.append("citation missing source URL")
+        elif not all(c.get("evidence_id") for c in citations):
+            checks["citation"] = False
+            reasons.append("citation missing evidence_id")
+        else:
+            checks["citation"] = True
+            fake = (expect.get("fake_url") or "").lower()
+            if fake and any(fake in (c.get("source_url") or c.get("url") or "").lower() for c in citations):
+                checks["citation"] = False
+                reasons.append(f"decorative or fake citation URL: {fake}")
 
     if expect.get("uncertainty_ok") and _has_uncertainty(actual):
         checks["uncertainty"] = True

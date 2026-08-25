@@ -62,6 +62,11 @@ def resolve_follow_up_intent(
                 and any(w in text for w in ("channel", "online", "fee", "koto"))
             ):
                 intent = "fee_inquiry"
+            if intent == "office_locator" and conversation.intent in {
+                "application",
+                "application_url",
+            }:
+                intent = "application_url"
             secondary = [s for s in current.secondary if s != intent]
             if conversation.intent not in {intent, *secondary}:
                 secondary.insert(0, conversation.intent)

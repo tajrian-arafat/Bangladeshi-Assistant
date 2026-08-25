@@ -112,9 +112,44 @@
       "synonyms_banglish": ["fire arms", "gun license", "firearms license"]
     },
     "driving_licence": {
-      "synonyms_en": ["driving licence", "driving license", "learner licence", "brta licence"],
+      "synonyms_en": ["driving licence", "driving license", "brta licence", "brta license", "dl "],
       "synonyms_bn": ["ড্রাইভিং লাইসেন্স", "ড্রাইভিং লাইসেন্স"],
-      "synonyms_banglish": ["driving licence", "driving license", "brta licence"]
+      "synonyms_banglish": ["driving licence", "driving license", "brta licence", "brta driving"]
+    },
+    "learner_licence": {
+      "synonyms_en": ["learner licence", "learner license", "provisional licence", "learner driving"],
+      "synonyms_bn": ["শিক্ষানবিশ", "শিক্ষানবিস", "লার্নার"],
+      "synonyms_banglish": ["learner licence", "learner license", "learner driving licence"]
+    },
+    "renewal_licence": {
+      "synonyms_en": ["licence renewal", "license renewal", "renew driving", "dl renewal"],
+      "synonyms_bn": ["নবায়ন", "নবায়ন"],
+      "synonyms_banglish": ["licence renew", "license renew", "renew korar", "dl renew"]
+    },
+    "duplicate_licence": {
+      "synonyms_en": ["duplicate licence", "duplicate license", "lost licence", "lost license", "reissue driving"],
+      "synonyms_bn": ["হারানো", "ডুপ্লিকেট", "হারিয়ে"],
+      "synonyms_banglish": ["duplicate licence", "lost licence", "harano licence", "harano license"]
+    },
+    "smart_card_licence": {
+      "synonyms_en": ["smart card licence", "smart card license", "smart card driving"],
+      "synonyms_bn": ["স্মার্ট কার্ড"],
+      "synonyms_banglish": ["smart card licence", "smart card license"]
+    },
+    "instructor_licence": {
+      "synonyms_en": ["instructor licence", "instructor license", "driving instructor", "motor driving instructor"],
+      "synonyms_bn": ["প্রশিক্ষক লাইসেন্স", "ইন্সট্রাক্টর"],
+      "synonyms_banglish": ["instructor licence", "driving instructor licence"]
+    },
+    "dctc_result": {
+      "synonyms_en": ["dctc result", "dctb result", "driving test result", "field test result", "exam result"],
+      "synonyms_bn": ["ডিসিটিসি", "ড্রাইভিং টেস্ট ফলাফল"],
+      "synonyms_banglish": ["dctc result", "driving test result", "result check"]
+    },
+    "bsp_register": {
+      "synonyms_en": ["bsp registration", "bsp register", "driver account", "bsp driver"],
+      "synonyms_bn": ["বিএসপি রেজিস্ট্রেশন"],
+      "synonyms_banglish": ["bsp registration", "bsp register", "driver account"]
     },
     "visa_types": {
       "synonyms_en": ["business visa", "tourist visa", "mrv visa", "visa application"],
@@ -124,7 +159,7 @@
   },
   "domain_triggers": {
     "passport": {
-      "tokens": ["passport", "epassport", "e-passport", "e passport", "mrp", "পাসপোর্ট", "ই-পাসপোর্ট", "ই পাসপোর্ট"]
+      "tokens": ["passport", "epassport", "e-passport", "e passport", "mrp", "epassprt", "পাসপোর্ট", "ই-পাসপোর্ট", "ই পাসপোর্ট"]
     },
     "civil_registration": {
       "tokens": ["birth", "death", "bdris", "everify", "marriage", "জন্ম", "মৃত্যু", "নিবন্ধন", "বিবাহ", "brth", "registraton", "registration", "registrar", "muslim", "hindu", "character certificate"]
@@ -133,7 +168,7 @@
       "tokens": ["nid", "national id", "voter", "এনআইডি", "voter slip"]
     },
     "transport": {
-      "tokens": ["driving", "licence", "license", "brta", "vehicle"]
+      "tokens": ["driving", "driving licence", "driving license", "brta", "vehicle", "learner licence", "learner license"]
     },
     "tax": {
       "tokens": ["tin", "tax", "e-tin", "etin"]
@@ -142,13 +177,13 @@
       "tokens": ["land", "khatian", "mutation", "deed", "dlrms", "জমি", "খতিয়ান"]
     },
     "social_protection": {
-      "tokens": ["allowance", "disability", "social protection", "snp", "widow", "lactating"]
+      "tokens": ["allowance", "disability", "social protection", "snp", "widow", "lactating", "প্রতিবন্ধী", "ভাতা", "প্রতিবন্ধিতা"]
     },
     "education": {
-      "tokens": ["ssc", "hsc", "education", "school", "certificate", "transcript", "admission"]
+      "tokens": ["ssc", "hsc", "education", "school", "certificate", "transcript", "admission", "এসএসসি", "সনদ"]
     },
     "police": {
-      "tokens": ["police", "pcc", "clearance certificate", "general diary", " gd ", "gd online", "special branch", "পুলিশ", "জিডি", "ক্লিয়ারেন্স"]
+      "tokens": ["police", "pcc", "clearance certificate", "general diary", " gd ", "gd online", "special branch", "পুলিশ", "জিডি", "ক্লিয়ারেন্স", "পিসিসি"]
     },
     "immigration": {
       "tokens": ["visa", "mrv", "immigration", "dip.gov", "visa.gov", "department of immigration", "ভিসা", "ইমিগ্রেশন", "probashi cell", "expatriate cell", "business visa", "tourist visa"]

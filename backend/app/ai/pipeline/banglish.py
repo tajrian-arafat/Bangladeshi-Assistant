@@ -93,7 +93,6 @@ DOMAIN_MAP: dict[str, str] = {
     "lage": "required",
     "korbo": "how",
     "korte": "apply",
-    "ki": "what",
     "pari": "how",
     "chai": "apply",
 }
@@ -125,6 +124,48 @@ def normalize_banglish(message: str) -> str:
             normalized.extend(["procedure", "inquiry"])
             i += 2
             continue
+        # "korte ki lage/lagbe" = document/requirements list (not portal apply)
+        if token == "korte" and i + 1 < len(tokens) and tokens[i + 1] in {"ki", "what"}:
+            rest = tokens[i + 2 : i + 5]
+            if any(t in {"lage", "lagbe", "required", "ki"} for t in rest):
+                normalized.extend(["document", "inquiry"])
+                i += 2
+                while i < len(tokens) and tokens[i] in {"ki", "lage", "lagbe", "required"}:
+                    i += 1
+                continue
+        if token == "ki" and i + 1 < len(tokens) and tokens[i + 1] == "ki" and i + 2 < len(tokens) and tokens[i + 2] in {
+            "lage",
+            "lagbe",
+            "required",
+        }:
+            normalized.extend(["document", "inquiry"])
+            i += 3
+            continue
+        if token in {"lage", "lagbe"} and i > 0 and tokens[i - 1] in {"ki", "what"}:
+            normalized.extend(["document", "inquiry"])
+            i += 1
+            continue
+        if token == "korar" and i + 1 < len(tokens) and tokens[i + 1] == "age":
+            normalized.extend(["procedure", "inquiry", "before"])
+            i += 2
+            if i < len(tokens) and tokens[i] in {"ki", "what"}:
+                i += 1
+            continue
+        if token == "age" and i > 0 and tokens[i - 1] in {"korar", "er"}:
+            normalized.extend(["procedure", "inquiry", "before"])
+            i += 1
+            if i < len(tokens) and tokens[i] in {"ki", "what"}:
+                i += 1
+            continue
+        # "ki korte hobe" / "ki test lagbe" → procedure inquiry
+        if token in {"ki", "what"} and i + 1 < len(tokens):
+            nxt = tokens[i + 1]
+            if nxt in {"korte", "apply", "test", "procedure"} or (
+                i + 2 < len(tokens) and tokens[i + 1] in {"test", "korte"} and tokens[i + 2] in {"lagbe", "required", "hobe"}
+            ):
+                normalized.extend(["procedure", "inquiry"])
+                i += 1
+                continue
         mapped = DOMAIN_MAP.get(token, token)
         if mapped:
             normalized.append(mapped)
