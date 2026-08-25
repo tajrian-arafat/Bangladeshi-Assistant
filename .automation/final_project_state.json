@@ -1,0 +1,38 @@
+{
+  "status": "KNOWLEDGE_INCOMPLETE",
+  "updated_at": "2026-08-25T03:03:45.265706+00:00",
+  "deployment_allowed": false,
+  "auto_merge": false,
+  "audit_type": "FINAL_KNOWLEDGE_CONSTRUCTION_AUDIT",
+  "catalogue_progress": {
+    "total_confirmed_services": 454,
+    "complete": 37,
+    "partial": 416,
+    "deferred": 0,
+    "blocked": 1
+  },
+  "claims": {
+    "total_claims": 1242,
+    "partially_verified": 702,
+    "info_official": 1162,
+    "verified": 496,
+    "info_practical": 34,
+    "info_discovery": 46,
+    "unverified": 33,
+    "conflicting": 5,
+    "outdated": 5,
+    "rejected": 1
+  },
+  "e2e": {
+    "aggregate_pass_pct": 57.7,
+    "hallucinations": 0,
+    "citation_failures": 0
+  },
+  "false_completion_risk_services": 389,
+  "regression_baselines_preserved": true,
+  "artifacts": {
+    "final_service_completeness": "data/audit/final-service-completeness.json",
+    "runtime_research_consistency": "data/audit/runtime-research-consistency.json",
+    "audit_report": "docs/evaluation/FINAL_KNOWLEDGE_CONSTRUCTION_AUDIT.md"
+  }
+}

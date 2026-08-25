@@ -1,0 +1,82 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "conflict-portal-cms-empty-vs-procedure",
+      "service_ids": [
+        "brta-fitness-certificate",
+        "brta-tax-token",
+        "brta-route-permit",
+        "brta-advance-income-tax",
+        "brta-color-change",
+        "brta-engine-change",
+        "brta-tire-size-change"
+      ],
+      "topic": "portal_content",
+      "description": "BRTA portal static pages for fitness, tax token, route permit, AIT, and modification services have JS-rendered procedural bodies; HTML shell snapshots may show empty CMS content vs expected procedures.",
+      "hypotheses": [
+        "js_rendered_content",
+        "catalogue_url_correct"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-calculator-vs-static-fees",
+      "service_ids": [
+        "brta-fee-calculator",
+        "brta-fitness-certificate",
+        "brta-tax-token",
+        "brta-route-permit",
+        "transport-route-permit"
+      ],
+      "topic": "fee_authority",
+      "description": "BSP fee calculator provides CALCULATOR_DERIVED amounts but portal static pages may list outdated fee tables; authority between calculator and portal static fees not reconciled in this pass.",
+      "hypotheses": [
+        "calculator_authoritative",
+        "portal_fees_stale"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-route-permit-dual-catalogue",
+      "service_ids": [
+        "brta-route-permit",
+        "transport-route-permit"
+      ],
+      "topic": "service_deduplication",
+      "description": "Two catalogue entries for route permit: brta-route-permit (portal static page) vs transport-route-permit (BSP operator service). Workflows may overlap or represent portal guide vs live BSP application.",
+      "hypotheses": [
+        "portal_guide_bsp_application",
+        "duplicate_discovery"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-driving-school-dual-catalogue",
+      "service_ids": [
+        "brta-driving-school-registration",
+        "transport-driving-school-licence"
+      ],
+      "topic": "service_deduplication",
+      "description": "Two catalogue entries: brta-driving-school-registration (roadSafety BSP) vs transport-driving-school-licence (BSP licensing). Registration vs licence may be sequential or overlapping.",
+      "hypotheses": [
+        "registration_then_licence",
+        "duplicate_discovery"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-mv-tax-vs-tax-token",
+      "service_ids": [
+        "brta-mv-tax-payment",
+        "brta-tax-token"
+      ],
+      "topic": "tax_workflow",
+      "description": "MV tax payment portal (brta.cnsbd.com/mvtax_brta) vs tax token issue/renewal (portal page) — relationship and sequencing between payment and token issuance not fully documented.",
+      "hypotheses": [
+        "payment_then_token",
+        "parallel_tax_channels"
+      ],
+      "status": "UNRESOLVED"
+    }
+  ]
+}

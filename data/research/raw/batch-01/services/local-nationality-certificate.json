@@ -1,0 +1,127 @@
+{
+  "service_id": "local-nationality-certificate",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Nationality Certificate",
+  "service_name_bn": "জাতীয়তা সনদ",
+  "aliases": [
+    "nationality attestation"
+  ],
+  "banglish_variants": [],
+  "category_id": "certificates",
+  "responsible_ministry": null,
+  "responsible_agency": "Union Parishad",
+  "target_applicant": [
+    "citizen"
+  ],
+  "eligibility": [],
+  "prerequisites": [],
+  "application_methods": [
+    "local_office",
+    "local_online_where_available"
+  ],
+  "online_application": null,
+  "offline_application": null,
+  "official_application_url": "https://tilokpursonod.gov.bd/select_certificate/",
+  "official_information_urls": [],
+  "official_forms": [],
+  "requirements": [
+    {
+      "requirement_id": "r-local-nid",
+      "name_en": "Applicant NID / identity proof",
+      "name_bn": "জাতীয় পরিচয়পত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "lgi_requires_nid",
+        "op": "eq",
+        "value": true
+      },
+      "claim_ids": [],
+      "notes": "Typically required; verify per LGI. Not elevated to national MUST."
+    },
+    {
+      "requirement_id": "r-local-application",
+      "name_en": "Application via local citizen certificate portal or office form",
+      "name_bn": "স্থানীয় আবেদন",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "notes": "Channel varies by Union/Pourashava/City Corporation."
+    }
+  ],
+  "fees": [],
+  "payment_methods": [],
+  "processing_time": null,
+  "procedure_steps": [],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [],
+  "office_locations": [],
+  "geographic_limitations": [
+    "Issued by Union Parishad / Pourashava / City Corporation / DC office depending on certificate type; procedure and fees vary by LGI."
+  ],
+  "service_availability": "AVAILABLE",
+  "related_services": [
+    "civil-birth-registration",
+    "civil-death-registration",
+    "nid-new-voter-registration"
+  ],
+  "dependencies": [],
+  "renewal_rules": [],
+  "correction_rules": [],
+  "replacement_rules": [],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [],
+  "common_mistakes": [],
+  "practical_experience": [],
+  "warnings": [],
+  "legal_basis": [],
+  "claims": [
+    {
+      "claim_id": "c-local-nationality-certificate-exists",
+      "claim": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [],
+  "research_status": "PARTIAL",
+  "missing_information": [
+    "Nationally uniform fee schedule (does not exist — local variance).",
+    "Authoritative per-LGI document checklists beyond sample portals."
+  ],
+  "manual_review_required": [
+    "Populate geographic_availability with verified LGI URLs/fees before publishing as authoritative."
+  ],
+  "knowledge_quality": {
+    "knowledge_quality_score": 52.2,
+    "dimensions": {
+      "coverage": 28,
+      "authority": 55,
+      "freshness": 60,
+      "consistency": 80,
+      "usability": 50.0
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Existence known; local variance model required; weak national MUST docs.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24"
+}

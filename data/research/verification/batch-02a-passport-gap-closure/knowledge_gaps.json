@@ -1,0 +1,81 @@
+{
+  "knowledge_gaps": [
+    {
+      "gap_id": "MISSING_TIER1_PV_REQUIREMENT_RULE_2025",
+      "priority": "HIGH",
+      "status": "PARTIALLY_RESOLVED",
+      "resolution": "Classification CONDITIONAL supported by Tier-2 Dubai mission text; Tier-1 universal rule not found.",
+      "new_claim_ids": [
+        "gap-closure::c-pv-requirement-classification",
+        "gap-closure::c-onboarding-police-station-verified"
+      ]
+    },
+    {
+      "gap_id": "MISSING_ABUDHABI_MISSION_EPASSPORT_PAGE",
+      "priority": "HIGH",
+      "status": "PARTIALLY_RESOLVED",
+      "resolution": "Located static CMS URL; live instructional body empty. Legacy slug URLs 404.",
+      "new_claim_ids": [
+        "gap-closure::c-abudhabi-epassport-page-empty-cms"
+      ]
+    },
+    {
+      "gap_id": "MISSING_MRP_FEE_SCHEDULE_MACHINE_READABLE",
+      "priority": "HIGH",
+      "status": "UNRESOLVED",
+      "resolution": "DIP MRP fee page dated Feb 2017; no fee table in render. MRP portal references bank deposit without structured schedule.",
+      "new_claim_ids": [
+        "gap-closure::c-mrp-fee-page-historical-empty"
+      ]
+    },
+    {
+      "gap_id": "MISSING_EPASSPORT_STATUS_PORTAL_FIELDS",
+      "priority": "HIGH",
+      "status": "PARTIALLY_RESOLVED",
+      "resolution": "FAQ API documents Application ID / Online Registration ID + DOB; dedicated status route not accessible.",
+      "new_claim_ids": [
+        "gap-closure::c-epassport-status-check-fields",
+        "gap-closure::c-mrp-status-portal-fields"
+      ]
+    },
+    {
+      "gap_id": "MISSING_DAMAGED_PASSPORT_DISTINCT_RULES",
+      "priority": "MEDIUM",
+      "status": "PARTIALLY_RESOLVED",
+      "resolution": "Lost passport GD rules verified Aug 2026; damaged passport not separately enumerated.",
+      "new_claim_ids": [
+        "gap-closure::c-lost-passport-gd-instructions-2026",
+        "gap-closure::c-damaged-passport-not-distinct"
+      ]
+    },
+    {
+      "gap_id": "MISSING_EXPATRIATE_UNIFIED_NATIONAL_PROCEDURE",
+      "priority": "HIGH",
+      "status": "UNRESOLVED",
+      "resolution": "Mission pages remain variant-specific; no DIP consolidation page captured.",
+      "new_claim_ids": []
+    },
+    {
+      "gap_id": "MISSING_POLICE_PV_DEDICATED_OFFICIAL_URL",
+      "priority": "MEDIUM",
+      "status": "UNRESOLVED",
+      "resolution": "No standalone SB passport PV procedure URL found; citizen charter + onboarding routing only.",
+      "new_claim_ids": []
+    },
+    {
+      "gap_id": "MISSING_PASSPORT_CANCELLATION_SERVICE",
+      "priority": "LOW",
+      "status": "UNRESOLVED",
+      "resolution": "No dedicated cancellation service found in targeted pass; likely embedded in reissue/lost flows.",
+      "new_claim_ids": []
+    },
+    {
+      "gap_id": "SINGAPORE_MISSION_EPASSPORT_URL_BROKEN",
+      "priority": "LOW",
+      "status": "CONFIRMED_OPEN",
+      "resolution": "singapore.mofa.gov.bd/en/site/page/E-passport-application-rules returns 404; alternate paths 404 in gap closure.",
+      "new_claim_ids": []
+    }
+  ],
+  "closed_at": "2026-08-24T21:22:37.453479+00:00"
+}

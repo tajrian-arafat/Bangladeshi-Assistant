@@ -1,0 +1,133 @@
+{
+  "in_scope": [
+    "epassport-new-application",
+    "epassport-reissue",
+    "epassport-fee-payment",
+    "epassport-enrollment-appointment",
+    "epassport-application-status",
+    "epassport-urgent-super-express",
+    "epassport-rpo-secretariat",
+    "passport-mrp-initial",
+    "passport-mrp-reissue",
+    "passport-application-status",
+    "police-passport-police-verification",
+    "police-passport-verification"
+  ],
+  "out_of_scope_noted": [
+    {
+      "service_id": "local-passport-attestation",
+      "reason": "Union-level attestation; not DIP passport issuance"
+    },
+    {
+      "service_id": "migration-visa-application-dip",
+      "reason": "Visa service; excluded from passport-only batch"
+    },
+    {
+      "service_id": "migration-e-apostille",
+      "reason": "MOFA document authentication; not passport issuance"
+    },
+    {
+      "service_id": "mofa-document-attestation",
+      "reason": "MOFA consular attestation; separate batch"
+    },
+    {
+      "service_id": "mofa-csat",
+      "reason": "MOFA appointment portal; not passport issuance"
+    },
+    {
+      "service_id": "mofa-education-attestation-chain",
+      "reason": "Education attestation chain; not passport issuance"
+    },
+    {
+      "service_id": "mofa-nv-loi-application",
+      "reason": "Note Verbale/LOI; not passport issuance"
+    }
+  ],
+  "subprocess_coverage": [
+    {
+      "topic": "first_time_application",
+      "catalogue_services": [
+        "epassport-new-application",
+        "passport-mrp-initial"
+      ]
+    },
+    {
+      "topic": "renewal_reissue",
+      "catalogue_services": [
+        "epassport-reissue",
+        "passport-mrp-reissue"
+      ]
+    },
+    {
+      "topic": "information_correction",
+      "catalogue_services": [
+        "epassport-reissue",
+        "passport-mrp-reissue"
+      ]
+    },
+    {
+      "topic": "lost_passport",
+      "catalogue_services": [
+        "epassport-reissue"
+      ]
+    },
+    {
+      "topic": "damaged_passport",
+      "catalogue_services": [
+        "epassport-reissue"
+      ]
+    },
+    {
+      "topic": "minor_applicants",
+      "catalogue_services": [
+        "epassport-new-application",
+        "epassport-reissue"
+      ]
+    },
+    {
+      "topic": "expatriate_applicants",
+      "catalogue_services": [
+        "epassport-new-application",
+        "epassport-reissue",
+        "epassport-fee-payment"
+      ]
+    },
+    {
+      "topic": "biometric_enrollment",
+      "catalogue_services": [
+        "epassport-enrollment-appointment"
+      ]
+    },
+    {
+      "topic": "fee_payment",
+      "catalogue_services": [
+        "epassport-fee-payment"
+      ]
+    },
+    {
+      "topic": "status_checking",
+      "catalogue_services": [
+        "epassport-application-status",
+        "passport-application-status"
+      ]
+    },
+    {
+      "topic": "urgent_processing",
+      "catalogue_services": [
+        "epassport-urgent-super-express"
+      ]
+    },
+    {
+      "topic": "police_verification",
+      "catalogue_services": [
+        "police-passport-police-verification",
+        "police-passport-verification"
+      ]
+    },
+    {
+      "topic": "passport_cancellation",
+      "catalogue_services": [],
+      "notes": "No canonical entry identified"
+    }
+  ]
+}

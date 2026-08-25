@@ -1,0 +1,1742 @@
+{
+  "claims": [
+    {
+      "claim_id": "brta-learner-driving-license::c-portal-url",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "Learner (provisional) driving license applications are initiated via BSP at bsp.brta.gov.bd/drivingLicense (English UI available).",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-learner-portal",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-portal-url-src-bsp-learner-portal",
+        "ev-brta-learner-driving-license::c-portal-url-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Tier-1 official portal URL corroborated via catalogue and BSP source registry."
+      }
+    },
+    {
+      "claim_id": "brta-learner-driving-license::c-bsp-registration-prerequisite",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "Applicant must register a BSP driver account (NID-linked mobile) at bsp.brta.gov.bd/register before applying for learner license services.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-learner-portal"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-bsp-registration-prerequisite-src-bsp-register",
+        "ev-brta-learner-driving-license::c-bsp-registration-prerequisite-src-bsp-learner-portal"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-learner-driving-license::c-apply-at-circle-office",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "Learner license application is submitted through BSP and processed at the relevant BRTA circle office (per catalogue discovery notes).",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-learner-portal",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-apply-at-circle-office-src-bsp-learner-portal",
+        "ev-brta-learner-driving-license::c-apply-at-circle-office-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-learner-driving-license::c-nid-required",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "National ID (NID) is required for BSP driver registration and learner license application identity verification.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-nid-required-src-bsp-register",
+        "ev-brta-learner-driving-license::c-nid-required-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-learner-driving-license::c-medical-fitness-certificate",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "Medical fitness certificate from registered medical practitioner is required for learner/professional license classes per BRTA driving license service guidance.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "license_class_requires_medical"
+      },
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-medical-fitness-certificate-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-learner-driving-license::c-learner-fee-via-calculator",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "Learner driving license fee is computed via BSP fee calculator (bsp.brta.gov.bd/feeCalculator); exact amount depends on license class and validity period.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-learner-portal"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-learner-fee-via-calculator-src-bsp-fee-calculator",
+        "ev-brta-learner-driving-license::c-learner-fee-via-calculator-src-bsp-learner-portal"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-learner-driving-license::c-prerequisite-for-smart-card",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "Learner license is prerequisite for authorized driving training and subsequent smart card driving license after DCTC examinations (catalogue notes).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-learner-portal",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-prerequisite-for-smart-card-src-bsp-learner-portal",
+        "ev-brta-learner-driving-license::c-prerequisite-for-smart-card-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-learner-driving-license::c-minimum-age-non-professional",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "Minimum age for non-professional learner driving license is 18 years under Motor Vehicles Ordinance rules cited on BRTA driving license guidance.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED",
+        "if": "license_class_non_professional"
+      },
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-minimum-age-non-professional-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-learner-driving-license::c-bsp-operating-hours",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "BSP portal operating window is 08:00–22:00 Bangladesh Standard Time per live BSP root notice (sub-portals may be unavailable outside window).",
+      "claim_type": "other",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-bsp-operating-hours-src-bsp-maintenance-notice"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-learner-driving-license::c-practical-apply-early-bsp-hours",
+      "service_id": "brta-learner-driving-license",
+      "claim_text": "Apply during BSP operating hours; sub-portal deep links may return errors outside 8am–10pm BST even when catalogue URLs are correct.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-brta-learner-driving-license::c-practical-apply-early-bsp-hours-src-bsp-maintenance-notice"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-portal-url",
+      "service_id": "brta-driving-license-renewal",
+      "claim_text": "Driving license renewal is handled through BRTA Service Portal at bsp.brta.gov.bd/bsp (English UI ?lan=en).",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-portal-url-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Tier-1 official portal URL corroborated via catalogue and BSP source registry."
+      }
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-bsp-login-required",
+      "service_id": "brta-driving-license-renewal",
+      "claim_text": "Renewal workflow requires BSP login with registered driver account (post bsp.brta.gov.bd/register).",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-register"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-bsp-login-required-src-bsp-home",
+        "ev-brta-driving-license-renewal::c-bsp-login-required-src-bsp-register"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-existing-license-required",
+      "service_id": "brta-driving-license-renewal",
+      "claim_text": "Applicant must hold an existing BRTA-issued driving license eligible for renewal (not first-time learner issuance).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-existing-license-required-src-bsp-home",
+        "ev-brta-driving-license-renewal::c-existing-license-required-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-renewal-fee-calculator",
+      "service_id": "brta-driving-license-renewal",
+      "claim_text": "Renewal fee amount is determined via BSP fee calculator; depends on license class, validity extension, and late renewal penalties if applicable.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-renewal-fee-calculator-src-bsp-fee-calculator",
+        "ev-brta-driving-license-renewal::c-renewal-fee-calculator-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-medical-for-renewal-professional",
+      "service_id": "brta-driving-license-renewal",
+      "claim_text": "Professional and certain license classes require updated medical fitness certificate at renewal per BRTA driving license rules.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "professional_or_class_requires_medical"
+      },
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-medical-for-renewal-professional-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-online-payment-bsp",
+      "service_id": "brta-driving-license-renewal",
+      "claim_text": "BSP supports online fee payment for license services (cards/mobile banking channels per BSP payment integration).",
+      "claim_type": "payment_method",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-online-payment-bsp-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-renew-before-expiry",
+      "service_id": "brta-driving-license-renewal",
+      "claim_text": "License should be renewed before expiry; late renewal may incur additional fees per fee calculator rules.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "license_expired_or_near_expiry"
+      },
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-renew-before-expiry-src-bsp-fee-calculator",
+        "ev-brta-driving-license-renewal::c-renew-before-expiry-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-circle-office-collection",
+      "service_id": "brta-driving-license-renewal",
+      "claim_text": "Renewed smart card license may require biometric capture or collection at circle office depending on BSP workflow stage.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-circle-office-collection-src-bsp-home",
+        "ev-brta-driving-license-renewal::c-circle-office-collection-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-practical-track-payment",
+      "service_id": "brta-driving-license-renewal",
+      "claim_text": "Use BSP payment verification module after fee payment before visiting circle office to avoid rejected applications.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-practical-track-payment-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-portal-url",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_text": "Duplicate (replacement) driving license applications are submitted via BSP at bsp.brta.gov.bd/bsp.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-portal-url-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Tier-1 official portal URL corroborated via catalogue and BSP source registry."
+      }
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-lost-or-damaged-eligibility",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_text": "Duplicate license issued when original smart card driving license is lost, stolen, or damaged beyond use.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-lost-or-damaged-eligibility-src-bsp-home",
+        "ev-brta-duplicate-driving-license::c-lost-or-damaged-eligibility-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-gd-for-lost-license",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_text": "General Diary (GD) or police report may be required when license reported lost/stolen before duplicate issuance.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "license_reported_lost_or_stolen"
+      },
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-gd-for-lost-license-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-duplicate-fee-calculator",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_text": "Duplicate driving license fee is listed in BSP fee calculator under license services; amount not statically published in this research pass.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-duplicate-fee-calculator-src-bsp-fee-calculator",
+        "ev-brta-duplicate-driving-license::c-duplicate-fee-calculator-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-existing-record-verification",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_text": "BRTA verifies existing license record in BSP database before issuing duplicate smart card.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-existing-record-verification-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-bsp-application-workflow",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_text": "Typical workflow: BSP login → select duplicate license service → pay fee online → attend circle office for biometrics/card issuance if required.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-bsp-application-workflow-src-bsp-home",
+        "ev-brta-duplicate-driving-license::c-bsp-application-workflow-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-smart-card-format",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_text": "Current duplicate issuances are smart card format; legacy booklet licenses follow migration/upgrade rules at circle office.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-smart-card-format-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-processing-time-not-fixed",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_text": "Official numeric SLA for duplicate license not published on Tier 1–2 pages reviewed; depends on circle office queue.",
+      "claim_type": "processing_time",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-processing-time-not-fixed-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-practical-file-gd-promptly",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_text": "File GD immediately after loss; circle office may request GD copy even when applying online via BSP.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-practical-file-gd-promptly-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-portal-url",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_text": "Smart card driving license issuance/upgrade is processed via BSP at bsp.brta.gov.bd/bsp after training and examination requirements met.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-portal-url-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Tier-1 official portal URL corroborated via catalogue and BSP source registry."
+      }
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-after-learner-validity",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_text": "Applicant must complete learner license period and authorized driving training before smart card professional/non-professional license.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-learner-portal",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-after-learner-validity-src-bsp-learner-portal",
+        "ev-brta-smart-card-driving-license::c-after-learner-validity-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-dctc-exams-required",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_text": "Smart card license requires passing DCTC written, oral, and field (practical) driving tests (catalogue notes).",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services",
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-dctc-exams-required-src-brta-portal-dl-services",
+        "ev-brta-smart-card-driving-license::c-dctc-exams-required-src-bsp-dctb-result"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-professional-vs-non-professional",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_text": "License classes split professional (e.g., heavy passenger/goods) and non-professional (private/light) with different age, medical, and training rules.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-professional-vs-non-professional-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-registered-training-school",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_text": "Driving training must be completed at BRTA-registered motor driving training school (linked to brta-driving-school-registration ecosystem).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-registered-training-school-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-smart-card-fee-calculator",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_text": "Smart card driving license fee computed via BSP fee calculator based on license class and validity duration.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-smart-card-fee-calculator-src-bsp-fee-calculator",
+        "ev-brta-smart-card-driving-license::c-smart-card-fee-calculator-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-biometrics-collection",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_text": "Smart card issuance includes biometric capture (photograph, signature, fingerprints) at BRTA circle office or designated enrollment point.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-biometrics-collection-src-brta-portal-dl-services",
+        "ev-brta-smart-card-driving-license::c-biometrics-collection-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-written-oral-field-sequence",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_text": "Examination sequence: DCTC written test → oral test → field/practical test; results published on BSP DCTB result portal.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-written-oral-field-sequence-src-bsp-dctb-result",
+        "ev-brta-smart-card-driving-license::c-written-oral-field-sequence-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-practical-check-dctc-result",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_text": "Check bsp.brta.gov.bd/dctbResult after examinations before initiating smart card payment to avoid rejected applications.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-practical-check-dctc-result-src-bsp-dctb-result"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-portal-url",
+      "service_id": "brta-driving-instructor-license",
+      "claim_text": "Driving instructor license service information and application guidance published on BRTA portal static page (brta.portal.gov.bd).",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-portal-url-src-brta-instructor-page"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-listed-on-brta-portal",
+      "service_id": "brta-driving-instructor-license",
+      "claim_text": "Driving instructor license listed under driving license services on official BRTA national portal (catalogue confirmed).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-listed-on-brta-portal-src-brta-instructor-page",
+        "ev-brta-driving-instructor-license::c-listed-on-brta-portal-src-brta-portal-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-valid-license-prerequisite",
+      "service_id": "brta-driving-instructor-license",
+      "claim_text": "Applicant must hold valid professional driving license with adequate experience before instructor license consideration.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-instructor-page",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-valid-license-prerequisite-src-brta-instructor-page",
+        "ev-brta-driving-instructor-license::c-valid-license-prerequisite-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-training-school-affiliation",
+      "service_id": "brta-driving-instructor-license",
+      "claim_text": "Instructor license typically tied to registered motor driving training school operation (BRTA road safety/training school framework).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "instructor_at_registered_school"
+      },
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-training-school-affiliation-src-brta-instructor-page"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-circle-office-application",
+      "service_id": "brta-driving-instructor-license",
+      "claim_text": "Instructor license applications submitted to relevant BRTA circle office with prescribed forms and supporting documents.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-circle-office-application-src-brta-instructor-page"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-documents-not-fully-captured",
+      "service_id": "brta-driving-instructor-license",
+      "claim_text": "Full document checklist for instructor license not machine-read from BRTA portal page in this research pass (JS-rendered content).",
+      "claim_type": "document",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-documents-not-fully-captured-src-brta-instructor-page"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-fee-not-enumerated",
+      "service_id": "brta-driving-instructor-license",
+      "claim_text": "Instructor license fee amount not found on Tier 1–2 sources reviewed; may require circle office fee schedule or fee calculator category not captured.",
+      "claim_type": "fee",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-fee-not-enumerated-src-brta-instructor-page",
+        "ev-brta-driving-instructor-license::c-fee-not-enumerated-src-bsp-fee-calculator"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-not-bsp-primary-channel",
+      "service_id": "brta-driving-instructor-license",
+      "claim_text": "Instructor license primary channel is BRTA portal/circle office guidance; not listed as standalone BSP e-service in catalogue official_source.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-not-bsp-primary-channel-src-brta-instructor-page",
+        "ev-brta-driving-instructor-license::c-not-bsp-primary-channel-src-bsp-home"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-driving-instructor-license::c-practical-contact-circle-first",
+      "service_id": "brta-driving-instructor-license",
+      "claim_text": "Contact local BRTA circle office for current instructor license form set and training school endorsement requirements before applying.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-instructor-page"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-instructor-license::c-practical-contact-circle-first-src-brta-instructor-page"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-portal-url",
+      "service_id": "brta-dctc-exam-result",
+      "claim_text": "DCTC/DCTB driving test results published at bsp.brta.gov.bd/dctbResult (catalogue official_source).",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-portal-url-src-bsp-dctb-result"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Tier-1 official portal URL corroborated via catalogue and BSP source registry."
+      }
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-division-district-lookup",
+      "service_id": "brta-dctc-exam-result",
+      "claim_text": "Results browsable division-wise and district-wise on BSP result portal (catalogue notes).",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-division-district-lookup-src-bsp-dctb-result"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-public-result-publication",
+      "service_id": "brta-dctc-exam-result",
+      "claim_text": "Exam results published on BSP without requiring applicant login (public lookup portal pattern).",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-public-result-publication-src-bsp-dctb-result",
+        "ev-brta-dctc-exam-result::c-public-result-publication-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-after-dctc-examinations",
+      "service_id": "brta-dctc-exam-result",
+      "claim_text": "Result lookup relevant after sitting DCTC written/oral/field tests on path to smart card driving license.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-after-dctc-examinations-src-bsp-dctb-result",
+        "ev-brta-dctc-exam-result::c-after-dctc-examinations-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-url-spelling-dctb",
+      "service_id": "brta-dctc-exam-result",
+      "claim_text": "Official BSP URL uses 'dctbResult' path segment while service name references DCTC (Driving Competency Test Centre) — naming variant only.",
+      "claim_type": "other",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-url-spelling-dctb-src-bsp-dctb-result"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-smart-card-pathway-link",
+      "service_id": "brta-dctc-exam-result",
+      "claim_text": "Passing DCTC results required before smart card driving license fee payment and card issuance on BSP.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result",
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-smart-card-pathway-link-src-bsp-dctb-result",
+        "ev-brta-dctc-exam-result::c-smart-card-pathway-link-src-bsp-home",
+        "ev-brta-dctc-exam-result::c-smart-card-pathway-link-src-brta-portal-dl-services"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-result-publication-timing-unknown",
+      "service_id": "brta-dctc-exam-result",
+      "claim_text": "Official SLA for result publication after field test not enumerated on Tier 1–2 pages in this pass.",
+      "claim_type": "processing_time",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "UNVERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-result-publication-timing-unknown-src-bsp-dctb-result"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "UNVERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Insufficient live BSP sub-portal snapshot in verification pass."
+      }
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-bsp-hours-affect-access",
+      "service_id": "brta-dctc-exam-result",
+      "claim_text": "Result portal may follow BSP operating hours (08:00–22:00 BST); deep link returned 404 outside window during research fetch.",
+      "claim_type": "other",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice",
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-bsp-hours-affect-access-src-bsp-maintenance-notice",
+        "ev-brta-dctc-exam-result::c-bsp-hours-affect-access-src-bsp-dctb-result"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-practical-check-all-tests",
+      "service_id": "brta-dctc-exam-result",
+      "claim_text": "Verify written, oral, and field test results separately if division publishes stages on different dates.",
+      "claim_type": "other",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-practical-check-all-tests-src-bsp-dctb-result"
+      ],
+      "supersedes_claim_key": null,
+      "superseded_by_claim_key": null,
+      "provenance": {
+        "batch_id": "batch-03a-brta-driving-licence",
+        "normalized_at": "2026-08-25",
+        "verification_status": "PARTIALLY_VERIFIED",
+        "publication_status": "STAGING_ONLY"
+      },
+      "independent_verification": {
+        "verifier": "cursor-cloud-agent",
+        "verified_at": "2026-08-25T00:41:20.430146+00:00",
+        "reasoning": "Supported by Tier 1–2 official sources at research phase."
+      }
+    }
+  ]
+}

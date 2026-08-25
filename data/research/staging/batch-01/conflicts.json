@@ -1,0 +1,91 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "conf-br-fee-10y",
+      "topic": "Late birth registration fee after 10 years",
+      "claim_a": "LGD-referenced schedule via MOFA mission: BDT 50 after 5 years (no separate 10-year tier).",
+      "source_a": "src-mofa-ankara-bdr",
+      "claim_b": "LegalClarity guide: BDT 500 after more than 10 years.",
+      "source_b": "src-legalclarity-birth",
+      "resolution": "UNRESOLVED — prefer Tier-2 LGD-referenced schedule; do not publish BDT 500 as official.",
+      "likely_reason": "Outdated/incorrect secondary guide or different historical schedule.",
+      "service_id": "civil-birth-registration",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "blocks_official_publication": true
+    },
+    {
+      "conflict_id": "conf-bdris-corr-other-fee",
+      "topic": "Other-info correction fee",
+      "claim_a": "BDT 50 (MOFA/LGD-referenced + bdservicerules table)",
+      "source_a": "src-mofa-ankara-bdr",
+      "claim_b": "Some secondary sites state BDT 100 for other corrections too",
+      "source_b": "src-bdservicerules-fee",
+      "resolution": "Prefer MOFA English notice distinguishing DOB 100 vs other 50; mark secondary ambiguity.",
+      "notes": "bdservicerules table itself shows 50 for other; another blog claimed 100 — unresolved blog noise.",
+      "service_id": "civil-birth-registration-correction",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "blocks_official_publication": true
+    },
+    {
+      "conflict_id": "conf-bdris-corr-other-fee",
+      "topic": "Other-info correction fee",
+      "claim_a": "BDT 50 (MOFA/LGD-referenced + bdservicerules table)",
+      "source_a": "src-mofa-ankara-bdr",
+      "claim_b": "Some secondary sites state BDT 100 for other corrections too",
+      "source_b": "src-bdservicerules-fee",
+      "resolution": "Prefer MOFA English notice distinguishing DOB 100 vs other 50; mark secondary ambiguity.",
+      "notes": "bdservicerules table itself shows 50 for other; another blog claimed 100 — unresolved blog noise.",
+      "service_id": "civil-death-registration-correction",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "blocks_official_publication": true
+    },
+    {
+      "conflict_id": "conf-nid-card-info-correction-fee-amount",
+      "topic": "Exact NID correction fee amounts",
+      "claim_a": "Official portal: fees exist; calculate via fee calculator (no static schedule retrieved).",
+      "source_a": "src-nid-fees",
+      "claim_b": "News reports specific BDT 230/345/460 (VAT inclusive) tiers.",
+      "source_b": "src-sib-nid-fees",
+      "resolution": "UNRESOLVED",
+      "prefer": "Advise applicants to use official fee calculator; do not hardcode news amounts as official MUST.",
+      "authority_comparison": "Tier 1 calculator > Tier 5 news amounts",
+      "service_id": "nid-card-info-correction",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "blocks_official_publication": true
+    },
+    {
+      "conflict_id": "conf-nid-combined-correction-fee-amount",
+      "topic": "Exact NID correction fee amounts",
+      "claim_a": "Official portal: fees exist; calculate via fee calculator (no static schedule retrieved).",
+      "source_a": "src-nid-fees",
+      "claim_b": "News reports specific BDT 230/345/460 (VAT inclusive) tiers.",
+      "source_b": "src-sib-nid-fees",
+      "resolution": "UNRESOLVED",
+      "prefer": "Advise applicants to use official fee calculator; do not hardcode news amounts as official MUST.",
+      "authority_comparison": "Tier 1 calculator > Tier 5 news amounts",
+      "service_id": "nid-combined-correction",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "blocks_official_publication": true
+    },
+    {
+      "conflict_id": "conf-nid-other-info-correction-fee-amount",
+      "topic": "Exact NID correction fee amounts",
+      "claim_a": "Official portal: fees exist; calculate via fee calculator (no static schedule retrieved).",
+      "source_a": "src-nid-fees",
+      "claim_b": "News reports specific BDT 230/345/460 (VAT inclusive) tiers.",
+      "source_b": "src-sib-nid-fees",
+      "resolution": "UNRESOLVED",
+      "prefer": "Advise applicants to use official fee calculator; do not hardcode news amounts as official MUST.",
+      "authority_comparison": "Tier 1 calculator > Tier 5 news amounts",
+      "service_id": "nid-other-info-correction",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "blocks_official_publication": true
+    }
+  ]
+}

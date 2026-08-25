@@ -1,0 +1,135 @@
+{
+  "service_id": "police-expatriate-services",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Expatriate Cell Services",
+  "service_name_bn": "প্রবাসী সেল সেবা",
+  "aliases": [
+    "expatriate police services"
+  ],
+  "banglish_variants": [],
+  "category_id": "expatriate",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police (Expatriate Cell)",
+  "target_applicant": [
+    "expatriate",
+    "citizen"
+  ],
+  "official_application_url": "https://www.police.gov.bd/index.php/en/citizen_charter",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "police-expatriate-services::c-expat-charter-services",
+      "legacy_claim_id": "c-expat-charter-services",
+      "service_id": "police-expatriate-services",
+      "claim_type": "availability",
+      "claim_text": "Expatriate Cell services include passport verification, legal action on admitted offences, family security, and investment protection per citizen charter item 23.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-charter-services-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-expatriate-services::c-expat-charter-free",
+      "legacy_claim_id": "c-expat-charter-free",
+      "service_id": "police-expatriate-services",
+      "claim_type": "fee",
+      "claim_text": "Expatriate services listed as free (বিনামূল্যে) in citizen charter.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 0,
+        "currency": "BDT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-charter-free-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-expatriate-services::c-expat-charter-sla",
+      "legacy_claim_id": "c-expat-charter-sla",
+      "service_id": "police-expatriate-services",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter commits expatriate services at fastest possible time (দ্রুততম সময়).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-charter-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-expatriate-services::c-expat-responsible-aig",
+      "legacy_claim_id": "c-expat-responsible-aig",
+      "service_id": "police-expatriate-services",
+      "claim_type": "office",
+      "claim_text": "Expatriate Cell led by AIG (Expatriate Cell), Police HQ Dhaka; mobile 55101678 per charter.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-responsible-aig-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-expatriate-services::c-expat-pcc-auth-letter-link",
+      "legacy_claim_id": "c-expat-pcc-auth-letter-link",
+      "service_id": "police-expatriate-services",
+      "claim_type": "conditional_document",
+      "claim_text": "Online PCC rules require expatriate authorization letter for representative collection — related but distinct from Expatriate Cell charter entry.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "pcc_via_representative"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-pcc-auth-letter-link-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Includes passport verification support for expatriates.",
+  "prior_batch_research": null
+}

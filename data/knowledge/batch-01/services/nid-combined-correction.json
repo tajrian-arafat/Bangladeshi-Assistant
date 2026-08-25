@@ -1,0 +1,443 @@
+{
+  "service_id": "nid-combined-correction",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Combined NID and Other Information Correction",
+  "service_name_bn": "কার্ড ও অন্যান্য তথ্য একত্রে সংশোধন",
+  "aliases": [
+    "full NID correction"
+  ],
+  "banglish_variants": [
+    "nid correction",
+    "nid songshodhon",
+    "nid update"
+  ],
+  "category_id": "identity",
+  "responsible_ministry": "Bangladesh Election Commission",
+  "responsible_agency": "NID Wing, Bangladesh Election Commission",
+  "target_applicant": [
+    "citizen",
+    "voter"
+  ],
+  "eligibility": [],
+  "prerequisites": [],
+  "application_methods": [
+    "online",
+    "in_person"
+  ],
+  "online_application": true,
+  "offline_application": true,
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+  "official_information_urls": [
+    "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+    "https://services.nidw.gov.bd/nid-pub/fees",
+    "https://nidw.gov.bd/"
+  ],
+  "official_forms": [],
+  "requirements": [
+    {
+      "requirement_id": "r-corr-ssc",
+      "name_en": "SSC/equivalent certificate",
+      "name_bn": "এসএসসি/সমমান সনদপত্র",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "correction_fields",
+            "op": "in",
+            "value": [
+              "name",
+              "date_of_birth"
+            ]
+          },
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "claim_ids": [
+        "c-nid-combined-correction-ssc-priority"
+      ],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-corr-alt-age-name",
+      "name_en": "Passport / birth registration / driving licence / trade licence / certified kabinnama copy",
+      "name_bn": "পাসপোর্ট/জন্ম নিবন্ধন/ড্রাইভিং লাইসেন্স/ট্রেড লাইসেন্স/কাবিননামা",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "all": [
+          {
+            "field": "correction_fields",
+            "op": "in",
+            "value": [
+              "name",
+              "date_of_birth"
+            ]
+          },
+          {
+            "field": "has_ssc_or_equivalent",
+            "op": "eq",
+            "value": false
+          }
+        ]
+      },
+      "claim_ids": [
+        "c-nid-combined-correction-ssc-priority"
+      ],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-corr-name-change-affidavit",
+      "name_en": "Magistrate court affidavit + national daily newspaper notice",
+      "name_bn": "ম্যাজিস্ট্রেট আদালত হলফনামা ও জাতীয় দৈনিক পত্রিকায় বিজ্ঞপ্তি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "name_change_type",
+        "op": "eq",
+        "value": "fundamental_name_change"
+      },
+      "claim_ids": [
+        "c-nid-combined-correction-ssc-priority"
+      ],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-corr-marriage-title",
+      "name_en": "Certified kabinnama / talaknama / death certificate / affidavit / divorce decree",
+      "name_bn": "কাবিননামা/তালাকনামা/মৃত্যু সনদ/হলফনামা/বিবাহ বিচ্ছেদ ডিক্রি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_reason",
+        "op": "in",
+        "value": [
+          "marriage",
+          "divorce",
+          "spouse_title"
+        ]
+      },
+      "claim_ids": [],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-corr-parents",
+      "name_en": "Applicant SSC/HSC (if parents named) + certified copies of parents/siblings NID",
+      "name_bn": "পিতা/মাতার নাম সংশোধনে এসএসসি/এইচএসসি ও পিতা-মাতা-ভাই-বোনের এনআইডি",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "father_name",
+          "mother_name"
+        ]
+      },
+      "claim_ids": [],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-corr-deceased-marker",
+      "name_en": "Death certificate OR NID + UP Chairman/Mayor/Councillor certification of being alive",
+      "name_bn": "মৃত সংযোজন/বিয়োজনে মৃত্যু সনদ বা জীবিত প্রত্যয়ন",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "parent_deceased_marker"
+        ]
+      },
+      "claim_ids": [],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-corr-address",
+      "name_en": "Deed / telephone-gas-water bill / rent agreement / rent receipt (certified)",
+      "name_bn": "ঠিকানা সংশোধনে দলিল/ইউটিলিটি বিল/ভাড়া চুক্তি/রশিদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "address_detail"
+        ]
+      },
+      "claim_ids": [],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-corr-blood",
+      "name_en": "Medical certificate for blood group",
+      "name_bn": "রক্তের গ্রুপের ডাক্তারী সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "correction_fields",
+        "op": "in",
+        "value": [
+          "blood_group"
+        ]
+      },
+      "claim_ids": [],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-corr-attestation",
+      "name_en": "Supporting copies attested by authorized persons (MP, elected LGI, gazetted officer, or secondary/higher secondary head)",
+      "name_bn": "সত্যায়িত অনুলিপি",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "notes": "FAQ lists who may attest copies."
+    }
+  ],
+  "fees": [
+    {
+      "fee_id": "f-corr-calc",
+      "description": "Fee must be calculated on official NID fee calculator (application type + delivery type)",
+      "amount": null,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "c-nid-combined-correction-fee-exists"
+      ],
+      "verification_status": "VERIFIED",
+      "notes": "Static BDT amounts not taken from Tier-1 schedule in this pass; use calculator.",
+      "retrieved_at": "2026-08-24"
+    },
+    {
+      "fee_id": "f-corr-news-230",
+      "description": "Reported first-time visible-info correction fee (VAT inclusive) — news only",
+      "amount": 230,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "c-nid-combined-correction-fee-amount-news"
+      ],
+      "verification_status": "UNVERIFIED",
+      "notes": "Do not treat as MUST official fee until Tier-1 schedule confirmed.",
+      "retrieved_at": "2026-08-24"
+    }
+  ],
+  "payment_methods": [
+    {
+      "method": "bKash",
+      "verification_status": "LIKELY",
+      "source_ids": [
+        "src-nidw-main"
+      ],
+      "notes": "nidw.gov.bd references bKash payment instructions PDF"
+    },
+    {
+      "method": "Dutch-Bangla Bank / Rocket",
+      "verification_status": "LIKELY",
+      "source_ids": [
+        "src-nidw-main"
+      ],
+      "notes": "nidw.gov.bd references DBBL payment instructions"
+    },
+    {
+      "method": "NID Wallet app",
+      "verification_status": "LIKELY",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "notes": "FAQ references NID Wallet for login/face verification"
+    }
+  ],
+  "processing_time": null,
+  "procedure_steps": [],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [],
+  "office_locations": [],
+  "geographic_limitations": [],
+  "service_availability": "AVAILABLE",
+  "related_services": [
+    "nid-reissue-lost",
+    "nid-fee-calculator",
+    "nid-online-account-registration",
+    "nid-voter-area-change"
+  ],
+  "dependencies": [],
+  "renewal_rules": [],
+  "correction_rules": [
+    "One information item generally correctable once (FAQ).",
+    "Lost card + correction cannot be done simultaneously — reissue first (FAQ)."
+  ],
+  "replacement_rules": [],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [
+    {
+      "text": "Incomplete or defective applications are treated as cancelled (official FAQ).",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "verification_status": "VERIFIED"
+    },
+    {
+      "text": "Applicants and guides commonly report rejections for blurred scans, name mismatches across documents, missing birth certificate, and unverified fee payment — not elevated to MUST rules.",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-eshoi-rejection",
+        "src-tbs-nid-corrections"
+      ],
+      "verification_status": "UNVERIFIED",
+      "do_not_promote_to_must": true
+    }
+  ],
+  "common_mistakes": [],
+  "practical_experience": [
+    {
+      "text": "TBS reports long pending queues, high rejection friction, field investigation/interviews, and broker exploitation risk.",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-tbs-nid-corrections"
+      ],
+      "verification_status": "UNVERIFIED",
+      "do_not_promote_to_must": true
+    },
+    {
+      "text": "Dhaka Tribune reports canceled crash-program correction applications may be reapplied under the same category until a stated deadline (verify current deadline before advising).",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-dt-nid-reapply"
+      ],
+      "verification_status": "UNVERIFIED",
+      "do_not_promote_to_must": true
+    }
+  ],
+  "warnings": [
+    "Do not present unverified news fee amounts as official requirements.",
+    "Cannot combine lost-card reissue and correction in one application (official FAQ)."
+  ],
+  "legal_basis": [],
+  "claims": [
+    {
+      "claim_id": "c-nid-combined-correction-channel",
+      "claim": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "field": "application_methods",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-nid-combined-correction-ssc-priority",
+      "claim": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-nid-combined-correction-once",
+      "claim": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "field": "correction_rules",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": "এক তথ্য শুধুমাত্র একবার সংশোধন করা যাবে",
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-nid-combined-correction-fee-exists",
+      "claim": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "evidence_excerpt": "হ্যাঁ ফি দিতে হয়। আপনার আবেদনের ফি জানতে এখানে ক্লিক করুন।",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-nid-combined-correction-fee-amount-news",
+      "claim": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "field": "fees",
+      "information_class": "PRACTICAL",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-sib-nid-fees"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "UNVERIFIED",
+      "confidence": 0.45,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [
+    {
+      "conflict_id": "conf-nid-combined-correction-fee-amount",
+      "topic": "Exact NID correction fee amounts",
+      "claim_a": "Official portal: fees exist; calculate via fee calculator (no static schedule retrieved).",
+      "source_a": "src-nid-fees",
+      "claim_b": "News reports specific BDT 230/345/460 (VAT inclusive) tiers.",
+      "source_b": "src-sib-nid-fees",
+      "resolution": "UNRESOLVED",
+      "prefer": "Advise applicants to use official fee calculator; do not hardcode news amounts as official MUST.",
+      "authority_comparison": "Tier 1 calculator > Tier 5 news amounts"
+    }
+  ],
+  "research_status": "SUBSTANTIAL",
+  "missing_information": [
+    "Authoritative published fee schedule PDF/gazette not retrieved in this pass.",
+    "Exact processing SLA not stated on FAQ."
+  ],
+  "manual_review_required": [
+    "Confirm fee schedule from EC gazette or calculator output screenshots under controlled capture."
+  ],
+  "knowledge_quality": {
+    "knowledge_quality_score": 76.5,
+    "dimensions": {
+      "coverage": 82,
+      "authority": 88,
+      "freshness": 80,
+      "consistency": 70,
+      "usability": 50.0
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Docs/rules strong from Tier-1 FAQ; fee amounts conflict unresolved.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24",
+  "notes": "Combined card + other information correction is a distinct fee calculator application type."
+}

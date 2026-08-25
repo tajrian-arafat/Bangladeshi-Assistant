@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+html{
+--color-primary-bg:#00A63E;
+--color-primary-light:#2DAB5B;
+--color-primary-dark:#008532;
+--color-primary-text:#ffffff;
+--color-secondary-bg:#DC2626;
+--color-secondary-light:#FEF2F2;
+--color-secondary-dark:#ED3131;
+--color-secondary-text:#ffffff;
+--color-normal-bg:#ffffff;
+--color-normal-light:#f0f0f0;
+--color-normal-dark:#e0e0e0;
+--color-normal-text:#000000;
+--color-dark-bg:#000000;
+--color-dark-light:#202020;
+--color-dark-dark:#404040;
+--color-dark-text:#ffffff;
+--color-success-bg:#28a745;
+--color-success-text:#ffffff;
+--color-danger-bg:#dc3545;
+--color-danger-text:#dc3545;
+--color-warning-bg:#FF6600;
+--color-warning-text:#FF6600;
+--color-info-bg:#17a2b8;
+--color-info-text:#ffffff;
+--color-link-normal:#1568b2;
+--color-link-dark:#1b81dd;
+--color-border-normal:#d0d0d0;
+--color-border-dark:#909090;
+--color-widget-title:#202B5D;
+--color-widget-subtitle:#62718D;
+--color-content-dark:#1E202C;
+--color-content-normal:#313545;
+--background-primary-image:url(/site-assets/images/bg.png);
+--background-primary-repeat:repeat;
+--background-primary-position:center center;
+--background-primary-color:#ffffff;
+--background-secondary-image:url(/site-assets/images/bg.png);
+--background-secondary-repeat:repeat;
+--background-secondary-position:center center;
+--background-secondary-color:#ffffff;
+--container-small:600px;
+--container-medium:900px;
+--container-large:1200px;
+--spacing-small:8px;
+--spacing-medium:16px;
+--spacing-large:24px;
+--radius-small:4px;
+--radius-medium:8px;
+--radius-large:16px;
+--shadow-small:0px 2px 4px rgba(0, 0, 0, 0.1);
+--shadow-medium:0px 4px 8px rgba(0, 0, 0, 0.1);
+--shadow-large:0px 8px 16px rgba(0, 0, 0, 0.1);
+--text-small:0.75rem;
+--text-medium:0.9rem;
+--text-large:1.25rem;
+--font-heading-en:Roboto-Regular, sans-serif;
+--font-heading-bn:NotoSansBengali-Regular, sans-serif;
+--font-primary-en:Roboto-Regular, sans-serif;
+--font-primary-bn:NotoSansBengali-Regular, sans-serif;
+--font-secondary-en:Roboto-Regular, sans-serif;
+--font-secondary-bn:NotoSansBengali-Regular, sans-serif;
+--typography-h1-font-family:var(--font-heading);
+--typography-h1-font-weight:700;
+--typography-h1-font-size:32px;
+--typography-h1-line-height:1.2;
+--typography-h2-font-family:var(--font-heading);
+--typography-h2-font-weight:700;
+--typography-h2-font-size:28px;
+--typography-h2-line-height:1.2;
+--typography-h3-font-family:var(--font-heading);
+--typography-h3-font-weight:600;
+--typography-h3-font-size:24px;
+--typography-h3-line-height:1.5;
+--typography-h4-font-family:var(--font-heading);
+--typography-h4-font-weight:500;
+--typography-h4-font-size:20px;
+--typography-h4-line-height:1.5;
+--typography-h5-font-family:var(--font-heading);
+--typography-h5-font-weight:500;
+--typography-h5-font-size:18px;
+--typography-h5-line-height:1.5;
+--typography-h6-font-family:var(--font-heading);
+--typography-h6-font-weight:400;
+--typography-h6-font-size:16px;
+--typography-h6-line-height:1.5;
+--typography-body-font-family:var(--font-primary);
+--typography-body-font-weight:400;
+--typography-body-font-size:14px;
+--typography-body-line-height:1.2;
+--typography-p-font-family:var(--font-primary);
+--typography-p-font-weight:400;
+--typography-p-font-size:14px;
+--typography-p-line-height:1.2;
+--typography-a-font-family:var(--font-secondary);
+--typography-a-font-weight:400;
+--typography-a-font-size:14px;
+--typography-a-line-height:1.2;
+}
+html,html[lang="en"]{
+--font-heading:Roboto-Regular, sans-serif;
+--font-primary:Roboto-Regular, sans-serif;
+--font-secondary:Roboto-Regular, sans-serif;
+}
+html[lang="bn"]{
+--font-heading:NotoSansBengali-Regular, sans-serif;
+--font-primary:NotoSansBengali-Regular, sans-serif;
+--font-secondary:NotoSansBengali-Regular, sans-serif;
+}
+
+/* ===== CONTAINER ===== */
+body{overflow-x:hidden;}
+.col{flex:0 0 auto;}
+.container-row,.widget-container-row{
+  --col-gutter-x: var(--spacing-medium);
+  --col-gutter-y:0;
+  /*
+  --col-gutter-y: var(--spacing-medium);
+  */
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:calc(-1 * var(--col-gutter-y));
+  margin-right:calc(-.5 * var(--col-gutter-x));
+  margin-left:calc(-.5 * var(--col-gutter-x))
+  /*
+  width:calc(100% + var(--col-gutter-x));
+  margin-top:calc(-1 * var(--col-gutter-y));
+  margin-left:calc(-1 * var(--col-gutter-x));
+  */
+}
+.container-row>*,.widget-container-row>*{
+  box-sizing:border-box;
+  flex-shrink:0;
+  width:100%;
+  max-width:100%;
+  padding-right:calc(var(--col-gutter-x) * .5);
+  padding-left:calc(var(--col-gutter-x) * .5);
+  margin-top:var(--col-gutter-y)
+  /*
+  width:calc(100% - var(--col-gutter-x));
+  max-width:calc(100% - var(--col-gutter-x));
+  margin-top:var(--col-gutter-y);
+  margin-left:var(--col-gutter-x);
+  */
+}
+
+@media (min-width:600px) {
+  .container-col-1{width:8.3333%;}
+  .container-col-2{width:16.666%;}
+  .container-col-3{width:25%;}
+  .container-col-4{width:33.333%;}
+  .container-col-5{width:41.666%;}
+  .container-col-6{width:50%;}
+  .container-col-7{width:58.333%;}
+  .container-col-8{width:66.666%;}
+  .container-col-9{width:75%;}
+  .container-col-10{width:83.333%;}
+  .container-col-11{width:91.666%;}
+  .container-col-12{width:100%;}
+}
+
+  </style>
+  <!-- analytics script -->
+  <!-- Matomo Id n/a -->
+  <script defer data-domain="abudhabi.mofa.gov.bd" src="https://analytics-plausible.portal.gov.bd/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  <link rel="stylesheet" href="/site-assets/css/phosphor.css">
+  <link rel="stylesheet" href="/site-assets/css/phosphor-fill.css">
+  <link rel="stylesheet" href="/site-assets/css/index.css">
+  <link rel="stylesheet" href="/widget-assets/css/SimpleHeaderWidget">
+  <link rel="stylesheet" href="/widget-assets/css/LanguageSwitcherWidget">
+  <link rel="stylesheet" href="/widget-assets/css/MenusSliderWidget">
+  <link rel="stylesheet" href="/widget-assets/css/MenusWidget">
+  <link rel="stylesheet" href="/widget-assets/css/EmbassyBannerSliderImageWidget">
+  <link rel="stylesheet" href="/widget-assets/css/BannerSliderImageWidget">
+  <link rel="stylesheet" href="/widget-assets/css/ErrorWidget">
+  <link rel="stylesheet" href="/widget-assets/css/AccessibilityWidget">
+  <link rel="stylesheet" href="/widget-assets/css/GoToTopWidget">
+  <link rel="stylesheet" href="/widget-assets/css/NewLandingFooterWidget">
+  <style>/* END */</style>
+  <link rel="stylesheet" href="/assets/css/index.css">
+
+  <!-- RENDERING 6922f81a003631e6b5c0eb0a : 1787605530608 -->
+  <title>Error occurred | Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE</title>
+  <meta name="description" content=""/>
+  <meta name="keywords" content="Error occurred, Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE, http://abudhabi.mofa.gov.bd, Bangladesh, Bangladesh National Portal, Government of the People's Republic of Bangladesh, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার"/>
+  <link rel="canonical" href="http://abudhabi.mofa.gov.bd/en/site/page/E-Passport-Issue--Reissue:"/>
+  <link rel="icon" type="image/x-icon" href="/site-assets/images/favicon.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/site-assets/images/favicon.ico"/>
+  <link rel="shortcut icon" type="image/png" href="/site-assets/images/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="http://abudhabi.mofa.gov.bd/site-assets/images/favicon.png"/>
+  <meta name="author" content="Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE"/>
+  <meta property="fb:app_id" content="..............."/>
+  <meta property="og:url" content="http://abudhabi.mofa.gov.bd/en/site/page/E-Passport-Issue--Reissue:"/>
+  <meta property="og:site_name" content="Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:article:section" content="Error occurred | Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE"/>
+  <meta property="og:article:author" content="Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE"/>
+  <meta property="og:article:tag" content="Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE"/>
+  <meta property="og:article:tag" content="Bangladesh"/>
+  <meta property="og:article:tag" content="Bangladesh National Portal"/>
+  <meta property="og:article:tag" content="Government of the People's Republic of Bangladesh"/>
+  <meta property="og:article:tag" content="গণপ্রজাতন্ত্রী বাংলাদেশ সরকার"/>
+  <meta property="og:title" content="Error occurred | Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="687"/>
+  <meta property="og:image:height" content="570"/>
+  <meta property="og:image:secure_url" content="http://abudhabi.mofa.gov.bd/site-assets/images/portal_banner.jpg"/>
+  <meta property="og:image" content="http://abudhabi.mofa.gov.bd/site-assets/images/portal_banner.jpg"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="container">
+  <div class="header"><div data-section_type="header" class="droppable">
+        
+         <div data-widget_type="widget" data-widget_name="SimpleHeaderWidget" class="widget simple-header-widget"> <div class="simple-header-container"> <div class="simple-header-left"> <a href="/" class="logo-link"> <img class="office-logo" src="/site-assets/images/logo.png" alt="Office Logo"> </a> <div class="office-title-wrapper"> <a class="header-title" href="/" title="Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE"> <span class="title-text"> Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE </span> </a> </div> </div> <div class="simple-header-right"> <div class="date-section"> <i class="ph ph-calendar-dots"></i> <span class="date-text">25 / 08 / 2026, 01:05 am</span> </div> <div class='widget language-switcher-widget'> <input type="hidden" name="lang" id="3019533724" value="en" /> <button type="button" id="3096325288" data-type="en" class="btn-lang-change" onclick="window.toggleLanguage('3096325288', '3019533724')"> বাংলা </button> </div> </div> </div> </div> 
+        <div class="container-row">
+            <div class="container-col container-col-12" data-widget_type="layout">
+                <section data-widget_type="widget" data-widget_name="MenusSliderWidget" class="widget menus-slider-widget max-view"> <div class="expand-btn home-btn" style="display: none"> <a href="/" title="Home"><i class="ph ph-house"></i></a> </div> <div class="expand-btn prev-btn" style="display: none"> <span title="Previous"><i class="ph ph-arrow-fat-left"></i></span> </div> <div class="menus-widget-container" style="--home-label:'Home';"> <section class="widget menu-widget"> <span id="menu-toggle" class="hamburger-menu-block"> <icon class="hamburger-menu ph ph-list"></icon> <span>Select Menu</span> </span> <ul class="menu-list menu-parent-unordered-list custom-items-center"> <li class="megamenu-link "> <a class="menu-parent-list-link home-link" href="/"> </a> </li> <li class="megamenu-link menu-parent-list"> <a title=" About us" href="" class="menu-parent-list-link"> About us <icon class="menu-parent-list-link-icon ph ph-caret-double-down"></icon> </a> <div class="mega-menu-dropdown megaMenu"> <div class="menu-child-box "> <h6 title=" About us" class="menu-child-title"> <a title="About us" href="#"> <div>About us</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" Roll of Honour" class="menu-sub-child-link" href="/pages/static-pages/roll-of-honor-y1tiek-6a82c1192e7d7203e1c61565" > <div>Roll of Honour</div> </a> </li> <li class="menu-sub-child-list"> <a title=" List of Officers" class="menu-sub-child-link" href="/pages/officers-profile" > <div>List of Officers</div> </a> </li> <li class="menu-sub-child-list"> <a title=" List of Holidays" class="menu-sub-child-link" href="/pages/static-pages/not_found" > <div>List of Holidays</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Office Hour" class="menu-sub-child-link" href="/pages/static-pages/695266aa35ce18e1c05aaa93" > <div>Office Hour</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Consular Service Hour" class="menu-sub-child-link" href="/pages/static-pages/6952667d35ce18e1c05a9809" > <div>Consular Service Hour</div> </a> </li> <li class="menu-sub-child-list"> <a title=" List of Officials" class="menu-sub-child-link" href="/pages/static-pages/6952669335ce18e1c05aa248" > <div>List of Officials</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Embassy Events" class="menu-sub-child-link" href="" > <div>Embassy Events</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Consulates Generals" class="menu-sub-child-link" href="/pages/static-pages/6952667335ce18e1c05a92e4" > <div>Consulates Generals</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Honorary Consulates" class="menu-sub-child-link" href="" > <div>Honorary Consulates</div> </a> </li> </ul> </div> </div> </li> <li class="megamenu-link menu-parent-list"> <a title=" News &amp; Events" href="" class="menu-parent-list-link"> News &amp; Events <icon class="menu-parent-list-link-icon ph ph-caret-double-down"></icon> </a> <div class="mega-menu-dropdown megaMenu"> <div class="menu-child-box "> <h6 title=" News &amp; Events" class="menu-child-title"> <a title="News &amp; Events" href="#"> <div>News &amp; Events</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" Global Sourcing Expo 2025, Dhaka" class="menu-sub-child-link" href="https://epbexpo.com/" > <div>Global Sourcing Expo 2025, Dhaka</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Press Release" class="menu-sub-child-link" href="/pages/press-releases" > <div>Press Release</div> </a> </li> <li class="menu-sub-child-list"> <a title=" " class="menu-sub-child-link" href="" > <div></div> </a> </li> <li class="menu-sub-child-list"> <a title=" Events" class="menu-sub-child-link" href="/pages/event-calendars" > <div>Events</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Video Gallery" class="menu-sub-child-link" href="/pages/video-galleries" > <div>Video Gallery</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Useful links" class="menu-sub-child-link" href="" > <div>Useful links</div> </a> </li> </ul> </div> </div> </li> <li class="megamenu-link menu-parent-list"> <a title=" Bilateral Relation" href="" class="menu-parent-list-link"> Bilateral Relation <icon class="menu-parent-list-link-icon ph ph-caret-double-down"></icon> </a> <div class="mega-menu-dropdown megaMenu"> <div class="menu-child-box "> <h6 title=" Bilateral Relation" class="menu-child-title"> <a title="Bilateral Relation" href="#"> <div>Bilateral Relation</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" History of Bangladesh Relation" class="menu-sub-child-link" href="" > <div>History of Bangladesh Relation</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Political Relation" class="menu-sub-child-link" href="/pages/static-pages/not_found" > <div>Political Relation</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Trade, Commerce, and Investment" class="menu-sub-child-link" href="/pages/press-releases/69526635a31054345f101e8e" > <div>Trade, Commerce, and Investment</div> </a> </li> <li class="menu-sub-child-list"> <a title=" People to People Contact" class="menu-sub-child-link" href="" > <div>People to People Contact</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Relation with Accredited Countries" class="menu-sub-child-link" href="" > <div>Relation with Accredited Countries</div> </a> </li> <li class="menu-sub-child-list"> <a title=" " class="menu-sub-child-link" href="" > <div></div> </a> </li> </ul> </div> </div> </li> <li class="megamenu-link menu-parent-list"> <a title=" Consular Services" href="" class="menu-parent-list-link"> Consular Services <icon class="menu-parent-list-link-icon ph ph-caret-double-down"></icon> </a> <div class="mega-menu-dropdown megaMenu"> <div class="menu-child-box "> <h6 title=" Consular Services" class="menu-child-title"> <a title="Consular Services" href="#"> <div>Consular Services</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" Birth Registration Application" class="menu-sub-child-link" href="/pages/static-pages/6952669235ce18e1c05aa1d0" > <div>Birth Registration Application</div> </a> </li> <li class="menu-sub-child-list"> <a title=" " class="menu-sub-child-link" href="" > <div></div> </a> </li> <li class="menu-sub-child-list"> <a title=" Other Consular Services &amp; Fees" class="menu-sub-child-link" href="/pages/static-pages/6952667735ce18e1c05a9548" > <div>Other Consular Services &amp; Fees</div> </a> </li> </ul> </div> <div class="menu-child-box "> <h6 title=" Visa" class="menu-child-title"> <a title="Visa" href="#"> <div>Visa</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" Government Delegate Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Government Delegate Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Diplomatic and Official Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Diplomatic and Official Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" UN and IO visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>UN and IO visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Business Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Business Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Investor Visa" class="menu-sub-child-link" href="" > <div>Investor Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Work Permint and Employment Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Work Permint and Employment Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" NGO Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>NGO Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Research Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Research Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Tourist Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Tourist Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Student Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Student Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Intern Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Intern Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Journalist Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Journalist Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Tableague Jamat Visa" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Tableague Jamat Visa</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Visa on Arrival" class="menu-sub-child-link" href="https://www.visa.gov.bd/Home.aspx" > <div>Visa on Arrival</div> </a> </li> </ul> </div> <div class="menu-child-box "> <h6 title=" e-Consular" class="menu-child-title"> <a title="e-Consular" href="#"> <div>e-Consular</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" Book an Appointment" class="menu-sub-child-link" href="" > <div>Book an Appointment</div> </a> <ul class="menu-sub-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-sub-child-list"> <a title=" Passport" class="menu-sub-sub-child-link" href="" > <div>Passport</div> </a> </li> <li class="menu-sub-sub-child-list"> <a title=" Visa" class="menu-sub-sub-child-link" href="" > <div>Visa</div> </a> </li> <li class="menu-sub-sub-child-list"> <a title=" Other Services" class="menu-sub-sub-child-link" href="" > <div>Other Services</div> </a> </li> </ul> </li> <li class="menu-sub-child-list"> <a title=" Check Status" class="menu-sub-child-link" href="" > <div>Check Status</div> </a> <ul class="menu-sub-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-sub-child-list"> <a title=" Passport" class="menu-sub-sub-child-link" href="" > <div>Passport</div> </a> </li> <li class="menu-sub-sub-child-list"> <a title=" Visa" class="menu-sub-sub-child-link" href="" > <div>Visa</div> </a> </li> <li class="menu-sub-sub-child-list"> <a title=" Other Services" class="menu-sub-sub-child-link" href="" > <div>Other Services</div> </a> </li> </ul> </li> </ul> </div> <div class="menu-child-box "> <h6 title=" Passport" class="menu-child-title"> <a title="Passport" href="#"> <div>Passport</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" E-Passport" class="menu-sub-child-link" href="https://www.epassport.gov.bd" > <div>E-Passport</div> </a> </li> <li class="menu-sub-child-list"> <a title=" MRP Reissue" class="menu-sub-child-link" href="/pages/static-pages/6952668035ce18e1c05a99ef" > <div>MRP Reissue</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Data Correction in MRP" class="menu-sub-child-link" href="/pages/static-pages/6952667235ce18e1c05a9287" > <div>Data Correction in MRP</div> </a> </li> <li class="menu-sub-child-list"> <a title=" MRP for Newborn" class="menu-sub-child-link" href="" > <div>MRP for Newborn</div> </a> </li> <li class="menu-sub-child-list"> <a title=" MRP for Bangladesh Origin persons" class="menu-sub-child-link" href="" > <div>MRP for Bangladesh Origin persons</div> </a> </li> <li class="menu-sub-child-list"> <a title=" MRP Against Lost Passport" class="menu-sub-child-link" href="" > <div>MRP Against Lost Passport</div> </a> </li> <li class="menu-sub-child-list"> <a title=" New MRP Application" class="menu-sub-child-link" href="http://www.passport.gov.bd/Default.aspx" > <div>New MRP Application</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Others" class="menu-sub-child-link" href="" > <div>Others</div> </a> </li> </ul> </div> <div class="menu-child-box "> <h6 title=" Welfare Services" class="menu-child-title"> <a title="Welfare Services" href="#"> <div>Welfare Services</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" NVR" class="menu-sub-child-link" href="/pages/static-pages/6952668d35ce18e1c05a9fcf" > <div>NVR</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Documents are required for clearance of Human Remains:" class="menu-sub-child-link" href="/pages/static-pages/6952667635ce18e1c05a9502" > <div>Documents are required for clearance of Human Remains:</div> </a> </li> </ul> </div> <div class="menu-child-box "> <h6 title=" Important Notices" class="menu-child-title"> <a title="Important Notices" href="#"> <div>Important Notices</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" Travel Advisories" class="menu-sub-child-link" href="" > <div>Travel Advisories</div> </a> </li> </ul> </div> <div class="menu-child-box "> <h6 title=" Download Forms" class="menu-child-title"> <a title="Download Forms" href="/pages/static-pages/6952667835ce18e1c05a95eb"> <div>Download Forms</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" Passport Application" class="menu-sub-child-link" href="/pages/static-pages/6952668935ce18e1c05a9e2e" > <div>Passport Application</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Visa Application" class="menu-sub-child-link" href="/pages/static-pages/6952667b35ce18e1c05a9747" > <div>Visa Application</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Other Forms" class="menu-sub-child-link" href="/pages/static-pages/6952667835ce18e1c05a95eb" > <div>Other Forms</div> </a> </li> </ul> </div> </div> </li> <li class="megamenu-link menu-parent-list"> <a title=" Contact Us" href="" class="menu-parent-list-link"> Contact Us <icon class="menu-parent-list-link-icon ph ph-caret-double-down"></icon> </a> <div class="mega-menu-dropdown megaMenu"> <div class="menu-child-box "> <h6 title=" Contact Us" class="menu-child-title"> <a title="Contact Us" href="#"> <div>Contact Us</div> </a> </h6> <ul class="menu-sub-child-unordered-list" aria-labelledby="mega-menu-dropdown-button"> <li class="menu-sub-child-list"> <a title=" Address and Phone Number" class="menu-sub-child-link" href="/pages/static-pages/6952668235ce18e1c05a9ab3" > <div>Address and Phone Number</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Embassy officials contact" class="menu-sub-child-link" href="/pages/static-pages/6952669335ce18e1c05aa248" > <div>Embassy officials contact</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Write to (Ambassador/High-Commissioner/Consular General)" class="menu-sub-child-link" href="/pages/web-forms/6952650db71fc04b61482c84" > <div>Write to (Ambassador/High-Commissioner/Consular General)</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Important Links" class="menu-sub-child-link" href="" > <div>Important Links</div> </a> </li> <li class="menu-sub-child-list"> <a title=" Suggestion/Grievance Redress" class="menu-sub-child-link" href="" > <div>Suggestion/Grievance Redress</div> </a> </li> <li class="menu-sub-child-list"> <a title=" FAQ" class="menu-sub-child-link" href="" > <div>FAQ</div> </a> </li> </ul> </div> </div> </li> </ul> </section> </div> <div class="expand-btn next-btn" style="display: none"> <span title="Next"><i class="ph ph-arrow-fat-right"></i></span> </div> </section> 
+            </div>
+        </div>
+        <div data-widget_type="widget" data-widget_name="EmbassyBannerSliderImageWidget" class="widget embassy-banner-slider-image-widget"> <div class="widget banner-slider-image-widget"> <div class="home-carousel"> <a class="slider images" target="_blank"> <img class="slider-image" src="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-central-mofa/2024/12/09fc0d8006f34741810847cca5097d98.jpg " alt="MoFA"> </a> <a class="slider images" target="_blank"> <img class="slider-image" src="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-abudhabi-mofa/2026/1/06b695f5-a72e-4459-aa85-5b41d877140c.jpg " alt="Banner"> </a> <div class="slider-overlay widget-container-row"> <div class="slider-left container-col-4"> <a href="/"> <img class="office-logo" src="/site-assets/images/logo.png" alt="Office Logo"> </a> <div class="office-left-section"> <h1><a style="text-decoration: none" href="/" class="office-title"> Embassy of the People’s Republic of Bangladesh, Abu Dhabi, UAE </a></h1> <!--<p class="office-subtitle">Government of the People's Republic of Bangladesh</p>--> <p class="office-subtitle"></p> </div> </div> <!-- <div class="container-col-4">--> <!-- <p class="office-caption">--> <!-- </p>--> <!-- </div>--> <div class="slider-controls container-col-4"> <button class="nav-btn slider-previous"> <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.70508 11.7868L1.79976 6.88151L6.70508 1.9762" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg> </button> <button class="nav-btn slider-play"> <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6445 20.8813C13.2967 20.8813 15.8402 19.8278 17.7156 17.9524C19.591 16.0771 20.6445 13.5335 20.6445 10.8813C20.6445 8.22918 19.591 5.68564 17.7156 3.81028C15.8402 1.93492 13.2967 0.881348 10.6445 0.881348C7.99237 0.881348 5.44883 1.93492 3.57346 3.81028C1.6981 5.68564 0.644531 8.22918 0.644531 10.8813C0.644531 13.5335 1.6981 16.0771 3.57346 17.9524C5.44883 19.8278 7.99237 20.8813 10.6445 20.8813ZM10.0883 7.34135C9.90003 7.21575 9.68121 7.14361 9.45518 7.13263C9.22914 7.12165 9.00436 7.17224 8.80482 7.27901C8.60529 7.38577 8.43848 7.5447 8.32219 7.73884C8.2059 7.93298 8.1445 8.15504 8.14453 8.38135V13.3813C8.1445 13.6077 8.2059 13.8297 8.32219 14.0239C8.43848 14.218 8.60529 14.3769 8.80482 14.4837C9.00436 14.5905 9.22914 14.641 9.45518 14.6301C9.68121 14.6191 9.90003 14.5469 10.0883 14.4213L13.8383 11.9213C14.0095 11.8072 14.1498 11.6525 14.2469 11.4711C14.344 11.2897 14.3948 11.0871 14.3948 10.8813C14.3948 10.6756 14.344 10.473 14.2469 10.2916C14.1498 10.1102 14.0095 9.9555 13.8383 9.84135L10.0883 7.34135Z" fill="currentColor" /> </svg> </button> <button class="nav-btn slider-next"> <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1.58447 11.7868L6.48979 6.88151L1.58447 1.9762" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> </svg> </button> </div> </div> </div> </div> </div>
+        
+    </div></div>
+  <div class="wrapper">
+    <div class="body"><div data-section_type="body" class="droppable">
+        <div class="container-row">
+            <div class="container-col container-col-12" data-widget_type="layout">
+                <div data-widget_type="widget" data-widget_name="ErrorWidget" class="widget error-widget"> <h2 class="error-body"></h2> <h1 class="error-header">The requested page could not be found</h1> <p class="error-code"></p> </div>
+            </div>
+        </div>
+    <div data-widget_type="widget" data-widget_name="AccessibilityWidget" class="widget accessibility-widget"> <div class="accessibility-float fab-icon" id="accessibility-btn" title="Accessibility"> <i class="ph ph-wheelchair-motion"></i> </div> <div class="accessibility-card" id="accessibility-card"> <h3 id="accessibility-card-title" tabindex="0">Accessibility</h3> <div id="accessibility-close" tabindex="0" title="Close"> <icon class="ph ph-x-circle"></icon> </div> <div class="item"> <button id="font-increase">Font Increase</button> <button id="font-decrease">Font Decrease</button> </div> <div class="item"> <input type="checkbox" id="monochrome" title="Monochrome" /> <label for="monochrome">Monochrome</label> </div> <div class="item"> <input type="checkbox" id="inverted" title="Invert" /> <label for="inverted">Invert</label> </div> <div class="item"> <input type="checkbox" id="bigCursor" title="Big Cursor" /> <label for="bigCursor">Big Cursor</label> </div> <div class="item"> <input type="checkbox" id="highlightLinks" title="Highlight Links" /> <label for="highlightLinks">Highlight Links</label> </div> <div class="item"> <input type="checkbox" id="highlightHeadings" title="Highlight Headings" /> <label for="highlightHeadings">Highlight Headings</label> </div> <div class="item"> <input type="checkbox" id="readingGuideCheckbox" title="Reading Guide" /> <label for="readingGuideCheckbox">Reading Guide</label> </div> <div class="item"> <button class="accessibility-reset">Reset</button> </div> <a class='screen-reader' target="_blank" rel="noreferrer" href="https://www.nvaccess.org/files/nvda/releases/2020.4/nvda_2020.4.exe">Download Screen Reader</a> </div> <!-- TODO: [naeemur] add some more tab navigate options --> <div class="tab-menu"> <a href="#main-content" class="skip-link">Skip to content</a> <a href="#accessibility-card-title" class="skip-link menu-href">Go to accessibility menu</a> </div> </div> 
+<div data-widget_type="widget" data-widget_name="GoToTopWidget" class="widget go-to-top-widget"> <div class="go-to-top-float x-fab-icon" id="go-to-top-btn" title="Go to top"> <i class="ph ph-caret-up"></i> </div> </div> 
+</div></div>
+  </div>
+  <div class="footer"><div data-section_type="footer" class="droppable">
+         <footer data-widget_type="widget" data-widget_name="NewLandingFooterWidget" class="widget new-landing-footer-widget"> <div class="footer-decoration"> <div class="decorative-left"> <img src="/site-assets/images/left-footer.png" alt="Decorative Left"> </div> <div class="decorative-right"> <img src="/site-assets/images/right-footer.png" alt="Decorative Right"> </div> </div> <div class="footer-disclaimer"> All information published on this website is regularly updated by the respective government office. The office makes every effort to ensure that the information is accurate, correct, and reliable. </div> <div class="footer-content container"> <div class="footer-left"> <ul class="footer-links"> </ul> <div class="copyright"> <p> &copy; 2026 All Rights Reserved to bangladesh.gov.bd(National Portal) </p> <p class="last-updated"> Site last updated: Wednesday, August 19, 2026 at 11:44:21 </p> </div> </div> <div class="footer-right"> <div class="planning-section"> <p class="planning-title">Planning and implementation</p> <div class="planning-logos"> <img src="/site-assets/images/a2iset.png" alt="a2i"> </div> </div> </div> </div> </footer> 
+    </div></div>
+</div>
+<script>const _window=window; const _document=document;</script>
+<script src="/site-assets/js/index.js"></script>
+<script src="/widget-assets/js/SimpleHeaderWidget"></script>
+<script src="/widget-assets/js/LanguageSwitcherWidget"></script>
+<script src="/widget-assets/js/MenusSliderWidget"></script>
+<script src="/widget-assets/js/MenusWidget"></script>
+<script src="/widget-assets/js/EmbassyBannerSliderImageWidget"></script>
+<script src="/widget-assets/js/BannerSliderImageWidget"></script>
+<script src="/widget-assets/js/ErrorWidget"></script>
+<script src="/widget-assets/js/AccessibilityWidget"></script>
+<script src="/widget-assets/js/GoToTopWidget"></script>
+<script src="/widget-assets/js/NewLandingFooterWidget"></script>
+
+<script src="/assets/js/index.js"></script>
+</body>
+</html>

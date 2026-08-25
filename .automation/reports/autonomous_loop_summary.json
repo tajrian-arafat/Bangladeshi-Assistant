@@ -1,0 +1,43 @@
+{
+  "steps": 3,
+  "final_status": "AUTO_CONTINUE",
+  "last": {
+    "status": "AUTO_CONTINUE",
+    "batch": "BATCH_03A",
+    "phase": "PUBLICATION",
+    "run_id": "run-test123",
+    "result_status": "SUCCESS",
+    "summary": "PUBLICATION ok",
+    "next_phase": "E2E"
+  },
+  "history": [
+    {
+      "status": "AUTO_CONTINUE",
+      "batch": "BATCH_03A",
+      "phase": "RESEARCH",
+      "run_id": "run-test123",
+      "result_status": "SUCCESS",
+      "summary": "RESEARCH ok",
+      "next_phase": "VERIFICATION"
+    },
+    {
+      "status": "AUTO_CONTINUE",
+      "batch": "BATCH_03A",
+      "phase": "VERIFICATION",
+      "run_id": "run-test123",
+      "result_status": "SUCCESS",
+      "summary": "VERIFICATION ok",
+      "next_phase": "PUBLICATION"
+    },
+    {
+      "status": "AUTO_CONTINUE",
+      "batch": "BATCH_03A",
+      "phase": "PUBLICATION",
+      "run_id": "run-test123",
+      "result_status": "SUCCESS",
+      "summary": "PUBLICATION ok",
+      "next_phase": "E2E"
+    }
+  ],
+  "generated_at": "2026-08-25T02:39:57.563793+00:00"
+}

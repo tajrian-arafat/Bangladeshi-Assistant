@@ -1,0 +1,198 @@
+{
+  "procedure_steps": [
+    {
+      "step_id": "civil-birth-registration::step-1",
+      "service_id": "civil-birth-registration",
+      "order": 1,
+      "title_en": "Open BDRIS birth application",
+      "title_bn": null,
+      "claim_ids": [
+        "civil-birth-registration::c-br-portal"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "civil-birth-registration::step-2",
+      "service_id": "civil-birth-registration",
+      "order": 2,
+      "title_en": "Select registration address basis",
+      "title_bn": null,
+      "claim_ids": [
+        "civil-birth-registration::c-br-portal"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "civil-birth-registration::step-3",
+      "service_id": "civil-birth-registration",
+      "order": 3,
+      "title_en": "Enter child and parents data",
+      "title_bn": null,
+      "claim_ids": [],
+      "pipeline_status": "DISCOVERED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "civil-birth-registration::step-4",
+      "service_id": "civil-birth-registration",
+      "order": 4,
+      "title_en": "Upload supporting images",
+      "title_bn": null,
+      "claim_ids": [
+        "civil-birth-registration::c-br-upload"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "civil-birth-registration::step-5",
+      "service_id": "civil-birth-registration",
+      "order": 5,
+      "title_en": "Submit and follow local office verification",
+      "title_bn": null,
+      "claim_ids": [],
+      "pipeline_status": "DISCOVERED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "civil-birth-registration::step-6",
+      "service_id": "civil-birth-registration",
+      "order": 6,
+      "title_en": "Obtain certificate / verify online",
+      "title_bn": null,
+      "claim_ids": [],
+      "pipeline_status": "DISCOVERED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-new-voter-registration::step-1",
+      "service_id": "nid-new-voter-registration",
+      "order": 1,
+      "title_en": "Fill online registration form",
+      "title_bn": null,
+      "claim_ids": [
+        "nid-new-voter-registration::c-nid-new-docs"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-new-voter-registration::step-2",
+      "service_id": "nid-new-voter-registration",
+      "order": 2,
+      "title_en": "Preview and print PDF",
+      "title_bn": null,
+      "claim_ids": [],
+      "pipeline_status": "DISCOVERED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-new-voter-registration::step-3",
+      "service_id": "nid-new-voter-registration",
+      "order": 3,
+      "title_en": "Submit at election office with documents",
+      "title_bn": null,
+      "claim_ids": [],
+      "pipeline_status": "DISCOVERED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-new-voter-registration::step-4",
+      "service_id": "nid-new-voter-registration",
+      "order": 4,
+      "title_en": "Biometric capture",
+      "title_bn": null,
+      "claim_ids": [],
+      "pipeline_status": "DISCOVERED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-new-voter-registration::step-5",
+      "service_id": "nid-new-voter-registration",
+      "order": 5,
+      "title_en": "Receive notification and collect/download card",
+      "title_bn": null,
+      "claim_ids": [],
+      "pipeline_status": "DISCOVERED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-online-account-registration::step-1",
+      "service_id": "nid-online-account-registration",
+      "order": 1,
+      "title_en": "Fill account registration",
+      "title_bn": null,
+      "claim_ids": [
+        "nid-online-account-registration::c-acct-reg"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-online-account-registration::step-2",
+      "service_id": "nid-online-account-registration",
+      "order": 2,
+      "title_en": "Activate via OTP",
+      "title_bn": null,
+      "claim_ids": [
+        "nid-online-account-registration::c-acct-reg"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-online-account-registration::step-3",
+      "service_id": "nid-online-account-registration",
+      "order": 3,
+      "title_en": "Face verification via NID Wallet",
+      "title_bn": null,
+      "claim_ids": [
+        "nid-online-account-registration::c-acct-wallet"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-voter-area-change::step-1",
+      "service_id": "nid-voter-area-change",
+      "order": 1,
+      "title_en": "Determine if area transfer or local address correction",
+      "title_bn": null,
+      "claim_ids": [
+        "nid-voter-area-change::c-f13"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    },
+    {
+      "step_id": "nid-voter-area-change::step-2",
+      "service_id": "nid-voter-area-change",
+      "order": 2,
+      "title_en": "Apply at current area election office",
+      "title_bn": null,
+      "claim_ids": [
+        "nid-voter-area-change::c-f13"
+      ],
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "procedure_steps"
+    }
+  ]
+}

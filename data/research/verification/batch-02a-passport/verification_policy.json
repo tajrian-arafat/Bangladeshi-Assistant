@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "batch_id": "batch-02a-passport",
+  "verified_at": "2026-08-24T21:08:38.715778+00:00",
+  "rules": {
+    "high_risk_official": {
+      "preferred_tiers": [
+        1,
+        2
+      ],
+      "require_explicit_support": true,
+      "search_index_excerpt_not_equal_to_direct_page": true,
+      "spa_shell_not_equal_to_instruction_text": true,
+      "verdict_if_only_index_excerpt": [
+        "PARTIALLY_VERIFIED",
+        "OUTDATED",
+        "UNVERIFIED"
+      ]
+    },
+    "fee_freshness": {
+      "outdated_if_source_older_than_verification_without_superseding_doc": true,
+      "do_not_publish_stale_amounts_as_current": true
+    },
+    "mission_rules": {
+      "no_merge_dubai_singapore_abudhabi_without_evidence": true
+    },
+    "publication": "STAGING_ONLY \u2014 do not run publish_verified_knowledge.py"
+  }
+}

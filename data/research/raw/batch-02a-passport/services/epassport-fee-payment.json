@@ -1,0 +1,340 @@
+{
+  "service_id": "epassport-fee-payment",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "e-Passport Fee Payment",
+  "service_name_bn": "ই-পাসপোর্ট ফি পরিশোধ",
+  "aliases": [
+    "ekpay passport",
+    "passport payment online"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://epassport.gov.bd/instructions/passport-fees",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "epassport-fee-payment::c-fee-48p-5y-regular",
+      "legacy_claim_id": "c-fee-48p-5y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery fee BDT 4025 (incl. 15% VAT).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 4025,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 48,
+        "validity_years": 5,
+        "regular_bdt": 4025,
+        "express_bdt": 6325,
+        "super_express_bdt": 8625
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-48p-5y-regular-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-48p-10y-regular",
+      "legacy_claim_id": "c-fee-48p-10y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Inside Bangladesh: 48-page / 10-year e-Passport regular delivery fee BDT 5750 (incl. 15% VAT).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 5750,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 48,
+        "validity_years": 10,
+        "regular_bdt": 5750,
+        "express_bdt": 8050,
+        "super_express_bdt": 10350
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-48p-10y-regular-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-64p-5y-regular",
+      "legacy_claim_id": "c-fee-64p-5y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Inside Bangladesh: 64-page / 5-year e-Passport regular delivery fee BDT 6325 (incl. 15% VAT).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 6325,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 64,
+        "validity_years": 5,
+        "regular_bdt": 6325,
+        "express_bdt": 8625,
+        "super_express_bdt": 12075
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-64p-5y-regular-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-64p-10y-regular",
+      "legacy_claim_id": "c-fee-64p-10y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Inside Bangladesh: 64-page / 10-year e-Passport regular delivery fee BDT 8050 (incl. 15% VAT).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 8050,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 64,
+        "validity_years": 10,
+        "regular_bdt": 8050,
+        "express_bdt": 10350,
+        "super_express_bdt": 13800
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-64p-10y-regular-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-vat-included",
+      "legacy_claim_id": "c-fee-vat-included",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Published inside-Bangladesh e-Passport fees include 15% VAT.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-vat-included-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-mission-general-usd",
+      "legacy_claim_id": "c-fee-mission-general-usd",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Mission general applicant fees published in USD by page count, validity, and delivery tier on official fee page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-mission-general-usd-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-mission-labor-student-usd",
+      "legacy_claim_id": "c-fee-mission-labor-student-usd",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Mission labor/student applicant fees published separately in USD on official fee page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-mission-labor-student-usd-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-payment-online-offline",
+      "legacy_claim_id": "c-payment-online-offline",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "payment_method",
+      "claim_text": "Fees may be paid online (payment gateways) or offline via bank/A-Challan per official instructions.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-payment-online-offline-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-payment-slip-offline-only",
+      "legacy_claim_id": "c-payment-slip-offline-only",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "conditional_document",
+      "claim_text": "Payment slip required at enrollment for offline payment only.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "payment_method",
+        "op": "eq",
+        "value": "offline"
+      },
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-payment-slip-offline-only-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-practical-ekpay-mention",
+      "legacy_claim_id": "c-practical-ekpay-mention",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "practical_tip",
+      "claim_text": "Community guides reference ekpay and e-Challan verification for online payments; confirm current gateway list on official portal.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-practical-qna-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-practical-ekpay-mention-src-practical-qna-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-regular-delivery-sla",
+      "legacy_claim_id": "c-regular-delivery-sla",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "processing_time",
+      "claim_text": "Regular delivery stated as within 15 working days / 21 days from biometric enrolment date on official fee page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-regular-delivery-sla-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-payment-ekpay-official",
+      "legacy_claim_id": "c-payment-ekpay-official",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "payment_method",
+      "claim_text": "Official fee page states fees can be paid online via ekpay platform or offline at participating banks using A-Challan.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-payment-ekpay-official-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-mission-weff-surcharge",
+      "legacy_claim_id": "c-mission-weff-surcharge",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Abu Dhabi mission page notes 10% surcharge on consular fees under Wage Earners' Welfare Board Act 2018 Section 14(e).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_location",
+        "op": "eq",
+        "value": "foreign_mission"
+      },
+      "source_ids": [
+        "src-mofa-abudhabi-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-mission-weff-surcharge-src-mofa-abudhabi-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Payment via ekpay; regular, express, and super express delivery tiers."
+}

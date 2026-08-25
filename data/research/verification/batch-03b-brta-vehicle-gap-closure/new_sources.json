@@ -1,0 +1,107 @@
+{
+  "sources": [
+    {
+      "source_id": "src-gap-bsp-vehicle-registration-browser",
+      "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
+      "source_title": "BSP New Motor Vehicle Registration (browser-rendered availability probe)",
+      "authority_tier": 1,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-25",
+      "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_vehicle_registration.txt",
+      "availability": "TEMPORARILY_UNAVAILABLE",
+      "http_status": 404,
+      "evidence_limitation": "404 during off-hours probe; catalogue confirms URL — not INVALID_URL"
+    },
+    {
+      "source_id": "src-gap-bsp-tbc-browser",
+      "source_url": "https://bsp.brta.gov.bd/tbc/",
+      "source_title": "BSP Trustee Board Certificate (browser-rendered availability probe)",
+      "authority_tier": 1,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-25",
+      "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_tbc.txt",
+      "availability": "TEMPORARILY_UNAVAILABLE",
+      "http_status": 404,
+      "evidence_limitation": "404 during off-hours probe; catalogue confirms URL"
+    },
+    {
+      "source_id": "src-gap-bsp-fee-calculator-browser",
+      "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+      "source_title": "BSP Fee Calculator (browser-rendered availability probe)",
+      "authority_tier": 1,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-25",
+      "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+      "availability": "TEMPORARILY_UNAVAILABLE",
+      "http_status": 404,
+      "evidence_limitation": "Interactive fee matrix not capturable; numeric amounts remain CALCULATOR_DERIVED"
+    },
+    {
+      "source_id": "src-gap-brta-ownership-transfer-browser",
+      "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+      "source_title": "BRTA Portal — Ownership Transfer (browser-rendered)",
+      "authority_tier": 2,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-25",
+      "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.txt",
+      "availability": "RENDERED",
+      "http_status": 200,
+      "evidence_limitation": "Page title and last-updated metadata captured; CMS body shows 'Content: Pages' placeholder only"
+    },
+    {
+      "source_id": "src-gap-brta-drc-browser",
+      "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+      "source_title": "BRTA Portal — DRC Biometric (browser-rendered)",
+      "authority_tier": 2,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-25",
+      "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.txt",
+      "availability": "RENDERED",
+      "http_status": 200,
+      "evidence_limitation": "Title/metadata captured; procedural checklist body empty in CMS render"
+    },
+    {
+      "source_id": "src-gap-brta-info-correction-browser",
+      "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+      "source_title": "BRTA Portal — Vehicle Info Correction (browser-rendered)",
+      "authority_tier": 2,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-25",
+      "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.txt",
+      "availability": "RENDERED",
+      "http_status": 200
+    },
+    {
+      "source_id": "src-gap-brta-retro-plate-browser",
+      "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+      "source_title": "BRTA Portal — Retro-Reflective Number Plate (browser-rendered)",
+      "authority_tier": 2,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-25",
+      "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.txt",
+      "availability": "RENDERED",
+      "http_status": 200
+    },
+    {
+      "source_id": "src-gap-brta-fitness-crossref-browser",
+      "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+      "source_title": "BRTA Portal — Fitness Renewal cross-reference (browser-rendered)",
+      "authority_tier": 2,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-25",
+      "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+      "availability": "RENDERED",
+      "http_status": 200,
+      "evidence_limitation": "Fitness validity by vehicle class deferred to BATCH_03C (brta-fitness-certificate)"
+    },
+    {
+      "source_id": "src-gap-scrape-results-index",
+      "source_url": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/scrape_results.json",
+      "source_title": "Batch 3B gap-closure browser scrape index",
+      "authority_tier": 2,
+      "retrieval_method": "puppeteer_headless_chrome",
+      "retrieved_at": "2026-08-25",
+      "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/scrape_results.json"
+    }
+  ]
+}

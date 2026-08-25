@@ -1,0 +1,205 @@
+{
+  "service_id": "brta-e-document-verification",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "E-Tax Token and E-License Verification",
+  "service_name_bn": "ই-ট্যাক্স টোকেন/ই-লাইসেন্স যাচাই",
+  "aliases": [
+    "e-license verification",
+    "digital document check"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "law_enforcement"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-e-document-verification::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "application_url",
+      "claim_text": "E-tax token and e-license verification available via BSP hub per catalogue official_source and service name.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-portal-url-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-verifies-digital-documents",
+      "legacy_claim_id": "c-verifies-digital-documents",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Service verifies authenticity of e-tax tokens and e-licenses for citizens and law enforcement.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-verifies-digital-documents-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-not-payment-verification",
+      "legacy_claim_id": "c-not-payment-verification",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "restriction",
+      "claim_text": "E-document verification confirms document validity — distinct from payment verification (brta-payment-verification).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-not-payment-verification-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-e-fitness-may-be-included",
+      "legacy_claim_id": "c-e-fitness-may-be-included",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "E-Fitness results from brta-fitness-certificate may be viewable/verifiable on BSP per catalogue cross-notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "e_fitness_enabled_for_vehicle"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-e-fitness-may-be-included-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-public-verification-tool",
+      "legacy_claim_id": "c-public-verification-tool",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "eligibility",
+      "claim_text": "Verification tool usable by citizens and law enforcement per catalogue target_user.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-public-verification-tool-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-document-id-required",
+      "legacy_claim_id": "c-document-id-required",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "document",
+      "claim_text": "Verification requires document identifier (token number, license number, or QR code) from issued e-document.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-document-id-required-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-no-fee-for-verification-likely",
+      "legacy_claim_id": "c-no-fee-for-verification-likely",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "fee",
+      "claim_text": "Document verification likely free — no fee schedule captured for verification lookups in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "verification_lookup_only"
+      },
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-no-fee-for-verification-likely-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-practical-law-enforcement-use",
+      "legacy_claim_id": "c-practical-law-enforcement-use",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "practical_tip",
+      "claim_text": "Law enforcement can use e-document verification roadside to confirm valid e-tax token or e-license without physical sticker.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-practical-law-enforcement-use-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator); batch-03b-brta-vehicle (fitness/tax cross-refs)"
+}

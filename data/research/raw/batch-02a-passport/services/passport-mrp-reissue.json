@@ -1,0 +1,45 @@
+{
+  "service_id": "passport-mrp-reissue",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Machine Readable Passport - Reissue/Correction",
+  "service_name_bn": "পাসপোর্ট পুন:ইssue/সংশোধন (MRP)",
+  "aliases": [
+    "passport renewal",
+    "DIP Form 2",
+    "passport correction"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "http://passport.gov.bd/UserHome.aspx",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "passport-mrp-reissue::c-mrp-form2",
+      "legacy_claim_id": "c-mrp-form2",
+      "service_id": "passport-mrp-reissue",
+      "claim_type": "application_url",
+      "claim_text": "MRP reissue/correction/alternation uses DIP Form 2 via passport.gov.bd UserHome.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-reissue"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-reissue::c-mrp-form2-src-mrp-reissue"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null
+}

@@ -1,0 +1,2866 @@
+{
+  "claims": [
+    {
+      "claim_id": "brta-fitness-certificate::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Vehicle fitness certificate issue and renewal guidance published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fitness-certificate::c-portal-url-src-brta-portal-fitness"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-e-fitness-bsp",
+      "legacy_claim_id": "c-e-fitness-bsp",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "E-Fitness inspection results are viewable on BSP per catalogue discovery notes — digital fitness workflow complements circle office inspection.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-fitness-certificate::c-e-fitness-bsp-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-physical-inspection-required",
+      "legacy_claim_id": "c-physical-inspection-required",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Fitness issuance/renewal requires vehicle inspection at authorized inspection centre or circle office — not fully online-only.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fitness-certificate::c-physical-inspection-required-src-brta-portal-fitness"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-validity-by-class-unverified",
+      "legacy_claim_id": "c-validity-by-class-unverified",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "restriction",
+      "claim_text": "Fitness certificate validity period by vehicle class (e.g., private car vs commercial bus) is NOT verified in this research pass — do not publish specific year durations.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fitness-certificate::c-validity-by-class-unverified-src-brta-portal-fitness"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "UNVERIFIED"
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-commercial-vs-private-rules-differ",
+      "legacy_claim_id": "c-commercial-vs-private-rules-differ",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Fitness requirements and inspection frequency differ between private and commercial vehicle classes; rules must not be generalized from one class to another.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "vehicle_class_and_usage"
+      },
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fitness-certificate::c-commercial-vs-private-rules-differ-src-brta-portal-fitness"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "UNVERIFIED"
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-fitness-fee-calculator",
+      "legacy_claim_id": "c-fitness-fee-calculator",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "fee",
+      "claim_text": "Fitness certificate fees depend on vehicle type and issue vs renewal action; amounts computed via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-fitness-certificate",
+        "vehicle_type": "VARIES",
+        "action": "fitness_issue_or_renewal",
+        "condition": "vehicle_class_selected_in_calculator",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-fitness-certificate::c-fitness-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-bsp-account-prerequisite",
+      "legacy_claim_id": "c-bsp-account-prerequisite",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "BSP owner account registration may be required to view E-Fitness results and pay fitness-related fees online.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "online_e_fitness_or_payment"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fitness-certificate::c-bsp-account-prerequisite-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-distinct-from-modification",
+      "legacy_claim_id": "c-distinct-from-modification",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "restriction",
+      "claim_text": "Fitness renewal is distinct from vehicle modification services (engine/color/tyre change) in this batch — modifications may trigger re-inspection separately.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "procedure_is_modification_only"
+      },
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-fitness-certificate::c-distinct-from-modification-src-brta-portal-fitness"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-practical-bsp-hours",
+      "legacy_claim_id": "c-practical-bsp-hours",
+      "service_id": "brta-fitness-certificate",
+      "claim_type": "practical_tip",
+      "claim_text": "Check E-Fitness results and pay fees during BSP operating hours (08:00–22:00 BST); sub-portals may be unavailable outside window.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-brta-fitness-certificate::c-practical-bsp-hours-src-bsp-maintenance-notice"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-tax-token",
+      "claim_type": "application_url",
+      "claim_text": "Motor vehicle tax token issue and renewal process published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-portal-url-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-tax-token",
+      "claim_type": "eligibility",
+      "claim_text": "Tax token issued for vehicles already registered with BRTA; requires valid registration record.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-registered-vehicle-required-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-tax-token-fee-calculator",
+      "legacy_claim_id": "c-tax-token-fee-calculator",
+      "service_id": "brta-tax-token",
+      "claim_type": "fee",
+      "claim_text": "Tax token issue/renewal fees vary by vehicle type and engine capacity; amounts via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-tax-token",
+        "vehicle_type": "VARIES",
+        "action": "tax_token_issue_or_renewal",
+        "condition": "vehicle_class_and_tax_year",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-tax-token-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-distinct-from-mv-tax",
+      "legacy_claim_id": "c-distinct-from-mv-tax",
+      "service_id": "brta-tax-token",
+      "claim_type": "restriction",
+      "claim_text": "Tax token issue/renewal is distinct from MV tax payment (brta-mv-tax-payment at brta.cnsbd.com/mvtax_brta) — related but separate procedures.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-mvtax-portal",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-distinct-from-mv-tax-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-circle-office-collection",
+      "legacy_claim_id": "c-circle-office-collection",
+      "service_id": "brta-tax-token",
+      "claim_type": "procedure_step",
+      "claim_text": "Physical tax token sticker or e-tax token collection may require circle office visit after fee payment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-tax-token"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-circle-office-collection-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-tax-token::c-fitness-may-be-prerequisite",
+      "legacy_claim_id": "c-fitness-may-be-prerequisite",
+      "service_id": "brta-tax-token",
+      "claim_type": "conditional_document",
+      "claim_text": "Valid fitness certificate may be required before tax token renewal for applicable vehicle classes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "vehicle_class_requires_fitness"
+      },
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-fitness-may-be-prerequisite-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-e-tax-token-verifiable",
+      "legacy_claim_id": "c-e-tax-token-verifiable",
+      "service_id": "brta-tax-token",
+      "claim_type": "procedure_step",
+      "claim_text": "E-tax token can be verified via BSP e-document verification service (brta-e-document-verification).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "RECOMMENDED"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-e-tax-token-verifiable-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-practical-verify-payment-first",
+      "legacy_claim_id": "c-practical-verify-payment-first",
+      "service_id": "brta-tax-token",
+      "claim_type": "practical_tip",
+      "claim_text": "Use BSP payment verification before visiting circle office for tax token collection to confirm fee settlement.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-practical-verify-payment-first-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "application_url",
+      "claim_text": "Motor vehicle tax (MV tax) payment available at brta.cnsbd.com/mvtax_brta per catalogue official_source.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-portal-url-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-linked-from-brta-portal",
+      "legacy_claim_id": "c-linked-from-brta-portal",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "application_url",
+      "claim_text": "MV tax portal linked from BRTA portal internal e-services section per catalogue discovery notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-linked-from-brta-portal-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-distinct-from-tax-token",
+      "legacy_claim_id": "c-distinct-from-tax-token",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "restriction",
+      "claim_text": "MV tax payment portal is separate from tax token issue/renewal (brta-tax-token) — both relate to vehicle taxation but use different workflows.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-distinct-from-tax-token-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "eligibility",
+      "claim_text": "MV tax payment requires registered vehicle identification (registration number/chassis) on payment portal.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-registered-vehicle-required-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-mv-tax-amount-calculator",
+      "legacy_claim_id": "c-mv-tax-amount-calculator",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "fee",
+      "claim_text": "MV tax amounts depend on vehicle class, engine capacity, and tax year; may align with BSP fee calculator categories but portal computes at payment time.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-mv-tax-payment",
+        "vehicle_type": "VARIES",
+        "action": "mv_tax_payment",
+        "condition": "vehicle_class_and_tax_year",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-mvtax-portal",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-mv-tax-amount-calculator-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-online-payment-channel",
+      "legacy_claim_id": "c-online-payment-channel",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "MV tax payable online via dedicated portal — reduces need for in-person payment for eligible cases.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-online-payment-channel-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-advance-tax-related",
+      "legacy_claim_id": "c-advance-tax-related",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "conditional_document",
+      "claim_text": "Advance income tax (brta-advance-income-tax) may interact with overall vehicle tax settlement — exact sequencing not fully captured.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "ait_applicable_to_vehicle_class"
+      },
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-brta-portal-advance-tax"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-advance-tax-related-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-practical-keep-receipt",
+      "legacy_claim_id": "c-practical-keep-receipt",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "practical_tip",
+      "claim_text": "Save MV tax payment receipt/transaction ID for tax token renewal and circle office visits.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-practical-keep-receipt-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-advance-income-tax",
+      "claim_type": "application_url",
+      "claim_text": "Advance income tax (AIT) payment for motor vehicles published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-advance-tax",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-advance-income-tax::c-portal-url-src-brta-portal-advance-tax"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-bsp-and-mobile-app",
+      "legacy_claim_id": "c-bsp-and-mobile-app",
+      "service_id": "brta-advance-income-tax",
+      "claim_type": "application_url",
+      "claim_text": "AIT payment available via BSP and BRTA Seba mobile app per catalogue discovery notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-advance-tax",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-advance-income-tax::c-bsp-and-mobile-app-src-brta-portal-advance-tax"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-vehicle-owner-target",
+      "legacy_claim_id": "c-vehicle-owner-target",
+      "service_id": "brta-advance-income-tax",
+      "claim_type": "eligibility",
+      "claim_text": "Advance income tax applies to registered motor vehicle owners per catalogue target_user.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-advance-tax"
+      ],
+      "evidence_ids": [
+        "ev-brta-advance-income-tax::c-vehicle-owner-target-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-ait-fee-calculator",
+      "legacy_claim_id": "c-ait-fee-calculator",
+      "service_id": "brta-advance-income-tax",
+      "claim_type": "fee",
+      "claim_text": "AIT amounts depend on vehicle class and assessed value; fee calculator may include AIT-related categories.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-advance-income-tax",
+        "vehicle_type": "VARIES",
+        "action": "advance_income_tax",
+        "condition": "vehicle_class_and_assessed_value",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-advance-tax"
+      ],
+      "evidence_ids": [
+        "ev-brta-advance-income-tax::c-ait-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-distinct-from-mv-tax",
+      "legacy_claim_id": "c-distinct-from-mv-tax",
+      "service_id": "brta-advance-income-tax",
+      "claim_type": "restriction",
+      "claim_text": "Advance income tax is distinct from MV tax payment (brta-mv-tax-payment) and tax token (brta-tax-token) — separate tax categories.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-advance-tax",
+        "src-mvtax-portal",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence_ids": [
+        "ev-brta-advance-income-tax::c-distinct-from-mv-tax-src-brta-portal-advance-tax"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-registration-prerequisite",
+      "legacy_claim_id": "c-registration-prerequisite",
+      "service_id": "brta-advance-income-tax",
+      "claim_type": "eligibility",
+      "claim_text": "Vehicle must be registered with BRTA for AIT assessment tied to motor vehicle ownership.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-advance-tax",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-advance-income-tax::c-registration-prerequisite-src-brta-portal-advance-tax"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-payment-verification",
+      "legacy_claim_id": "c-payment-verification",
+      "service_id": "brta-advance-income-tax",
+      "claim_type": "procedure_step",
+      "claim_text": "AIT payment status verifiable via BSP payment verification after online payment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "RECOMMENDED"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-advance-tax"
+      ],
+      "evidence_ids": [
+        "ev-brta-advance-income-tax::c-payment-verification-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-practical-bsp-hours",
+      "legacy_claim_id": "c-practical-bsp-hours",
+      "service_id": "brta-advance-income-tax",
+      "claim_type": "practical_tip",
+      "claim_text": "Pay AIT via BSP during operating hours (08:00–22:00 BST) when using online channels.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-brta-advance-income-tax::c-practical-bsp-hours-src-bsp-maintenance-notice"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-route-permit",
+      "claim_type": "application_url",
+      "claim_text": "Route permit issue and renewal process published on BRTA portal static page for brta-route-permit.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-portal-url-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-commercial-operator-target",
+      "legacy_claim_id": "c-commercial-operator-target",
+      "service_id": "brta-route-permit",
+      "claim_type": "eligibility",
+      "claim_text": "Route permits target commercial transport operators and businesses per catalogue target_user.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-route-permit"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-commercial-operator-target-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-not-applicable-private-car",
+      "legacy_claim_id": "c-not-applicable-private-car",
+      "service_id": "brta-route-permit",
+      "claim_type": "restriction",
+      "claim_text": "Route permit not applicable to standard private passenger vehicles — commercial/public transport service authorization.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "usage_class_private_passenger"
+      },
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-not-applicable-private-car-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-route-permit-fee-calculator",
+      "legacy_claim_id": "c-route-permit-fee-calculator",
+      "service_id": "brta-route-permit",
+      "claim_type": "fee",
+      "claim_text": "Route permit fees depend on vehicle type and permit category; amounts via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-route-permit",
+        "vehicle_type": "VARIES",
+        "action": "route_permit_issue_or_renewal",
+        "condition": "route_type_and_vehicle_class",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-route-permit"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-route-permit-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-fitness-prerequisite",
+      "legacy_claim_id": "c-fitness-prerequisite",
+      "service_id": "brta-route-permit",
+      "claim_type": "conditional_document",
+      "claim_text": "Valid fitness certificate typically required before route permit issue/renewal for commercial vehicles.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "commercial_vehicle"
+      },
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-fitness-prerequisite-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-crossref-transport-route-permit",
+      "legacy_claim_id": "c-crossref-transport-route-permit",
+      "service_id": "brta-route-permit",
+      "claim_type": "restriction",
+      "claim_text": "brta-route-permit (portal static page) differs from transport-route-permit (BSP operator service) — related but separate catalogue entries; do not merge workflows.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-crossref-transport-route-permit-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-route-type-matrix-unverified",
+      "legacy_claim_id": "c-route-type-matrix-unverified",
+      "service_id": "brta-route-permit",
+      "claim_type": "restriction",
+      "claim_text": "Route permit categories (inter-district, city, long-route, etc.) and applicability matrix not extracted from portal in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-route-permit"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-route-type-matrix-unverified-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "UNVERIFIED"
+    },
+    {
+      "claim_id": "brta-route-permit::c-circle-office-submission",
+      "legacy_claim_id": "c-circle-office-submission",
+      "service_id": "brta-route-permit",
+      "claim_type": "procedure_step",
+      "claim_text": "Route permit applications submitted to relevant BRTA circle office with supporting documents.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-route-permit"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-circle-office-submission-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "transport-route-permit::c-bsp-service",
+      "legacy_claim_id": "c-bsp-service",
+      "service_id": "transport-route-permit",
+      "claim_type": "application_url",
+      "claim_text": "Route permit (BRTA) is a BSP operator licensing service per catalogue finalization_notes; official_source is bsp.brta.gov.bd.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-route-permit::c-bsp-service-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-route-permit::c-crossref-brta-route-permit",
+      "legacy_claim_id": "c-crossref-brta-route-permit",
+      "service_id": "transport-route-permit",
+      "claim_type": "restriction",
+      "claim_text": "transport-route-permit (BSP workflow) is related to but distinct from brta-route-permit (portal static page) — cross-reference both, do not flatten.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-route-permit",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-route-permit::c-crossref-brta-route-permit-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-route-permit::c-operator-business-target",
+      "legacy_claim_id": "c-operator-business-target",
+      "service_id": "transport-route-permit",
+      "claim_type": "eligibility",
+      "claim_text": "Route permit service targets business operators per catalogue target_user (business, operator).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-route-permit::c-operator-business-target-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-route-permit::c-route-permit-fee-calculator",
+      "legacy_claim_id": "c-route-permit-fee-calculator",
+      "service_id": "transport-route-permit",
+      "claim_type": "fee",
+      "claim_text": "Route permit fees on BSP computed via fee calculator by vehicle type and route category.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "transport-route-permit",
+        "vehicle_type": "VARIES",
+        "action": "route_permit_issue_or_renewal",
+        "condition": "route_type_and_vehicle_class",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-transport-route-permit::c-route-permit-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-route-permit::c-bsp-account-required",
+      "legacy_claim_id": "c-bsp-account-required",
+      "service_id": "transport-route-permit",
+      "claim_type": "eligibility",
+      "claim_text": "BSP operator/business account likely required for route permit application on BSP.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "online_bsp_application"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-transport-route-permit::c-bsp-account-required-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-route-permit::c-route-type-matrix-unverified",
+      "legacy_claim_id": "c-route-type-matrix-unverified",
+      "service_id": "transport-route-permit",
+      "claim_type": "restriction",
+      "claim_text": "Route-type applicability matrix (inter-city, intra-district, etc.) not extracted from BSP in this research pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-route-permit"
+      ],
+      "evidence_ids": [
+        "ev-transport-route-permit::c-route-type-matrix-unverified-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "UNVERIFIED"
+    },
+    {
+      "claim_id": "transport-route-permit::c-fitness-tax-prerequisites",
+      "legacy_claim_id": "c-fitness-tax-prerequisites",
+      "service_id": "transport-route-permit",
+      "claim_type": "conditional_document",
+      "claim_text": "Valid fitness and current tax token may be prerequisites for route permit renewal.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "commercial_vehicle_renewal"
+      },
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-brta-portal-fitness",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence_ids": [
+        "ev-transport-route-permit::c-fitness-tax-prerequisites-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-route-permit::c-practical-bsp-hours",
+      "legacy_claim_id": "c-practical-bsp-hours",
+      "service_id": "transport-route-permit",
+      "claim_type": "practical_tip",
+      "claim_text": "Access BSP route permit services during 08:00–22:00 BST operating window.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-transport-route-permit::c-practical-bsp-hours-src-bsp-maintenance-notice"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "application_url",
+      "claim_text": "BRTA fee calculator available at bsp.brta.gov.bd/feeCalculator per catalogue official_source.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-portal-url-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-covers-fitness-route-tax",
+      "legacy_claim_id": "c-covers-fitness-route-tax",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "procedure_step",
+      "claim_text": "Fee calculator covers fitness, route permit, registration, and license fees per catalogue notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-covers-fitness-route-tax-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-vehicle-type-dependent",
+      "legacy_claim_id": "c-vehicle-type-dependent",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "restriction",
+      "claim_text": "All fee outputs depend on selected vehicle type/class — no single flat fee for any service category.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-vehicle-type-dependent-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-interactive-matrix-not-extracted",
+      "legacy_claim_id": "c-interactive-matrix-not-extracted",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "fee",
+      "claim_text": "Per-vehicle-type numeric fee matrix not statically published; requires interactive calculator session.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-fee-calculator",
+        "vehicle_type": "VARIES",
+        "action": "fee_lookup",
+        "condition": "service_and_vehicle_class_selected",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-interactive-matrix-not-extracted-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-cross-cutting-tool",
+      "legacy_claim_id": "c-cross-cutting-tool",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "restriction",
+      "claim_text": "Fee calculator is cross-cutting — referenced by fitness, tax token, route permit, and modification services in this batch.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-cross-cutting-tool-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-may-differ-from-static-pages",
+      "legacy_claim_id": "c-may-differ-from-static-pages",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "restriction",
+      "claim_text": "Calculator-derived fees may differ from outdated static fee tables on portal pages — calculator treated as authoritative when available.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-may-differ-from-static-pages-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-no-login-required-likely",
+      "legacy_claim_id": "c-no-login-required-likely",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "eligibility",
+      "claim_text": "Fee calculator likely accessible without BSP login for fee estimation (workflow not fully snapshotted).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "RECOMMENDED"
+      },
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-no-login-required-likely-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-practical-use-before-visit",
+      "legacy_claim_id": "c-practical-use-before-visit",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "practical_tip",
+      "claim_text": "Use fee calculator before circle office visits for fitness, tax token, or route permit to prepare exact payment amounts.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-practical-use-before-visit-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-payment-verification::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-payment-verification",
+      "claim_type": "application_url",
+      "claim_text": "BRTA payment verification available via BSP hub at bsp.brta.gov.bd per catalogue official_source.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-payment-verification::c-portal-url-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-payment-verification::c-cross-cutting-verification",
+      "legacy_claim_id": "c-cross-cutting-verification",
+      "service_id": "brta-payment-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Payment verification applies across BSP services including fitness, tax, route permit, and registration fees.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-payment-verification::c-cross-cutting-verification-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-payment-verification::c-transaction-id-required",
+      "legacy_claim_id": "c-transaction-id-required",
+      "service_id": "brta-payment-verification",
+      "claim_type": "document",
+      "claim_text": "Payment verification requires transaction reference or payment receipt details from BSP payment.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-payment-verification::c-transaction-id-required-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-payment-verification::c-pre-circle-office-check",
+      "legacy_claim_id": "c-pre-circle-office-check",
+      "service_id": "brta-payment-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Verify payment status online before visiting circle office for document collection (tax token, fitness certificate).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "RECOMMENDED"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence_ids": [
+        "ev-brta-payment-verification::c-pre-circle-office-check-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-payment-verification::c-bsp-account-may-be-required",
+      "legacy_claim_id": "c-bsp-account-may-be-required",
+      "service_id": "brta-payment-verification",
+      "claim_type": "eligibility",
+      "claim_text": "Payment verification may require BSP account login linked to the payment transaction.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "payment_linked_to_bsp_account"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-register"
+      ],
+      "evidence_ids": [
+        "ev-brta-payment-verification::c-bsp-account-may-be-required-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-payment-verification::c-not-a-payment-gateway",
+      "legacy_claim_id": "c-not-a-payment-gateway",
+      "service_id": "brta-payment-verification",
+      "claim_type": "restriction",
+      "claim_text": "Payment verification confirms prior payment — it does not initiate new payments.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-payment-verification::c-not-a-payment-gateway-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-payment-verification::c-practical-bsp-hours",
+      "legacy_claim_id": "c-practical-bsp-hours",
+      "service_id": "brta-payment-verification",
+      "claim_type": "practical_tip",
+      "claim_text": "Payment verification portal subject to BSP operating hours (08:00–22:00 BST).",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-brta-payment-verification::c-practical-bsp-hours-src-bsp-maintenance-notice"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-payment-verification::c-distinct-from-e-document",
+      "legacy_claim_id": "c-distinct-from-e-document",
+      "service_id": "brta-payment-verification",
+      "claim_type": "restriction",
+      "claim_text": "Payment verification is distinct from e-document verification (brta-e-document-verification) — confirms payment, not document authenticity.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-payment-verification::c-distinct-from-e-document-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "application_url",
+      "claim_text": "E-tax token and e-license verification available via BSP hub per catalogue official_source and service name.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-portal-url-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-verifies-digital-documents",
+      "legacy_claim_id": "c-verifies-digital-documents",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Service verifies authenticity of e-tax tokens and e-licenses for citizens and law enforcement.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-verifies-digital-documents-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-not-payment-verification",
+      "legacy_claim_id": "c-not-payment-verification",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "restriction",
+      "claim_text": "E-document verification confirms document validity — distinct from payment verification (brta-payment-verification).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-not-payment-verification-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-e-fitness-may-be-included",
+      "legacy_claim_id": "c-e-fitness-may-be-included",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "E-Fitness results from brta-fitness-certificate may be viewable/verifiable on BSP per catalogue cross-notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "e_fitness_enabled_for_vehicle"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-e-fitness-may-be-included-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-public-verification-tool",
+      "legacy_claim_id": "c-public-verification-tool",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "eligibility",
+      "claim_text": "Verification tool usable by citizens and law enforcement per catalogue target_user.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-public-verification-tool-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-document-id-required",
+      "legacy_claim_id": "c-document-id-required",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "document",
+      "claim_text": "Verification requires document identifier (token number, license number, or QR code) from issued e-document.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-document-id-required-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-no-fee-for-verification-likely",
+      "legacy_claim_id": "c-no-fee-for-verification-likely",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "fee",
+      "claim_text": "Document verification likely free — no fee schedule captured for verification lookups in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "verification_lookup_only"
+      },
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-no-fee-for-verification-likely-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-practical-law-enforcement-use",
+      "legacy_claim_id": "c-practical-law-enforcement-use",
+      "service_id": "brta-e-document-verification",
+      "claim_type": "practical_tip",
+      "claim_text": "Law enforcement can use e-document verification roadside to confirm valid e-tax token or e-license without physical sticker.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-e-document-verification::c-practical-law-enforcement-use-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "application_url",
+      "claim_text": "BSP user registration at bsp.brta.gov.bd/register for driver, owner, or dealer accounts.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-portal-url-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-nid-linked-mobile",
+      "legacy_claim_id": "c-nid-linked-mobile",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "document",
+      "claim_text": "Registration requires NID-linked mobile number per catalogue discovery notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-nid-linked-mobile-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-user-types",
+      "legacy_claim_id": "c-user-types",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Register as driver, vehicle owner, or vehicle dealer — account type determines accessible BSP services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-register"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-user-types-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-prerequisite-for-batch-services",
+      "legacy_claim_id": "c-prerequisite-for-batch-services",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "eligibility",
+      "claim_text": "BSP account prerequisite for online fitness (E-Fitness), tax payment, route permit, and payment verification in this batch.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "online_bsp_workflow"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-prerequisite-for-batch-services-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-not-applicable-verification-only",
+      "legacy_claim_id": "c-not-applicable-verification-only",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "restriction",
+      "claim_text": "BSP registration not required for read-only e-document verification lookups that accept public document IDs.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "public_verification_lookup_only"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-not-applicable-verification-only-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-dealer-for-school-registration",
+      "legacy_claim_id": "c-dealer-for-school-registration",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Business/dealer account type may be required for driving school registration workflows.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "applicant_is_driving_school_operator"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-road-safety"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-dealer-for-school-registration-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-no-registration-fee-known",
+      "legacy_claim_id": "c-no-registration-fee-known",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "fee",
+      "claim_text": "BSP account registration fee (if any) not published on sources reviewed in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-register"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-no-registration-fee-known-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-practical-complete-before-fitness-tax",
+      "legacy_claim_id": "c-practical-complete-before-fitness-tax",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "practical_tip",
+      "claim_text": "Complete BSP registration before attempting E-Fitness, MV tax, or route permit online workflows.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-practical-complete-before-fitness-tax-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-color-change",
+      "claim_type": "application_url",
+      "claim_text": "Vehicle color change approval process published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-portal-url-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-modification-not-fitness",
+      "legacy_claim_id": "c-modification-not-fitness",
+      "service_id": "brta-color-change",
+      "claim_type": "restriction",
+      "claim_text": "Color change is a vehicle modification procedure — distinct from fitness certificate renewal or tax token services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "procedure_is_fitness_or_tax_only"
+      },
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-modification-not-fitness-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-color-change",
+      "claim_type": "eligibility",
+      "claim_text": "Vehicle must be registered with BRTA before color change approval.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-color-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-registered-vehicle-required-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-original-rc-required",
+      "legacy_claim_id": "c-original-rc-required",
+      "service_id": "brta-color-change",
+      "claim_type": "document",
+      "claim_text": "Original registration certificate required for color change application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-color-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-original-rc-required-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-color-change-fee-calculator",
+      "legacy_claim_id": "c-color-change-fee-calculator",
+      "service_id": "brta-color-change",
+      "claim_type": "fee",
+      "claim_text": "Color change fees vehicle-type dependent via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-color-change",
+        "vehicle_type": "VARIES",
+        "action": "vehicle_modification_color",
+        "condition": "vehicle_class",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-color-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-color-change-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-reinspection-may-be-required",
+      "legacy_claim_id": "c-reinspection-may-be-required",
+      "service_id": "brta-color-change",
+      "claim_type": "conditional_document",
+      "claim_text": "Fitness re-inspection may be required after color change before updated RC reflects modification.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "post_modification_inspection_required"
+      },
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-reinspection-may-be-required-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-circle-office-application",
+      "legacy_claim_id": "c-circle-office-application",
+      "service_id": "brta-color-change",
+      "claim_type": "procedure_step",
+      "claim_text": "Color change application submitted to relevant BRTA circle office with prescribed forms.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-color-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-circle-office-application-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-color-change::c-practical-separate-from-info-correction",
+      "legacy_claim_id": "c-practical-separate-from-info-correction",
+      "service_id": "brta-color-change",
+      "claim_type": "practical_tip",
+      "claim_text": "Color change is a modification service (03C), not registration info correction (03B brta-vehicle-info-correction).",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-practical-separate-from-info-correction-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-engine-change",
+      "claim_type": "application_url",
+      "claim_text": "Vehicle engine change approval process published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-engine-change",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-portal-url-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-modification-not-fitness",
+      "legacy_claim_id": "c-modification-not-fitness",
+      "service_id": "brta-engine-change",
+      "claim_type": "restriction",
+      "claim_text": "Engine change is a vehicle modification — distinct from fitness renewal, tax token, and route permit procedures.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "procedure_is_fitness_or_tax_only"
+      },
+      "source_ids": [
+        "src-brta-portal-engine-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-modification-not-fitness-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-engine-change",
+      "claim_type": "eligibility",
+      "claim_text": "Vehicle must be registered before engine change approval.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-registered-vehicle-required-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-engine-proof-required",
+      "legacy_claim_id": "c-engine-proof-required",
+      "service_id": "brta-engine-change",
+      "claim_type": "conditional_document",
+      "claim_text": "Supporting documents for new engine (invoice, customs release if imported engine) required per modification type.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "engine_origin_and_type"
+      },
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-engine-proof-required-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-engine-change-fee-calculator",
+      "legacy_claim_id": "c-engine-change-fee-calculator",
+      "service_id": "brta-engine-change",
+      "claim_type": "fee",
+      "claim_text": "Engine change fees vehicle-type dependent via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-engine-change",
+        "vehicle_type": "VARIES",
+        "action": "vehicle_modification_engine",
+        "condition": "vehicle_class",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-engine-change-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-fitness-reinspection-likely",
+      "legacy_claim_id": "c-fitness-reinspection-likely",
+      "service_id": "brta-engine-change",
+      "claim_type": "conditional_document",
+      "claim_text": "Fitness re-inspection likely required after engine change due to altered vehicle specifications.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "post_engine_change"
+      },
+      "source_ids": [
+        "src-brta-portal-engine-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-fitness-reinspection-likely-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-circle-office-application",
+      "legacy_claim_id": "c-circle-office-application",
+      "service_id": "brta-engine-change",
+      "claim_type": "procedure_step",
+      "claim_text": "Engine change application submitted to BRTA circle office with technical inspection.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-circle-office-application-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-engine-change::c-practical-update-rc-after-approval",
+      "legacy_claim_id": "c-practical-update-rc-after-approval",
+      "service_id": "brta-engine-change",
+      "claim_type": "practical_tip",
+      "claim_text": "Ensure RC/engine number updated on registration record after approved engine change.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-practical-update-rc-after-approval-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-tire-size-change",
+      "claim_type": "application_url",
+      "claim_text": "Vehicle tire size (width) change approval process published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-tire-change",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-tire-size-change::c-portal-url-src-brta-portal-tire-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-modification-not-fitness",
+      "legacy_claim_id": "c-modification-not-fitness",
+      "service_id": "brta-tire-size-change",
+      "claim_type": "restriction",
+      "claim_text": "Tire size change is a vehicle modification — separate from fitness certificate and tax token services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "procedure_is_fitness_or_tax_only"
+      },
+      "source_ids": [
+        "src-brta-portal-tire-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-tire-size-change::c-modification-not-fitness-src-brta-portal-tire-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-tire-size-change",
+      "claim_type": "eligibility",
+      "claim_text": "Vehicle must be registered before tire size change approval.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-tire-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-tire-size-change::c-registered-vehicle-required-src-brta-portal-tire-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-technical-compliance",
+      "legacy_claim_id": "c-technical-compliance",
+      "service_id": "brta-tire-size-change",
+      "claim_type": "restriction",
+      "claim_text": "Proposed tire size must comply with vehicle manufacturer specifications and road safety standards.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-tire-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-tire-size-change::c-technical-compliance-src-brta-portal-tire-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-tire-change-fee-calculator",
+      "legacy_claim_id": "c-tire-change-fee-calculator",
+      "service_id": "brta-tire-size-change",
+      "claim_type": "fee",
+      "claim_text": "Tire size change fees vehicle-type dependent via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-tire-size-change",
+        "vehicle_type": "VARIES",
+        "action": "vehicle_modification_tire",
+        "condition": "vehicle_class",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-tire-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-tire-size-change::c-tire-change-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-fitness-reinspection-possible",
+      "legacy_claim_id": "c-fitness-reinspection-possible",
+      "service_id": "brta-tire-size-change",
+      "claim_type": "conditional_document",
+      "claim_text": "Fitness re-inspection may be required if tire modification affects vehicle roadworthiness assessment.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "modification_affects_roadworthiness"
+      },
+      "source_ids": [
+        "src-brta-portal-tire-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-tire-size-change::c-fitness-reinspection-possible-src-brta-portal-tire-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-circle-office-application",
+      "legacy_claim_id": "c-circle-office-application",
+      "service_id": "brta-tire-size-change",
+      "claim_type": "procedure_step",
+      "claim_text": "Tire size change application submitted to BRTA circle office.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-tire-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-tire-size-change::c-circle-office-application-src-brta-portal-tire-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-practical-document-new-specs",
+      "legacy_claim_id": "c-practical-document-new-specs",
+      "service_id": "brta-tire-size-change",
+      "claim_type": "practical_tip",
+      "claim_text": "Bring tire specification documentation and invoice when applying for tire width change approval.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-tire-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-tire-size-change::c-practical-document-new-specs-src-brta-portal-tire-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-driving-school-registration",
+      "claim_type": "application_url",
+      "claim_text": "Motor driving training school registration available via BSP roadSafety portal per catalogue official_source.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-road-safety",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-school-registration::c-portal-url-src-bsp-road-safety"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-business-operator-target",
+      "legacy_claim_id": "c-business-operator-target",
+      "service_id": "brta-driving-school-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Driving school registration targets business operators per catalogue target_user.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-road-safety"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-school-registration::c-business-operator-target-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-brta-mandated-registration",
+      "legacy_claim_id": "c-brta-mandated-registration",
+      "service_id": "brta-driving-school-registration",
+      "claim_type": "restriction",
+      "claim_text": "BRTA mandates registration of motor driving training schools per catalogue notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-road-safety"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-school-registration::c-brta-mandated-registration-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-crossref-transport-licence",
+      "legacy_claim_id": "c-crossref-transport-licence",
+      "service_id": "brta-driving-school-registration",
+      "claim_type": "restriction",
+      "claim_text": "brta-driving-school-registration (BSP roadSafety) related to but distinct from transport-driving-school-licence (BSP licensing service).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-road-safety",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-school-registration::c-crossref-transport-licence-src-bsp-road-safety"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-bsp-account-required",
+      "legacy_claim_id": "c-bsp-account-required",
+      "service_id": "brta-driving-school-registration",
+      "claim_type": "eligibility",
+      "claim_text": "BSP business/dealer account likely required for driving school registration application.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "online_application"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-road-safety"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-school-registration::c-bsp-account-required-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-registration-fee-unknown",
+      "legacy_claim_id": "c-registration-fee-unknown",
+      "service_id": "brta-driving-school-registration",
+      "claim_type": "fee",
+      "claim_text": "Driving school registration fee not statically published; may appear in fee calculator under road safety category.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-driving-school-registration",
+        "vehicle_type": "NOT_APPLICABLE",
+        "action": "driving_school_registration",
+        "condition": "school_category",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-road-safety"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-school-registration::c-registration-fee-unknown-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-facility-inspection-likely",
+      "legacy_claim_id": "c-facility-inspection-likely",
+      "service_id": "brta-driving-school-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Driving school registration likely requires facility and instructor inspection by BRTA.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-road-safety",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-school-registration::c-facility-inspection-likely-src-bsp-road-safety"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-practical-bsp-hours",
+      "legacy_claim_id": "c-practical-bsp-hours",
+      "service_id": "brta-driving-school-registration",
+      "claim_type": "practical_tip",
+      "claim_text": "Access roadSafety registration portal during BSP operating hours (08:00–22:00 BST).",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-school-registration::c-practical-bsp-hours-src-bsp-maintenance-notice"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-bsp-service",
+      "legacy_claim_id": "c-bsp-service",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "application_url",
+      "claim_text": "Driving school/training centre licence is a BSP licensing service per catalogue finalization_notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-bsp-service-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-crossref-brta-registration",
+      "legacy_claim_id": "c-crossref-brta-registration",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "restriction",
+      "claim_text": "transport-driving-school-licence (BSP licence) distinct from brta-driving-school-registration (roadSafety registration) — related operator services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-road-safety",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-crossref-brta-registration-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-business-target",
+      "legacy_claim_id": "c-business-target",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "eligibility",
+      "claim_text": "Licence service targets business operators running driving training centres.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-business-target-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-licence-vs-registration",
+      "legacy_claim_id": "c-licence-vs-registration",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "restriction",
+      "claim_text": "Licence issuance is authorization to operate; registration is initial enrolment — may be sequential requirements.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-road-safety"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-licence-vs-registration-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-licence-fee-calculator",
+      "legacy_claim_id": "c-licence-fee-calculator",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "fee",
+      "claim_text": "Driving school licence fees may be listed in BSP fee calculator under licensing categories.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "transport-driving-school-licence",
+        "vehicle_type": "NOT_APPLICABLE",
+        "action": "driving_school_licence",
+        "condition": "licence_type",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-licence-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-bsp-account-required",
+      "legacy_claim_id": "c-bsp-account-required",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "eligibility",
+      "claim_text": "BSP business account required for licence application workflow.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "online_bsp_application"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-bsp-account-required-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-not-applicable-vehicle-owner",
+      "legacy_claim_id": "c-not-applicable-vehicle-owner",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "restriction",
+      "claim_text": "Driving school licence not applicable to individual vehicle owners — business/operator service only.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "applicant_is_individual_vehicle_owner"
+      },
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-not-applicable-vehicle-owner-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-practical-bsp-hours",
+      "legacy_claim_id": "c-practical-bsp-hours",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "practical_tip",
+      "claim_text": "Apply for driving school licence via BSP during 08:00–22:00 BST operating window.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-practical-bsp-hours-src-bsp-maintenance-notice"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ]
+}

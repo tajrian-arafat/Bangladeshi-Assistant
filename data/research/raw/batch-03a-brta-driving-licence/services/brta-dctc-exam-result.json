@@ -1,0 +1,220 @@
+{
+  "service_id": "brta-dctc-exam-result",
+  "batch_id": "batch-03a-brta-driving-licence",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Driving Test (DCTC) Result",
+  "service_name_bn": "ড্রাইভিং পরীক্ষার (ডিসিটিসি) ফলাফল",
+  "aliases": [
+    "DCTC result",
+    "driving exam result"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "driver"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/dctbResult",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-dctc-exam-result::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-dctc-exam-result",
+      "claim_type": "application_url",
+      "claim_text": "DCTC/DCTB driving test results published at bsp.brta.gov.bd/dctbResult (catalogue official_source).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-portal-url-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-division-district-lookup",
+      "legacy_claim_id": "c-division-district-lookup",
+      "service_id": "brta-dctc-exam-result",
+      "claim_type": "procedure_step",
+      "claim_text": "Results browsable division-wise and district-wise on BSP result portal (catalogue notes).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-division-district-lookup-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-public-result-publication",
+      "legacy_claim_id": "c-public-result-publication",
+      "service_id": "brta-dctc-exam-result",
+      "claim_type": "availability",
+      "claim_text": "Exam results published on BSP without requiring applicant login (public lookup portal pattern).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-public-result-publication-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-after-dctc-examinations",
+      "legacy_claim_id": "c-after-dctc-examinations",
+      "service_id": "brta-dctc-exam-result",
+      "claim_type": "eligibility",
+      "claim_text": "Result lookup relevant after sitting DCTC written/oral/field tests on path to smart card driving license.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-after-dctc-examinations-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-url-spelling-dctb",
+      "legacy_claim_id": "c-url-spelling-dctb",
+      "service_id": "brta-dctc-exam-result",
+      "claim_type": "official_metadata",
+      "claim_text": "Official BSP URL uses 'dctbResult' path segment while service name references DCTC (Driving Competency Test Centre) — naming variant only.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-url-spelling-dctb-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-smart-card-pathway-link",
+      "legacy_claim_id": "c-smart-card-pathway-link",
+      "service_id": "brta-dctc-exam-result",
+      "claim_type": "procedure_step",
+      "claim_text": "Passing DCTC results required before smart card driving license fee payment and card issuance on BSP.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result",
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-smart-card-pathway-link-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-result-publication-timing-unknown",
+      "legacy_claim_id": "c-result-publication-timing-unknown",
+      "service_id": "brta-dctc-exam-result",
+      "claim_type": "processing_time",
+      "claim_text": "Official SLA for result publication after field test not enumerated on Tier 1–2 pages in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-result-publication-timing-unknown-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-bsp-hours-affect-access",
+      "legacy_claim_id": "c-bsp-hours-affect-access",
+      "service_id": "brta-dctc-exam-result",
+      "claim_type": "availability",
+      "claim_text": "Result portal may follow BSP operating hours (08:00–22:00 BST); deep link returned 404 outside window during research fetch.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice",
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-bsp-hours-affect-access-src-bsp-maintenance-notice"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-dctc-exam-result::c-practical-check-all-tests",
+      "legacy_claim_id": "c-practical-check-all-tests",
+      "service_id": "brta-dctc-exam-result",
+      "claim_type": "practical_tip",
+      "claim_text": "Verify written, oral, and field test results separately if division publishes stages on different dates.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-dctc-exam-result::c-practical-check-all-tests-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Division and district-wise results published on BSP.",
+  "prior_batch_research": null
+}

@@ -1,0 +1,58 @@
+{
+  "inspected_at": "2026-08-24",
+  "runtime_models_path": "backend/app/domain/models/knowledge.py",
+  "present_reusable": [
+    "Agency",
+    "Service",
+    "Procedure",
+    "ProcedureStep",
+    "ChecklistItem",
+    "ChecklistCondition",
+    "Fee",
+    "Form",
+    "ServiceLink",
+    "ServiceOffice",
+    "Source",
+    "SourceVersion",
+    "KnowledgeDocument",
+    "KnowledgeChunk"
+  ],
+  "missing_for_provenance_chain": [
+    {
+      "concept": "Claim",
+      "status": "MISSING",
+      "impact": "Cannot store atomic verified facts in DB"
+    },
+    {
+      "concept": "ClaimEvidence",
+      "status": "MISSING",
+      "impact": "Evidence links only exist as JSON staging / orphan evidence_ids"
+    },
+    {
+      "concept": "KnowledgeGap",
+      "status": "MISSING",
+      "impact": "Gaps tracked only in research JSON"
+    },
+    {
+      "concept": "Claim pipeline_status enum",
+      "status": "MISSING",
+      "impact": "backend/app/domain/enums.py has ServiceStatus/ReviewState only"
+    },
+    {
+      "concept": "Durable SourceVersion content_hash/body",
+      "status": "TABLE_EXISTS_BUT_EMPTY",
+      "impact": "Staging versions have null content_hash; cannot prove freshness"
+    },
+    {
+      "concept": "Research→DB loader with publish gate",
+      "status": "MISSING",
+      "impact": "No path from staging JSON to runtime without ad-hoc scripts"
+    }
+  ],
+  "do_not_force_into_existing_fields": [
+    "Do not stuff claims into Service.source_provenance without Claim table",
+    "Do not set Fee.amount from CROSS_CHECKED research fees",
+    "Do not set ChecklistItem from PRACTICAL reports",
+    "Do not mark ServiceLink.is_verified=true from discovery fetch alone"
+  ]
+}
