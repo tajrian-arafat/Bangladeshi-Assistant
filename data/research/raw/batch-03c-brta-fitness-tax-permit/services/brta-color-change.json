@@ -1,0 +1,217 @@
+{
+  "service_id": "brta-color-change",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Vehicle Color Change",
+  "service_name_bn": "যানবাহনের রং পরিবর্তন",
+  "aliases": [
+    "colour change",
+    "vehicle repaint registration"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner"
+  ],
+  "official_application_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-color-change::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-color-change",
+      "claim_type": "application_url",
+      "claim_text": "Vehicle color change approval process published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-portal-url-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-modification-not-fitness",
+      "legacy_claim_id": "c-modification-not-fitness",
+      "service_id": "brta-color-change",
+      "claim_type": "restriction",
+      "claim_text": "Color change is a vehicle modification procedure — distinct from fitness certificate renewal or tax token services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "procedure_is_fitness_or_tax_only"
+      },
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-modification-not-fitness-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-color-change",
+      "claim_type": "eligibility",
+      "claim_text": "Vehicle must be registered with BRTA before color change approval.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-color-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-registered-vehicle-required-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-original-rc-required",
+      "legacy_claim_id": "c-original-rc-required",
+      "service_id": "brta-color-change",
+      "claim_type": "document",
+      "claim_text": "Original registration certificate required for color change application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-color-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-original-rc-required-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-color-change-fee-calculator",
+      "legacy_claim_id": "c-color-change-fee-calculator",
+      "service_id": "brta-color-change",
+      "claim_type": "fee",
+      "claim_text": "Color change fees vehicle-type dependent via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-color-change",
+        "vehicle_type": "VARIES",
+        "action": "vehicle_modification_color",
+        "condition": "vehicle_class",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-color-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-color-change-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-reinspection-may-be-required",
+      "legacy_claim_id": "c-reinspection-may-be-required",
+      "service_id": "brta-color-change",
+      "claim_type": "conditional_document",
+      "claim_text": "Fitness re-inspection may be required after color change before updated RC reflects modification.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "post_modification_inspection_required"
+      },
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-reinspection-may-be-required-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-color-change::c-circle-office-application",
+      "legacy_claim_id": "c-circle-office-application",
+      "service_id": "brta-color-change",
+      "claim_type": "procedure_step",
+      "claim_text": "Color change application submitted to relevant BRTA circle office with prescribed forms.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-color-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-circle-office-application-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-color-change::c-practical-separate-from-info-correction",
+      "legacy_claim_id": "c-practical-separate-from-info-correction",
+      "service_id": "brta-color-change",
+      "claim_type": "practical_tip",
+      "claim_text": "Color change is a modification service (03C), not registration info correction (03B brta-vehicle-info-correction).",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-color-change::c-practical-separate-from-info-correction-src-brta-portal-color-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator); batch-03b-brta-vehicle (fitness/tax cross-refs)"
+}

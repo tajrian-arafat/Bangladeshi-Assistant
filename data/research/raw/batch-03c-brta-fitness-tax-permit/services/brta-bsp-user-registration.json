@@ -1,0 +1,215 @@
+{
+  "service_id": "brta-bsp-user-registration",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "BRTA Service Portal User Registration",
+  "service_name_bn": "বিআরটিএ সেবা পোর্টাল ব্যবহারকারী নিবন্ধন",
+  "aliases": [
+    "BSP registration",
+    "BRTA portal signup",
+    "driver owner dealer registration"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "driver",
+    "vehicle_owner",
+    "vehicle_dealer"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/register",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-bsp-user-registration::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "application_url",
+      "claim_text": "BSP user registration at bsp.brta.gov.bd/register for driver, owner, or dealer accounts.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-portal-url-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-nid-linked-mobile",
+      "legacy_claim_id": "c-nid-linked-mobile",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "document",
+      "claim_text": "Registration requires NID-linked mobile number per catalogue discovery notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-nid-linked-mobile-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-user-types",
+      "legacy_claim_id": "c-user-types",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Register as driver, vehicle owner, or vehicle dealer — account type determines accessible BSP services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-register"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-user-types-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-prerequisite-for-batch-services",
+      "legacy_claim_id": "c-prerequisite-for-batch-services",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "eligibility",
+      "claim_text": "BSP account prerequisite for online fitness (E-Fitness), tax payment, route permit, and payment verification in this batch.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "online_bsp_workflow"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-prerequisite-for-batch-services-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-not-applicable-verification-only",
+      "legacy_claim_id": "c-not-applicable-verification-only",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "restriction",
+      "claim_text": "BSP registration not required for read-only e-document verification lookups that accept public document IDs.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "public_verification_lookup_only"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-not-applicable-verification-only-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-dealer-for-school-registration",
+      "legacy_claim_id": "c-dealer-for-school-registration",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Business/dealer account type may be required for driving school registration workflows.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "applicant_is_driving_school_operator"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-road-safety"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-dealer-for-school-registration-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-no-registration-fee-known",
+      "legacy_claim_id": "c-no-registration-fee-known",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "fee",
+      "claim_text": "BSP account registration fee (if any) not published on sources reviewed in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-register"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-no-registration-fee-known-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-practical-complete-before-fitness-tax",
+      "legacy_claim_id": "c-practical-complete-before-fitness-tax",
+      "service_id": "brta-bsp-user-registration",
+      "claim_type": "practical_tip",
+      "claim_text": "Complete BSP registration before attempting E-Fitness, MV tax, or route permit online workflows.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-brta-bsp-user-registration::c-practical-complete-before-fitness-tax-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Register as driver, owner, or vehicle dealer using NID-linked mobile number.",
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator); batch-03b-brta-vehicle (fitness/tax cross-refs)"
+}
