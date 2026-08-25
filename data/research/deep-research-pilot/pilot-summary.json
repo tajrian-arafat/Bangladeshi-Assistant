@@ -1,0 +1,1864 @@
+{
+  "generated_at": "2026-08-25T03:52:51.967508+00:00",
+  "pilot_services": [
+    {
+      "service_id": "nid-new-voter-registration",
+      "pilot_role": "high_usage",
+      "service_name_en": "New Voter and National ID Registration",
+      "category_id": "identity"
+    },
+    {
+      "service_id": "education-ssc-certificate",
+      "pilot_role": "high_usage",
+      "service_name_en": "SSC Certificate Issuance",
+      "category_id": "education"
+    },
+    {
+      "service_id": "tax-income-return-file",
+      "pilot_role": "high_risk",
+      "service_name_en": "Income Tax Return Filing (e-Return)",
+      "category_id": "tax"
+    },
+    {
+      "service_id": "business-company-incorporation",
+      "pilot_role": "high_risk",
+      "service_name_en": "Company Incorporation",
+      "category_id": "registrations"
+    },
+    {
+      "service_id": "land-mutation-apply",
+      "pilot_role": "land",
+      "service_name_en": "Land Mutation (Namjari)",
+      "category_id": "land"
+    },
+    {
+      "service_id": "land-khatian-certified-copy",
+      "pilot_role": "land",
+      "service_name_en": "Certified Khatian Copy",
+      "category_id": "land"
+    },
+    {
+      "service_id": "education-foreign-equivalency",
+      "pilot_role": "education",
+      "service_name_en": "Foreign Qualification Equivalency",
+      "category_id": "education"
+    },
+    {
+      "service_id": "education-duplicate-certificate",
+      "pilot_role": "education",
+      "service_name_en": "Duplicate SSC/HSC Certificate or Transcript",
+      "category_id": "education"
+    },
+    {
+      "service_id": "snp-old-age-allowance",
+      "pilot_role": "social_protection",
+      "service_name_en": "Old Age Allowance",
+      "category_id": "social_protection"
+    },
+    {
+      "service_id": "disability-dis-registration",
+      "pilot_role": "disability",
+      "service_name_en": "Disability Registration and Identity Card (DIS)",
+      "category_id": "disability"
+    },
+    {
+      "service_id": "health-bmdc-full-registration",
+      "pilot_role": "health",
+      "service_name_en": "BMDC Full Registration (MBBS/BDS)",
+      "category_id": "health"
+    },
+    {
+      "service_id": "judiciary-supreme-court-e-filing",
+      "pilot_role": "judiciary",
+      "service_name_en": "Supreme Court e-Filing (Lawyers Panel)",
+      "category_id": "judiciary"
+    }
+  ],
+  "results": [
+    {
+      "service_id": "nid-new-voter-registration",
+      "pilot_role": "high_usage",
+      "output_dir": "/workspace/data/research/deep-research-pilot/nid-new-voter-registration",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 6,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "nid-new-voter-registration",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "nid-new-voter-registration-en-what",
+            "query": "What is New Voter and National ID Registration?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "nid-new-voter-registration-bn-what",
+            "query": "নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "nid-new-voter-registration-en-eligibility",
+            "query": "Who is eligible for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "nid-new-voter-registration-bn-eligibility",
+            "query": "নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "nid-new-voter-registration-en-documents",
+            "query": "What documents do I need for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "nid-new-voter-registration-banglish-documents",
+            "query": "New Voter and National ID Registration er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "nid-new-voter-registration-en-procedure",
+            "query": "How do I apply for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "nid-new-voter-registration-bn-procedure",
+            "query": "নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "nid-new-voter-registration-en-fee",
+            "query": "What is the fee for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-new-voter-registration-en-url",
+            "query": "What is the official website for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "nid-new-voter-registration-en-status",
+            "query": "How can I check the status of my New Voter and National ID Registration application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-new-voter-registration-en-unsupported",
+            "query": "What is the secret internal bypass code for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-new-voter-registration",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 6,
+        "service_specific_sources": 4,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "education-ssc-certificate",
+      "pilot_role": "high_usage",
+      "output_dir": "/workspace/data/research/deep-research-pilot/education-ssc-certificate",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "education-ssc-certificate",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "education-ssc-certificate-en-what",
+            "query": "What is SSC Certificate Issuance?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-ssc-certificate-bn-what",
+            "query": "SSC সনদ প্রদান কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-ssc-certificate-en-eligibility",
+            "query": "Who is eligible for SSC Certificate Issuance?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-ssc-certificate-bn-eligibility",
+            "query": "SSC সনদ প্রদান এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-ssc-certificate-en-documents",
+            "query": "What documents do I need for SSC Certificate Issuance?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-ssc-certificate-banglish-documents",
+            "query": "SSC Certificate Issuance er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-ssc-certificate-en-procedure",
+            "query": "How do I apply for SSC Certificate Issuance?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-ssc-certificate-bn-procedure",
+            "query": "SSC সনদ প্রদান কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-ssc-certificate-en-fee",
+            "query": "What is the fee for SSC Certificate Issuance?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "education-ssc-certificate-en-url",
+            "query": "What is the official website for SSC Certificate Issuance?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-ssc-certificate-en-status",
+            "query": "How can I check the status of my SSC Certificate Issuance application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "education-ssc-certificate-en-unsupported",
+            "query": "What is the secret internal bypass code for SSC Certificate Issuance?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "education-ssc-certificate",
+        "profile_key": "EDUCATION",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "service_specific_sources": 4,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "tax-income-return-file",
+      "pilot_role": "high_risk",
+      "output_dir": "/workspace/data/research/deep-research-pilot/tax-income-return-file",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 7,
+        "verified_claims": 6,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "tax-income-return-file",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "tax-income-return-file-en-what",
+            "query": "What is Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "tax-income-return-file-bn-what",
+            "query": "আয়কর রিটার্ন দাখিল কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "tax-income-return-file-en-eligibility",
+            "query": "Who is eligible for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "tax-income-return-file-bn-eligibility",
+            "query": "আয়কর রিটার্ন দাখিল এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "tax-income-return-file-en-documents",
+            "query": "What documents do I need for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "tax-income-return-file-banglish-documents",
+            "query": "Income Tax Return Filing (e-Return) er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "tax-income-return-file-en-procedure",
+            "query": "How do I apply for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "tax-income-return-file-bn-procedure",
+            "query": "আয়কর রিটার্ন দাখিল কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "tax-income-return-file-en-fee",
+            "query": "What is the fee for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-return-file-en-url",
+            "query": "What is the official website for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "tax-income-return-file-en-status",
+            "query": "How can I check the status of my Income Tax Return Filing (e-Return) application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-return-file-en-unsupported",
+            "query": "What is the secret internal bypass code for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "tax-income-return-file",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 7,
+        "verified_claims": 6,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "fees": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "business-company-incorporation",
+      "pilot_role": "high_risk",
+      "output_dir": "/workspace/data/research/deep-research-pilot/business-company-incorporation",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "business-company-incorporation",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "business-company-incorporation-en-what",
+            "query": "What is Company Incorporation?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "business-company-incorporation-bn-what",
+            "query": "কোম্পানি নিবন্ধন কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "business-company-incorporation-en-eligibility",
+            "query": "Who is eligible for Company Incorporation?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "business-company-incorporation-bn-eligibility",
+            "query": "কোম্পানি নিবন্ধন এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "business-company-incorporation-en-documents",
+            "query": "What documents do I need for Company Incorporation?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "business-company-incorporation-banglish-documents",
+            "query": "Company Incorporation er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "business-company-incorporation-en-procedure",
+            "query": "How do I apply for Company Incorporation?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "business-company-incorporation-bn-procedure",
+            "query": "কোম্পানি নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "business-company-incorporation-en-fee",
+            "query": "What is the fee for Company Incorporation?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-company-incorporation-en-url",
+            "query": "What is the official website for Company Incorporation?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "business-company-incorporation-en-status",
+            "query": "How can I check the status of my Company Incorporation application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-company-incorporation-en-unsupported",
+            "query": "What is the secret internal bypass code for Company Incorporation?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-company-incorporation",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "service_specific_sources": 4,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "land-mutation-apply",
+      "pilot_role": "land",
+      "output_dir": "/workspace/data/research/deep-research-pilot/land-mutation-apply",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 7,
+        "verified_claims": 6,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "land-mutation-apply",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "land-mutation-apply-en-what",
+            "query": "What is Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-mutation-apply-bn-what",
+            "query": "নামজারি (মিউটেশন) কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-mutation-apply-en-eligibility",
+            "query": "Who is eligible for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-mutation-apply-bn-eligibility",
+            "query": "নামজারি (মিউটেশন) এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-mutation-apply-en-documents",
+            "query": "What documents do I need for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-mutation-apply-banglish-documents",
+            "query": "Land Mutation (Namjari) er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-mutation-apply-en-procedure",
+            "query": "How do I apply for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-mutation-apply-bn-procedure",
+            "query": "নামজারি (মিউটেশন) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-mutation-apply-en-fee",
+            "query": "What is the fee for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-apply-en-url",
+            "query": "What is the official website for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-mutation-apply-en-status",
+            "query": "How can I check the status of my Land Mutation (Namjari) application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-apply-en-unsupported",
+            "query": "What is the secret internal bypass code for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-mutation-apply",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 7,
+        "verified_claims": 6,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "fees": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "land-khatian-certified-copy",
+      "pilot_role": "land",
+      "output_dir": "/workspace/data/research/deep-research-pilot/land-khatian-certified-copy",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "land-khatian-certified-copy",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "land-khatian-certified-copy-en-what",
+            "query": "What is Certified Khatian Copy?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-khatian-certified-copy-bn-what",
+            "query": "সার্টিফাইড/সত্যায়িত খতিয়ান কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-khatian-certified-copy-en-eligibility",
+            "query": "Who is eligible for Certified Khatian Copy?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-khatian-certified-copy-bn-eligibility",
+            "query": "সার্টিফাইড/সত্যায়িত খতিয়ান এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-khatian-certified-copy-en-documents",
+            "query": "What documents do I need for Certified Khatian Copy?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-khatian-certified-copy-banglish-documents",
+            "query": "Certified Khatian Copy er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-khatian-certified-copy-en-procedure",
+            "query": "How do I apply for Certified Khatian Copy?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-khatian-certified-copy-bn-procedure",
+            "query": "সার্টিফাইড/সত্যায়িত খতিয়ান কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-khatian-certified-copy-en-fee",
+            "query": "What is the fee for Certified Khatian Copy?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-certified-copy-en-url",
+            "query": "What is the official website for Certified Khatian Copy?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "land-khatian-certified-copy-en-status",
+            "query": "How can I check the status of my Certified Khatian Copy application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-certified-copy-en-unsupported",
+            "query": "What is the secret internal bypass code for Certified Khatian Copy?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-khatian-certified-copy",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "service_specific_sources": 4,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "education-foreign-equivalency",
+      "pilot_role": "education",
+      "output_dir": "/workspace/data/research/deep-research-pilot/education-foreign-equivalency",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "education-foreign-equivalency",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "education-foreign-equivalency-en-what",
+            "query": "What is Foreign Qualification Equivalency?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-foreign-equivalency-bn-what",
+            "query": "বিদেশি ডিগ্রির সমতুল্যতা কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-foreign-equivalency-en-eligibility",
+            "query": "Who is eligible for Foreign Qualification Equivalency?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-foreign-equivalency-bn-eligibility",
+            "query": "বিদেশি ডিগ্রির সমতুল্যতা এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-foreign-equivalency-en-documents",
+            "query": "What documents do I need for Foreign Qualification Equivalency?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-foreign-equivalency-banglish-documents",
+            "query": "Foreign Qualification Equivalency er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-foreign-equivalency-en-procedure",
+            "query": "How do I apply for Foreign Qualification Equivalency?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-foreign-equivalency-bn-procedure",
+            "query": "বিদেশি ডিগ্রির সমতুল্যতা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-foreign-equivalency-en-fee",
+            "query": "What is the fee for Foreign Qualification Equivalency?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "education-foreign-equivalency-en-url",
+            "query": "What is the official website for Foreign Qualification Equivalency?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-foreign-equivalency-en-status",
+            "query": "How can I check the status of my Foreign Qualification Equivalency application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "education-foreign-equivalency-en-unsupported",
+            "query": "What is the secret internal bypass code for Foreign Qualification Equivalency?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "education-foreign-equivalency",
+        "profile_key": "EDUCATION",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "service_specific_sources": 4,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "education-duplicate-certificate",
+      "pilot_role": "education",
+      "output_dir": "/workspace/data/research/deep-research-pilot/education-duplicate-certificate",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "education-duplicate-certificate",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "education-duplicate-certificate-en-what",
+            "query": "What is Duplicate SSC/HSC Certificate or Transcript?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-duplicate-certificate-bn-what",
+            "query": "SSC/HSC সনদ/ট্রান্সক্রিপ্টের ডুপ্লিকেট কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-duplicate-certificate-en-eligibility",
+            "query": "Who is eligible for Duplicate SSC/HSC Certificate or Transcript?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-duplicate-certificate-bn-eligibility",
+            "query": "SSC/HSC সনদ/ট্রান্সক্রিপ্টের ডুপ্লিকেট এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-duplicate-certificate-en-documents",
+            "query": "What documents do I need for Duplicate SSC/HSC Certificate or Transcript?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-duplicate-certificate-banglish-documents",
+            "query": "Duplicate SSC/HSC Certificate or Transcript er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-duplicate-certificate-en-procedure",
+            "query": "How do I apply for Duplicate SSC/HSC Certificate or Transcript?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-duplicate-certificate-bn-procedure",
+            "query": "SSC/HSC সনদ/ট্রান্সক্রিপ্টের ডুপ্লিকেট কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-duplicate-certificate-en-fee",
+            "query": "What is the fee for Duplicate SSC/HSC Certificate or Transcript?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "education-duplicate-certificate-en-url",
+            "query": "What is the official website for Duplicate SSC/HSC Certificate or Transcript?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "education-duplicate-certificate-en-status",
+            "query": "How can I check the status of my Duplicate SSC/HSC Certificate or Transcript application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "education-duplicate-certificate-en-unsupported",
+            "query": "What is the secret internal bypass code for Duplicate SSC/HSC Certificate or Transcript?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "education-duplicate-certificate",
+        "profile_key": "EDUCATION",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "snp-old-age-allowance",
+      "pilot_role": "social_protection",
+      "output_dir": "/workspace/data/research/deep-research-pilot/snp-old-age-allowance",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 6,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "snp-old-age-allowance",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "snp-old-age-allowance-en-what",
+            "query": "What is Old Age Allowance?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "snp-old-age-allowance-bn-what",
+            "query": "Old Age Allowance কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "snp-old-age-allowance-en-eligibility",
+            "query": "Who is eligible for Old Age Allowance?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "snp-old-age-allowance-bn-eligibility",
+            "query": "Old Age Allowance এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "snp-old-age-allowance-en-documents",
+            "query": "What documents do I need for Old Age Allowance?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "snp-old-age-allowance-banglish-documents",
+            "query": "Old Age Allowance er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "snp-old-age-allowance-en-procedure",
+            "query": "How do I apply for Old Age Allowance?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "snp-old-age-allowance-bn-procedure",
+            "query": "Old Age Allowance কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "snp-old-age-allowance-en-fee",
+            "query": "What is the fee for Old Age Allowance?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "snp-old-age-allowance-en-url",
+            "query": "What is the official website for Old Age Allowance?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "snp-old-age-allowance-en-status",
+            "query": "How can I check the status of my Old Age Allowance application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "snp-old-age-allowance-en-unsupported",
+            "query": "What is the secret internal bypass code for Old Age Allowance?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "snp-old-age-allowance",
+        "profile_key": "SOCIAL_PROTECTION",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 6,
+        "service_specific_sources": 4,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "disability-dis-registration",
+      "pilot_role": "disability",
+      "output_dir": "/workspace/data/research/deep-research-pilot/disability-dis-registration",
+      "before": {
+        "meaningful_claims": 0,
+        "supported_answer_coverage": 0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 6,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "disability-dis-registration",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "disability-dis-registration-en-what",
+            "query": "What is Disability Registration and Identity Card (DIS)?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "disability-dis-registration-bn-what",
+            "query": "প্রতিবন্ধী নিবন্ধন ও পরিচয়পত্র (DIS) কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "disability-dis-registration-en-eligibility",
+            "query": "Who is eligible for Disability Registration and Identity Card (DIS)?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "disability-dis-registration-bn-eligibility",
+            "query": "প্রতিবন্ধী নিবন্ধন ও পরিচয়পত্র (DIS) এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "disability-dis-registration-en-documents",
+            "query": "What documents do I need for Disability Registration and Identity Card (DIS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "disability-dis-registration-banglish-documents",
+            "query": "Disability Registration and Identity Card (DIS) er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "disability-dis-registration-en-procedure",
+            "query": "How do I apply for Disability Registration and Identity Card (DIS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "disability-dis-registration-bn-procedure",
+            "query": "প্রতিবন্ধী নিবন্ধন ও পরিচয়পত্র (DIS) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "disability-dis-registration-en-fee",
+            "query": "What is the fee for Disability Registration and Identity Card (DIS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "disability-dis-registration-en-url",
+            "query": "What is the official website for Disability Registration and Identity Card (DIS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "disability-dis-registration-en-status",
+            "query": "How can I check the status of my Disability Registration and Identity Card (DIS) application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "disability-dis-registration-en-unsupported",
+            "query": "What is the secret internal bypass code for Disability Registration and Identity Card (DIS)?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "disability-dis-registration",
+        "profile_key": "DISABILITY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 6,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "health-bmdc-full-registration",
+      "pilot_role": "health",
+      "output_dir": "/workspace/data/research/deep-research-pilot/health-bmdc-full-registration",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "health-bmdc-full-registration",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "health-bmdc-full-registration-en-what",
+            "query": "What is BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "health-bmdc-full-registration-bn-what",
+            "query": "BMDC পূর্ণ নিবন্ধন (MBBS/BDS) কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "health-bmdc-full-registration-en-eligibility",
+            "query": "Who is eligible for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "health-bmdc-full-registration-bn-eligibility",
+            "query": "BMDC পূর্ণ নিবন্ধন (MBBS/BDS) এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "health-bmdc-full-registration-en-documents",
+            "query": "What documents do I need for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "health-bmdc-full-registration-banglish-documents",
+            "query": "BMDC Full Registration (MBBS/BDS) er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "health-bmdc-full-registration-en-procedure",
+            "query": "How do I apply for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "health-bmdc-full-registration-bn-procedure",
+            "query": "BMDC পূর্ণ নিবন্ধন (MBBS/BDS) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "health-bmdc-full-registration-en-fee",
+            "query": "What is the fee for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-full-registration-en-url",
+            "query": "What is the official website for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "health-bmdc-full-registration-en-status",
+            "query": "How can I check the status of my BMDC Full Registration (MBBS/BDS) application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-bmdc-full-registration-en-unsupported",
+            "query": "What is the secret internal bypass code for BMDC Full Registration (MBBS/BDS)?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-bmdc-full-registration",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 5,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    },
+    {
+      "service_id": "judiciary-supreme-court-e-filing",
+      "pilot_role": "judiciary",
+      "output_dir": "/workspace/data/research/deep-research-pilot/judiciary-supreme-court-e-filing",
+      "before": {
+        "meaningful_claims": 4,
+        "supported_answer_coverage": 0.0
+      },
+      "after": {
+        "meaningful_claims": 6,
+        "verified_claims": 6,
+        "supported_answer_coverage": 0.75,
+        "completeness_score": 0.9625,
+        "research_status": "RESEARCH_COMPLETE",
+        "missing_dimensions": []
+      },
+      "e2e": {
+        "service_id": "judiciary-supreme-court-e-filing",
+        "pilot": "deep-research",
+        "total": 12,
+        "answer_supported": 9,
+        "supported_answer_coverage": 0.75,
+        "correct_uncertainty": 2,
+        "correct_refusal": 1,
+        "product_failure": 0,
+        "outcomes": [
+          {
+            "id": "judiciary-supreme-court-e-filing-en-what",
+            "query": "What is Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-bn-what",
+            "query": "সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel) কী?",
+            "language": "bn",
+            "category": "identity",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-en-eligibility",
+            "query": "Who is eligible for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-bn-eligibility",
+            "query": "সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel) এর যোগ্যতা কী?",
+            "language": "bn",
+            "category": "eligibility",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-en-documents",
+            "query": "What documents do I need for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-banglish-documents",
+            "query": "Supreme Court e-Filing (Lawyers Panel) er jonno ki ki document lagbe?",
+            "language": "banglish",
+            "category": "documents",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-en-procedure",
+            "query": "How do I apply for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-bn-procedure",
+            "query": "সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-en-fee",
+            "query": "What is the fee for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-en-url",
+            "query": "What is the official website for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "ANSWER_SUPPORTED"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-en-status",
+            "query": "How can I check the status of my Supreme Court e-Filing (Lawyers Panel) application?",
+            "language": "en",
+            "category": "status",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-en-unsupported",
+            "query": "What is the secret internal bypass code for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "unsupported",
+            "outcome": "CORRECT_REFUSAL"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "judiciary-supreme-court-e-filing",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 0.9625,
+        "meaningful_claims": 6,
+        "verified_claims": 6,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "documents": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.1125,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      }
+    }
+  ],
+  "staging_path": "/workspace/data/research/deep-research-pilot/staging",
+  "runtime_validation": {
+    "db_path": "/workspace/backend/data/bda.db",
+    "exists": true,
+    "size_bytes": 3444736,
+    "tables": [
+      "alembic_version",
+      "users",
+      "roles",
+      "permissions",
+      "admin_users",
+      "divisions",
+      "feature_flags",
+      "model_registry",
+      "agencies",
+      "admin_user_roles",
+      "audit_logs",
+      "conversations",
+      "districts",
+      "evaluation_runs",
+      "refresh_tokens",
+      "role_permissions",
+      "sources",
+      "user_sessions",
+      "change_events",
+      "city_corporations",
+      "clarification_states",
+      "crawl_jobs",
+      "forms",
+      "geography_aliases",
+      "messages",
+      "municipalities",
+      "procedures",
+      "review_queue_items",
+      "service_links",
+      "service_offices",
+      "upazilas",
+      "checklist_conditions",
+      "crawl_attempts",
+      "feedback",
+      "knowledge_documents",
+      "message_feedback",
+      "unions",
+      "wards",
+      "knowledge_chunks",
+      "message_citations",
+      "claims",
+      "claim_evidence",
+      "knowledge_gaps",
+      "source_versions",
+      "fees",
+      "checklist_items",
+      "procedure_steps",
+      "services",
+      "service_catalogue_mappings",
+      "seed_replacements"
+    ],
+    "sample_claim_counts": {
+      "nid-new-voter-registration": 0,
+      "education-ssc-certificate": 0,
+      "tax-income-return-file": 0
+    },
+    "status": "RUNTIME_DB_ACCESSIBLE"
+  },
+  "regression": {
+    "regression_passed": true,
+    "regression_status": "SUCCESS",
+    "automation_backend_tests": true,
+    "automation_output_tail": [
+      "........................................................................ [ 50%]",
+      ".......................................................................  [100%]",
+      "143 passed in 3.45s"
+    ]
+  },
+  "aggregate": {
+    "avg_supported_coverage_before": 0.0,
+    "avg_supported_coverage_after": 0.75,
+    "avg_verified_claims_after": 5.5
+  }
+}

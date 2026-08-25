@@ -1,0 +1,122 @@
+{
+  "service_id": "business-company-incorporation",
+  "claims": [
+    {
+      "claim_id": "business-company-incorporation::c-catalogue-authority",
+      "service_id": "business-company-incorporation",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Registrar of Joint Stock Companies and Firms (RJSC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-official-url-documented",
+      "service_id": "business-company-incorporation",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://app.roc.gov.bd/Guidlines/Introduction.htm for Company Incorporation; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm"
+      },
+      "source_ids": [
+        "src-business-company-incorporation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-procedure-overview",
+      "service_id": "business-company-incorporation",
+      "claim_type": "procedure_step",
+      "claim_text": "Company incorporation is registered through the Registrar of Joint Stock Companies and Firms (RJSC) online portal with name clearance and document submission.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-company-incorporation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-document-overview",
+      "service_id": "business-company-incorporation",
+      "claim_type": "document",
+      "claim_text": "Memorandum and Articles of Association, director/partner identification, registered office address proof, and name clearance certificate are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-business-company-incorporation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-service-identity",
+      "service_id": "business-company-incorporation",
+      "claim_type": "eligibility",
+      "claim_text": "Company Incorporation (কোম্পানি নিবন্ধন) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-company-incorporation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-eligibility-deep",
+      "service_id": "business-company-incorporation",
+      "claim_type": "eligibility",
+      "claim_text": "Promoters forming a private/public company or entity type permitted under the Companies Act through RJSC.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "PARTIAL",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-company-incorporation-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-company-incorporation::c-document-must-need",
+      "service_id": "business-company-incorporation",
+      "claim_type": "document",
+      "claim_text": "Memorandum and Articles of Association, director/partner identification, registered office address proof, and name clearance certificate are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-company-incorporation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}
