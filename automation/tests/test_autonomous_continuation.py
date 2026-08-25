@@ -123,6 +123,40 @@ def test_d_e2e_to_regression(isolated_state, monkeypatch: pytest.MonkeyPatch) ->
     assert StateMachine(REPO).load().current_phase == "REGRESSION"
 
 
+def test_e2_continuous_regression_skips_stabilization(
+    isolated_state, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """In continuous mode, REGRESSION success completes batch (STABILIZATION skipped)."""
+    runner = PhaseRunner(REPO)
+    state = _state(
+        workflow_status=WorkflowStatus.AUTO_CONTINUE.value,
+        current_phase="REGRESSION",
+        continuous_mode=True,
+    )
+    result = PhaseResult.empty_success(
+        run_id="run-test123-regression",
+        batch_id="BATCH_03A",
+        phase="REGRESSION",
+        summary="regression ok",
+        recommended_next_phase="STABILIZATION",
+    )
+    monkeypatch.setattr(runner, "execute_current_phase", lambda s, b: result)
+    bm = BatchManager(REPO)
+    bm.mark_batch_status("BATCH_03B", "PLANNED")
+    monkeypatch.setattr(
+        runner.batch_manager,
+        "next_pending_batch",
+        lambda after=None: bm.get_batch("BATCH_03B"),
+    )
+    StateMachine(REPO).save(state)
+    runner.run_autonomous_step(state)
+    loaded = StateMachine(REPO).load()
+    assert loaded.last_completed_batch == "BATCH_03A"
+    assert loaded.current_batch == "BATCH_03B"
+    assert loaded.current_phase == "RESEARCH"
+    assert loaded.workflow_status == WorkflowStatus.READY.value
+
+
 def test_e_regression_completes_batch(isolated_state, monkeypatch: pytest.MonkeyPatch) -> None:
     runner = PhaseRunner(REPO)
     state = _state(workflow_status=WorkflowStatus.AUTO_CONTINUE.value, current_phase="REGRESSION")
@@ -159,6 +193,7 @@ def test_e2_regression_success_without_next_phase_completes_batch(
         recommended_next_phase="",
     )
     monkeypatch.setattr(runner, "execute_current_phase", lambda s, b: result)
+    monkeypatch.setattr(runner.batch_manager, "next_pending_batch", lambda _after=None: None)
     StateMachine(REPO).save(state)
     runner.run_autonomous_step(state)
     loaded = StateMachine(REPO).load()

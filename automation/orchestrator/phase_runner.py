@@ -409,7 +409,13 @@ class PhaseRunner:
             self.state_machine.save(state)
             return self.state_machine.transition(state, WorkflowStatus.GAP_CLOSURE)
 
-        if status == "SUCCESS" and not result.get("recommended_next_phase") and phase == WorkflowPhase.REGRESSION.value:
+        if status == "SUCCESS" and phase == WorkflowPhase.REGRESSION.value:
+            recommended_after_regression = result.get("recommended_next_phase") or ""
+            skip_stabilization = state.continuous_mode and recommended_after_regression in {"", "STABILIZATION"}
+            if not recommended_after_regression or skip_stabilization:
+                return self._complete_current_batch(state)
+
+        if status == "SUCCESS" and phase == WorkflowPhase.STABILIZATION.value and state.continuous_mode:
             return self._complete_current_batch(state)
 
         recommended = result.get("recommended_next_phase") or self._next_phase(phase)
@@ -429,7 +435,7 @@ class PhaseRunner:
         if batch_id:
             self.batch_manager.mark_batch_status(batch_id, "COMPLETE")
             state.last_completed_batch = batch_id
-        next_batch = self.batch_manager.next_ready_batch()
+        next_batch = self.batch_manager.next_pending_batch(state.last_completed_batch)
         if next_batch and batch_id:
             state.current_batch = next_batch["batch_id"]
             state.current_phase = WorkflowPhase.RESEARCH.value
@@ -488,9 +494,9 @@ class PhaseRunner:
 
         batch = self.batch_manager.get_batch(state.current_batch or "")
         if not batch:
-            batch = self.batch_manager.next_ready_batch()
+            batch = self.batch_manager.next_pending_batch(state.last_completed_batch)
             if not batch:
-                return {"status": "COMPLETE", "message": "No ready batches"}
+                return {"status": "COMPLETE", "message": "No pending batches"}
             state.current_batch = batch["batch_id"]
             state.current_phase = WorkflowPhase.RESEARCH.value
             self.batch_manager.mark_batch_status(batch["batch_id"], "IN_PROGRESS")

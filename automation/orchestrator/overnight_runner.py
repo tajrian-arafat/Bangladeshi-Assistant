@@ -21,6 +21,17 @@ from automation.schemas.state import WorkflowStatus
 class OvernightRunner:
     """Run the full RESEARCH→REGRESSION pipeline unattended until catalogue complete or global block."""
 
+    TERMINAL_STATUSES = frozenset(
+        {
+            "KNOWLEDGE_COMPLETE",
+            "KNOWLEDGE_COMPLETE_WITH_DEFERRED_ITEMS",
+            "BLOCKED_GLOBAL",
+            "EXECUTOR_UNAVAILABLE",
+            "STOPPED",
+            "PAUSED",
+        }
+    )
+
     def __init__(self, repo_root: Path) -> None:
         self.repo_root = repo_root
         self.state_machine = StateMachine(repo_root)
@@ -32,9 +43,15 @@ class OvernightRunner:
         self.escalation = EscalationManager(repo_root)
         self.status_path = repo_root / ".automation" / "overnight_status.json"
         self.final_state_path = repo_root / ".automation" / "final_project_state.json"
+        self.log_path = repo_root / ".automation" / "reports" / "overnight_run.log"
 
     def _now(self) -> str:
         return datetime.now(timezone.utc).isoformat()
+
+    def _append_log(self, message: str) -> None:
+        self.log_path.parent.mkdir(parents=True, exist_ok=True)
+        with self.log_path.open("a", encoding="utf-8") as handle:
+            handle.write(f"[{self._now()}] {message}\n")
 
     def _load_status(self) -> dict[str, Any]:
         if self.status_path.exists():
@@ -56,22 +73,16 @@ class OvernightRunner:
         blocked_batches = [b for b in batches if b.get("status") == "BLOCKED"]
 
         services_complete = sum(int(b.get("service_count") or 0) for b in completed_batches)
-        services_in_progress = sum(int(b.get("service_count") or 0) for b in in_progress)
         services_deferred = sum(int(b.get("service_count") or 0) for b in deferred_batches)
         services_blocked = sum(int(b.get("service_count") or 0) for b in blocked_batches)
         services_remaining = max(0, total_confirmed - services_complete - services_deferred)
 
-        researched = services_complete + services_in_progress
-        verified = services_complete
-        published = services_complete
-        partially_covered = services_in_progress
-
         return {
             "total_confirmed_services": total_confirmed,
-            "researched_services": researched,
-            "verified_services": verified,
-            "published_services": published,
-            "partially_covered_services": partially_covered,
+            "researched_services": services_complete + sum(int(b.get("service_count") or 0) for b in in_progress),
+            "verified_services": services_complete,
+            "published_services": services_complete,
+            "partially_covered_services": sum(int(b.get("service_count") or 0) for b in in_progress),
             "deferred_services": services_deferred,
             "blocked_services": services_blocked,
             "completed_services": services_complete,
@@ -79,6 +90,16 @@ class OvernightRunner:
             "completed_batches": len(completed_batches),
             "total_batches": len(batches),
         }
+
+    def all_confirmed_services_complete(self) -> bool:
+        progress = self.compute_catalogue_progress()
+        if progress["services_remaining"] > 0:
+            return False
+        queue = self.batch_manager.load_queue()
+        for batch in queue.get("batches", []):
+            if batch.get("status") in {"PLANNED", "IN_PROGRESS", "READY"}:
+                return False
+        return True
 
     def validate_preflight(self) -> tuple[bool, str]:
         lock = self.gates.assert_deployment_locked()
@@ -97,7 +118,7 @@ class OvernightRunner:
             state.retry_count = 0
             self.state_machine.transition(state, WorkflowStatus.READY)
 
-    def _handle_policy_block(self, decision, state) -> dict[str, Any]:
+    def _handle_policy_block(self, decision, state) -> dict[str, Any] | None:
         if decision.policy == EscalationPolicy.BLOCKED_GLOBAL:
             payload = self._build_status(state, global_blocked=True, reason=decision.reason)
             self._save_status(payload)
@@ -110,8 +131,7 @@ class OvernightRunner:
                 severity="MEDIUM",
                 recommended_action="Deferred human review — overnight run continued",
             )
-
-        return {}
+        return None
 
     def _build_status(
         self,
@@ -127,6 +147,7 @@ class OvernightRunner:
         cloud_fields = self.cloud.overnight_status_fields(None, last_error=reason if global_blocked else None)
         if cloud_handle:
             cloud_fields.update(cloud_handle)
+        deferred_items = len(list((self.repo_root / ".automation" / "decisions").glob("*.json")))
         return {
             "started_at": started_at or existing.get("started_at") or self._now(),
             "last_activity_at": self._now(),
@@ -137,6 +158,8 @@ class OvernightRunner:
             "workflow_status": state.workflow_status,
             "services_complete": progress["completed_services"],
             "services_remaining": progress["services_remaining"],
+            "batches_complete": progress["completed_batches"],
+            "deferred_items": deferred_items,
             "deferred_count": progress["deferred_services"],
             "global_blocked": global_blocked,
             "global_block_reason": reason,
@@ -145,27 +168,223 @@ class OvernightRunner:
             **cloud_fields,
         }
 
+    def _ensure_active_batch(self, state) -> bool:
+        """Ensure state points at the next pending batch; return False if catalogue is done."""
+        self.batch_manager.sync_completed_batches(state.idempotency_keys)
+        state = self.state_machine.load()
+
+        if state.current_batch:
+            batch = self.batch_manager.get_batch(state.current_batch)
+            regression_done = f"{state.current_batch}:REGRESSION:complete" in (state.idempotency_keys or [])
+            if batch and batch.get("status") == "COMPLETE":
+                return self._advance_to_next_batch(state)
+            if regression_done and state.continuous_mode:
+                self.batch_manager.mark_batch_status(state.current_batch, "COMPLETE")
+                state.last_completed_batch = state.current_batch
+                self.state_machine.save(state)
+                return self._advance_to_next_batch(state)
+            if batch and batch.get("status") != "COMPLETE":
+                if batch.get("status") == "PLANNED":
+                    self.batch_manager.mark_batch_status(state.current_batch, "IN_PROGRESS")
+                if state.current_phase == "STABILIZATION" and state.continuous_mode:
+                    state.current_phase = "REGRESSION"
+                    self.state_machine.save(state)
+                return True
+
+        if self._advance_to_next_batch(state):
+            return True
+
+        return not self.all_confirmed_services_complete()
+
     def _advance_to_next_batch(self, state) -> bool:
-        progress = self.compute_catalogue_progress()
-        if progress["services_remaining"] <= 0:
+        if self.all_confirmed_services_complete():
             return False
-        next_batch = self.batch_manager.next_pending_batch()
+        next_batch = self.batch_manager.next_pending_batch(state.last_completed_batch)
         if not next_batch:
             return False
         state.current_batch = next_batch["batch_id"]
         state.current_phase = "RESEARCH"
         state.current_run_id = None
         state.retry_count = 0
+        state.pending_escalations = []
         self.batch_manager.mark_batch_status(next_batch["batch_id"], "IN_PROGRESS")
-        self.state_machine.transition(state, WorkflowStatus.READY)
+        if state.workflow_status != WorkflowStatus.READY.value:
+            self.state_machine.transition(state, WorkflowStatus.READY)
+        else:
+            self.state_machine.save(state)
+        self._append_log(f"Advanced to {next_batch['batch_id']} RESEARCH")
         return True
 
-    def run(
+    def _resolve_step_outcome(self, state, report: dict[str, Any]) -> dict[str, Any] | None:
+        """Apply policy to a step outcome. Returns terminal payload only for global blocks."""
+        status = report.get("status")
+        phase = state.current_phase or report.get("phase") or ""
+
+        if status == WorkflowStatus.SUPERVISOR_REVIEW.value:
+            decision = self.policy.evaluate_phase_outcome(
+                phase=phase,
+                result={
+                    "summary": report.get("summary") or "",
+                    "status": report.get("result_status") or "",
+                    "regressions": 1,
+                },
+                workflow_status=status,
+                retry_count=state.retry_count,
+            )
+            terminal = self._handle_policy_block(decision, state)
+            if terminal:
+                return terminal
+            if decision.continue_workflow:
+                self._recover_supervisor_review(state)
+            return None
+
+        if status == WorkflowStatus.HUMAN_APPROVAL_REQUIRED.value:
+            decision = self.policy.evaluate_phase_outcome(
+                phase=phase,
+                result={"summary": report.get("summary") or "", "requires_escalation": True},
+                workflow_status=status,
+                retry_count=state.retry_count,
+            )
+            terminal = self._handle_policy_block(decision, state)
+            if terminal:
+                return terminal
+            if decision.continue_workflow:
+                state = self.state_machine.load()
+                state.pending_escalations = []
+                if state.current_phase == "PUBLICATION":
+                    state.current_phase = "E2E"
+                self.state_machine.transition(state, WorkflowStatus.RUNNING)
+            return None
+
+        if status == WorkflowStatus.BLOCKED.value:
+            decision = self.policy.evaluate_phase_outcome(
+                phase=phase,
+                result={
+                    "summary": report.get("summary") or "",
+                    "status": "BLOCKED",
+                    "hallucinations": 0,
+                    "regressions": 1,
+                },
+                workflow_status=status,
+                retry_count=state.retry_count,
+            )
+            terminal = self._handle_policy_block(decision, state)
+            if terminal:
+                return terminal
+            if decision.continue_workflow:
+                state = self.state_machine.load()
+                state.retry_count = 0
+                self.state_machine.transition(state, WorkflowStatus.READY)
+            return None
+
+        if report.get("result_status") == "PARTIAL":
+            summary = (report.get("summary") or "").lower()
+            if "executor_unavailable" in summary or "executor unavailable" in summary:
+                if state.retry_count >= 3:
+                    payload = self._build_status(state, global_blocked=True, reason=report.get("summary", ""))
+                    self._save_status(payload)
+                    return {"status": "EXECUTOR_UNAVAILABLE", "reason": report.get("summary"), "overnight_status": payload}
+                state.retry_count += 1
+                self.state_machine.save(state)
+            return None
+
+        return None
+
+    def _should_continue_after_step(self, state, report: dict[str, Any]) -> bool:
+        state = self.state_machine.load()
+        if state.workflow_status in {WorkflowStatus.PAUSED.value, WorkflowStatus.STOPPED.value}:
+            return False
+
+        if state.workflow_status == WorkflowStatus.COMPLETE.value and not state.current_batch:
+            return self._advance_to_next_batch(state)
+
+        if report.get("result_status") == "PARTIAL":
+            return True
+
+        return state.workflow_status in {
+            WorkflowStatus.AUTO_CONTINUE.value,
+            WorkflowStatus.RUNNING.value,
+            WorkflowStatus.READY.value,
+            WorkflowStatus.RETRY.value,
+            WorkflowStatus.GAP_CLOSURE.value,
+            WorkflowStatus.WAITING_FOR_RESULT.value,
+            WorkflowStatus.VALIDATING_RESULT.value,
+        }
+
+    def run_final_global_audit(self) -> dict[str, Any]:
+        progress = self.compute_catalogue_progress()
+        state = self.state_machine.load()
+        audit_path = self.repo_root / "docs" / "evaluation" / "FINAL_KNOWLEDGE_CONSTRUCTION_AUDIT.md"
+        audit_path.parent.mkdir(parents=True, exist_ok=True)
+        audit_path.write_text(
+            f"# Final Knowledge Construction Audit\n\n"
+            f"Generated: {self._now()}\n\n"
+            f"## Catalogue Coverage\n\n"
+            f"- Total confirmed services: {progress['total_confirmed_services']}\n"
+            f"- Completed services: {progress['completed_services']}\n"
+            f"- Remaining services: {progress['services_remaining']}\n"
+            f"- Deferred services: {progress['deferred_services']}\n"
+            f"- Completed batches: {progress['completed_batches']} / {progress['total_batches']}\n\n"
+            f"## Safety\n\n"
+            f"- Deployment locked: {not self.gates.read_deployment_lock() is False}\n"
+            f"- deployment_allowed: false\n"
+            f"- Mode: LOCAL_DEV_ONLY\n\n"
+            f"## Last Completed Batch\n\n"
+            f"{state.last_completed_batch or 'none'}\n",
+            encoding="utf-8",
+        )
+        return {"audit_path": str(audit_path), "progress": progress}
+
+    def _finalize_terminal(
         self,
         *,
-        max_steps: int = 500,
+        started_at: str,
+        status_label: str,
+        ticks: list[dict[str, Any]],
+        total_steps: int,
+        global_blocked: bool = False,
+        block_reason: str = "",
+    ) -> dict[str, Any]:
+        state = self.state_machine.load()
+        progress = self.compute_catalogue_progress()
+        overnight_status = self._build_status(
+            state,
+            started_at=started_at,
+            global_blocked=global_blocked,
+            reason=block_reason,
+        )
+        self._save_status(overnight_status)
+
+        final_payload = {
+            "status": status_label,
+            "updated_at": self._now(),
+            "deployment_allowed": False,
+            "catalogue_progress": progress,
+            "last_completed_batch": state.last_completed_batch,
+            "current_batch": state.current_batch,
+            "workflow_status": state.workflow_status,
+            "overnight_ticks": len(ticks),
+            "total_autonomous_steps": total_steps,
+        }
+        self.final_state_path.write_text(json.dumps(final_payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        write_report(self.repo_root, "overnight_summary.json", {"ticks": ticks, "final": final_payload})
+        self._append_log(f"Terminal: {status_label}")
+        return {
+            "status": status_label,
+            "ticks": len(ticks),
+            "total_steps": total_steps,
+            "global_blocked": global_blocked,
+            "catalogue_progress": progress,
+            "overnight_status": overnight_status,
+        }
+
+    def run_until_terminal(
+        self,
+        *,
+        max_ticks: int | None = None,
         steps_per_tick: int = 25,
     ) -> dict[str, Any]:
+        """Long-running autonomous loop — continues across batches until terminal condition."""
         ok, msg = self.validate_preflight()
         if not ok:
             payload = {
@@ -181,175 +400,136 @@ class OvernightRunner:
         state = self.state_machine.load()
         state.continuous_mode = True
         state.pilot_mode = False
-        if state.current_batch:
-            self.batch_manager.mark_batch_status(state.current_batch, "IN_PROGRESS")
         self.state_machine.save(state)
+        self._ensure_active_batch(state)
 
         started_at = self._now()
+        self._append_log("Overnight run_until_terminal started")
         ticks: list[dict[str, Any]] = []
         total_steps = 0
-        global_blocked = False
-        block_reason = ""
+        tick = 0
 
-        for tick in range(max_steps):
-            state = self.state_machine.load()
-            self._recover_supervisor_review(state)
+        while max_ticks is None or tick < max_ticks:
             state = self.state_machine.load()
 
             if state.workflow_status in {WorkflowStatus.PAUSED.value, WorkflowStatus.STOPPED.value}:
+                label = "PAUSED" if state.workflow_status == WorkflowStatus.PAUSED.value else "STOPPED"
+                return self._finalize_terminal(
+                    started_at=started_at,
+                    status_label=label,
+                    ticks=ticks,
+                    total_steps=total_steps,
+                )
+
+            if self.all_confirmed_services_complete():
+                self.run_final_global_audit()
+                progress = self.compute_catalogue_progress()
+                label = (
+                    "KNOWLEDGE_COMPLETE"
+                    if progress["deferred_services"] == 0
+                    else "KNOWLEDGE_COMPLETE_WITH_DEFERRED_ITEMS"
+                )
+                return self._finalize_terminal(
+                    started_at=started_at,
+                    status_label=label,
+                    ticks=ticks,
+                    total_steps=total_steps,
+                )
+
+            if not self._ensure_active_batch(state):
+                if self.all_confirmed_services_complete():
+                    self.run_final_global_audit()
+                    return self._finalize_terminal(
+                        started_at=started_at,
+                        status_label="KNOWLEDGE_COMPLETE",
+                        ticks=ticks,
+                        total_steps=total_steps,
+                    )
                 break
 
-            progress = self.compute_catalogue_progress()
-            if (
-                state.workflow_status == WorkflowStatus.COMPLETE.value
-                and not state.current_batch
-                and progress["services_remaining"] > 0
-            ):
-                if self._advance_to_next_batch(state):
-                    state = self.state_machine.load()
-                else:
-                    break
-
-            if progress["services_remaining"] == 0 and progress["deferred_services"] == 0:
-                if state.workflow_status == WorkflowStatus.COMPLETE.value and not state.current_batch:
-                    break
-
-            summary = self.runner.run_autonomous_loop(state, max_steps=steps_per_tick)
-            total_steps += int(summary.get("steps") or 0)
-            ticks.append(summary)
             state = self.state_machine.load()
+            self._recover_supervisor_review(state)
+            batch_before = state.current_batch
+            phase_before = state.current_phase
 
-            last = summary.get("last") or {}
-            final_status = summary.get("final_status")
-
-            if final_status == WorkflowStatus.SUPERVISOR_REVIEW.value:
-                decision = self.policy.evaluate_phase_outcome(
-                    phase=state.current_phase or "",
-                    result={
-                        "summary": last.get("summary") or "",
-                        "status": last.get("result_status") or "",
-                        "regressions": 1,
-                    },
-                    workflow_status=final_status,
-                    retry_count=state.retry_count,
-                )
-                handled = self._handle_policy_block(decision, state)
-                if handled:
-                    return handled
-                if decision.continue_workflow:
-                    self._recover_supervisor_review(state)
-                    continue
-
-            if final_status == WorkflowStatus.HUMAN_APPROVAL_REQUIRED.value:
-                decision = self.policy.evaluate_phase_outcome(
-                    phase=state.current_phase or "",
-                    result={"summary": last.get("summary") or "", "requires_escalation": True},
-                    workflow_status=final_status,
-                    retry_count=state.retry_count,
-                )
-                handled = self._handle_policy_block(decision, state)
-                if handled:
-                    return handled
-                if decision.continue_workflow:
-                    state.pending_escalations = []
-                    if state.workflow_status == WorkflowStatus.HUMAN_APPROVAL_REQUIRED.value:
-                        if state.current_phase == "PUBLICATION":
-                            state.current_phase = "E2E"
-                        self.state_machine.transition(state, WorkflowStatus.RUNNING)
-                    else:
-                        self.state_machine.transition(state, WorkflowStatus.READY)
-                    continue
-                break
-
-            if final_status == WorkflowStatus.BLOCKED.value:
-                decision = self.policy.evaluate_phase_outcome(
-                    phase=state.current_phase or "",
-                    result={
-                        "summary": last.get("summary") or "",
-                        "status": "BLOCKED",
-                        "hallucinations": 0,
-                        "regressions": 1,
-                    },
-                    workflow_status=final_status,
-                    retry_count=state.retry_count,
-                )
-                handled = self._handle_policy_block(decision, state)
-                if handled:
-                    return handled
-                if decision.continue_workflow:
-                    state.retry_count = 0
-                    self.state_machine.transition(state, WorkflowStatus.READY)
-                    continue
-                global_blocked = True
-                block_reason = decision.reason
-                break
-
-            if final_status == WorkflowStatus.COMPLETE.value and not state.current_batch:
-                break
-
-            if final_status in {WorkflowStatus.COMPLETE.value} and state.current_batch:
-                next_batch = self.batch_manager.next_ready_batch()
-                if next_batch:
-                    state.current_batch = next_batch["batch_id"]
-                    state.current_phase = "RESEARCH"
-                    state.current_run_id = None
-                    state.retry_count = 0
-                    self.batch_manager.mark_batch_status(next_batch["batch_id"], "IN_PROGRESS")
-                    self.state_machine.transition(state, WorkflowStatus.READY)
-                    continue
-
-            status_payload = self._build_status(state, started_at=started_at)
-            self._save_status(status_payload)
-
-            if final_status not in {
-                WorkflowStatus.AUTO_CONTINUE.value,
-                WorkflowStatus.RUNNING.value,
-                WorkflowStatus.READY.value,
-                WorkflowStatus.COMPLETE.value,
-            }:
-                if final_status != WorkflowStatus.SUPERVISOR_REVIEW.value:
+            tick_steps: list[dict[str, Any]] = []
+            for _ in range(steps_per_tick):
+                state = self.state_machine.load()
+                if state.workflow_status in {WorkflowStatus.PAUSED.value, WorkflowStatus.STOPPED.value}:
                     break
+
+                report = self.runner.run_autonomous_step(state)
+                tick_steps.append(report)
+                total_steps += 1
+
+                terminal = self._resolve_step_outcome(self.state_machine.load(), report)
+                if terminal:
+                    return terminal
+
+                state = self.state_machine.load()
+                self._save_status(self._build_status(state, started_at=started_at))
+                self._append_log(
+                    f"step {state.current_batch}:{state.current_phase} "
+                    f"status={report.get('status')} result={report.get('result_status')}"
+                )
+
+                if not self._should_continue_after_step(state, report):
+                    break
+
+                state = self.state_machine.load()
+                if state.workflow_status == WorkflowStatus.COMPLETE.value and not state.current_batch:
+                    if self._advance_to_next_batch(state):
+                        break
+
+            state = self.state_machine.load()
+            tick_summary = {
+                "tick": tick,
+                "batch_before": batch_before,
+                "batch_after": state.current_batch,
+                "phase_before": phase_before,
+                "phase_after": state.current_phase,
+                "steps": len(tick_steps),
+                "last": tick_steps[-1] if tick_steps else None,
+                "workflow_status": state.workflow_status,
+            }
+            ticks.append(tick_summary)
+            write_report(self.repo_root, "overnight_summary.json", {"ticks": ticks, "last_tick": tick_summary})
+
+            if batch_before and state.current_batch and batch_before != state.current_batch:
+                self._append_log(f"Batch transition {batch_before} -> {state.current_batch}")
+
+            if self.all_confirmed_services_complete():
+                self.run_final_global_audit()
+                progress = self.compute_catalogue_progress()
+                label = (
+                    "KNOWLEDGE_COMPLETE"
+                    if progress["deferred_services"] == 0
+                    else "KNOWLEDGE_COMPLETE_WITH_DEFERRED_ITEMS"
+                )
+                return self._finalize_terminal(
+                    started_at=started_at,
+                    status_label=label,
+                    ticks=ticks,
+                    total_steps=total_steps,
+                )
+
+            tick += 1
 
         state = self.state_machine.load()
         progress = self.compute_catalogue_progress()
-        overnight_status = self._build_status(
-            state,
+        label = "IN_PROGRESS" if progress["services_remaining"] > 0 else "KNOWLEDGE_COMPLETE"
+        return self._finalize_terminal(
             started_at=started_at,
-            global_blocked=global_blocked,
-            reason=block_reason,
-        )
-        self._save_status(overnight_status)
-
-        project_complete = progress["services_remaining"] == 0
-        final_status_label = (
-            "KNOWLEDGE_COMPLETE"
-            if project_complete and progress["deferred_services"] == 0
-            else "KNOWLEDGE_COMPLETE_WITH_DEFERRED_ITEMS"
-            if project_complete
-            else "IN_PROGRESS"
-            if not global_blocked
-            else "BLOCKED_GLOBAL"
+            status_label=label,
+            ticks=ticks,
+            total_steps=total_steps,
         )
 
-        final_payload = {
-            "status": final_status_label,
-            "updated_at": self._now(),
-            "deployment_allowed": False,
-            "catalogue_progress": progress,
-            "last_completed_batch": state.last_completed_batch,
-            "current_batch": state.current_batch,
-            "workflow_status": state.workflow_status,
-            "overnight_ticks": len(ticks),
-            "total_autonomous_steps": total_steps,
-        }
-        self.final_state_path.write_text(json.dumps(final_payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        write_report(self.repo_root, "overnight_summary.json", {"ticks": ticks, "final": final_payload})
-
-        return {
-            "status": final_status_label,
-            "ticks": len(ticks),
-            "total_steps": total_steps,
-            "global_blocked": global_blocked,
-            "catalogue_progress": progress,
-            "overnight_status": overnight_status,
-        }
+    def run(
+        self,
+        *,
+        max_ticks: int | None = None,
+        steps_per_tick: int = 25,
+    ) -> dict[str, Any]:
+        """Backward-compatible entry — delegates to run_until_terminal."""
+        return self.run_until_terminal(max_ticks=max_ticks, steps_per_tick=steps_per_tick)

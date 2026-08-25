@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from automation.orchestrator.phase_completion import batch_slug, raw_research_dir
+from automation.orchestrator.staging_builder import StagingBuilder
 
 
 class GapClosureBuilder:

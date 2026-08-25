@@ -285,12 +285,42 @@ class BatchManager:
                 return batch
         return None
 
-    def next_pending_batch(self) -> dict[str, Any] | None:
+    def next_pending_batch(self, after_batch_id: str | None = None) -> dict[str, Any] | None:
+        """Return the next non-complete batch after *after_batch_id* (no wrap-around)."""
         queue = self.load_queue()
-        for batch in queue.get("batches", []):
-            if batch.get("status") in {"READY", "PLANNED", "IN_PROGRESS"}:
+        batches = queue.get("batches", [])
+        pending_statuses = {"READY", "PLANNED", "IN_PROGRESS"}
+        start_idx = 0
+        if after_batch_id:
+            for idx, batch in enumerate(batches):
+                if batch["batch_id"] == after_batch_id:
+                    start_idx = idx + 1
+                    break
+        for batch in batches[start_idx:]:
+            if batch.get("status") in pending_statuses:
                 return batch
         return None
+
+    def sync_completed_batches(self, idempotency_keys: list[str] | None) -> list[str]:
+        """Mark batches COMPLETE when REGRESSION idempotency key exists; return updated batch ids."""
+        keys = idempotency_keys or []
+        updated: list[str] = []
+        queue = self.load_queue()
+        for batch in queue.get("batches", []):
+            batch_id = batch["batch_id"]
+            regression_key = f"{batch_id}:REGRESSION:complete"
+            if regression_key in keys and batch.get("status") != "COMPLETE":
+                batch["status"] = "COMPLETE"
+                completed = list(batch.get("phases_completed") or [])
+                for phase in ("RESEARCH", "VERIFICATION", "GAP_CLOSURE", "PUBLICATION", "E2E", "REGRESSION"):
+                    if phase not in completed and f"{batch_id}:{phase}:complete" in keys:
+                        completed.append(phase)
+                batch["phases_completed"] = completed
+                updated.append(batch_id)
+        if updated:
+            queue["updated_at"] = datetime.now(timezone.utc).isoformat()
+            self.queue_path.write_text(json.dumps(queue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        return updated
 
     def mark_batch_status(self, batch_id: str, status: str) -> None:
         queue = self.load_queue()

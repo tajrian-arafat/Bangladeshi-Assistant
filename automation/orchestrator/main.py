@@ -243,7 +243,7 @@ def cmd_overnight(args: argparse.Namespace) -> int:
     if not sm.state_path.exists():
         cmd_init(args)
     runner = OvernightRunner(REPO_ROOT)
-    summary = runner.run(max_steps=args.max_ticks, steps_per_tick=args.steps_per_tick)
+    summary = runner.run(max_ticks=args.max_ticks, steps_per_tick=args.steps_per_tick)
     print(json.dumps(summary, indent=2))
     if summary.get("status") == "BLOCKED_GLOBAL":
         return 1
@@ -305,7 +305,12 @@ def main(argv: list[str] | None = None) -> int:
     daemon.add_argument("--interval", type=int, default=60, help="Sleep seconds between ticks")
 
     overnight = sub.add_parser("overnight", help="Unattended overnight knowledge-construction loop")
-    overnight.add_argument("--max-ticks", type=int, default=500, help="Maximum outer loop ticks")
+    overnight.add_argument(
+        "--max-ticks",
+        type=int,
+        default=None,
+        help="Maximum outer loop ticks (default: unbounded until terminal state)",
+    )
     overnight.add_argument("--steps-per-tick", type=int, default=25, help="Autonomous steps per tick")
 
     args = parser.parse_args(argv)
