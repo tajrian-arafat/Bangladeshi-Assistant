@@ -1,0 +1,187 @@
+{
+  "service_id": "local-holding-tax-payment",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Local Government Holding Tax Payment",
+  "service_name_bn": "স্থানীয় সরকার হোল্ডিং ট্যাক্স পরিশোধ",
+  "aliases": [
+    "holding tax",
+    "হোল্ডিং ট্যাক্স",
+    "municipal holding tax",
+    "city corporation holding tax",
+    "DNCC holding tax payment",
+    "DNCC tax",
+    "Dhaka North City Corporation Holding Tax",
+    "local-dncc-holding-tax",
+    "DSCC holding tax payment",
+    "Dhaka South City Corporation Holding Tax",
+    "local-dscc-holding-tax",
+    "CCC holding tax",
+    "Amader Chattogram holding tax",
+    "Chattogram City Corporation Holding Tax Payment",
+    "local-ccc-holding-tax",
+    "pourashava holding tax",
+    "Municipality (Pourashava) Holding Tax",
+    "local-pourashava-holding-tax"
+  ],
+  "category_id": "local_government",
+  "profile_key": "LOCAL_GOVERNMENT",
+  "responsible_agency": "City Corporation / Municipality / Pourashava",
+  "official_application_url": "https://dncc.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "local-holding-tax-payment::c-catalogue-authority",
+      "service_id": "local-holding-tax-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: City Corporation / Municipality / Pourashava.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-holding-tax-payment::c-official-url-documented",
+      "service_id": "local-holding-tax-payment",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://dncc.gov.bd/ for Local Government Holding Tax Payment; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dncc.gov.bd/"
+      },
+      "source_ids": [
+        "src-local-holding-tax-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-holding-tax-payment::c-procedure-overview",
+      "service_id": "local-holding-tax-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "Local Government Holding Tax Payment is a government service under City Corporation / Municipality / Pourashava (holding tax). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-holding-tax-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-holding-tax-payment::c-service-identity",
+      "service_id": "local-holding-tax-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Local Government Holding Tax Payment (স্থানীয় সরকার হোল্ডিং ট্যাক্স পরিশোধ) is a confirmed government service in category local_government, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-holding-tax-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-local-holding-tax-payment-official",
+      "service_id": "local-holding-tax-payment",
+      "url": "https://dncc.gov.bd/",
+      "title": "Local Government Holding Tax Payment",
+      "authority_id": "local-government-institutions",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dncc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:28:20.198620+00:00"
+      },
+      "evidence_locator": "probe:https://dncc.gov.bd/"
+    },
+    {
+      "source_id": "src-local-holding-tax-payment-alt-1",
+      "service_id": "local-holding-tax-payment",
+      "url": "https://dscc.gov.bd/",
+      "title": "Local Government Holding Tax Payment",
+      "authority_id": "local-government-institutions",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dscc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:28:20.747827+00:00"
+      }
+    },
+    {
+      "source_id": "src-local-holding-tax-payment-alt-2",
+      "service_id": "local-holding-tax-payment",
+      "url": "https://www.tbsnews.net/bangladesh/chattogram-city-corporation-launches-app-one-stop-citizen-services-1491636",
+      "title": "Chattogram City Corporation launches app for one-stop citizen services | The Business Standard",
+      "authority_id": "local-government-institutions",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.tbsnews.net/bangladesh/chattogram-city-corporation-launches-app-one-stop-citizen-services-1491636",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Chattogram City Corporation launches app for one-stop citizen services | The Business Standard",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "f2acdea0345a5b08",
+        "retrieved_at": "2026-08-25T03:28:22.659256+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-local-holding-tax-payment-portal-unreachable",
+      "service_id": "local-holding-tax-payment",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Local Government Holding Tax Payment.",
+      "severity": "MEDIUM",
+      "url": "https://dncc.gov.bd/"
+    },
+    {
+      "gap_id": "gap-local-holding-tax-payment-fee-unverified",
+      "service_id": "local-holding-tax-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Local Government Holding Tax Payment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-holding-tax-payment-documents-unverified",
+      "service_id": "local-holding-tax-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Local Government Holding Tax Payment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

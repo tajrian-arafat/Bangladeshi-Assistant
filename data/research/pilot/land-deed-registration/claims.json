@@ -1,0 +1,88 @@
+{
+  "service_id": "land-deed-registration",
+  "claims": [
+    {
+      "claim_id": "land-deed-registration::c-catalogue-authority",
+      "service_id": "land-deed-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Registration (Ministry of Law).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-official-url-documented",
+      "service_id": "land-deed-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.land.gov.bd/poripotro for Deed Registration (Sub-Registry); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.land.gov.bd/poripotro"
+      },
+      "source_ids": [
+        "src-land-deed-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-procedure-overview",
+      "service_id": "land-deed-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Deed registration is processed at the Sub-Registry Office under the Department of Registration (Ministry of Law).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-deed-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-document-overview",
+      "service_id": "land-deed-registration",
+      "claim_type": "document",
+      "claim_text": "Registered deed, identity documents of parties, and stamp duty payment evidence are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-land-deed-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-service-identity",
+      "service_id": "land-deed-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Deed Registration (Sub-Registry) (দলিল/দলিল রেজিস্ট্রেশন) is a confirmed government service in category land, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-deed-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

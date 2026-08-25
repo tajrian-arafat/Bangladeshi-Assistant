@@ -1,0 +1,72 @@
+{
+  "service_id": "env-ecc-entrepreneur-registration",
+  "claims": [
+    {
+      "claim_id": "env-ecc-entrepreneur-registration::c-catalogue-authority",
+      "service_id": "env-ecc-entrepreneur-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Environment (DoE).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "env-ecc-entrepreneur-registration::c-official-portal",
+      "service_id": "env-ecc-entrepreneur-registration",
+      "claim_type": "application_url",
+      "claim_text": "DoE ECC Entrepreneur Registration official information is published at https://ecc-beta.doe.gov.bd/register (page title: DoE ECC System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ecc-beta.doe.gov.bd/register"
+      },
+      "source_ids": [
+        "src-env-ecc-entrepreneur-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-env-ecc-entrepreneur-registration::c-official-portal-src-env-ecc-entrepreneur-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "env-ecc-entrepreneur-registration::c-procedure-overview",
+      "service_id": "env-ecc-entrepreneur-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "DoE ECC Entrepreneur Registration is a government service under Department of Environment (DoE) (registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-env-ecc-entrepreneur-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "env-ecc-entrepreneur-registration::c-service-identity",
+      "service_id": "env-ecc-entrepreneur-registration",
+      "claim_type": "eligibility",
+      "claim_text": "DoE ECC Entrepreneur Registration (DoE ECC উদ্যোক্তা নিবন্ধন) is a confirmed government service in category environment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-env-ecc-entrepreneur-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

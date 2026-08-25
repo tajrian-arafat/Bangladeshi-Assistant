@@ -1,0 +1,45 @@
+{
+  "service_id": "nid-reissue-lost",
+  "batch_id": "batch-14-remaining",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "NID Reissue for Lost or Damaged Card",
+  "service_name_bn": "হারানো/নষ্ট এনআইডি পুনর্মুদ্রণ (রিইস্যু)",
+  "aliases": [
+    "duplicate NID",
+    "lost voter ID",
+    "NID reprint"
+  ],
+  "category_id": "identity",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "nid-reissue-lost::c-application-portal",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "application_url",
+      "claim_text": "NID Reissue for Lost or Damaged Card is associated with NBR e-service portal https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-nid-reissue-lost",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-responsible-authority",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Election Commission (NID Wing).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

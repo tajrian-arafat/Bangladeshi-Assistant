@@ -1,0 +1,20 @@
+{
+  "service_id": "snp-char-development-and-settlement",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-snp-char-development-and-settlement-fee-unverified",
+      "service_id": "snp-char-development-and-settlement",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Char Development and Settlement.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-char-development-and-settlement-documents-unverified",
+      "service_id": "snp-char-development-and-settlement",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Char Development and Settlement.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

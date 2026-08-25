@@ -1,0 +1,72 @@
+{
+  "service_id": "customs-bond-up-application",
+  "claims": [
+    {
+      "claim_id": "customs-bond-up-application::c-catalogue-authority",
+      "service_id": "customs-bond-up-application",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue - Customs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-bond-up-application::c-official-portal",
+      "service_id": "customs-bond-up-application",
+      "claim_type": "application_url",
+      "claim_text": "Customs Bond Utilization Permit (UP) Application official information is published at https://nbr.gov.bd/all-eservices/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/all-eservices/eng"
+      },
+      "source_ids": [
+        "src-customs-bond-up-application-official"
+      ],
+      "evidence_ids": [
+        "ev-customs-bond-up-application::c-official-portal-src-customs-bond-up-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-bond-up-application::c-procedure-overview",
+      "service_id": "customs-bond-up-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Customs Bond Utilization Permit (UP) Application is a government service under National Board of Revenue - Customs (bond). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-customs-bond-up-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-bond-up-application::c-service-identity",
+      "service_id": "customs-bond-up-application",
+      "claim_type": "eligibility",
+      "claim_text": "Customs Bond Utilization Permit (UP) Application (বন্ড ইউটিলাইজেশন পারমিট (UP)) is a confirmed government service in category customs, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-customs-bond-up-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "bida-work-permit-security-clearance",
+  "claims": [
+    {
+      "claim_id": "bida-work-permit-security-clearance::c-catalogue-authority",
+      "service_id": "bida-work-permit-security-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Investment Development Authority (BIDA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-work-permit-security-clearance::c-official-portal",
+      "service_id": "bida-work-permit-security-clearance",
+      "claim_type": "application_url",
+      "claim_text": "BIDA Work Permit Security Clearance (Online) official information is published at https://bida.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital (page title: Invest Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bida.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital"
+      },
+      "source_ids": [
+        "src-bida-work-permit-security-clearance-official"
+      ],
+      "evidence_ids": [
+        "ev-bida-work-permit-security-clearance::c-official-portal-src-bida-work-permit-security-clearance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-work-permit-security-clearance::c-procedure-overview",
+      "service_id": "bida-work-permit-security-clearance",
+      "claim_type": "procedure_step",
+      "claim_text": "BIDA Work Permit Security Clearance (Online) is a government service under Bangladesh Investment Development Authority (BIDA) (work permit). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-work-permit-security-clearance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-work-permit-security-clearance::c-service-identity",
+      "service_id": "bida-work-permit-security-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "BIDA Work Permit Security Clearance (Online) (BIDA ওয়ার্ক পারমিট Security Clearance) is a confirmed government service in category investment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-work-permit-security-clearance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

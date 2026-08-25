@@ -1,0 +1,70 @@
+{
+  "service_id": "expatriate-emigration-clearance",
+  "claims": [
+    {
+      "claim_id": "expatriate-emigration-clearance::c-catalogue-authority",
+      "service_id": "expatriate-emigration-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bureau of Manpower, Employment and Training (BMET).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-emigration-clearance::c-official-url-documented",
+      "service_id": "expatriate-emigration-clearance",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://oc.bmet.gov.bd/bmet_clr/rlEnrollment for Emigration Clearance for Overseas Employment; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://oc.bmet.gov.bd/bmet_clr/rlEnrollment"
+      },
+      "source_ids": [
+        "src-expatriate-emigration-clearance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-emigration-clearance::c-procedure-overview",
+      "service_id": "expatriate-emigration-clearance",
+      "claim_type": "procedure_step",
+      "claim_text": "Emigration Clearance for Overseas Employment is a government service under Bureau of Manpower, Employment and Training (BMET) (clearance). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-expatriate-emigration-clearance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-emigration-clearance::c-service-identity",
+      "service_id": "expatriate-emigration-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "Emigration Clearance for Overseas Employment (অভিবাসন ছাড়পত্র (Emigration Clearance)) is a confirmed government service in category expatriate, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-expatriate-emigration-clearance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

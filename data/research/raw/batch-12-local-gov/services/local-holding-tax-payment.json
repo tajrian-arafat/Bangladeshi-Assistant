@@ -1,0 +1,60 @@
+{
+  "service_id": "local-holding-tax-payment",
+  "batch_id": "batch-12-local-gov",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Local Government Holding Tax Payment",
+  "service_name_bn": "স্থানীয় সরকার হোল্ডিং ট্যাক্স পরিশোধ",
+  "aliases": [
+    "holding tax",
+    "হোল্ডিং ট্যাক্স",
+    "municipal holding tax",
+    "city corporation holding tax",
+    "DNCC holding tax payment",
+    "DNCC tax",
+    "Dhaka North City Corporation Holding Tax",
+    "local-dncc-holding-tax",
+    "DSCC holding tax payment",
+    "Dhaka South City Corporation Holding Tax",
+    "local-dscc-holding-tax",
+    "CCC holding tax",
+    "Amader Chattogram holding tax",
+    "Chattogram City Corporation Holding Tax Payment",
+    "local-ccc-holding-tax",
+    "pourashava holding tax",
+    "Municipality (Pourashava) Holding Tax",
+    "local-pourashava-holding-tax"
+  ],
+  "category_id": "local_government",
+  "responsible_agency": "City Corporation / Municipality / Pourashava",
+  "official_application_url": "https://dncc.gov.bd/",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "local-holding-tax-payment::c-application-portal",
+      "service_id": "local-holding-tax-payment",
+      "claim_type": "application_url",
+      "claim_text": "Local Government Holding Tax Payment is associated with NBR e-service portal https://dncc.gov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-local-holding-tax-payment",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-holding-tax-payment::c-responsible-authority",
+      "service_id": "local-holding-tax-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: City Corporation / Municipality / Pourashava.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

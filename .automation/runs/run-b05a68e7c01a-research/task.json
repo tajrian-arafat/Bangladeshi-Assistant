@@ -1,0 +1,69 @@
+{
+  "task_id": "BATCH_09:RESEARCH:run-b05a68e7c01a-research",
+  "batch_id": "BATCH_09",
+  "batch_slug": "batch-09-agriculture",
+  "phase": "RESEARCH",
+  "run_id": "run-b05a68e7c01a-research",
+  "service_ids": [
+    "agri-bamis-farmer-registration",
+    "agri-dae-district-extension",
+    "agri-e-pesticide-prescription",
+    "agri-farmer-digital-address",
+    "agri-farmers-window",
+    "agri-fsmms-farmer-registration",
+    "agriculture-fisheries-fish-farm-registration",
+    "agriculture-livestock-farm-registration",
+    "fisheries-export-health-certificate",
+    "fisheries-fioc-user-registration",
+    "fisheries-import-noc",
+    "fisheries-import-registration-certificate",
+    "fisheries-import-release-order",
+    "fisheries-processing-plant-license"
+  ],
+  "service_names": {
+    "agri-bamis-farmer-registration": "BAMIS Farmer Registration",
+    "agri-dae-district-extension": "District Agricultural Extension Services",
+    "agri-e-pesticide-prescription": "E-Pesticide Prescription",
+    "agri-farmer-digital-address": "Farmer Digital Address",
+    "agri-farmers-window": "Farmer's Window (SACP/DAE)",
+    "agri-fsmms-farmer-registration": "Food Department Farmer/Mill Owner Registration (FSMMS)",
+    "agriculture-fisheries-fish-farm-registration": "Fish Farm Registration",
+    "agriculture-livestock-farm-registration": "Livestock Farm Registration (DLS)",
+    "fisheries-export-health-certificate": "Fisheries Export Health Certificate",
+    "fisheries-fioc-user-registration": "FIQC e-Certification User Registration",
+    "fisheries-import-noc": "Fisheries Import No Objection Certificate (NOC)",
+    "fisheries-import-registration-certificate": "Fisheries Import Registration Certificate",
+    "fisheries-import-release-order": "Fisheries Import Release Order",
+    "fisheries-processing-plant-license": "Fish Processing Plant Licence"
+  },
+  "domain": "agriculture,fisheries,livestock",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/raw/batch-09-agriculture/scope.json",
+    "data/research/raw/batch-09-agriculture/services_index.json",
+    "data/research/raw/batch-09-agriculture/services/*.json",
+    "data/research/raw/batch-09-agriculture/claims.json",
+    "data/research/raw/batch-09-agriculture/sources.json",
+    "data/research/raw/batch-09-agriculture/conflicts.json",
+    "data/research/raw/batch-09-agriculture/knowledge_gaps.json",
+    "data/research/raw/batch-09-agriculture/metadata.json",
+    "docs/research/batch-09-agriculture-research.md",
+    ".automation/runs/run-b05a68e7c01a-research/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — RESEARCH\n\n**Batch:** BATCH_09 (Agriculture / Fisheries / Livestock)\n**Run ID:** run-b05a68e7c01a-research\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/raw/batch-09-agriculture/scope.json`\n- `data/research/raw/batch-09-agriculture/services_index.json`\n- `data/research/raw/batch-09-agriculture/services/*.json`\n- `data/research/raw/batch-09-agriculture/claims.json`\n- `data/research/raw/batch-09-agriculture/sources.json`\n- `data/research/raw/batch-09-agriculture/conflicts.json`\n- `data/research/raw/batch-09-agriculture/knowledge_gaps.json`\n- `data/research/raw/batch-09-agriculture/metadata.json`\n- `docs/research/batch-09-agriculture-research.md`\n- `.automation/runs/run-b05a68e7c01a-research/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_09\",\n    \"slug\": \"batch-09-agriculture\",\n    \"name\": \"Agriculture / Fisheries / Livestock\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"agri-bamis-farmer-registration\",\n      \"agri-dae-district-extension\",\n      \"agri-e-pesticide-prescription\",\n      \"agri-farmer-digital-address\",\n      \"agri-farmers-window\",\n      \"agri-fsmms-farmer-registration\",\n      \"agriculture-fisheries-fish-farm-registration\",\n      \"agriculture-livestock-farm-registration\",\n      \"fisheries-export-health-certificate\",\n      \"fisheries-fioc-user-registration\",\n      \"fisheries-import-noc\",\n      \"fisheries-import-registration-certificate\",\n      \"fisheries-import-release-order\",\n      \"fisheries-processing-plant-license\"\n    ],\n    \"service_count\": 14,\n    \"phases_completed\": []\n  },\n  \"phase\": \"RESEARCH\",\n  \"run_id\": \"run-b05a68e7c01a-research\",\n  \"service_ids\": [\n    \"agri-bamis-farmer-registration\",\n    \"agri-dae-district-extension\",\n    \"agri-e-pesticide-prescription\",\n    \"agri-farmer-digital-address\",\n    \"agri-farmers-window\",\n    \"agri-fsmms-farmer-registration\",\n    \"agriculture-fisheries-fish-farm-registration\",\n    \"agriculture-livestock-farm-registration\",\n    \"fisheries-export-health-certificate\",\n    \"fisheries-fioc-user-registration\",\n    \"fisheries-import-noc\",\n    \"fisheries-import-registration-certificate\",\n    \"fisheries-import-release-order\",\n    \"fisheries-processing-plant-license\"\n  ],\n  \"gaps\": [],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Research phase prompt\n\nFollow `docs/research/BATCH_RESEARCH_TEMPLATE.md` exactly.\n\n## Goals\n- Identify in-scope services from catalogue\n- Search broadly; prioritize Tier 1–2 official sources\n- Separate official / practical / discovery evidence\n- Create atomic claims with provenance\n- Record conflicts and knowledge gaps\n- **Never publish**\n- **Never mark VERIFIED** because a source merely exists\n\n## Outputs\n- `data/research/raw/<batch-slug>/services/*.json`\n- `data/research/raw/<batch-slug>/claims.json`\n- `data/research/raw/<batch-slug>/sources.json`\n- `data/research/raw/<batch-slug>/conflicts.json`\n- `data/research/raw/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-b05a68e7c01a-research/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:46:56.411053+00:00"
+  }
+}

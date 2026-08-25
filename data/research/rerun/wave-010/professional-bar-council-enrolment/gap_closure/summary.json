@@ -1,0 +1,28 @@
+{
+  "service_id": "professional-bar-council-enrolment",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-professional-bar-council-enrolment-portal-unreachable",
+      "service_id": "professional-bar-council-enrolment",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Bangladesh Bar Council Advocate Enrolment.",
+      "severity": "MEDIUM",
+      "url": "https://www.barcouncil.gov.bd/"
+    },
+    {
+      "gap_id": "gap-professional-bar-council-enrolment-fee-unverified",
+      "service_id": "professional-bar-council-enrolment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Bangladesh Bar Council Advocate Enrolment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-professional-bar-council-enrolment-documents-unverified",
+      "service_id": "professional-bar-council-enrolment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Bangladesh Bar Council Advocate Enrolment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

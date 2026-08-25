@@ -1,0 +1,28 @@
+{
+  "service_id": "expatriate-emigration-clearance",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-expatriate-emigration-clearance-portal-unreachable",
+      "service_id": "expatriate-emigration-clearance",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Emigration Clearance for Overseas Employment.",
+      "severity": "MEDIUM",
+      "url": "https://oc.bmet.gov.bd/bmet_clr/rlEnrollment"
+    },
+    {
+      "gap_id": "gap-expatriate-emigration-clearance-fee-unverified",
+      "service_id": "expatriate-emigration-clearance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Emigration Clearance for Overseas Employment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-expatriate-emigration-clearance-documents-unverified",
+      "service_id": "expatriate-emigration-clearance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Emigration Clearance for Overseas Employment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "service_id": "land-mutation-apply",
+  "claims": [
+    {
+      "claim_id": "land-mutation-apply::c-catalogue-authority",
+      "service_id": "land-mutation-apply",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mutation-apply::c-official-url-documented",
+      "service_id": "land-mutation-apply",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://mutation.land.gov.bd/ for Land Mutation (Namjari); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://mutation.land.gov.bd/"
+      },
+      "source_ids": [
+        "src-land-mutation-apply-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mutation-apply::c-procedure-overview",
+      "service_id": "land-mutation-apply",
+      "claim_type": "procedure_step",
+      "claim_text": "Land Mutation (Namjari) is a government service under Ministry of Land (mutation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mutation-apply-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mutation-apply::c-service-identity",
+      "service_id": "land-mutation-apply",
+      "claim_type": "eligibility",
+      "claim_text": "Land Mutation (Namjari) (নামজারি (মিউটেশন)) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mutation-apply-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

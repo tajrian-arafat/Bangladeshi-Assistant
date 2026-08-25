@@ -1,0 +1,2717 @@
+{
+  "wave_id": "wave-004",
+  "wave_number": 4,
+  "run_id": "wave-004-54a8b676",
+  "commit_sha": "0abc805b3f71",
+  "generated_at": "2026-08-25T03:23:44.436888+00:00",
+  "wave_size": 20,
+  "services_attempted": [
+    "tax-income-tax-return-filing",
+    "tax-source-tax-deduction-certificate",
+    "vat-return-filing",
+    "vat-turnover-enlistment",
+    "agri-dae-district-extension",
+    "agri-e-pesticide-prescription",
+    "agri-farmer-digital-address",
+    "agri-farmers-window",
+    "agri-fsmms-farmer-registration",
+    "agriculture-fisheries-fish-farm-registration",
+    "agriculture-livestock-farm-registration",
+    "bida-aftercare-services",
+    "bida-commercial-office-services",
+    "bida-invest-bangladesh-oss",
+    "bida-irms-platform",
+    "bida-osspid-registration",
+    "bida-work-permit-security-clearance",
+    "bpdb-high-tension-connection",
+    "bpdb-new-connection-general",
+    "bpdb-online-bill"
+  ],
+  "service_results": [
+    {
+      "service_id": "tax-income-tax-return-filing",
+      "service_name_en": "Income Tax Return Filing",
+      "category_id": "tax",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "tax-income-tax-return-filing",
+        "service_name_en": "Income Tax Return Filing",
+        "service_name_bn": "আয়কর রিটার্ন দাখিল",
+        "category_id": "tax",
+        "research_profile": "TAX",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "National Board of Revenue (NBR)",
+          "nbr"
+        ],
+        "known_official_domains": [
+          "nbr.gov.bd",
+          "incometax.gov.bd",
+          "secure.incometax.gov.bd"
+        ],
+        "service_aliases": [
+          "tax return Bangladesh",
+          "IT return NBR"
+        ],
+        "official_source": "https://nbr.gov.bd/",
+        "existing_claims_count": 3,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "tax-income-tax-return-filing",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "tax-income-tax-return-filing-en-procedure",
+            "query": "How do I apply for Income Tax Return Filing?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-tax-return-filing-bn-procedure",
+            "query": "আয়কর রিটার্ন দাখিল কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-tax-return-filing-fee",
+            "query": "What is the fee for Income Tax Return Filing?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-tax-return-filing-documents",
+            "query": "What documents are needed for Income Tax Return Filing?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-tax-return-filing-url",
+            "query": "What is the official website for Income Tax Return Filing?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "tax-income-tax-return-filing",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "tax-source-tax-deduction-certificate",
+      "service_name_en": "Tax Deduction at Source Certificate",
+      "category_id": "tax",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "tax-source-tax-deduction-certificate",
+        "service_name_en": "Tax Deduction at Source Certificate",
+        "service_name_bn": "উৎস কর সনদ (TDS/AIT certificate)",
+        "category_id": "tax",
+        "research_profile": "TAX",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "National Board of Revenue (NBR)",
+          "nbr"
+        ],
+        "known_official_domains": [
+          "nbr.gov.bd",
+          "incometax.gov.bd",
+          "secure.incometax.gov.bd"
+        ],
+        "service_aliases": [
+          "TDS certificate",
+          "AIT certificate",
+          "source tax certificate"
+        ],
+        "official_source": "https://nbr.gov.bd/",
+        "existing_claims_count": 3,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "tax-source-tax-deduction-certificate",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "tax-source-tax-deduction-certificate-en-procedure",
+            "query": "How do I apply for Tax Deduction at Source Certificate?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-source-tax-deduction-certificate-bn-procedure",
+            "query": "উৎস কর সনদ (TDS/AIT certificate) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-source-tax-deduction-certificate-fee",
+            "query": "What is the fee for Tax Deduction at Source Certificate?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-source-tax-deduction-certificate-documents",
+            "query": "What documents are needed for Tax Deduction at Source Certificate?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-source-tax-deduction-certificate-url",
+            "query": "What is the official website for Tax Deduction at Source Certificate?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "tax-source-tax-deduction-certificate",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "vat-return-filing",
+      "service_name_en": "VAT Return Filing",
+      "category_id": "vat",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "vat-return-filing",
+        "service_name_en": "VAT Return Filing",
+        "service_name_bn": "ভ্যাট রিটার্ন দাখিল",
+        "category_id": "vat",
+        "research_profile": "TAX",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "National Board of Revenue (NBR)",
+          "nbr"
+        ],
+        "known_official_domains": [
+          "nbr.gov.bd",
+          "incometax.gov.bd",
+          "secure.incometax.gov.bd"
+        ],
+        "service_aliases": [
+          "VAT return NBR",
+          "Mushak return"
+        ],
+        "official_source": "https://nbr.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "vat-return-filing",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "vat-return-filing-en-procedure",
+            "query": "How do I apply for VAT Return Filing?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "vat-return-filing-bn-procedure",
+            "query": "ভ্যাট রিটার্ন দাখিল কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "vat-return-filing-fee",
+            "query": "What is the fee for VAT Return Filing?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "vat-return-filing-documents",
+            "query": "What documents are needed for VAT Return Filing?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "vat-return-filing-url",
+            "query": "What is the official website for VAT Return Filing?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "vat-return-filing",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "vat-turnover-enlistment",
+      "service_name_en": "Turnover Tax Enlistment",
+      "category_id": "vat",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "vat-turnover-enlistment",
+        "service_name_en": "Turnover Tax Enlistment",
+        "service_name_bn": "টার্নওভার ট্যাক্স তালিকাভুক্তি",
+        "category_id": "vat",
+        "research_profile": "TAX",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "National Board of Revenue (NBR)",
+          "nbr"
+        ],
+        "known_official_domains": [
+          "nbr.gov.bd",
+          "incometax.gov.bd",
+          "secure.incometax.gov.bd"
+        ],
+        "service_aliases": [
+          "VAT enlistment",
+          "BIN enlistment"
+        ],
+        "official_source": "https://nbr.gov.bd/faq/vat-faq/eng",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "vat-turnover-enlistment",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "vat-turnover-enlistment-en-procedure",
+            "query": "How do I apply for Turnover Tax Enlistment?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "vat-turnover-enlistment-bn-procedure",
+            "query": "টার্নওভার ট্যাক্স তালিকাভুক্তি কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "vat-turnover-enlistment-fee",
+            "query": "What is the fee for Turnover Tax Enlistment?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "vat-turnover-enlistment-documents",
+            "query": "What documents are needed for Turnover Tax Enlistment?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "vat-turnover-enlistment-url",
+            "query": "What is the official website for Turnover Tax Enlistment?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "vat-turnover-enlistment",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "agri-dae-district-extension",
+      "service_name_en": "District Agricultural Extension Services",
+      "category_id": "agriculture",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "agri-dae-district-extension",
+        "service_name_en": "District Agricultural Extension Services",
+        "service_name_bn": "জেলা কৃষি সম্প্রসারণ সেবা",
+        "category_id": "agriculture",
+        "research_profile": "AGRICULTURE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Department of Agricultural Extension (DAE)",
+          "department-of-agricultural-extension-dae"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "upazila agriculture office",
+          "DAE upazila",
+          "District Agricultural Extension Services"
+        ],
+        "official_source": "https://dae.kishoreganj.gov.bd/en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "agri-dae-district-extension",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "agri-dae-district-extension-en-procedure",
+            "query": "How do I apply for District Agricultural Extension Services?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-dae-district-extension-bn-procedure",
+            "query": "জেলা কৃষি সম্প্রসারণ সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-dae-district-extension-fee",
+            "query": "What is the fee for District Agricultural Extension Services?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-dae-district-extension-documents",
+            "query": "What documents are needed for District Agricultural Extension Services?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-dae-district-extension-url",
+            "query": "What is the official website for District Agricultural Extension Services?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "agri-dae-district-extension",
+        "profile_key": "AGRICULTURE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "agri-e-pesticide-prescription",
+      "service_name_en": "E-Pesticide Prescription",
+      "category_id": "agriculture",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "agri-e-pesticide-prescription",
+        "service_name_en": "E-Pesticide Prescription",
+        "service_name_bn": "ই-কীটনাশক/ওষুধের প্রেসক্রিপশন",
+        "category_id": "agriculture",
+        "research_profile": "AGRICULTURE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Department of Agricultural Extension (DAE)",
+          "department-of-agricultural-extension-dae"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "e-pesticide DAE",
+          "E-Pesticide Prescription"
+        ],
+        "official_source": "https://dae.kishoreganj.gov.bd/en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "agri-e-pesticide-prescription",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "agri-e-pesticide-prescription-en-procedure",
+            "query": "How do I apply for E-Pesticide Prescription?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-e-pesticide-prescription-bn-procedure",
+            "query": "ই-কীটনাশক/ওষুধের প্রেসক্রিপশন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-e-pesticide-prescription-fee",
+            "query": "What is the fee for E-Pesticide Prescription?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-e-pesticide-prescription-documents",
+            "query": "What documents are needed for E-Pesticide Prescription?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-e-pesticide-prescription-url",
+            "query": "What is the official website for E-Pesticide Prescription?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "agri-e-pesticide-prescription",
+        "profile_key": "AGRICULTURE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "agri-farmer-digital-address",
+      "service_name_en": "Farmer Digital Address",
+      "category_id": "agriculture",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "agri-farmer-digital-address",
+        "service_name_en": "Farmer Digital Address",
+        "service_name_bn": "কৃষকের ডিজিটাল ঠিকানা",
+        "category_id": "agriculture",
+        "research_profile": "AGRICULTURE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Department of Agricultural Extension (DAE)",
+          "department-of-agricultural-extension-dae"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "farmer digital address DAE",
+          "Farmer Digital Address"
+        ],
+        "official_source": "https://dae.kishoreganj.gov.bd/en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "agri-farmer-digital-address",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "agri-farmer-digital-address-en-procedure",
+            "query": "How do I apply for Farmer Digital Address?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-farmer-digital-address-bn-procedure",
+            "query": "কৃষকের ডিজিটাল ঠিকানা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-farmer-digital-address-fee",
+            "query": "What is the fee for Farmer Digital Address?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-farmer-digital-address-documents",
+            "query": "What documents are needed for Farmer Digital Address?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-farmer-digital-address-url",
+            "query": "What is the official website for Farmer Digital Address?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "agri-farmer-digital-address",
+        "profile_key": "AGRICULTURE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "agri-farmers-window",
+      "service_name_en": "Farmer's Window (SACP/DAE)",
+      "category_id": "agriculture",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "agri-farmers-window",
+        "service_name_en": "Farmer's Window (SACP/DAE)",
+        "service_name_bn": "কৃষকের জানালা (Farmer's Window)",
+        "category_id": "agriculture",
+        "research_profile": "AGRICULTURE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Department of Agricultural Extension (DAE)",
+          "department-of-agricultural-extension-dae"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "krishoker janala",
+          "farmer window DAE",
+          "Farmer's Window (SACP/DAE)"
+        ],
+        "official_source": "https://sacp.dae.gov.bd/en/farmers-window/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "agri-farmers-window",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "agri-farmers-window-en-procedure",
+            "query": "How do I apply for Farmer's Window (SACP/DAE)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-farmers-window-bn-procedure",
+            "query": "কৃষকের জানালা (Farmer's Window) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-farmers-window-fee",
+            "query": "What is the fee for Farmer's Window (SACP/DAE)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-farmers-window-documents",
+            "query": "What documents are needed for Farmer's Window (SACP/DAE)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-farmers-window-url",
+            "query": "What is the official website for Farmer's Window (SACP/DAE)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "agri-farmers-window",
+        "profile_key": "AGRICULTURE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "agri-fsmms-farmer-registration",
+      "service_name_en": "Food Department Farmer/Mill Owner Registration (FSMMS)",
+      "category_id": "agriculture",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "agri-fsmms-farmer-registration",
+        "service_name_en": "Food Department Farmer/Mill Owner Registration (FSMMS)",
+        "service_name_bn": "খাদ্য অধিদপ্তর কৃষক/চালকল নিবন্ধন",
+        "category_id": "agriculture",
+        "research_profile": "AGRICULTURE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Directorate General of Food",
+          "directorate-general-of-food"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "paddy procurement registration",
+          "FSMMS farmer",
+          "Food Department Farmer/Mill Owner Registration (FSMMS)"
+        ],
+        "official_source": "https://fsmms.dgf.gov.bd/portal/bn/farmer",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "agri-fsmms-farmer-registration",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "agri-fsmms-farmer-registration-en-procedure",
+            "query": "How do I apply for Food Department Farmer/Mill Owner Registration (FSMMS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-fsmms-farmer-registration-bn-procedure",
+            "query": "খাদ্য অধিদপ্তর কৃষক/চালকল নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-fsmms-farmer-registration-fee",
+            "query": "What is the fee for Food Department Farmer/Mill Owner Registration (FSMMS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-fsmms-farmer-registration-documents",
+            "query": "What documents are needed for Food Department Farmer/Mill Owner Registration (FSMMS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agri-fsmms-farmer-registration-url",
+            "query": "What is the official website for Food Department Farmer/Mill Owner Registration (FSMMS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "agri-fsmms-farmer-registration",
+        "profile_key": "AGRICULTURE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "agriculture-fisheries-fish-farm-registration",
+      "service_name_en": "Fish Farm Registration",
+      "category_id": "fisheries",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "agriculture-fisheries-fish-farm-registration",
+        "service_name_en": "Fish Farm Registration",
+        "service_name_bn": "মাছ খামার নিবন্ধন",
+        "category_id": "fisheries",
+        "research_profile": "FISHERIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Department of Fisheries (DoF)",
+          "department-of-fisheries-dof"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DoF fish farm registration",
+          "aquaculture registration"
+        ],
+        "official_source": "https://fisheries.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "agriculture-fisheries-fish-farm-registration",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "agriculture-fisheries-fish-farm-registration-en-procedure",
+            "query": "How do I apply for Fish Farm Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agriculture-fisheries-fish-farm-registration-bn-procedure",
+            "query": "মাছ খামার নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agriculture-fisheries-fish-farm-registration-fee",
+            "query": "What is the fee for Fish Farm Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agriculture-fisheries-fish-farm-registration-documents",
+            "query": "What documents are needed for Fish Farm Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agriculture-fisheries-fish-farm-registration-url",
+            "query": "What is the official website for Fish Farm Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "agriculture-fisheries-fish-farm-registration",
+        "profile_key": "FISHERIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "agriculture-livestock-farm-registration",
+      "service_name_en": "Livestock Farm Registration (DLS)",
+      "category_id": "livestock",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "agriculture-livestock-farm-registration",
+        "service_name_en": "Livestock Farm Registration (DLS)",
+        "service_name_bn": "খামার/পশুসম্পদ নিবন্ধন (DLS)",
+        "category_id": "livestock",
+        "research_profile": "LIVESTOCK",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Department of Livestock Services (DLS)",
+          "department-of-livestock-services-dls"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DLS farm registration",
+          "livestock farm licence"
+        ],
+        "official_source": "https://dls.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "agriculture-livestock-farm-registration",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "agriculture-livestock-farm-registration-en-procedure",
+            "query": "How do I apply for Livestock Farm Registration (DLS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agriculture-livestock-farm-registration-bn-procedure",
+            "query": "খামার/পশুসম্পদ নিবন্ধন (DLS) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agriculture-livestock-farm-registration-fee",
+            "query": "What is the fee for Livestock Farm Registration (DLS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agriculture-livestock-farm-registration-documents",
+            "query": "What documents are needed for Livestock Farm Registration (DLS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "agriculture-livestock-farm-registration-url",
+            "query": "What is the official website for Livestock Farm Registration (DLS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "agriculture-livestock-farm-registration",
+        "profile_key": "LIVESTOCK",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "bida-aftercare-services",
+      "service_name_en": "BIDA Aftercare Services for Investors",
+      "category_id": "investment",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "bida-aftercare-services",
+        "service_name_en": "BIDA Aftercare Services for Investors",
+        "service_name_bn": "BIDA Aftercare Services",
+        "category_id": "investment",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Investment Development Authority (BIDA)",
+          "bangladesh-investment-development-authority-bida"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "investor aftercare BIDA",
+          "BIDA Aftercare Services for Investors"
+        ],
+        "official_source": "https://bida.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "bida-aftercare-services",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "bida-aftercare-services-en-procedure",
+            "query": "How do I apply for BIDA Aftercare Services for Investors?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-aftercare-services-bn-procedure",
+            "query": "BIDA Aftercare Services কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-aftercare-services-fee",
+            "query": "What is the fee for BIDA Aftercare Services for Investors?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-aftercare-services-documents",
+            "query": "What documents are needed for BIDA Aftercare Services for Investors?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-aftercare-services-url",
+            "query": "What is the official website for BIDA Aftercare Services for Investors?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "bida-aftercare-services",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "bida-commercial-office-services",
+      "service_name_en": "Branch, Liaison and Representative Office Services (BIDA)",
+      "category_id": "investment",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "bida-commercial-office-services",
+        "service_name_en": "Branch, Liaison and Representative Office Services (BIDA)",
+        "service_name_bn": "Branch/Liaison/Representative Office সেবা",
+        "category_id": "investment",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Investment Development Authority (BIDA)",
+          "bangladesh-investment-development-authority-bida"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "liaison office Bangladesh",
+          "commercial office BIDA",
+          "Branch, Liaison and Representative Office Services (BIDA)"
+        ],
+        "official_source": "https://bida.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "bida-commercial-office-services",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "bida-commercial-office-services-en-procedure",
+            "query": "How do I apply for Branch, Liaison and Representative Office Services (BIDA)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-commercial-office-services-bn-procedure",
+            "query": "Branch/Liaison/Representative Office সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-commercial-office-services-fee",
+            "query": "What is the fee for Branch, Liaison and Representative Office Services (BIDA)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-commercial-office-services-documents",
+            "query": "What documents are needed for Branch, Liaison and Representative Office Services (BIDA)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-commercial-office-services-url",
+            "query": "What is the official website for Branch, Liaison and Representative Office Services (BIDA)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "bida-commercial-office-services",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "bida-invest-bangladesh-oss",
+      "service_name_en": "Invest Bangladesh OSS Portal",
+      "category_id": "investment",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "bida-invest-bangladesh-oss",
+        "service_name_en": "Invest Bangladesh OSS Portal",
+        "service_name_bn": "Invest Bangladesh OSS",
+        "category_id": "investment",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Investment Development Authority (BIDA)",
+          "bangladesh-investment-development-authority-bida"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "investbangladesh.gov.bd",
+          "investment facilitation OSS",
+          "Invest Bangladesh OSS Portal",
+          "bidaquickserv",
+          "BanglaBiz OSS",
+          "investment OSS",
+          "BIDA One Stop Service (OSS) Portal",
+          "bida-oss-portal"
+        ],
+        "official_source": "https://investbangladesh.gov.bd/faq",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "bida-invest-bangladesh-oss",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "bida-invest-bangladesh-oss-en-procedure",
+            "query": "How do I apply for Invest Bangladesh OSS Portal?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-invest-bangladesh-oss-bn-procedure",
+            "query": "Invest Bangladesh OSS কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-invest-bangladesh-oss-fee",
+            "query": "What is the fee for Invest Bangladesh OSS Portal?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-invest-bangladesh-oss-documents",
+            "query": "What documents are needed for Invest Bangladesh OSS Portal?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-invest-bangladesh-oss-url",
+            "query": "What is the official website for Invest Bangladesh OSS Portal?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "bida-invest-bangladesh-oss",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "bida-irms-platform",
+      "service_name_en": "BIDA Investment Relationship Management System (IRMS)",
+      "category_id": "investment",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "bida-irms-platform",
+        "service_name_en": "BIDA Investment Relationship Management System (IRMS)",
+        "service_name_bn": "BIDA Investment Relationship Management System",
+        "category_id": "investment",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Investment Development Authority (BIDA)",
+          "bangladesh-investment-development-authority-bida"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "IRMS BIDA",
+          "investor tracking BIDA",
+          "BIDA Investment Relationship Management System (IRMS)"
+        ],
+        "official_source": "https://irms.bida.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "bida-irms-platform",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "bida-irms-platform-en-procedure",
+            "query": "How do I apply for BIDA Investment Relationship Management System (IRMS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-irms-platform-bn-procedure",
+            "query": "BIDA Investment Relationship Management System কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-irms-platform-fee",
+            "query": "What is the fee for BIDA Investment Relationship Management System (IRMS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-irms-platform-documents",
+            "query": "What documents are needed for BIDA Investment Relationship Management System (IRMS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-irms-platform-url",
+            "query": "What is the official website for BIDA Investment Relationship Management System (IRMS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "bida-irms-platform",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "bida-osspid-registration",
+      "service_name_en": "OSSPID Account Registration (BIDA)",
+      "category_id": "investment",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "bida-osspid-registration",
+        "service_name_en": "OSSPID Account Registration (BIDA)",
+        "service_name_bn": "OSSPID নিবন্ধন (BIDA)",
+        "category_id": "investment",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Investment Development Authority (BIDA)",
+          "bangladesh-investment-development-authority-bida"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "BIDA investor account",
+          "OSS PID signup",
+          "OSSPID Account Registration (BIDA)"
+        ],
+        "official_source": "https://irms.bida.gov.bd/set-registration-type/investor",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "bida-osspid-registration",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "bida-osspid-registration-en-procedure",
+            "query": "How do I apply for OSSPID Account Registration (BIDA)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-osspid-registration-bn-procedure",
+            "query": "OSSPID নিবন্ধন (BIDA) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-osspid-registration-fee",
+            "query": "What is the fee for OSSPID Account Registration (BIDA)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-osspid-registration-documents",
+            "query": "What documents are needed for OSSPID Account Registration (BIDA)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-osspid-registration-url",
+            "query": "What is the official website for OSSPID Account Registration (BIDA)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "bida-osspid-registration",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "bida-work-permit-security-clearance",
+      "service_name_en": "BIDA Work Permit Security Clearance (Online)",
+      "category_id": "investment",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "bida-work-permit-security-clearance",
+        "service_name_en": "BIDA Work Permit Security Clearance (Online)",
+        "service_name_bn": "BIDA ওয়ার্ক পারমিট Security Clearance",
+        "category_id": "investment",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Investment Development Authority (BIDA)",
+          "bangladesh-investment-development-authority-bida"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "expatriate security clearance BIDA",
+          "BIDA Work Permit Security Clearance (Online)"
+        ],
+        "official_source": "https://bida.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "bida-work-permit-security-clearance",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "bida-work-permit-security-clearance-en-procedure",
+            "query": "How do I apply for BIDA Work Permit Security Clearance (Online)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-work-permit-security-clearance-bn-procedure",
+            "query": "BIDA ওয়ার্ক পারমিট Security Clearance কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-work-permit-security-clearance-fee",
+            "query": "What is the fee for BIDA Work Permit Security Clearance (Online)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-work-permit-security-clearance-documents",
+            "query": "What documents are needed for BIDA Work Permit Security Clearance (Online)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bida-work-permit-security-clearance-url",
+            "query": "What is the official website for BIDA Work Permit Security Clearance (Online)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "bida-work-permit-security-clearance",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "bpdb-high-tension-connection",
+      "service_name_en": "BPDB High Tension Connection Application",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "bpdb-high-tension-connection",
+        "service_name_en": "BPDB High Tension Connection Application",
+        "service_name_bn": "বিপিডিবি উচ্চচাপ সংযোগ আবেদন",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Power Development Board (BPDB)",
+          "bangladesh-power-development-board-bpdb"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "HT connection BPDB",
+          "EHT connection"
+        ],
+        "official_source": "https://bpdb.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "bpdb-high-tension-connection",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "bpdb-high-tension-connection-en-procedure",
+            "query": "How do I apply for BPDB High Tension Connection Application?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-high-tension-connection-bn-procedure",
+            "query": "বিপিডিবি উচ্চচাপ সংযোগ আবেদন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-high-tension-connection-fee",
+            "query": "What is the fee for BPDB High Tension Connection Application?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-high-tension-connection-documents",
+            "query": "What documents are needed for BPDB High Tension Connection Application?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-high-tension-connection-url",
+            "query": "What is the official website for BPDB High Tension Connection Application?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "bpdb-high-tension-connection",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "bpdb-new-connection-general",
+      "service_name_en": "BPDB New Electricity Connection (General Customer)",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "bpdb-new-connection-general",
+        "service_name_en": "BPDB New Electricity Connection (General Customer)",
+        "service_name_bn": "বিপিডিবি নতুন বিদ্যুৎ সংযোগ (সাধারণ গ্রাহক)",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Power Development Board (BPDB)",
+          "bangladesh-power-development-board-bpdb"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "BPDB connection",
+          "rural electricity connection"
+        ],
+        "official_source": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "bpdb-new-connection-general",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "bpdb-new-connection-general-en-procedure",
+            "query": "How do I apply for BPDB New Electricity Connection (General Customer)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-new-connection-general-bn-procedure",
+            "query": "বিপিডিবি নতুন বিদ্যুৎ সংযোগ (সাধারণ গ্রাহক) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-new-connection-general-fee",
+            "query": "What is the fee for BPDB New Electricity Connection (General Customer)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-new-connection-general-documents",
+            "query": "What documents are needed for BPDB New Electricity Connection (General Customer)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-new-connection-general-url",
+            "query": "What is the official website for BPDB New Electricity Connection (General Customer)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "bpdb-new-connection-general",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "bpdb-online-bill",
+      "service_name_en": "BPDB Online Electricity Bill",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "bpdb-online-bill",
+        "service_name_en": "BPDB Online Electricity Bill",
+        "service_name_bn": "বিপিডিবি অনলাইন বিদ্যুৎ বিল",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Power Development Board (BPDB)",
+          "bangladesh-power-development-board-bpdb"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "bill on web BPDB"
+        ],
+        "official_source": "https://billonweb.bpdb.gov.bd",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "bpdb-online-bill",
+        "wave_id": "wave-004",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "bpdb-online-bill-en-procedure",
+            "query": "How do I apply for BPDB Online Electricity Bill?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-online-bill-bn-procedure",
+            "query": "বিপিডিবি অনলাইন বিদ্যুৎ বিল কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-online-bill-fee",
+            "query": "What is the fee for BPDB Online Electricity Bill?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-online-bill-documents",
+            "query": "What documents are needed for BPDB Online Electricity Bill?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "bpdb-online-bill-url",
+            "query": "What is the official website for BPDB Online Electricity Bill?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "bpdb-online-bill",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    }
+  ],
+  "status_counts": {
+    "COMPLETE": 0,
+    "PARTIAL": 20,
+    "DEFERRED": 0,
+    "BLOCKED": 0
+  },
+  "verified_claims": 52,
+  "partial_claims": 8,
+  "conflicts": 0,
+  "knowledge_gaps": 48,
+  "staging_path": "/workspace/data/research/waves/wave-004/staging",
+  "e2e_summary": {
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "answer_supported": 0
+  },
+  "regression": {
+    "passed": true,
+    "metrics": {
+      "hallucinations": 0,
+      "citation_failures": 0,
+      "batch_01_pass_pct": 100.0,
+      "passport_pass_pct": 100.0,
+      "batch_02b_pass_pct": 100.0,
+      "routing_pass_pct": 100.0,
+      "pytest_failed": 0,
+      "batch_03a_pass_pct": 100.0,
+      "batch_03b_pass_pct": 100.0,
+      "batch_03c_pass_pct": 100.0
+    },
+    "failures": [],
+    "automation_exit_code": 0
+  },
+  "wave_quality": {
+    "passed": true,
+    "wave_id": "wave-004",
+    "services_total": 20,
+    "false_completion_count": 0,
+    "services_with_sources": 20,
+    "services_with_verified_claims": 20,
+    "source_rate": 1.0,
+    "verified_rate": 1.0,
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "regression_failures": [],
+    "blocking_reasons": [],
+    "service_statuses": {
+      "tax-income-tax-return-filing": "PARTIAL",
+      "tax-source-tax-deduction-certificate": "PARTIAL",
+      "vat-return-filing": "PARTIAL",
+      "vat-turnover-enlistment": "PARTIAL",
+      "agri-dae-district-extension": "PARTIAL",
+      "agri-e-pesticide-prescription": "PARTIAL",
+      "agri-farmer-digital-address": "PARTIAL",
+      "agri-farmers-window": "PARTIAL",
+      "agri-fsmms-farmer-registration": "PARTIAL",
+      "agriculture-fisheries-fish-farm-registration": "PARTIAL",
+      "agriculture-livestock-farm-registration": "PARTIAL",
+      "bida-aftercare-services": "PARTIAL",
+      "bida-commercial-office-services": "PARTIAL",
+      "bida-invest-bangladesh-oss": "PARTIAL",
+      "bida-irms-platform": "PARTIAL",
+      "bida-osspid-registration": "PARTIAL",
+      "bida-work-permit-security-clearance": "PARTIAL",
+      "bpdb-high-tension-connection": "PARTIAL",
+      "bpdb-new-connection-general": "PARTIAL",
+      "bpdb-online-bill": "PARTIAL"
+    }
+  },
+  "quality_passed": true
+}

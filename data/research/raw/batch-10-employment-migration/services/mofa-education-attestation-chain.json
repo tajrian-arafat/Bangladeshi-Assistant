@@ -1,0 +1,45 @@
+{
+  "service_id": "mofa-education-attestation-chain",
+  "batch_id": "batch-10-employment-migration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Educational Certificate MOFA Attestation (via Ministry of Education)",
+  "service_name_bn": "শিক্ষা সনদ MOFA attestation (Ministry of Education chain)",
+  "aliases": [
+    "degree attestation MOFA",
+    "education certificate attestation",
+    "Educational Certificate MOFA Attestation (via Ministry of Education)"
+  ],
+  "category_id": "passport_immigration",
+  "responsible_agency": "Ministry of Foreign Affairs (MOFA)",
+  "official_application_url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "mofa-education-attestation-chain::c-application-portal",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "application_url",
+      "claim_text": "Educational Certificate MOFA Attestation (via Ministry of Education) is associated with NBR e-service portal https://istanbul.mofa.gov.bd/en/site/page/Document-attestation.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-mofa-education-attestation-chain",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-education-attestation-chain::c-responsible-authority",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

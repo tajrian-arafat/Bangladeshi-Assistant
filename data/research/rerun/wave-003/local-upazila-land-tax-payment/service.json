@@ -1,0 +1,167 @@
+{
+  "service_id": "local-upazila-land-tax-payment",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Upazila Land Development Tax Payment",
+  "service_name_bn": "উপজেলা ভূমি উন্নয়ন কর",
+  "aliases": [
+    "land development tax",
+    "holding tax rural",
+    "union land tax"
+  ],
+  "category_id": "land",
+  "profile_key": "LAND",
+  "responsible_agency": "Union Parishad / Upazila Land Office",
+  "official_application_url": null,
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "local-upazila-land-tax-payment::c-catalogue-authority",
+      "service_id": "local-upazila-land-tax-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad / Upazila Land Office.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-upazila-land-tax-payment::c-procedure-overview",
+      "service_id": "local-upazila-land-tax-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "Upazila Land Development Tax Payment is a government service under Union Parishad / Upazila Land Office (land tax). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-upazila-land-tax-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-upazila-land-tax-payment::c-service-identity",
+      "service_id": "local-upazila-land-tax-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Upazila Land Development Tax Payment (উপজেলা ভূমি উন্নয়ন কর) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-upazila-land-tax-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-local-upazila-land-tax-payment-official",
+      "service_id": "local-upazila-land-tax-payment",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "union-parishad-upazila-land-office",
+      "tier": 3,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d1ff3f114189bb34",
+        "retrieved_at": "2026-08-25T03:21:58.814011+00:00"
+      },
+      "evidence_locator": "probe:"
+    },
+    {
+      "source_id": "src-local-upazila-land-tax-payment-alt-0",
+      "service_id": "local-upazila-land-tax-payment",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "union-parishad-upazila-land-office",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d1ff3f114189bb34",
+        "retrieved_at": "2026-08-25T03:21:58.814011+00:00"
+      }
+    },
+    {
+      "source_id": "src-local-upazila-land-tax-payment-alt-1",
+      "service_id": "local-upazila-land-tax-payment",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "union-parishad-upazila-land-office",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "7ae7ec82592e6fe1",
+        "retrieved_at": "2026-08-25T03:21:58.846512+00:00"
+      }
+    },
+    {
+      "source_id": "src-local-upazila-land-tax-payment-alt-2",
+      "service_id": "local-upazila-land-tax-payment",
+      "url": "https://dlrms.land.gov.bd",
+      "title": "Upazila Land Development Tax Payment",
+      "authority_id": "union-parishad-upazila-land-office",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dlrms.land.gov.bd",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out",
+        "retrieved_at": "2026-08-25T03:22:08.870849+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-local-upazila-land-tax-payment-fee-unverified",
+      "service_id": "local-upazila-land-tax-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Upazila Land Development Tax Payment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-upazila-land-tax-payment-documents-unverified",
+      "service_id": "local-upazila-land-tax-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Upazila Land Development Tax Payment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

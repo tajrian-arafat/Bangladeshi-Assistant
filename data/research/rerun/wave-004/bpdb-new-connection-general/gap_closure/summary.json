@@ -1,0 +1,28 @@
+{
+  "service_id": "bpdb-new-connection-general",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-bpdb-new-connection-general-portal-unreachable",
+      "service_id": "bpdb-new-connection-general",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for BPDB New Electricity Connection (General Customer).",
+      "severity": "MEDIUM",
+      "url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717"
+    },
+    {
+      "gap_id": "gap-bpdb-new-connection-general-fee-unverified",
+      "service_id": "bpdb-new-connection-general",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BPDB New Electricity Connection (General Customer).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bpdb-new-connection-general-documents-unverified",
+      "service_id": "bpdb-new-connection-general",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BPDB New Electricity Connection (General Customer).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "task_id": "BATCH_10:RESEARCH:run-107a9e6bea1a-research",
+  "batch_id": "BATCH_10",
+  "batch_slug": "batch-10-employment-migration",
+  "phase": "RESEARCH",
+  "run_id": "run-107a9e6bea1a-research",
+  "service_ids": [
+    "employment-boesl-overseas-recruitment",
+    "employment-labour-court-adr",
+    "employment-trade-union-registration",
+    "expatriate-bmet-training",
+    "expatriate-emigration-clearance",
+    "expatriate-recruiting-agent-verify",
+    "expatriate-worker-registration",
+    "migration-e-apostille",
+    "mofa-csat",
+    "mofa-document-attestation",
+    "mofa-education-attestation-chain",
+    "mofa-nv-loi-application"
+  ],
+  "service_names": {
+    "employment-boesl-overseas-recruitment": "BOESL Overseas Job Seeker Registration",
+    "employment-labour-court-adr": "Labour Court Alternative Dispute Resolution",
+    "employment-trade-union-registration": "Trade Union Registration",
+    "expatriate-bmet-training": "BMET Skill Development Training",
+    "expatriate-emigration-clearance": "Emigration Clearance for Overseas Employment",
+    "expatriate-recruiting-agent-verify": "Recruiting Agent Verification",
+    "expatriate-worker-registration": "Overseas Worker Registration",
+    "migration-e-apostille": "e-Apostille Document Authentication",
+    "mofa-csat": "MOFA Consular Service Appointment (CSAT)",
+    "mofa-document-attestation": "MOFA Document Attestation",
+    "mofa-education-attestation-chain": "Educational Certificate MOFA Attestation (via Ministry of Education)",
+    "mofa-nv-loi-application": "Note Verbale and Letter of Introduction (LOI) Application"
+  },
+  "domain": "employment,expatriate,passport_immigration",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/raw/batch-10-employment-migration/scope.json",
+    "data/research/raw/batch-10-employment-migration/services_index.json",
+    "data/research/raw/batch-10-employment-migration/services/*.json",
+    "data/research/raw/batch-10-employment-migration/claims.json",
+    "data/research/raw/batch-10-employment-migration/sources.json",
+    "data/research/raw/batch-10-employment-migration/conflicts.json",
+    "data/research/raw/batch-10-employment-migration/knowledge_gaps.json",
+    "data/research/raw/batch-10-employment-migration/metadata.json",
+    "docs/research/batch-10-employment-migration-research.md",
+    ".automation/runs/run-107a9e6bea1a-research/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — RESEARCH\n\n**Batch:** BATCH_10 (Employment / Labour / Expatriate / Migration)\n**Run ID:** run-107a9e6bea1a-research\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/raw/batch-10-employment-migration/scope.json`\n- `data/research/raw/batch-10-employment-migration/services_index.json`\n- `data/research/raw/batch-10-employment-migration/services/*.json`\n- `data/research/raw/batch-10-employment-migration/claims.json`\n- `data/research/raw/batch-10-employment-migration/sources.json`\n- `data/research/raw/batch-10-employment-migration/conflicts.json`\n- `data/research/raw/batch-10-employment-migration/knowledge_gaps.json`\n- `data/research/raw/batch-10-employment-migration/metadata.json`\n- `docs/research/batch-10-employment-migration-research.md`\n- `.automation/runs/run-107a9e6bea1a-research/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_10\",\n    \"slug\": \"batch-10-employment-migration\",\n    \"name\": \"Employment / Labour / Expatriate / Migration\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"employment-boesl-overseas-recruitment\",\n      \"employment-labour-court-adr\",\n      \"employment-trade-union-registration\",\n      \"expatriate-bmet-training\",\n      \"expatriate-emigration-clearance\",\n      \"expatriate-recruiting-agent-verify\",\n      \"expatriate-worker-registration\",\n      \"migration-e-apostille\",\n      \"mofa-csat\",\n      \"mofa-document-attestation\",\n      \"mofa-education-attestation-chain\",\n      \"mofa-nv-loi-application\"\n    ],\n    \"service_count\": 12,\n    \"phases_completed\": []\n  },\n  \"phase\": \"RESEARCH\",\n  \"run_id\": \"run-107a9e6bea1a-research\",\n  \"service_ids\": [\n    \"employment-boesl-overseas-recruitment\",\n    \"employment-labour-court-adr\",\n    \"employment-trade-union-registration\",\n    \"expatriate-bmet-training\",\n    \"expatriate-emigration-clearance\",\n    \"expatriate-recruiting-agent-verify\",\n    \"expatriate-worker-registration\",\n    \"migration-e-apostille\",\n    \"mofa-csat\",\n    \"mofa-document-attestation\",\n    \"mofa-education-attestation-chain\",\n    \"mofa-nv-loi-application\"\n  ],\n  \"gaps\": [],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Research phase prompt\n\nFollow `docs/research/BATCH_RESEARCH_TEMPLATE.md` exactly.\n\n## Goals\n- Identify in-scope services from catalogue\n- Search broadly; prioritize Tier 1–2 official sources\n- Separate official / practical / discovery evidence\n- Create atomic claims with provenance\n- Record conflicts and knowledge gaps\n- **Never publish**\n- **Never mark VERIFIED** because a source merely exists\n\n## Outputs\n- `data/research/raw/<batch-slug>/services/*.json`\n- `data/research/raw/<batch-slug>/claims.json`\n- `data/research/raw/<batch-slug>/sources.json`\n- `data/research/raw/<batch-slug>/conflicts.json`\n- `data/research/raw/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-107a9e6bea1a-research/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:47:27.908790+00:00"
+  }
+}

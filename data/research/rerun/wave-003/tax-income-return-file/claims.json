@@ -1,0 +1,72 @@
+{
+  "service_id": "tax-income-return-file",
+  "claims": [
+    {
+      "claim_id": "tax-income-return-file::c-catalogue-authority",
+      "service_id": "tax-income-return-file",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-official-portal",
+      "service_id": "tax-income-return-file",
+      "claim_type": "application_url",
+      "claim_text": "Income Tax Return Filing (e-Return) official information is published at https://secure.incometax.gov.bd (page title: - NBR TIN Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://secure.incometax.gov.bd"
+      },
+      "source_ids": [
+        "src-tax-income-return-file-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-income-return-file::c-official-portal-src-tax-income-return-file-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-procedure-overview",
+      "service_id": "tax-income-return-file",
+      "claim_type": "procedure_step",
+      "claim_text": "Income Tax Return Filing (e-Return) is a government service under National Board of Revenue (NBR) (return). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-income-return-file-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-service-identity",
+      "service_id": "tax-income-return-file",
+      "claim_type": "eligibility",
+      "claim_text": "Income Tax Return Filing (e-Return) (আয়কর রিটার্ন দাখিল) is a confirmed government service in category tax, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-income-return-file-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

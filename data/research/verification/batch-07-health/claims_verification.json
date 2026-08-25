@@ -1,0 +1,593 @@
+{
+  "batch_id": "batch-07-health",
+  "verifications": [
+    {
+      "claim_id": "health-16263-telemedicine::c-application-portal",
+      "service_id": "health-16263-telemedicine",
+      "verification_status": "VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164906+00:00",
+      "notes": [
+        "Official portal URL reachable at verification time"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-16263-telemedicine",
+          "url": "http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update",
+          "reachable": true,
+          "status_code": 200
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-16263-telemedicine::c-responsible-authority",
+      "service_id": "health-16263-telemedicine",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164912+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-blood-bank-license::c-application-portal",
+      "service_id": "health-blood-bank-license",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164916+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-blood-bank-license",
+          "url": "https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md",
+          "reachable": false,
+          "status_code": 403
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-blood-bank-license::c-responsible-authority",
+      "service_id": "health-blood-bank-license",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164918+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-bmdc-additional-qualification::c-application-portal",
+      "service_id": "health-bmdc-additional-qualification",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164921+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-bmdc-additional-qualification",
+          "url": "https://payment.bmdc.org.bd/home/page/form-list",
+          "reachable": false,
+          "status_code": 403
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-bmdc-additional-qualification::c-responsible-authority",
+      "service_id": "health-bmdc-additional-qualification",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164923+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-bmdc-eligibility-certificate::c-application-portal",
+      "service_id": "health-bmdc-eligibility-certificate",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164925+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-bmdc-eligibility-certificate",
+          "url": "https://payment.bmdc.org.bd/home/page/form-list",
+          "reachable": false,
+          "status_code": 403
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-bmdc-eligibility-certificate::c-responsible-authority",
+      "service_id": "health-bmdc-eligibility-certificate",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164927+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-bmdc-full-registration::c-application-portal",
+      "service_id": "health-bmdc-full-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164929+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-bmdc-full-registration",
+          "url": "https://payment.bmdc.org.bd/home/page/form-list",
+          "reachable": false,
+          "status_code": 403
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-bmdc-full-registration::c-responsible-authority",
+      "service_id": "health-bmdc-full-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164931+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-bmdc-registration-verify::c-application-portal",
+      "service_id": "health-bmdc-registration-verify",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164934+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-bmdc-registration-verify",
+          "url": "https://verify.bmdc.org.bd/",
+          "reachable": false,
+          "status_code": 403
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-bmdc-registration-verify::c-responsible-authority",
+      "service_id": "health-bmdc-registration-verify",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164936+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-diagnostic-center-license::c-application-portal",
+      "service_id": "health-diagnostic-center-license",
+      "verification_status": "VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164938+00:00",
+      "notes": [
+        "Official portal URL reachable at verification time"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-diagnostic-center-license",
+          "url": "https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice",
+          "reachable": true,
+          "status_code": 200
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-diagnostic-center-license::c-responsible-authority",
+      "service_id": "health-diagnostic-center-license",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164940+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-facility-registry::c-application-portal",
+      "service_id": "health-facility-registry",
+      "verification_status": "VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164943+00:00",
+      "notes": [
+        "Official portal URL reachable at verification time"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-facility-registry",
+          "url": "https://hrm.dghs.gov.bd/public/facility-registry/reports/organization-list",
+          "reachable": true,
+          "status_code": 200
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-facility-registry::c-responsible-authority",
+      "service_id": "health-facility-registry",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164945+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-good-standing-certificate::c-application-portal",
+      "service_id": "health-good-standing-certificate",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164948+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-good-standing-certificate",
+          "url": "https://payment.bmdc.org.bd/home/page/form-list",
+          "reachable": false,
+          "status_code": 403
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-good-standing-certificate::c-responsible-authority",
+      "service_id": "health-good-standing-certificate",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164949+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-hospital-birth-notification::c-application-portal",
+      "service_id": "health-hospital-birth-notification",
+      "verification_status": "VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164952+00:00",
+      "notes": [
+        "Official portal URL reachable at verification time"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-hospital-birth-notification",
+          "url": "https://bdris.gov.bd/",
+          "reachable": true,
+          "status_code": 200
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-hospital-birth-notification::c-responsible-authority",
+      "service_id": "health-hospital-birth-notification",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164954+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-immunization-card-mcv::c-application-portal",
+      "service_id": "health-immunization-card-mcv",
+      "verification_status": "VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164956+00:00",
+      "notes": [
+        "Official portal URL reachable at verification time"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-immunization-card-mcv",
+          "url": "https://dghs.gov.bd/",
+          "reachable": true,
+          "status_code": 200
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-immunization-card-mcv::c-responsible-authority",
+      "service_id": "health-immunization-card-mcv",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164958+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-medical-assistant-registration::c-application-portal",
+      "service_id": "health-medical-assistant-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164961+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-medical-assistant-registration",
+          "url": "https://payment.bmdc.org.bd/home/page/form-list",
+          "reachable": false,
+          "status_code": 403
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-medical-assistant-registration::c-responsible-authority",
+      "service_id": "health-medical-assistant-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164963+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-private-clinic-license::c-application-portal",
+      "service_id": "health-private-clinic-license",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164965+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-private-clinic-license",
+          "url": "https://hospitaldghs.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-private-clinic-license::c-responsible-authority",
+      "service_id": "health-private-clinic-license",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164967+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-private-hospital-license::c-application-portal",
+      "service_id": "health-private-hospital-license",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164970+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-health-private-hospital-license",
+          "url": "https://hospitaldghs.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "health-private-hospital-license::c-responsible-authority",
+      "service_id": "health-private-hospital-license",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:45:37.164972+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    }
+  ]
+}

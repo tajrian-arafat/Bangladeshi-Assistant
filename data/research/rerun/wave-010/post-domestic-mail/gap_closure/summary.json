@@ -1,0 +1,28 @@
+{
+  "service_id": "post-domestic-mail",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-post-domestic-mail-portal-unreachable",
+      "service_id": "post-domestic-mail",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Domestic Mail Service.",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/921b98dc-cb15-4be4-8f0d-0125130c19f3/-"
+    },
+    {
+      "gap_id": "gap-post-domestic-mail-fee-unverified",
+      "service_id": "post-domestic-mail",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Domestic Mail Service.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-domestic-mail-documents-unverified",
+      "service_id": "post-domestic-mail",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Domestic Mail Service.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

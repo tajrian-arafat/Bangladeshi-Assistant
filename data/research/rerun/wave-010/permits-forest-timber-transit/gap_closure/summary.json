@@ -1,0 +1,28 @@
+{
+  "service_id": "permits-forest-timber-transit",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-permits-forest-timber-transit-portal-unreachable",
+      "service_id": "permits-forest-timber-transit",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Forest Timber Transit Permit.",
+      "severity": "MEDIUM",
+      "url": "https://bforest.gov.bd/"
+    },
+    {
+      "gap_id": "gap-permits-forest-timber-transit-fee-unverified",
+      "service_id": "permits-forest-timber-transit",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Forest Timber Transit Permit.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-permits-forest-timber-transit-documents-unverified",
+      "service_id": "permits-forest-timber-transit",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Forest Timber Transit Permit.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

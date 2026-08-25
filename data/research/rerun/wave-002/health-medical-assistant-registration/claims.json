@@ -1,0 +1,70 @@
+{
+  "service_id": "health-medical-assistant-registration",
+  "claims": [
+    {
+      "claim_id": "health-medical-assistant-registration::c-catalogue-authority",
+      "service_id": "health-medical-assistant-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Medical and Dental Council (BMDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-medical-assistant-registration::c-official-url-documented",
+      "service_id": "health-medical-assistant-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://payment.bmdc.org.bd/home/page/form-list for Medical Assistant BMDC Registration; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://payment.bmdc.org.bd/home/page/form-list"
+      },
+      "source_ids": [
+        "src-health-medical-assistant-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-medical-assistant-registration::c-procedure-overview",
+      "service_id": "health-medical-assistant-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Medical Assistant BMDC Registration is a government service under Bangladesh Medical and Dental Council (BMDC) (professional registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-medical-assistant-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-medical-assistant-registration::c-service-identity",
+      "service_id": "health-medical-assistant-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Medical Assistant BMDC Registration (মেডিকেল Assistant BMDC নিবন্ধন) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-medical-assistant-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

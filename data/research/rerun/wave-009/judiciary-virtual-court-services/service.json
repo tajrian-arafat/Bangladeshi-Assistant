@@ -1,0 +1,152 @@
+{
+  "service_id": "judiciary-virtual-court-services",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Virtual Court Services",
+  "service_name_bn": "ভার্চুয়াল/অনলাইন আদালত সেবা",
+  "aliases": [
+    "virtual court Bangladesh",
+    "e-court hearing"
+  ],
+  "category_id": "judiciary",
+  "profile_key": "JUDICIARY",
+  "responsible_agency": "Law and Justice Division / Supreme Court of Bangladesh",
+  "official_application_url": "https://supremecourt.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "judiciary-virtual-court-services::c-catalogue-authority",
+      "service_id": "judiciary-virtual-court-services",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Law and Justice Division / Supreme Court of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-virtual-court-services::c-official-portal",
+      "service_id": "judiciary-virtual-court-services",
+      "claim_type": "application_url",
+      "claim_text": "Virtual Court Services official information is published at https://supremecourt.gov.bd/ (page title: Home : Supreme Court of Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://supremecourt.gov.bd/"
+      },
+      "source_ids": [
+        "src-judiciary-virtual-court-services-official"
+      ],
+      "evidence_ids": [
+        "ev-judiciary-virtual-court-services::c-official-portal-src-judiciary-virtual-court-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-virtual-court-services::c-procedure-overview",
+      "service_id": "judiciary-virtual-court-services",
+      "claim_type": "procedure_step",
+      "claim_text": "Virtual Court Services is a government service under Law and Justice Division / Supreme Court of Bangladesh (virtual court). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-virtual-court-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-virtual-court-services::c-service-identity",
+      "service_id": "judiciary-virtual-court-services",
+      "claim_type": "eligibility",
+      "claim_text": "Virtual Court Services (ভার্চুয়াল/অনলাইন আদালত সেবা) is a confirmed government service in category judiciary, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-virtual-court-services-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-judiciary-virtual-court-services-official",
+      "service_id": "judiciary-virtual-court-services",
+      "url": "https://supremecourt.gov.bd/",
+      "title": "Home : Supreme Court of Bangladesh",
+      "authority_id": "law-and-justice-division-supreme-court-of-bangladesh",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://supremecourt.gov.bd/web/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Home : Supreme Court of Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "e5decda8a88bfb6f",
+        "retrieved_at": "2026-08-25T03:28:07.522124+00:00"
+      },
+      "evidence_locator": "probe:https://supremecourt.gov.bd/"
+    },
+    {
+      "source_id": "src-judiciary-virtual-court-services-alt-1",
+      "service_id": "judiciary-virtual-court-services",
+      "url": "https://www.mygov.bd/",
+      "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+      "authority_id": "law-and-justice-division-supreme-court-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.mygov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "642b0fc8168c9d67",
+        "retrieved_at": "2026-08-25T03:28:09.751643+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-judiciary-virtual-court-services-fee-unverified",
+      "service_id": "judiciary-virtual-court-services",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Virtual Court Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-judiciary-virtual-court-services-documents-unverified",
+      "service_id": "judiciary-virtual-court-services",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Virtual Court Services.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "service_id": "passport-mrp-initial",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Machine Readable Passport - Initial Application",
+  "service_name_bn": "পাসপোর্ট প্রাথমিক/নতুন আবেদন (MRP)",
+  "aliases": [
+    "new passport",
+    "DIP Form 1",
+    "MRP application"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "http://passport.gov.bd/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-form1",
+      "legacy_claim_id": "c-mrp-form1",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "application_url",
+      "claim_text": "Initial MRP applications use DIP Form 1 via passport.gov.bd online portal.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-form1-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-email-credentials",
+      "legacy_claim_id": "c-mrp-email-credentials",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "procedure_step",
+      "claim_text": "MRP online application provides Application ID and Password by email after first page save.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-email-credentials-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-biometric-visit",
+      "legacy_claim_id": "c-mrp-biometric-visit",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "procedure_step",
+      "claim_text": "After online submit, applicant must visit passport office with printed form for biometric enrollment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-biometric-visit-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-govt-single-form",
+      "legacy_claim_id": "c-mrp-govt-single-form",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "conditional_document",
+      "claim_text": "Certain government/retired/surrendered categories submit one form copy; others submit two copies (per MRP portal notice).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_category",
+        "op": "in",
+        "value": [
+          "government",
+          "retired_government",
+          "surrendered"
+        ]
+      },
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-govt-single-form-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-attested-copies",
+      "legacy_claim_id": "c-mrp-attested-copies",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "document",
+      "claim_text": "MRP pathway requires attested photocopies of NID/BRC and relevant certificates (contrasts with e-Passport no-attestation rule).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home",
+        "src-mrp-form-pdf"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-attested-copies-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-appointment-validity",
+      "legacy_claim_id": "c-mrp-appointment-validity",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "processing_time",
+      "claim_text": "MRP online application appointment validity stated as 5 days from system generation (per MRP portal).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-reissue"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-appointment-validity-src-mrp-reissue"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null
+}

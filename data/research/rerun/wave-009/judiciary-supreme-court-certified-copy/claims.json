@@ -1,0 +1,72 @@
+{
+  "service_id": "judiciary-supreme-court-certified-copy",
+  "claims": [
+    {
+      "claim_id": "judiciary-supreme-court-certified-copy::c-catalogue-authority",
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Supreme Court of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-certified-copy::c-official-portal",
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "claim_type": "application_url",
+      "claim_text": "Supreme Court Certified Copy of Judgment/Order official information is published at https://supremecourt.gov.bd/ (page title: Home : Supreme Court of Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://supremecourt.gov.bd/"
+      },
+      "source_ids": [
+        "src-judiciary-supreme-court-certified-copy-official"
+      ],
+      "evidence_ids": [
+        "ev-judiciary-supreme-court-certified-copy::c-official-portal-src-judiciary-supreme-court-certified-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-certified-copy::c-procedure-overview",
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "claim_type": "procedure_step",
+      "claim_text": "Supreme Court Certified Copy of Judgment/Order is a government service under Supreme Court of Bangladesh (certified copy). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-certified-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-certified-copy::c-service-identity",
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Supreme Court Certified Copy of Judgment/Order (সুপ্রীম কোর্ট certified copy) is a confirmed government service in category judiciary, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-certified-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

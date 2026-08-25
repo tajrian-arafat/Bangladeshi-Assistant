@@ -1,0 +1,136 @@
+{
+  "service_id": "dc-citizen-charter-rajshahi",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Rajshahi District Citizen Charter Services",
+  "service_name_bn": "রাজশাহী জেলা নাগরিক সেবা",
+  "aliases": [
+    "DC Rajshahi",
+    "Rajshahi District Citizen Charter Services"
+  ],
+  "category_id": "local_government",
+  "profile_key": "LOCAL_GOVERNMENT",
+  "responsible_agency": "Deputy Commissioner, Rajshahi District",
+  "official_application_url": "https://rajshahi.gov.bd/en",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "dc-citizen-charter-rajshahi::c-catalogue-authority",
+      "service_id": "dc-citizen-charter-rajshahi",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Deputy Commissioner, Rajshahi District.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-citizen-charter-rajshahi::c-official-url-documented",
+      "service_id": "dc-citizen-charter-rajshahi",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://rajshahi.gov.bd/en for Rajshahi District Citizen Charter Services; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://rajshahi.gov.bd/en"
+      },
+      "source_ids": [
+        "src-dc-citizen-charter-rajshahi-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-citizen-charter-rajshahi::c-procedure-overview",
+      "service_id": "dc-citizen-charter-rajshahi",
+      "claim_type": "procedure_step",
+      "claim_text": "Rajshahi District Citizen Charter Services is a government service under Deputy Commissioner, Rajshahi District (citizen charter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-citizen-charter-rajshahi-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-citizen-charter-rajshahi::c-service-identity",
+      "service_id": "dc-citizen-charter-rajshahi",
+      "claim_type": "eligibility",
+      "claim_text": "Rajshahi District Citizen Charter Services (রাজশাহী জেলা নাগরিক সেবা) is a confirmed government service in category local_government, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-citizen-charter-rajshahi-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-dc-citizen-charter-rajshahi-official",
+      "service_id": "dc-citizen-charter-rajshahi",
+      "url": "https://rajshahi.gov.bd/en",
+      "title": "Rajshahi District Citizen Charter Services",
+      "authority_id": "deputy-commissioner-rajshahi-district",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://rajshahi.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:25:15.488903+00:00"
+      },
+      "evidence_locator": "probe:https://rajshahi.gov.bd/en"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-dc-citizen-charter-rajshahi-portal-unreachable",
+      "service_id": "dc-citizen-charter-rajshahi",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Rajshahi District Citizen Charter Services.",
+      "severity": "MEDIUM",
+      "url": "https://rajshahi.gov.bd/en"
+    },
+    {
+      "gap_id": "gap-dc-citizen-charter-rajshahi-fee-unverified",
+      "service_id": "dc-citizen-charter-rajshahi",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rajshahi District Citizen Charter Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dc-citizen-charter-rajshahi-documents-unverified",
+      "service_id": "dc-citizen-charter-rajshahi",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Rajshahi District Citizen Charter Services.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

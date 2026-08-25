@@ -1,0 +1,224 @@
+{
+  "service_id": "brta-smart-card-driving-license",
+  "batch_id": "batch-03a-brta-driving-licence",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Smart Card Driving License",
+  "service_name_bn": "স্মার্ট কার্ড ড্রাইভিং লাইসেন্স",
+  "aliases": [
+    "e-driving license",
+    "professional driving license",
+    "non-professional license"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "driver"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-smart-card-driving-license::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_type": "application_url",
+      "claim_text": "Smart card driving license issuance/upgrade is processed via BSP at bsp.brta.gov.bd/bsp after training and examination requirements met.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-portal-url-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-after-learner-validity",
+      "legacy_claim_id": "c-after-learner-validity",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_type": "eligibility",
+      "claim_text": "Applicant must complete learner license period and authorized driving training before smart card professional/non-professional license.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-learner-portal",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-after-learner-validity-src-bsp-learner-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-dctc-exams-required",
+      "legacy_claim_id": "c-dctc-exams-required",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Smart card license requires passing DCTC written, oral, and field (practical) driving tests (catalogue notes).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services",
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-dctc-exams-required-src-brta-portal-dl-services"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-professional-vs-non-professional",
+      "legacy_claim_id": "c-professional-vs-non-professional",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_type": "eligibility",
+      "claim_text": "License classes split professional (e.g., heavy passenger/goods) and non-professional (private/light) with different age, medical, and training rules.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-professional-vs-non-professional-src-brta-portal-dl-services"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-registered-training-school",
+      "legacy_claim_id": "c-registered-training-school",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_type": "eligibility",
+      "claim_text": "Driving training must be completed at BRTA-registered motor driving training school (linked to brta-driving-school-registration ecosystem).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-registered-training-school-src-brta-portal-dl-services"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-smart-card-fee-calculator",
+      "legacy_claim_id": "c-smart-card-fee-calculator",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_type": "fee",
+      "claim_text": "Smart card driving license fee computed via BSP fee calculator based on license class and validity duration.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-smart-card-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-biometrics-collection",
+      "legacy_claim_id": "c-biometrics-collection",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Smart card issuance includes biometric capture (photograph, signature, fingerprints) at BRTA circle office or designated enrollment point.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-biometrics-collection-src-brta-portal-dl-services"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-written-oral-field-sequence",
+      "legacy_claim_id": "c-written-oral-field-sequence",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Examination sequence: DCTC written test → oral test → field/practical test; results published on BSP DCTB result portal.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-written-oral-field-sequence-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-smart-card-driving-license::c-practical-check-dctc-result",
+      "legacy_claim_id": "c-practical-check-dctc-result",
+      "service_id": "brta-smart-card-driving-license",
+      "claim_type": "practical_tip",
+      "claim_text": "Check bsp.brta.gov.bd/dctbResult after examinations before initiating smart card payment to avoid rejected applications.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-dctb-result"
+      ],
+      "evidence_ids": [
+        "ev-brta-smart-card-driving-license::c-practical-check-dctc-result-src-bsp-dctb-result"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Issued after learner period and DCTC written/oral/field tests.",
+  "prior_batch_research": null
+}

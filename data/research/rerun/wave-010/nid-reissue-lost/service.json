@@ -1,0 +1,134 @@
+{
+  "service_id": "nid-reissue-lost",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "NID Reissue for Lost or Damaged Card",
+  "service_name_bn": "হারানো/নষ্ট এনআইডি পুনর্মুদ্রণ (রিইস্যু)",
+  "aliases": [
+    "duplicate NID",
+    "lost voter ID",
+    "NID reprint"
+  ],
+  "category_id": "identity",
+  "profile_key": "IDENTITY_CIVIL",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "nid-reissue-lost::c-catalogue-authority",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-official-portal",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "application_url",
+      "claim_text": "NID Reissue for Lost or Damaged Card official information is published at https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction (page title: Bangladesh NID Application System | সাধারন জিজ্ঞাসা).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction"
+      },
+      "source_ids": [
+        "src-nid-reissue-lost-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-reissue-lost::c-official-portal-src-nid-reissue-lost-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-procedure-overview",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "procedure_step",
+      "claim_text": "NID Reissue for Lost or Damaged Card is a government service under Bangladesh Election Commission (NID Wing) (nid reissue). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-reissue-lost-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-service-identity",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "eligibility",
+      "claim_text": "NID Reissue for Lost or Damaged Card (হারানো/নষ্ট এনআইডি পুনর্মুদ্রণ (রিইস্যু)) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-reissue-lost-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-nid-reissue-lost-official",
+      "service_id": "nid-reissue-lost",
+      "url": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+      "title": "Bangladesh NID Application System | সাধারন জিজ্ঞাসা",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | সাধারন জিজ্ঞাসা",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "76cca7f5e0e84011",
+        "retrieved_at": "2026-08-25T03:29:16.616538+00:00"
+      },
+      "evidence_locator": "probe:https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-nid-reissue-lost-fee-unverified",
+      "service_id": "nid-reissue-lost",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for NID Reissue for Lost or Damaged Card.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-nid-reissue-lost-documents-unverified",
+      "service_id": "nid-reissue-lost",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for NID Reissue for Lost or Damaged Card.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

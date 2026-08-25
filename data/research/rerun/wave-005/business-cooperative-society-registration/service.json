@@ -1,0 +1,169 @@
+{
+  "service_id": "business-cooperative-society-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Cooperative Society Registration",
+  "service_name_bn": "সমবায় সমিতি নিবন্ধন",
+  "aliases": [
+    "cooperative registration",
+    "coop society registration",
+    "service.rdcd.gov.bd"
+  ],
+  "category_id": "registrations",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Department of Cooperatives (RDCD)",
+  "official_application_url": "https://service.rdcd.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "business-cooperative-society-registration::c-catalogue-authority",
+      "service_id": "business-cooperative-society-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Cooperatives (RDCD).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-cooperative-society-registration::c-official-portal",
+      "service_id": "business-cooperative-society-registration",
+      "claim_type": "application_url",
+      "claim_text": "Cooperative Society Registration official information is published at https://service.rdcd.gov.bd/ (page title: আবেদনের জন্য দপ্তর ভিত্তিক সেবা নির্বাচন | পল্লী উন্নয়ন ও সমবায় বিভাগ সেবা | RDCD Services).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://service.rdcd.gov.bd/"
+      },
+      "source_ids": [
+        "src-business-cooperative-society-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-business-cooperative-society-registration::c-official-portal-src-business-cooperative-society-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-cooperative-society-registration::c-procedure-overview",
+      "service_id": "business-cooperative-society-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Cooperative Society Registration is a government service under Department of Cooperatives (RDCD) (cooperative). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-cooperative-society-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-cooperative-society-registration::c-service-identity",
+      "service_id": "business-cooperative-society-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Cooperative Society Registration (সমবায় সমিতি নিবন্ধন) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-cooperative-society-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-business-cooperative-society-registration-official",
+      "service_id": "business-cooperative-society-registration",
+      "url": "https://service.rdcd.gov.bd/",
+      "title": "আবেদনের জন্য দপ্তর ভিত্তিক সেবা নির্বাচন | পল্লী উন্নয়ন ও সমবায় বিভাগ সেবা | RDCD Services",
+      "authority_id": "department-of-cooperatives-rdcd",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://service.rdcd.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "আবেদনের জন্য দপ্তর ভিত্তিক সেবা নির্বাচন | পল্লী উন্নয়ন ও সমবায় বিভাগ সেবা | RDCD Services",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "0423b5e5de7879f6",
+        "retrieved_at": "2026-08-25T03:24:11.119030+00:00"
+      },
+      "evidence_locator": "probe:https://service.rdcd.gov.bd/"
+    },
+    {
+      "source_id": "src-business-cooperative-society-registration-alt-1",
+      "service_id": "business-cooperative-society-registration",
+      "url": "https://coop.gov.bd/",
+      "title": "Cooperative Society Registration",
+      "authority_id": "department-of-cooperatives-rdcd",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://coop.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:12.200281+00:00"
+      }
+    },
+    {
+      "source_id": "src-business-cooperative-society-registration-alt-2",
+      "service_id": "business-cooperative-society-registration",
+      "url": "https://dashboard.rdcd.gov.bd/tutorial/6",
+      "title": "Turorials - RDCD",
+      "authority_id": "department-of-cooperatives-rdcd",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dashboard.rdcd.gov.bd/tutorial/6?id=HTKKWKsykqw",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Turorials - RDCD",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "96845da8f4b0c465",
+        "retrieved_at": "2026-08-25T03:24:13.715120+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-business-cooperative-society-registration-fee-unverified",
+      "service_id": "business-cooperative-society-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Cooperative Society Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-cooperative-society-registration-documents-unverified",
+      "service_id": "business-cooperative-society-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Cooperative Society Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

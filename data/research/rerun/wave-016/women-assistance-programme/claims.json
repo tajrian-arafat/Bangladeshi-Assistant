@@ -1,0 +1,72 @@
+{
+  "service_id": "women-assistance-programme",
+  "claims": [
+    {
+      "claim_id": "women-assistance-programme::c-catalogue-authority",
+      "service_id": "women-assistance-programme",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Women Affairs (DWA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-assistance-programme::c-official-portal",
+      "service_id": "women-assistance-programme",
+      "claim_type": "application_url",
+      "claim_text": "Women Assistance Programme official information is published at http://dwa.portal.gov.bd/ (page title: হোম | মহিলা বিষয়ক অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://dwa.portal.gov.bd/"
+      },
+      "source_ids": [
+        "src-women-assistance-programme-official"
+      ],
+      "evidence_ids": [
+        "ev-women-assistance-programme::c-official-portal-src-women-assistance-programme-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-assistance-programme::c-procedure-overview",
+      "service_id": "women-assistance-programme",
+      "claim_type": "procedure_step",
+      "claim_text": "Women Assistance Programme is a government service under Department of Women Affairs (DWA) (welfare). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-assistance-programme-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-assistance-programme::c-service-identity",
+      "service_id": "women-assistance-programme",
+      "claim_type": "eligibility",
+      "claim_text": "Women Assistance Programme (মহিলা সহায়তা কর্মসূচি) is a confirmed government service in category women_children, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-assistance-programme-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

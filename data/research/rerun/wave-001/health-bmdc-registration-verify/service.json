@@ -1,0 +1,139 @@
+{
+  "service_id": "health-bmdc-registration-verify",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "BMDC Registration Verification",
+  "service_name_bn": "BMDC নিবন্ধন যাচাই",
+  "aliases": [
+    "doctor registration check",
+    "BMDC verify"
+  ],
+  "category_id": "health",
+  "profile_key": "HEALTH",
+  "responsible_agency": "Bangladesh Medical and Dental Council (BMDC)",
+  "official_application_url": "https://verify.bmdc.org.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "health-bmdc-registration-verify::c-catalogue-authority",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Medical and Dental Council (BMDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-registration-verify::c-official-url-documented",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://verify.bmdc.org.bd/ for BMDC Registration Verification; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://verify.bmdc.org.bd/"
+      },
+      "source_ids": [
+        "src-health-bmdc-registration-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-registration-verify::c-procedure-overview",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "procedure_step",
+      "claim_text": "BMDC Registration Verification is a government service under Bangladesh Medical and Dental Council (BMDC) (verification). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-bmdc-registration-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-registration-verify::c-service-identity",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "eligibility",
+      "claim_text": "BMDC Registration Verification (BMDC নিবন্ধন যাচাই) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-bmdc-registration-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-health-bmdc-registration-verify-official",
+      "service_id": "health-bmdc-registration-verify",
+      "url": "https://verify.bmdc.org.bd/",
+      "title": "Just a moment...",
+      "authority_id": "bmdc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://verify.bmdc.org.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "2a7e40a50b9c326c",
+        "retrieved_at": "2026-08-25T03:19:40.714107+00:00"
+      },
+      "evidence_locator": "probe:https://verify.bmdc.org.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-health-bmdc-registration-verify-portal-unreachable",
+      "service_id": "health-bmdc-registration-verify",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for BMDC Registration Verification.",
+      "severity": "MEDIUM",
+      "url": "https://verify.bmdc.org.bd/"
+    },
+    {
+      "gap_id": "gap-health-bmdc-registration-verify-fee-unverified",
+      "service_id": "health-bmdc-registration-verify",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BMDC Registration Verification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-bmdc-registration-verify-documents-unverified",
+      "service_id": "health-bmdc-registration-verify",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BMDC Registration Verification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

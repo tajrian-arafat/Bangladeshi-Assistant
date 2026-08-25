@@ -1,0 +1,60 @@
+{
+  "ticks": [
+    {
+      "tick": 0,
+      "batch_before": "BATCH_SIM_A",
+      "batch_after": "BATCH_SIM_B",
+      "phase_before": "REGRESSION",
+      "phase_after": "RESEARCH",
+      "steps": 5,
+      "last": {
+        "status": "RETRY",
+        "batch": "BATCH_SIM_B",
+        "phase": "RESEARCH",
+        "result_status": "PARTIAL",
+        "summary": "still working"
+      },
+      "workflow_status": "READY"
+    },
+    {
+      "tick": 1,
+      "batch_before": "BATCH_SIM_B",
+      "batch_after": "BATCH_SIM_B",
+      "phase_before": "RESEARCH",
+      "phase_after": "RESEARCH",
+      "steps": 5,
+      "last": {
+        "status": "RETRY",
+        "batch": "BATCH_SIM_B",
+        "phase": "RESEARCH",
+        "result_status": "PARTIAL",
+        "summary": "still working"
+      },
+      "workflow_status": "READY"
+    }
+  ],
+  "final": {
+    "status": "IN_PROGRESS",
+    "updated_at": "2026-08-25T03:41:07.651905+00:00",
+    "deployment_allowed": false,
+    "catalogue_progress": {
+      "total_confirmed_services": 454,
+      "researched_services": 59,
+      "verified_services": 58,
+      "published_services": 58,
+      "partially_covered_services": 1,
+      "deferred_services": 0,
+      "blocked_services": 0,
+      "completed_services": 58,
+      "services_remaining": 396,
+      "completed_batches": 4,
+      "total_batches": 19
+    },
+    "last_completed_batch": "BATCH_SIM_A",
+    "current_batch": "BATCH_SIM_B",
+    "workflow_status": "READY",
+    "overnight_ticks": 2,
+    "total_autonomous_steps": 10
+  },
+  "generated_at": "2026-08-25T03:41:07.651985+00:00"
+}

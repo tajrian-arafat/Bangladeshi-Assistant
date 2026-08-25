@@ -1,0 +1,27 @@
+{
+  "service_id": "btrc-neir-device-registration",
+  "gaps": [
+    {
+      "gap_id": "gap-btrc-neir-device-registration-portal-unreachable",
+      "service_id": "btrc-neir-device-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Mobile Device Registration (NEIR).",
+      "severity": "MEDIUM",
+      "url": "https://neir.btrc.gov.bd/"
+    },
+    {
+      "gap_id": "gap-btrc-neir-device-registration-fee-unverified",
+      "service_id": "btrc-neir-device-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mobile Device Registration (NEIR).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-btrc-neir-device-registration-documents-unverified",
+      "service_id": "btrc-neir-device-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Mobile Device Registration (NEIR).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

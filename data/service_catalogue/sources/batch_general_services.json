@@ -1,0 +1,2084 @@
+[
+  {
+    "service_id": "civil-birth-registration",
+    "service_name_bn": "জন্ম নিবন্ধন",
+    "service_name_en": "Birth Registration",
+    "aliases": [
+      "birth certificate",
+      "BRIS birth registration",
+      "জন্ম সনদ"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "birth",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration (Local Government Division)",
+    "target_user": [
+      "citizen",
+      "parent",
+      "guardian"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bdris.gov.bd/br/application",
+    "discovery_status": "CONFIRMED",
+    "notes": "Registration and certificate issuance are one BRIS workflow; do not list separately as birth certificate service."
+  },
+  {
+    "service_id": "civil-birth-registration-correction",
+    "service_name_bn": "জন্ম তথ্য সংশোধন",
+    "service_name_en": "Birth Registration Information Correction",
+    "aliases": [
+      "birth record correction",
+      "BRIS correction"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "birth_correction",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+    "target_user": [
+      "citizen",
+      "parent",
+      "guardian"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bdris.gov.bd/br/correction",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "civil-birth-registration-copy",
+    "service_name_bn": "জন্ম নিবন্ধন প্রতিলিপি",
+    "service_name_en": "Birth Registration Copy (Reprint)",
+    "aliases": [
+      "duplicate birth certificate",
+      "birth registration reprint"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "birth_copy",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bdris.gov.bd/br/reprint/add",
+    "discovery_status": "CONFIRMED",
+    "notes": "Copy/reprint variant; distinct from initial registration."
+  },
+  {
+    "service_id": "civil-birth-registration-duplicate-cancel",
+    "service_name_bn": "একাধিক জন্ম নিবন্ধন সনদ বাতিল",
+    "service_name_en": "Cancellation of Duplicate Birth Registrations",
+    "aliases": [
+      "duplicate birth cancel"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "birth_duplicate_cancel",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bdris.gov.bd/application/print",
+    "discovery_status": "CONFIRMED",
+    "notes": "Listed as application type on BDRIS print portal."
+  },
+  {
+    "service_id": "civil-death-registration",
+    "service_name_bn": "মৃত্যু নিবন্ধন",
+    "service_name_en": "Death Registration",
+    "aliases": [
+      "death certificate",
+      "BRIS death registration"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "death",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+    "target_user": [
+      "citizen",
+      "relative",
+      "guardian"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bdris.gov.bd/dr/application",
+    "discovery_status": "CONFIRMED",
+    "notes": "Registration and certificate issuance are one BRIS workflow."
+  },
+  {
+    "service_id": "civil-death-registration-correction",
+    "service_name_bn": "মৃত্যু তথ্য সংশোধন",
+    "service_name_en": "Death Registration Information Correction",
+    "aliases": [
+      "death record correction"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "death_correction",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+    "target_user": [
+      "citizen",
+      "relative"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bdris.gov.bd/dr/correction",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "civil-death-registration-copy",
+    "service_name_bn": "মৃত্যু নিবন্ধন প্রতিলিপি",
+    "service_name_en": "Death Registration Copy (Reprint)",
+    "aliases": [
+      "duplicate death certificate"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "death_copy",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+    "target_user": [
+      "citizen",
+      "relative"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bdris.gov.bd/dr/reprint/add",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "civil-death-registration-duplicate-cancel",
+    "service_name_bn": "একাধিক মৃত্যু নিবন্ধন সনদ বাতিল",
+    "service_name_en": "Cancellation of Duplicate Death Registrations",
+    "aliases": [
+      "duplicate death cancel"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "death_duplicate_cancel",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bdris.gov.bd/application/print",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "civil-birth-death-verify",
+    "service_name_bn": "জন্ম/মৃত্যু নিবন্ধন যাচাই",
+    "service_name_en": "Birth and Death Record Verification",
+    "aliases": [
+      "BDRIS verification",
+      "e-verify birth"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "verification",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+    "target_user": [
+      "citizen",
+      "employer",
+      "government_employee"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://everify.bdris.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "civil-bdris-application-print",
+    "service_name_bn": "আবেদনপত্র প্রিন্ট",
+    "service_name_en": "BDRIS Application Print",
+    "aliases": [
+      "BRIS application print"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "application_management",
+    "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bdris.gov.bd/application/print",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "civil-marriage-registration",
+    "service_name_bn": "বিবাহ নিবন্ধন",
+    "service_name_en": "Marriage Registration",
+    "aliases": [
+      "nikah registration",
+      "CRVS marriage registration"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "marriage",
+    "responsible_authority": "Ministry of Law, Justice and Parliamentary Affairs (CRVS Marriage & Divorce Portal)",
+    "target_user": [
+      "citizen",
+      "nikah_registrar"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+    "discovery_status": "CONFIRMED",
+    "notes": "Multi-step form via CRVS portal; registrars and civilians use separate roles."
+  },
+  {
+    "service_id": "civil-marriage-certificate-search",
+    "service_name_bn": "নিবন্ধিত বিবাহ সনদ অনুসন্ধান",
+    "service_name_en": "Completed Marriage Certificate Search",
+    "aliases": [
+      "marriage certificate lookup"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "marriage_certificate",
+    "responsible_authority": "Ministry of Law, Justice and Parliamentary Affairs",
+    "target_user": [
+      "citizen",
+      "nikah_registrar"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "civil-divorce-registration",
+    "service_name_bn": "তালাক নিবন্ধন",
+    "service_name_en": "Divorce Registration",
+    "aliases": [
+      "talak registration",
+      "Muslim divorce registration"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "divorce",
+    "responsible_authority": "Ministry of Law, Justice and Parliamentary Affairs (CRVS Marriage & Divorce Portal)",
+    "target_user": [
+      "citizen",
+      "nikah_registrar"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+    "discovery_status": "LIKELY",
+    "notes": "Portal name includes Divorce; governed also by Muslim Marriages and Divorces (Registration) Act 1974."
+  },
+  {
+    "service_id": "civil-marriage-registrar-directory",
+    "service_name_bn": "বিবাহ নিবন্ধক তালিকা",
+    "service_name_en": "Marriage Registrar Directory",
+    "aliases": [
+      "kazi list",
+      "nikah registrar list"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "registrar_directory",
+    "responsible_authority": "Law and Justice Division",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://marriage.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": "Includes Muslim, Hindu, and Special marriage registrar lists."
+  },
+  {
+    "service_id": "land-mutation-apply",
+    "service_name_bn": "নামজারি (মিউটেশন)",
+    "service_name_en": "Land Mutation (Namjari)",
+    "aliases": [
+      "mutation application",
+      "land ownership transfer"
+    ],
+    "category": "LAND",
+    "subcategory": "mutation",
+    "responsible_authority": "Ministry of Land",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://mutation.land.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "land-mutation-track",
+    "service_name_bn": "মিউটেশন আবেদন ট্র্যাকিং",
+    "service_name_en": "Mutation Application Tracking",
+    "aliases": [
+      "mutation status"
+    ],
+    "category": "LAND",
+    "subcategory": "mutation_tracking",
+    "responsible_authority": "Ministry of Land",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://mutation.land.gov.bd/search-application",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "land-mutation-dcr",
+    "service_name_bn": "মিউটেশন ডিসিআর/খতিয়ান",
+    "service_name_en": "Mutation DCR and Khatian Download",
+    "aliases": [
+      "online DCR",
+      "mutation khatian print"
+    ],
+    "category": "LAND",
+    "subcategory": "mutation_dcr",
+    "responsible_authority": "Ministry of Land",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://mutation.land.gov.bd/namjari-steps",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "land-khatian-online-copy",
+    "service_name_bn": "খতিয়ান অনলাইন কপি",
+    "service_name_en": "Online Khatian Copy",
+    "aliases": [
+      "e-porcha",
+      "DLRMS khatian",
+      "QR khatian"
+    ],
+    "category": "LAND",
+    "subcategory": "khatian_copy",
+    "responsible_authority": "Ministry of Land (DLRMS)",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://dlrms.land.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": "120 BDT online/instant copy per DLRMS homepage."
+  },
+  {
+    "service_id": "land-khatian-certified-copy",
+    "service_name_bn": "সার্টিফাইড/সত্যায়িত খতিয়ান",
+    "service_name_en": "Certified Khatian Copy",
+    "aliases": [
+      "certified land record"
+    ],
+    "category": "LAND",
+    "subcategory": "khatian_certified",
+    "responsible_authority": "Ministry of Land (DLRMS)",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://land.gov.bd/vumisheba-fee",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "land-khatian-correction",
+    "service_name_bn": "খতিয়ান সংশোধন",
+    "service_name_en": "Khatian Record Correction",
+    "aliases": [
+      "record correction",
+      "land record amendment"
+    ],
+    "category": "LAND",
+    "subcategory": "record_correction",
+    "responsible_authority": "Ministry of Land",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://land.gov.bd/vumisheba-fee",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "land-mouza-map",
+    "service_name_bn": "মৌজা ম্যাপ/চিতা",
+    "service_name_en": "Mouza Map Request",
+    "aliases": [
+      "land map",
+      "mouza chita"
+    ],
+    "category": "LAND",
+    "subcategory": "map",
+    "responsible_authority": "Ministry of Land",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://land.gov.bd/vumisheba-fee",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "land-dlrms-application-track",
+    "service_name_bn": "ভূমি রেকর্ড আবেদন ট্র্যাকিং",
+    "service_name_en": "Land Record Application Tracking (DLRMS)",
+    "aliases": [
+      "DLRMS track"
+    ],
+    "category": "LAND",
+    "subcategory": "application_tracking",
+    "responsible_authority": "Ministry of Land (DLRMS)",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://dlrms.land.gov.bd/application/track",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "land-partition-consolidation",
+    "service_name_bn": "জমাভাগ ও জমা একত্রিকরণ",
+    "service_name_en": "Land Partition and Consolidation (Record Correction)",
+    "aliases": [
+      "joma bhag",
+      "joma ekikaran"
+    ],
+    "category": "LAND",
+    "subcategory": "partition_consolidation",
+    "responsible_authority": "Ministry of Land",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://www.land.gov.bd/nagorik-subidha",
+    "discovery_status": "LIKELY",
+    "notes": "Processed via mutation/record correction framework per citizen services policy."
+  },
+  {
+    "service_id": "land-mortgage-info-search",
+    "service_name_bn": "মর্টগেজ তথ্য অনুসন্ধান",
+    "service_name_en": "Land Mortgage Information Search",
+    "aliases": [
+      "mortgage search"
+    ],
+    "category": "LAND",
+    "subcategory": "mortgage",
+    "responsible_authority": "Ministry of Land",
+    "target_user": [
+      "citizen",
+      "landowner",
+      "bank"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://mutation.land.gov.bd/search-mortgage-info",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "land-survey-khatian-search",
+    "service_name_bn": "সার্ভে খতিয়ান অনুসন্ধান",
+    "service_name_en": "Survey Khatian Search",
+    "aliases": [
+      "RS khatian search",
+      "CS khatian search"
+    ],
+    "category": "LAND",
+    "subcategory": "khatian_search",
+    "responsible_authority": "Ministry of Land (DLRMS)",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://dlrms.land.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "land-mutation-khatian-search",
+    "service_name_bn": "নামজারি খতিয়ান অনুসন্ধান",
+    "service_name_en": "Mutation Khatian Search",
+    "aliases": [
+      "namjari khatian search"
+    ],
+    "category": "LAND",
+    "subcategory": "khatian_search",
+    "responsible_authority": "Ministry of Land (DLRMS)",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://dlrms.land.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "tax-etin-registration",
+    "service_name_bn": "ই-টিআইএন নিবন্ধন",
+    "service_name_en": "e-TIN Registration",
+    "aliases": [
+      "TIN registration",
+      "tax identification number"
+    ],
+    "category": "TAX",
+    "subcategory": "tin",
+    "responsible_authority": "National Board of Revenue (NBR)",
+    "target_user": [
+      "citizen",
+      "business",
+      "foreigner"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://nbr.gov.bd/all-faq/e-services/eng",
+    "discovery_status": "CONFIRMED",
+    "notes": "Registration via incometax.gov.bd referenced on NBR FAQ."
+  },
+  {
+    "service_id": "tax-income-return-file",
+    "service_name_bn": "আয়কর রিটার্ন দাখিল",
+    "service_name_en": "Income Tax Return Filing (e-Return)",
+    "aliases": [
+      "e-return",
+      "IT-11GA"
+    ],
+    "category": "TAX",
+    "subcategory": "return",
+    "responsible_authority": "National Board of Revenue (NBR)",
+    "target_user": [
+      "citizen",
+      "business"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://nbr.gov.bd/all-faq/e-services/return-verify",
+    "discovery_status": "CONFIRMED",
+    "notes": "Online filing via etaxnbr.gov.bd referenced on NBR site."
+  },
+  {
+    "service_id": "tax-clearance-foreigners",
+    "service_name_bn": "বিদেশিদের কর ছাড়পত্র",
+    "service_name_en": "Tax Clearance Certificate for Foreigners",
+    "aliases": [
+      "tax clearance certificate"
+    ],
+    "category": "TAX",
+    "subcategory": "clearance",
+    "responsible_authority": "National Board of Revenue (NBR)",
+    "target_user": [
+      "foreigner",
+      "expatriate"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://nbr.gov.bd/all-eservices/eng",
+    "discovery_status": "CONFIRMED",
+    "notes": "Listed under Income Tax eServices on NBR portal."
+  },
+  {
+    "service_id": "vat-bin-registration",
+    "service_name_bn": "ভ্যাট/টার্নওভার ট্যাক্স নিবন্ধন (BIN)",
+    "service_name_en": "VAT Registration (Business Identification Number)",
+    "aliases": [
+      "BIN registration",
+      "VAT 2.1",
+      "Mushak 2.1"
+    ],
+    "category": "VAT",
+    "subcategory": "registration",
+    "responsible_authority": "National Board of Revenue (NBR)",
+    "target_user": [
+      "business",
+      "importer",
+      "exporter"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://nbr.gov.bd/faq/vat-faq/eng",
+    "discovery_status": "CONFIRMED",
+    "notes": "Turnover above 8 million BDT requires registration."
+  },
+  {
+    "service_id": "vat-turnover-enlistment",
+    "service_name_bn": "টার্নওভার ট্যাক্স তালিকাভুক্তি",
+    "service_name_en": "Turnover Tax Enlistment",
+    "aliases": [
+      "VAT enlistment",
+      "BIN enlistment"
+    ],
+    "category": "VAT",
+    "subcategory": "enlistment",
+    "responsible_authority": "National Board of Revenue (NBR)",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://nbr.gov.bd/faq/vat-faq/eng",
+    "discovery_status": "CONFIRMED",
+    "notes": "For turnover 3-8 million BDT per 12 months."
+  },
+  {
+    "service_id": "customs-asycuda-declaration",
+    "service_name_bn": "কাস্টমস ASYCUDA ঘোষণা",
+    "service_name_en": "Customs Declaration (ASYCUDA World)",
+    "aliases": [
+      "bill of entry",
+      "customs clearance",
+      "SAD"
+    ],
+    "category": "CUSTOMS",
+    "subcategory": "declaration",
+    "responsible_authority": "National Board of Revenue - Customs",
+    "target_user": [
+      "business",
+      "importer",
+      "exporter"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://nbr.gov.bd/uploads/publications/Final_Newsletter_Design_for_NBR_Customs.pdf",
+    "discovery_status": "LIKELY",
+    "notes": "ASYCUDA World used at custom houses and stations nationwide."
+  },
+  {
+    "service_id": "customs-bond-up-application",
+    "service_name_bn": "বন্ড ইউটিলাইজেশন পারমিট (UP)",
+    "service_name_en": "Customs Bond Utilization Permit (UP) Application",
+    "aliases": [
+      "UP module",
+      "bond UP"
+    ],
+    "category": "CUSTOMS",
+    "subcategory": "bond",
+    "responsible_authority": "National Board of Revenue - Customs",
+    "target_user": [
+      "business",
+      "manufacturer"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://nbr.gov.bd/uploads/publications/5._User_Manual_of_UP_.pdf",
+    "discovery_status": "LIKELY",
+    "notes": "Portal referenced as cusbond.gov.bd in user manual."
+  },
+  {
+    "service_id": "trade-irc-registration",
+    "service_name_bn": "আমদানি নিবন্ধন সনদ (IRC)",
+    "service_name_en": "Import Registration Certificate (IRC)",
+    "aliases": [
+      "IRC",
+      "import licence"
+    ],
+    "category": "TRADE",
+    "subcategory": "import_registration",
+    "responsible_authority": "Office of the Chief Controller of Imports and Exports (CCI&E)",
+    "target_user": [
+      "business",
+      "importer"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://olm.ccie.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "trade-erc-registration",
+    "service_name_bn": "রপ্তানি নিবন্ধন সনদ (ERC)",
+    "service_name_en": "Export Registration Certificate (ERC)",
+    "aliases": [
+      "ERC",
+      "export licence"
+    ],
+    "category": "TRADE",
+    "subcategory": "export_registration",
+    "responsible_authority": "Office of the Chief Controller of Imports and Exports (CCI&E)",
+    "target_user": [
+      "business",
+      "exporter"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://olm.ccie.gov.bd/",
+    "discovery_status": "LIKELY",
+    "notes": "Same OLM portal handles import/export licensing."
+  },
+  {
+    "service_id": "trade-irc-erc-renewal",
+    "service_name_bn": "IRC/ERC নবায়ন",
+    "service_name_en": "IRC/ERC Renewal",
+    "aliases": [
+      "import export certificate renewal"
+    ],
+    "category": "TRADE",
+    "subcategory": "renewal",
+    "responsible_authority": "Office of the Chief Controller of Imports and Exports (CCI&E)",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://olm.ccie.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": "Apply at least 60 days before expiry per OLM notice."
+  },
+  {
+    "service_id": "business-name-clearance",
+    "service_name_bn": "নাম অনুমোদন (Name Clearance)",
+    "service_name_en": "Company Name Clearance",
+    "aliases": [
+      "NC",
+      "name clearance certificate"
+    ],
+    "category": "BUSINESS",
+    "subcategory": "name_clearance",
+    "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
+    "target_user": [
+      "business",
+      "entrepreneur"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
+    "discovery_status": "CONFIRMED",
+    "notes": "Prerequisite for company/society/trade organization registration."
+  },
+  {
+    "service_id": "business-entity-name-search",
+    "service_name_bn": "প্রতিষ্ঠানের নাম অনুসন্ধান",
+    "service_name_en": "Entity Name Search",
+    "aliases": [
+      "RJSC name search",
+      "company name check"
+    ],
+    "category": "BUSINESS",
+    "subcategory": "name_search",
+    "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
+    "target_user": [
+      "business",
+      "entrepreneur"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://app.roc.gov.bd/psp/nc_search",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "business-company-incorporation",
+    "service_name_bn": "কোম্পানি নিবন্ধন",
+    "service_name_en": "Company Incorporation",
+    "aliases": [
+      "company registration",
+      "certificate of incorporation"
+    ],
+    "category": "REGISTRATIONS",
+    "subcategory": "company",
+    "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
+    "target_user": [
+      "business",
+      "entrepreneur"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+    "discovery_status": "CONFIRMED",
+    "notes": "Private, public, and foreign companies under Companies Act 1994."
+  },
+  {
+    "service_id": "business-partnership-registration",
+    "service_name_bn": "অংশীদারিত্ব ফার্ম নিবন্ধন",
+    "service_name_en": "Partnership Firm Registration",
+    "aliases": [
+      "partnership registration"
+    ],
+    "category": "REGISTRATIONS",
+    "subcategory": "partnership",
+    "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "business-society-registration",
+    "service_name_bn": "সোসাইটি নিবন্ধন",
+    "service_name_en": "Society Registration",
+    "aliases": [
+      "NGO society registration",
+      "society incorporation"
+    ],
+    "category": "REGISTRATIONS",
+    "subcategory": "society",
+    "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
+    "target_user": [
+      "organization"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "business-trade-organization-registration",
+    "service_name_bn": "ট্রেড অর্গানাইজেশন নিবন্ধন",
+    "service_name_en": "Trade Organization Registration",
+    "aliases": [
+      "trade association registration"
+    ],
+    "category": "REGISTRATIONS",
+    "subcategory": "trade_organization",
+    "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
+    "target_user": [
+      "business",
+      "trade_association"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "business-foreign-company-registration",
+    "service_name_bn": "বিদেশি কোম্পানি নিবন্ধন",
+    "service_name_en": "Foreign Company Registration (Branch/Liaison)",
+    "aliases": [
+      "branch office registration",
+      "liaison office"
+    ],
+    "category": "REGISTRATIONS",
+    "subcategory": "foreign_company",
+    "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
+    "target_user": [
+      "business",
+      "foreign_investor"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+    "discovery_status": "CONFIRMED",
+    "notes": "Name clearance not required for foreign companies per RJSC FAQ."
+  },
+  {
+    "service_id": "licence-trade-union-parishad",
+    "service_name_bn": "ট্রেড লাইসেন্স (ইউনিয়ন পরিষদ)",
+    "service_name_en": "Trade Licence (Union Parishad)",
+    "aliases": [
+      "union trade license",
+      "business licence union"
+    ],
+    "category": "LICENCES",
+    "subcategory": "trade_licence",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://www.bangladeshtradeportal.gov.bd/index.php?id=65&r=searchProcedure%2Fview1",
+    "discovery_status": "CONFIRMED",
+    "notes": "Also available via union digital certificate systems."
+  },
+  {
+    "service_id": "licence-trade-municipality",
+    "service_name_bn": "ট্রেড লাইসেন্স (পৌরসভা)",
+    "service_name_en": "Trade Licence (Municipality/Pourashava)",
+    "aliases": [
+      "pourashava trade license"
+    ],
+    "category": "LICENCES",
+    "subcategory": "trade_licence",
+    "responsible_authority": "Municipality (Pourashava)",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://www.bangladeshtradeportal.gov.bd/index.php?id=75&r=searchProcedure%2Fview1",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "licence-trade-dncc",
+    "service_name_bn": "ট্রেড লাইসেন্স (ঢাকা উত্তর সিটি কর্পোরেশন)",
+    "service_name_en": "Trade Licence (Dhaka North City Corporation)",
+    "aliases": [
+      "DNCC trade license",
+      "e-trade license DNCC"
+    ],
+    "category": "LICENCES",
+    "subcategory": "trade_licence",
+    "responsible_authority": "Dhaka North City Corporation (DNCC)",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://erevenue.dncc.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "licence-trade-dscc",
+    "service_name_bn": "ট্রেড লাইসেন্স (ঢাকা দক্ষিণ সিটি কর্পোরেশন)",
+    "service_name_en": "Trade Licence (Dhaka South City Corporation)",
+    "aliases": [
+      "DSCC trade license"
+    ],
+    "category": "LICENCES",
+    "subcategory": "trade_licence",
+    "responsible_authority": "Dhaka South City Corporation (DSCC)",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "http://erevenue.dncc.gov.bd/cp/cportal/cp/southcc.aspx",
+    "discovery_status": "CONFIRMED",
+    "notes": "DSCC wing on DNCC e-Revenue portal."
+  },
+  {
+    "service_id": "local-inheritance-certificate",
+    "service_name_bn": "উত্তরাধিকার/ওয়ারিশ সনদ",
+    "service_name_en": "Inheritance Certificate",
+    "aliases": [
+      "warish certificate",
+      "succession certificate"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "inheritance",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://certificate.uniontax.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "local-nationality-certificate",
+    "service_name_bn": "জাতীয়তা সনদ",
+    "service_name_en": "Nationality Certificate",
+    "aliases": [
+      "nationality attestation"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "nationality",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
+    "discovery_status": "CONFIRMED",
+    "notes": "Representative union portal listing certificate types."
+  },
+  {
+    "service_id": "local-character-certificate",
+    "service_name_bn": "চারিত্রিক সনদ",
+    "service_name_en": "Character Certificate",
+    "aliases": [
+      "citizenship and character certificate"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "character",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen",
+      "student"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://www.chandanpurup.gov.bd/new/application/citizen",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "local-income-certificate",
+    "service_name_bn": "বার্ষিক/মাসিক আয়ের সনদ",
+    "service_name_en": "Income Certificate",
+    "aliases": [
+      "monthly income certificate",
+      "annual income attestation"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "income",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen",
+      "student"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "local-marital-status-certificate",
+    "service_name_bn": "বিবাহিত/অবিবাহিত/তালাকপ্রাপ্ত সনদ",
+    "service_name_en": "Marital Status Certificate",
+    "aliases": [
+      "unmarried certificate",
+      "married certificate",
+      "divorce certificate union"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "marital_status",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://www.palshaup.gov.bd/new/application/citizen/17",
+    "discovery_status": "CONFIRMED",
+    "notes": "Union-issued marital attestation distinct from BRIS/marriage.gov.bd registration."
+  },
+  {
+    "service_id": "local-noc-certificate",
+    "service_name_bn": "অনাপত্তি সনদ (NOC)",
+    "service_name_en": "No Objection Certificate (NOC)",
+    "aliases": [
+      "NOC union parishad"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "noc",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "local-certificate-verify",
+    "service_name_bn": "ইউনিয়ন সনদ যাচাই",
+    "service_name_en": "Union Certificate Verification Search",
+    "aliases": [
+      "sonod search",
+      "certificate tracking"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "verification",
+    "responsible_authority": "Union Parishad (Digital Union Tax System)",
+    "target_user": [
+      "citizen",
+      "employer"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://uniontax.gov.bd/sonod/search",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "local-passport-attestation",
+    "service_name_bn": "পাসপোর্ট সংক্রান্ত প্রত্যয়ন",
+    "service_name_en": "Passport-related Attestation (Union)",
+    "aliases": [
+      "passport attestation union"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "passport_attestation",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
+    "discovery_status": "CONFIRMED",
+    "notes": "Local attestation; distinct from DIP passport issuance."
+  },
+  {
+    "service_id": "police-clearance-certificate",
+    "service_name_bn": "পুলিশ ক্লিয়ারেন্স সার্টিফিকেট",
+    "service_name_en": "Police Clearance Certificate (PCC)",
+    "aliases": [
+      "PCC",
+      "police clearance",
+      "character certificate police"
+    ],
+    "category": "POLICE",
+    "subcategory": "clearance",
+    "responsible_authority": "Bangladesh Police",
+    "target_user": [
+      "citizen",
+      "expatriate",
+      "foreigner"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "police-general-diary",
+    "service_name_bn": "জিডি (General Diary)",
+    "service_name_en": "Online General Diary (GD)",
+    "aliases": [
+      "GD",
+      "online GD",
+      "lost report"
+    ],
+    "category": "POLICE",
+    "subcategory": "general_diary",
+    "responsible_authority": "Bangladesh Police",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "https://gd.police.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "police-passport-verification",
+    "service_name_bn": "পাসপোর্ট ভেরিফিকেশন",
+    "service_name_en": "Passport Verification",
+    "aliases": [
+      "passport police verification"
+    ],
+    "category": "POLICE",
+    "subcategory": "verification",
+    "responsible_authority": "Bangladesh Police (District/Special Branch)",
+    "target_user": [
+      "citizen",
+      "employer",
+      "government_employee"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "https://www.police.gov.bd/index.php/en/citizen_charter",
+    "discovery_status": "CONFIRMED",
+    "notes": "Normal 15-21 days; urgent 7 days per citizen charter."
+  },
+  {
+    "service_id": "police-employment-verification",
+    "service_name_bn": "চাকরির ভেরিফিকেশন",
+    "service_name_en": "Employment Verification",
+    "aliases": [
+      "job verification police"
+    ],
+    "category": "POLICE",
+    "subcategory": "verification",
+    "responsible_authority": "Bangladesh Police (District/Special Branch)",
+    "target_user": [
+      "citizen",
+      "employer"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "https://www.police.gov.bd/index.php/en/citizen_charter",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "police-cyber-support-women",
+    "service_name_bn": "পুলিশ সাইবার সাপোর্ট ফর উইমেন",
+    "service_name_en": "Police Cyber Support for Women (PCSW)",
+    "aliases": [
+      "PCSW",
+      "cyber support women"
+    ],
+    "category": "POLICE",
+    "subcategory": "cyber",
+    "responsible_authority": "Bangladesh Police Headquarters",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://www.police.gov.bd/index.php/en/citizen_charter",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "police-expatriate-services",
+    "service_name_bn": "প্রবাসী সেল সেবা",
+    "service_name_en": "Expatriate Cell Services",
+    "aliases": [
+      "expatriate police services"
+    ],
+    "category": "EXPATRIATE",
+    "subcategory": "police_support",
+    "responsible_authority": "Bangladesh Police (Expatriate Cell)",
+    "target_user": [
+      "expatriate",
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://www.police.gov.bd/index.php/en/citizen_charter",
+    "discovery_status": "CONFIRMED",
+    "notes": "Includes passport verification support for expatriates."
+  },
+  {
+    "service_id": "police-firearms-license",
+    "service_name_bn": "আগ্নেয়াস্ত্র লাইসেন্স",
+    "service_name_en": "Firearms License",
+    "aliases": [
+      "arms license",
+      "gun license"
+    ],
+    "category": "LICENCES",
+    "subcategory": "firearms",
+    "responsible_authority": "Bangladesh Police (District Special Branch)",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "https://www.police.gov.bd/index.php/en/citizen_charter",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "passport-mrp-initial",
+    "service_name_bn": "পাসপোর্ট প্রাথমিক/নতুন আবেদন (MRP)",
+    "service_name_en": "Machine Readable Passport - Initial Application",
+    "aliases": [
+      "new passport",
+      "DIP Form 1",
+      "MRP application"
+    ],
+    "category": "PASSPORT_IMMIGRATION",
+    "subcategory": "passport_new",
+    "responsible_authority": "Department of Immigration and Passports (DIP)",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "http://passport.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "passport-mrp-reissue",
+    "service_name_bn": "পাসপোর্ট পুন:ইssue/সংশোধন (MRP)",
+    "service_name_en": "Machine Readable Passport - Reissue/Correction",
+    "aliases": [
+      "passport renewal",
+      "DIP Form 2",
+      "passport correction"
+    ],
+    "category": "PASSPORT_IMMIGRATION",
+    "subcategory": "passport_reissue",
+    "responsible_authority": "Department of Immigration and Passports (DIP)",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "http://passport.gov.bd/UserHome.aspx",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "passport-application-status",
+    "service_name_bn": "পাসপোর্ট আবেদনের অবস্থা",
+    "service_name_en": "Passport Application Status Check",
+    "aliases": [
+      "MRP status",
+      "passport tracking"
+    ],
+    "category": "PASSPORT_IMMIGRATION",
+    "subcategory": "status",
+    "responsible_authority": "Department of Immigration and Passports (DIP)",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "http://passport.gov.bd/OnlineStatus.aspx",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "health-private-hospital-license",
+    "service_name_bn": "বেসরকারি হাসপাতাল লাইসেন্স",
+    "service_name_en": "Private Hospital Licence",
+    "aliases": [
+      "hospital registration DGHS",
+      "private hospital license"
+    ],
+    "category": "HEALTH",
+    "subcategory": "facility_licence",
+    "responsible_authority": "Directorate General of Health Services (DGHS) - Hospitals and Clinics Branch",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://hospitaldghs.gov.bd/",
+    "discovery_status": "LIKELY",
+    "notes": "Online application workflow documented in DGHS git knowledge base; exact public portal URL needs verification."
+  },
+  {
+    "service_id": "health-private-clinic-license",
+    "service_name_bn": "বেসরকারি ক্লিনিক লাইসেন্স",
+    "service_name_en": "Private Clinic Licence",
+    "aliases": [
+      "clinic registration DGHS"
+    ],
+    "category": "HEALTH",
+    "subcategory": "facility_licence",
+    "responsible_authority": "Directorate General of Health Services (DGHS) - Hospitals and Clinics Branch",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://hospitaldghs.gov.bd/",
+    "discovery_status": "LIKELY",
+    "notes": null
+  },
+  {
+    "service_id": "health-diagnostic-center-license",
+    "service_name_bn": "ডায়াগনostic/প্যাথলজি সেন্টার লাইসেন্স",
+    "service_name_en": "Diagnostic/Pathology Center Licence",
+    "aliases": [
+      "pathology center license",
+      "diagnostic center registration"
+    ],
+    "category": "HEALTH",
+    "subcategory": "facility_licence",
+    "responsible_authority": "Directorate General of Health Services (DGHS)",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice",
+    "discovery_status": "LIKELY",
+    "notes": null
+  },
+  {
+    "service_id": "health-blood-bank-license",
+    "service_name_bn": "ব্লাড ব্যাংক লাইসেন্স",
+    "service_name_en": "Blood Bank Licence",
+    "aliases": [
+      "blood bank registration"
+    ],
+    "category": "HEALTH",
+    "subcategory": "facility_licence",
+    "responsible_authority": "Directorate General of Health Services (DGHS)",
+    "target_user": [
+      "business",
+      "hospital"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md",
+    "discovery_status": "LIKELY",
+    "notes": "DGHS Hospitals and Clinics Branch issues and renews blood bank licences."
+  },
+  {
+    "service_id": "health-bmdc-full-registration",
+    "service_name_bn": "BMDC পূর্ণ নিবন্ধন (MBBS/BDS)",
+    "service_name_en": "BMDC Full Registration (MBBS/BDS)",
+    "aliases": [
+      "medical council registration",
+      "doctor registration"
+    ],
+    "category": "HEALTH",
+    "subcategory": "professional_registration",
+    "responsible_authority": "Bangladesh Medical and Dental Council (BMDC)",
+    "target_user": [
+      "doctor",
+      "dentist"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "health-bmdc-eligibility-certificate",
+    "service_name_bn": "BMDC যোগ্যতা সনদ",
+    "service_name_en": "BMDC Eligibility Certificate",
+    "aliases": [
+      "eligibility certificate medical"
+    ],
+    "category": "HEALTH",
+    "subcategory": "professional_certificate",
+    "responsible_authority": "Bangladesh Medical and Dental Council (BMDC)",
+    "target_user": [
+      "doctor",
+      "dentist",
+      "student"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "health-bmdc-additional-qualification",
+    "service_name_bn": "BMDC অতিরিক্ত যোগ্যতা নিবন্ধন",
+    "service_name_en": "BMDC Additional Qualification Registration",
+    "aliases": [
+      "specialist qualification registration"
+    ],
+    "category": "HEALTH",
+    "subcategory": "professional_registration",
+    "responsible_authority": "Bangladesh Medical and Dental Council (BMDC)",
+    "target_user": [
+      "doctor",
+      "dentist"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "health-bmdc-registration-verify",
+    "service_name_bn": "BMDC নিবন্ধন যাচাই",
+    "service_name_en": "BMDC Registration Verification",
+    "aliases": [
+      "doctor registration check",
+      "BMDC verify"
+    ],
+    "category": "HEALTH",
+    "subcategory": "verification",
+    "responsible_authority": "Bangladesh Medical and Dental Council (BMDC)",
+    "target_user": [
+      "citizen",
+      "employer",
+      "hospital"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://verify.bmdc.org.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "health-facility-registry",
+    "service_name_bn": "স্বাস্থ্য প্রতিষ্ঠান রেজিস্ট্রি",
+    "service_name_en": "Health Facility Registry (HRIS)",
+    "aliases": [
+      "facility registry DGHS",
+      "HRIS facility lookup"
+    ],
+    "category": "HEALTH",
+    "subcategory": "facility_registry",
+    "responsible_authority": "Directorate General of Health Services (DGHS)",
+    "target_user": [
+      "government_employee",
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://hrm.dghs.gov.bd/public/facility-registry/reports/organization-list",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "education-ssc-hsc-result-verify",
+    "service_name_bn": "SSC/HSC ফলাফল যাচাই",
+    "service_name_en": "SSC/HSC Result Verification",
+    "aliases": [
+      "board result check",
+      "education board result"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "result_verification",
+    "responsible_authority": "Intermediate and Secondary Education Boards Bangladesh",
+    "target_user": [
+      "citizen",
+      "student",
+      "employer"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "http://www.educationboard.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "education-ssc-certificate",
+    "service_name_bn": "SSC সনদ প্রদান",
+    "service_name_en": "SSC Certificate Issuance",
+    "aliases": [
+      "secondary school certificate"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "certificate",
+    "responsible_authority": "Board of Intermediate and Secondary Education (respective board)",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "http://www.educationboard.gov.bd/sylhet/activities.php",
+    "discovery_status": "CONFIRMED",
+    "notes": "Issued by board where candidate appeared."
+  },
+  {
+    "service_id": "education-hsc-certificate",
+    "service_name_bn": "HSC সনদ প্রদান",
+    "service_name_en": "HSC Certificate Issuance",
+    "aliases": [
+      "higher secondary certificate"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "certificate",
+    "responsible_authority": "Board of Intermediate and Secondary Education (respective board)",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "http://www.educationboard.gov.bd/sylhet/activities.php",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "education-ssc-transcript",
+    "service_name_bn": "SSC ট্রান্সক্রিপ্ট/ট্যাবুলেশন",
+    "service_name_en": "SSC Academic Transcript",
+    "aliases": [
+      "SSC marksheet",
+      "tabulation sheet"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "transcript",
+    "responsible_authority": "Board of Intermediate and Secondary Education (respective board)",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "http://www.educationboard.gov.bd/chittagong/general_program.php",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "education-hsc-transcript",
+    "service_name_bn": "HSC ট্রান্সক্রিপ্ট/ট্যাবুলেশন",
+    "service_name_en": "HSC Academic Transcript",
+    "aliases": [
+      "HSC marksheet"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "transcript",
+    "responsible_authority": "Board of Intermediate and Secondary Education (respective board)",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "http://www.educationboard.gov.bd/sylhet/activities.php",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "education-duplicate-certificate",
+    "service_name_bn": "SSC/HSC সনদ/ট্রান্সক্রিপ্টের ডুপ্লিকেট",
+    "service_name_en": "Duplicate SSC/HSC Certificate or Transcript",
+    "aliases": [
+      "lost certificate board",
+      "duplicate marksheet"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "duplicate_certificate",
+    "responsible_authority": "Controller of Examinations (respective board)",
+    "target_user": [
+      "student",
+      "citizen"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "http://www.educationboard.gov.bd/edb_rules_regulations_powers_duties_controller.php",
+    "discovery_status": "LIKELY",
+    "notes": "Applied to board office; no unified national online portal confirmed."
+  },
+  {
+    "service_id": "education-foreign-equivalency",
+    "service_name_bn": "বিদেশি ডিগ্রির সমতুল্যতা",
+    "service_name_en": "Foreign Qualification Equivalency",
+    "aliases": [
+      "equivalency certificate",
+      "foreign degree equivalence"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "equivalency",
+    "responsible_authority": "Board of Intermediate and Secondary Education (respective board)",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "http://www.educationboard.gov.bd/dhaka/rules_business.php",
+    "discovery_status": "CONFIRMED",
+    "notes": "Required for class XI enrollment after foreign qualifications."
+  },
+  {
+    "service_id": "education-class-registration",
+    "service_name_bn": "নবম/একাদশ শ্রেণী রেজিস্ট্রেশন",
+    "service_name_en": "Class IX/XI Board Registration",
+    "aliases": [
+      "registration card",
+      "board registration"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "student_registration",
+    "responsible_authority": "Board of Intermediate and Secondary Education (respective board)",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "http://www.educationboard.gov.bd/sylhet/activities.php",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "education-foreign-enrollment-permission",
+    "service_name_bn": "বিদেশি পাশের পর একাদশ শ্রেণী ভর্তির অনুমতি",
+    "service_name_en": "Permission for Class XI Enrollment (Foreign Qualification)",
+    "aliases": [
+      "foreign student enrollment permission"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "enrollment_permission",
+    "responsible_authority": "Board of Intermediate and Secondary Education (Inspector of Colleges)",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "http://www.educationboard.gov.bd/dhaka/rules_business.php",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "education-registration-card-correction",
+    "service_name_bn": "রেজিস্ট্রেশন কার্ড তথ্য সংশোধন",
+    "service_name_en": "Registration Card Information Correction",
+    "aliases": [
+      "SIF correction",
+      "registration card error fix"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "correction",
+    "responsible_authority": "Board of Intermediate and Secondary Education (respective board)",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "http://www.educationboard.gov.bd/dhaka/rules_business.php",
+    "discovery_status": "CONFIRMED",
+    "notes": "Must be done before card delivery; no changes accepted after delivery."
+  },
+  {
+    "service_id": "expatriate-emigration-clearance",
+    "service_name_bn": "অভিবাসন ছাড়পত্র (Emigration Clearance)",
+    "service_name_en": "Emigration Clearance for Overseas Employment",
+    "aliases": [
+      "BMET clearance",
+      "overseas worker clearance"
+    ],
+    "category": "EXPATRIATE",
+    "subcategory": "clearance",
+    "responsible_authority": "Bureau of Manpower, Employment and Training (BMET)",
+    "target_user": [
+      "expatriate",
+      "worker"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://oc.bmet.gov.bd/bmet_clr/rlEnrollment",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "expatriate-recruiting-agent-verify",
+    "service_name_bn": "রিক্রুটিং এজেন্ট যাচাই",
+    "service_name_en": "Recruiting Agent Verification",
+    "aliases": [
+      "RL agent list",
+      "BMET agent check"
+    ],
+    "category": "EXPATRIATE",
+    "subcategory": "agent_verification",
+    "responsible_authority": "Bureau of Manpower, Employment and Training (BMET)",
+    "target_user": [
+      "expatriate",
+      "worker",
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://old.bmet.gov.bd/BMET/agentlistpreview",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "expatriate-worker-registration",
+    "service_name_bn": "বিদেশে কর্মী নিবন্ধন",
+    "service_name_en": "Overseas Worker Registration",
+    "aliases": [
+      "BMET worker registration",
+      "employ registration form"
+    ],
+    "category": "EXPATRIATE",
+    "subcategory": "worker_registration",
+    "responsible_authority": "Bureau of Manpower, Employment and Training (BMET)",
+    "target_user": [
+      "expatriate",
+      "worker"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://old.bmet.gov.bd/BMET/downloadAction",
+    "discovery_status": "LIKELY",
+    "notes": "Registration forms published on BMET site; online workflow needs verification."
+  },
+  {
+    "service_id": "expatriate-bmet-training",
+    "service_name_bn": "BMET দক্ষতা/প্রশিক্ষণ",
+    "service_name_en": "BMET Skill Development Training",
+    "aliases": [
+      "skill training overseas employment",
+      "BMET training"
+    ],
+    "category": "EXPATRIATE",
+    "subcategory": "training",
+    "responsible_authority": "Bureau of Manpower, Employment and Training (BMET)",
+    "target_user": [
+      "worker",
+      "expatriate"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://old.bmet.gov.bd/BMET/downloadAction",
+    "discovery_status": "LIKELY",
+    "notes": "Training publications listed on BMET downloads page."
+  },
+  {
+    "service_id": "tax-challan-payment",
+    "service_name_bn": "কর/ভ্যাট চালান পরিশোধ",
+    "service_name_en": "Tax/VAT Challan Payment",
+    "aliases": [
+      "online chalan",
+      "government payment NBR"
+    ],
+    "category": "GOVERNMENT_PAYMENTS",
+    "subcategory": "challan",
+    "responsible_authority": "National Board of Revenue (NBR)",
+    "target_user": [
+      "citizen",
+      "business"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://nbr.gov.bd/all-eservices/eng",
+    "discovery_status": "CONFIRMED",
+    "notes": "Listed under Payment and Chalan eServices."
+  },
+  {
+    "service_id": "business-trade-license-renewal",
+    "service_name_bn": "ট্রেড লাইসেন্স নবায়ন",
+    "service_name_en": "Trade Licence Renewal",
+    "aliases": [
+      "trade license renewal"
+    ],
+    "category": "LICENCES",
+    "subcategory": "trade_licence_renewal",
+    "responsible_authority": "City Corporation / Municipality / Union Parishad",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://www.bangladeshtradeportal.gov.bd/index.php?id=65&r=searchProcedure%2Fview1",
+    "discovery_status": "CONFIRMED",
+    "notes": "Annual renewal; DNCC online renewal via e-Revenue portal."
+  },
+  {
+    "service_id": "land-mutation-review",
+    "service_name_bn": "মিউটেশন রিভিউ আবেদন",
+    "service_name_en": "Mutation Review Application",
+    "aliases": [
+      "mutation appeal",
+      "namjari review"
+    ],
+    "category": "LAND",
+    "subcategory": "mutation_review",
+    "responsible_authority": "Ministry of Land",
+    "target_user": [
+      "citizen",
+      "landowner"
+    ],
+    "geographic_scope": "UPAZILA",
+    "official_source": "https://land.gov.bd/vumisheba-fee",
+    "discovery_status": "CONFIRMED",
+    "notes": "Separate review court/notice/DCR fees listed on land service fee schedule."
+  },
+  {
+    "service_id": "civil-marriage-registrar-muslim-list",
+    "service_name_bn": "মুসলিম বিবাহ নিবন্ধক তালিকা",
+    "service_name_en": "Muslim Marriage Registrar List",
+    "aliases": [
+      "Muslim kazi list"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "registrar_directory",
+    "responsible_authority": "Law and Justice Division",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "DIVISION",
+    "official_source": "https://marriage.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "civil-marriage-registrar-hindu-list",
+    "service_name_bn": "হিন্দু বিবাহ নিবন্ধক তালিকা",
+    "service_name_en": "Hindu Marriage Registrar List",
+    "aliases": [
+      "Hindu marriage registrar"
+    ],
+    "category": "CIVIL_REGISTRATION",
+    "subcategory": "registrar_directory",
+    "responsible_authority": "Law and Justice Division",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "DIVISION",
+    "official_source": "https://marriage.gov.bd/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "health-medical-assistant-registration",
+    "service_name_bn": "মেডিকেল Assistant BMDC নিবন্ধন",
+    "service_name_en": "Medical Assistant BMDC Registration",
+    "aliases": [
+      "medical assistant registration"
+    ],
+    "category": "HEALTH",
+    "subcategory": "professional_registration",
+    "responsible_authority": "Bangladesh Medical and Dental Council (BMDC)",
+    "target_user": [
+      "medical_assistant"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "health-good-standing-certificate",
+    "service_name_bn": "Certificate of Good Standing (BMDC)",
+    "service_name_en": "Certificate of Good Standing (BMDC)",
+    "aliases": [
+      "good standing medical council"
+    ],
+    "category": "HEALTH",
+    "subcategory": "professional_certificate",
+    "responsible_authority": "Bangladesh Medical and Dental Council (BMDC)",
+    "target_user": [
+      "doctor",
+      "dentist"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "local-landless-certificate",
+    "service_name_bn": "ভূমিহীন সনদ",
+    "service_name_en": "Landless Certificate",
+    "aliases": [
+      "landless attestation"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "landless",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen",
+      "farmer"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://www.chandanpurup.gov.bd/new/application/citizen",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "local-voter-transfer-attestation",
+    "service_name_bn": "ভোটার এলাকা স্থানান্তর প্রত্যয়ন",
+    "service_name_en": "Voter Area Transfer Attestation",
+    "aliases": [
+      "voter region change certificate"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "voter",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
+    "discovery_status": "CONFIRMED",
+    "notes": null
+  },
+  {
+    "service_id": "business-rjsc-certified-copy",
+    "service_name_bn": "RJSC সার্টিফাইড কপি",
+    "service_name_en": "RJSC Certified Copy of Documents",
+    "aliases": [
+      "RJSC certified copy",
+      "incorporation copy"
+    ],
+    "category": "BUSINESS",
+    "subcategory": "certified_copy",
+    "responsible_authority": "Registrar of Joint Stock Companies and Firms (RJSC)",
+    "target_user": [
+      "business"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://app.roc.gov.bd/psp/RJSC_Fees",
+    "discovery_status": "CONFIRMED",
+    "notes": "Fees listed for certificate of incorporation copies."
+  },
+  {
+    "service_id": "education-madrasah-board-services",
+    "service_name_bn": "মাদ্রাসা শিক্ষা বোর্ড সেবা",
+    "service_name_en": "Bangladesh Madrasah Education Board Services",
+    "aliases": [
+      "Dakhil certificate",
+      "Alim certificate",
+      "madrasah board"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "madrasah",
+    "responsible_authority": "Bangladesh Madrasah Education Board",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "http://www.educationboard.gov.bd/",
+    "discovery_status": "LIKELY",
+    "notes": "Madrasah board selectable on national result verification portal."
+  },
+  {
+    "service_id": "education-technical-board-services",
+    "service_name_bn": "কারিগরি শিক্ষা বোর্ড সেবা",
+    "service_name_en": "Bangladesh Technical Education Board Services",
+    "aliases": [
+      "SSC vocational",
+      "HSC vocational",
+      "technical board"
+    ],
+    "category": "EDUCATION",
+    "subcategory": "technical",
+    "responsible_authority": "Bangladesh Technical Education Board",
+    "target_user": [
+      "student"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "http://www.educationboard.gov.bd/",
+    "discovery_status": "LIKELY",
+    "notes": "Technical board selectable on national result verification portal."
+  },
+  {
+    "service_id": "customs-import-export-control-licence",
+    "service_name_bn": "আমদানি/রপ্তানি নিয়ন্ত্রণ লাইসেন্স",
+    "service_name_en": "Import/Export Control Licence",
+    "aliases": [
+      "import export control act licence"
+    ],
+    "category": "CUSTOMS",
+    "subcategory": "licence",
+    "responsible_authority": "Chief Controller of Imports and Exports / Customs",
+    "target_user": [
+      "business",
+      "importer",
+      "exporter"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://nbr.gov.bd/uploads/acts/236___.pdf",
+    "discovery_status": "LIKELY",
+    "notes": "Imports and Exports (Control) Act 1950; licences via CCI&E/CCI and customs."
+  },
+  {
+    "service_id": "police-nid-address-verification",
+    "service_name_bn": "NID/ঠিকানা ভিত্তিক পুলিশ ভেরিফিকেশন",
+    "service_name_en": "Address/NID-based Police Verification",
+    "aliases": [
+      "tenant verification",
+      "address verification police"
+    ],
+    "category": "POLICE",
+    "subcategory": "verification",
+    "responsible_authority": "Bangladesh Police (local unit)",
+    "target_user": [
+      "citizen",
+      "employer"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "https://www.police.gov.bd/en/police_clearance_certificate",
+    "discovery_status": "LIKELY",
+    "notes": "PCC and verification use NID/birth ID/ward councillor certificate when passport lacks address."
+  },
+  {
+    "service_id": "expatriate-bmet-demand-verification",
+    "service_name_bn": "বিদেশি চাহিদা/অফার যাচাই",
+    "service_name_en": "Foreign Job Demand/Offer Verification",
+    "aliases": [
+      "demand verification BMET",
+      "job offer attestation BMET"
+    ],
+    "category": "EXPATRIATE",
+    "subcategory": "demand_verification",
+    "responsible_authority": "Bureau of Manpower, Employment and Training (BMET)",
+    "target_user": [
+      "expatriate",
+      "worker",
+      "recruiting_agent"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bmet.gov.bd/",
+    "discovery_status": "NEEDS_VERIFICATION",
+    "notes": "Core BMET function; dedicated online URL not confirmed in discovery."
+  },
+  {
+    "service_id": "land-deed-registration",
+    "service_name_bn": "দলিল/দলিল রেজিস্ট্রেশন",
+    "service_name_en": "Deed Registration (Sub-Registry)",
+    "aliases": [
+      "sale deed registration",
+      "sub registry office"
+    ],
+    "category": "LAND",
+    "subcategory": "deed_registration",
+    "responsible_authority": "Department of Registration (Ministry of Law)",
+    "target_user": [
+      "citizen",
+      "landowner",
+      "business"
+    ],
+    "geographic_scope": "DISTRICT",
+    "official_source": "https://www.land.gov.bd/poripotro",
+    "discovery_status": "LIKELY",
+    "notes": "Land Ministry circular references integrating registration with land info system; registration done at sub-registry offices."
+  },
+  {
+    "service_id": "local-death-certificate-union",
+    "service_name_bn": "মৃত্যু সনদ (ইউনিয়ন)",
+    "service_name_en": "Death Certificate (Union Parishad)",
+    "aliases": [
+      "union death certificate"
+    ],
+    "category": "CERTIFICATES",
+    "subcategory": "death_attestation",
+    "responsible_authority": "Union Parishad",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "LOCAL",
+    "official_source": "https://www.chandanpurup.gov.bd/new/application/citizen",
+    "discovery_status": "CONFIRMED",
+    "notes": "Union attestation certificate; distinct from BRIS legal death registration."
+  },
+  {
+    "service_id": "health-16263-telemedicine",
+    "service_name_bn": "১৬২৬৩ টেলিমেডিসিন/স্বাস্থ্য পরামর্শ",
+    "service_name_en": "16263 Telemedicine Health Advice",
+    "aliases": [
+      "16263 health helpline",
+      "Shastho Batayan"
+    ],
+    "category": "HEALTH",
+    "subcategory": "telemedicine",
+    "responsible_authority": "Directorate General of Health Services (DGHS)",
+    "target_user": [
+      "citizen"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update",
+    "discovery_status": "LIKELY",
+    "notes": "16263 helpline referenced on DGHS notices."
+  },
+  {
+    "service_id": "business-startup-trade-licence-guidance",
+    "service_name_bn": "ব্যবসা শুরু: ট্রেড লাইসেন্স/TIN/VAT ক্রম",
+    "service_name_en": "Business Startup Licensing Sequence (Trade Licence, TIN, VAT)",
+    "aliases": [
+      "business startup Bangladesh",
+      "investment onboarding"
+    ],
+    "category": "BUSINESS",
+    "subcategory": "startup_guidance",
+    "responsible_authority": "Bangladesh Investment Development Authority / Local Government / NBR / RJSC",
+    "target_user": [
+      "business",
+      "entrepreneur",
+      "foreign_investor"
+    ],
+    "geographic_scope": "NATIONAL",
+    "official_source": "https://bangladeshtradeportal.gov.bd/index.php?id=429&r=site%2Fdisplay",
+    "discovery_status": "CONFIRMED",
+    "notes": "Meta-process referencing RJSC, trade licence, TIN, VAT, BIDA registration."
+  }
+]

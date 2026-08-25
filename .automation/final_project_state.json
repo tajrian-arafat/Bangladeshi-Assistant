@@ -1,0 +1,60 @@
+{
+  "status": "KNOWLEDGE_INCOMPLETE",
+  "updated_at": "2026-08-25T03:42:00.000000+00:00",
+  "deployment_allowed": false,
+  "auto_merge": false,
+  "audit_type": "FINAL_KNOWLEDGE_CONSTRUCTION_AUDIT",
+  "catalogue_progress": {
+    "total_confirmed_services": 454,
+    "complete": 37,
+    "partial": 416,
+    "deferred": 0,
+    "blocked": 1
+  },
+  "claims": {
+    "total_claims": 1242,
+    "verified": 496,
+    "partially_verified": 702,
+    "unverified": 33,
+    "conflicting": 5
+  },
+  "e2e": {
+    "aggregate_pass_pct": 57.7,
+    "hallucinations": 0,
+    "citation_failures": 0
+  },
+  "false_completion_risk_services": 0,
+  "wave_rerun": {
+    "status": "COMPLETE",
+    "waves_total": 16,
+    "waves_passed": 16,
+    "waves_failed": 0,
+    "services_researched": 379,
+    "services_skipped_pilot": 10,
+    "result_counts": {
+      "COMPLETE": 0,
+      "PARTIAL": 379,
+      "DEFERRED": 0,
+      "BLOCKED": 0
+    },
+    "quality_gates": {
+      "false_completion_in_waves": 0,
+      "hallucinations": 0,
+      "citation_failures": 0,
+      "regression_failures": 0,
+      "min_source_rate_met": true,
+      "min_verified_rate_met": true
+    },
+    "adaptive_wave_size_final": 30,
+    "checkpoints_dir": "data/research/waves/",
+    "artifacts_dir": "data/research/rerun/"
+  },
+  "regression_baselines_preserved": true,
+  "artifacts": {
+    "final_service_completeness": "data/audit/final-service-completeness.json",
+    "runtime_research_consistency": "data/audit/runtime-research-consistency.json",
+    "audit_report": "docs/evaluation/FINAL_KNOWLEDGE_CONSTRUCTION_AUDIT.md",
+    "wave_state": "data/research/waves/state.json",
+    "overnight_status": ".automation/overnight_status.json"
+  }
+}

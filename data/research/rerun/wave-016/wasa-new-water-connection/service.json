@@ -1,0 +1,133 @@
+{
+  "service_id": "wasa-new-water-connection",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Dhaka WASA New Water Connection",
+  "service_name_bn": "ঢাকা ওয়াসা নতুন পানি সংযোগ",
+  "aliases": [
+    "DWASA water connection",
+    "new water line"
+  ],
+  "category_id": "utilities",
+  "profile_key": "UTILITIES",
+  "responsible_agency": "Dhaka Water Supply and Sewerage Authority (DWASA)",
+  "official_application_url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "wasa-new-water-connection::c-catalogue-authority",
+      "service_id": "wasa-new-water-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Water Supply and Sewerage Authority (DWASA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "wasa-new-water-connection::c-official-portal",
+      "service_id": "wasa-new-water-connection",
+      "claim_type": "application_url",
+      "claim_text": "Dhaka WASA New Water Connection official information is published at http://newconnection.dwasa.org.bd/Pages/Application/New.aspx (page title: Dhaka WASA New Water Connection).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx"
+      },
+      "source_ids": [
+        "src-wasa-new-water-connection-official"
+      ],
+      "evidence_ids": [
+        "ev-wasa-new-water-connection::c-official-portal-src-wasa-new-water-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "wasa-new-water-connection::c-procedure-overview",
+      "service_id": "wasa-new-water-connection",
+      "claim_type": "procedure_step",
+      "claim_text": "Dhaka WASA New Water Connection is a government service under Dhaka Water Supply and Sewerage Authority (DWASA) (water connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-wasa-new-water-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "wasa-new-water-connection::c-service-identity",
+      "service_id": "wasa-new-water-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Dhaka WASA New Water Connection (ঢাকা ওয়াসা নতুন পানি সংযোগ) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-wasa-new-water-connection-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-wasa-new-water-connection-official",
+      "service_id": "wasa-new-water-connection",
+      "url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx",
+      "title": "Dhaka WASA New Water Connection",
+      "authority_id": "dhaka-water-supply-and-sewerage-authority-dwasa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://newconnection.dwasa.org.bd/Login.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "95ac35f20d50d7c4",
+        "retrieved_at": "2026-08-25T03:37:19.577277+00:00"
+      },
+      "evidence_locator": "probe:http://newconnection.dwasa.org.bd/Pages/Application/New.aspx"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-wasa-new-water-connection-fee-unverified",
+      "service_id": "wasa-new-water-connection",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Dhaka WASA New Water Connection.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-wasa-new-water-connection-documents-unverified",
+      "service_id": "wasa-new-water-connection",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Dhaka WASA New Water Connection.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

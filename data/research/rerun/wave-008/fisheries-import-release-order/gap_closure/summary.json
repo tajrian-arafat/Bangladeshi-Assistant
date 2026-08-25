@@ -1,0 +1,28 @@
+{
+  "service_id": "fisheries-import-release-order",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-fisheries-import-release-order-portal-unreachable",
+      "service_id": "fisheries-import-release-order",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Fisheries Import Release Order.",
+      "severity": "MEDIUM",
+      "url": "https://www.ecertificate.fisheries.gov.bd/"
+    },
+    {
+      "gap_id": "gap-fisheries-import-release-order-fee-unverified",
+      "service_id": "fisheries-import-release-order",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Fisheries Import Release Order.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-fisheries-import-release-order-documents-unverified",
+      "service_id": "fisheries-import-release-order",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Fisheries Import Release Order.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

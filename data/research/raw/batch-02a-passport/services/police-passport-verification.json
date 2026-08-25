@@ -1,0 +1,66 @@
+{
+  "service_id": "police-passport-verification",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Passport Verification",
+  "service_name_bn": "পাসপোর্ট ভেরিফিকেশন",
+  "aliases": [
+    "passport police verification"
+  ],
+  "banglish_variants": [],
+  "category_id": "police",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police (District/Special Branch)",
+  "target_applicant": [
+    "citizen",
+    "employer",
+    "government_employee"
+  ],
+  "official_application_url": "https://www.police.gov.bd/index.php/en/citizen_charter",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "police-passport-verification::c-pv-charter-sla",
+      "legacy_claim_id": "c-pv-charter-sla",
+      "service_id": "police-passport-verification",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter cites normal passport verification 15-21 days and urgent 7 days (requires live charter verification).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-charter-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-district-scope",
+      "legacy_claim_id": "c-pv-district-scope",
+      "service_id": "police-passport-verification",
+      "claim_type": "office",
+      "claim_text": "District-level passport verification service under Bangladesh Police citizen charter.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-district-scope-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Normal 15-21 days; urgent 7 days per citizen charter."
+}

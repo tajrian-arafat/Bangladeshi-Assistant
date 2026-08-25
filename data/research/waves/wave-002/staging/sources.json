@@ -1,0 +1,465 @@
+{
+  "wave_id": "wave-002",
+  "sources": [
+    {
+      "source_id": "src-health-medical-assistant-registration-official",
+      "service_id": "health-medical-assistant-registration",
+      "url": "https://payment.bmdc.org.bd/home/page/form-list",
+      "title": "Just a moment...",
+      "authority_id": "bmdc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://payment.bmdc.org.bd/home/page/form-list",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "e3aa83c8cc5db205",
+        "retrieved_at": "2026-08-25T03:21:13.793695+00:00"
+      },
+      "evidence_locator": "probe:https://payment.bmdc.org.bd/home/page/form-list"
+    },
+    {
+      "source_id": "src-health-private-clinic-license-official",
+      "service_id": "health-private-clinic-license",
+      "url": "https://hospitaldghs.gov.bd/",
+      "title": "Private Clinic Licence",
+      "authority_id": "directorate-general-of-health-services-dghs-hospitals-and-clinic",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://hospitaldghs.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:21:14.948350+00:00"
+      },
+      "evidence_locator": "probe:https://hospitaldghs.gov.bd/"
+    },
+    {
+      "source_id": "src-health-private-hospital-license-official",
+      "service_id": "health-private-hospital-license",
+      "url": "https://hospitaldghs.gov.bd/",
+      "title": "Private Hospital Licence",
+      "authority_id": "directorate-general-of-health-services-dghs-hospitals-and-clinic",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://hospitaldghs.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:21:15.826761+00:00"
+      },
+      "evidence_locator": "probe:https://hospitaldghs.gov.bd/"
+    },
+    {
+      "source_id": "src-land-dlrms-application-track-official",
+      "service_id": "land-dlrms-application-track",
+      "url": "https://dlrms.land.gov.bd/application/track",
+      "title": "DLRMS",
+      "authority_id": "ministry-land",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dlrms.land.gov.bd/application/track",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DLRMS",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "4e5f24e0527b9813",
+        "retrieved_at": "2026-08-25T03:21:16.795286+00:00"
+      },
+      "evidence_locator": "probe:https://dlrms.land.gov.bd/application/track"
+    },
+    {
+      "source_id": "src-land-dlrms-application-track-alt-1",
+      "service_id": "land-dlrms-application-track",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "3799bd927e496caf",
+        "retrieved_at": "2026-08-25T03:21:16.864956+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-dlrms-application-track-alt-2",
+      "service_id": "land-dlrms-application-track",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "34bbf3bde2638328",
+        "retrieved_at": "2026-08-25T03:21:16.905856+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-khatian-certified-copy-official",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://land.gov.bd/vumisheba-fee",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd/vumisheba-fee",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d7305ed1defa31bc",
+        "retrieved_at": "2026-08-25T03:21:16.957719+00:00"
+      },
+      "evidence_locator": "probe:https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "source_id": "src-land-khatian-certified-copy-alt-1",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d06f26231ea48d3e",
+        "retrieved_at": "2026-08-25T03:21:16.989912+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-khatian-certified-copy-alt-2",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "1324966c8fbb67de",
+        "retrieved_at": "2026-08-25T03:21:17.019873+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-khatian-correction-official",
+      "service_id": "land-khatian-correction",
+      "url": "https://land.gov.bd/vumisheba-fee",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd/vumisheba-fee",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "b560554a931d6b45",
+        "retrieved_at": "2026-08-25T03:21:17.069199+00:00"
+      },
+      "evidence_locator": "probe:https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "source_id": "src-land-khatian-correction-alt-1",
+      "service_id": "land-khatian-correction",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "3ae8d0c912979101",
+        "retrieved_at": "2026-08-25T03:21:17.100808+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-khatian-correction-alt-2",
+      "service_id": "land-khatian-correction",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "a6e8c153b301a46e",
+        "retrieved_at": "2026-08-25T03:21:17.131490+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-khatian-online-copy-official",
+      "service_id": "land-khatian-online-copy",
+      "url": "https://dlrms.land.gov.bd/",
+      "title": "DLRMS",
+      "authority_id": "ministry-land",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dlrms.land.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DLRMS",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "3cf041a2cff16369",
+        "retrieved_at": "2026-08-25T03:21:18.092362+00:00"
+      },
+      "evidence_locator": "probe:https://dlrms.land.gov.bd/"
+    },
+    {
+      "source_id": "src-land-khatian-online-copy-alt-1",
+      "service_id": "land-khatian-online-copy",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "5dbe671c90819be8",
+        "retrieved_at": "2026-08-25T03:21:18.136448+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-khatian-online-copy-alt-2",
+      "service_id": "land-khatian-online-copy",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "47e134ff69289ba5",
+        "retrieved_at": "2026-08-25T03:21:18.172943+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-mortgage-info-search-official",
+      "service_id": "land-mortgage-info-search",
+      "url": "https://mutation.land.gov.bd/search-mortgage-info",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd/search-mortgage-info",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "4a86e32b43b16112",
+        "retrieved_at": "2026-08-25T03:21:18.223369+00:00"
+      },
+      "evidence_locator": "probe:https://mutation.land.gov.bd/search-mortgage-info"
+    },
+    {
+      "source_id": "src-land-mortgage-info-search-alt-1",
+      "service_id": "land-mortgage-info-search",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "155806bf5785b322",
+        "retrieved_at": "2026-08-25T03:21:18.254868+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-mortgage-info-search-alt-2",
+      "service_id": "land-mortgage-info-search",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "ad8fa640341af092",
+        "retrieved_at": "2026-08-25T03:21:18.287791+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-mouza-map-official",
+      "service_id": "land-mouza-map",
+      "url": "https://land.gov.bd/vumisheba-fee",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd/vumisheba-fee",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "7c6ae6ca2fdf7353",
+        "retrieved_at": "2026-08-25T03:21:18.334751+00:00"
+      },
+      "evidence_locator": "probe:https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "source_id": "src-land-mouza-map-alt-1",
+      "service_id": "land-mouza-map",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "1305119ddbb1848b",
+        "retrieved_at": "2026-08-25T03:21:18.363288+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-mouza-map-alt-2",
+      "service_id": "land-mouza-map",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "ef4d64aa050154a2",
+        "retrieved_at": "2026-08-25T03:21:18.399558+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-mutation-apply-official",
+      "service_id": "land-mutation-apply",
+      "url": "https://mutation.land.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "77310d0d11dc33ed",
+        "retrieved_at": "2026-08-25T03:21:18.445116+00:00"
+      },
+      "evidence_locator": "probe:https://mutation.land.gov.bd/"
+    },
+    {
+      "source_id": "src-land-mutation-apply-alt-1",
+      "service_id": "land-mutation-apply",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "604d9d2c1c999c81",
+        "retrieved_at": "2026-08-25T03:21:18.475439+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-mutation-apply-alt-2",
+      "service_id": "land-mutation-apply",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "1f16860a95419f34",
+        "retrieved_at": "2026-08-25T03:21:18.505506+00:00"
+      }
+    }
+  ]
+}

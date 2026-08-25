@@ -1,0 +1,43 @@
+{
+  "service_id": "post-money-order",
+  "batch_id": "batch-14-remaining",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Postal Money Order",
+  "service_name_bn": "মানি অর্ডার",
+  "aliases": [
+    "money order Bangladesh Post"
+  ],
+  "category_id": "post",
+  "responsible_agency": "Bangladesh Post Office (Directorate of Posts)",
+  "official_application_url": "https://bdpost.gov.bd/site/page/2b5d6dac-0cd7-4342-9cab-e0b66765aa69/-",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "post-money-order::c-application-portal",
+      "service_id": "post-money-order",
+      "claim_type": "application_url",
+      "claim_text": "Postal Money Order is associated with NBR e-service portal https://bdpost.gov.bd/site/page/2b5d6dac-0cd7-4342-9cab-e0b66765aa69/-.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-post-money-order",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-money-order::c-responsible-authority",
+      "service_id": "post-money-order",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

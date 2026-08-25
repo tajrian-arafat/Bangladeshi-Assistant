@@ -1,0 +1,70 @@
+{
+  "service_id": "civil-death-registration-correction",
+  "claims": [
+    {
+      "claim_id": "civil-death-registration-correction::c-catalogue-authority",
+      "service_id": "civil-death-registration-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Office of the Registrar General, Birth and Death Registration.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-official-url-documented",
+      "service_id": "civil-death-registration-correction",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdris.gov.bd/dr/correction for Death Registration Information Correction; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdris.gov.bd/dr/correction"
+      },
+      "source_ids": [
+        "src-civil-death-registration-correction-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-procedure-overview",
+      "service_id": "civil-death-registration-correction",
+      "claim_type": "procedure_step",
+      "claim_text": "Death Registration Information Correction is a government service under Office of the Registrar General, Birth and Death Registration (death correction). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-death-registration-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-service-identity",
+      "service_id": "civil-death-registration-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Death Registration Information Correction (মৃত্যু তথ্য সংশোধন) is a confirmed government service in category civil_registration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-death-registration-correction-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

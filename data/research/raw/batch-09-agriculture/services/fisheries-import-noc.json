@@ -1,0 +1,45 @@
+{
+  "service_id": "fisheries-import-noc",
+  "batch_id": "batch-09-agriculture",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Fisheries Import No Objection Certificate (NOC)",
+  "service_name_bn": "মাছ/মৎস্য আমদানি NOC",
+  "aliases": [
+    "fish import NOC",
+    "FIQC import NOC",
+    "Fisheries Import No Objection Certificate (NOC)"
+  ],
+  "category_id": "fisheries",
+  "responsible_agency": "Department of Fisheries (FIQC)",
+  "official_application_url": "https://www.ecertificate.fisheries.gov.bd/",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "fisheries-import-noc::c-application-portal",
+      "service_id": "fisheries-import-noc",
+      "claim_type": "application_url",
+      "claim_text": "Fisheries Import No Objection Certificate (NOC) is associated with NBR e-service portal https://www.ecertificate.fisheries.gov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-fisheries-import-noc",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-import-noc::c-responsible-authority",
+      "service_id": "fisheries-import-noc",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Department of Fisheries (FIQC).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

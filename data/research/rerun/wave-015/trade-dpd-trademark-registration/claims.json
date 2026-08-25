@@ -1,0 +1,72 @@
+{
+  "service_id": "trade-dpd-trademark-registration",
+  "claims": [
+    {
+      "claim_id": "trade-dpd-trademark-registration::c-catalogue-authority",
+      "service_id": "trade-dpd-trademark-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Patents, Designs and Trademarks (DPDT).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-trademark-registration::c-official-portal",
+      "service_id": "trade-dpd-trademark-registration",
+      "claim_type": "application_url",
+      "claim_text": "Trademark Registration official information is published at https://dpdt.gov.bd/ (page title: হোম | পেটেন্ট, শিল্প-নকশা ও ট্রেডমার্কস অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dpdt.gov.bd/"
+      },
+      "source_ids": [
+        "src-trade-dpd-trademark-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-trade-dpd-trademark-registration::c-official-portal-src-trade-dpd-trademark-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-trademark-registration::c-procedure-overview",
+      "service_id": "trade-dpd-trademark-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Trademark Registration is a government service under Department of Patents, Designs and Trademarks (DPDT) (intellectual property). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-dpd-trademark-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-trademark-registration::c-service-identity",
+      "service_id": "trade-dpd-trademark-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Trademark Registration (ট্রেডমার্ক নিবন্ধন (DPDT)) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-dpd-trademark-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

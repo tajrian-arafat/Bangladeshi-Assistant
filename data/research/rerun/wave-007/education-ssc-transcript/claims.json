@@ -1,0 +1,70 @@
+{
+  "service_id": "education-ssc-transcript",
+  "claims": [
+    {
+      "claim_id": "education-ssc-transcript::c-catalogue-authority",
+      "service_id": "education-ssc-transcript",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Board of Intermediate and Secondary Education (respective board).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-transcript::c-official-url-documented",
+      "service_id": "education-ssc-transcript",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://www.educationboard.gov.bd/chittagong/general_program.php for SSC Academic Transcript; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/chittagong/general_program.php"
+      },
+      "source_ids": [
+        "src-education-ssc-transcript-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-transcript::c-procedure-overview",
+      "service_id": "education-ssc-transcript",
+      "claim_type": "procedure_step",
+      "claim_text": "SSC Academic Transcript is a government service under Board of Intermediate and Secondary Education (respective board) (transcript). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-transcript-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-transcript::c-service-identity",
+      "service_id": "education-ssc-transcript",
+      "claim_type": "eligibility",
+      "claim_text": "SSC Academic Transcript (SSC ট্রান্সক্রিপ্ট/ট্যাবুলেশন) is a confirmed government service in category education, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-transcript-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

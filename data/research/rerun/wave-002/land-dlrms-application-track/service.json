@@ -1,0 +1,170 @@
+{
+  "service_id": "land-dlrms-application-track",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Land Record Application Tracking (DLRMS)",
+  "service_name_bn": "ভূমি রেকর্ড আবেদন ট্র্যাকিং",
+  "aliases": [
+    "DLRMS track"
+  ],
+  "category_id": "land",
+  "profile_key": "LAND",
+  "responsible_agency": "Ministry of Land (DLRMS)",
+  "official_application_url": "https://dlrms.land.gov.bd/application/track",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "land-dlrms-application-track::c-catalogue-authority",
+      "service_id": "land-dlrms-application-track",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land (DLRMS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-dlrms-application-track::c-official-portal",
+      "service_id": "land-dlrms-application-track",
+      "claim_type": "application_url",
+      "claim_text": "Land Record Application Tracking (DLRMS) official information is published at https://dlrms.land.gov.bd/application/track (page title: DLRMS).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dlrms.land.gov.bd/application/track"
+      },
+      "source_ids": [
+        "src-land-dlrms-application-track-official"
+      ],
+      "evidence_ids": [
+        "ev-land-dlrms-application-track::c-official-portal-src-land-dlrms-application-track-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-dlrms-application-track::c-procedure-overview",
+      "service_id": "land-dlrms-application-track",
+      "claim_type": "procedure_step",
+      "claim_text": "Land Record Application Tracking (DLRMS) is a government service under Ministry of Land (DLRMS) (application tracking). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-dlrms-application-track-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-dlrms-application-track::c-service-identity",
+      "service_id": "land-dlrms-application-track",
+      "claim_type": "eligibility",
+      "claim_text": "Land Record Application Tracking (DLRMS) (ভূমি রেকর্ড আবেদন ট্র্যাকিং) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-dlrms-application-track-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-land-dlrms-application-track-official",
+      "service_id": "land-dlrms-application-track",
+      "url": "https://dlrms.land.gov.bd/application/track",
+      "title": "DLRMS",
+      "authority_id": "ministry-land",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dlrms.land.gov.bd/application/track",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DLRMS",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "4e5f24e0527b9813",
+        "retrieved_at": "2026-08-25T03:21:16.795286+00:00"
+      },
+      "evidence_locator": "probe:https://dlrms.land.gov.bd/application/track"
+    },
+    {
+      "source_id": "src-land-dlrms-application-track-alt-1",
+      "service_id": "land-dlrms-application-track",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "3799bd927e496caf",
+        "retrieved_at": "2026-08-25T03:21:16.864956+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-dlrms-application-track-alt-2",
+      "service_id": "land-dlrms-application-track",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "34bbf3bde2638328",
+        "retrieved_at": "2026-08-25T03:21:16.905856+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-land-dlrms-application-track-fee-unverified",
+      "service_id": "land-dlrms-application-track",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Land Record Application Tracking (DLRMS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-dlrms-application-track-documents-unverified",
+      "service_id": "land-dlrms-application-track",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Land Record Application Tracking (DLRMS).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "service_id": "ff-welfare-trust-enrollment",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Freedom Fighter Welfare Trust Enrollment Application",
+  "service_name_bn": "মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট তালিকাভুক্তি",
+  "aliases": [
+    "BFFWT enrollment",
+    "freedom fighter trust application",
+    "Freedom Fighter Welfare Trust Enrollment Application"
+  ],
+  "category_id": "social_protection",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Bangladesh Freedom Fighters Welfare Trust (BFFWT)",
+  "official_application_url": "https://tmis.bffwt.gov.bd/applicationform/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "ff-welfare-trust-enrollment::c-catalogue-authority",
+      "service_id": "ff-welfare-trust-enrollment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Freedom Fighters Welfare Trust (BFFWT).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-welfare-trust-enrollment::c-official-portal",
+      "service_id": "ff-welfare-trust-enrollment",
+      "claim_type": "application_url",
+      "claim_text": "Freedom Fighter Welfare Trust Enrollment Application official information is published at https://tmis.bffwt.gov.bd/applicationform/ (page title: বাংলাদেশ মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট - হোম).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://tmis.bffwt.gov.bd/applicationform/"
+      },
+      "source_ids": [
+        "src-ff-welfare-trust-enrollment-official"
+      ],
+      "evidence_ids": [
+        "ev-ff-welfare-trust-enrollment::c-official-portal-src-ff-welfare-trust-enrollment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-welfare-trust-enrollment::c-procedure-overview",
+      "service_id": "ff-welfare-trust-enrollment",
+      "claim_type": "procedure_step",
+      "claim_text": "Freedom Fighter Welfare Trust Enrollment Application is a government service under Bangladesh Freedom Fighters Welfare Trust (BFFWT) (freedom fighter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-welfare-trust-enrollment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-welfare-trust-enrollment::c-service-identity",
+      "service_id": "ff-welfare-trust-enrollment",
+      "claim_type": "eligibility",
+      "claim_text": "Freedom Fighter Welfare Trust Enrollment Application (মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট তালিকাভুক্তি) is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-welfare-trust-enrollment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-ff-welfare-trust-enrollment-official",
+      "service_id": "ff-welfare-trust-enrollment",
+      "url": "https://tmis.bffwt.gov.bd/applicationform/",
+      "title": "বাংলাদেশ মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট - হোম",
+      "authority_id": "bangladesh-freedom-fighters-welfare-trust-bffwt",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://tmis.bffwt.gov.bd/applicationform/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "বাংলাদেশ মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট - হোম",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "655e7054560e78cb",
+        "retrieved_at": "2026-08-25T03:27:26.240947+00:00"
+      },
+      "evidence_locator": "probe:https://tmis.bffwt.gov.bd/applicationform/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-ff-welfare-trust-enrollment-fee-unverified",
+      "service_id": "ff-welfare-trust-enrollment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Freedom Fighter Welfare Trust Enrollment Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-ff-welfare-trust-enrollment-documents-unverified",
+      "service_id": "ff-welfare-trust-enrollment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Freedom Fighter Welfare Trust Enrollment Application.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

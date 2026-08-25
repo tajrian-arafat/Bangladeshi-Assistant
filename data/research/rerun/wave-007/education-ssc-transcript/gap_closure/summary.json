@@ -1,0 +1,28 @@
+{
+  "service_id": "education-ssc-transcript",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-education-ssc-transcript-portal-unreachable",
+      "service_id": "education-ssc-transcript",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for SSC Academic Transcript.",
+      "severity": "MEDIUM",
+      "url": "http://www.educationboard.gov.bd/chittagong/general_program.php"
+    },
+    {
+      "gap_id": "gap-education-ssc-transcript-fee-unverified",
+      "service_id": "education-ssc-transcript",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for SSC Academic Transcript.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-education-ssc-transcript-documents-unverified",
+      "service_id": "education-ssc-transcript",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for SSC Academic Transcript.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

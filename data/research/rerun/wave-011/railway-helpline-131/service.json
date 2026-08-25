@@ -1,0 +1,132 @@
+{
+  "service_id": "railway-helpline-131",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Bangladesh Railway Service Helpline (131)",
+  "service_name_bn": "রেলওয়ে সেবা হেল্পলাইন (১৩১)",
+  "aliases": [
+    "railway support 131"
+  ],
+  "category_id": "railways",
+  "profile_key": "OTHER",
+  "responsible_agency": "Bangladesh Railway",
+  "official_application_url": "http://railway.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "railway-helpline-131::c-catalogue-authority",
+      "service_id": "railway-helpline-131",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Railway.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-helpline-131::c-official-portal",
+      "service_id": "railway-helpline-131",
+      "claim_type": "application_url",
+      "claim_text": "Bangladesh Railway Service Helpline (131) official information is published at http://railway.gov.bd/ (page title: হোম | বাংলাদেশ রেলওয়ে).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://railway.gov.bd/"
+      },
+      "source_ids": [
+        "src-railway-helpline-131-official"
+      ],
+      "evidence_ids": [
+        "ev-railway-helpline-131::c-official-portal-src-railway-helpline-131-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-helpline-131::c-procedure-overview",
+      "service_id": "railway-helpline-131",
+      "claim_type": "procedure_step",
+      "claim_text": "Bangladesh Railway Service Helpline (131) is a government service under Bangladesh Railway (customer support). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-helpline-131-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-helpline-131::c-service-identity",
+      "service_id": "railway-helpline-131",
+      "claim_type": "eligibility",
+      "claim_text": "Bangladesh Railway Service Helpline (131) (রেলওয়ে সেবা হেল্পলাইন (১৩১)) is a confirmed government service in category railways, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-helpline-131-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-railway-helpline-131-official",
+      "service_id": "railway-helpline-131",
+      "url": "http://railway.gov.bd/",
+      "title": "হোম | বাংলাদেশ রেলওয়ে",
+      "authority_id": "bangladesh-railway",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://railway.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | বাংলাদেশ রেলওয়ে",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "56db775bd078d880",
+        "retrieved_at": "2026-08-25T03:30:06.235766+00:00"
+      },
+      "evidence_locator": "probe:http://railway.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-railway-helpline-131-fee-unverified",
+      "service_id": "railway-helpline-131",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Bangladesh Railway Service Helpline (131).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-railway-helpline-131-documents-unverified",
+      "service_id": "railway-helpline-131",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Bangladesh Railway Service Helpline (131).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

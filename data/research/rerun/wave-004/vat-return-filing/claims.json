@@ -1,0 +1,72 @@
+{
+  "service_id": "vat-return-filing",
+  "claims": [
+    {
+      "claim_id": "vat-return-filing::c-catalogue-authority",
+      "service_id": "vat-return-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-return-filing::c-official-portal",
+      "service_id": "vat-return-filing",
+      "claim_type": "application_url",
+      "claim_text": "VAT Return Filing official information is published at https://nbr.gov.bd/ (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/"
+      },
+      "source_ids": [
+        "src-vat-return-filing-official"
+      ],
+      "evidence_ids": [
+        "ev-vat-return-filing::c-official-portal-src-vat-return-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-return-filing::c-procedure-overview",
+      "service_id": "vat-return-filing",
+      "claim_type": "procedure_step",
+      "claim_text": "VAT Return Filing is a government service under National Board of Revenue (NBR) (return filing). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-return-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-return-filing::c-service-identity",
+      "service_id": "vat-return-filing",
+      "claim_type": "eligibility",
+      "claim_text": "VAT Return Filing (ভ্যাট রিটার্ন দাখিল) is a confirmed government service in category vat, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-return-filing-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

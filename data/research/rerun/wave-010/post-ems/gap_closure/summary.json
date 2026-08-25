@@ -1,0 +1,28 @@
+{
+  "service_id": "post-ems",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-post-ems-portal-unreachable",
+      "service_id": "post-ems",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Express Mail Service (EMS).",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/a375dd34-3e14-4021-83f9-736d357d7eda/-"
+    },
+    {
+      "gap_id": "gap-post-ems-fee-unverified",
+      "service_id": "post-ems",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Express Mail Service (EMS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-ems-documents-unverified",
+      "service_id": "post-ems",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Express Mail Service (EMS).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

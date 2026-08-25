@@ -1,0 +1,43 @@
+{
+  "service_id": "post-emts",
+  "batch_id": "batch-14-remaining",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Electronic Money Transfer Service (EMTS)",
+  "service_name_bn": "ইএমটিএস (ইলেকট্রনিক মানি ট্রান্সফার)",
+  "aliases": [
+    "postal remittance EMTS"
+  ],
+  "category_id": "post",
+  "responsible_agency": "Bangladesh Post Office (Directorate of Posts)",
+  "official_application_url": "https://bdpost.portal.gov.bd/site/page/f51a53e6-926b-48a7-a927-8331e2f326ff/-",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "post-emts::c-application-portal",
+      "service_id": "post-emts",
+      "claim_type": "application_url",
+      "claim_text": "Electronic Money Transfer Service (EMTS) is associated with NBR e-service portal https://bdpost.portal.gov.bd/site/page/f51a53e6-926b-48a7-a927-8331e2f326ff/-.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-post-emts",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-emts::c-responsible-authority",
+      "service_id": "post-emts",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

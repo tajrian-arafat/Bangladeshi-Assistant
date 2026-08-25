@@ -1,0 +1,20 @@
+{
+  "service_id": "tax-income-return-file",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-tax-income-return-file-fee-unverified",
+      "service_id": "tax-income-return-file",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Income Tax Return Filing (e-Return).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-income-return-file-documents-unverified",
+      "service_id": "tax-income-return-file",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Income Tax Return Filing (e-Return).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

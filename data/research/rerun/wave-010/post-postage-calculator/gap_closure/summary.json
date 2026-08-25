@@ -1,0 +1,20 @@
+{
+  "service_id": "post-postage-calculator",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-post-postage-calculator-fee-unverified",
+      "service_id": "post-postage-calculator",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Postal Postage Calculator.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-postage-calculator-documents-unverified",
+      "service_id": "post-postage-calculator",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Postal Postage Calculator.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

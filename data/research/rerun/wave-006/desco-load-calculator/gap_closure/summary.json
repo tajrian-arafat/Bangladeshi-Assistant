@@ -1,0 +1,20 @@
+{
+  "service_id": "desco-load-calculator",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-desco-load-calculator-fee-unverified",
+      "service_id": "desco-load-calculator",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for DESCO Load Calculator.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-desco-load-calculator-documents-unverified",
+      "service_id": "desco-load-calculator",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for DESCO Load Calculator.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

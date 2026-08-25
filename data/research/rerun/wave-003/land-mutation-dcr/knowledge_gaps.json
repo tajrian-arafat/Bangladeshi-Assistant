@@ -1,0 +1,27 @@
+{
+  "service_id": "land-mutation-dcr",
+  "gaps": [
+    {
+      "gap_id": "gap-land-mutation-dcr-portal-unreachable",
+      "service_id": "land-mutation-dcr",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Mutation DCR and Khatian Download.",
+      "severity": "MEDIUM",
+      "url": "https://mutation.land.gov.bd/namjari-steps"
+    },
+    {
+      "gap_id": "gap-land-mutation-dcr-fee-unverified",
+      "service_id": "land-mutation-dcr",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mutation DCR and Khatian Download.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mutation-dcr-documents-unverified",
+      "service_id": "land-mutation-dcr",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Mutation DCR and Khatian Download.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

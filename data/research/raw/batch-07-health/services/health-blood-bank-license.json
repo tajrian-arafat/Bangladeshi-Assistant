@@ -1,0 +1,43 @@
+{
+  "service_id": "health-blood-bank-license",
+  "batch_id": "batch-07-health",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Blood Bank Licence",
+  "service_name_bn": "ব্লাড ব্যাংক লাইসেন্স",
+  "aliases": [
+    "blood bank registration"
+  ],
+  "category_id": "health",
+  "responsible_agency": "Directorate General of Health Services (DGHS)",
+  "official_application_url": "https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "health-blood-bank-license::c-application-portal",
+      "service_id": "health-blood-bank-license",
+      "claim_type": "application_url",
+      "claim_text": "Blood Bank Licence is associated with NBR e-service portal https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-health-blood-bank-license",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-blood-bank-license::c-responsible-authority",
+      "service_id": "health-blood-bank-license",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Directorate General of Health Services (DGHS).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

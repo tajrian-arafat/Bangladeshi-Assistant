@@ -1,0 +1,175 @@
+{
+  "batch_id": "batch-13-judiciary",
+  "sources": [
+    {
+      "source_id": "src-judiciary-case-status-tracking",
+      "service_id": "judiciary-case-status-tracking",
+      "url": "https://supremecourt.gov.bd/",
+      "portal_url": null,
+      "title": "Home : Supreme Court of Bangladesh",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://supremecourt.gov.bd/web/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Home : Supreme Court of Bangladesh",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-judiciary-supreme-court-certified-copy",
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "url": "https://supremecourt.gov.bd/",
+      "portal_url": null,
+      "title": "Home : Supreme Court of Bangladesh",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://supremecourt.gov.bd/web/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Home : Supreme Court of Bangladesh",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-judiciary-supreme-court-e-filing",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "url": "https://apps.supremecourt.gov.bd/mycase",
+      "portal_url": null,
+      "title": "Supreme Court e-Filing (Lawyers Panel)",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://apps.supremecourt.gov.bd/mycase/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-judiciary-virtual-court-services",
+      "service_id": "judiciary-virtual-court-services",
+      "url": "https://supremecourt.gov.bd/",
+      "portal_url": null,
+      "title": "Home : Supreme Court of Bangladesh",
+      "authority_id": "law-and-justice-division-supreme-court-of-bangladesh",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://supremecourt.gov.bd/web/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Home : Supreme Court of Bangladesh",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-legal-aid-district-helpline-16430",
+      "service_id": "legal-aid-district-helpline-16430",
+      "url": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline",
+      "portal_url": null,
+      "title": "Just a moment...",
+      "authority_id": "district-legal-aid-office-nlaso",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-legal-aid-government-service",
+      "service_id": "legal-aid-government-service",
+      "url": "http://nlaso.portal.gov.bd/pages/static-pages/6922dc72933eb65569e106d0",
+      "portal_url": null,
+      "title": "সরকারি আইনি সহায়তা কার্যক্রম | পাতা | বাংলাদেশ আইনগত সহায়তা অধিদপ্তর",
+      "authority_id": "national-legal-aid-services-organization-nlaso",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://nlaso.portal.gov.bd/pages/static-pages/6922dc72933eb65569e106d0",
+        "status_code": 200,
+        "reachable": true,
+        "title": "সরকারি আইনি সহায়তা কার্যক্রম | পাতা | বাংলাদেশ আইনগত সহায়তা অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-legal-aid-helpline-16699",
+      "service_id": "legal-aid-helpline-16699",
+      "url": "http://nlaso.portal.gov.bd/pages/static-pages/69ca4e8234fc363bf320ca55",
+      "portal_url": null,
+      "title": "জাতীয় হেল্পলাইন ১৬৬৯৯ | পাতা | বাংলাদেশ আইনগত সহায়তা অধিদপ্তর",
+      "authority_id": "national-legal-aid-services-organization-nlaso",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://nlaso.portal.gov.bd/pages/static-pages/69ca4e8234fc363bf320ca55",
+        "status_code": 200,
+        "reachable": true,
+        "title": "জাতীয় হেল্পলাইন ১৬৬৯৯ | পাতা | বাংলাদেশ আইনগত সহায়তা অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-legal-aid-online-application",
+      "service_id": "legal-aid-online-application",
+      "url": "https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx",
+      "portal_url": null,
+      "title": "DBLA | Office Management System",
+      "authority_id": "national-legal-aid-services-organization-nlaso",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DBLA | Office Management System",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-legal-aid-panel-lawyer-list",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "url": "http://nlaso.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Panel Lawyer List (District Legal Aid)",
+      "authority_id": "district-legal-aid-office-nlaso",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://nlaso.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "task_id": "BATCH_12:RESEARCH:run-986215983a04-research",
+  "batch_id": "BATCH_12",
+  "batch_slug": "batch-12-local-gov",
+  "phase": "RESEARCH",
+  "run_id": "run-986215983a04-research",
+  "service_ids": [
+    "dc-attestation-photocopy",
+    "dc-citizen-charter-bagerhat",
+    "dc-citizen-charter-comilla",
+    "dc-citizen-charter-dhaka",
+    "dc-citizen-charter-rajshahi",
+    "dc-district-e-application",
+    "dc-guardianship-certificate",
+    "dc-nothi-citizen-application",
+    "dc-revenue-branch-services",
+    "local-holding-tax-payment",
+    "local-unno-digital-upazila-services"
+  ],
+  "service_names": {
+    "dc-attestation-photocopy": "DC Office Document Attestation/Photocopy Certification",
+    "dc-citizen-charter-bagerhat": "Bagerhat District Citizen Charter Services",
+    "dc-citizen-charter-comilla": "Cumilla District Citizen Charter Services",
+    "dc-citizen-charter-dhaka": "Dhaka District Citizen Charter Services",
+    "dc-citizen-charter-rajshahi": "Rajshahi District Citizen Charter Services",
+    "dc-district-e-application": "District Online Forms Application",
+    "dc-guardianship-certificate": "Guardianship Certificate (DC Office)",
+    "dc-nothi-citizen-application": "Nothi Citizen Application (District/DC Office)",
+    "dc-revenue-branch-services": "DC Office Revenue Branch Services",
+    "local-holding-tax-payment": "Local Government Holding Tax Payment",
+    "local-unno-digital-upazila-services": "Upazila Nirbahi Officer (UNO) Digital Citizen Services"
+  },
+  "domain": "local_government",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/raw/batch-12-local-gov/scope.json",
+    "data/research/raw/batch-12-local-gov/services_index.json",
+    "data/research/raw/batch-12-local-gov/services/*.json",
+    "data/research/raw/batch-12-local-gov/claims.json",
+    "data/research/raw/batch-12-local-gov/sources.json",
+    "data/research/raw/batch-12-local-gov/conflicts.json",
+    "data/research/raw/batch-12-local-gov/knowledge_gaps.json",
+    "data/research/raw/batch-12-local-gov/metadata.json",
+    "docs/research/batch-12-local-gov-research.md",
+    ".automation/runs/run-986215983a04-research/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — RESEARCH\n\n**Batch:** BATCH_12 (Local Government)\n**Run ID:** run-986215983a04-research\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/raw/batch-12-local-gov/scope.json`\n- `data/research/raw/batch-12-local-gov/services_index.json`\n- `data/research/raw/batch-12-local-gov/services/*.json`\n- `data/research/raw/batch-12-local-gov/claims.json`\n- `data/research/raw/batch-12-local-gov/sources.json`\n- `data/research/raw/batch-12-local-gov/conflicts.json`\n- `data/research/raw/batch-12-local-gov/knowledge_gaps.json`\n- `data/research/raw/batch-12-local-gov/metadata.json`\n- `docs/research/batch-12-local-gov-research.md`\n- `.automation/runs/run-986215983a04-research/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_12\",\n    \"slug\": \"batch-12-local-gov\",\n    \"name\": \"Local Government\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"dc-attestation-photocopy\",\n      \"dc-citizen-charter-bagerhat\",\n      \"dc-citizen-charter-comilla\",\n      \"dc-citizen-charter-dhaka\",\n      \"dc-citizen-charter-rajshahi\",\n      \"dc-district-e-application\",\n      \"dc-guardianship-certificate\",\n      \"dc-nothi-citizen-application\",\n      \"dc-revenue-branch-services\",\n      \"local-holding-tax-payment\",\n      \"local-unno-digital-upazila-services\"\n    ],\n    \"service_count\": 11,\n    \"phases_completed\": []\n  },\n  \"phase\": \"RESEARCH\",\n  \"run_id\": \"run-986215983a04-research\",\n  \"service_ids\": [\n    \"dc-attestation-photocopy\",\n    \"dc-citizen-charter-bagerhat\",\n    \"dc-citizen-charter-comilla\",\n    \"dc-citizen-charter-dhaka\",\n    \"dc-citizen-charter-rajshahi\",\n    \"dc-district-e-application\",\n    \"dc-guardianship-certificate\",\n    \"dc-nothi-citizen-application\",\n    \"dc-revenue-branch-services\",\n    \"local-holding-tax-payment\",\n    \"local-unno-digital-upazila-services\"\n  ],\n  \"gaps\": [],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Research phase prompt\n\nFollow `docs/research/BATCH_RESEARCH_TEMPLATE.md` exactly.\n\n## Goals\n- Identify in-scope services from catalogue\n- Search broadly; prioritize Tier 1–2 official sources\n- Separate official / practical / discovery evidence\n- Create atomic claims with provenance\n- Record conflicts and knowledge gaps\n- **Never publish**\n- **Never mark VERIFIED** because a source merely exists\n\n## Outputs\n- `data/research/raw/<batch-slug>/services/*.json`\n- `data/research/raw/<batch-slug>/claims.json`\n- `data/research/raw/<batch-slug>/sources.json`\n- `data/research/raw/<batch-slug>/conflicts.json`\n- `data/research/raw/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-986215983a04-research/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:48:37.006048+00:00"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "service_id": "ff-mis-freedom-fighter-list",
+  "sources": [
+    {
+      "source_id": "src-ff-mis-freedom-fighter-list-official",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "url": "https://mis.molwa.gov.bd/freedom-fighter-list",
+      "title": "মুক্তিযোদ্ধা অনুসন্ধান",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mis.molwa.gov.bd/freedom-fighter-list",
+        "status_code": 200,
+        "reachable": true,
+        "title": "মুক্তিযোদ্ধা অনুসন্ধান",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d143ab5254d6ad56",
+        "retrieved_at": "2026-08-25T03:27:22.721648+00:00"
+      },
+      "evidence_locator": "probe:https://mis.molwa.gov.bd/freedom-fighter-list"
+    },
+    {
+      "source_id": "src-ff-mis-freedom-fighter-list-alt-1",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "url": "https://mis.molwa.gov.bd/",
+      "title": "লগ ইন",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mis.molwa.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "লগ ইন",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "9438fc866cb1599d",
+        "retrieved_at": "2026-08-25T03:27:24.782375+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "claims": [
+    {
+      "claim_id": "vat-bin-registration::c-official-portal",
+      "service_id": "vat-bin-registration",
+      "claim_type": "application_url",
+      "claim_text": "VAT Registration (Business Identification Number) official information is published at https://nbr.gov.bd/faq/vat-faq/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/faq/vat-faq/eng"
+      },
+      "source_ids": [
+        "src-vat-bin-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-vat-bin-registration::c-official-portal-src-vat-bin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-bin-registration::c-procedure-overview",
+      "service_id": "vat-bin-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "VAT Business Identification Number (BIN) registration is processed through NBR VAT online services.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-bin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-bin-registration::c-service-identity",
+      "service_id": "vat-bin-registration",
+      "claim_type": "eligibility",
+      "claim_text": "VAT Registration (Business Identification Number) (\u09ad\u09cd\u09af\u09be\u099f/\u099f\u09be\u09b0\u09cd\u09a8\u0993\u09ad\u09be\u09b0 \u099f\u09cd\u09af\u09be\u0995\u09cd\u09b8 \u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09a8 (BIN)) is a confirmed government service in category vat, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-bin-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

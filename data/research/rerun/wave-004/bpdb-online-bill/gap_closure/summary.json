@@ -1,0 +1,20 @@
+{
+  "service_id": "bpdb-online-bill",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-bpdb-online-bill-fee-unverified",
+      "service_id": "bpdb-online-bill",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BPDB Online Electricity Bill.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bpdb-online-bill-documents-unverified",
+      "service_id": "bpdb-online-bill",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BPDB Online Electricity Bill.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

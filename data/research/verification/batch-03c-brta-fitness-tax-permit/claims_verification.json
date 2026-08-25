@@ -1,0 +1,4384 @@
+{
+  "schema": "bda.research.verification.claims/1.0",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "claims": [
+    {
+      "claim_id": "brta-fitness-certificate::c-portal-url",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "Vehicle fitness certificate issue and renewal guidance published on BRTA portal static page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-e-fitness-bsp",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "E-Fitness inspection results are viewable on BSP per catalogue discovery notes — digital fitness workflow complements circle office inspection.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-physical-inspection-required",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "Fitness issuance/renewal requires vehicle inspection at authorized inspection centre or circle office — not fully online-only.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-validity-by-class-unverified",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "Fitness certificate validity period by vehicle class (e.g., private car vs commercial bus) is NOT verified in this research pass — do not publish specific year durations.",
+      "claim_type": "restriction",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fitness validity-by-class matrix not verified from authoritative source; do not publish invented durations."
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-commercial-vs-private-rules-differ",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "Fitness requirements and inspection frequency differ between private and commercial vehicle classes; rules must not be generalized from one class to another.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fitness validity-by-class matrix not verified from authoritative source; do not publish invented durations."
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-fitness-fee-calculator",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "Fitness certificate fees depend on vehicle type and issue vs renewal action; amounts computed via BSP fee calculator.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-bsp-account-prerequisite",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "BSP owner account registration may be required to view E-Fitness results and pay fitness-related fees online.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-distinct-from-modification",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "Fitness renewal is distinct from vehicle modification services (engine/color/tyre change) in this batch — modifications may trigger re-inspection separately.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-fitness",
+        "src-brta-portal-engine-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-engine-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-fitness-certificate::c-practical-bsp-hours",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "Check E-Fitness results and pay fees during BSP operating hours (08:00–22:00 BST); sub-portals may be unavailable outside window.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-tax-token::c-portal-url",
+      "service_id": "brta-tax-token",
+      "claim_text": "Motor vehicle tax token issue and renewal process published on BRTA portal static page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-tax-token::c-registered-vehicle-required",
+      "service_id": "brta-tax-token",
+      "claim_text": "Tax token issued for vehicles already registered with BRTA; requires valid registration record.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-tax-token::c-tax-token-fee-calculator",
+      "service_id": "brta-tax-token",
+      "claim_text": "Tax token issue/renewal fees vary by vehicle type and engine capacity; amounts via BSP fee calculator.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-tax-token::c-distinct-from-mv-tax",
+      "service_id": "brta-tax-token",
+      "claim_text": "Tax token issue/renewal is distinct from MV tax payment (brta-mv-tax-payment at brta.cnsbd.com/mvtax_brta) — related but separate procedures.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-mvtax-portal",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-tax-token::c-circle-office-collection",
+      "service_id": "brta-tax-token",
+      "claim_text": "Physical tax token sticker or e-tax token collection may require circle office visit after fee payment.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tax-token"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-tax-token::c-fitness-may-be-prerequisite",
+      "service_id": "brta-tax-token",
+      "claim_text": "Valid fitness certificate may be required before tax token renewal for applicable vehicle classes.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-tax-token::c-e-tax-token-verifiable",
+      "service_id": "brta-tax-token",
+      "claim_text": "E-tax token can be verified via BSP e-document verification service (brta-e-document-verification).",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-tax-token::c-practical-verify-payment-first",
+      "service_id": "brta-tax-token",
+      "claim_text": "Use BSP payment verification before visiting circle office for tax token collection to confirm fee settlement.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-portal-url",
+      "service_id": "brta-mv-tax-payment",
+      "claim_text": "Motor vehicle tax (MV tax) payment available at brta.cnsbd.com/mvtax_brta per catalogue official_source.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-linked-from-brta-portal",
+      "service_id": "brta-mv-tax-payment",
+      "claim_text": "MV tax portal linked from BRTA portal internal e-services section per catalogue discovery notes.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-brta-portal-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-home",
+          "source_url": "http://brta.portal.gov.bd/",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-distinct-from-tax-token",
+      "service_id": "brta-mv-tax-payment",
+      "claim_text": "MV tax payment portal is separate from tax token issue/renewal (brta-tax-token) — both relate to vehicle taxation but use different workflows.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-registered-vehicle-required",
+      "service_id": "brta-mv-tax-payment",
+      "claim_text": "MV tax payment requires registered vehicle identification (registration number/chassis) on payment portal.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-mv-tax-amount-calculator",
+      "service_id": "brta-mv-tax-payment",
+      "claim_text": "MV tax amounts depend on vehicle class, engine capacity, and tax year; may align with BSP fee calculator categories but portal computes at payment time.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-online-payment-channel",
+      "service_id": "brta-mv-tax-payment",
+      "claim_text": "MV tax payable online via dedicated portal — reduces need for in-person payment for eligible cases.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-mvtax-portal"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-advance-tax-related",
+      "service_id": "brta-mv-tax-payment",
+      "claim_text": "Advance income tax (brta-advance-income-tax) may interact with overall vehicle tax settlement — exact sequencing not fully captured.",
+      "claim_type": "conditional_document",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-brta-portal-advance-tax"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-advance-tax",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_advance_income_tax.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-practical-keep-receipt",
+      "service_id": "brta-mv-tax-payment",
+      "claim_text": "Save MV tax payment receipt/transaction ID for tax token renewal and circle office visits.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-mvtax-portal"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-portal-url",
+      "service_id": "brta-advance-income-tax",
+      "claim_text": "Advance income tax (AIT) payment for motor vehicles published on BRTA portal static page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-advance-tax",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-advance-tax",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_advance_income_tax.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-bsp-and-mobile-app",
+      "service_id": "brta-advance-income-tax",
+      "claim_text": "AIT payment available via BSP and BRTA Seba mobile app per catalogue discovery notes.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-advance-tax",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-advance-tax",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_advance_income_tax.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-vehicle-owner-target",
+      "service_id": "brta-advance-income-tax",
+      "claim_text": "Advance income tax applies to registered motor vehicle owners per catalogue target_user.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-advance-tax"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-advance-tax",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_advance_income_tax.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-ait-fee-calculator",
+      "service_id": "brta-advance-income-tax",
+      "claim_text": "AIT amounts depend on vehicle class and assessed value; fee calculator may include AIT-related categories.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-advance-tax"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-brta-portal-advance-tax",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_advance_income_tax.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-distinct-from-mv-tax",
+      "service_id": "brta-advance-income-tax",
+      "claim_text": "Advance income tax is distinct from MV tax payment (brta-mv-tax-payment) and tax token (brta-tax-token) — separate tax categories.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-advance-tax",
+        "src-mvtax-portal",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-advance-tax",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_advance_income_tax.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-mvtax-portal",
+          "source_url": "https://brta.cnsbd.com/mvtax_brta",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-registration-prerequisite",
+      "service_id": "brta-advance-income-tax",
+      "claim_text": "Vehicle must be registered with BRTA for AIT assessment tied to motor vehicle ownership.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-advance-tax",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-advance-tax",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_advance_income_tax.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-payment-verification",
+      "service_id": "brta-advance-income-tax",
+      "claim_text": "AIT payment status verifiable via BSP payment verification after online payment.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-advance-tax"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-advance-tax",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e058933eb65569e269cd",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_advance_income_tax.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-advance-income-tax::c-practical-bsp-hours",
+      "service_id": "brta-advance-income-tax",
+      "claim_text": "Pay AIT via BSP during operating hours (08:00–22:00 BST) when using online channels.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-route-permit::c-portal-url",
+      "service_id": "brta-route-permit",
+      "claim_text": "Route permit issue and renewal process published on BRTA portal static page for brta-route-permit.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-route-permit::c-commercial-operator-target",
+      "service_id": "brta-route-permit",
+      "claim_text": "Route permits target commercial transport operators and businesses per catalogue target_user.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-route-permit"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-route-permit::c-not-applicable-private-car",
+      "service_id": "brta-route-permit",
+      "claim_text": "Route permit not applicable to standard private passenger vehicles — commercial/public transport service authorization.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-route-permit::c-route-permit-fee-calculator",
+      "service_id": "brta-route-permit",
+      "claim_text": "Route permit fees depend on vehicle type and permit category; amounts via BSP fee calculator.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-route-permit"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-route-permit::c-fitness-prerequisite",
+      "service_id": "brta-route-permit",
+      "claim_text": "Valid fitness certificate typically required before route permit issue/renewal for commercial vehicles.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-route-permit::c-crossref-transport-route-permit",
+      "service_id": "brta-route-permit",
+      "claim_text": "brta-route-permit (portal static page) differs from transport-route-permit (BSP operator service) — related but separate catalogue entries; do not merge workflows.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-route-permit::c-route-type-matrix-unverified",
+      "service_id": "brta-route-permit",
+      "claim_text": "Route permit categories (inter-district, city, long-route, etc.) and applicability matrix not extracted from portal in this pass.",
+      "claim_type": "restriction",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-route-permit"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-route-permit::c-circle-office-submission",
+      "service_id": "brta-route-permit",
+      "claim_text": "Route permit applications submitted to relevant BRTA circle office with supporting documents.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-route-permit"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "transport-route-permit::c-bsp-service",
+      "service_id": "transport-route-permit",
+      "claim_text": "Route permit (BRTA) is a BSP operator licensing service per catalogue finalization_notes; official_source is bsp.brta.gov.bd.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "transport-route-permit::c-crossref-brta-route-permit",
+      "service_id": "transport-route-permit",
+      "claim_text": "transport-route-permit (BSP workflow) is related to but distinct from brta-route-permit (portal static page) — cross-reference both, do not flatten.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-route-permit",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "transport-route-permit::c-operator-business-target",
+      "service_id": "transport-route-permit",
+      "claim_text": "Route permit service targets business operators per catalogue target_user (business, operator).",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "transport-route-permit::c-route-permit-fee-calculator",
+      "service_id": "transport-route-permit",
+      "claim_text": "Route permit fees on BSP computed via fee calculator by vehicle type and route category.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "transport-route-permit::c-bsp-account-required",
+      "service_id": "transport-route-permit",
+      "claim_text": "BSP operator/business account likely required for route permit application on BSP.",
+      "claim_type": "eligibility",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "transport-route-permit::c-route-type-matrix-unverified",
+      "service_id": "transport-route-permit",
+      "claim_text": "Route-type applicability matrix (inter-city, intra-district, etc.) not extracted from BSP in this research pass.",
+      "claim_type": "restriction",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-route-permit"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "transport-route-permit::c-fitness-tax-prerequisites",
+      "service_id": "transport-route-permit",
+      "claim_text": "Valid fitness and current tax token may be prerequisites for route permit renewal.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-brta-portal-fitness",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-route-permit",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "transport-route-permit::c-practical-bsp-hours",
+      "service_id": "transport-route-permit",
+      "claim_text": "Access BSP route permit services during 08:00–22:00 BST operating window.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-portal-url",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "BRTA fee calculator available at bsp.brta.gov.bd/feeCalculator per catalogue official_source.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-covers-fitness-route-tax",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "Fee calculator covers fitness, route permit, registration, and license fees per catalogue notes.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-vehicle-type-dependent",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "All fee outputs depend on selected vehicle type/class — no single flat fee for any service category.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-interactive-matrix-not-extracted",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "Per-vehicle-type numeric fee matrix not statically published; requires interactive calculator session.",
+      "claim_type": "fee",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-cross-cutting-tool",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "Fee calculator is cross-cutting — referenced by fitness, tax token, route permit, and modification services in this batch.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-may-differ-from-static-pages",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "Calculator-derived fees may differ from outdated static fee tables on portal pages — calculator treated as authoritative when available.",
+      "claim_type": "restriction",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-brta-portal-home",
+          "source_url": "http://brta.portal.gov.bd/",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-no-login-required-likely",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "Fee calculator likely accessible without BSP login for fee estimation (workflow not fully snapshotted).",
+      "claim_type": "eligibility",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-practical-use-before-visit",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "Use fee calculator before circle office visits for fitness, tax token, or route permit to prepare exact payment amounts.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-payment-verification::c-portal-url",
+      "service_id": "brta-payment-verification",
+      "claim_text": "BRTA payment verification available via BSP hub at bsp.brta.gov.bd per catalogue official_source.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-payment-verification::c-cross-cutting-verification",
+      "service_id": "brta-payment-verification",
+      "claim_text": "Payment verification applies across BSP services including fitness, tax, route permit, and registration fees.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-payment-verification::c-transaction-id-required",
+      "service_id": "brta-payment-verification",
+      "claim_text": "Payment verification requires transaction reference or payment receipt details from BSP payment.",
+      "claim_type": "document",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell or source not snapshotted."
+    },
+    {
+      "claim_id": "brta-payment-verification::c-pre-circle-office-check",
+      "service_id": "brta-payment-verification",
+      "claim_text": "Verify payment status online before visiting circle office for document collection (tax token, fitness certificate).",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-tax-token",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-payment-verification::c-bsp-account-may-be-required",
+      "service_id": "brta-payment-verification",
+      "claim_text": "Payment verification may require BSP account login linked to the payment transaction.",
+      "claim_type": "eligibility",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-register"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-payment-verification::c-not-a-payment-gateway",
+      "service_id": "brta-payment-verification",
+      "claim_text": "Payment verification confirms prior payment — it does not initiate new payments.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-payment-verification::c-practical-bsp-hours",
+      "service_id": "brta-payment-verification",
+      "claim_text": "Payment verification portal subject to BSP operating hours (08:00–22:00 BST).",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-payment-verification::c-distinct-from-e-document",
+      "service_id": "brta-payment-verification",
+      "claim_text": "Payment verification is distinct from e-document verification (brta-e-document-verification) — confirms payment, not document authenticity.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-portal-url",
+      "service_id": "brta-e-document-verification",
+      "claim_text": "E-tax token and e-license verification available via BSP hub per catalogue official_source and service name.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-verifies-digital-documents",
+      "service_id": "brta-e-document-verification",
+      "claim_text": "Service verifies authenticity of e-tax tokens and e-licenses for citizens and law enforcement.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-not-payment-verification",
+      "service_id": "brta-e-document-verification",
+      "claim_text": "E-document verification confirms document validity — distinct from payment verification (brta-payment-verification).",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-e-fitness-may-be-included",
+      "service_id": "brta-e-document-verification",
+      "claim_text": "E-Fitness results from brta-fitness-certificate may be viewable/verifiable on BSP per catalogue cross-notes.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-public-verification-tool",
+      "service_id": "brta-e-document-verification",
+      "claim_text": "Verification tool usable by citizens and law enforcement per catalogue target_user.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-document-id-required",
+      "service_id": "brta-e-document-verification",
+      "claim_text": "Verification requires document identifier (token number, license number, or QR code) from issued e-document.",
+      "claim_type": "document",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell or source not snapshotted."
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-no-fee-for-verification-likely",
+      "service_id": "brta-e-document-verification",
+      "claim_text": "Document verification likely free — no fee schedule captured for verification lookups in this pass.",
+      "claim_type": "fee",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell or source not snapshotted."
+    },
+    {
+      "claim_id": "brta-e-document-verification::c-practical-law-enforcement-use",
+      "service_id": "brta-e-document-verification",
+      "claim_text": "Law enforcement can use e-document verification roadside to confirm valid e-tax token or e-license without physical sticker.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-portal-url",
+      "service_id": "brta-bsp-user-registration",
+      "claim_text": "BSP user registration at bsp.brta.gov.bd/register for driver, owner, or dealer accounts.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-nid-linked-mobile",
+      "service_id": "brta-bsp-user-registration",
+      "claim_text": "Registration requires NID-linked mobile number per catalogue discovery notes.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-user-types",
+      "service_id": "brta-bsp-user-registration",
+      "claim_text": "Register as driver, vehicle owner, or vehicle dealer — account type determines accessible BSP services.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-register"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-prerequisite-for-batch-services",
+      "service_id": "brta-bsp-user-registration",
+      "claim_text": "BSP account prerequisite for online fitness (E-Fitness), tax payment, route permit, and payment verification in this batch.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-not-applicable-verification-only",
+      "service_id": "brta-bsp-user-registration",
+      "claim_text": "BSP registration not required for read-only e-document verification lookups that accept public document IDs.",
+      "claim_type": "restriction",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-dealer-for-school-registration",
+      "service_id": "brta-bsp-user-registration",
+      "claim_text": "Business/dealer account type may be required for driving school registration workflows.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-road-safety"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-no-registration-fee-known",
+      "service_id": "brta-bsp-user-registration",
+      "claim_text": "BSP account registration fee (if any) not published on sources reviewed in this pass.",
+      "claim_type": "fee",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell or source not snapshotted."
+    },
+    {
+      "claim_id": "brta-bsp-user-registration::c-practical-complete-before-fitness-tax",
+      "service_id": "brta-bsp-user-registration",
+      "claim_text": "Complete BSP registration before attempting E-Fitness, MV tax, or route permit online workflows.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-color-change::c-portal-url",
+      "service_id": "brta-color-change",
+      "claim_text": "Vehicle color change approval process published on BRTA portal static page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-color-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_color_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-color-change::c-modification-not-fitness",
+      "service_id": "brta-color-change",
+      "claim_text": "Color change is a vehicle modification procedure — distinct from fitness certificate renewal or tax token services.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-color-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_color_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-color-change::c-registered-vehicle-required",
+      "service_id": "brta-color-change",
+      "claim_text": "Vehicle must be registered with BRTA before color change approval.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-color-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-color-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_color_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-color-change::c-original-rc-required",
+      "service_id": "brta-color-change",
+      "claim_text": "Original registration certificate required for color change application.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-color-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-color-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_color_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-color-change::c-color-change-fee-calculator",
+      "service_id": "brta-color-change",
+      "claim_text": "Color change fees vehicle-type dependent via BSP fee calculator.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-color-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-brta-portal-color-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_color_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-color-change::c-reinspection-may-be-required",
+      "service_id": "brta-color-change",
+      "claim_text": "Fitness re-inspection may be required after color change before updated RC reflects modification.",
+      "claim_type": "conditional_document",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-color-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_color_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-color-change::c-circle-office-application",
+      "service_id": "brta-color-change",
+      "claim_text": "Color change application submitted to relevant BRTA circle office with prescribed forms.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-color-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-color-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_color_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-color-change::c-practical-separate-from-info-correction",
+      "service_id": "brta-color-change",
+      "claim_text": "Color change is a modification service (03C), not registration info correction (03B brta-vehicle-info-correction).",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-color-change",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-color-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_color_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-engine-change::c-portal-url",
+      "service_id": "brta-engine-change",
+      "claim_text": "Vehicle engine change approval process published on BRTA portal static page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-engine-change",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-engine-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-engine-change::c-modification-not-fitness",
+      "service_id": "brta-engine-change",
+      "claim_text": "Engine change is a vehicle modification — distinct from fitness renewal, tax token, and route permit procedures.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-engine-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-engine-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-engine-change::c-registered-vehicle-required",
+      "service_id": "brta-engine-change",
+      "claim_text": "Vehicle must be registered before engine change approval.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-engine-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-engine-change::c-engine-proof-required",
+      "service_id": "brta-engine-change",
+      "claim_text": "Supporting documents for new engine (invoice, customs release if imported engine) required per modification type.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-engine-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-engine-change::c-engine-change-fee-calculator",
+      "service_id": "brta-engine-change",
+      "claim_text": "Engine change fees vehicle-type dependent via BSP fee calculator.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-engine-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-brta-portal-engine-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-engine-change::c-fitness-reinspection-likely",
+      "service_id": "brta-engine-change",
+      "claim_text": "Fitness re-inspection likely required after engine change due to altered vehicle specifications.",
+      "claim_type": "conditional_document",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-engine-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-engine-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-engine-change::c-circle-office-application",
+      "service_id": "brta-engine-change",
+      "claim_text": "Engine change application submitted to BRTA circle office with technical inspection.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-engine-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-engine-change::c-practical-update-rc-after-approval",
+      "service_id": "brta-engine-change",
+      "claim_text": "Ensure RC/engine number updated on registration record after approved engine change.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-engine-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-portal-url",
+      "service_id": "brta-tire-size-change",
+      "claim_text": "Vehicle tire size (width) change approval process published on BRTA portal static page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tire-change",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tire-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tire_size_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-modification-not-fitness",
+      "service_id": "brta-tire-size-change",
+      "claim_text": "Tire size change is a vehicle modification — separate from fitness certificate and tax token services.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tire-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tire-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tire_size_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-registered-vehicle-required",
+      "service_id": "brta-tire-size-change",
+      "claim_text": "Vehicle must be registered before tire size change approval.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tire-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tire-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tire_size_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-technical-compliance",
+      "service_id": "brta-tire-size-change",
+      "claim_text": "Proposed tire size must comply with vehicle manufacturer specifications and road safety standards.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tire-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tire-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tire_size_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-tire-change-fee-calculator",
+      "service_id": "brta-tire-size-change",
+      "claim_text": "Tire size change fees vehicle-type dependent via BSP fee calculator.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-tire-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-brta-portal-tire-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tire_size_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-fitness-reinspection-possible",
+      "service_id": "brta-tire-size-change",
+      "claim_text": "Fitness re-inspection may be required if tire modification affects vehicle roadworthiness assessment.",
+      "claim_type": "conditional_document",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tire-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tire-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tire_size_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-circle-office-application",
+      "service_id": "brta-tire-size-change",
+      "claim_text": "Tire size change application submitted to BRTA circle office.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tire-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tire-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tire_size_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-tire-size-change::c-practical-document-new-specs",
+      "service_id": "brta-tire-size-change",
+      "claim_text": "Bring tire specification documentation and invoice when applying for tire width change approval.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-tire-change"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-tire-change",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dcdf933eb65569e127ec",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tire_size_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-portal-url",
+      "service_id": "brta-driving-school-registration",
+      "claim_text": "Motor driving training school registration available via BSP roadSafety portal per catalogue official_source.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-road-safety",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-business-operator-target",
+      "service_id": "brta-driving-school-registration",
+      "claim_text": "Driving school registration targets business operators per catalogue target_user.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-road-safety"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-brta-mandated-registration",
+      "service_id": "brta-driving-school-registration",
+      "claim_text": "BRTA mandates registration of motor driving training schools per catalogue notes.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-road-safety"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-crossref-transport-licence",
+      "service_id": "brta-driving-school-registration",
+      "claim_text": "brta-driving-school-registration (BSP roadSafety) related to but distinct from transport-driving-school-licence (BSP licensing service).",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-road-safety",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-bsp-account-required",
+      "service_id": "brta-driving-school-registration",
+      "claim_text": "BSP business/dealer account likely required for driving school registration application.",
+      "claim_type": "eligibility",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-road-safety"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-registration-fee-unknown",
+      "service_id": "brta-driving-school-registration",
+      "claim_text": "Driving school registration fee not statically published; may appear in fee calculator under road safety category.",
+      "claim_type": "fee",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-road-safety"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-facility-inspection-likely",
+      "service_id": "brta-driving-school-registration",
+      "claim_text": "Driving school registration likely requires facility and instructor inspection by BRTA.",
+      "claim_type": "procedure_step",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-road-safety",
+        "src-brta-portal-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-brta-portal-home",
+          "source_url": "http://brta.portal.gov.bd/",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "brta-driving-school-registration::c-practical-bsp-hours",
+      "service_id": "brta-driving-school-registration",
+      "claim_text": "Access roadSafety registration portal during BSP operating hours (08:00–22:00 BST).",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-bsp-service",
+      "service_id": "transport-driving-school-licence",
+      "claim_text": "Driving school/training centre licence is a BSP licensing service per catalogue finalization_notes.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure: catalogue URL confirmed; BSP/portal availability evidence captured."
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-crossref-brta-registration",
+      "service_id": "transport-driving-school-licence",
+      "claim_text": "transport-driving-school-licence (BSP licence) distinct from brta-driving-school-registration (roadSafety registration) — related operator services.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-road-safety",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-business-target",
+      "service_id": "transport-driving-school-licence",
+      "claim_text": "Licence service targets business operators running driving training centres.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-licence-vs-registration",
+      "service_id": "transport-driving-school-licence",
+      "claim_text": "Licence issuance is authorization to operate; registration is initial enrolment — may be sequential requirements.",
+      "claim_type": "restriction",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-road-safety"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-road-safety",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty or partial."
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-licence-fee-calculator",
+      "service_id": "transport-driving-school-licence",
+      "claim_text": "Driving school licence fees may be listed in BSP fee calculator under licensing categories.",
+      "claim_type": "fee",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-bsp-account-required",
+      "service_id": "transport-driving-school-licence",
+      "claim_text": "BSP business account required for licence application workflow.",
+      "claim_type": "eligibility",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-bsp-home",
+          "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_home.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-not-applicable-vehicle-owner",
+      "service_id": "transport-driving-school-licence",
+      "claim_text": "Driving school licence not applicable to individual vehicle owners — business/operator service only.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-practical-bsp-hours",
+      "service_id": "transport-driving-school-licence",
+      "claim_text": "Apply for driving school licence via BSP during 08:00–22:00 BST operating window.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Practical tip supported by BSP hours notice or catalogue cross-reference."
+    },
+    {
+      "claim_id": "gap-closure::c-brta-portal-cms-body-empty",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "BRTA portal static pages for fitness, tax token, route permit, advance income tax, and vehicle modifications load with verified page titles and last-updated metadata, but rendered CMS instructional body shows 'Content: Pages' / 'কন্টেন্ট: পাতা' placeholder only — procedural checklists not captured in innerText.",
+      "claim_type": "official_metadata",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-brta-fitness-browser",
+        "src-gap-brta-tax-token-browser",
+        "src-gap-brta-route-permit-browser",
+        "src-gap-brta-advance-income-tax-browser",
+        "src-gap-brta-color-change-browser",
+        "src-gap-brta-engine-change-browser",
+        "src-gap-brta-tire-size-change-browser"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-brta-fitness-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-brta-tax-token-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_tax_token.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-brta-route-permit-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-brta-color-change-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dd3a933eb65569e14058",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_color_change.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-brta-engine-change-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_engine_change.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Rendered text includes page title then 'কন্টেন্ট: পাতা' with no checklist steps",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-fitness-certificate::c-physical-inspection-required",
+        "brta-tax-token::c-circle-office-collection",
+        "brta-route-permit::c-circle-office-submission"
+      ],
+      "deferred_to_batch": null,
+      "resolves_cross_batch_dependency": null
+    },
+    {
+      "claim_id": "gap-closure::c-fitness-validity-unresolved",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "Fitness certificate validity periods by vehicle class (private car, motorcycle, bus, truck, etc.) and commercial-vs-private inspection intervals remain UNRESOLVED. Browser render captured page title 'ফিটনেস নবায়ন' but no validity matrix — do NOT invent durations (e.g. '5 years for private car').",
+      "claim_type": "eligibility_rule",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-brta-fitness-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-brta-fitness-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-scrape-results-index",
+          "source_url": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal title captured; no validity period table or class matrix in render",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-fitness-certificate::c-validity-by-class-unverified",
+        "brta-fitness-certificate::c-commercial-vs-private-rules-differ"
+      ],
+      "deferred_to_batch": null,
+      "resolves_cross_batch_dependency": "dep-03b-fitness-validity-03c"
+    },
+    {
+      "claim_id": "gap-closure::c-bsp-subportals-temporarily-unavailable",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "BSP feeCalculator, bsp/home, and roadSafety URLs returned HTTP 200 during 2026-08-25 browser probe — portals RENDERED. Fee calculator shell captured but interactive fee matrix not extractable (no select elements); numeric amounts remain CALCULATOR_DERIVED.",
+      "claim_type": "availability",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-bsp-fee-calculator-browser",
+        "src-gap-bsp-home-browser",
+        "src-gap-bsp-road-safety-browser",
+        "src-gap-scrape-results-index",
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-bsp-fee-calculator-browser",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-gap-bsp-road-safety-browser",
+          "source_url": "https://bsp.brta.gov.bd/roadSafety",
+          "authority_tier": 1,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/bsp_road_safety.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-gap-scrape-results-index",
+          "source_url": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "fee_calculator_probe: captured=False, note=No select elements found; calculator may require login or different UI",
+      "gap_closure": true,
+      "supersedes_interpretation_of": "404 interpreted as invalid URL",
+      "related_prior_claim_ids": [
+        "brta-fee-calculator::c-portal-url",
+        "brta-bsp-user-registration::c-portal-url",
+        "brta-driving-school-registration::c-portal-url"
+      ],
+      "deferred_to_batch": null,
+      "resolves_cross_batch_dependency": null
+    },
+    {
+      "claim_id": "gap-closure::c-fitness-tax-fees-calculator-derived",
+      "service_id": "brta-fee-calculator",
+      "claim_text": "Fitness, tax token, route permit, advance income tax, and vehicle modification fees are CALCULATOR_DERIVED via BSP feeCalculator; no static fee matrix published. Calculator shell RENDERED but interactive matrix not extractable — numeric amounts remain UNVERIFIED.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-bsp-fee-calculator-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-bsp-fee-calculator-browser",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03b",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-gap-scrape-results-index",
+          "source_url": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "No select elements found; calculator may require login or different UI",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-fitness-certificate::c-fitness-fee-calculator",
+        "brta-tax-token::c-tax-token-fee-calculator",
+        "brta-route-permit::c-route-permit-fee-calculator"
+      ],
+      "deferred_to_batch": null,
+      "resolves_cross_batch_dependency": null
+    },
+    {
+      "claim_id": "gap-closure::c-route-permit-type-matrix-unresolved",
+      "service_id": "brta-route-permit",
+      "claim_text": "Route permit categories (inter-district, city, long-route, special permit types) and applicability by vehicle class remain UNRESOLVED. Portal page title captured but route-type matrix not in browser render.",
+      "claim_type": "eligibility_rule",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-brta-route-permit-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-brta-route-permit-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": "data/research/raw/batch-03c-brta-fitness-tax-permit/source_snapshots/brta_route_permit.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-scrape-results-index",
+          "source_url": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Route permit portal metadata only; no route-type enumeration in innerText",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-route-permit::c-route-type-matrix-unverified",
+        "transport-route-permit::c-crossref-brta-route-permit"
+      ],
+      "deferred_to_batch": null,
+      "resolves_cross_batch_dependency": null
+    },
+    {
+      "claim_id": "gap-closure::c-mv-tax-portal-shell-captured",
+      "service_id": "brta-mv-tax-payment",
+      "claim_text": "MV tax payment portal at https://brta.cnsbd.com/mvtax_brta could not be reached during browser probe (net::ERR_NAME_NOT_RESOLVED at https://brta.cnsbd.com/mvtax_brta). URL remains catalogue-confirmed but live snapshot not captured in this pass.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-mv-tax-portal-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-scrape-results-index",
+          "source_url": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "net::ERR_NAME_NOT_RESOLVED at https://brta.cnsbd.com/mvtax_brta",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-mv-tax-payment::c-portal-url"
+      ],
+      "deferred_to_batch": null,
+      "resolves_cross_batch_dependency": null
+    },
+    {
+      "claim_id": "gap-closure::c-fitness-page-title-verified",
+      "service_id": "brta-fitness-certificate",
+      "claim_text": "BRTA fitness renewal portal page title 'ফিটনেস নবায়ন | পাতা | বাংলাদেশ সড়ক পরিবহন কর্তৃপক্ষ' verified via browser-rendered capture (Batch 03C gap-closure probe).",
+      "claim_type": "official_metadata",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-brta-fitness-browser"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-brta-fitness-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.txt",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T03:41:07.444544+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Page heading 'ফিটনেস নবায়ন' in innerText after 15s render wait",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": null,
+      "deferred_to_batch": null,
+      "resolves_cross_batch_dependency": null
+    }
+  ]
+}

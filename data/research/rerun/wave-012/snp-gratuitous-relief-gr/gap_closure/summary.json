@@ -1,0 +1,20 @@
+{
+  "service_id": "snp-gratuitous-relief-gr",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-snp-gratuitous-relief-gr-fee-unverified",
+      "service_id": "snp-gratuitous-relief-gr",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Gratuitous Relief (GR).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-gratuitous-relief-gr-documents-unverified",
+      "service_id": "snp-gratuitous-relief-gr",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Gratuitous Relief (GR).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

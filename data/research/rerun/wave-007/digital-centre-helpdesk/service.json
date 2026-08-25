@@ -1,0 +1,132 @@
+{
+  "service_id": "digital-centre-helpdesk",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Digital Centre Support Helpdesk",
+  "service_name_bn": "ডিজিটাল সেন্টার/একসেবা হেল্পডেস্ক",
+  "aliases": [
+    "Uddokta support ticket"
+  ],
+  "category_id": "ict",
+  "profile_key": "OTHER",
+  "responsible_agency": "Aspire to Innovate (a2i), ICT Division",
+  "official_application_url": "https://support.digitalcentre.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "digital-centre-helpdesk::c-catalogue-authority",
+      "service_id": "digital-centre-helpdesk",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Aspire to Innovate (a2i), ICT Division.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-helpdesk::c-official-portal",
+      "service_id": "digital-centre-helpdesk",
+      "claim_type": "application_url",
+      "claim_text": "Digital Centre Support Helpdesk official information is published at https://support.digitalcentre.gov.bd/ (page title: My Helpdesk).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://support.digitalcentre.gov.bd/"
+      },
+      "source_ids": [
+        "src-digital-centre-helpdesk-official"
+      ],
+      "evidence_ids": [
+        "ev-digital-centre-helpdesk::c-official-portal-src-digital-centre-helpdesk-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-helpdesk::c-procedure-overview",
+      "service_id": "digital-centre-helpdesk",
+      "claim_type": "procedure_step",
+      "claim_text": "Digital Centre Support Helpdesk is a government service under Aspire to Innovate (a2i), ICT Division (digital centre). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-centre-helpdesk-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-helpdesk::c-service-identity",
+      "service_id": "digital-centre-helpdesk",
+      "claim_type": "eligibility",
+      "claim_text": "Digital Centre Support Helpdesk (ডিজিটাল সেন্টার/একসেবা হেল্পডেস্ক) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-centre-helpdesk-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-digital-centre-helpdesk-official",
+      "service_id": "digital-centre-helpdesk",
+      "url": "https://support.digitalcentre.gov.bd/",
+      "title": "My Helpdesk",
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://support.digitalcentre.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "My Helpdesk",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "29931ef937b44843",
+        "retrieved_at": "2026-08-25T03:26:06.625745+00:00"
+      },
+      "evidence_locator": "probe:https://support.digitalcentre.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-digital-centre-helpdesk-fee-unverified",
+      "service_id": "digital-centre-helpdesk",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Digital Centre Support Helpdesk.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-digital-centre-helpdesk-documents-unverified",
+      "service_id": "digital-centre-helpdesk",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Digital Centre Support Helpdesk.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

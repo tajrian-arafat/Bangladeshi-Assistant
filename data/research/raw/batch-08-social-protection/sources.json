@@ -1,0 +1,2849 @@
+{
+  "batch_id": "batch-08-social-protection",
+  "sources": [
+    {
+      "source_id": "src-disability-dis-registration",
+      "service_id": "disability-dis-registration",
+      "url": "https://www.dis.gov.bd/",
+      "portal_url": null,
+      "title": "DIS - হোম",
+      "authority_id": "dss",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.dis.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DIS - হোম",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-ff-g2p-electronic-payment",
+      "service_id": "ff-g2p-electronic-payment",
+      "url": "https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf",
+      "portal_url": null,
+      "title": "Freedom Fighter Allowance G2P Electronic Payment",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "application/pdf"
+      }
+    },
+    {
+      "source_id": "src-ff-honorarium-allowance",
+      "service_id": "ff-honorarium-allowance",
+      "url": "https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf",
+      "portal_url": null,
+      "title": "Freedom Fighter Honorarium Allowance",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "application/pdf"
+      }
+    },
+    {
+      "source_id": "src-ff-mis-freedom-fighter-list",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "url": "https://mis.molwa.gov.bd/freedom-fighter-list",
+      "portal_url": null,
+      "title": "403 Forbidden",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mis.molwa.gov.bd/freedom-fighter-list",
+        "status_code": 403,
+        "reachable": false,
+        "title": "403 Forbidden",
+        "content_type": "text/html"
+      }
+    },
+    {
+      "source_id": "src-ff-welfare-trust-enrollment",
+      "service_id": "ff-welfare-trust-enrollment",
+      "url": "https://tmis.bffwt.gov.bd/applicationform/",
+      "portal_url": null,
+      "title": "বাংলাদেশ মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট - হোম",
+      "authority_id": "bangladesh-freedom-fighters-welfare-trust-bffwt",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://tmis.bffwt.gov.bd/applicationform/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "বাংলাদেশ মুক্তিযোদ্ধা কল্যাণ ট্রাস্ট - হোম",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-food-ministry-vgf-card",
+      "service_id": "food-ministry-vgf-card",
+      "url": "https://food.gov.bd/",
+      "portal_url": null,
+      "title": "Vulnerable Group Feeding (VGF) / Food Assistance Card",
+      "authority_id": "ministry-of-food",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://food.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known"
+      }
+    },
+    {
+      "source_id": "src-snp-adaptation-to-climate-change-and-rehabilitation-of-livelihood",
+      "service_id": "snp-adaptation-to-climate-change-and-rehabilitation-of-livelihood",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-agriculture",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-agriculture-infrastructure-improvement",
+      "service_id": "snp-agriculture-infrastructure-improvement",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-agriculture-rehabilitation",
+      "service_id": "snp-agriculture-rehabilitation",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-agriculture",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-allowances-for-distressed-cultural-personalities-activists",
+      "service_id": "snp-allowances-for-distressed-cultural-personalities-activists",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-cultural-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-allowances-for-the-financially-insolvent-disabled",
+      "service_id": "snp-allowances-for-the-financially-insolvent-disabled",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-allowances-for-the-widow-deserted-and-destitute-women",
+      "service_id": "snp-allowances-for-the-widow-deserted-and-destitute-women",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-allowances-for-urban-low-income-lactating-mothers",
+      "service_id": "snp-allowances-for-urban-low-income-lactating-mothers",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-ashroyan-2-project",
+      "service_id": "snp-ashroyan-2-project",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "prime-minister-s-office",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-assistance-for-cancer-kidney-and-liver-cirrhosis-patients",
+      "service_id": "snp-assistance-for-cancer-kidney-and-liver-cirrhosis-patients",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-bangladesh-climate-resilient-participatory-afforestation-and-reforestation",
+      "service_id": "snp-bangladesh-climate-resilient-participatory-afforestation-and-reforestation",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-environment-forest",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-bangladesh-rural-water-supply-and-sanitation",
+      "service_id": "snp-bangladesh-rural-water-supply-and-sanitation",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-block-allocation-for-disaster-management",
+      "service_id": "snp-block-allocation-for-disaster-management",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-block-allocation-for-various-programme",
+      "service_id": "snp-block-allocation-for-various-programme",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-capitation-grants-for-orphan-students-in-non-gov-orphanages",
+      "service_id": "snp-capitation-grants-for-orphan-students-in-non-gov-orphanages",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-char-development-and-settlement",
+      "service_id": "snp-char-development-and-settlement",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-water-resources",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-char-livelihood-program",
+      "service_id": "snp-char-livelihood-program",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-child-development-center",
+      "service_id": "snp-child-development-center",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-child-sensitive-social-protection-in-bangladesh",
+      "service_id": "snp-child-sensitive-social-protection-in-bangladesh",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-clinical-contraception-services-delivery",
+      "service_id": "snp-clinical-contraception-services-delivery",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-coastal-climate-resilient-infrastructure-improvement",
+      "service_id": "snp-coastal-climate-resilient-infrastructure-improvement",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-community-based-health-care",
+      "service_id": "snp-community-based-health-care",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-comprehensive-disaster-management-programme",
+      "service_id": "snp-comprehensive-disaster-management-programme",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-comprehensive-village-development-programme",
+      "service_id": "snp-comprehensive-village-development-programme",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-conservancy-workers-colony",
+      "service_id": "snp-conservancy-workers-colony",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-construction-of-hostel-for-govt-orphanage",
+      "service_id": "snp-construction-of-hostel-for-govt-orphanage",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-construction-of-residence-for-landless-poor-freedom-fighters",
+      "service_id": "snp-construction-of-residence-for-landless-poor-freedom-fighters",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-day-care-program-for-lower-and-middle-income-working-women",
+      "service_id": "snp-day-care-program-for-lower-and-middle-income-working-women",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-disaster-and-climate-resilient",
+      "service_id": "snp-disaster-and-climate-resilient",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-early-learning-for-child-development",
+      "service_id": "snp-early-learning-for-child-development",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-economic-empowerment-of-the-poorest-in-bangladesh",
+      "service_id": "snp-economic-empowerment-of-the-poorest-in-bangladesh",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-emergency-2007-cyclone-recovery-and-restoration",
+      "service_id": "snp-emergency-2007-cyclone-recovery-and-restoration",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-employment-generation-programme-for-the-poor",
+      "service_id": "snp-employment-generation-programme-for-the-poor",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-employment-of-ultra-poor-for-northern-areas",
+      "service_id": "snp-employment-of-ultra-poor-for-northern-areas",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-employment-opportunities-for-unemployed-youth-in-7-northern-district",
+      "service_id": "snp-employment-opportunities-for-unemployed-youth-in-7-northern-district",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-youth-and-sports",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-enabling-environment-for-child-right",
+      "service_id": "snp-enabling-environment-for-child-right",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-essential-services-delivery",
+      "service_id": "snp-essential-services-delivery",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-establishment-of-autistic-academy-in-bangladesh",
+      "service_id": "snp-establishment-of-autistic-academy-in-bangladesh",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-expansion-of-polli-daridro-bimochon-foundation-for-poverty-alleviation-and-self-employment",
+      "service_id": "snp-expansion-of-polli-daridro-bimochon-foundation-for-poverty-alleviation-and-self-employment",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-family-planning-field-services-delivery",
+      "service_id": "snp-family-planning-field-services-delivery",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-fishermen-id-card-and-fisheries-project",
+      "service_id": "snp-fishermen-id-card-and-fisheries-project",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-fisheries-livestock",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-food-assistance-in-ctg-hill-tracts-area",
+      "service_id": "snp-food-assistance-in-ctg-hill-tracts-area",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-cht-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-food-for-work-ffw",
+      "service_id": "snp-food-for-work-ffw",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-food-security-through-enhanced-agricultural-production-income-value-addition-and-marketing-in-bangladesh",
+      "service_id": "snp-food-security-through-enhanced-agricultural-production-income-value-addition-and-marketing-in-bangladesh",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-agriculture",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-fund-for-assistance-to-the-small-farmer-and-poultry-farms",
+      "service_id": "snp-fund-for-assistance-to-the-small-farmer-and-poultry-farms",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-fisheries-livestock",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-fund-for-climate-change",
+      "service_id": "snp-fund-for-climate-change",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-environment-forest",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-fund-for-micro-credit-through-pksf",
+      "service_id": "snp-fund-for-micro-credit-through-pksf",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-finance",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-fund-for-the-welfare-of-burnt-and-disabled",
+      "service_id": "snp-fund-for-the-welfare-of-burnt-and-disabled",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-general-relief-activities",
+      "service_id": "snp-general-relief-activities",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-generation-breakthrough",
+      "service_id": "snp-generation-breakthrough",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-grants-for-residents-in-government-orphanages-and-other-institutions",
+      "service_id": "snp-grants-for-residents-in-government-orphanages-and-other-institutions",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-grants-for-the-schools-for-the-disabled",
+      "service_id": "snp-grants-for-the-schools-for-the-disabled",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-gratuitous-relief-gr",
+      "service_id": "snp-gratuitous-relief-gr",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-gucchagram-climate-victims-rehabilitation",
+      "service_id": "snp-gucchagram-climate-victims-rehabilitation",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-land",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-haor-infrastructure-and-livelihood-development",
+      "service_id": "snp-haor-infrastructure-and-livelihood-development",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-health-economic-financing-and-gnsp",
+      "service_id": "snp-health-economic-financing-and-gnsp",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-higher-secondary-stipend",
+      "service_id": "snp-higher-secondary-stipend",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-honorarium-for-freedom-fighters",
+      "service_id": "snp-honorarium-for-freedom-fighters",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-honorarium-medical-allowances-for-injured-freedom-fighters",
+      "service_id": "snp-honorarium-medical-allowances-for-injured-freedom-fighters",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-housing-support",
+      "service_id": "snp-housing-support",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-housing-public-works",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-improving-working-condition-in-the-ready-made-garments-sector",
+      "service_id": "snp-improving-working-condition-in-the-ready-made-garments-sector",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-labour-employment",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-income-support-program-for-the-poorest",
+      "service_id": "snp-income-support-program-for-the-poorest",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-initiative-for-development-empowerment-awareness-livelihood-kurigram",
+      "service_id": "snp-initiative-for-development-empowerment-awareness-livelihood-kurigram",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-institute-of-pediatric-neuro-disorder",
+      "service_id": "snp-institute-of-pediatric-neuro-disorder",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-integrated-fisheries-livestock-development-in-flood-controlled-areas-water-bodies",
+      "service_id": "snp-integrated-fisheries-livestock-development-in-flood-controlled-areas-water-bodies",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-fisheries-livestock",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-integrated-rural-employment-support-project-for-the-poor-women",
+      "service_id": "snp-integrated-rural-employment-support-project-for-the-poor-women",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-integrated-support-to-poverty-and-inequality-reduction-through-enterprise-development",
+      "service_id": "snp-integrated-support-to-poverty-and-inequality-reduction-through-enterprise-development",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-industries",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-investment-component-for-vulnerable-group-development",
+      "service_id": "snp-investment-component-for-vulnerable-group-development",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-joyeeta-foundation",
+      "service_id": "snp-joyeeta-foundation",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-lump-provision-for-development-of-special-areas-except-hill-tracts",
+      "service_id": "snp-lump-provision-for-development-of-special-areas-except-hill-tracts",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "prime-minister-s-office",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-maternal-child-reproductive-and-adolescent-health",
+      "service_id": "snp-maternal-child-reproductive-and-adolescent-health",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-maternal-neo-natal-child-and-adolescent-health",
+      "service_id": "snp-maternal-neo-natal-child-and-adolescent-health",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-maternity-allowance-programme-for-the-poor",
+      "service_id": "snp-maternity-allowance-programme-for-the-poor",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-micro-credit-for-women-self-employment",
+      "service_id": "snp-micro-credit-for-women-self-employment",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-mujibnagar-integrated-agricultural-development",
+      "service_id": "snp-mujibnagar-integrated-agricultural-development",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-agriculture",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-multipurpose-disaster-shelter-construction",
+      "service_id": "snp-multipurpose-disaster-shelter-construction",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-national-legal-aid-services",
+      "service_id": "snp-national-legal-aid-services",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-law-j-pa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-national-nutrition-services",
+      "service_id": "snp-national-nutrition-services",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-national-service",
+      "service_id": "snp-national-service",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-youth-and-sports",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-non-bengali-rehabilitation",
+      "service_id": "snp-non-bengali-rehabilitation",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-northern-area-reduction-of-poverty",
+      "service_id": "snp-northern-area-reduction-of-poverty",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-labour-employment",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-old-age-allowance",
+      "service_id": "snp-old-age-allowance",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-one-house-one-farm",
+      "service_id": "snp-one-house-one-farm",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-open-market-sales-oms",
+      "service_id": "snp-open-market-sales-oms",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-food",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-participatory-small-scale-water-resource-development",
+      "service_id": "snp-participatory-small-scale-water-resource-development",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-pension-for-retired-government-employees-and-their-families",
+      "service_id": "snp-pension-for-retired-government-employees-and-their-families",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-finance",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-poverty-reduction-livelihood-security-for-the-people-of-economically-backward-area",
+      "service_id": "snp-poverty-reduction-livelihood-security-for-the-people-of-economically-backward-area",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-fisheries-livestock",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-poverty-reduction-through-inclusive-and-sustainable-markets",
+      "service_id": "snp-poverty-reduction-through-inclusive-and-sustainable-markets",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-industries",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-poverty-reduction-through-urban-partnership",
+      "service_id": "snp-poverty-reduction-through-urban-partnership",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-primary-school-stipend",
+      "service_id": "snp-primary-school-stipend",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-primary-mass-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-pro-poor-slum-integration",
+      "service_id": "snp-pro-poor-slum-integration",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-housing-public-works",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-programme-for-improving-the-livelihood-of-harijan-dalit-bade-community",
+      "service_id": "snp-programme-for-improving-the-livelihood-of-harijan-dalit-bade-community",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-programme-for-improving-the-livelihood-of-trans-gender-hijra",
+      "service_id": "snp-programme-for-improving-the-livelihood-of-trans-gender-hijra",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-programme-for-livelihood-improvement-of-tea-garden-labourers",
+      "service_id": "snp-programme-for-livelihood-improvement-of-tea-garden-labourers",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-promotion-of-services-opportunity-to-the-disabled-person-in-bangladesh",
+      "service_id": "snp-promotion-of-services-opportunity-to-the-disabled-person-in-bangladesh",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-ration-for-shaheed-family-and-injured-freedom-fighters",
+      "service_id": "snp-ration-for-shaheed-family-and-injured-freedom-fighters",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-reaching-out-of-school",
+      "service_id": "snp-reaching-out-of-school",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-primary-mass-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-regional-duck-breeding-and-hatchery",
+      "service_id": "snp-regional-duck-breeding-and-hatchery",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-fisheries-livestock",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-rehabilitation-and-creation-of-alternative-employment-for-beggars-profession",
+      "service_id": "snp-rehabilitation-and-creation-of-alternative-employment-for-beggars-profession",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-rehabilitation-of-aila-affected-infrastructure",
+      "service_id": "snp-rehabilitation-of-aila-affected-infrastructure",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-rural-development-of-greater-comilla",
+      "service_id": "snp-rural-development-of-greater-comilla",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-rural-employment-and-road-maintenance-program",
+      "service_id": "snp-rural-employment-and-road-maintenance-program",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-rural-infrastructure-development",
+      "service_id": "snp-rural-infrastructure-development",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-rural-livelihood-2nd-phase",
+      "service_id": "snp-rural-livelihood-2nd-phase",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-rural-settlement-construction-for-improvement-of-rural-livelihood",
+      "service_id": "snp-rural-settlement-construction-for-improvement-of-rural-livelihood",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-rural-water-supply",
+      "service_id": "snp-rural-water-supply",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-school-feeding-programme",
+      "service_id": "snp-school-feeding-programme",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-primary-mass-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-second-chittagong-hill-tracts-rural-development",
+      "service_id": "snp-second-chittagong-hill-tracts-rural-development",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-secondary-education-quality-and-access-enhancement-project-seqaep",
+      "service_id": "snp-secondary-education-quality-and-access-enhancement-project-seqaep",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-secondary-education-sector-investment-program",
+      "service_id": "snp-secondary-education-sector-investment-program",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-secondary-education-stipend",
+      "service_id": "snp-secondary-education-stipend",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-service-and-assistance-center-for-disabled",
+      "service_id": "snp-service-and-assistance-center-for-disabled",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-services-for-children-at-risk",
+      "service_id": "snp-services-for-children-at-risk",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-shamaj-kallyan-parishad",
+      "service_id": "snp-shamaj-kallyan-parishad",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-skill-and-employment-programme-in-bangladesh",
+      "service_id": "snp-skill-and-employment-programme-in-bangladesh",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-skill-and-training-enhancement-project",
+      "service_id": "snp-skill-and-training-enhancement-project",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-skills-for-employment-and-productivity",
+      "service_id": "snp-skills-for-employment-and-productivity",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-skills-for-employment-investment-programme",
+      "service_id": "snp-skills-for-employment-investment-programme",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-finance",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-social-development-foundation",
+      "service_id": "snp-social-development-foundation",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-finance",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-social-security-policy-support-ssps-programme",
+      "service_id": "snp-social-security-policy-support-ssps-programme",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "cabinet-division",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-stipend-for-disabled-students",
+      "service_id": "snp-stipend-for-disabled-students",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-stipend-for-female-students-at-bachelor-level",
+      "service_id": "snp-stipend-for-female-students-at-bachelor-level",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-education",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-street-children-rehabilitation-programme",
+      "service_id": "snp-street-children-rehabilitation-programme",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-strengthening-public-financial-management-for-social-protection",
+      "service_id": "snp-strengthening-public-financial-management-for-social-protection",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-finance",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-strengthening-women-s-ability-for-productive-new-opportunities-swapno",
+      "service_id": "snp-strengthening-women-s-ability-for-productive-new-opportunities-swapno",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-support-to-the-urban-health-and-nutrition-to-bangladesh",
+      "service_id": "snp-support-to-the-urban-health-and-nutrition-to-bangladesh",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-swanirvar-training-programme",
+      "service_id": "snp-swanirvar-training-programme",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-finance",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-t-b-leprosy-communicable-non-communicable-disease",
+      "service_id": "snp-t-b-leprosy-communicable-non-communicable-disease",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-health-family-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-test-relief-tr-cash",
+      "service_id": "snp-test-relief-tr-cash",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-test-relief-tr-food",
+      "service_id": "snp-test-relief-tr-food",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-trust-for-the-protection-of-the-persons-with-neurodevelopmental-disabilities",
+      "service_id": "snp-trust-for-the-protection-of-the-persons-with-neurodevelopmental-disabilities",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-universal-pension-insurance-scheme",
+      "service_id": "snp-universal-pension-insurance-scheme",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-finance",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-urban-based-marginal-women-development",
+      "service_id": "snp-urban-based-marginal-women-development",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-urban-primary-health-care",
+      "service_id": "snp-urban-primary-health-care",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-urban-public-environmental-health-care",
+      "service_id": "snp-urban-public-environmental-health-care",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "local-government-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-urban-resilience-project-dncc-ddm",
+      "service_id": "snp-urban-resilience-project-dncc-ddm",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-environment-forest",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-vulnerable-group-development-vgd",
+      "service_id": "snp-vulnerable-group-development-vgd",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-vulnerable-group-feeding-vgf",
+      "service_id": "snp-vulnerable-group-feeding-vgf",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-welfare-trust-for-physical-disabilities",
+      "service_id": "snp-welfare-trust-for-physical-disabilities",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-women-s-skill-based-training-for-livelihood",
+      "service_id": "snp-women-s-skill-based-training-for-livelihood",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-snp-work-for-money-wfm",
+      "service_id": "snp-work-for-money-wfm",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "portal_url": null,
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-disaster-management-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-social-allowance-online-application",
+      "service_id": "social-allowance-online-application",
+      "url": "https://mis.bhata.gov.bd/online-application",
+      "portal_url": null,
+      "title": "Social Allowance and Stipend Online Application",
+      "authority_id": "dss",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mis.bhata.gov.bd/online-application",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out"
+      }
+    },
+    {
+      "source_id": "src-women-assistance-programme",
+      "service_id": "women-assistance-programme",
+      "url": "http://dwa.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Women Assistance Programme",
+      "authority_id": "department-of-women-affairs-dwa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-women-child-daycare-benefit",
+      "service_id": "women-child-daycare-benefit",
+      "url": "http://dwa.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Child Daycare Centre Benefit",
+      "authority_id": "department-of-women-affairs-dwa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-women-child-helpline-1098",
+      "service_id": "women-child-helpline-1098",
+      "url": "https://mowca.gov.bd/",
+      "portal_url": null,
+      "title": "Child Helpline 1098",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mowca.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-women-distressed-fund",
+      "service_id": "women-distressed-fund",
+      "url": "http://dwa.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Distressed Women and Children Assistance Fund",
+      "authority_id": "department-of-women-affairs-dwa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-women-hostel-benefit",
+      "service_id": "women-hostel-benefit",
+      "url": "http://dwa.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Women Hostel Benefit Programme",
+      "authority_id": "department-of-women-affairs-dwa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-women-hotline-109",
+      "service_id": "women-hotline-109",
+      "url": "http://dwa.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Women and Child Abuse Hotline (109)",
+      "authority_id": "department-of-women-affairs-multi-agency",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-women-lactating-mothers-allowance",
+      "service_id": "women-lactating-mothers-allowance",
+      "url": "http://dwa.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Working Lactating Mothers Allowance Programme",
+      "authority_id": "department-of-women-affairs-dwa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-women-ngo-registration",
+      "service_id": "women-ngo-registration",
+      "url": "http://dwa.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Voluntary Women Organization Online Registration",
+      "authority_id": "department-of-women-affairs-dwa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-women-one-stop-crisis-centre",
+      "service_id": "women-one-stop-crisis-centre",
+      "url": "https://mowca.gov.bd/",
+      "portal_url": null,
+      "title": "One Stop Crisis Centre (OCC) Services",
+      "authority_id": "ministry-of-women-children-affairs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mowca.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-women-violence-prevention-cell",
+      "service_id": "women-violence-prevention-cell",
+      "url": "http://dwa.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Violence Against Women Prevention Cell",
+      "authority_id": "department-of-women-affairs-dwa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

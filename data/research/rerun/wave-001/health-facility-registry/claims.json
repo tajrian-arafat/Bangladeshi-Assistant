@@ -1,0 +1,72 @@
+{
+  "service_id": "health-facility-registry",
+  "claims": [
+    {
+      "claim_id": "health-facility-registry::c-catalogue-authority",
+      "service_id": "health-facility-registry",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Health Services (DGHS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-facility-registry::c-official-portal",
+      "service_id": "health-facility-registry",
+      "claim_type": "application_url",
+      "claim_text": "Health Facility Registry (HRIS) official information is published at https://hrm.dghs.gov.bd/public/facility-registry/reports/organization-list (page title: DGHS | Facility Registry).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://hrm.dghs.gov.bd/public/facility-registry/reports/organization-list"
+      },
+      "source_ids": [
+        "src-health-facility-registry-official"
+      ],
+      "evidence_ids": [
+        "ev-health-facility-registry::c-official-portal-src-health-facility-registry-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-facility-registry::c-procedure-overview",
+      "service_id": "health-facility-registry",
+      "claim_type": "procedure_step",
+      "claim_text": "Health Facility Registry (HRIS) is a government service under Directorate General of Health Services (DGHS) (facility registry). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-facility-registry-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-facility-registry::c-service-identity",
+      "service_id": "health-facility-registry",
+      "claim_type": "eligibility",
+      "claim_text": "Health Facility Registry (HRIS) (স্বাস্থ্য প্রতিষ্ঠান রেজিস্ট্রি) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-facility-registry-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

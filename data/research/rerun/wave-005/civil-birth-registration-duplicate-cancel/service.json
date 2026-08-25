@@ -1,0 +1,157 @@
+{
+  "service_id": "civil-birth-registration-duplicate-cancel",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Cancellation of Duplicate Birth Registrations",
+  "service_name_bn": "একাধিক জন্ম নিবন্ধন সনদ বাতিল",
+  "aliases": [
+    "duplicate birth cancel"
+  ],
+  "category_id": "civil_registration",
+  "profile_key": "IDENTITY_CIVIL",
+  "responsible_agency": "Office of the Registrar General, Birth and Death Registration",
+  "official_application_url": "https://bdris.gov.bd/application/print",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-catalogue-authority",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Office of the Registrar General, Birth and Death Registration.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-official-url-documented",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdris.gov.bd/application/print for Cancellation of Duplicate Birth Registrations; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdris.gov.bd/application/print"
+      },
+      "source_ids": [
+        "src-civil-birth-registration-duplicate-cancel-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-procedure-overview",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_type": "procedure_step",
+      "claim_text": "Cancellation of Duplicate Birth Registrations is a government service under Office of the Registrar General, Birth and Death Registration (birth duplicate cancel). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-birth-registration-duplicate-cancel-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-service-identity",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_type": "eligibility",
+      "claim_text": "Cancellation of Duplicate Birth Registrations (একাধিক জন্ম নিবন্ধন সনদ বাতিল) is a confirmed government service in category civil_registration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-birth-registration-duplicate-cancel-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-civil-birth-registration-duplicate-cancel-official",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "url": "https://bdris.gov.bd/application/print",
+      "title": "Cancellation of Duplicate Birth Registrations",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/application/print",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null,
+        "content_hash": "b531159ca46f89ab",
+        "retrieved_at": "2026-08-25T03:24:22.711023+00:00"
+      },
+      "evidence_locator": "probe:https://bdris.gov.bd/application/print"
+    },
+    {
+      "source_id": "src-civil-birth-registration-duplicate-cancel-alt-1",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "url": "https://bdris.gov.bd",
+      "title": "হোমপেজ",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোমপেজ",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "fcf94b5edcbb94a9",
+        "retrieved_at": "2026-08-25T03:24:24.725381+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-civil-birth-registration-duplicate-cancel-portal-unreachable",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Cancellation of Duplicate Birth Registrations.",
+      "severity": "MEDIUM",
+      "url": "https://bdris.gov.bd/application/print"
+    },
+    {
+      "gap_id": "gap-civil-birth-registration-duplicate-cancel-fee-unverified",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Cancellation of Duplicate Birth Registrations.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-civil-birth-registration-duplicate-cancel-documents-unverified",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Cancellation of Duplicate Birth Registrations.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

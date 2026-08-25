@@ -1,0 +1,158 @@
+{
+  "service_id": "bida-invest-bangladesh-oss",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Invest Bangladesh OSS Portal",
+  "service_name_bn": "Invest Bangladesh OSS",
+  "aliases": [
+    "investbangladesh.gov.bd",
+    "investment facilitation OSS",
+    "Invest Bangladesh OSS Portal",
+    "bidaquickserv",
+    "BanglaBiz OSS",
+    "investment OSS",
+    "BIDA One Stop Service (OSS) Portal",
+    "bida-oss-portal"
+  ],
+  "category_id": "investment",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Bangladesh Investment Development Authority (BIDA)",
+  "official_application_url": "https://investbangladesh.gov.bd/faq",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "bida-invest-bangladesh-oss::c-catalogue-authority",
+      "service_id": "bida-invest-bangladesh-oss",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Investment Development Authority (BIDA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-invest-bangladesh-oss::c-official-portal",
+      "service_id": "bida-invest-bangladesh-oss",
+      "claim_type": "application_url",
+      "claim_text": "Invest Bangladesh OSS Portal official information is published at https://investbangladesh.gov.bd/faq (page title: Invest Bangladesh FAQ | Answers to Investment, Visa, Tax &amp; Business Setup Queries).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://investbangladesh.gov.bd/faq"
+      },
+      "source_ids": [
+        "src-bida-invest-bangladesh-oss-official"
+      ],
+      "evidence_ids": [
+        "ev-bida-invest-bangladesh-oss::c-official-portal-src-bida-invest-bangladesh-oss-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-invest-bangladesh-oss::c-procedure-overview",
+      "service_id": "bida-invest-bangladesh-oss",
+      "claim_type": "procedure_step",
+      "claim_text": "Invest Bangladesh OSS Portal is a government service under Bangladesh Investment Development Authority (BIDA) (oss). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-invest-bangladesh-oss-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-invest-bangladesh-oss::c-service-identity",
+      "service_id": "bida-invest-bangladesh-oss",
+      "claim_type": "eligibility",
+      "claim_text": "Invest Bangladesh OSS Portal (Invest Bangladesh OSS) is a confirmed government service in category investment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-invest-bangladesh-oss-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-bida-invest-bangladesh-oss-official",
+      "service_id": "bida-invest-bangladesh-oss",
+      "url": "https://investbangladesh.gov.bd/faq",
+      "title": "Invest Bangladesh FAQ | Answers to Investment, Visa, Tax &amp; Business Setup Queries",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://investbangladesh.gov.bd/faq",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Invest Bangladesh FAQ | Answers to Investment, Visa, Tax &amp; Business Setup Queries",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "9adc21ed047d8964",
+        "retrieved_at": "2026-08-25T03:23:17.206691+00:00"
+      },
+      "evidence_locator": "probe:https://investbangladesh.gov.bd/faq"
+    },
+    {
+      "source_id": "src-bida-invest-bangladesh-oss-alt-1",
+      "service_id": "bida-invest-bangladesh-oss",
+      "url": "https://bidaquickserv.org",
+      "title": "Just a moment...",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bidaquickserv.org",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "9877df63a67cc2c4",
+        "retrieved_at": "2026-08-25T03:23:17.278522+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-bida-invest-bangladesh-oss-fee-unverified",
+      "service_id": "bida-invest-bangladesh-oss",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Invest Bangladesh OSS Portal.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-invest-bangladesh-oss-documents-unverified",
+      "service_id": "bida-invest-bangladesh-oss",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Invest Bangladesh OSS Portal.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

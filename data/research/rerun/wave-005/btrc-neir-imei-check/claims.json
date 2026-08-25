@@ -1,0 +1,72 @@
+{
+  "service_id": "btrc-neir-imei-check",
+  "claims": [
+    {
+      "claim_id": "btrc-neir-imei-check::c-catalogue-authority",
+      "service_id": "btrc-neir-imei-check",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Telecommunication Regulatory Commission (BTRC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-neir-imei-check::c-official-portal",
+      "service_id": "btrc-neir-imei-check",
+      "claim_type": "application_url",
+      "claim_text": "NEIR IMEI Verification official information is published at https://neir.btrc.gov.bd/ (page title: NEIR Citizen).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://neir.btrc.gov.bd/"
+      },
+      "source_ids": [
+        "src-btrc-neir-imei-check-official"
+      ],
+      "evidence_ids": [
+        "ev-btrc-neir-imei-check::c-official-portal-src-btrc-neir-imei-check-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-neir-imei-check::c-procedure-overview",
+      "service_id": "btrc-neir-imei-check",
+      "claim_type": "procedure_step",
+      "claim_text": "NEIR IMEI Verification is a government service under Bangladesh Telecommunication Regulatory Commission (BTRC) (telecom regulation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-neir-imei-check-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-neir-imei-check::c-service-identity",
+      "service_id": "btrc-neir-imei-check",
+      "claim_type": "eligibility",
+      "claim_text": "NEIR IMEI Verification (এনইআইআর আইএমইআই যাচাই) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-neir-imei-check-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

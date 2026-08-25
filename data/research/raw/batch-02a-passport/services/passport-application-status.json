@@ -1,0 +1,44 @@
+{
+  "service_id": "passport-application-status",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Passport Application Status Check",
+  "service_name_bn": "পাসপোর্ট আবেদনের অবস্থা",
+  "aliases": [
+    "MRP status",
+    "passport tracking"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "http://passport.gov.bd/OnlineStatus.aspx",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "passport-application-status::c-mrp-status-portal",
+      "legacy_claim_id": "c-mrp-status-portal",
+      "service_id": "passport-application-status",
+      "claim_type": "application_url",
+      "claim_text": "Legacy MRP application status checked at passport.gov.bd OnlineStatus.aspx.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-status"
+      ],
+      "evidence_ids": [
+        "ev-passport-application-status::c-mrp-status-portal-src-mrp-status"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null
+}

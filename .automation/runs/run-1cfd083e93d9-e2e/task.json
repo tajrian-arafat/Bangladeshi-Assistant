@@ -1,0 +1,212 @@
+{
+  "task_id": "BATCH_04:E2E:run-1cfd083e93d9-e2e",
+  "batch_id": "BATCH_04",
+  "batch_slug": "batch-04-tax-vat-customs",
+  "phase": "E2E",
+  "run_id": "run-1cfd083e93d9-e2e",
+  "service_ids": [
+    "customs-asycuda-declaration",
+    "customs-bond-up-application",
+    "customs-import-export-control-licence",
+    "tax-clearance-foreigners",
+    "tax-etin-registration",
+    "tax-income-return-file",
+    "tax-income-tax-return-filing",
+    "tax-source-tax-deduction-certificate",
+    "vat-bin-registration",
+    "vat-return-filing",
+    "vat-turnover-enlistment"
+  ],
+  "service_names": {
+    "customs-asycuda-declaration": "Customs Declaration (ASYCUDA World)",
+    "customs-bond-up-application": "Customs Bond Utilization Permit (UP) Application",
+    "customs-import-export-control-licence": "Import/Export Control Licence",
+    "tax-clearance-foreigners": "Tax Clearance Certificate for Foreigners",
+    "tax-etin-registration": "e-TIN Registration",
+    "tax-income-return-file": "Income Tax Return Filing (e-Return)",
+    "tax-income-tax-return-filing": "Income Tax Return Filing",
+    "tax-source-tax-deduction-certificate": "Tax Deduction at Source Certificate",
+    "vat-bin-registration": "VAT Registration (Business Identification Number)",
+    "vat-return-filing": "VAT Return Filing",
+    "vat-turnover-enlistment": "Turnover Tax Enlistment"
+  },
+  "domain": "customs,tax,vat",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-customs-asycuda-declaration-fee-unverified",
+      "service_id": "customs-asycuda-declaration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Customs Declaration (ASYCUDA World).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-customs-asycuda-declaration-documents-unverified",
+      "service_id": "customs-asycuda-declaration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Customs Declaration (ASYCUDA World).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-customs-bond-up-application-fee-unverified",
+      "service_id": "customs-bond-up-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Customs Bond Utilization Permit (UP) Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-customs-bond-up-application-documents-unverified",
+      "service_id": "customs-bond-up-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Customs Bond Utilization Permit (UP) Application.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-customs-import-export-control-licence-fee-unverified",
+      "service_id": "customs-import-export-control-licence",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Import/Export Control Licence.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-customs-import-export-control-licence-documents-unverified",
+      "service_id": "customs-import-export-control-licence",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Import/Export Control Licence.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-tax-clearance-foreigners-fee-unverified",
+      "service_id": "tax-clearance-foreigners",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Tax Clearance Certificate for Foreigners.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-clearance-foreigners-documents-unverified",
+      "service_id": "tax-clearance-foreigners",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Tax Clearance Certificate for Foreigners.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-tax-etin-registration-fee-unverified",
+      "service_id": "tax-etin-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for e-TIN Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-etin-registration-documents-unverified",
+      "service_id": "tax-etin-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for e-TIN Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-tax-income-return-file-fee-unverified",
+      "service_id": "tax-income-return-file",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Income Tax Return Filing (e-Return).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-income-return-file-documents-unverified",
+      "service_id": "tax-income-return-file",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Income Tax Return Filing (e-Return).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-tax-income-tax-return-filing-fee-unverified",
+      "service_id": "tax-income-tax-return-filing",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Income Tax Return Filing.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-income-tax-return-filing-documents-unverified",
+      "service_id": "tax-income-tax-return-filing",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Income Tax Return Filing.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-tax-source-tax-deduction-certificate-fee-unverified",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Tax Deduction at Source Certificate.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-source-tax-deduction-certificate-documents-unverified",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Tax Deduction at Source Certificate.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-vat-bin-registration-fee-unverified",
+      "service_id": "vat-bin-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for VAT Registration (Business Identification Number).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-vat-bin-registration-documents-unverified",
+      "service_id": "vat-bin-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for VAT Registration (Business Identification Number).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-vat-return-filing-fee-unverified",
+      "service_id": "vat-return-filing",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for VAT Return Filing.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-vat-return-filing-documents-unverified",
+      "service_id": "vat-return-filing",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for VAT Return Filing.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-vat-turnover-enlistment-fee-unverified",
+      "service_id": "vat-turnover-enlistment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Turnover Tax Enlistment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-vat-turnover-enlistment-documents-unverified",
+      "service_id": "vat-turnover-enlistment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Turnover Tax Enlistment.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/evaluation/batch-04-tax-vat-customs/queries.json",
+    "data/evaluation/batch-04-tax-vat-customs/summary.json",
+    "docs/evaluation/batch-04-tax-vat-customs-publication-e2e.md",
+    ".automation/runs/run-1cfd083e93d9-e2e/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — E2E\n\n**Batch:** BATCH_04 (Tax / VAT / Customs)\n**Run ID:** run-1cfd083e93d9-e2e\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/evaluation/batch-04-tax-vat-customs/queries.json`\n- `data/evaluation/batch-04-tax-vat-customs/summary.json`\n- `docs/evaluation/batch-04-tax-vat-customs-publication-e2e.md`\n- `.automation/runs/run-1cfd083e93d9-e2e/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_04\",\n    \"slug\": \"batch-04-tax-vat-customs\",\n    \"name\": \"Tax / VAT / Customs\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"customs-asycuda-declaration\",\n      \"customs-bond-up-application\",\n      \"customs-import-export-control-licence\",\n      \"tax-clearance-foreigners\",\n      \"tax-etin-registration\",\n      \"tax-income-return-file\",\n      \"tax-income-tax-return-filing\",\n      \"tax-source-tax-deduction-certificate\",\n      \"vat-bin-registration\",\n      \"vat-return-filing\",\n      \"vat-turnover-enlistment\"\n    ],\n    \"service_count\": 11,\n    \"phases_completed\": [\n      \"RESEARCH\",\n      \"VERIFICATION\"\n    ]\n  },\n  \"phase\": \"E2E\",\n  \"run_id\": \"run-1cfd083e93d9-e2e\",\n  \"service_ids\": [\n    \"customs-asycuda-declaration\",\n    \"customs-bond-up-application\",\n    \"customs-import-export-control-licence\",\n    \"tax-clearance-foreigners\",\n    \"tax-etin-registration\",\n    \"tax-income-return-file\",\n    \"tax-income-tax-return-filing\",\n    \"tax-source-tax-deduction-certificate\",\n    \"vat-bin-registration\",\n    \"vat-return-filing\",\n    \"vat-turnover-enlistment\"\n  ],\n  \"gaps\": [\n    {\n      \"gap_id\": \"gap-customs-asycuda-declaration-fee-unverified\",\n      \"service_id\": \"customs-asycuda-declaration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Customs Declaration (ASYCUDA World).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-customs-asycuda-declaration-documents-unverified\",\n      \"service_id\": \"customs-asycuda-declaration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Customs Declaration (ASYCUDA World).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-customs-bond-up-application-fee-unverified\",\n      \"service_id\": \"customs-bond-up-application\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Customs Bond Utilization Permit (UP) Application.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-customs-bond-up-application-documents-unverified\",\n      \"service_id\": \"customs-bond-up-application\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Customs Bond Utilization Permit (UP) Application.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-customs-import-export-control-licence-fee-unverified\",\n      \"service_id\": \"customs-import-export-control-licence\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Import/Export Control Licence.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-customs-import-export-control-licence-documents-unverified\",\n      \"service_id\": \"customs-import-export-control-licence\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Import/Export Control Licence.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-tax-clearance-foreigners-fee-unverified\",\n      \"service_id\": \"tax-clearance-foreigners\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Tax Clearance Certificate for Foreigners.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-tax-clearance-foreigners-documents-unverified\",\n      \"service_id\": \"tax-clearance-foreigners\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Tax Clearance Certificate for Foreigners.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-tax-etin-registration-fee-unverified\",\n      \"service_id\": \"tax-etin-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for e-TIN Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-tax-etin-registration-documents-unverified\",\n      \"service_id\": \"tax-etin-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for e-TIN Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-tax-income-return-file-fee-unverified\",\n      \"service_id\": \"tax-income-return-file\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Income Tax Return Filing (e-Return).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-tax-income-return-file-documents-unverified\",\n      \"service_id\": \"tax-income-return-file\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Income Tax Return Filing (e-Return).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-tax-income-tax-return-filing-fee-unverified\",\n      \"service_id\": \"tax-income-tax-return-filing\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Income Tax Return Filing.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-tax-income-tax-return-filing-documents-unverified\",\n      \"service_id\": \"tax-income-tax-return-filing\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Income Tax Return Filing.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-tax-source-tax-deduction-certificate-fee-unverified\",\n      \"service_id\": \"tax-source-tax-deduction-certificate\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Tax Deduction at Source Certificate.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-tax-source-tax-deduction-certificate-documents-unverified\",\n      \"service_id\": \"tax-source-tax-deduction-certificate\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Tax Deduction at Source Certificate.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-vat-bin-registration-fee-unverified\",\n      \"service_id\": \"vat-bin-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for VAT Registration (Business Identification Number).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-vat-bin-registration-documents-unverified\",\n      \"service_id\": \"vat-bin-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for VAT Registration (Business Identification Number).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-vat-return-filing-fee-unverified\",\n      \"service_id\": \"vat-return-filing\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for VAT Return Filing.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-vat-return-filing-documents-unverified\",\n      \"service_id\": \"vat-return-filing\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for VAT Return Filing.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-vat-turnover-enlistment-fee-unverified\",\n      \"service_id\": \"vat-turnover-enlistment\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Turnover Tax Enlistment.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-vat-turnover-enlistment-documents-unverified\",\n      \"service_id\": \"vat-turnover-enlistment\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Turnover Tax Enlistment.\",\n      \"severity\": \"MEDIUM\"\n    }\n  ],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# E2E evaluation prompt\n\nGenerate realistic user questions: Bangla, English, Banglish, typos, ambiguity, follow-ups, multi-turn.\n\nCorrect uncertainty/refusal is NOT failure. Wrong factual answers ARE failures.\n\nWrite eval artifacts under `data/evaluation/<batch-slug>/` and `result.json`.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-1cfd083e93d9-e2e/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:38:51.393107+00:00"
+  }
+}

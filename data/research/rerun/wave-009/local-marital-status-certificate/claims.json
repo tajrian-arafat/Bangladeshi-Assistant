@@ -1,0 +1,70 @@
+{
+  "service_id": "local-marital-status-certificate",
+  "claims": [
+    {
+      "claim_id": "local-marital-status-certificate::c-catalogue-authority",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-marital-status-certificate::c-official-url-documented",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.palshaup.gov.bd/new/application/citizen/17 for Marital Status Certificate; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.palshaup.gov.bd/new/application/citizen/17"
+      },
+      "source_ids": [
+        "src-local-marital-status-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-marital-status-certificate::c-procedure-overview",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Marital Status Certificate is a government service under Union Parishad (marital status). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-marital-status-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-marital-status-certificate::c-service-identity",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Marital Status Certificate (বিবাহিত/অবিবাহিত/তালাকপ্রাপ্ত সনদ) is a confirmed government service in category certificates, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-marital-status-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

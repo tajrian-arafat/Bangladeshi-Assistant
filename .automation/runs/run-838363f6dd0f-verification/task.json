@@ -1,0 +1,187 @@
+{
+  "task_id": "BATCH_13:VERIFICATION:run-838363f6dd0f-verification",
+  "batch_id": "BATCH_13",
+  "batch_slug": "batch-13-judiciary",
+  "phase": "VERIFICATION",
+  "run_id": "run-838363f6dd0f-verification",
+  "service_ids": [
+    "judiciary-case-status-tracking",
+    "judiciary-supreme-court-certified-copy",
+    "judiciary-supreme-court-e-filing",
+    "judiciary-virtual-court-services",
+    "legal-aid-district-helpline-16430",
+    "legal-aid-government-service",
+    "legal-aid-helpline-16699",
+    "legal-aid-online-application",
+    "legal-aid-panel-lawyer-list"
+  ],
+  "service_names": {
+    "judiciary-case-status-tracking": "Court Case Status Tracking",
+    "judiciary-supreme-court-certified-copy": "Supreme Court Certified Copy of Judgment/Order",
+    "judiciary-supreme-court-e-filing": "Supreme Court e-Filing (Lawyers Panel)",
+    "judiciary-virtual-court-services": "Virtual Court Services",
+    "legal-aid-district-helpline-16430": "District Legal Aid Toll-free Helpline (16430)",
+    "legal-aid-government-service": "Government-funded Legal Aid Service",
+    "legal-aid-helpline-16699": "National Legal Aid Helpline (16699)",
+    "legal-aid-online-application": "National Legal Aid Online Application",
+    "legal-aid-panel-lawyer-list": "Panel Lawyer List (District Legal Aid)"
+  },
+  "domain": "judiciary,legal_aid",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-judiciary-case-status-tracking-fee-unverified",
+      "service_id": "judiciary-case-status-tracking",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Court Case Status Tracking.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-judiciary-case-status-tracking-documents-unverified",
+      "service_id": "judiciary-case-status-tracking",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Court Case Status Tracking.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-judiciary-supreme-court-certified-copy-fee-unverified",
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Supreme Court Certified Copy of Judgment/Order.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-judiciary-supreme-court-certified-copy-documents-unverified",
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Supreme Court Certified Copy of Judgment/Order.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-judiciary-supreme-court-e-filing-fee-unverified",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Supreme Court e-Filing (Lawyers Panel).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-judiciary-supreme-court-e-filing-documents-unverified",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Supreme Court e-Filing (Lawyers Panel).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-judiciary-virtual-court-services-fee-unverified",
+      "service_id": "judiciary-virtual-court-services",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Virtual Court Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-judiciary-virtual-court-services-documents-unverified",
+      "service_id": "judiciary-virtual-court-services",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Virtual Court Services.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-legal-aid-district-helpline-16430-portal-unreachable",
+      "service_id": "legal-aid-district-helpline-16430",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for District Legal Aid Toll-free Helpline (16430).",
+      "severity": "MEDIUM",
+      "url": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline"
+    },
+    {
+      "gap_id": "gap-legal-aid-district-helpline-16430-fee-unverified",
+      "service_id": "legal-aid-district-helpline-16430",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for District Legal Aid Toll-free Helpline (16430).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-legal-aid-district-helpline-16430-documents-unverified",
+      "service_id": "legal-aid-district-helpline-16430",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for District Legal Aid Toll-free Helpline (16430).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-legal-aid-government-service-fee-unverified",
+      "service_id": "legal-aid-government-service",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Government-funded Legal Aid Service.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-legal-aid-government-service-documents-unverified",
+      "service_id": "legal-aid-government-service",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Government-funded Legal Aid Service.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-legal-aid-helpline-16699-fee-unverified",
+      "service_id": "legal-aid-helpline-16699",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for National Legal Aid Helpline (16699).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-legal-aid-helpline-16699-documents-unverified",
+      "service_id": "legal-aid-helpline-16699",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for National Legal Aid Helpline (16699).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-legal-aid-online-application-fee-unverified",
+      "service_id": "legal-aid-online-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for National Legal Aid Online Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-legal-aid-online-application-documents-unverified",
+      "service_id": "legal-aid-online-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for National Legal Aid Online Application.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-legal-aid-panel-lawyer-list-fee-unverified",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Panel Lawyer List (District Legal Aid).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-legal-aid-panel-lawyer-list-documents-unverified",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Panel Lawyer List (District Legal Aid).",
+      "severity": "MEDIUM"
+    }
+  ],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/verification/batch-13-judiciary/claims_verification.json",
+    "data/research/verification/batch-13-judiciary/summary.json",
+    ".automation/runs/run-838363f6dd0f-verification/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — VERIFICATION\n\n**Batch:** BATCH_13 (Judiciary / Legal / Courts)\n**Run ID:** run-838363f6dd0f-verification\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/verification/batch-13-judiciary/claims_verification.json`\n- `data/research/verification/batch-13-judiciary/summary.json`\n- `.automation/runs/run-838363f6dd0f-verification/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_13\",\n    \"slug\": \"batch-13-judiciary\",\n    \"name\": \"Judiciary / Legal / Courts\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"judiciary-case-status-tracking\",\n      \"judiciary-supreme-court-certified-copy\",\n      \"judiciary-supreme-court-e-filing\",\n      \"judiciary-virtual-court-services\",\n      \"legal-aid-district-helpline-16430\",\n      \"legal-aid-government-service\",\n      \"legal-aid-helpline-16699\",\n      \"legal-aid-online-application\",\n      \"legal-aid-panel-lawyer-list\"\n    ],\n    \"service_count\": 9,\n    \"phases_completed\": [\n      \"RESEARCH\"\n    ]\n  },\n  \"phase\": \"VERIFICATION\",\n  \"run_id\": \"run-838363f6dd0f-verification\",\n  \"service_ids\": [\n    \"judiciary-case-status-tracking\",\n    \"judiciary-supreme-court-certified-copy\",\n    \"judiciary-supreme-court-e-filing\",\n    \"judiciary-virtual-court-services\",\n    \"legal-aid-district-helpline-16430\",\n    \"legal-aid-government-service\",\n    \"legal-aid-helpline-16699\",\n    \"legal-aid-online-application\",\n    \"legal-aid-panel-lawyer-list\"\n  ],\n  \"gaps\": [\n    {\n      \"gap_id\": \"gap-judiciary-case-status-tracking-fee-unverified\",\n      \"service_id\": \"judiciary-case-status-tracking\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Court Case Status Tracking.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-judiciary-case-status-tracking-documents-unverified\",\n      \"service_id\": \"judiciary-case-status-tracking\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Court Case Status Tracking.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-judiciary-supreme-court-certified-copy-fee-unverified\",\n      \"service_id\": \"judiciary-supreme-court-certified-copy\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Supreme Court Certified Copy of Judgment/Order.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-judiciary-supreme-court-certified-copy-documents-unverified\",\n      \"service_id\": \"judiciary-supreme-court-certified-copy\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Supreme Court Certified Copy of Judgment/Order.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-judiciary-supreme-court-e-filing-fee-unverified\",\n      \"service_id\": \"judiciary-supreme-court-e-filing\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Supreme Court e-Filing (Lawyers Panel).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-judiciary-supreme-court-e-filing-documents-unverified\",\n      \"service_id\": \"judiciary-supreme-court-e-filing\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Supreme Court e-Filing (Lawyers Panel).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-judiciary-virtual-court-services-fee-unverified\",\n      \"service_id\": \"judiciary-virtual-court-services\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Virtual Court Services.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-judiciary-virtual-court-services-documents-unverified\",\n      \"service_id\": \"judiciary-virtual-court-services\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Virtual Court Services.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-district-helpline-16430-portal-unreachable\",\n      \"service_id\": \"legal-aid-district-helpline-16430\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for District Legal Aid Toll-free Helpline (16430).\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-district-helpline-16430-fee-unverified\",\n      \"service_id\": \"legal-aid-district-helpline-16430\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for District Legal Aid Toll-free Helpline (16430).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-district-helpline-16430-documents-unverified\",\n      \"service_id\": \"legal-aid-district-helpline-16430\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for District Legal Aid Toll-free Helpline (16430).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-government-service-fee-unverified\",\n      \"service_id\": \"legal-aid-government-service\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Government-funded Legal Aid Service.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-government-service-documents-unverified\",\n      \"service_id\": \"legal-aid-government-service\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Government-funded Legal Aid Service.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-helpline-16699-fee-unverified\",\n      \"service_id\": \"legal-aid-helpline-16699\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for National Legal Aid Helpline (16699).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-helpline-16699-documents-unverified\",\n      \"service_id\": \"legal-aid-helpline-16699\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for National Legal Aid Helpline (16699).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-online-application-fee-unverified\",\n      \"service_id\": \"legal-aid-online-application\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for National Legal Aid Online Application.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-online-application-documents-unverified\",\n      \"service_id\": \"legal-aid-online-application\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for National Legal Aid Online Application.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-panel-lawyer-list-fee-unverified\",\n      \"service_id\": \"legal-aid-panel-lawyer-list\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Panel Lawyer List (District Legal Aid).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-legal-aid-panel-lawyer-list-documents-unverified\",\n      \"service_id\": \"legal-aid-panel-lawyer-list\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Panel Lawyer List (District Legal Aid).\",\n      \"severity\": \"MEDIUM\"\n    }\n  ],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Verification phase prompt\n\nVerification is **independent** from research.\n\n## Verdicts per claim\nVERIFIED | PARTIALLY_VERIFIED | UNVERIFIED | CONFLICTING | OUTDATED | REJECTED\n\n## High-risk claims require stronger evidence\n- fees, mandatory documents, legal requirements, eligibility\n- official URLs, payment instructions, deadlines, SLAs\n\n## Outputs\n- `data/research/verification/<batch-slug>/claims_verification.json`\n- `data/research/verification/<batch-slug>/conflicts_resolution.json`\n- `data/research/verification/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-838363f6dd0f-verification/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:49:27.792622+00:00"
+  }
+}

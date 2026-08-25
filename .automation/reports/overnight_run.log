@@ -1,0 +1,640 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/automation/orchestrator/main.py", line 329, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/automation/orchestrator/main.py", line 325, in main
+    return commands[args.command](args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/main.py", line 246, in cmd_overnight
+    summary = runner.run(max_steps=args.max_ticks, steps_per_tick=args.steps_per_tick)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/overnight_runner.py", line 255, in run
+    self.state_machine.transition(state, WorkflowStatus.READY)
+  File "/workspace/automation/orchestrator/state_machine.py", line 41, in transition
+    assert_transition(current, nxt)
+  File "/workspace/automation/schemas/state.py", line 84, in assert_transition
+    raise ValueError(f"Illegal workflow transition: {current.value} -> {nxt.value}")
+ValueError: Illegal workflow transition: HUMAN_APPROVAL_REQUIRED -> READY
+{
+  "status": "IN_PROGRESS",
+  "ticks": 2,
+  "total_steps": 3,
+  "global_blocked": false,
+  "catalogue_progress": {
+    "total_confirmed_services": 454,
+    "researched_services": 89,
+    "verified_services": 72,
+    "published_services": 72,
+    "partially_covered_services": 17,
+    "deferred_services": 0,
+    "blocked_services": 0,
+    "completed_services": 72,
+    "services_remaining": 382,
+    "completed_batches": 4,
+    "total_batches": 17
+  },
+  "overnight_status": {
+    "started_at": "2026-08-25T02:37:11.600281+00:00",
+    "last_activity_at": "2026-08-25T02:37:12.685587+00:00",
+    "current_batch": "BATCH_04",
+    "current_phase": "E2E",
+    "current_run_id": "run-1cfd083e93d9",
+    "current_task": "BATCH_04:E2E",
+    "workflow_status": "RETRY",
+    "services_complete": 72,
+    "services_remaining": 382,
+    "deferred_count": 0,
+    "global_blocked": false,
+    "global_block_reason": "",
+    "deployment_locked": true,
+    "catalogue_progress": {
+      "total_confirmed_services": 454,
+      "researched_services": 89,
+      "verified_services": 72,
+      "published_services": 72,
+      "partially_covered_services": 17,
+      "deferred_services": 0,
+      "blocked_services": 0,
+      "completed_services": 72,
+      "services_remaining": 382,
+      "completed_batches": 4,
+      "total_batches": 17
+    },
+    "mode": "AUTO_CLOUD",
+    "executor_available": true,
+    "agent_id": "bc-01a02d65-77d1-75ff-93ed-606e44a33400",
+    "agent_run_id": null,
+    "waiting_for_agent": false,
+    "execution_mode": null,
+    "last_error": null
+  }
+}
+[2026-08-25T02:43:54.202335+00:00] Overnight run_until_terminal started
+[2026-08-25T02:43:54.203715+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:43:54.204365+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:43:54.204987+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:43:54.205608+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:43:54.206178+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:43:54.206449+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T02:43:54.207516+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:43:54.208094+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:43:54.208672+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:43:54.209261+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:43:54.209820+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:43:54.210786+00:00] Terminal: IN_PROGRESS
+[2026-08-25T02:44:00.312666+00:00] Overnight run_until_terminal started
+[2026-08-25T02:44:00.313947+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:44:00.314610+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:44:00.315218+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:00.315929+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:00.316562+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:00.316842+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T02:44:00.318010+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:00.318621+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:00.319231+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:00.319817+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:00.320400+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:00.321454+00:00] Terminal: IN_PROGRESS
+[2026-08-25T02:44:11.099126+00:00] Overnight run_until_terminal started
+[2026-08-25T02:44:11.100384+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:44:11.101007+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:44:11.101668+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:11.102474+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:11.103095+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:11.103351+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T02:44:11.104447+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:11.105049+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:11.105687+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:11.106269+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:11.106847+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:44:11.107801+00:00] Terminal: IN_PROGRESS
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/automation/orchestrator/main.py", line 334, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/automation/orchestrator/main.py", line 330, in main
+    return commands[args.command](args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/main.py", line 246, in cmd_overnight
+    summary = runner.run(max_steps=args.max_ticks, steps_per_tick=args.steps_per_tick)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: OvernightRunner.run() got an unexpected keyword argument 'max_steps'
+[2026-08-25T02:44:25.140274+00:00] Overnight run_until_terminal started
+[2026-08-25T02:44:27.461597+00:00] step BATCH_05:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:44:27.491826+00:00] step BATCH_05:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/automation/orchestrator/main.py", line 334, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/automation/orchestrator/main.py", line 330, in main
+    return commands[args.command](args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/main.py", line 246, in cmd_overnight
+    summary = runner.run(max_ticks=args.max_ticks, steps_per_tick=args.steps_per_tick)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/overnight_runner.py", line 515, in run
+    return self.run_until_terminal(max_ticks=max_ticks, steps_per_tick=steps_per_tick)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/overnight_runner.py", line 441, in run_until_terminal
+    report = self.runner.run_autonomous_step(state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/phase_runner.py", line 528, in run_autonomous_step
+    result = self.execute_current_phase(state, batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/phase_runner.py", line 322, in execute_current_phase
+    result = self.executor.execute_phase(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/phase_executor.py", line 659, in execute_phase
+    return fn()
+           ^^^^
+  File "/workspace/automation/orchestrator/phase_executor.py", line 642, in <lambda>
+    "GAP_CLOSURE": lambda: self.execute_gap_closure(run_id=run_id, batch=batch),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/phase_executor.py", line 402, in execute_gap_closure
+    cloud_result = self._cloud_execute_phase(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/phase_executor.py", line 263, in _cloud_execute_phase
+    cloud_result = self.cloud.execute_in_process(task, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/cloud_executor.py", line 175, in execute_in_process
+    result = CloudWorker(self.repo_root).execute(task, batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/cloud_worker.py", line 51, in execute
+    return self._execute_gap_closure(task, batch, started)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/cloud_worker.py", line 161, in _execute_gap_closure
+    result = self.gap_closure_builder.build_gap_closure(batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/automation/orchestrator/gap_closure_builder.py", line 107, in build_gap_closure
+    StagingBuilder(self.repo_root).build_staging(batch)
+    ^^^^^^^^^^^^^^
+NameError: name 'StagingBuilder' is not defined
+[2026-08-25T02:44:39.070893+00:00] Overnight run_until_terminal started
+[2026-08-25T02:44:39.120513+00:00] step BATCH_05:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:44:39.641467+00:00] step BATCH_05:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:44:40.980779+00:00] step BATCH_05:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:45:00.437009+00:00] step BATCH_06:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:45:05.195985+00:00] step BATCH_06:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:45:05.227255+00:00] step BATCH_06:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+[2026-08-25T02:45:05.270600+00:00] step BATCH_06:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:45:05.791647+00:00] step BATCH_06:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:45:06.966295+00:00] step BATCH_06:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:45:26.837406+00:00] step BATCH_07:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:45:37.080630+00:00] step BATCH_07:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:45:37.124316+00:00] step BATCH_07:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+[2026-08-25T02:45:37.170261+00:00] step BATCH_07:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:45:37.711047+00:00] step BATCH_07:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:45:39.257084+00:00] step BATCH_07:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:45:58.800918+00:00] step BATCH_08:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:46:27.360147+00:00] step BATCH_08:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:46:27.417675+00:00] step BATCH_08:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+[2026-08-25T02:46:27.516644+00:00] step BATCH_08:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:46:28.045774+00:00] step BATCH_08:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:46:36.969805+00:00] step BATCH_08:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:46:56.389729+00:00] step BATCH_09:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:47:06.437149+00:00] step BATCH_09:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:47:06.468190+00:00] step BATCH_09:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+[2026-08-25T02:47:06.512005+00:00] step BATCH_09:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:47:06.512309+00:00] Batch transition BATCH_05 -> BATCH_09
+[2026-08-25T02:47:07.031708+00:00] step BATCH_09:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:47:08.505156+00:00] step BATCH_09:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:47:27.887586+00:00] step BATCH_10:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:47:36.882360+00:00] step BATCH_10:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:47:36.912401+00:00] step BATCH_10:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+[2026-08-25T02:47:36.952637+00:00] step BATCH_10:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:47:37.476649+00:00] step BATCH_10:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:47:38.907020+00:00] step BATCH_10:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:47:59.133149+00:00] step BATCH_11:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:48:14.317229+00:00] step BATCH_11:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:48:14.352254+00:00] step BATCH_11:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+[2026-08-25T02:48:14.401639+00:00] step BATCH_11:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:48:14.943923+00:00] step BATCH_11:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:48:17.100875+00:00] step BATCH_11:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:48:36.982767+00:00] step BATCH_12:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:48:56.336415+00:00] step BATCH_12:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:48:56.365458+00:00] step BATCH_12:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+[2026-08-25T02:48:56.406552+00:00] step BATCH_12:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:48:56.935032+00:00] step BATCH_12:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:48:58.342456+00:00] step BATCH_12:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:49:17.746594+00:00] step BATCH_13:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:49:27.772273+00:00] step BATCH_13:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:49:27.802549+00:00] step BATCH_13:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+[2026-08-25T02:49:27.841808+00:00] step BATCH_13:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:49:28.367335+00:00] step BATCH_13:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:49:28.367637+00:00] Batch transition BATCH_09 -> BATCH_13
+[2026-08-25T02:49:29.676338+00:00] step BATCH_13:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:49:48.993792+00:00] step BATCH_14:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:51:57.288232+00:00] step BATCH_14:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:51:57.342686+00:00] step BATCH_14:GAP_CLOSURE status=GAP_CLOSURE result=SUCCESS
+[2026-08-25T02:51:57.435318+00:00] step BATCH_14:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:51:57.961661+00:00] step BATCH_14:E2E status=HUMAN_APPROVAL_REQUIRED result=BLOCKED
+[2026-08-25T02:52:05.769627+00:00] step BATCH_14:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:52:25.731020+00:00] step BATCH_03A:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:52:25.734424+00:00] step BATCH_03A:VERIFICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:52:25.736435+00:00] step BATCH_03A:PUBLICATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:52:28.093322+00:00] step BATCH_03A:E2E status=HUMAN_APPROVAL_REQUIRED result=SUCCESS
+[2026-08-25T02:52:28.096245+00:00] step BATCH_03A:REGRESSION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:52:28.099245+00:00] step BATCH_03A:STABILIZATION status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:52:28.113376+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.125282+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.136635+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.148230+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.159460+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.170462+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.181603+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.192943+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.203987+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.215603+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.227871+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.239454+00:00] step BATCH_03A:STABILIZATION status=HUMAN_APPROVAL_REQUIRED result=FAILED
+[2026-08-25T02:52:28.239787+00:00] Batch transition BATCH_13 -> BATCH_03A
+[2026-08-25T02:52:28.241309+00:00] Terminal: KNOWLEDGE_COMPLETE
+{
+  "status": "KNOWLEDGE_COMPLETE",
+  "ticks": 3,
+  "total_steps": 75,
+  "global_blocked": false,
+  "catalogue_progress": {
+    "total_confirmed_services": 454,
+    "researched_services": 471,
+    "verified_services": 454,
+    "published_services": 454,
+    "partially_covered_services": 17,
+    "deferred_services": 0,
+    "blocked_services": 0,
+    "completed_services": 454,
+    "services_remaining": 0,
+    "completed_batches": 14,
+    "total_batches": 17
+  },
+  "overnight_status": {
+    "started_at": "2026-08-25T02:44:39.070859+00:00",
+    "last_activity_at": "2026-08-25T02:52:28.240891+00:00",
+    "current_batch": "BATCH_03A",
+    "current_phase": "STABILIZATION",
+    "current_run_id": "run-ff88996c6456",
+    "current_task": "BATCH_03A:STABILIZATION",
+    "workflow_status": "RUNNING",
+    "services_complete": 454,
+    "services_remaining": 0,
+    "batches_complete": 14,
+    "deferred_items": 111,
+    "deferred_count": 0,
+    "global_blocked": false,
+    "global_block_reason": "",
+    "deployment_locked": true,
+    "catalogue_progress": {
+      "total_confirmed_services": 454,
+      "researched_services": 471,
+      "verified_services": 454,
+      "published_services": 454,
+      "partially_covered_services": 17,
+      "deferred_services": 0,
+      "blocked_services": 0,
+      "completed_services": 454,
+      "services_remaining": 0,
+      "completed_batches": 14,
+      "total_batches": 17
+    },
+    "mode": "AUTO_CLOUD",
+    "executor_available": true,
+    "agent_id": "bc-01a02d65-77d1-75ff-93ed-606e44a33400",
+    "agent_run_id": null,
+    "waiting_for_agent": false,
+    "execution_mode": null,
+    "last_error": null
+  }
+}
+[2026-08-25T02:52:59.147044+00:00] Overnight run_until_terminal started
+[2026-08-25T02:52:59.148467+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:52:59.149243+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:52:59.149931+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:52:59.150619+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:52:59.151303+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:52:59.151566+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T02:52:59.152846+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:52:59.153544+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:52:59.154225+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:52:59.154847+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:52:59.155504+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:52:59.156599+00:00] Terminal: IN_PROGRESS
+[2026-08-25T02:53:29.141747+00:00] Overnight run_until_terminal started
+[2026-08-25T02:53:29.143175+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:53:29.143920+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:53:29.144620+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:53:29.145334+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:53:29.146021+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:53:29.146291+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T02:53:29.147487+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:53:29.148200+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:53:29.148908+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:53:29.149621+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:53:29.150305+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:53:29.151469+00:00] Terminal: IN_PROGRESS
+[2026-08-25T02:54:15.509228+00:00] Overnight run_until_terminal started
+[2026-08-25T02:54:15.510661+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T02:54:15.511350+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T02:54:15.511982+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:54:15.512617+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:54:15.513267+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:54:15.513497+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T02:54:15.514679+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:54:15.515313+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:54:15.515930+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:54:15.516559+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:54:15.517196+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T02:54:15.518228+00:00] Terminal: IN_PROGRESS
+[2026-08-25T02:54:37.174430+00:00] Overnight run_until_terminal started
+[2026-08-25T02:54:37.175683+00:00] Terminal: KNOWLEDGE_COMPLETE
+[2026-08-25T03:03:19.658984+00:00] Overnight run_until_terminal started
+[2026-08-25T03:03:19.660650+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:03:19.661372+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:03:19.662027+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:03:19.662666+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:03:19.663318+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:03:19.663572+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:03:19.664802+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:03:19.665483+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:03:19.666152+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:03:19.666795+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:03:19.667427+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:03:19.668477+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:11:12.107266+00:00] Overnight run_until_terminal started
+[2026-08-25T03:11:12.108724+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:11:12.109484+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:11:12.110251+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:12.110890+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:12.111522+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:12.111785+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:11:12.112996+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:12.113672+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:12.114328+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:12.114953+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:12.115574+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:12.116614+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:11:21.130946+00:00] Overnight run_until_terminal started
+[2026-08-25T03:11:21.132498+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:11:21.133242+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:11:21.133916+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:21.134568+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:21.135228+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:21.135496+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:11:21.136721+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:21.137394+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:21.138042+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:21.138698+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:21.139343+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:11:21.140425+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:12:04.994624+00:00] Overnight run_until_terminal started
+[2026-08-25T03:12:04.996067+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:12:04.996765+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:12:04.997448+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:12:04.998102+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:12:04.998750+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:12:04.998983+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:12:05.000250+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:12:05.000908+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:12:05.001591+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:12:05.002221+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:12:05.002905+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:12:05.003901+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:13:03.508366+00:00] Overnight run_until_terminal started
+[2026-08-25T03:13:03.509891+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:13:03.510629+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:13:03.511345+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:13:03.512034+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:13:03.512717+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:13:03.512980+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:13:03.514256+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:13:03.514946+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:13:03.515653+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:13:03.516339+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:13:03.517197+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:13:03.518341+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:20:15.929068+00:00] Overnight run_until_terminal started
+[2026-08-25T03:20:15.930647+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:20:15.931377+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:20:15.932082+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:20:15.932758+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:20:15.933450+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:20:15.933699+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:20:15.934935+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:20:15.935595+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:20:15.936235+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:20:15.936922+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:20:15.937733+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:20:15.938814+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:21:40.958256+00:00] Overnight run_until_terminal started
+[2026-08-25T03:21:40.959816+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:21:40.960546+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:21:40.961262+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:21:40.961947+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:21:40.962607+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:21:40.962852+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:21:40.964132+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:21:40.964857+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:21:40.965566+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:21:40.966217+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:21:40.966925+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:21:40.967962+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:22:46.514426+00:00] Overnight run_until_terminal started
+[2026-08-25T03:22:46.516111+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:22:46.516906+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:22:46.517673+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:22:46.518371+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:22:46.519079+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:22:46.519358+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:22:46.520704+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:22:46.521423+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:22:46.522130+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:22:46.522824+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:22:46.523571+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:22:46.524704+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:23:44.229761+00:00] Overnight run_until_terminal started
+[2026-08-25T03:23:44.231307+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:23:44.232037+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:23:44.232716+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:23:44.233448+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:23:44.234141+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:23:44.234389+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:23:44.235620+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:23:44.236299+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:23:44.236962+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:23:44.237684+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:23:44.238384+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:23:44.239424+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:24:54.764513+00:00] Overnight run_until_terminal started
+[2026-08-25T03:24:54.766134+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:24:54.766889+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:24:54.767651+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:24:54.768356+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:24:54.769040+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:24:54.769329+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:24:54.770694+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:24:54.771370+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:24:54.772024+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:24:54.772741+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:24:54.773435+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:24:54.774476+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:25:59.592631+00:00] Overnight run_until_terminal started
+[2026-08-25T03:25:59.594380+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:25:59.595174+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:25:59.595908+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:25:59.596633+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:25:59.597389+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:25:59.597678+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:25:59.599008+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:25:59.599762+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:25:59.600484+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:25:59.601255+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:25:59.601982+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:25:59.603160+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:27:05.004632+00:00] Overnight run_until_terminal started
+[2026-08-25T03:27:05.006260+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:27:05.007045+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:27:05.007782+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:05.008502+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:05.009238+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:05.009517+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:27:05.010900+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:05.011627+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:05.012404+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:05.013149+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:05.013868+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:05.014981+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:27:53.734580+00:00] Overnight run_until_terminal started
+[2026-08-25T03:27:53.736197+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:27:53.737005+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:27:53.737793+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:53.738535+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:53.739290+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:53.739580+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:27:53.740925+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:53.741720+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:53.742508+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:53.743266+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:53.743994+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:27:53.745130+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:29:05.683569+00:00] Overnight run_until_terminal started
+[2026-08-25T03:29:05.685190+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:29:05.685952+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:29:05.686653+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:29:05.687334+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:29:05.688020+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:29:05.688273+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:29:05.689589+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:29:05.690291+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:29:05.691029+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:29:05.691741+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:29:05.692420+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:29:05.693490+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:30:03.566448+00:00] Overnight run_until_terminal started
+[2026-08-25T03:30:03.568081+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:30:03.568844+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:30:03.569670+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:30:03.570422+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:30:03.571105+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:30:03.571350+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:30:03.572885+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:30:03.574091+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:30:03.574913+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:30:03.575631+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:30:03.576346+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:30:03.577437+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:31:27.385854+00:00] Overnight run_until_terminal started
+[2026-08-25T03:31:27.387494+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:31:27.388238+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:31:27.388953+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:31:27.389834+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:31:27.390526+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:31:27.390772+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:31:27.392029+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:31:27.392774+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:31:27.393513+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:31:27.394213+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:31:27.394897+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:31:27.395941+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:32:51.951085+00:00] Overnight run_until_terminal started
+[2026-08-25T03:32:51.952663+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:32:51.953475+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:32:51.954193+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:32:51.954937+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:32:51.955650+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:32:51.955891+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:32:51.957157+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:32:51.957909+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:32:51.958632+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:32:51.959333+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:32:51.960026+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:32:51.961083+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:34:18.009995+00:00] Overnight run_until_terminal started
+[2026-08-25T03:34:18.011645+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:34:18.012473+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:34:18.013258+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:34:18.014013+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:34:18.014772+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:34:18.015039+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:34:18.016370+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:34:18.017211+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:34:18.017971+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:34:18.018719+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:34:18.019486+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:34:18.020613+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:35:43.768896+00:00] Overnight run_until_terminal started
+[2026-08-25T03:35:43.770574+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:35:43.771326+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:35:43.772063+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:35:43.772761+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:35:43.773481+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:35:43.773727+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:35:43.775004+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:35:43.775764+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:35:43.776490+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:35:43.777261+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:35:43.777976+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:35:43.779055+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:37:13.379876+00:00] Overnight run_until_terminal started
+[2026-08-25T03:37:13.381503+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:37:13.382289+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:37:13.383036+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:13.383768+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:13.384488+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:13.384727+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:37:13.386081+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:13.386829+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:13.387554+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:13.388286+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:13.389010+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:13.390100+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:37:48.113337+00:00] Overnight run_until_terminal started
+[2026-08-25T03:37:48.114970+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:37:48.115812+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:37:48.116592+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:48.117400+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:48.118199+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:48.118480+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:37:48.119873+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:48.120675+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:48.121468+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:48.122253+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:48.123021+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:37:48.124167+00:00] Terminal: IN_PROGRESS
+[2026-08-25T03:41:07.641237+00:00] Overnight run_until_terminal started
+[2026-08-25T03:41:07.642933+00:00] step BATCH_SIM_B:RESEARCH status=READY result=SUCCESS
+[2026-08-25T03:41:07.643775+00:00] step BATCH_SIM_B:RESEARCH status=AUTO_CONTINUE result=SUCCESS
+[2026-08-25T03:41:07.644549+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:41:07.645384+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:41:07.646161+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:41:07.646419+00:00] Batch transition BATCH_SIM_A -> BATCH_SIM_B
+[2026-08-25T03:41:07.647816+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:41:07.648610+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:41:07.649381+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:41:07.650148+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:41:07.650923+00:00] step BATCH_SIM_B:RESEARCH status=RETRY result=PARTIAL
+[2026-08-25T03:41:07.652094+00:00] Terminal: IN_PROGRESS

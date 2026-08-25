@@ -1,0 +1,72 @@
+{
+  "service_id": "women-hostel-benefit",
+  "claims": [
+    {
+      "claim_id": "women-hostel-benefit::c-catalogue-authority",
+      "service_id": "women-hostel-benefit",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Women Affairs (DWA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-hostel-benefit::c-official-portal",
+      "service_id": "women-hostel-benefit",
+      "claim_type": "application_url",
+      "claim_text": "Women Hostel Benefit Programme official information is published at http://dwa.portal.gov.bd/ (page title: হোম | মহিলা বিষয়ক অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://dwa.portal.gov.bd/"
+      },
+      "source_ids": [
+        "src-women-hostel-benefit-official"
+      ],
+      "evidence_ids": [
+        "ev-women-hostel-benefit::c-official-portal-src-women-hostel-benefit-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-hostel-benefit::c-procedure-overview",
+      "service_id": "women-hostel-benefit",
+      "claim_type": "procedure_step",
+      "claim_text": "Women Hostel Benefit Programme is a government service under Department of Women Affairs (DWA) (welfare). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-hostel-benefit-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-hostel-benefit::c-service-identity",
+      "service_id": "women-hostel-benefit",
+      "claim_type": "eligibility",
+      "claim_text": "Women Hostel Benefit Programme (মহিলা হোস্টেল সুবিধা) is a confirmed government service in category women_children, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-hostel-benefit-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

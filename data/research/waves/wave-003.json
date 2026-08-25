@@ -1,0 +1,1441 @@
+{
+  "wave_id": "wave-003",
+  "wave_number": 3,
+  "run_id": "wave-003-eead8e63",
+  "commit_sha": "0abc805b3f71",
+  "generated_at": "2026-08-25T03:22:46.761250+00:00",
+  "wave_size": 10,
+  "services_attempted": [
+    "land-mutation-dcr",
+    "land-mutation-khatian-search",
+    "land-mutation-review",
+    "land-mutation-track",
+    "land-partition-consolidation",
+    "land-survey-khatian-search",
+    "local-upazila-land-tax-payment",
+    "tax-clearance-foreigners",
+    "tax-etin-registration",
+    "tax-income-return-file"
+  ],
+  "service_results": [
+    {
+      "service_id": "land-mutation-dcr",
+      "service_name_en": "Mutation DCR and Khatian Download",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-mutation-dcr",
+        "service_name_en": "Mutation DCR and Khatian Download",
+        "service_name_bn": "মিউটেশন ডিসিআর/খতিয়ান",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "online DCR",
+          "mutation khatian print"
+        ],
+        "official_source": "https://mutation.land.gov.bd/namjari-steps",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-mutation-dcr",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-mutation-dcr-en-procedure",
+            "query": "How do I apply for Mutation DCR and Khatian Download?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-dcr-bn-procedure",
+            "query": "মিউটেশন ডিসিআর/খতিয়ান কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-dcr-fee",
+            "query": "What is the fee for Mutation DCR and Khatian Download?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-dcr-documents",
+            "query": "What documents are needed for Mutation DCR and Khatian Download?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-dcr-url",
+            "query": "What is the official website for Mutation DCR and Khatian Download?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-mutation-dcr",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-mutation-khatian-search",
+      "service_name_en": "Mutation Khatian Search",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-mutation-khatian-search",
+        "service_name_en": "Mutation Khatian Search",
+        "service_name_bn": "নামজারি খতিয়ান অনুসন্ধান",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land (DLRMS)",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "namjari khatian search"
+        ],
+        "official_source": "https://dlrms.land.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-mutation-khatian-search",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-mutation-khatian-search-en-procedure",
+            "query": "How do I apply for Mutation Khatian Search?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-khatian-search-bn-procedure",
+            "query": "নামজারি খতিয়ান অনুসন্ধান কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-khatian-search-fee",
+            "query": "What is the fee for Mutation Khatian Search?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-khatian-search-documents",
+            "query": "What documents are needed for Mutation Khatian Search?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-khatian-search-url",
+            "query": "What is the official website for Mutation Khatian Search?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-mutation-khatian-search",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-mutation-review",
+      "service_name_en": "Mutation Review Application",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-mutation-review",
+        "service_name_en": "Mutation Review Application",
+        "service_name_bn": "মিউটেশন রিভিউ আবেদন",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "mutation appeal",
+          "namjari review"
+        ],
+        "official_source": "https://land.gov.bd/vumisheba-fee",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-mutation-review",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-mutation-review-en-procedure",
+            "query": "How do I apply for Mutation Review Application?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-review-bn-procedure",
+            "query": "মিউটেশন রিভিউ আবেদন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-review-fee",
+            "query": "What is the fee for Mutation Review Application?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-review-documents",
+            "query": "What documents are needed for Mutation Review Application?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-review-url",
+            "query": "What is the official website for Mutation Review Application?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-mutation-review",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-mutation-track",
+      "service_name_en": "Mutation Application Tracking",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-mutation-track",
+        "service_name_en": "Mutation Application Tracking",
+        "service_name_bn": "মিউটেশন আবেদন ট্র্যাকিং",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "mutation status"
+        ],
+        "official_source": "https://mutation.land.gov.bd/search-application",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-mutation-track",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-mutation-track-en-procedure",
+            "query": "How do I apply for Mutation Application Tracking?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-track-bn-procedure",
+            "query": "মিউটেশন আবেদন ট্র্যাকিং কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-track-fee",
+            "query": "What is the fee for Mutation Application Tracking?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-track-documents",
+            "query": "What documents are needed for Mutation Application Tracking?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-track-url",
+            "query": "What is the official website for Mutation Application Tracking?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-mutation-track",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-partition-consolidation",
+      "service_name_en": "Land Partition and Consolidation (Record Correction)",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-partition-consolidation",
+        "service_name_en": "Land Partition and Consolidation (Record Correction)",
+        "service_name_bn": "জমাভাগ ও জমা একত্রিকরণ",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "joma bhag",
+          "joma ekikaran"
+        ],
+        "official_source": "https://www.land.gov.bd/nagorik-subidha",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-partition-consolidation",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-partition-consolidation-en-procedure",
+            "query": "How do I apply for Land Partition and Consolidation (Record Correction)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-partition-consolidation-bn-procedure",
+            "query": "জমাভাগ ও জমা একত্রিকরণ কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-partition-consolidation-fee",
+            "query": "What is the fee for Land Partition and Consolidation (Record Correction)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-partition-consolidation-documents",
+            "query": "What documents are needed for Land Partition and Consolidation (Record Correction)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-partition-consolidation-url",
+            "query": "What is the official website for Land Partition and Consolidation (Record Correction)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-partition-consolidation",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-survey-khatian-search",
+      "service_name_en": "Survey Khatian Search",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-survey-khatian-search",
+        "service_name_en": "Survey Khatian Search",
+        "service_name_bn": "সার্ভে খতিয়ান অনুসন্ধান",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land (DLRMS)",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "RS khatian search",
+          "CS khatian search"
+        ],
+        "official_source": "https://dlrms.land.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-survey-khatian-search",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-survey-khatian-search-en-procedure",
+            "query": "How do I apply for Survey Khatian Search?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-survey-khatian-search-bn-procedure",
+            "query": "সার্ভে খতিয়ান অনুসন্ধান কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-survey-khatian-search-fee",
+            "query": "What is the fee for Survey Khatian Search?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-survey-khatian-search-documents",
+            "query": "What documents are needed for Survey Khatian Search?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-survey-khatian-search-url",
+            "query": "What is the official website for Survey Khatian Search?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-survey-khatian-search",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-upazila-land-tax-payment",
+      "service_name_en": "Upazila Land Development Tax Payment",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-upazila-land-tax-payment",
+        "service_name_en": "Upazila Land Development Tax Payment",
+        "service_name_bn": "উপজেলা ভূমি উন্নয়ন কর",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Union Parishad / Upazila Land Office",
+          "union-parishad-upazila-land-office"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "land development tax",
+          "holding tax rural",
+          "union land tax"
+        ],
+        "official_source": null,
+        "existing_claims_count": 1,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "OFFICIAL_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "PARTIAL",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 2,
+      "verified_claims": 2,
+      "service_specific_sources": 4,
+      "completeness_score": 0.8667,
+      "flags": [
+        "INSUFFICIENT_MEANINGFUL_CLAIMS",
+        "MISSING_REQUIRED_DIMENSIONS"
+      ],
+      "e2e": {
+        "service_id": "local-upazila-land-tax-payment",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-upazila-land-tax-payment-en-procedure",
+            "query": "How do I apply for Upazila Land Development Tax Payment?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-upazila-land-tax-payment-bn-procedure",
+            "query": "উপজেলা ভূমি উন্নয়ন কর কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-upazila-land-tax-payment-fee",
+            "query": "What is the fee for Upazila Land Development Tax Payment?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-upazila-land-tax-payment-documents",
+            "query": "What documents are needed for Upazila Land Development Tax Payment?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-upazila-land-tax-payment-url",
+            "query": "What is the official website for Upazila Land Development Tax Payment?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-upazila-land-tax-payment",
+        "profile_key": "LAND",
+        "research_status": "PARTIAL",
+        "completeness_score": 0.8667,
+        "meaningful_claims": 2,
+        "verified_claims": 2,
+        "service_specific_sources": 4,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [
+          "INSUFFICIENT_MEANINGFUL_CLAIMS",
+          "MISSING_REQUIRED_DIMENSIONS"
+        ],
+        "dimension_coverage": {
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [
+          "official_url"
+        ],
+        "score_breakdown": {
+          "research_quality": 0.1667,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.15,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "tax-clearance-foreigners",
+      "service_name_en": "Tax Clearance Certificate for Foreigners",
+      "category_id": "tax",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "tax-clearance-foreigners",
+        "service_name_en": "Tax Clearance Certificate for Foreigners",
+        "service_name_bn": "বিদেশিদের কর ছাড়পত্র",
+        "category_id": "tax",
+        "research_profile": "TAX",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "National Board of Revenue (NBR)",
+          "nbr"
+        ],
+        "known_official_domains": [
+          "nbr.gov.bd",
+          "incometax.gov.bd",
+          "secure.incometax.gov.bd"
+        ],
+        "service_aliases": [
+          "tax clearance certificate"
+        ],
+        "official_source": "https://nbr.gov.bd/all-eservices/eng",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "tax-clearance-foreigners",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "tax-clearance-foreigners-en-procedure",
+            "query": "How do I apply for Tax Clearance Certificate for Foreigners?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-clearance-foreigners-bn-procedure",
+            "query": "বিদেশিদের কর ছাড়পত্র কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-clearance-foreigners-fee",
+            "query": "What is the fee for Tax Clearance Certificate for Foreigners?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-clearance-foreigners-documents",
+            "query": "What documents are needed for Tax Clearance Certificate for Foreigners?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-clearance-foreigners-url",
+            "query": "What is the official website for Tax Clearance Certificate for Foreigners?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "tax-clearance-foreigners",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "tax-etin-registration",
+      "service_name_en": "e-TIN Registration",
+      "category_id": "tax",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "tax-etin-registration",
+        "service_name_en": "e-TIN Registration",
+        "service_name_bn": "ই-টিআইএন নিবন্ধন",
+        "category_id": "tax",
+        "research_profile": "TAX",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "National Board of Revenue (NBR)",
+          "nbr"
+        ],
+        "known_official_domains": [
+          "nbr.gov.bd",
+          "incometax.gov.bd",
+          "secure.incometax.gov.bd"
+        ],
+        "service_aliases": [
+          "TIN registration",
+          "tax identification number"
+        ],
+        "official_source": "https://nbr.gov.bd/all-faq/e-services/eng",
+        "existing_claims_count": 3,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "tax-etin-registration",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "tax-etin-registration-en-procedure",
+            "query": "How do I apply for e-TIN Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-etin-registration-bn-procedure",
+            "query": "ই-টিআইএন নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-etin-registration-fee",
+            "query": "What is the fee for e-TIN Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-etin-registration-documents",
+            "query": "What documents are needed for e-TIN Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-etin-registration-url",
+            "query": "What is the official website for e-TIN Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "tax-etin-registration",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "tax-income-return-file",
+      "service_name_en": "Income Tax Return Filing (e-Return)",
+      "category_id": "tax",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "tax-income-return-file",
+        "service_name_en": "Income Tax Return Filing (e-Return)",
+        "service_name_bn": "আয়কর রিটার্ন দাখিল",
+        "category_id": "tax",
+        "research_profile": "TAX",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "National Board of Revenue (NBR)",
+          "nbr"
+        ],
+        "known_official_domains": [
+          "nbr.gov.bd",
+          "incometax.gov.bd",
+          "secure.incometax.gov.bd"
+        ],
+        "service_aliases": [
+          "e-return",
+          "IT-11GA"
+        ],
+        "official_source": "https://nbr.gov.bd/all-faq/e-services/return-verify",
+        "existing_claims_count": 3,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "tax-income-return-file",
+        "wave_id": "wave-003",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "tax-income-return-file-en-procedure",
+            "query": "How do I apply for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-return-file-bn-procedure",
+            "query": "আয়কর রিটার্ন দাখিল কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-return-file-fee",
+            "query": "What is the fee for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-return-file-documents",
+            "query": "What documents are needed for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "tax-income-return-file-url",
+            "query": "What is the official website for Income Tax Return Filing (e-Return)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "tax-income-return-file",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    }
+  ],
+  "status_counts": {
+    "COMPLETE": 0,
+    "PARTIAL": 10,
+    "DEFERRED": 0,
+    "BLOCKED": 0
+  },
+  "verified_claims": 24,
+  "partial_claims": 5,
+  "conflicts": 0,
+  "knowledge_gaps": 25,
+  "staging_path": "/workspace/data/research/waves/wave-003/staging",
+  "e2e_summary": {
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "answer_supported": 0
+  },
+  "regression": {
+    "passed": true,
+    "metrics": {
+      "hallucinations": 0,
+      "citation_failures": 0,
+      "batch_01_pass_pct": 100.0,
+      "passport_pass_pct": 100.0,
+      "batch_02b_pass_pct": 100.0,
+      "routing_pass_pct": 100.0,
+      "pytest_failed": 0,
+      "batch_03a_pass_pct": 100.0,
+      "batch_03b_pass_pct": 100.0,
+      "batch_03c_pass_pct": 100.0
+    },
+    "failures": [],
+    "automation_exit_code": 0
+  },
+  "wave_quality": {
+    "passed": true,
+    "wave_id": "wave-003",
+    "services_total": 10,
+    "false_completion_count": 0,
+    "services_with_sources": 10,
+    "services_with_verified_claims": 10,
+    "source_rate": 1.0,
+    "verified_rate": 1.0,
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "regression_failures": [],
+    "blocking_reasons": [],
+    "service_statuses": {
+      "land-mutation-dcr": "PARTIAL",
+      "land-mutation-khatian-search": "PARTIAL",
+      "land-mutation-review": "PARTIAL",
+      "land-mutation-track": "PARTIAL",
+      "land-partition-consolidation": "PARTIAL",
+      "land-survey-khatian-search": "PARTIAL",
+      "local-upazila-land-tax-payment": "PARTIAL",
+      "tax-clearance-foreigners": "PARTIAL",
+      "tax-etin-registration": "PARTIAL",
+      "tax-income-return-file": "PARTIAL"
+    }
+  },
+  "quality_passed": true
+}

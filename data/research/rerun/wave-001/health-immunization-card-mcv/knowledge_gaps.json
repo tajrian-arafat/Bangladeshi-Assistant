@@ -1,0 +1,19 @@
+{
+  "service_id": "health-immunization-card-mcv",
+  "gaps": [
+    {
+      "gap_id": "gap-health-immunization-card-mcv-fee-unverified",
+      "service_id": "health-immunization-card-mcv",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Immunization / Vaccination Card (EPI).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-immunization-card-mcv-documents-unverified",
+      "service_id": "health-immunization-card-mcv",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Immunization / Vaccination Card (EPI).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

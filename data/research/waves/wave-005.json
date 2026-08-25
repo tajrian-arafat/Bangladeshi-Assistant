@@ -1,0 +1,2703 @@
+{
+  "wave_id": "wave-005",
+  "wave_number": 5,
+  "run_id": "wave-005-94018d2b",
+  "commit_sha": "0abc805b3f71",
+  "generated_at": "2026-08-25T03:24:54.979505+00:00",
+  "wave_size": 20,
+  "services_attempted": [
+    "btrc-dnams",
+    "btrc-lims-license",
+    "btrc-neir-device-registration",
+    "btrc-neir-imei-check",
+    "btrc-nid-sim-check",
+    "business-company-incorporation",
+    "business-cooperative-society-registration",
+    "business-entity-name-search",
+    "business-foreign-company-registration",
+    "business-name-clearance",
+    "business-ngoab-ngo-registration",
+    "business-partnership-registration",
+    "business-rjsc-certified-copy",
+    "business-society-registration",
+    "business-trade-organization-registration",
+    "civil-birth-registration-copy",
+    "civil-birth-registration-duplicate-cancel",
+    "civil-death-registration-copy",
+    "civil-death-registration-correction",
+    "civil-death-registration-duplicate-cancel"
+  ],
+  "service_results": [
+    {
+      "service_id": "btrc-dnams",
+      "service_name_en": "Demand Note Automation Management System (DNAMS)",
+      "category_id": "ict",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "btrc-dnams",
+        "service_name_en": "Demand Note Automation Management System (DNAMS)",
+        "service_name_bn": "ডিমান্ড নোট অটোমেশন (ডিএনএএমএস)",
+        "category_id": "ict",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Telecommunication Regulatory Commission (BTRC)",
+          "bangladesh-telecommunication-regulatory-commission-btrc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "BTRC demand note payment"
+        ],
+        "official_source": "https://dnams.btrc.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "btrc-dnams",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "btrc-dnams-en-procedure",
+            "query": "How do I apply for Demand Note Automation Management System (DNAMS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-dnams-bn-procedure",
+            "query": "ডিমান্ড নোট অটোমেশন (ডিএনএএমএস) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-dnams-fee",
+            "query": "What is the fee for Demand Note Automation Management System (DNAMS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-dnams-documents",
+            "query": "What documents are needed for Demand Note Automation Management System (DNAMS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-dnams-url",
+            "query": "What is the official website for Demand Note Automation Management System (DNAMS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "btrc-dnams",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "btrc-lims-license",
+      "service_name_en": "Telecom License and Registration (LIMS)",
+      "category_id": "ict",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "btrc-lims-license",
+        "service_name_en": "Telecom License and Registration (LIMS)",
+        "service_name_bn": "টেলিকম লাইসেন্স/নিবন্ধন (এলআইএমএস)",
+        "category_id": "ict",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Telecommunication Regulatory Commission (BTRC)",
+          "bangladesh-telecommunication-regulatory-commission-btrc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "e-License BTRC",
+          "LIMS portal"
+        ],
+        "official_source": "https://lims.btrc.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "btrc-lims-license",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "btrc-lims-license-en-procedure",
+            "query": "How do I apply for Telecom License and Registration (LIMS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-lims-license-bn-procedure",
+            "query": "টেলিকম লাইসেন্স/নিবন্ধন (এলআইএমএস) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-lims-license-fee",
+            "query": "What is the fee for Telecom License and Registration (LIMS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-lims-license-documents",
+            "query": "What documents are needed for Telecom License and Registration (LIMS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-lims-license-url",
+            "query": "What is the official website for Telecom License and Registration (LIMS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "btrc-lims-license",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "btrc-neir-device-registration",
+      "service_name_en": "Mobile Device Registration (NEIR)",
+      "category_id": "ict",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "btrc-neir-device-registration",
+        "service_name_en": "Mobile Device Registration (NEIR)",
+        "service_name_bn": "মোবাইল ডিভাইস নিবন্ধন (এনইআইআর)",
+        "category_id": "ict",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Telecommunication Regulatory Commission (BTRC)",
+          "bangladesh-telecommunication-regulatory-commission-btrc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "IMEI registration",
+          "unregistered phone registration"
+        ],
+        "official_source": "https://neir.btrc.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "btrc-neir-device-registration",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "btrc-neir-device-registration-en-procedure",
+            "query": "How do I apply for Mobile Device Registration (NEIR)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-neir-device-registration-bn-procedure",
+            "query": "মোবাইল ডিভাইস নিবন্ধন (এনইআইআর) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-neir-device-registration-fee",
+            "query": "What is the fee for Mobile Device Registration (NEIR)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-neir-device-registration-documents",
+            "query": "What documents are needed for Mobile Device Registration (NEIR)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-neir-device-registration-url",
+            "query": "What is the official website for Mobile Device Registration (NEIR)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "btrc-neir-device-registration",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "btrc-neir-imei-check",
+      "service_name_en": "NEIR IMEI Verification",
+      "category_id": "ict",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "btrc-neir-imei-check",
+        "service_name_en": "NEIR IMEI Verification",
+        "service_name_bn": "এনইআইআর আইএমইআই যাচাই",
+        "category_id": "ict",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Telecommunication Regulatory Commission (BTRC)",
+          "bangladesh-telecommunication-regulatory-commission-btrc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "IMEI check Bangladesh",
+          "KYD 16002",
+          "phone verification BTRC"
+        ],
+        "official_source": "https://neir.btrc.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "btrc-neir-imei-check",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "btrc-neir-imei-check-en-procedure",
+            "query": "How do I apply for NEIR IMEI Verification?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-neir-imei-check-bn-procedure",
+            "query": "এনইআইআর আইএমইআই যাচাই কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-neir-imei-check-fee",
+            "query": "What is the fee for NEIR IMEI Verification?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-neir-imei-check-documents",
+            "query": "What documents are needed for NEIR IMEI Verification?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-neir-imei-check-url",
+            "query": "What is the official website for NEIR IMEI Verification?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "btrc-neir-imei-check",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "btrc-nid-sim-check",
+      "service_name_en": "SIM Numbers Registered Under NID Check",
+      "category_id": "ict",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "btrc-nid-sim-check",
+        "service_name_en": "SIM Numbers Registered Under NID Check",
+        "service_name_bn": "এনআইডি-ভিত্তিক সিম তালিকা (*16001#)",
+        "category_id": "ict",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Telecommunication Regulatory Commission (BTRC)",
+          "bangladesh-telecommunication-regulatory-commission-btrc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "*16001#",
+          "SIM under NID"
+        ],
+        "official_source": "https://neir.btrc.gov.bd/homepage",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "btrc-nid-sim-check",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "btrc-nid-sim-check-en-procedure",
+            "query": "How do I apply for SIM Numbers Registered Under NID Check?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-nid-sim-check-bn-procedure",
+            "query": "এনআইডি-ভিত্তিক সিম তালিকা (*16001#) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-nid-sim-check-fee",
+            "query": "What is the fee for SIM Numbers Registered Under NID Check?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-nid-sim-check-documents",
+            "query": "What documents are needed for SIM Numbers Registered Under NID Check?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "btrc-nid-sim-check-url",
+            "query": "What is the official website for SIM Numbers Registered Under NID Check?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "btrc-nid-sim-check",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-company-incorporation",
+      "service_name_en": "Company Incorporation",
+      "category_id": "registrations",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-company-incorporation",
+        "service_name_en": "Company Incorporation",
+        "service_name_bn": "কোম্পানি নিবন্ধন",
+        "category_id": "registrations",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Registrar of Joint Stock Companies and Firms (RJSC)",
+          "rjsc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "company registration",
+          "certificate of incorporation"
+        ],
+        "official_source": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-company-incorporation",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-company-incorporation-en-procedure",
+            "query": "How do I apply for Company Incorporation?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-company-incorporation-bn-procedure",
+            "query": "কোম্পানি নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-company-incorporation-fee",
+            "query": "What is the fee for Company Incorporation?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-company-incorporation-documents",
+            "query": "What documents are needed for Company Incorporation?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-company-incorporation-url",
+            "query": "What is the official website for Company Incorporation?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-company-incorporation",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-cooperative-society-registration",
+      "service_name_en": "Cooperative Society Registration",
+      "category_id": "registrations",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-cooperative-society-registration",
+        "service_name_en": "Cooperative Society Registration",
+        "service_name_bn": "সমবায় সমিতি নিবন্ধন",
+        "category_id": "registrations",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Department of Cooperatives (RDCD)",
+          "department-of-cooperatives-rdcd"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "cooperative registration",
+          "coop society registration",
+          "service.rdcd.gov.bd"
+        ],
+        "official_source": "https://service.rdcd.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-cooperative-society-registration",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-cooperative-society-registration-en-procedure",
+            "query": "How do I apply for Cooperative Society Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-cooperative-society-registration-bn-procedure",
+            "query": "সমবায় সমিতি নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-cooperative-society-registration-fee",
+            "query": "What is the fee for Cooperative Society Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-cooperative-society-registration-documents",
+            "query": "What documents are needed for Cooperative Society Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-cooperative-society-registration-url",
+            "query": "What is the official website for Cooperative Society Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-cooperative-society-registration",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-entity-name-search",
+      "service_name_en": "Entity Name Search",
+      "category_id": "business",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-entity-name-search",
+        "service_name_en": "Entity Name Search",
+        "service_name_bn": "প্রতিষ্ঠানের নাম অনুসন্ধান",
+        "category_id": "business",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Registrar of Joint Stock Companies and Firms (RJSC)",
+          "rjsc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "RJSC name search",
+          "company name check"
+        ],
+        "official_source": "https://app.roc.gov.bd/psp/nc_search",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-entity-name-search",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-entity-name-search-en-procedure",
+            "query": "How do I apply for Entity Name Search?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-entity-name-search-bn-procedure",
+            "query": "প্রতিষ্ঠানের নাম অনুসন্ধান কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-entity-name-search-fee",
+            "query": "What is the fee for Entity Name Search?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-entity-name-search-documents",
+            "query": "What documents are needed for Entity Name Search?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-entity-name-search-url",
+            "query": "What is the official website for Entity Name Search?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-entity-name-search",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-foreign-company-registration",
+      "service_name_en": "Foreign Company Registration (Branch/Liaison)",
+      "category_id": "registrations",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-foreign-company-registration",
+        "service_name_en": "Foreign Company Registration (Branch/Liaison)",
+        "service_name_bn": "বিদেশি কোম্পানি নিবন্ধন",
+        "category_id": "registrations",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Registrar of Joint Stock Companies and Firms (RJSC)",
+          "rjsc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "branch office registration",
+          "liaison office"
+        ],
+        "official_source": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-foreign-company-registration",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-foreign-company-registration-en-procedure",
+            "query": "How do I apply for Foreign Company Registration (Branch/Liaison)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-foreign-company-registration-bn-procedure",
+            "query": "বিদেশি কোম্পানি নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-foreign-company-registration-fee",
+            "query": "What is the fee for Foreign Company Registration (Branch/Liaison)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-foreign-company-registration-documents",
+            "query": "What documents are needed for Foreign Company Registration (Branch/Liaison)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-foreign-company-registration-url",
+            "query": "What is the official website for Foreign Company Registration (Branch/Liaison)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-foreign-company-registration",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-name-clearance",
+      "service_name_en": "Company Name Clearance",
+      "category_id": "business",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-name-clearance",
+        "service_name_en": "Company Name Clearance",
+        "service_name_bn": "নাম অনুমোদন (Name Clearance)",
+        "category_id": "business",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Registrar of Joint Stock Companies and Firms (RJSC)",
+          "rjsc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "NC",
+          "name clearance certificate"
+        ],
+        "official_source": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-name-clearance",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-name-clearance-en-procedure",
+            "query": "How do I apply for Company Name Clearance?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-name-clearance-bn-procedure",
+            "query": "নাম অনুমোদন (Name Clearance) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-name-clearance-fee",
+            "query": "What is the fee for Company Name Clearance?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-name-clearance-documents",
+            "query": "What documents are needed for Company Name Clearance?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-name-clearance-url",
+            "query": "What is the official website for Company Name Clearance?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-name-clearance",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-ngoab-ngo-registration",
+      "service_name_en": "NGO Registration (NGO Affairs Bureau)",
+      "category_id": "registrations",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-ngoab-ngo-registration",
+        "service_name_en": "NGO Registration (NGO Affairs Bureau)",
+        "service_name_bn": "এনজিও বিষয়ক অধিদপ্তর NGO নিবন্ধন",
+        "category_id": "registrations",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "NGO Affairs Bureau",
+          "ngo-affairs-bureau"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "NGOAB registration",
+          "NGO registration Bangladesh",
+          "foreign NGO registration"
+        ],
+        "official_source": "https://ngoa.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-ngoab-ngo-registration",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-ngoab-ngo-registration-en-procedure",
+            "query": "How do I apply for NGO Registration (NGO Affairs Bureau)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-ngoab-ngo-registration-bn-procedure",
+            "query": "এনজিও বিষয়ক অধিদপ্তর NGO নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-ngoab-ngo-registration-fee",
+            "query": "What is the fee for NGO Registration (NGO Affairs Bureau)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-ngoab-ngo-registration-documents",
+            "query": "What documents are needed for NGO Registration (NGO Affairs Bureau)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-ngoab-ngo-registration-url",
+            "query": "What is the official website for NGO Registration (NGO Affairs Bureau)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-ngoab-ngo-registration",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-partnership-registration",
+      "service_name_en": "Partnership Firm Registration",
+      "category_id": "registrations",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-partnership-registration",
+        "service_name_en": "Partnership Firm Registration",
+        "service_name_bn": "অংশীদারিত্ব ফার্ম নিবন্ধন",
+        "category_id": "registrations",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Registrar of Joint Stock Companies and Firms (RJSC)",
+          "rjsc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "partnership registration"
+        ],
+        "official_source": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-partnership-registration",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-partnership-registration-en-procedure",
+            "query": "How do I apply for Partnership Firm Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-partnership-registration-bn-procedure",
+            "query": "অংশীদারিত্ব ফার্ম নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-partnership-registration-fee",
+            "query": "What is the fee for Partnership Firm Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-partnership-registration-documents",
+            "query": "What documents are needed for Partnership Firm Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-partnership-registration-url",
+            "query": "What is the official website for Partnership Firm Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-partnership-registration",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-rjsc-certified-copy",
+      "service_name_en": "RJSC Certified Copy of Documents",
+      "category_id": "business",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-rjsc-certified-copy",
+        "service_name_en": "RJSC Certified Copy of Documents",
+        "service_name_bn": "RJSC সার্টিফাইড কপি",
+        "category_id": "business",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Registrar of Joint Stock Companies and Firms (RJSC)",
+          "rjsc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "RJSC certified copy",
+          "incorporation copy"
+        ],
+        "official_source": "https://app.roc.gov.bd/psp/RJSC_Fees",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-rjsc-certified-copy",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-rjsc-certified-copy-en-procedure",
+            "query": "How do I apply for RJSC Certified Copy of Documents?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-rjsc-certified-copy-bn-procedure",
+            "query": "RJSC সার্টিফাইড কপি কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-rjsc-certified-copy-fee",
+            "query": "What is the fee for RJSC Certified Copy of Documents?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-rjsc-certified-copy-documents",
+            "query": "What documents are needed for RJSC Certified Copy of Documents?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-rjsc-certified-copy-url",
+            "query": "What is the official website for RJSC Certified Copy of Documents?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-rjsc-certified-copy",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-society-registration",
+      "service_name_en": "Society Registration",
+      "category_id": "registrations",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-society-registration",
+        "service_name_en": "Society Registration",
+        "service_name_bn": "সোসাইটি নিবন্ধন",
+        "category_id": "registrations",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Registrar of Joint Stock Companies and Firms (RJSC)",
+          "rjsc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "NGO society registration",
+          "society incorporation"
+        ],
+        "official_source": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-society-registration",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-society-registration-en-procedure",
+            "query": "How do I apply for Society Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-society-registration-bn-procedure",
+            "query": "সোসাইটি নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-society-registration-fee",
+            "query": "What is the fee for Society Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-society-registration-documents",
+            "query": "What documents are needed for Society Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-society-registration-url",
+            "query": "What is the official website for Society Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-society-registration",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "business-trade-organization-registration",
+      "service_name_en": "Trade Organization Registration",
+      "category_id": "registrations",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "business-trade-organization-registration",
+        "service_name_en": "Trade Organization Registration",
+        "service_name_bn": "ট্রেড অর্গানাইজেশন নিবন্ধন",
+        "category_id": "registrations",
+        "research_profile": "BUSINESS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Registrar of Joint Stock Companies and Firms (RJSC)",
+          "rjsc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "trade association registration"
+        ],
+        "official_source": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "business-trade-organization-registration",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "business-trade-organization-registration-en-procedure",
+            "query": "How do I apply for Trade Organization Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-trade-organization-registration-bn-procedure",
+            "query": "ট্রেড অর্গানাইজেশন নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-trade-organization-registration-fee",
+            "query": "What is the fee for Trade Organization Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-trade-organization-registration-documents",
+            "query": "What documents are needed for Trade Organization Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "business-trade-organization-registration-url",
+            "query": "What is the official website for Trade Organization Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "business-trade-organization-registration",
+        "profile_key": "BUSINESS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "civil-birth-registration-copy",
+      "service_name_en": "Birth Registration Copy (Reprint)",
+      "category_id": "civil_registration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "civil-birth-registration-copy",
+        "service_name_en": "Birth Registration Copy (Reprint)",
+        "service_name_bn": "জন্ম নিবন্ধন প্রতিলিপি",
+        "category_id": "civil_registration",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Office of the Registrar General, Birth and Death Registration",
+          "bdris"
+        ],
+        "known_official_domains": [
+          "bdris.gov.bd"
+        ],
+        "service_aliases": [
+          "duplicate birth certificate",
+          "birth registration reprint"
+        ],
+        "official_source": "https://bdris.gov.bd/br/reprint/add",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "civil-birth-registration-copy",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "civil-birth-registration-copy-en-procedure",
+            "query": "How do I apply for Birth Registration Copy (Reprint)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-birth-registration-copy-bn-procedure",
+            "query": "জন্ম নিবন্ধন প্রতিলিপি কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-birth-registration-copy-fee",
+            "query": "What is the fee for Birth Registration Copy (Reprint)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-birth-registration-copy-documents",
+            "query": "What documents are needed for Birth Registration Copy (Reprint)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-birth-registration-copy-url",
+            "query": "What is the official website for Birth Registration Copy (Reprint)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "civil-birth-registration-copy",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "service_name_en": "Cancellation of Duplicate Birth Registrations",
+      "category_id": "civil_registration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "civil-birth-registration-duplicate-cancel",
+        "service_name_en": "Cancellation of Duplicate Birth Registrations",
+        "service_name_bn": "একাধিক জন্ম নিবন্ধন সনদ বাতিল",
+        "category_id": "civil_registration",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Office of the Registrar General, Birth and Death Registration",
+          "bdris"
+        ],
+        "known_official_domains": [
+          "bdris.gov.bd"
+        ],
+        "service_aliases": [
+          "duplicate birth cancel"
+        ],
+        "official_source": "https://bdris.gov.bd/application/print",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "civil-birth-registration-duplicate-cancel",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "civil-birth-registration-duplicate-cancel-en-procedure",
+            "query": "How do I apply for Cancellation of Duplicate Birth Registrations?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-birth-registration-duplicate-cancel-bn-procedure",
+            "query": "একাধিক জন্ম নিবন্ধন সনদ বাতিল কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-birth-registration-duplicate-cancel-fee",
+            "query": "What is the fee for Cancellation of Duplicate Birth Registrations?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-birth-registration-duplicate-cancel-documents",
+            "query": "What documents are needed for Cancellation of Duplicate Birth Registrations?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-birth-registration-duplicate-cancel-url",
+            "query": "What is the official website for Cancellation of Duplicate Birth Registrations?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "civil-birth-registration-duplicate-cancel",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "civil-death-registration-copy",
+      "service_name_en": "Death Registration Copy (Reprint)",
+      "category_id": "civil_registration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "civil-death-registration-copy",
+        "service_name_en": "Death Registration Copy (Reprint)",
+        "service_name_bn": "মৃত্যু নিবন্ধন প্রতিলিপি",
+        "category_id": "civil_registration",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Office of the Registrar General, Birth and Death Registration",
+          "bdris"
+        ],
+        "known_official_domains": [
+          "bdris.gov.bd"
+        ],
+        "service_aliases": [
+          "duplicate death certificate"
+        ],
+        "official_source": "https://bdris.gov.bd/dr/reprint/add",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "civil-death-registration-copy",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "civil-death-registration-copy-en-procedure",
+            "query": "How do I apply for Death Registration Copy (Reprint)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-copy-bn-procedure",
+            "query": "মৃত্যু নিবন্ধন প্রতিলিপি কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-copy-fee",
+            "query": "What is the fee for Death Registration Copy (Reprint)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-copy-documents",
+            "query": "What documents are needed for Death Registration Copy (Reprint)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-copy-url",
+            "query": "What is the official website for Death Registration Copy (Reprint)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "civil-death-registration-copy",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "civil-death-registration-correction",
+      "service_name_en": "Death Registration Information Correction",
+      "category_id": "civil_registration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "civil-death-registration-correction",
+        "service_name_en": "Death Registration Information Correction",
+        "service_name_bn": "মৃত্যু তথ্য সংশোধন",
+        "category_id": "civil_registration",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Office of the Registrar General, Birth and Death Registration",
+          "bdris"
+        ],
+        "known_official_domains": [
+          "bdris.gov.bd"
+        ],
+        "service_aliases": [
+          "death record correction"
+        ],
+        "official_source": "https://bdris.gov.bd/dr/correction",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "civil-death-registration-correction",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "civil-death-registration-correction-en-procedure",
+            "query": "How do I apply for Death Registration Information Correction?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-correction-bn-procedure",
+            "query": "মৃত্যু তথ্য সংশোধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-correction-fee",
+            "query": "What is the fee for Death Registration Information Correction?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-correction-documents",
+            "query": "What documents are needed for Death Registration Information Correction?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-correction-url",
+            "query": "What is the official website for Death Registration Information Correction?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "civil-death-registration-correction",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "civil-death-registration-duplicate-cancel",
+      "service_name_en": "Cancellation of Duplicate Death Registrations",
+      "category_id": "civil_registration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "civil-death-registration-duplicate-cancel",
+        "service_name_en": "Cancellation of Duplicate Death Registrations",
+        "service_name_bn": "একাধিক মৃত্যু নিবন্ধন সনদ বাতিল",
+        "category_id": "civil_registration",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Office of the Registrar General, Birth and Death Registration",
+          "bdris"
+        ],
+        "known_official_domains": [
+          "bdris.gov.bd"
+        ],
+        "service_aliases": [
+          "duplicate death cancel"
+        ],
+        "official_source": "https://bdris.gov.bd/application/print",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "civil-death-registration-duplicate-cancel",
+        "wave_id": "wave-005",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "civil-death-registration-duplicate-cancel-en-procedure",
+            "query": "How do I apply for Cancellation of Duplicate Death Registrations?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-duplicate-cancel-bn-procedure",
+            "query": "একাধিক মৃত্যু নিবন্ধন সনদ বাতিল কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-duplicate-cancel-fee",
+            "query": "What is the fee for Cancellation of Duplicate Death Registrations?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-duplicate-cancel-documents",
+            "query": "What documents are needed for Cancellation of Duplicate Death Registrations?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-death-registration-duplicate-cancel-url",
+            "query": "What is the official website for Cancellation of Duplicate Death Registrations?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "civil-death-registration-duplicate-cancel",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    }
+  ],
+  "status_counts": {
+    "COMPLETE": 0,
+    "PARTIAL": 20,
+    "DEFERRED": 0,
+    "BLOCKED": 0
+  },
+  "verified_claims": 44,
+  "partial_claims": 16,
+  "conflicts": 0,
+  "knowledge_gaps": 56,
+  "staging_path": "/workspace/data/research/waves/wave-005/staging",
+  "e2e_summary": {
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "answer_supported": 0
+  },
+  "regression": {
+    "passed": true,
+    "metrics": {
+      "hallucinations": 0,
+      "citation_failures": 0,
+      "batch_01_pass_pct": 100.0,
+      "passport_pass_pct": 100.0,
+      "batch_02b_pass_pct": 100.0,
+      "routing_pass_pct": 100.0,
+      "pytest_failed": 0,
+      "batch_03a_pass_pct": 100.0,
+      "batch_03b_pass_pct": 100.0,
+      "batch_03c_pass_pct": 100.0
+    },
+    "failures": [],
+    "automation_exit_code": 0
+  },
+  "wave_quality": {
+    "passed": true,
+    "wave_id": "wave-005",
+    "services_total": 20,
+    "false_completion_count": 0,
+    "services_with_sources": 20,
+    "services_with_verified_claims": 20,
+    "source_rate": 1.0,
+    "verified_rate": 1.0,
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "regression_failures": [],
+    "blocking_reasons": [],
+    "service_statuses": {
+      "btrc-dnams": "PARTIAL",
+      "btrc-lims-license": "PARTIAL",
+      "btrc-neir-device-registration": "PARTIAL",
+      "btrc-neir-imei-check": "PARTIAL",
+      "btrc-nid-sim-check": "PARTIAL",
+      "business-company-incorporation": "PARTIAL",
+      "business-cooperative-society-registration": "PARTIAL",
+      "business-entity-name-search": "PARTIAL",
+      "business-foreign-company-registration": "PARTIAL",
+      "business-name-clearance": "PARTIAL",
+      "business-ngoab-ngo-registration": "PARTIAL",
+      "business-partnership-registration": "PARTIAL",
+      "business-rjsc-certified-copy": "PARTIAL",
+      "business-society-registration": "PARTIAL",
+      "business-trade-organization-registration": "PARTIAL",
+      "civil-birth-registration-copy": "PARTIAL",
+      "civil-birth-registration-duplicate-cancel": "PARTIAL",
+      "civil-death-registration-copy": "PARTIAL",
+      "civil-death-registration-correction": "PARTIAL",
+      "civil-death-registration-duplicate-cancel": "PARTIAL"
+    }
+  },
+  "quality_passed": true
+}

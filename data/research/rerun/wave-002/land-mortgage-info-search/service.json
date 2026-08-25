@@ -1,0 +1,176 @@
+{
+  "service_id": "land-mortgage-info-search",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Land Mortgage Information Search",
+  "service_name_bn": "মর্টগেজ তথ্য অনুসন্ধান",
+  "aliases": [
+    "mortgage search"
+  ],
+  "category_id": "land",
+  "profile_key": "LAND",
+  "responsible_agency": "Ministry of Land",
+  "official_application_url": "https://mutation.land.gov.bd/search-mortgage-info",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "land-mortgage-info-search::c-catalogue-authority",
+      "service_id": "land-mortgage-info-search",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mortgage-info-search::c-official-url-documented",
+      "service_id": "land-mortgage-info-search",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://mutation.land.gov.bd/search-mortgage-info for Land Mortgage Information Search; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://mutation.land.gov.bd/search-mortgage-info"
+      },
+      "source_ids": [
+        "src-land-mortgage-info-search-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mortgage-info-search::c-procedure-overview",
+      "service_id": "land-mortgage-info-search",
+      "claim_type": "procedure_step",
+      "claim_text": "Land Mortgage Information Search is a government service under Ministry of Land (mortgage). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mortgage-info-search-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-mortgage-info-search::c-service-identity",
+      "service_id": "land-mortgage-info-search",
+      "claim_type": "eligibility",
+      "claim_text": "Land Mortgage Information Search (মর্টগেজ তথ্য অনুসন্ধান) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-mortgage-info-search-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-land-mortgage-info-search-official",
+      "service_id": "land-mortgage-info-search",
+      "url": "https://mutation.land.gov.bd/search-mortgage-info",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd/search-mortgage-info",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "4a86e32b43b16112",
+        "retrieved_at": "2026-08-25T03:21:18.223369+00:00"
+      },
+      "evidence_locator": "probe:https://mutation.land.gov.bd/search-mortgage-info"
+    },
+    {
+      "source_id": "src-land-mortgage-info-search-alt-1",
+      "service_id": "land-mortgage-info-search",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "155806bf5785b322",
+        "retrieved_at": "2026-08-25T03:21:18.254868+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-mortgage-info-search-alt-2",
+      "service_id": "land-mortgage-info-search",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "ad8fa640341af092",
+        "retrieved_at": "2026-08-25T03:21:18.287791+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-land-mortgage-info-search-portal-unreachable",
+      "service_id": "land-mortgage-info-search",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Land Mortgage Information Search.",
+      "severity": "MEDIUM",
+      "url": "https://mutation.land.gov.bd/search-mortgage-info"
+    },
+    {
+      "gap_id": "gap-land-mortgage-info-search-fee-unverified",
+      "service_id": "land-mortgage-info-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Land Mortgage Information Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mortgage-info-search-documents-unverified",
+      "service_id": "land-mortgage-info-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Land Mortgage Information Search.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

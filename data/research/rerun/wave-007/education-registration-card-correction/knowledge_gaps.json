@@ -1,0 +1,27 @@
+{
+  "service_id": "education-registration-card-correction",
+  "gaps": [
+    {
+      "gap_id": "gap-education-registration-card-correction-portal-unreachable",
+      "service_id": "education-registration-card-correction",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Registration Card Information Correction.",
+      "severity": "MEDIUM",
+      "url": "http://www.educationboard.gov.bd/dhaka/rules_business.php"
+    },
+    {
+      "gap_id": "gap-education-registration-card-correction-fee-unverified",
+      "service_id": "education-registration-card-correction",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Registration Card Information Correction.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-education-registration-card-correction-documents-unverified",
+      "service_id": "education-registration-card-correction",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Registration Card Information Correction.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

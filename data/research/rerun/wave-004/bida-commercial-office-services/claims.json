@@ -1,0 +1,72 @@
+{
+  "service_id": "bida-commercial-office-services",
+  "claims": [
+    {
+      "claim_id": "bida-commercial-office-services::c-catalogue-authority",
+      "service_id": "bida-commercial-office-services",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Investment Development Authority (BIDA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-commercial-office-services::c-official-portal",
+      "service_id": "bida-commercial-office-services",
+      "claim_type": "application_url",
+      "claim_text": "Branch, Liaison and Representative Office Services (BIDA) official information is published at https://bida.gov.bd/ (page title: Invest Bangladesh I Explore Opportunities).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bida.gov.bd/"
+      },
+      "source_ids": [
+        "src-bida-commercial-office-services-official"
+      ],
+      "evidence_ids": [
+        "ev-bida-commercial-office-services::c-official-portal-src-bida-commercial-office-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-commercial-office-services::c-procedure-overview",
+      "service_id": "bida-commercial-office-services",
+      "claim_type": "procedure_step",
+      "claim_text": "Branch, Liaison and Representative Office Services (BIDA) is a government service under Bangladesh Investment Development Authority (BIDA) (commercial office). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-commercial-office-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-commercial-office-services::c-service-identity",
+      "service_id": "bida-commercial-office-services",
+      "claim_type": "eligibility",
+      "claim_text": "Branch, Liaison and Representative Office Services (BIDA) (Branch/Liaison/Representative Office সেবা) is a confirmed government service in category investment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-commercial-office-services-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

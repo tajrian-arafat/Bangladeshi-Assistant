@@ -1,0 +1,135 @@
+{
+  "service_id": "health-private-clinic-license",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Private Clinic Licence",
+  "service_name_bn": "বেসরকারি ক্লিনিক লাইসেন্স",
+  "aliases": [
+    "clinic registration DGHS"
+  ],
+  "category_id": "health",
+  "profile_key": "HEALTH",
+  "responsible_agency": "Directorate General of Health Services (DGHS) - Hospitals and Clinics Branch",
+  "official_application_url": "https://hospitaldghs.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "health-private-clinic-license::c-catalogue-authority",
+      "service_id": "health-private-clinic-license",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Health Services (DGHS) - Hospitals and Clinics Branch.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-private-clinic-license::c-official-url-documented",
+      "service_id": "health-private-clinic-license",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://hospitaldghs.gov.bd/ for Private Clinic Licence; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://hospitaldghs.gov.bd/"
+      },
+      "source_ids": [
+        "src-health-private-clinic-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-private-clinic-license::c-procedure-overview",
+      "service_id": "health-private-clinic-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Private Clinic Licence is a government service under Directorate General of Health Services (DGHS) - Hospitals and Clinics Branch (facility licence). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-private-clinic-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-private-clinic-license::c-service-identity",
+      "service_id": "health-private-clinic-license",
+      "claim_type": "eligibility",
+      "claim_text": "Private Clinic Licence (বেসরকারি ক্লিনিক লাইসেন্স) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-private-clinic-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-health-private-clinic-license-official",
+      "service_id": "health-private-clinic-license",
+      "url": "https://hospitaldghs.gov.bd/",
+      "title": "Private Clinic Licence",
+      "authority_id": "directorate-general-of-health-services-dghs-hospitals-and-clinic",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://hospitaldghs.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:21:14.948350+00:00"
+      },
+      "evidence_locator": "probe:https://hospitaldghs.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-health-private-clinic-license-portal-unreachable",
+      "service_id": "health-private-clinic-license",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Private Clinic Licence.",
+      "severity": "MEDIUM",
+      "url": "https://hospitaldghs.gov.bd/"
+    },
+    {
+      "gap_id": "gap-health-private-clinic-license-fee-unverified",
+      "service_id": "health-private-clinic-license",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Private Clinic Licence.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-private-clinic-license-documents-unverified",
+      "service_id": "health-private-clinic-license",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Private Clinic Licence.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

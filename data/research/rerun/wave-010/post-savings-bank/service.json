@@ -1,0 +1,135 @@
+{
+  "service_id": "post-savings-bank",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Post Office Savings Bank",
+  "service_name_bn": "ডাক সঞ্চয় ব্যাংক",
+  "aliases": [
+    "postal savings bank"
+  ],
+  "category_id": "post",
+  "profile_key": "OTHER",
+  "responsible_agency": "Bangladesh Post Office (Directorate of Posts)",
+  "official_application_url": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "post-savings-bank::c-catalogue-authority",
+      "service_id": "post-savings-bank",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-savings-bank::c-official-url-documented",
+      "service_id": "post-savings-bank",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/- for Post Office Savings Bank; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-"
+      },
+      "source_ids": [
+        "src-post-savings-bank-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-savings-bank::c-procedure-overview",
+      "service_id": "post-savings-bank",
+      "claim_type": "procedure_step",
+      "claim_text": "Post Office Savings Bank is a government service under Bangladesh Post Office (Directorate of Posts) (financial). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-savings-bank-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-savings-bank::c-service-identity",
+      "service_id": "post-savings-bank",
+      "claim_type": "eligibility",
+      "claim_text": "Post Office Savings Bank (ডাক সঞ্চয় ব্যাংক) is a confirmed government service in category post, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-savings-bank-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-post-savings-bank-official",
+      "service_id": "post-savings-bank",
+      "url": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-",
+      "title": "Post Office Savings Bank",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:29:38.336788+00:00"
+      },
+      "evidence_locator": "probe:https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-post-savings-bank-portal-unreachable",
+      "service_id": "post-savings-bank",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Post Office Savings Bank.",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-"
+    },
+    {
+      "gap_id": "gap-post-savings-bank-fee-unverified",
+      "service_id": "post-savings-bank",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Post Office Savings Bank.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-savings-bank-documents-unverified",
+      "service_id": "post-savings-bank",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Post Office Savings Bank.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

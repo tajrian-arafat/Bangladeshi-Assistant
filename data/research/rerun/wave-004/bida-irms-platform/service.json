@@ -1,0 +1,134 @@
+{
+  "service_id": "bida-irms-platform",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "BIDA Investment Relationship Management System (IRMS)",
+  "service_name_bn": "BIDA Investment Relationship Management System",
+  "aliases": [
+    "IRMS BIDA",
+    "investor tracking BIDA",
+    "BIDA Investment Relationship Management System (IRMS)"
+  ],
+  "category_id": "investment",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Bangladesh Investment Development Authority (BIDA)",
+  "official_application_url": "https://irms.bida.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "bida-irms-platform::c-catalogue-authority",
+      "service_id": "bida-irms-platform",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Investment Development Authority (BIDA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-irms-platform::c-official-portal",
+      "service_id": "bida-irms-platform",
+      "claim_type": "application_url",
+      "claim_text": "BIDA Investment Relationship Management System (IRMS) official information is published at https://irms.bida.gov.bd/ (page title: One Stop Service platform for Investment Relationship Management).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://irms.bida.gov.bd/"
+      },
+      "source_ids": [
+        "src-bida-irms-platform-official"
+      ],
+      "evidence_ids": [
+        "ev-bida-irms-platform::c-official-portal-src-bida-irms-platform-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-irms-platform::c-procedure-overview",
+      "service_id": "bida-irms-platform",
+      "claim_type": "procedure_step",
+      "claim_text": "BIDA Investment Relationship Management System (IRMS) is a government service under Bangladesh Investment Development Authority (BIDA) (investor relations). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-irms-platform-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-irms-platform::c-service-identity",
+      "service_id": "bida-irms-platform",
+      "claim_type": "eligibility",
+      "claim_text": "BIDA Investment Relationship Management System (IRMS) (BIDA Investment Relationship Management System) is a confirmed government service in category investment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-irms-platform-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-bida-irms-platform-official",
+      "service_id": "bida-irms-platform",
+      "url": "https://irms.bida.gov.bd/",
+      "title": "One Stop Service platform for Investment Relationship Management",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://irms.bida.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "One Stop Service platform for Investment Relationship Management",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "949c06d2e2102f9b",
+        "retrieved_at": "2026-08-25T03:23:18.790933+00:00"
+      },
+      "evidence_locator": "probe:https://irms.bida.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-bida-irms-platform-fee-unverified",
+      "service_id": "bida-irms-platform",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BIDA Investment Relationship Management System (IRMS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-irms-platform-documents-unverified",
+      "service_id": "bida-irms-platform",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BIDA Investment Relationship Management System (IRMS).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

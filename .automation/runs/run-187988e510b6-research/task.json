@@ -1,0 +1,69 @@
+{
+  "task_id": "BATCH_07:RESEARCH:run-187988e510b6-research",
+  "batch_id": "BATCH_07",
+  "batch_slug": "batch-07-health",
+  "phase": "RESEARCH",
+  "run_id": "run-187988e510b6-research",
+  "service_ids": [
+    "health-16263-telemedicine",
+    "health-blood-bank-license",
+    "health-bmdc-additional-qualification",
+    "health-bmdc-eligibility-certificate",
+    "health-bmdc-full-registration",
+    "health-bmdc-registration-verify",
+    "health-diagnostic-center-license",
+    "health-facility-registry",
+    "health-good-standing-certificate",
+    "health-hospital-birth-notification",
+    "health-immunization-card-mcv",
+    "health-medical-assistant-registration",
+    "health-private-clinic-license",
+    "health-private-hospital-license"
+  ],
+  "service_names": {
+    "health-16263-telemedicine": "16263 Telemedicine Health Advice",
+    "health-blood-bank-license": "Blood Bank Licence",
+    "health-bmdc-additional-qualification": "BMDC Additional Qualification Registration",
+    "health-bmdc-eligibility-certificate": "BMDC Eligibility Certificate",
+    "health-bmdc-full-registration": "BMDC Full Registration (MBBS/BDS)",
+    "health-bmdc-registration-verify": "BMDC Registration Verification",
+    "health-diagnostic-center-license": "Diagnostic/Pathology Center Licence",
+    "health-facility-registry": "Health Facility Registry (HRIS)",
+    "health-good-standing-certificate": "Certificate of Good Standing (BMDC)",
+    "health-hospital-birth-notification": "Hospital Birth Notification (for BDRIS registration)",
+    "health-immunization-card-mcv": "Immunization / Vaccination Card (EPI)",
+    "health-medical-assistant-registration": "Medical Assistant BMDC Registration",
+    "health-private-clinic-license": "Private Clinic Licence",
+    "health-private-hospital-license": "Private Hospital Licence"
+  },
+  "domain": "health",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/raw/batch-07-health/scope.json",
+    "data/research/raw/batch-07-health/services_index.json",
+    "data/research/raw/batch-07-health/services/*.json",
+    "data/research/raw/batch-07-health/claims.json",
+    "data/research/raw/batch-07-health/sources.json",
+    "data/research/raw/batch-07-health/conflicts.json",
+    "data/research/raw/batch-07-health/knowledge_gaps.json",
+    "data/research/raw/batch-07-health/metadata.json",
+    "docs/research/batch-07-health-research.md",
+    ".automation/runs/run-187988e510b6-research/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — RESEARCH\n\n**Batch:** BATCH_07 (Health)\n**Run ID:** run-187988e510b6-research\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/raw/batch-07-health/scope.json`\n- `data/research/raw/batch-07-health/services_index.json`\n- `data/research/raw/batch-07-health/services/*.json`\n- `data/research/raw/batch-07-health/claims.json`\n- `data/research/raw/batch-07-health/sources.json`\n- `data/research/raw/batch-07-health/conflicts.json`\n- `data/research/raw/batch-07-health/knowledge_gaps.json`\n- `data/research/raw/batch-07-health/metadata.json`\n- `docs/research/batch-07-health-research.md`\n- `.automation/runs/run-187988e510b6-research/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_07\",\n    \"slug\": \"batch-07-health\",\n    \"name\": \"Health\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"health-16263-telemedicine\",\n      \"health-blood-bank-license\",\n      \"health-bmdc-additional-qualification\",\n      \"health-bmdc-eligibility-certificate\",\n      \"health-bmdc-full-registration\",\n      \"health-bmdc-registration-verify\",\n      \"health-diagnostic-center-license\",\n      \"health-facility-registry\",\n      \"health-good-standing-certificate\",\n      \"health-hospital-birth-notification\",\n      \"health-immunization-card-mcv\",\n      \"health-medical-assistant-registration\",\n      \"health-private-clinic-license\",\n      \"health-private-hospital-license\"\n    ],\n    \"service_count\": 14,\n    \"phases_completed\": []\n  },\n  \"phase\": \"RESEARCH\",\n  \"run_id\": \"run-187988e510b6-research\",\n  \"service_ids\": [\n    \"health-16263-telemedicine\",\n    \"health-blood-bank-license\",\n    \"health-bmdc-additional-qualification\",\n    \"health-bmdc-eligibility-certificate\",\n    \"health-bmdc-full-registration\",\n    \"health-bmdc-registration-verify\",\n    \"health-diagnostic-center-license\",\n    \"health-facility-registry\",\n    \"health-good-standing-certificate\",\n    \"health-hospital-birth-notification\",\n    \"health-immunization-card-mcv\",\n    \"health-medical-assistant-registration\",\n    \"health-private-clinic-license\",\n    \"health-private-hospital-license\"\n  ],\n  \"gaps\": [],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Research phase prompt\n\nFollow `docs/research/BATCH_RESEARCH_TEMPLATE.md` exactly.\n\n## Goals\n- Identify in-scope services from catalogue\n- Search broadly; prioritize Tier 1–2 official sources\n- Separate official / practical / discovery evidence\n- Create atomic claims with provenance\n- Record conflicts and knowledge gaps\n- **Never publish**\n- **Never mark VERIFIED** because a source merely exists\n\n## Outputs\n- `data/research/raw/<batch-slug>/services/*.json`\n- `data/research/raw/<batch-slug>/claims.json`\n- `data/research/raw/<batch-slug>/sources.json`\n- `data/research/raw/<batch-slug>/conflicts.json`\n- `data/research/raw/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-187988e510b6-research/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:45:26.862483+00:00"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "digital-mygov-citizen-registration",
+  "claims": [
+    {
+      "claim_id": "digital-mygov-citizen-registration::c-catalogue-authority",
+      "service_id": "digital-mygov-citizen-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Aspire to Innovate (a2i), ICT Division.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-mygov-citizen-registration::c-official-portal",
+      "service_id": "digital-mygov-citizen-registration",
+      "claim_type": "application_url",
+      "claim_text": "myGov Citizen Account Registration official information is published at https://www.mygov.bd/ (page title: myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.mygov.bd/"
+      },
+      "source_ids": [
+        "src-digital-mygov-citizen-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-digital-mygov-citizen-registration::c-official-portal-src-digital-mygov-citizen-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-mygov-citizen-registration::c-procedure-overview",
+      "service_id": "digital-mygov-citizen-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "myGov Citizen Account Registration is a government service under Aspire to Innovate (a2i), ICT Division (portal account). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-mygov-citizen-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-mygov-citizen-registration::c-service-identity",
+      "service_id": "digital-mygov-citizen-registration",
+      "claim_type": "eligibility",
+      "claim_text": "myGov Citizen Account Registration (myGov নাগরিক নিবন্ধন) is a confirmed government service in category digital_government, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-mygov-citizen-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

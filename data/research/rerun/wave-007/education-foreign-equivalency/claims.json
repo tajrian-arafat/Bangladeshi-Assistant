@@ -1,0 +1,70 @@
+{
+  "service_id": "education-foreign-equivalency",
+  "claims": [
+    {
+      "claim_id": "education-foreign-equivalency::c-catalogue-authority",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Board of Intermediate and Secondary Education (respective board).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-foreign-equivalency::c-official-url-documented",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://www.educationboard.gov.bd/dhaka/rules_business.php for Foreign Qualification Equivalency; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/dhaka/rules_business.php"
+      },
+      "source_ids": [
+        "src-education-foreign-equivalency-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-foreign-equivalency::c-procedure-overview",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "procedure_step",
+      "claim_text": "Foreign Qualification Equivalency is a government service under Board of Intermediate and Secondary Education (respective board) (equivalency). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-foreign-equivalency-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-foreign-equivalency::c-service-identity",
+      "service_id": "education-foreign-equivalency",
+      "claim_type": "eligibility",
+      "claim_text": "Foreign Qualification Equivalency (বিদেশি ডিগ্রির সমতুল্যতা) is a confirmed government service in category education, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-foreign-equivalency-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

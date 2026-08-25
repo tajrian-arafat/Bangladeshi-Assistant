@@ -1,0 +1,134 @@
+{
+  "service_id": "women-hotline-109",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Women and Child Abuse Hotline (109)",
+  "service_name_bn": "নারী/শিশু নির্যাতন হটলাইন (১০৯)",
+  "aliases": [
+    "109 hotline",
+    "national helpline 109",
+    "Women and Child Abuse Hotline (109)"
+  ],
+  "category_id": "women_children",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Department of Women Affairs / Multi-agency",
+  "official_application_url": "http://dwa.portal.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "women-hotline-109::c-catalogue-authority",
+      "service_id": "women-hotline-109",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Women Affairs / Multi-agency.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-hotline-109::c-official-portal",
+      "service_id": "women-hotline-109",
+      "claim_type": "application_url",
+      "claim_text": "Women and Child Abuse Hotline (109) official information is published at http://dwa.portal.gov.bd/ (page title: হোম | মহিলা বিষয়ক অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://dwa.portal.gov.bd/"
+      },
+      "source_ids": [
+        "src-women-hotline-109-official"
+      ],
+      "evidence_ids": [
+        "ev-women-hotline-109::c-official-portal-src-women-hotline-109-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-hotline-109::c-procedure-overview",
+      "service_id": "women-hotline-109",
+      "claim_type": "procedure_step",
+      "claim_text": "Women and Child Abuse Hotline (109) is a government service under Department of Women Affairs / Multi-agency (helpline). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-hotline-109-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-hotline-109::c-service-identity",
+      "service_id": "women-hotline-109",
+      "claim_type": "eligibility",
+      "claim_text": "Women and Child Abuse Hotline (109) (নারী/শিশু নির্যাতন হটলাইন (১০৯)) is a confirmed government service in category women_children, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-hotline-109-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-women-hotline-109-official",
+      "service_id": "women-hotline-109",
+      "url": "http://dwa.portal.gov.bd/",
+      "title": "হোম | মহিলা বিষয়ক অধিদপ্তর",
+      "authority_id": "department-of-women-affairs-multi-agency",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | মহিলা বিষয়ক অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "2f797f67825fe78f",
+        "retrieved_at": "2026-08-25T03:37:25.350862+00:00"
+      },
+      "evidence_locator": "probe:http://dwa.portal.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-women-hotline-109-fee-unverified",
+      "service_id": "women-hotline-109",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Women and Child Abuse Hotline (109).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-hotline-109-documents-unverified",
+      "service_id": "women-hotline-109",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Women and Child Abuse Hotline (109).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

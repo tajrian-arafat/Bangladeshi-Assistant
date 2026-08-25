@@ -1,0 +1,72 @@
+{
+  "service_id": "local-death-certificate-union",
+  "claims": [
+    {
+      "claim_id": "local-death-certificate-union::c-catalogue-authority",
+      "service_id": "local-death-certificate-union",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-death-certificate-union::c-official-portal",
+      "service_id": "local-death-certificate-union",
+      "claim_type": "application_url",
+      "claim_text": "Death Certificate (Union Parishad) official information is published at https://www.chandanpurup.gov.bd/new/application/citizen (page title: Chandanpur Union Parishad :: Smart Union).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.chandanpurup.gov.bd/new/application/citizen"
+      },
+      "source_ids": [
+        "src-local-death-certificate-union-official"
+      ],
+      "evidence_ids": [
+        "ev-local-death-certificate-union::c-official-portal-src-local-death-certificate-union-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-death-certificate-union::c-procedure-overview",
+      "service_id": "local-death-certificate-union",
+      "claim_type": "procedure_step",
+      "claim_text": "Death Certificate (Union Parishad) is a government service under Union Parishad (death attestation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-death-certificate-union-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-death-certificate-union::c-service-identity",
+      "service_id": "local-death-certificate-union",
+      "claim_type": "eligibility",
+      "claim_text": "Death Certificate (Union Parishad) (মৃত্যু সনদ (ইউনিয়ন)) is a confirmed government service in category certificates, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-death-certificate-union-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

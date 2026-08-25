@@ -1,0 +1,72 @@
+{
+  "service_id": "env-ecc-certificate-verification",
+  "claims": [
+    {
+      "claim_id": "env-ecc-certificate-verification::c-catalogue-authority",
+      "service_id": "env-ecc-certificate-verification",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Environment (DoE).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "env-ecc-certificate-verification::c-official-portal",
+      "service_id": "env-ecc-certificate-verification",
+      "claim_type": "application_url",
+      "claim_text": "Environmental Clearance Certificate Verification official information is published at https://ecc-beta.doe.gov.bd/certificate-verification (page title: DoE ECC System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ecc-beta.doe.gov.bd/certificate-verification"
+      },
+      "source_ids": [
+        "src-env-ecc-certificate-verification-official"
+      ],
+      "evidence_ids": [
+        "ev-env-ecc-certificate-verification::c-official-portal-src-env-ecc-certificate-verification-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "env-ecc-certificate-verification::c-procedure-overview",
+      "service_id": "env-ecc-certificate-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Environmental Clearance Certificate Verification is a government service under Department of Environment (DoE) (verification). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-env-ecc-certificate-verification-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "env-ecc-certificate-verification::c-service-identity",
+      "service_id": "env-ecc-certificate-verification",
+      "claim_type": "eligibility",
+      "claim_text": "Environmental Clearance Certificate Verification (পরিবেশ ছাড়পত্র যাচাই) is a confirmed government service in category environment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-env-ecc-certificate-verification-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

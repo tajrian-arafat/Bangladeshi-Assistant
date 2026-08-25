@@ -1,0 +1,172 @@
+{
+  "service_id": "judiciary-case-status-tracking",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Court Case Status Tracking",
+  "service_name_bn": "মামলার স্ট্যাটাস/ট্র্যাকিং",
+  "aliases": [
+    "case tracking Bangladesh",
+    "cause list",
+    "case ID tracking"
+  ],
+  "category_id": "judiciary",
+  "profile_key": "JUDICIARY",
+  "responsible_agency": "Supreme Court of Bangladesh",
+  "official_application_url": "https://supremecourt.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "judiciary-case-status-tracking::c-catalogue-authority",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Supreme Court of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-case-status-tracking::c-official-url-documented",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://supremecourt.gov.bd/ for Court Case Status Tracking; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://supremecourt.gov.bd/"
+      },
+      "source_ids": [
+        "src-judiciary-case-status-tracking-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-case-status-tracking::c-procedure-overview",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "procedure_step",
+      "claim_text": "Case status can be tracked through the judiciary e-Courts/case information systems where available.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-case-status-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-case-status-tracking::c-service-identity",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Court Case Status Tracking (মামলার স্ট্যাটাস/ট্র্যাকিং) is a confirmed government service in category judiciary, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-case-status-tracking-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-judiciary-case-status-tracking-official",
+      "service_id": "judiciary-case-status-tracking",
+      "url": "https://supremecourt.gov.bd/",
+      "title": "Court Case Status Tracking",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://supremecourt.gov.bd/",
+        "reachable": false,
+        "error": "The read operation timed out",
+        "retrieved_at": "2026-08-25T03:12:53.057544+00:00"
+      },
+      "evidence_locator": "probe:https://supremecourt.gov.bd/"
+    },
+    {
+      "source_id": "src-judiciary-case-status-tracking-alt-1",
+      "service_id": "judiciary-case-status-tracking",
+      "url": "https://www.supremecourt.gov.bd/",
+      "title": "Home : Supreme Court of Bangladesh",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.supremecourt.gov.bd/web/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Home : Supreme Court of Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "e5decda8a88bfb6f",
+        "retrieved_at": "2026-08-25T03:12:55.218886+00:00"
+      }
+    },
+    {
+      "source_id": "src-judiciary-case-status-tracking-alt-2",
+      "service_id": "judiciary-case-status-tracking",
+      "url": "https://ecourts.gov.bd/",
+      "title": "Court Case Status Tracking",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecourts.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:12:55.233071+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-judiciary-case-status-tracking-portal-unreachable",
+      "service_id": "judiciary-case-status-tracking",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Court Case Status Tracking.",
+      "severity": "MEDIUM",
+      "url": "https://supremecourt.gov.bd/"
+    },
+    {
+      "gap_id": "gap-judiciary-case-status-tracking-fee-unverified",
+      "service_id": "judiciary-case-status-tracking",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Court Case Status Tracking.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-judiciary-case-status-tracking-documents-unverified",
+      "service_id": "judiciary-case-status-tracking",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Court Case Status Tracking.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

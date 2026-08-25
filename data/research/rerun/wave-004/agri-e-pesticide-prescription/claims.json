@@ -1,0 +1,70 @@
+{
+  "service_id": "agri-e-pesticide-prescription",
+  "claims": [
+    {
+      "claim_id": "agri-e-pesticide-prescription::c-catalogue-authority",
+      "service_id": "agri-e-pesticide-prescription",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Agricultural Extension (DAE).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-e-pesticide-prescription::c-official-url-documented",
+      "service_id": "agri-e-pesticide-prescription",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://dae.kishoreganj.gov.bd/en for E-Pesticide Prescription; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dae.kishoreganj.gov.bd/en"
+      },
+      "source_ids": [
+        "src-agri-e-pesticide-prescription-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-e-pesticide-prescription::c-procedure-overview",
+      "service_id": "agri-e-pesticide-prescription",
+      "claim_type": "procedure_step",
+      "claim_text": "E-Pesticide Prescription is a government service under Department of Agricultural Extension (DAE) (extension). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-e-pesticide-prescription-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-e-pesticide-prescription::c-service-identity",
+      "service_id": "agri-e-pesticide-prescription",
+      "claim_type": "eligibility",
+      "claim_text": "E-Pesticide Prescription (ই-কীটনাশক/ওষুধের প্রেসক্রিপশন) is a confirmed government service in category agriculture, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-e-pesticide-prescription-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

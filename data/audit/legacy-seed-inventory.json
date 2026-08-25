@@ -1,0 +1,261 @@
+{
+  "generated_at": "2026-08-25T01:15:19.562936+00:00",
+  "batch_filter": "batch-03a-brta-driving-licence",
+  "summary": {
+    "total_legacy_rows": 7,
+    "legacy_with_verified_replacement": 3,
+    "replacement_candidates": 1,
+    "replacement_records_by_status": {},
+    "services_affected": [
+      "driving-licence-renewal"
+    ]
+  },
+  "legacy_rows": [
+    {
+      "service_slug": "driving-licence-renewal",
+      "service_id": "272db5be-99fc-41d1-911e-aa639fe04cfb",
+      "catalogue_service_id": "brta-driving-license-renewal",
+      "field_type": "checklist_item",
+      "row_id": "bf74fa57-4f8a-4b57-8343-2af495229d7a",
+      "current_value": {
+        "label_en": "Current or expired driving licence",
+        "item_type": "REQUIRED"
+      },
+      "claim_id": null,
+      "source": "mvp_seed",
+      "seed_status": "LEGACY_SEED",
+      "verified_replacement_exists": false,
+      "replacement_candidate": null,
+      "replacement_status": null
+    },
+    {
+      "service_slug": "driving-licence-renewal",
+      "service_id": "272db5be-99fc-41d1-911e-aa639fe04cfb",
+      "catalogue_service_id": "brta-driving-license-renewal",
+      "field_type": "checklist_item",
+      "row_id": "e37960cd-0489-40e2-ab7f-b09aa9223bff",
+      "current_value": {
+        "label_en": "National Identity Card (NID)",
+        "item_type": "REQUIRED"
+      },
+      "claim_id": null,
+      "source": "mvp_seed",
+      "seed_status": "LEGACY_SEED",
+      "verified_replacement_exists": false,
+      "replacement_candidate": null,
+      "replacement_status": null
+    },
+    {
+      "service_slug": "driving-licence-renewal",
+      "service_id": "272db5be-99fc-41d1-911e-aa639fe04cfb",
+      "catalogue_service_id": "brta-driving-license-renewal",
+      "field_type": "checklist_item",
+      "row_id": "66c096b6-ba1d-4a82-8bbf-31253812b601",
+      "current_value": {
+        "label_en": "Passport-size photographs",
+        "item_type": "REQUIRED"
+      },
+      "claim_id": null,
+      "source": "mvp_seed",
+      "seed_status": "LEGACY_SEED",
+      "verified_replacement_exists": false,
+      "replacement_candidate": null,
+      "replacement_status": null
+    },
+    {
+      "service_slug": "driving-licence-renewal",
+      "service_id": "272db5be-99fc-41d1-911e-aa639fe04cfb",
+      "catalogue_service_id": "brta-driving-license-renewal",
+      "field_type": "checklist_item",
+      "row_id": "ef941374-f301-4d8e-a25a-e5f387ad9278",
+      "current_value": {
+        "label_en": "Medical certificate",
+        "item_type": "CONDITIONAL"
+      },
+      "claim_id": null,
+      "source": "mvp_seed",
+      "seed_status": "LEGACY_SEED",
+      "verified_replacement_exists": false,
+      "replacement_candidate": null,
+      "replacement_status": null
+    },
+    {
+      "service_slug": "driving-licence-renewal",
+      "service_id": "272db5be-99fc-41d1-911e-aa639fe04cfb",
+      "catalogue_service_id": "brta-driving-license-renewal",
+      "field_type": "procedure_step",
+      "row_id": "0d852e88-7643-43fa-afe4-1899220a3af1",
+      "current_value": {
+        "title_en": "Check licence status",
+        "order": 1
+      },
+      "claim_id": null,
+      "source": "mvp_seed",
+      "seed_status": "LEGACY_SEED",
+      "verified_replacement_exists": true,
+      "replacement_candidate": {
+        "claim_id": "1a320aef-ab6d-466b-9cc9-54aa1edb2150",
+        "research_claim_key": "brta-driving-license-renewal::c-circle-office-collection",
+        "structured_value": null,
+        "value": "Renewed smart card license may require biometric capture or collection at circle office depending on BSP workflow stage."
+      },
+      "replacement_status": null
+    },
+    {
+      "service_slug": "driving-licence-renewal",
+      "service_id": "272db5be-99fc-41d1-911e-aa639fe04cfb",
+      "catalogue_service_id": "brta-driving-license-renewal",
+      "field_type": "procedure_step",
+      "row_id": "1b4d6be6-38fd-4ca9-bdb3-9516cd2d0573",
+      "current_value": {
+        "title_en": "Medical test (if required)",
+        "order": 2
+      },
+      "claim_id": null,
+      "source": "mvp_seed",
+      "seed_status": "LEGACY_SEED",
+      "verified_replacement_exists": true,
+      "replacement_candidate": {
+        "claim_id": "1a320aef-ab6d-466b-9cc9-54aa1edb2150",
+        "research_claim_key": "brta-driving-license-renewal::c-circle-office-collection",
+        "structured_value": null,
+        "value": "Renewed smart card license may require biometric capture or collection at circle office depending on BSP workflow stage."
+      },
+      "replacement_status": null
+    },
+    {
+      "service_slug": "driving-licence-renewal",
+      "service_id": "272db5be-99fc-41d1-911e-aa639fe04cfb",
+      "catalogue_service_id": "brta-driving-license-renewal",
+      "field_type": "procedure_step",
+      "row_id": "9d6d52e2-c85b-4789-8b14-76bf53935c55",
+      "current_value": {
+        "title_en": "Submit renewal application",
+        "order": 3
+      },
+      "claim_id": null,
+      "source": "mvp_seed",
+      "seed_status": "LEGACY_SEED",
+      "verified_replacement_exists": true,
+      "replacement_candidate": {
+        "claim_id": "1a320aef-ab6d-466b-9cc9-54aa1edb2150",
+        "research_claim_key": "brta-driving-license-renewal::c-circle-office-collection",
+        "structured_value": null,
+        "value": "Renewed smart card license may require biometric capture or collection at circle office depending on BSP workflow stage."
+      },
+      "replacement_status": null
+    }
+  ],
+  "replacement_candidates": [
+    {
+      "claim_id": "1a320aef-ab6d-466b-9cc9-54aa1edb2150",
+      "service_slug": "driving-licence-renewal",
+      "catalogue_service_id": "brta-driving-license-renewal",
+      "research_claim_key": "brta-driving-license-renewal::c-circle-office-collection",
+      "replacement_kind": "procedure_step",
+      "existing_status": null,
+      "verification_date": "2026-08-25T00:41:20.430146",
+      "replacement_reason": "Verified OFFICIAL claim blocked by MVP seed guard",
+      "before_snapshot": {
+        "steps": [
+          {
+            "procedure_id": "b2251c2d-6987-4fb6-a414-7a809a5db880",
+            "order": 1,
+            "title_bn": "যোগ্যতা যাচাই",
+            "title_en": "Check eligibility"
+          },
+          {
+            "procedure_id": "b2251c2d-6987-4fb6-a414-7a809a5db880",
+            "order": 2,
+            "title_bn": "প্রয়োজনীয় কাগজপত্র সংগ্রহ",
+            "title_en": "Gather required documents"
+          },
+          {
+            "procedure_id": "b2251c2d-6987-4fb6-a414-7a809a5db880",
+            "order": 3,
+            "title_bn": "আবেদন জমা",
+            "title_en": "Submit application"
+          },
+          {
+            "procedure_id": "df3c100f-bd49-46e0-bb4f-be0ba51a30a7",
+            "order": 1,
+            "title_bn": "সংশোধনের ধরন নির্ধারণ",
+            "title_en": "Identify correction type"
+          },
+          {
+            "procedure_id": "df3c100f-bd49-46e0-bb4f-be0ba51a30a7",
+            "order": 2,
+            "title_bn": "সহায়ক কাগজপত্র প্রস্তুত",
+            "title_en": "Prepare supporting documents"
+          },
+          {
+            "procedure_id": "df3c100f-bd49-46e0-bb4f-be0ba51a30a7",
+            "order": 3,
+            "title_bn": "আবেদন জমা",
+            "title_en": "Submit correction application"
+          },
+          {
+            "procedure_id": "1425bcc2-4a68-48cf-be47-2046e1c446f2",
+            "order": 1,
+            "title_bn": "লাইসেন্সের অবস্থা যাচাই",
+            "title_en": "Check licence status"
+          },
+          {
+            "procedure_id": "1425bcc2-4a68-48cf-be47-2046e1c446f2",
+            "order": 2,
+            "title_bn": "চিকিৎসা পরীক্ষা (যদি প্রয়োজন)",
+            "title_en": "Medical test (if required)"
+          },
+          {
+            "procedure_id": "1425bcc2-4a68-48cf-be47-2046e1c446f2",
+            "order": 3,
+            "title_bn": "নবায়ন আবেদন",
+            "title_en": "Submit renewal application"
+          },
+          {
+            "procedure_id": "e45a6827-34eb-4b01-b988-5da7a0bc203b",
+            "order": 1,
+            "title_bn": "নিবন্ধনের ধরন নির্ধারণ",
+            "title_en": "Determine registration type"
+          },
+          {
+            "procedure_id": "e45a6827-34eb-4b01-b988-5da7a0bc203b",
+            "order": 2,
+            "title_bn": "নিবন্ধন অফিসে যোগাযোগ",
+            "title_en": "Contact registration office"
+          },
+          {
+            "procedure_id": "e45a6827-34eb-4b01-b988-5da7a0bc203b",
+            "order": 3,
+            "title_bn": "আবেদন ও কাগজপত্র জমা",
+            "title_en": "Submit application and documents"
+          },
+          {
+            "procedure_id": "6a437567-f320-4a25-a4f8-0ca761f55185",
+            "order": 1,
+            "title_bn": "টিআইএন ধরন নির্ধারণ",
+            "title_en": "Determine TIN type"
+          },
+          {
+            "procedure_id": "6a437567-f320-4a25-a4f8-0ca761f55185",
+            "order": 2,
+            "title_bn": "কাগজপত্র প্রস্তুত",
+            "title_en": "Prepare documents"
+          },
+          {
+            "procedure_id": "6a437567-f320-4a25-a4f8-0ca761f55185",
+            "order": 3,
+            "title_bn": "আবেদন জমা",
+            "title_en": "Submit TIN application"
+          }
+        ]
+      },
+      "after_snapshot": {
+        "claim_id": "1a320aef-ab6d-466b-9cc9-54aa1edb2150",
+        "research_claim_key": "brta-driving-license-renewal::c-circle-office-collection",
+        "structured_value": null,
+        "value": "Renewed smart card license may require biometric capture or collection at circle office depending on BSP workflow stage."
+      }
+    }
+  ]
+}

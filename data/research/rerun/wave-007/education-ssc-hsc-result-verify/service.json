@@ -1,0 +1,133 @@
+{
+  "service_id": "education-ssc-hsc-result-verify",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "SSC/HSC Result Verification",
+  "service_name_bn": "SSC/HSC ফলাফল যাচাই",
+  "aliases": [
+    "board result check",
+    "education board result"
+  ],
+  "category_id": "education",
+  "profile_key": "EDUCATION",
+  "responsible_agency": "Intermediate and Secondary Education Boards Bangladesh",
+  "official_application_url": "http://www.educationboard.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "education-ssc-hsc-result-verify::c-catalogue-authority",
+      "service_id": "education-ssc-hsc-result-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Intermediate and Secondary Education Boards Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-hsc-result-verify::c-official-portal",
+      "service_id": "education-ssc-hsc-result-verify",
+      "claim_type": "application_url",
+      "claim_text": "SSC/HSC Result Verification official information is published at http://www.educationboard.gov.bd/ (page title: Education Board Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/"
+      },
+      "source_ids": [
+        "src-education-ssc-hsc-result-verify-official"
+      ],
+      "evidence_ids": [
+        "ev-education-ssc-hsc-result-verify::c-official-portal-src-education-ssc-hsc-result-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-hsc-result-verify::c-procedure-overview",
+      "service_id": "education-ssc-hsc-result-verify",
+      "claim_type": "procedure_step",
+      "claim_text": "SSC/HSC Result Verification is a government service under Intermediate and Secondary Education Boards Bangladesh (result verification). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-hsc-result-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-hsc-result-verify::c-service-identity",
+      "service_id": "education-ssc-hsc-result-verify",
+      "claim_type": "eligibility",
+      "claim_text": "SSC/HSC Result Verification (SSC/HSC ফলাফল যাচাই) is a confirmed government service in category education, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-hsc-result-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-education-ssc-hsc-result-verify-official",
+      "service_id": "education-ssc-hsc-result-verify",
+      "url": "http://www.educationboard.gov.bd/",
+      "title": "Education Board Bangladesh",
+      "authority_id": "intermediate-and-secondary-education-boards-bangladesh",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://www.educationboard.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Education Board Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "b923e4edba70293a",
+        "retrieved_at": "2026-08-25T03:26:40.957320+00:00"
+      },
+      "evidence_locator": "probe:http://www.educationboard.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-education-ssc-hsc-result-verify-fee-unverified",
+      "service_id": "education-ssc-hsc-result-verify",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for SSC/HSC Result Verification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-education-ssc-hsc-result-verify-documents-unverified",
+      "service_id": "education-ssc-hsc-result-verify",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for SSC/HSC Result Verification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "service_id": "business-company-incorporation",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-business-company-incorporation-portal-unreachable",
+      "service_id": "business-company-incorporation",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Company Incorporation.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm"
+    },
+    {
+      "gap_id": "gap-business-company-incorporation-fee-unverified",
+      "service_id": "business-company-incorporation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Company Incorporation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-company-incorporation-documents-unverified",
+      "service_id": "business-company-incorporation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Company Incorporation.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "knowledge_gaps": [
+    {
+      "gap_id": "MISSING_BSP_SUBPORTAL_SNAPSHOT",
+      "service_ids": [
+        "brta-learner-driving-license",
+        "brta-driving-license-renewal",
+        "brta-duplicate-driving-license",
+        "brta-smart-card-driving-license",
+        "brta-dctc-exam-result"
+      ],
+      "classification": "source_discovery_problem",
+      "priority": "HIGH",
+      "description": "BSP sub-portal pages (drivingLicense, dctbResult, feeCalculator) returned 404 outside operating window; Tier-1 workflow text not snapshotted."
+    },
+    {
+      "gap_id": "MISSING_LICENSE_FEE_AMOUNT_EXTRACT",
+      "service_ids": [
+        "brta-learner-driving-license",
+        "brta-driving-license-renewal",
+        "brta-duplicate-driving-license",
+        "brta-smart-card-driving-license"
+      ],
+      "classification": "missing_fee_schedule",
+      "priority": "MEDIUM",
+      "description": "Fee calculator referenced but numeric fee matrix not extracted without interactive BSP session."
+    },
+    {
+      "gap_id": "MISSING_INSTRUCTOR_DOCUMENT_CHECKLIST",
+      "service_ids": [
+        "brta-driving-instructor-license"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "MEDIUM",
+      "description": "BRTA instructor license static page not fully captured (JS-rendered); document list incomplete."
+    },
+    {
+      "gap_id": "MISSING_CIRCLE_OFFICE_SLA",
+      "service_ids": [
+        "brta-learner-driving-license",
+        "brta-driving-license-renewal",
+        "brta-duplicate-driving-license",
+        "brta-smart-card-driving-license"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "LOW",
+      "description": "Processing times vary by circle office; no national numeric SLA on Tier 1–2 pages reviewed."
+    }
+  ]
+}

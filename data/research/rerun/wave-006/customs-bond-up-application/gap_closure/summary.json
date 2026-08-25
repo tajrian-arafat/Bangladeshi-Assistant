@@ -1,0 +1,20 @@
+{
+  "service_id": "customs-bond-up-application",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-customs-bond-up-application-fee-unverified",
+      "service_id": "customs-bond-up-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Customs Bond Utilization Permit (UP) Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-customs-bond-up-application-documents-unverified",
+      "service_id": "customs-bond-up-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Customs Bond Utilization Permit (UP) Application.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

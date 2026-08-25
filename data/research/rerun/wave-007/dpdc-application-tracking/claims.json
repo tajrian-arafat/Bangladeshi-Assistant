@@ -1,0 +1,72 @@
+{
+  "service_id": "dpdc-application-tracking",
+  "claims": [
+    {
+      "claim_id": "dpdc-application-tracking::c-catalogue-authority",
+      "service_id": "dpdc-application-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Power Distribution Company Limited (DPDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-application-tracking::c-official-portal",
+      "service_id": "dpdc-application-tracking",
+      "claim_type": "application_url",
+      "claim_text": "DPDC Online Application Status Tracking official information is published at https://onlineapplication.dpdc.org.bd/home.php (page title: Online Application System | DPDC).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://onlineapplication.dpdc.org.bd/home.php"
+      },
+      "source_ids": [
+        "src-dpdc-application-tracking-official"
+      ],
+      "evidence_ids": [
+        "ev-dpdc-application-tracking::c-official-portal-src-dpdc-application-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-application-tracking::c-procedure-overview",
+      "service_id": "dpdc-application-tracking",
+      "claim_type": "procedure_step",
+      "claim_text": "DPDC Online Application Status Tracking is a government service under Dhaka Power Distribution Company Limited (DPDC) (electricity portal). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-application-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-application-tracking::c-service-identity",
+      "service_id": "dpdc-application-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "DPDC Online Application Status Tracking (ডিপিডিসি অনলাইন আবেদন ট্র্যাকিং) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-application-tracking-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

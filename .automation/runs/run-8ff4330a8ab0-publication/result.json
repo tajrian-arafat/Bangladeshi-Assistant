@@ -1,0 +1,36 @@
+{
+  "run_id": "run-8ff4330a8ab0-publication",
+  "batch_id": "BATCH_03A",
+  "phase": "PUBLICATION",
+  "status": "SUCCESS",
+  "started_at": "2026-08-25T02:39:36.650537+00:00",
+  "completed_at": "2026-08-25T02:39:38.927549+00:00",
+  "services_total": 0,
+  "services_processed": 0,
+  "claims_total": 0,
+  "verified": 0,
+  "partial": 0,
+  "unverified": 0,
+  "conflicting": 0,
+  "outdated": 0,
+  "rejected": 0,
+  "critical_conflicts": 0,
+  "knowledge_gaps": 0,
+  "e2e_total": 0,
+  "e2e_passed": 0,
+  "e2e_failed": 0,
+  "hallucinations": 0,
+  "citation_failures": 0,
+  "regressions": 0,
+  "artifacts": [
+    "data/audit/seed-candidates-batch-03a-brta-driving-licence.json"
+  ],
+  "requires_escalation": true,
+  "recommended_next_phase": "HUMAN_APPROVAL_REQUIRED",
+  "summary": "Publication complete for batch-03a-brta-driving-licence; legacy seed replacement candidates require explicit human approval",
+  "idempotency_key": "BATCH_03A:PUBLICATION:complete",
+  "simulation_case": null,
+  "metadata": {
+    "seed_replacement_detect": "{\n  \"ok\": true,\n  \"batch\": \"batch-03a-brta-driving-licence\",\n  \"candidates\": 1,\n  \"recorded_pending\": 1,\n  \"total_pending_for_batch\": 1,\n  \"requires_human_approval\": true,\n  \"candidate_details\": [\n    {\n      \"claim_id\": \"1a320aef-ab6d-466b-9cc9-54aa1edb2150\",\n      \"service_slug\": \"driving-licence-renewal\",\n      \"research_claim_key\": \"brta-driving-license-renewal::c-circle-office-collection\",\n      \"replacement_kind\": \"procedure_step\",\n      \"existing_status\": \"NEW\"\n    }\n  ],\n  \"output\": \"data/audit/seed-candidates-batch-03a-brta-driving-licence.json\"\n}\n"
+  }
+}

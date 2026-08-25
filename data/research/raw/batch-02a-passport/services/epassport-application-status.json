@@ -1,0 +1,65 @@
+{
+  "service_id": "epassport-application-status",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "e-Passport Application Status Check",
+  "service_name_bn": "ই-পাসপোর্ট আবেদনের অবস্থা",
+  "aliases": [
+    "passport status",
+    "OID status check"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://www.epassport.gov.bd/authorization/application-status",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "epassport-application-status::c-status-portal",
+      "legacy_claim_id": "c-status-portal",
+      "service_id": "epassport-application-status",
+      "claim_type": "application_url",
+      "claim_text": "e-Passport application status is checked at epassport.gov.bd authorization application-status.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-status"
+      ],
+      "evidence_ids": [
+        "ev-epassport-application-status::c-status-portal-src-epassport-status"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-application-status::c-status-oid-dob",
+      "legacy_claim_id": "c-status-oid-dob",
+      "service_id": "epassport-application-status",
+      "claim_type": "eligibility",
+      "claim_text": "Status check requires Application ID or Online Registration ID (OID) and date of birth.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-status"
+      ],
+      "evidence_ids": [
+        "ev-epassport-application-status::c-status-oid-dob-src-epassport-status"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Requires Application ID or Online Registration ID (OID) and date of birth."
+}

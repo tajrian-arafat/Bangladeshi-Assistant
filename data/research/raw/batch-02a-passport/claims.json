@@ -1,0 +1,1259 @@
+{
+  "claims": [
+    {
+      "claim_id": "epassport-new-application::c-apply-online",
+      "legacy_claim_id": "c-apply-online",
+      "service_id": "epassport-new-application",
+      "claim_type": "application_url",
+      "claim_text": "New e-Passport applications are submitted online at www.epassport.gov.bd/onboarding.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-apply-online-src-epassport-onboarding"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-no-attestation-online",
+      "legacy_claim_id": "c-no-attestation-online",
+      "service_id": "epassport-new-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Online e-Passport application does not require attested documents or photo upload at application stage.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-no-attestation-online-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-id-nid-or-brc",
+      "legacy_claim_id": "c-id-nid-or-brc",
+      "service_id": "epassport-new-application",
+      "claim_type": "document",
+      "claim_text": "Applicant must use NID or 17-digit online-verifiable Birth Registration Certificate (English) matching portal rules.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-instructions",
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-id-nid-or-brc-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-minor-parent-nid",
+      "legacy_claim_id": "c-minor-parent-nid",
+      "service_id": "epassport-new-application",
+      "claim_type": "conditional_document",
+      "claim_text": "Applicants under 18 without own NID must provide father or mother NID number in application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "age",
+        "op": "lt",
+        "value": 18
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-minor-parent-nid-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-minor-3r-photo",
+      "legacy_claim_id": "c-minor-3r-photo",
+      "service_id": "epassport-new-application",
+      "claim_type": "conditional_document",
+      "claim_text": "Applicants under 6 years must submit 3R size lab-print photo at enrollment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "age",
+        "op": "lt",
+        "value": 6
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-minor-3r-photo-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-police-station-select",
+      "legacy_claim_id": "c-police-station-select",
+      "service_id": "epassport-new-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Applicant selects nearest police station to present address during online onboarding.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-police-station-select-src-epassport-onboarding"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-govt-noc",
+      "legacy_claim_id": "c-govt-noc",
+      "service_id": "epassport-new-application",
+      "claim_type": "conditional_document",
+      "claim_text": "Government employees must provide GO/NOC at enrollment when applicable.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "employment_type",
+        "op": "eq",
+        "value": "government"
+      },
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-govt-noc-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-enrollment-docs-list",
+      "legacy_claim_id": "c-enrollment-docs-list",
+      "service_id": "epassport-new-application",
+      "claim_type": "document",
+      "claim_text": "Enrollment requires printed application summary with appointment, original NID/BRC, printed application form, previous passport if any.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-enrollment-docs-list-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-five-step-workflow",
+      "legacy_claim_id": "c-five-step-workflow",
+      "service_id": "epassport-new-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Official portal documents a five-step e-Passport application workflow from online apply through enrollment to collection.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-five-steps",
+        "src-epassport-landing"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-five-step-workflow-src-epassport-five-steps"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-expatriate-onboarding-no",
+      "legacy_claim_id": "c-expatriate-onboarding-no",
+      "service_id": "epassport-new-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Expatriate applicants select 'No' for applying from Bangladesh and choose mission/country during onboarding Step 1.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding",
+        "src-mofa-abudhabi-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-expatriate-onboarding-no-src-epassport-onboarding"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-new-application::c-brc-everify",
+      "legacy_claim_id": "c-brc-everify",
+      "service_id": "epassport-new-application",
+      "claim_type": "conditional_document",
+      "claim_text": "Mission guidance requires 17-digit online-verifiable Birth Registration Certificate (English) verifiable at everify.bdris.gov.bd when BRC used instead of NID.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "id_document_type",
+        "op": "eq",
+        "value": "brc"
+      },
+      "source_ids": [
+        "src-mofa-dubai-epassport",
+        "src-mofa-abudhabi-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-new-application::c-brc-everify-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-reissue-portal",
+      "legacy_claim_id": "c-reissue-portal",
+      "service_id": "epassport-reissue",
+      "claim_type": "application_url",
+      "claim_text": "e-Passport re-issue applications are made via epassport.gov.bd landing Apply Online for e-Passport / Re-Issue.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-landing"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-reissue-portal-src-epassport-landing"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-show-previous-passport",
+      "legacy_claim_id": "c-show-previous-passport",
+      "service_id": "epassport-reissue",
+      "claim_type": "conditional_document",
+      "claim_text": "For re-issue, original previous passport must be presented at enrollment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "application_type",
+        "op": "in",
+        "value": [
+          "reissue",
+          "renewal"
+        ]
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-show-previous-passport-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-lost-gd-copy",
+      "legacy_claim_id": "c-lost-gd-copy",
+      "service_id": "epassport-reissue",
+      "claim_type": "conditional_document",
+      "claim_text": "For lost passport re-issue, GD copy must be presented/submitted at application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "application_type",
+        "op": "eq",
+        "value": "lost"
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-lost-gd-copy-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-lost-gd-immediate",
+      "legacy_claim_id": "c-lost-gd-immediate",
+      "service_id": "epassport-reissue",
+      "claim_type": "practical_tip",
+      "claim_text": "If passport is lost or damaged, citizen should file GD promptly at nearest police station before re-application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-lost-gd-immediate-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-correction-extra-docs",
+      "legacy_claim_id": "c-correction-extra-docs",
+      "service_id": "epassport-reissue",
+      "claim_type": "conditional_document",
+      "claim_text": "Information correction may require additional supporting documents depending on correction type.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "application_type",
+        "op": "eq",
+        "value": "correction"
+      },
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-correction-extra-docs-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-mission-lost-report",
+      "legacy_claim_id": "c-mission-lost-report",
+      "service_id": "epassport-reissue",
+      "claim_type": "conditional_document",
+      "claim_text": "Expatriate lost passport applicants at missions may need local police lost report (mission-specific).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_location",
+        "op": "eq",
+        "value": "foreign_mission"
+      },
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-mission-lost-report-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-dubai-mrp-validity-limit",
+      "legacy_claim_id": "c-dubai-mrp-validity-limit",
+      "service_id": "epassport-reissue",
+      "claim_type": "eligibility",
+      "claim_text": "Dubai consulate states e-Passport not accepted if existing MRP has more than one year validity remaining.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_location",
+        "op": "eq",
+        "value": "dubai_mission"
+      },
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-dubai-mrp-validity-limit-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-mission-biometric-presence",
+      "legacy_claim_id": "c-mission-biometric-presence",
+      "service_id": "epassport-reissue",
+      "claim_type": "procedure_step",
+      "claim_text": "Mission pages state physical presence mandatory for biometric enrollment (age thresholds vary by mission; Dubai cites under-5 exemption).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mofa-dubai-epassport",
+        "src-mofa-singapore-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-mission-biometric-presence-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-48p-5y-regular",
+      "legacy_claim_id": "c-fee-48p-5y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Inside Bangladesh: 48-page / 5-year e-Passport regular delivery fee BDT 4025 (incl. 15% VAT).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 4025,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 48,
+        "validity_years": 5,
+        "regular_bdt": 4025,
+        "express_bdt": 6325,
+        "super_express_bdt": 8625
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-48p-5y-regular-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-48p-10y-regular",
+      "legacy_claim_id": "c-fee-48p-10y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Inside Bangladesh: 48-page / 10-year e-Passport regular delivery fee BDT 5750 (incl. 15% VAT).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 5750,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 48,
+        "validity_years": 10,
+        "regular_bdt": 5750,
+        "express_bdt": 8050,
+        "super_express_bdt": 10350
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-48p-10y-regular-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-64p-5y-regular",
+      "legacy_claim_id": "c-fee-64p-5y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Inside Bangladesh: 64-page / 5-year e-Passport regular delivery fee BDT 6325 (incl. 15% VAT).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 6325,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 64,
+        "validity_years": 5,
+        "regular_bdt": 6325,
+        "express_bdt": 8625,
+        "super_express_bdt": 12075
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-64p-5y-regular-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-64p-10y-regular",
+      "legacy_claim_id": "c-fee-64p-10y-regular",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Inside Bangladesh: 64-page / 10-year e-Passport regular delivery fee BDT 8050 (incl. 15% VAT).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 8050,
+        "currency": "BDT",
+        "delivery": "regular",
+        "pages": 64,
+        "validity_years": 10,
+        "regular_bdt": 8050,
+        "express_bdt": 10350,
+        "super_express_bdt": 13800
+      },
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-64p-10y-regular-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-vat-included",
+      "legacy_claim_id": "c-fee-vat-included",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Published inside-Bangladesh e-Passport fees include 15% VAT.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-vat-included-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-mission-general-usd",
+      "legacy_claim_id": "c-fee-mission-general-usd",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Mission general applicant fees published in USD by page count, validity, and delivery tier on official fee page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-mission-general-usd-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-fee-mission-labor-student-usd",
+      "legacy_claim_id": "c-fee-mission-labor-student-usd",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Mission labor/student applicant fees published separately in USD on official fee page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-fee-mission-labor-student-usd-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-payment-online-offline",
+      "legacy_claim_id": "c-payment-online-offline",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "payment_method",
+      "claim_text": "Fees may be paid online (payment gateways) or offline via bank/A-Challan per official instructions.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-payment-online-offline-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-payment-slip-offline-only",
+      "legacy_claim_id": "c-payment-slip-offline-only",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "conditional_document",
+      "claim_text": "Payment slip required at enrollment for offline payment only.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "payment_method",
+        "op": "eq",
+        "value": "offline"
+      },
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-payment-slip-offline-only-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-practical-ekpay-mention",
+      "legacy_claim_id": "c-practical-ekpay-mention",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "practical_tip",
+      "claim_text": "Community guides reference ekpay and e-Challan verification for online payments; confirm current gateway list on official portal.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-practical-qna-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-practical-ekpay-mention-src-practical-qna-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-regular-delivery-sla",
+      "legacy_claim_id": "c-regular-delivery-sla",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "processing_time",
+      "claim_text": "Regular delivery stated as within 15 working days / 21 days from biometric enrolment date on official fee page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-regular-delivery-sla-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-payment-ekpay-official",
+      "legacy_claim_id": "c-payment-ekpay-official",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "payment_method",
+      "claim_text": "Official fee page states fees can be paid online via ekpay platform or offline at participating banks using A-Challan.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-payment-ekpay-official-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-fee-payment::c-mission-weff-surcharge",
+      "legacy_claim_id": "c-mission-weff-surcharge",
+      "service_id": "epassport-fee-payment",
+      "claim_type": "fee",
+      "claim_text": "Abu Dhabi mission page notes 10% surcharge on consular fees under Wage Earners' Welfare Board Act 2018 Section 14(e).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_location",
+        "op": "eq",
+        "value": "foreign_mission"
+      },
+      "source_ids": [
+        "src-mofa-abudhabi-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-fee-payment::c-mission-weff-surcharge-src-mofa-abudhabi-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-enrollment-appointment::c-appointment-required",
+      "legacy_claim_id": "c-appointment-required",
+      "service_id": "epassport-enrollment-appointment",
+      "claim_type": "procedure_step",
+      "claim_text": "Biometric enrollment at passport office requires printed application summary including appointment when scheduled.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-enrollment-docs",
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-enrollment-appointment::c-appointment-required-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-enrollment-appointment::c-bring-original-id",
+      "legacy_claim_id": "c-bring-original-id",
+      "service_id": "epassport-enrollment-appointment",
+      "claim_type": "document",
+      "claim_text": "Original NID or Birth Certificate must be carried to enrollment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-enrollment-appointment::c-bring-original-id-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-application-status::c-status-portal",
+      "legacy_claim_id": "c-status-portal",
+      "service_id": "epassport-application-status",
+      "claim_type": "application_url",
+      "claim_text": "e-Passport application status is checked at epassport.gov.bd authorization application-status.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-status"
+      ],
+      "evidence_ids": [
+        "ev-epassport-application-status::c-status-portal-src-epassport-status"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-application-status::c-status-oid-dob",
+      "legacy_claim_id": "c-status-oid-dob",
+      "service_id": "epassport-application-status",
+      "claim_type": "eligibility",
+      "claim_text": "Status check requires Application ID or Online Registration ID (OID) and date of birth.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-status"
+      ],
+      "evidence_ids": [
+        "ev-epassport-application-status::c-status-oid-dob-src-epassport-status"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-2-days",
+      "legacy_claim_id": "c-super-express-2-days",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "processing_time",
+      "claim_text": "Super Express (urgent) passport issued within 2 working days under stated conditions.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-2-days-src-epassport-urgent"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-domestic-only",
+      "legacy_claim_id": "c-super-express-domestic-only",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "restriction",
+      "claim_text": "Super Express service not available at Bangladesh Missions abroad.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-domestic-only-src-epassport-urgent"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-pickup-agargaon",
+      "legacy_claim_id": "c-super-express-pickup-agargaon",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "office",
+      "claim_text": "Super Express passports picked up only at Divisional Passport and Visa Office, Agargaon, Dhaka.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-pickup-agargaon-src-epassport-urgent"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-mrp-no-address-change",
+      "legacy_claim_id": "c-super-express-mrp-no-address-change",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "eligibility",
+      "claim_text": "Current note: Super Express available only for e-Passport issuance where applicant already holds MRP without changing permanent address.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-mrp-no-address-change-src-epassport-urgent"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-fee-tier",
+      "legacy_claim_id": "c-super-express-fee-tier",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "fee",
+      "claim_text": "Super Express delivery uses Super Express fee tier on official fee schedule.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees",
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-fee-tier-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-rpo-secretariat::c-rpo-secretariat-form",
+      "legacy_claim_id": "c-rpo-secretariat-form",
+      "service_id": "epassport-rpo-secretariat",
+      "claim_type": "application_url",
+      "claim_text": "RPO Bangladesh Secretariat application guidance published on epassport application-form instructions page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-app-form"
+      ],
+      "evidence_ids": [
+        "ev-epassport-rpo-secretariat::c-rpo-secretariat-form-src-epassport-app-form"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-form1",
+      "legacy_claim_id": "c-mrp-form1",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "application_url",
+      "claim_text": "Initial MRP applications use DIP Form 1 via passport.gov.bd online portal.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-form1-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-email-credentials",
+      "legacy_claim_id": "c-mrp-email-credentials",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "procedure_step",
+      "claim_text": "MRP online application provides Application ID and Password by email after first page save.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-email-credentials-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-biometric-visit",
+      "legacy_claim_id": "c-mrp-biometric-visit",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "procedure_step",
+      "claim_text": "After online submit, applicant must visit passport office with printed form for biometric enrollment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-biometric-visit-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-govt-single-form",
+      "legacy_claim_id": "c-mrp-govt-single-form",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "conditional_document",
+      "claim_text": "Certain government/retired/surrendered categories submit one form copy; others submit two copies (per MRP portal notice).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_category",
+        "op": "in",
+        "value": [
+          "government",
+          "retired_government",
+          "surrendered"
+        ]
+      },
+      "source_ids": [
+        "src-mrp-home"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-govt-single-form-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-attested-copies",
+      "legacy_claim_id": "c-mrp-attested-copies",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "document",
+      "claim_text": "MRP pathway requires attested photocopies of NID/BRC and relevant certificates (contrasts with e-Passport no-attestation rule).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-home",
+        "src-mrp-form-pdf"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-attested-copies-src-mrp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-initial::c-mrp-appointment-validity",
+      "legacy_claim_id": "c-mrp-appointment-validity",
+      "service_id": "passport-mrp-initial",
+      "claim_type": "processing_time",
+      "claim_text": "MRP online application appointment validity stated as 5 days from system generation (per MRP portal).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-reissue"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-initial::c-mrp-appointment-validity-src-mrp-reissue"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-mrp-reissue::c-mrp-form2",
+      "legacy_claim_id": "c-mrp-form2",
+      "service_id": "passport-mrp-reissue",
+      "claim_type": "application_url",
+      "claim_text": "MRP reissue/correction/alternation uses DIP Form 2 via passport.gov.bd UserHome.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-reissue"
+      ],
+      "evidence_ids": [
+        "ev-passport-mrp-reissue::c-mrp-form2-src-mrp-reissue"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "passport-application-status::c-mrp-status-portal",
+      "legacy_claim_id": "c-mrp-status-portal",
+      "service_id": "passport-application-status",
+      "claim_type": "application_url",
+      "claim_text": "Legacy MRP application status checked at passport.gov.bd OnlineStatus.aspx.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mrp-status"
+      ],
+      "evidence_ids": [
+        "ev-passport-application-status::c-mrp-status-portal-src-mrp-status"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-pathway-exists",
+      "legacy_claim_id": "c-pv-pathway-exists",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "availability",
+      "claim_text": "Passport police verification is part of e-Passport processing pathway via Special Branch.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-home",
+        "src-police-sb"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-pathway-exists-src-dip-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-station-onboarding",
+      "legacy_claim_id": "c-pv-station-onboarding",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Applicant selects nearest police station during e-Passport onboarding for verification routing.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-onboarding"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-station-onboarding-src-epassport-onboarding"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-delay-note",
+      "legacy_claim_id": "c-pv-delay-note",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "practical_tip",
+      "claim_text": "Mission pages note police verification timing can affect e-Passport processing duration.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-delay-note-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-charter-sla",
+      "legacy_claim_id": "c-pv-charter-sla",
+      "service_id": "police-passport-verification",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter cites normal passport verification 15-21 days and urgent 7 days (requires live charter verification).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-charter-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-district-scope",
+      "legacy_claim_id": "c-pv-district-scope",
+      "service_id": "police-passport-verification",
+      "claim_type": "office",
+      "claim_text": "District-level passport verification service under Bangladesh Police citizen charter.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-district-scope-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "service_id": "business-ngoab-ngo-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "NGO Registration (NGO Affairs Bureau)",
+  "service_name_bn": "এনজিও বিষয়ক অধিদপ্তর NGO নিবন্ধন",
+  "aliases": [
+    "NGOAB registration",
+    "NGO registration Bangladesh",
+    "foreign NGO registration"
+  ],
+  "category_id": "registrations",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "NGO Affairs Bureau",
+  "official_application_url": "https://ngoa.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "business-ngoab-ngo-registration::c-catalogue-authority",
+      "service_id": "business-ngoab-ngo-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: NGO Affairs Bureau.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-ngoab-ngo-registration::c-official-url-documented",
+      "service_id": "business-ngoab-ngo-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://ngoa.gov.bd/ for NGO Registration (NGO Affairs Bureau); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ngoa.gov.bd/"
+      },
+      "source_ids": [
+        "src-business-ngoab-ngo-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-ngoab-ngo-registration::c-procedure-overview",
+      "service_id": "business-ngoab-ngo-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "NGO Registration (NGO Affairs Bureau) is a government service under NGO Affairs Bureau (ngo). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-ngoab-ngo-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-ngoab-ngo-registration::c-service-identity",
+      "service_id": "business-ngoab-ngo-registration",
+      "claim_type": "eligibility",
+      "claim_text": "NGO Registration (NGO Affairs Bureau) (এনজিও বিষয়ক অধিদপ্তর NGO নিবন্ধন) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-ngoab-ngo-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-business-ngoab-ngo-registration-official",
+      "service_id": "business-ngoab-ngo-registration",
+      "url": "https://ngoa.gov.bd/",
+      "title": "NGO Registration (NGO Affairs Bureau)",
+      "authority_id": "ngo-affairs-bureau",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ngoa.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:24:15.747425+00:00"
+      },
+      "evidence_locator": "probe:https://ngoa.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-business-ngoab-ngo-registration-portal-unreachable",
+      "service_id": "business-ngoab-ngo-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for NGO Registration (NGO Affairs Bureau).",
+      "severity": "MEDIUM",
+      "url": "https://ngoa.gov.bd/"
+    },
+    {
+      "gap_id": "gap-business-ngoab-ngo-registration-fee-unverified",
+      "service_id": "business-ngoab-ngo-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for NGO Registration (NGO Affairs Bureau).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-ngoab-ngo-registration-documents-unverified",
+      "service_id": "business-ngoab-ngo-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for NGO Registration (NGO Affairs Bureau).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

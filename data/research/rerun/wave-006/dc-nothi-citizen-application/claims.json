@@ -1,0 +1,70 @@
+{
+  "service_id": "dc-nothi-citizen-application",
+  "claims": [
+    {
+      "claim_id": "dc-nothi-citizen-application::c-catalogue-authority",
+      "service_id": "dc-nothi-citizen-application",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Deputy Commissioner Office (via Nothi).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-nothi-citizen-application::c-official-url-documented",
+      "service_id": "dc-nothi-citizen-application",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://nothi.gov.bd/dak_nagoriks/NagorikAbedon for Nothi Citizen Application (District/DC Office); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://nothi.gov.bd/dak_nagoriks/NagorikAbedon"
+      },
+      "source_ids": [
+        "src-dc-nothi-citizen-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-nothi-citizen-application::c-procedure-overview",
+      "service_id": "dc-nothi-citizen-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Nothi Citizen Application (District/DC Office) is a government service under Deputy Commissioner Office (via Nothi) (online application). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-nothi-citizen-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-nothi-citizen-application::c-service-identity",
+      "service_id": "dc-nothi-citizen-application",
+      "claim_type": "eligibility",
+      "claim_text": "Nothi Citizen Application (District/DC Office) (নথি নাগরিক আবেদন (DC/জেলা অফিস)) is a confirmed government service in category local_government, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-nothi-citizen-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

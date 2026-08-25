@@ -1,0 +1,170 @@
+{
+  "service_id": "tax-clearance-foreigners",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Tax Clearance Certificate for Foreigners",
+  "service_name_bn": "বিদেশিদের কর ছাড়পত্র",
+  "aliases": [
+    "tax clearance certificate"
+  ],
+  "category_id": "tax",
+  "profile_key": "TAX",
+  "responsible_agency": "National Board of Revenue (NBR)",
+  "official_application_url": "https://nbr.gov.bd/all-eservices/eng",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "tax-clearance-foreigners::c-catalogue-authority",
+      "service_id": "tax-clearance-foreigners",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-clearance-foreigners::c-official-portal",
+      "service_id": "tax-clearance-foreigners",
+      "claim_type": "application_url",
+      "claim_text": "Tax Clearance Certificate for Foreigners official information is published at https://nbr.gov.bd/all-eservices/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/all-eservices/eng"
+      },
+      "source_ids": [
+        "src-tax-clearance-foreigners-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-clearance-foreigners::c-official-portal-src-tax-clearance-foreigners-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-clearance-foreigners::c-procedure-overview",
+      "service_id": "tax-clearance-foreigners",
+      "claim_type": "procedure_step",
+      "claim_text": "Tax Clearance Certificate for Foreigners is a government service under National Board of Revenue (NBR) (clearance). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-clearance-foreigners-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-clearance-foreigners::c-service-identity",
+      "service_id": "tax-clearance-foreigners",
+      "claim_type": "eligibility",
+      "claim_text": "Tax Clearance Certificate for Foreigners (বিদেশিদের কর ছাড়পত্র) is a confirmed government service in category tax, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-clearance-foreigners-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-tax-clearance-foreigners-official",
+      "service_id": "tax-clearance-foreigners",
+      "url": "https://nbr.gov.bd/all-eservices/eng",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/all-eservices/eng",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "f0b1374c2afca7b9",
+        "retrieved_at": "2026-08-25T03:22:10.371792+00:00"
+      },
+      "evidence_locator": "probe:https://nbr.gov.bd/all-eservices/eng"
+    },
+    {
+      "source_id": "src-tax-clearance-foreigners-alt-1",
+      "service_id": "tax-clearance-foreigners",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:11.740916+00:00"
+      }
+    },
+    {
+      "source_id": "src-tax-clearance-foreigners-alt-2",
+      "service_id": "tax-clearance-foreigners",
+      "url": "https://incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "7dbc0d79e88c33d2",
+        "retrieved_at": "2026-08-25T03:22:14.082142+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-tax-clearance-foreigners-fee-unverified",
+      "service_id": "tax-clearance-foreigners",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Tax Clearance Certificate for Foreigners.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-clearance-foreigners-documents-unverified",
+      "service_id": "tax-clearance-foreigners",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Tax Clearance Certificate for Foreigners.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

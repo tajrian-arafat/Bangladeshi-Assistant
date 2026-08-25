@@ -1,0 +1,15 @@
+# Quality gates
+{
+  "deployment_allowed": false,
+  "require_zero_hallucinations": true,
+  "require_zero_citation_failures": true,
+  "regression_suites": [
+    "batch_01_e2e",
+    "passport_e2e",
+    "batch_02b_e2e",
+    "service_routing",
+    "cross_domain_hardening",
+    "pytest"
+  ],
+  "max_retries": 3
+}

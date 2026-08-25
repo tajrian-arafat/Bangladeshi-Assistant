@@ -1,0 +1,27 @@
+{
+  "service_id": "housing-cda-building-permit",
+  "gaps": [
+    {
+      "gap_id": "gap-housing-cda-building-permit-portal-unreachable",
+      "service_id": "housing-cda-building-permit",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Chattogram Development Authority Building Plan Approval.",
+      "severity": "MEDIUM",
+      "url": "https://cda.gov.bd/"
+    },
+    {
+      "gap_id": "gap-housing-cda-building-permit-fee-unverified",
+      "service_id": "housing-cda-building-permit",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Chattogram Development Authority Building Plan Approval.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-housing-cda-building-permit-documents-unverified",
+      "service_id": "housing-cda-building-permit",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Chattogram Development Authority Building Plan Approval.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

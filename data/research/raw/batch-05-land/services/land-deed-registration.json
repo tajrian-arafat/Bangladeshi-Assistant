@@ -1,0 +1,44 @@
+{
+  "service_id": "land-deed-registration",
+  "batch_id": "batch-05-land",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Deed Registration (Sub-Registry)",
+  "service_name_bn": "দলিল/দলিল রেজিস্ট্রেশন",
+  "aliases": [
+    "sale deed registration",
+    "sub registry office"
+  ],
+  "category_id": "land",
+  "responsible_agency": "Department of Registration (Ministry of Law)",
+  "official_application_url": "https://www.land.gov.bd/poripotro",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "land-deed-registration::c-application-portal",
+      "service_id": "land-deed-registration",
+      "claim_type": "application_url",
+      "claim_text": "Deed Registration (Sub-Registry) is associated with NBR e-service portal https://www.land.gov.bd/poripotro.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-land-deed-registration",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-responsible-authority",
+      "service_id": "land-deed-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Department of Registration (Ministry of Law).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

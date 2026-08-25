@@ -1,0 +1,14 @@
+{
+  "decision_id": "dec-de2f925eafa8",
+  "status": "HUMAN_APPROVAL_REQUIRED",
+  "batch": "BATCH_04",
+  "issue": "Publication dry-run blocked: ch))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/backend/app/application/knowledge/publisher.py\", line 281, in sync_claims_from_staging\n    staging = self.staging_dir(batch_id)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/backend/app/application/knowledge/publisher.py\", line 197, in staging_dir\n    raise FileNotFoundError(f\"Staging batch not found: {batch_id}\")\nFileNotFoundError: Staging batch not found: batch-04-tax-vat-customs\n",
+  "severity": "HIGH",
+  "evidence": [],
+  "recommended_action": "",
+  "publication_blocked": true,
+  "created_at": "2026-08-25T02:35:50.663376+00:00",
+  "resolved_at": null,
+  "resolution": null,
+  "approved_by": null
+}

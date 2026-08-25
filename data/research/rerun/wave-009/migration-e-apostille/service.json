@@ -1,0 +1,159 @@
+{
+  "service_id": "migration-e-apostille",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "e-Apostille Document Authentication",
+  "service_name_bn": "ই-আপোস্টিল (MOFA)",
+  "aliases": [
+    "e-Apostille",
+    "Hague apostille Bangladesh",
+    "apostille.mygov.bd"
+  ],
+  "category_id": "passport_immigration",
+  "profile_key": "POLICE",
+  "responsible_agency": "Ministry of Foreign Affairs (MOFA)",
+  "official_application_url": "https://apostille.mygov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "migration-e-apostille::c-catalogue-authority",
+      "service_id": "migration-e-apostille",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "migration-e-apostille::c-official-url-documented",
+      "service_id": "migration-e-apostille",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://apostille.mygov.bd/ for e-Apostille Document Authentication; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://apostille.mygov.bd/"
+      },
+      "source_ids": [
+        "src-migration-e-apostille-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "migration-e-apostille::c-procedure-overview",
+      "service_id": "migration-e-apostille",
+      "claim_type": "procedure_step",
+      "claim_text": "e-Apostille Document Authentication is a government service under Ministry of Foreign Affairs (MOFA) (document authentication). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-migration-e-apostille-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "migration-e-apostille::c-service-identity",
+      "service_id": "migration-e-apostille",
+      "claim_type": "eligibility",
+      "claim_text": "e-Apostille Document Authentication (ই-আপোস্টিল (MOFA)) is a confirmed government service in category passport_immigration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-migration-e-apostille-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-migration-e-apostille-official",
+      "service_id": "migration-e-apostille",
+      "url": "https://apostille.mygov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://apostille.mygov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "b38cb93998585304",
+        "retrieved_at": "2026-08-25T03:28:26.315212+00:00"
+      },
+      "evidence_locator": "probe:https://apostille.mygov.bd/"
+    },
+    {
+      "source_id": "src-migration-e-apostille-alt-1",
+      "service_id": "migration-e-apostille",
+      "url": "https://mofa-servicedirectory.apostille.mygov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mofa-servicedirectory.apostille.mygov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "cf59b6c4ef8db51e",
+        "retrieved_at": "2026-08-25T03:28:26.355433+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-migration-e-apostille-portal-unreachable",
+      "service_id": "migration-e-apostille",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for e-Apostille Document Authentication.",
+      "severity": "MEDIUM",
+      "url": "https://apostille.mygov.bd/"
+    },
+    {
+      "gap_id": "gap-migration-e-apostille-fee-unverified",
+      "service_id": "migration-e-apostille",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for e-Apostille Document Authentication.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-migration-e-apostille-documents-unverified",
+      "service_id": "migration-e-apostille",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for e-Apostille Document Authentication.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

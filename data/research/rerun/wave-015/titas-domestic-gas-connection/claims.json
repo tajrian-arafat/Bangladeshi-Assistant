@@ -1,0 +1,72 @@
+{
+  "service_id": "titas-domestic-gas-connection",
+  "claims": [
+    {
+      "claim_id": "titas-domestic-gas-connection::c-catalogue-authority",
+      "service_id": "titas-domestic-gas-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Titas Gas Transmission and Distribution PLC.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "titas-domestic-gas-connection::c-official-portal",
+      "service_id": "titas-domestic-gas-connection",
+      "claim_type": "application_url",
+      "claim_text": "Titas Gas Domestic Connection Application official information is published at https://onlineapplication.titasgas.org.bd/application/domestic/add (page title: TGTDCL Online Application).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://onlineapplication.titasgas.org.bd/application/domestic/add"
+      },
+      "source_ids": [
+        "src-titas-domestic-gas-connection-official"
+      ],
+      "evidence_ids": [
+        "ev-titas-domestic-gas-connection::c-official-portal-src-titas-domestic-gas-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "titas-domestic-gas-connection::c-procedure-overview",
+      "service_id": "titas-domestic-gas-connection",
+      "claim_type": "procedure_step",
+      "claim_text": "Titas Gas Domestic Connection Application is a government service under Titas Gas Transmission and Distribution PLC (gas connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-titas-domestic-gas-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "titas-domestic-gas-connection::c-service-identity",
+      "service_id": "titas-domestic-gas-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Titas Gas Domestic Connection Application (তিতাস গ্যাস গৃহস্থ সংযোগ) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-titas-domestic-gas-connection-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

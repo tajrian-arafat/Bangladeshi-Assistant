@@ -1,0 +1,72 @@
+{
+  "service_id": "legal-aid-government-service",
+  "claims": [
+    {
+      "claim_id": "legal-aid-government-service::c-catalogue-authority",
+      "service_id": "legal-aid-government-service",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Legal Aid Services Organization (NLASO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-government-service::c-official-portal",
+      "service_id": "legal-aid-government-service",
+      "claim_type": "application_url",
+      "claim_text": "Government-funded Legal Aid Service official information is published at http://nlaso.portal.gov.bd/pages/static-pages/6922dc72933eb65569e106d0 (page title: পাতা | বাংলাদেশ আইনগত সহায়তা অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://nlaso.portal.gov.bd/pages/static-pages/6922dc72933eb65569e106d0"
+      },
+      "source_ids": [
+        "src-legal-aid-government-service-official"
+      ],
+      "evidence_ids": [
+        "ev-legal-aid-government-service::c-official-portal-src-legal-aid-government-service-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-government-service::c-procedure-overview",
+      "service_id": "legal-aid-government-service",
+      "claim_type": "procedure_step",
+      "claim_text": "Government-funded Legal Aid Service is a government service under National Legal Aid Services Organization (NLASO) (legal aid). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-government-service-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-government-service::c-service-identity",
+      "service_id": "legal-aid-government-service",
+      "claim_type": "eligibility",
+      "claim_text": "Government-funded Legal Aid Service (সরকারি খরচে আইনগত সহায়তা) is a confirmed government service in category legal_aid, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-government-service-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

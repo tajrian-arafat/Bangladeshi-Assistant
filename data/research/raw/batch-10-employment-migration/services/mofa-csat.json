@@ -1,0 +1,44 @@
+{
+  "service_id": "mofa-csat",
+  "batch_id": "batch-10-employment-migration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "MOFA Consular Service Appointment (CSAT)",
+  "service_name_bn": "MOFA CSAT (Consular Service Appointment)",
+  "aliases": [
+    "MOFA appointment consular",
+    "MOFA Consular Service Appointment (CSAT)"
+  ],
+  "category_id": "passport_immigration",
+  "responsible_agency": "Ministry of Foreign Affairs (MOFA)",
+  "official_application_url": "https://csat.mofa.gov.bd/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "mofa-csat::c-application-portal",
+      "service_id": "mofa-csat",
+      "claim_type": "application_url",
+      "claim_text": "MOFA Consular Service Appointment (CSAT) is associated with NBR e-service portal https://csat.mofa.gov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-mofa-csat",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-csat::c-responsible-authority",
+      "service_id": "mofa-csat",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

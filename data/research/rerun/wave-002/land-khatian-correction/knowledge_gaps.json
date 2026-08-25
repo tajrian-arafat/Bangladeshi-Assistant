@@ -1,0 +1,27 @@
+{
+  "service_id": "land-khatian-correction",
+  "gaps": [
+    {
+      "gap_id": "gap-land-khatian-correction-portal-unreachable",
+      "service_id": "land-khatian-correction",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Khatian Record Correction.",
+      "severity": "MEDIUM",
+      "url": "https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "gap_id": "gap-land-khatian-correction-fee-unverified",
+      "service_id": "land-khatian-correction",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Khatian Record Correction.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-khatian-correction-documents-unverified",
+      "service_id": "land-khatian-correction",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Khatian Record Correction.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "gap-conflict-fee-freshness-resolved",
+      "resolution_status": "RESOLVED",
+      "classification": "stale_index_metadata_vs_current_browser_page",
+      "old_claim_summary": "Step 11 marked domestic fees OUTDATED based on March 2023 search-index last-updated metadata.",
+      "new_claim_summary": "Browser-rendered fee page shows Last updated 12 July 2026 with same BDT amounts.",
+      "outcome": "Prior OUTDATED verdict on amounts superseded by gap-closure claim series gap-closure::c-fee-domestic-*-current; original claim records unchanged.",
+      "blocks_official_publication": false
+    },
+    {
+      "conflict_id": "gap-conflict-payment-gateway-ekpay-vs-current",
+      "resolution_status": "RESOLVED",
+      "classification": "official_page_updated_payment_providers",
+      "old_claim_summary": "epassport-fee-payment::c-payment-ekpay-official referenced ekpay + A-Challan from index excerpt.",
+      "new_claim_summary": "July 2026 fee page lists A-Challan, DGePay, ShurjoPay (no ekpay mention).",
+      "outcome": "Represent payment methods from gap-closure::c-payment-gateways-achallan-dgepay-shurjopay; prior ekpay claim should not be published without re-verification.",
+      "blocks_official_publication": false
+    },
+    {
+      "conflict_id": "gap-conflict-super-express-eligibility-june-2026",
+      "resolution_status": "UNRESOLVED",
+      "classification": "instruction_page_version_drift",
+      "old_claim_summary": "Oct 2022 urgent page NOTE restricted Super Express to existing MRP without address change.",
+      "new_claim_summary": "June 2026 browser-rendered urgent page states any citizen may apply for Super Express domestically.",
+      "outcome": "Treat as time-sensitive rule; prefer June 2026 Tier-1 browser snapshot for eligibility headline; operational NOTE may have changed \u2014 manual DIP confirmation recommended before publication.",
+      "blocks_official_publication": true
+    }
+  ],
+  "closed_at": "2026-08-24T21:22:37.453479+00:00"
+}

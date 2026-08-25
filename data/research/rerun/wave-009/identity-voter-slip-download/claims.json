@@ -1,0 +1,72 @@
+{
+  "service_id": "identity-voter-slip-download",
+  "claims": [
+    {
+      "claim_id": "identity-voter-slip-download::c-catalogue-authority",
+      "service_id": "identity-voter-slip-download",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "identity-voter-slip-download::c-official-portal",
+      "service_id": "identity-voter-slip-download",
+      "claim_type": "application_url",
+      "claim_text": "Voter Information Slip Download official information is published at https://services.nidw.gov.bd/ (page title: Bangladesh NID Application System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/"
+      },
+      "source_ids": [
+        "src-identity-voter-slip-download-official"
+      ],
+      "evidence_ids": [
+        "ev-identity-voter-slip-download::c-official-portal-src-identity-voter-slip-download-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "identity-voter-slip-download::c-procedure-overview",
+      "service_id": "identity-voter-slip-download",
+      "claim_type": "procedure_step",
+      "claim_text": "Voter Information Slip Download is a government service under Bangladesh Election Commission (NID Wing) (voter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-identity-voter-slip-download-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "identity-voter-slip-download::c-service-identity",
+      "service_id": "identity-voter-slip-download",
+      "claim_type": "eligibility",
+      "claim_text": "Voter Information Slip Download (ভোটার স্লিপ/তথ্য ডাউনলোড) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-identity-voter-slip-download-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,3997 @@
+{
+  "wave_id": "wave-010",
+  "wave_number": 10,
+  "run_id": "wave-010-5c9e5df0",
+  "commit_sha": "9989ff0e38e5",
+  "generated_at": "2026-08-25T03:30:03.781378+00:00",
+  "wave_size": 30,
+  "services_attempted": [
+    "nid-download-copy",
+    "nid-expatriate-registration",
+    "nid-new-voter-registration",
+    "nid-online-account-registration",
+    "nid-other-info-correction",
+    "nid-photo-signature-appointment",
+    "nid-reissue-lost",
+    "nid-voter-area-change",
+    "permits-fire-e-license",
+    "permits-fire-noc-enoc",
+    "permits-fire-safety-firm-registration",
+    "permits-forest-timber-transit",
+    "post-cash-card",
+    "post-domestic-mail",
+    "post-ems",
+    "post-emts",
+    "post-gep",
+    "post-international-mail",
+    "post-life-insurance",
+    "post-mail-tracking",
+    "post-money-order",
+    "post-postage-calculator",
+    "post-savings-bank",
+    "post-savings-certificate",
+    "post-speed-post",
+    "professional-bar-council-enrolment",
+    "professional-bmdc-doctor-registration",
+    "professional-engineer-registration",
+    "professional-nursing-council-registration",
+    "professional-pharmacy-council-registration"
+  ],
+  "service_results": [
+    {
+      "service_id": "nid-download-copy",
+      "service_name_en": "Download NID Card Copy",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-download-copy",
+        "service_name_en": "Download NID Card Copy",
+        "service_name_bn": "এনআইডি কপি ডাউনলোড",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "NID PDF download",
+          "digital NID copy"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-download-copy",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-download-copy-en-procedure",
+            "query": "How do I apply for Download NID Card Copy?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-download-copy-bn-procedure",
+            "query": "এনআইডি কপি ডাউনলোড কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-download-copy-fee",
+            "query": "What is the fee for Download NID Card Copy?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-download-copy-documents",
+            "query": "What documents are needed for Download NID Card Copy?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-download-copy-url",
+            "query": "What is the official website for Download NID Card Copy?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-download-copy",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-expatriate-registration",
+      "service_name_en": "Expatriate Bangladeshi NID Application",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-expatriate-registration",
+        "service_name_en": "Expatriate Bangladeshi NID Application",
+        "service_name_bn": "প্রবাসী বাংলাদেশি এনআইডি আবেদন",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "NID for overseas Bangladeshis"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-expatriate-registration",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-expatriate-registration-en-procedure",
+            "query": "How do I apply for Expatriate Bangladeshi NID Application?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-expatriate-registration-bn-procedure",
+            "query": "প্রবাসী বাংলাদেশি এনআইডি আবেদন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-expatriate-registration-fee",
+            "query": "What is the fee for Expatriate Bangladeshi NID Application?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-expatriate-registration-documents",
+            "query": "What documents are needed for Expatriate Bangladeshi NID Application?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-expatriate-registration-url",
+            "query": "What is the official website for Expatriate Bangladeshi NID Application?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-expatriate-registration",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-new-voter-registration",
+      "service_name_en": "New Voter and National ID Registration",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-new-voter-registration",
+        "service_name_en": "New Voter and National ID Registration",
+        "service_name_bn": "নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "new NID",
+          "voter registration",
+          "NID application"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-new-voter-registration",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-new-voter-registration-en-procedure",
+            "query": "How do I apply for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-new-voter-registration-bn-procedure",
+            "query": "নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-new-voter-registration-fee",
+            "query": "What is the fee for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-new-voter-registration-documents",
+            "query": "What documents are needed for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-new-voter-registration-url",
+            "query": "What is the official website for New Voter and National ID Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-new-voter-registration",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-online-account-registration",
+      "service_name_en": "Voter Online Account Registration",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-online-account-registration",
+        "service_name_en": "Voter Online Account Registration",
+        "service_name_bn": "ভোটার অনলাইন অ্যাকাউন্ট নিবন্ধন",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "NID portal signup",
+          "NIDW registration"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-online-account-registration",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-online-account-registration-en-procedure",
+            "query": "How do I apply for Voter Online Account Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-online-account-registration-bn-procedure",
+            "query": "ভোটার অনলাইন অ্যাকাউন্ট নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-online-account-registration-fee",
+            "query": "What is the fee for Voter Online Account Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-online-account-registration-documents",
+            "query": "What documents are needed for Voter Online Account Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-online-account-registration-url",
+            "query": "What is the official website for Voter Online Account Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-online-account-registration",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-other-info-correction",
+      "service_name_en": "NID Other Information Correction",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-other-info-correction",
+        "service_name_en": "NID Other Information Correction",
+        "service_name_bn": "অন্যান্য তথ্য সংশোধন",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "non-printed NID field correction"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/fees",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-other-info-correction",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-other-info-correction-en-procedure",
+            "query": "How do I apply for NID Other Information Correction?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-other-info-correction-bn-procedure",
+            "query": "অন্যান্য তথ্য সংশোধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-other-info-correction-fee",
+            "query": "What is the fee for NID Other Information Correction?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-other-info-correction-documents",
+            "query": "What documents are needed for NID Other Information Correction?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-other-info-correction-url",
+            "query": "What is the official website for NID Other Information Correction?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-other-info-correction",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-photo-signature-appointment",
+      "service_name_en": "Photo or Signature Change Appointment",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-photo-signature-appointment",
+        "service_name_en": "Photo or Signature Change Appointment",
+        "service_name_bn": "ছবি/স্বাক্ষর পরিবর্তনের অ্যাপয়েন্টমেন্ট",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "biometric update appointment"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-photo-signature-appointment",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-photo-signature-appointment-en-procedure",
+            "query": "How do I apply for Photo or Signature Change Appointment?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-photo-signature-appointment-bn-procedure",
+            "query": "ছবি/স্বাক্ষর পরিবর্তনের অ্যাপয়েন্টমেন্ট কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-photo-signature-appointment-fee",
+            "query": "What is the fee for Photo or Signature Change Appointment?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-photo-signature-appointment-documents",
+            "query": "What documents are needed for Photo or Signature Change Appointment?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-photo-signature-appointment-url",
+            "query": "What is the official website for Photo or Signature Change Appointment?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-photo-signature-appointment",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-reissue-lost",
+      "service_name_en": "NID Reissue for Lost or Damaged Card",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-reissue-lost",
+        "service_name_en": "NID Reissue for Lost or Damaged Card",
+        "service_name_bn": "হারানো/নষ্ট এনআইডি পুনর্মুদ্রণ (রিইস্যু)",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "duplicate NID",
+          "lost voter ID",
+          "NID reprint"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-reissue-lost",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-reissue-lost-en-procedure",
+            "query": "How do I apply for NID Reissue for Lost or Damaged Card?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-reissue-lost-bn-procedure",
+            "query": "হারানো/নষ্ট এনআইডি পুনর্মুদ্রণ (রিইস্যু) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-reissue-lost-fee",
+            "query": "What is the fee for NID Reissue for Lost or Damaged Card?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-reissue-lost-documents",
+            "query": "What documents are needed for NID Reissue for Lost or Damaged Card?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-reissue-lost-url",
+            "query": "What is the official website for NID Reissue for Lost or Damaged Card?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-reissue-lost",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-voter-area-change",
+      "service_name_en": "Voter Area or Address Change (Form 13)",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-voter-area-change",
+        "service_name_en": "Voter Area or Address Change (Form 13)",
+        "service_name_bn": "ভোটার এলাকা/ঠিকানা পরিবর্তন (ফর্ম ১৩)",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "address migration",
+          "voter transfer"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-voter-area-change",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-voter-area-change-en-procedure",
+            "query": "How do I apply for Voter Area or Address Change (Form 13)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-voter-area-change-bn-procedure",
+            "query": "ভোটার এলাকা/ঠিকানা পরিবর্তন (ফর্ম ১৩) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-voter-area-change-fee",
+            "query": "What is the fee for Voter Area or Address Change (Form 13)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-voter-area-change-documents",
+            "query": "What documents are needed for Voter Area or Address Change (Form 13)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-voter-area-change-url",
+            "query": "What is the official website for Voter Area or Address Change (Form 13)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-voter-area-change",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "permits-fire-e-license",
+      "service_name_en": "e-Fire License Application",
+      "category_id": "permits",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "permits-fire-e-license",
+        "service_name_en": "e-Fire License Application",
+        "service_name_bn": "ই-ফায়ার লাইসেন্স",
+        "category_id": "permits",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Fire Service and Civil Defence Directorate",
+          "fire-service-and-civil-defence-directorate"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "fire license Bangladesh",
+          "elicense.fireservice.gov.bd"
+        ],
+        "official_source": "https://elicense.fireservice.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "permits-fire-e-license",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "permits-fire-e-license-en-procedure",
+            "query": "How do I apply for e-Fire License Application?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-e-license-bn-procedure",
+            "query": "ই-ফায়ার লাইসেন্স কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-e-license-fee",
+            "query": "What is the fee for e-Fire License Application?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-e-license-documents",
+            "query": "What documents are needed for e-Fire License Application?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-e-license-url",
+            "query": "What is the official website for e-Fire License Application?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "permits-fire-e-license",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "permits-fire-noc-enoc",
+      "service_name_en": "Fire Service No Objection Certificate (e-NOC)",
+      "category_id": "permits",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "permits-fire-noc-enoc",
+        "service_name_en": "Fire Service No Objection Certificate (e-NOC)",
+        "service_name_bn": "ফায়ার সার্ভিস অনাপত্তি সনদ (e-NOC)",
+        "category_id": "permits",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Fire Service and Civil Defence Directorate",
+          "fire-service-and-civil-defence-directorate"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "fire NOC",
+          "enoc.fireservice.gov.bd",
+          "fire safety NOC"
+        ],
+        "official_source": "https://enoc.fireservice.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "permits-fire-noc-enoc",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "permits-fire-noc-enoc-en-procedure",
+            "query": "How do I apply for Fire Service No Objection Certificate (e-NOC)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-noc-enoc-bn-procedure",
+            "query": "ফায়ার সার্ভিস অনাপত্তি সনদ (e-NOC) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-noc-enoc-fee",
+            "query": "What is the fee for Fire Service No Objection Certificate (e-NOC)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-noc-enoc-documents",
+            "query": "What documents are needed for Fire Service No Objection Certificate (e-NOC)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-noc-enoc-url",
+            "query": "What is the official website for Fire Service No Objection Certificate (e-NOC)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "permits-fire-noc-enoc",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "permits-fire-safety-firm-registration",
+      "service_name_en": "Fire Safety Firm Registration",
+      "category_id": "permits",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "permits-fire-safety-firm-registration",
+        "service_name_en": "Fire Safety Firm Registration",
+        "service_name_bn": "ফায়ার সেফটি ফার্ম নিবন্ধন",
+        "category_id": "permits",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Fire Service and Civil Defence Directorate",
+          "fire-service-and-civil-defence-directorate"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "safety firm registration fire service"
+        ],
+        "official_source": "https://enoc.fireservice.gov.bd/safety_firm/register",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "permits-fire-safety-firm-registration",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "permits-fire-safety-firm-registration-en-procedure",
+            "query": "How do I apply for Fire Safety Firm Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-safety-firm-registration-bn-procedure",
+            "query": "ফায়ার সেফটি ফার্ম নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-safety-firm-registration-fee",
+            "query": "What is the fee for Fire Safety Firm Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-safety-firm-registration-documents",
+            "query": "What documents are needed for Fire Safety Firm Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-fire-safety-firm-registration-url",
+            "query": "What is the official website for Fire Safety Firm Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "permits-fire-safety-firm-registration",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "permits-forest-timber-transit",
+      "service_name_en": "Forest Timber Transit Permit",
+      "category_id": "permits",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "permits-forest-timber-transit",
+        "service_name_en": "Forest Timber Transit Permit",
+        "service_name_bn": "বন/transit permit",
+        "category_id": "permits",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Forest Department, Ministry of Environment & Forest",
+          "forest-department-ministry-of-environment-forest"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "forest department permit",
+          "timber transit pass"
+        ],
+        "official_source": "https://bforest.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "permits-forest-timber-transit",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "permits-forest-timber-transit-en-procedure",
+            "query": "How do I apply for Forest Timber Transit Permit?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-forest-timber-transit-bn-procedure",
+            "query": "বন/transit permit কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-forest-timber-transit-fee",
+            "query": "What is the fee for Forest Timber Transit Permit?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-forest-timber-transit-documents",
+            "query": "What documents are needed for Forest Timber Transit Permit?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "permits-forest-timber-transit-url",
+            "query": "What is the official website for Forest Timber Transit Permit?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "permits-forest-timber-transit",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-cash-card",
+      "service_name_en": "Postal Cash Card",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-cash-card",
+        "service_name_en": "Postal Cash Card",
+        "service_name_bn": "পোস্টাল ক্যাশ কার্ড",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "post office cash card"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-cash-card",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-cash-card-en-procedure",
+            "query": "How do I apply for Postal Cash Card?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-cash-card-bn-procedure",
+            "query": "পোস্টাল ক্যাশ কার্ড কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-cash-card-fee",
+            "query": "What is the fee for Postal Cash Card?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-cash-card-documents",
+            "query": "What documents are needed for Postal Cash Card?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-cash-card-url",
+            "query": "What is the official website for Postal Cash Card?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-cash-card",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-domestic-mail",
+      "service_name_en": "Domestic Mail Service",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-domestic-mail",
+        "service_name_en": "Domestic Mail Service",
+        "service_name_bn": "অভ্যন্তরীণ ডাক সেবা",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          " inland mail",
+          "Bangladesh Post domestic"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/921b98dc-cb15-4be4-8f0d-0125130c19f3/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-domestic-mail",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-domestic-mail-en-procedure",
+            "query": "How do I apply for Domestic Mail Service?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-domestic-mail-bn-procedure",
+            "query": "অভ্যন্তরীণ ডাক সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-domestic-mail-fee",
+            "query": "What is the fee for Domestic Mail Service?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-domestic-mail-documents",
+            "query": "What documents are needed for Domestic Mail Service?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-domestic-mail-url",
+            "query": "What is the official website for Domestic Mail Service?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-domestic-mail",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-ems",
+      "service_name_en": "Express Mail Service (EMS)",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-ems",
+        "service_name_en": "Express Mail Service (EMS)",
+        "service_name_bn": "এক্সপ্রেস মেইল সার্ভিস (ইএমএস)",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "EMS Bangladesh Post"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/a375dd34-3e14-4021-83f9-736d357d7eda/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-ems",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-ems-en-procedure",
+            "query": "How do I apply for Express Mail Service (EMS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-ems-bn-procedure",
+            "query": "এক্সপ্রেস মেইল সার্ভিস (ইএমএস) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-ems-fee",
+            "query": "What is the fee for Express Mail Service (EMS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-ems-documents",
+            "query": "What documents are needed for Express Mail Service (EMS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-ems-url",
+            "query": "What is the official website for Express Mail Service (EMS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-ems",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-emts",
+      "service_name_en": "Electronic Money Transfer Service (EMTS)",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-emts",
+        "service_name_en": "Electronic Money Transfer Service (EMTS)",
+        "service_name_bn": "ইএমটিএস (ইলেকট্রনিক মানি ট্রান্সফার)",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "postal remittance EMTS"
+        ],
+        "official_source": "https://bdpost.portal.gov.bd/site/page/f51a53e6-926b-48a7-a927-8331e2f326ff/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-emts",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-emts-en-procedure",
+            "query": "How do I apply for Electronic Money Transfer Service (EMTS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-emts-bn-procedure",
+            "query": "ইএমটিএস (ইলেকট্রনিক মানি ট্রান্সফার) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-emts-fee",
+            "query": "What is the fee for Electronic Money Transfer Service (EMTS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-emts-documents",
+            "query": "What documents are needed for Electronic Money Transfer Service (EMTS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-emts-url",
+            "query": "What is the official website for Electronic Money Transfer Service (EMTS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-emts",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-gep",
+      "service_name_en": "Government Express Post (GEP)",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-gep",
+        "service_name_en": "Government Express Post (GEP)",
+        "service_name_bn": "জিইপি (Govt. Express Post)",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "GEP mail"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/7eadb9ba-596e-482b-a1fe-712ec361a946/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-gep",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-gep-en-procedure",
+            "query": "How do I apply for Government Express Post (GEP)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-gep-bn-procedure",
+            "query": "জিইপি (Govt. Express Post) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-gep-fee",
+            "query": "What is the fee for Government Express Post (GEP)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-gep-documents",
+            "query": "What documents are needed for Government Express Post (GEP)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-gep-url",
+            "query": "What is the official website for Government Express Post (GEP)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-gep",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-international-mail",
+      "service_name_en": "International Mail Service",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-international-mail",
+        "service_name_en": "International Mail Service",
+        "service_name_bn": "আন্তর্জাতিক ডাক সেবা",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "foreign mail Bangladesh Post"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/1e0924ce-788d-4304-b47a-54d76748abf5/%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%95-%E0%A6%A1%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-international-mail",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-international-mail-en-procedure",
+            "query": "How do I apply for International Mail Service?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-international-mail-bn-procedure",
+            "query": "আন্তর্জাতিক ডাক সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-international-mail-fee",
+            "query": "What is the fee for International Mail Service?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-international-mail-documents",
+            "query": "What documents are needed for International Mail Service?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-international-mail-url",
+            "query": "What is the official website for International Mail Service?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-international-mail",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-life-insurance",
+      "service_name_en": "Postal Life Insurance",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-life-insurance",
+        "service_name_en": "Postal Life Insurance",
+        "service_name_bn": "ডাক জীবন বীমা",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "PLI Bangladesh Post"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/4ad27a53-60f4-4fb8-9c7e-28d9ec5669a2/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-life-insurance",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-life-insurance-en-procedure",
+            "query": "How do I apply for Postal Life Insurance?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-life-insurance-bn-procedure",
+            "query": "ডাক জীবন বীমা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-life-insurance-fee",
+            "query": "What is the fee for Postal Life Insurance?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-life-insurance-documents",
+            "query": "What documents are needed for Postal Life Insurance?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-life-insurance-url",
+            "query": "What is the official website for Postal Life Insurance?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-life-insurance",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-mail-tracking",
+      "service_name_en": "Domestic Mail Item Tracking",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-mail-tracking",
+        "service_name_en": "Domestic Mail Item Tracking",
+        "service_name_bn": "ডাক প্রেরণ ট্র্যাকিং",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DMS tracking",
+          "parcel tracking post office"
+        ],
+        "official_source": "https://report.dms.bdpost.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-mail-tracking",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-mail-tracking-en-procedure",
+            "query": "How do I apply for Domestic Mail Item Tracking?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-mail-tracking-bn-procedure",
+            "query": "ডাক প্রেরণ ট্র্যাকিং কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-mail-tracking-fee",
+            "query": "What is the fee for Domestic Mail Item Tracking?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-mail-tracking-documents",
+            "query": "What documents are needed for Domestic Mail Item Tracking?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-mail-tracking-url",
+            "query": "What is the official website for Domestic Mail Item Tracking?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-mail-tracking",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-money-order",
+      "service_name_en": "Postal Money Order",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-money-order",
+        "service_name_en": "Postal Money Order",
+        "service_name_bn": "মানি অর্ডার",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "money order Bangladesh Post"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/2b5d6dac-0cd7-4342-9cab-e0b66765aa69/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-money-order",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-money-order-en-procedure",
+            "query": "How do I apply for Postal Money Order?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-money-order-bn-procedure",
+            "query": "মানি অর্ডার কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-money-order-fee",
+            "query": "What is the fee for Postal Money Order?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-money-order-documents",
+            "query": "What documents are needed for Postal Money Order?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-money-order-url",
+            "query": "What is the official website for Postal Money Order?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-money-order",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-postage-calculator",
+      "service_name_en": "Postal Postage Calculator",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-postage-calculator",
+        "service_name_en": "Postal Postage Calculator",
+        "service_name_bn": "ডাক মাশুল ক্যালকুলেটর",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "mail fee calculator"
+        ],
+        "official_source": "https://booking.bpodms.gov.bd/mashul",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-postage-calculator",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-postage-calculator-en-procedure",
+            "query": "How do I apply for Postal Postage Calculator?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-postage-calculator-bn-procedure",
+            "query": "ডাক মাশুল ক্যালকুলেটর কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-postage-calculator-fee",
+            "query": "What is the fee for Postal Postage Calculator?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-postage-calculator-documents",
+            "query": "What documents are needed for Postal Postage Calculator?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-postage-calculator-url",
+            "query": "What is the official website for Postal Postage Calculator?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-postage-calculator",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-savings-bank",
+      "service_name_en": "Post Office Savings Bank",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-savings-bank",
+        "service_name_en": "Post Office Savings Bank",
+        "service_name_bn": "ডাক সঞ্চয় ব্যাংক",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "postal savings bank"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-savings-bank",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-savings-bank-en-procedure",
+            "query": "How do I apply for Post Office Savings Bank?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-savings-bank-bn-procedure",
+            "query": "ডাক সঞ্চয় ব্যাংক কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-savings-bank-fee",
+            "query": "What is the fee for Post Office Savings Bank?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-savings-bank-documents",
+            "query": "What documents are needed for Post Office Savings Bank?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-savings-bank-url",
+            "query": "What is the official website for Post Office Savings Bank?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-savings-bank",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-savings-certificate",
+      "service_name_en": "Postal Savings Certificate",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-savings-certificate",
+        "service_name_en": "Postal Savings Certificate",
+        "service_name_bn": "ডাক সঞ্চয়পত্র",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "sanchaypatra post office"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/32495e81-3fa6-420d-a368-b05587397d0a/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-savings-certificate",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-savings-certificate-en-procedure",
+            "query": "How do I apply for Postal Savings Certificate?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-savings-certificate-bn-procedure",
+            "query": "ডাক সঞ্চয়পত্র কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-savings-certificate-fee",
+            "query": "What is the fee for Postal Savings Certificate?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-savings-certificate-documents",
+            "query": "What documents are needed for Postal Savings Certificate?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-savings-certificate-url",
+            "query": "What is the official website for Postal Savings Certificate?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-savings-certificate",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "post-speed-post",
+      "service_name_en": "Speed Post",
+      "category_id": "post",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "post-speed-post",
+        "service_name_en": "Speed Post",
+        "service_name_bn": "স্পিড পোস্ট",
+        "category_id": "post",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Post Office (Directorate of Posts)",
+          "bangladesh-post-office-directorate-of-posts"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "speedpost Bangladesh"
+        ],
+        "official_source": "https://bdpost.gov.bd/site/page/34b7ea83-3911-429f-8ec5-58f0367c53bd/-",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "post-speed-post",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "post-speed-post-en-procedure",
+            "query": "How do I apply for Speed Post?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-speed-post-bn-procedure",
+            "query": "স্পিড পোস্ট কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-speed-post-fee",
+            "query": "What is the fee for Speed Post?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-speed-post-documents",
+            "query": "What documents are needed for Speed Post?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "post-speed-post-url",
+            "query": "What is the official website for Speed Post?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "post-speed-post",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "professional-bar-council-enrolment",
+      "service_name_en": "Bangladesh Bar Council Advocate Enrolment",
+      "category_id": "professional",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "professional-bar-council-enrolment",
+        "service_name_en": "Bangladesh Bar Council Advocate Enrolment",
+        "service_name_bn": "বাংলাদেশ বার কাউন্সিল ভর্তি",
+        "category_id": "professional",
+        "research_profile": "PROFESSIONAL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Bar Council",
+          "bangladesh-bar-council"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "bar council enrolment",
+          "advocate registration"
+        ],
+        "official_source": "https://www.barcouncil.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "professional-bar-council-enrolment",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "professional-bar-council-enrolment-en-procedure",
+            "query": "How do I apply for Bangladesh Bar Council Advocate Enrolment?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-bar-council-enrolment-bn-procedure",
+            "query": "বাংলাদেশ বার কাউন্সিল ভর্তি কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-bar-council-enrolment-fee",
+            "query": "What is the fee for Bangladesh Bar Council Advocate Enrolment?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-bar-council-enrolment-documents",
+            "query": "What documents are needed for Bangladesh Bar Council Advocate Enrolment?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-bar-council-enrolment-url",
+            "query": "What is the official website for Bangladesh Bar Council Advocate Enrolment?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "professional-bar-council-enrolment",
+        "profile_key": "PROFESSIONAL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "professional-bmdc-doctor-registration",
+      "service_name_en": "BMDC Doctor Registration",
+      "category_id": "professional",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "professional-bmdc-doctor-registration",
+        "service_name_en": "BMDC Doctor Registration",
+        "service_name_bn": "BMDC চিকিৎসক নিবন্ধন",
+        "category_id": "professional",
+        "research_profile": "PROFESSIONAL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Medical and Dental Council (BMDC)",
+          "bmdc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "medical council registration",
+          "doctor licence BMDC"
+        ],
+        "official_source": "https://www.bmdc.org.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "professional-bmdc-doctor-registration",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "professional-bmdc-doctor-registration-en-procedure",
+            "query": "How do I apply for BMDC Doctor Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-bmdc-doctor-registration-bn-procedure",
+            "query": "BMDC চিকিৎসক নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-bmdc-doctor-registration-fee",
+            "query": "What is the fee for BMDC Doctor Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-bmdc-doctor-registration-documents",
+            "query": "What documents are needed for BMDC Doctor Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-bmdc-doctor-registration-url",
+            "query": "What is the official website for BMDC Doctor Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "professional-bmdc-doctor-registration",
+        "profile_key": "PROFESSIONAL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "professional-engineer-registration",
+      "service_name_en": "Professional Engineer Registration",
+      "category_id": "professional",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "professional-engineer-registration",
+        "service_name_en": "Professional Engineer Registration",
+        "service_name_bn": "ইঞ্জিনিয়ার নিবন্ধন (IEB/BPDB)",
+        "category_id": "professional",
+        "research_profile": "PROFESSIONAL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Institution of Engineers Bangladesh (IEB)",
+          "institution-of-engineers-bangladesh-ieb"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "IEB registration",
+          "engineer council Bangladesh"
+        ],
+        "official_source": "https://www.ieb.org.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "professional-engineer-registration",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "professional-engineer-registration-en-procedure",
+            "query": "How do I apply for Professional Engineer Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-engineer-registration-bn-procedure",
+            "query": "ইঞ্জিনিয়ার নিবন্ধন (IEB/BPDB) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-engineer-registration-fee",
+            "query": "What is the fee for Professional Engineer Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-engineer-registration-documents",
+            "query": "What documents are needed for Professional Engineer Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-engineer-registration-url",
+            "query": "What is the official website for Professional Engineer Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "professional-engineer-registration",
+        "profile_key": "PROFESSIONAL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "professional-nursing-council-registration",
+      "service_name_en": "Nursing and Midwifery Council Registration",
+      "category_id": "professional",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "professional-nursing-council-registration",
+        "service_name_en": "Nursing and Midwifery Council Registration",
+        "service_name_bn": "নার্সিং ও মিডওয়াইফারি কাউন্সিল নিবন্ধন",
+        "category_id": "professional",
+        "research_profile": "PROFESSIONAL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Nursing and Midwifery Council (BNMC)",
+          "bangladesh-nursing-and-midwifery-council-bnmc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "BNMC registration",
+          "nurse registration Bangladesh"
+        ],
+        "official_source": "https://www.bnmc.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "professional-nursing-council-registration",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "professional-nursing-council-registration-en-procedure",
+            "query": "How do I apply for Nursing and Midwifery Council Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-nursing-council-registration-bn-procedure",
+            "query": "নার্সিং ও মিডওয়াইফারি কাউন্সিল নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-nursing-council-registration-fee",
+            "query": "What is the fee for Nursing and Midwifery Council Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-nursing-council-registration-documents",
+            "query": "What documents are needed for Nursing and Midwifery Council Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-nursing-council-registration-url",
+            "query": "What is the official website for Nursing and Midwifery Council Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "professional-nursing-council-registration",
+        "profile_key": "PROFESSIONAL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "professional-pharmacy-council-registration",
+      "service_name_en": "Pharmacy Council Pharmacist Registration",
+      "category_id": "professional",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "professional-pharmacy-council-registration",
+        "service_name_en": "Pharmacy Council Pharmacist Registration",
+        "service_name_bn": "ফার্মেসি কাউন্সিল নিবন্ধন",
+        "category_id": "professional",
+        "research_profile": "PROFESSIONAL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Pharmacy Council of Bangladesh",
+          "pharmacy-council-of-bangladesh"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "pharmacist registration",
+          "PCB registration"
+        ],
+        "official_source": "https://www.pcb.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "professional-pharmacy-council-registration",
+        "wave_id": "wave-010",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "professional-pharmacy-council-registration-en-procedure",
+            "query": "How do I apply for Pharmacy Council Pharmacist Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-pharmacy-council-registration-bn-procedure",
+            "query": "ফার্মেসি কাউন্সিল নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-pharmacy-council-registration-fee",
+            "query": "What is the fee for Pharmacy Council Pharmacist Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-pharmacy-council-registration-documents",
+            "query": "What documents are needed for Pharmacy Council Pharmacist Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "professional-pharmacy-council-registration-url",
+            "query": "What is the official website for Pharmacy Council Pharmacist Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "professional-pharmacy-council-registration",
+        "profile_key": "PROFESSIONAL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    }
+  ],
+  "status_counts": {
+    "COMPLETE": 0,
+    "PARTIAL": 30,
+    "DEFERRED": 0,
+    "BLOCKED": 0
+  },
+  "verified_claims": 73,
+  "partial_claims": 17,
+  "conflicts": 0,
+  "knowledge_gaps": 77,
+  "staging_path": "/workspace/data/research/waves/wave-010/staging",
+  "e2e_summary": {
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "answer_supported": 0
+  },
+  "regression": {
+    "passed": true,
+    "metrics": {
+      "hallucinations": 0,
+      "citation_failures": 0,
+      "batch_01_pass_pct": 100.0,
+      "passport_pass_pct": 100.0,
+      "batch_02b_pass_pct": 100.0,
+      "routing_pass_pct": 100.0,
+      "pytest_failed": 0,
+      "batch_03a_pass_pct": 100.0,
+      "batch_03b_pass_pct": 100.0,
+      "batch_03c_pass_pct": 100.0
+    },
+    "failures": [],
+    "automation_exit_code": 0
+  },
+  "wave_quality": {
+    "passed": true,
+    "wave_id": "wave-010",
+    "services_total": 30,
+    "false_completion_count": 0,
+    "services_with_sources": 30,
+    "services_with_verified_claims": 30,
+    "source_rate": 1.0,
+    "verified_rate": 1.0,
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "regression_failures": [],
+    "blocking_reasons": [],
+    "service_statuses": {
+      "nid-download-copy": "PARTIAL",
+      "nid-expatriate-registration": "PARTIAL",
+      "nid-new-voter-registration": "PARTIAL",
+      "nid-online-account-registration": "PARTIAL",
+      "nid-other-info-correction": "PARTIAL",
+      "nid-photo-signature-appointment": "PARTIAL",
+      "nid-reissue-lost": "PARTIAL",
+      "nid-voter-area-change": "PARTIAL",
+      "permits-fire-e-license": "PARTIAL",
+      "permits-fire-noc-enoc": "PARTIAL",
+      "permits-fire-safety-firm-registration": "PARTIAL",
+      "permits-forest-timber-transit": "PARTIAL",
+      "post-cash-card": "PARTIAL",
+      "post-domestic-mail": "PARTIAL",
+      "post-ems": "PARTIAL",
+      "post-emts": "PARTIAL",
+      "post-gep": "PARTIAL",
+      "post-international-mail": "PARTIAL",
+      "post-life-insurance": "PARTIAL",
+      "post-mail-tracking": "PARTIAL",
+      "post-money-order": "PARTIAL",
+      "post-postage-calculator": "PARTIAL",
+      "post-savings-bank": "PARTIAL",
+      "post-savings-certificate": "PARTIAL",
+      "post-speed-post": "PARTIAL",
+      "professional-bar-council-enrolment": "PARTIAL",
+      "professional-bmdc-doctor-registration": "PARTIAL",
+      "professional-engineer-registration": "PARTIAL",
+      "professional-nursing-council-registration": "PARTIAL",
+      "professional-pharmacy-council-registration": "PARTIAL"
+    }
+  },
+  "quality_passed": true
+}

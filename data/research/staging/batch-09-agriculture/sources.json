@@ -1,0 +1,243 @@
+{
+  "batch_id": "batch-09-agriculture",
+  "sources": [
+    {
+      "source_id": "src-agri-bamis-farmer-registration",
+      "service_id": "agri-bamis-farmer-registration",
+      "url": "https://www.bamis.gov.bd/en/registration/farmer/",
+      "portal_url": null,
+      "title": "Bangladesh Agro-Meteorological Information Service (BAMIS)",
+      "authority_id": "department-of-agricultural-extension-dae-bamis",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.bamis.gov.bd/en/registration/farmer/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh Agro-Meteorological Information Service (BAMIS)",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-agri-dae-district-extension",
+      "service_id": "agri-dae-district-extension",
+      "url": "https://dae.kishoreganj.gov.bd/en",
+      "portal_url": null,
+      "title": "District Agricultural Extension Services",
+      "authority_id": "department-of-agricultural-extension-dae",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dae.kishoreganj.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-agri-e-pesticide-prescription",
+      "service_id": "agri-e-pesticide-prescription",
+      "url": "https://dae.kishoreganj.gov.bd/en",
+      "portal_url": null,
+      "title": "E-Pesticide Prescription",
+      "authority_id": "department-of-agricultural-extension-dae",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dae.kishoreganj.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-agri-farmer-digital-address",
+      "service_id": "agri-farmer-digital-address",
+      "url": "https://dae.kishoreganj.gov.bd/en",
+      "portal_url": null,
+      "title": "Farmer Digital Address",
+      "authority_id": "department-of-agricultural-extension-dae",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dae.kishoreganj.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-agri-farmers-window",
+      "service_id": "agri-farmers-window",
+      "url": "https://sacp.dae.gov.bd/en/farmers-window/",
+      "portal_url": null,
+      "title": "Farmer&#8217;s window",
+      "authority_id": "department-of-agricultural-extension-dae",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://sacp.dae.gov.bd/en/farmers-window/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Farmer&#8217;s window",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-agri-fsmms-farmer-registration",
+      "service_id": "agri-fsmms-farmer-registration",
+      "url": "https://fsmms.dgf.gov.bd/portal/bn/farmer",
+      "portal_url": null,
+      "title": "কৃষক",
+      "authority_id": "directorate-general-of-food",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://fsmms.dgf.gov.bd/portal/bn/farmer",
+        "status_code": 200,
+        "reachable": true,
+        "title": "কৃষক",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-agriculture-fisheries-fish-farm-registration",
+      "service_id": "agriculture-fisheries-fish-farm-registration",
+      "url": "https://fisheries.gov.bd/",
+      "portal_url": null,
+      "title": "Fish Farm Registration",
+      "authority_id": "department-of-fisheries-dof",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-agriculture-livestock-farm-registration",
+      "service_id": "agriculture-livestock-farm-registration",
+      "url": "https://dls.gov.bd/",
+      "portal_url": null,
+      "title": "Livestock Farm Registration (DLS)",
+      "authority_id": "department-of-livestock-services-dls",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dls.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-fisheries-export-health-certificate",
+      "service_id": "fisheries-export-health-certificate",
+      "url": "https://www.ecertificate.fisheries.gov.bd/",
+      "portal_url": null,
+      "title": "Fisheries Export Health Certificate",
+      "authority_id": "department-of-fisheries-fiqc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known"
+      }
+    },
+    {
+      "source_id": "src-fisheries-fioc-user-registration",
+      "service_id": "fisheries-fioc-user-registration",
+      "url": "https://www.ecertificate.fisheries.gov.bd/",
+      "portal_url": null,
+      "title": "FIQC e-Certification User Registration",
+      "authority_id": "department-of-fisheries-fiqc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known"
+      }
+    },
+    {
+      "source_id": "src-fisheries-import-noc",
+      "service_id": "fisheries-import-noc",
+      "url": "https://www.ecertificate.fisheries.gov.bd/",
+      "portal_url": null,
+      "title": "Fisheries Import No Objection Certificate (NOC)",
+      "authority_id": "department-of-fisheries-fiqc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known"
+      }
+    },
+    {
+      "source_id": "src-fisheries-import-registration-certificate",
+      "service_id": "fisheries-import-registration-certificate",
+      "url": "https://www.ecertificate.fisheries.gov.bd/",
+      "portal_url": null,
+      "title": "Fisheries Import Registration Certificate",
+      "authority_id": "department-of-fisheries-fiqc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known"
+      }
+    },
+    {
+      "source_id": "src-fisheries-import-release-order",
+      "service_id": "fisheries-import-release-order",
+      "url": "https://www.ecertificate.fisheries.gov.bd/",
+      "portal_url": null,
+      "title": "Fisheries Import Release Order",
+      "authority_id": "department-of-fisheries-fiqc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known"
+      }
+    },
+    {
+      "source_id": "src-fisheries-processing-plant-license",
+      "service_id": "fisheries-processing-plant-license",
+      "url": "https://www.ecertificate.fisheries.gov.bd/",
+      "portal_url": null,
+      "title": "Fish Processing Plant Licence",
+      "authority_id": "department-of-fisheries-fiqc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

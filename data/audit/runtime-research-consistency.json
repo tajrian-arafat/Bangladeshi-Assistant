@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-08-25T03:41:01.559895+00:00",
+  "runtime_db_available": false,
+  "runtime_db_path": "/workspace/data/bda.db",
+  "services_checked": 454,
+  "issue_count": 10,
+  "issues": [
+    {
+      "service_id": "civil-bdris-application-print",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    },
+    {
+      "service_id": "civil-birth-death-verify",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    },
+    {
+      "service_id": "civil-birth-registration",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    },
+    {
+      "service_id": "civil-birth-registration-correction",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    },
+    {
+      "service_id": "civil-death-registration",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    },
+    {
+      "service_id": "civil-divorce-registration",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    },
+    {
+      "service_id": "civil-marriage-registrar-hindu-list",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    },
+    {
+      "service_id": "civil-marriage-registrar-muslim-list",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    },
+    {
+      "service_id": "civil-marriage-registration",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    },
+    {
+      "service_id": "local-character-certificate",
+      "issue": "verified_count_mismatch",
+      "detail": "Audit counted verified claims but staging has none VERIFIED"
+    }
+  ],
+  "note": "Runtime DB empty — consistency checks limited to staging/verification file artifacts."
+}

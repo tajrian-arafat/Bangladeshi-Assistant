@@ -1,0 +1,94 @@
+{
+  "$schema_name": "bda.research.staging",
+  "version": "1.0.0",
+  "description": "File-based research/staging representation for the claim provenance chain. Not the SQLAlchemy runtime schema. Not publishable without verification.",
+  "publication_gate": {
+    "runtime_tables_allowed_only_after": "VERIFIED + human/reviewer approval",
+    "forbidden_until_then": [
+      "seed_database overwrite",
+      "Service.status=ACTIVE from research",
+      "ChecklistItem population from research MUST",
+      "Fee.amount overwrite from research",
+      "embedding generation for RAG"
+    ]
+  },
+  "provenance_chain": [
+    "source",
+    "source_version",
+    "evidence",
+    "claim",
+    "service_binding",
+    "requirement_or_procedure_or_fee",
+    "pipeline_status",
+    "confidence",
+    "provenance"
+  ],
+  "pipeline_statuses": [
+    "DISCOVERED",
+    "EXTRACTED",
+    "NORMALIZED",
+    "CROSS_CHECKED",
+    "PENDING_REVIEW",
+    "VERIFIED",
+    "CONFLICTING",
+    "OUTDATED",
+    "REJECTED"
+  ],
+  "notes": {
+    "VERIFIED": "Reserved for post-verification phase. Batch research scripts must not emit VERIFIED.",
+    "runtime_gap": "Claim, ClaimEvidence, KnowledgeGap tables are designed but not implemented in backend/app/domain/models/knowledge.py. Staging JSON preserves the chain until those exist."
+  },
+  "entities": {
+    "source": {
+      "required": ["source_id", "source_url", "authority_tier", "source_type"],
+      "optional": ["source_title", "responsible_body", "published_date", "language"]
+    },
+    "source_version": {
+      "required": ["source_version_id", "source_id", "url", "retrieved_at"],
+      "optional": ["content_hash", "fetched_method", "http_status", "raw_pointer", "notes"],
+      "maps_toward_runtime": "source_versions"
+    },
+    "evidence": {
+      "required": ["evidence_id", "source_version_id", "summary"],
+      "optional": ["excerpt", "locator", "language", "captured_at"],
+      "maps_toward_runtime": "ClaimEvidence (missing) / knowledge_chunks (partial)"
+    },
+    "claim": {
+      "required": [
+        "claim_id",
+        "service_id",
+        "claim_text",
+        "claim_type",
+        "information_class",
+        "pipeline_status",
+        "confidence",
+        "evidence_ids",
+        "provenance"
+      ],
+      "information_class": ["OFFICIAL", "PRACTICAL", "DISCOVERY"],
+      "maps_toward_runtime": "Claim table (missing)"
+    },
+    "service_research_record": {
+      "required": ["service_id", "catalogue_status", "publication_status", "pipeline_status"],
+      "publication_status_values": ["STAGING_ONLY", "PENDING_PUBLICATION", "PUBLISHED", "BLOCKED"],
+      "maps_toward_runtime": "services + related tables after verification"
+    },
+    "requirement": {
+      "required": ["requirement_id", "service_id", "classification", "claim_ids"],
+      "classification": ["MUST", "CONDITIONAL", "RECOMMENDED", "NOT_APPLICABLE"],
+      "maps_toward_runtime": "checklist_items + checklist_conditions"
+    },
+    "fee": {
+      "required": ["fee_id", "service_id", "claim_ids", "pipeline_status"],
+      "maps_toward_runtime": "fees"
+    },
+    "procedure_step": {
+      "required": ["step_id", "service_id", "order", "claim_ids"],
+      "maps_toward_runtime": "procedures + procedure_steps"
+    },
+    "conflict": {
+      "required": ["conflict_id", "service_id", "claim_ids", "resolution"],
+      "resolution_values": ["UNRESOLVED", "PREFER_A", "PREFER_B", "REJECTED_BOTH", "SUPERSEDED"]
+    }
+  }
+}

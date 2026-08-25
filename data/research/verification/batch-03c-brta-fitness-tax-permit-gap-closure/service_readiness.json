@@ -1,0 +1,87 @@
+{
+  "services": {
+    "brta-advance-income-tax": {
+      "readiness": "YELLOW",
+      "reason": "Portal metadata captured; CMS body empty. Fees CALCULATOR_DERIVED.",
+      "gap_closure_delta": "UNVERIFIED procedure → YELLOW metadata"
+    },
+    "brta-bsp-user-registration": {
+      "readiness": "YELLOW",
+      "reason": "BSP register URL catalogue-confirmed; RENDERED during probe.",
+      "gap_closure_delta": "availability evidence: RENDERED"
+    },
+    "brta-color-change": {
+      "readiness": "YELLOW",
+      "reason": "Color change portal metadata captured; procedural CMS body empty.",
+      "gap_closure_delta": "UNVERIFIED procedure → YELLOW metadata"
+    },
+    "brta-driving-school-registration": {
+      "readiness": "YELLOW",
+      "reason": "BSP roadSafety RENDERED during probe; workflow not captured.",
+      "gap_closure_delta": "availability evidence: RENDERED"
+    },
+    "brta-e-document-verification": {
+      "readiness": "YELLOW",
+      "reason": "BSP hub RENDERED during probe; e-doc verification path not captured.",
+      "gap_closure_delta": "availability evidence: RENDERED"
+    },
+    "brta-engine-change": {
+      "readiness": "YELLOW",
+      "reason": "Engine change portal metadata captured; CMS body empty.",
+      "gap_closure_delta": "UNVERIFIED procedure → YELLOW metadata"
+    },
+    "brta-fee-calculator": {
+      "readiness": "YELLOW",
+      "reason": "Fee calculator RENDERED during probe; fees CALCULATOR_DERIVED.",
+      "gap_closure_delta": "availability evidence: RENDERED"
+    },
+    "brta-fitness-certificate": {
+      "readiness": "YELLOW",
+      "reason": "Fitness page title verified; validity-by-class UNRESOLVED — no invented periods.",
+      "gap_closure_delta": "03B deferral PARTIALLY_RESOLVED; validity matrix still UNRESOLVED"
+    },
+    "brta-mv-tax-payment": {
+      "readiness": "YELLOW",
+      "reason": "MV tax portal DNS/probe failed (net::ERR_NAME_NOT_RESOLVED at https://brta.cnsbd.com/mvtax_brta); catalogue URL retained.",
+      "gap_closure_delta": "probe failed; URL catalogue-confirmed"
+    },
+    "brta-payment-verification": {
+      "readiness": "YELLOW",
+      "reason": "BSP hub RENDERED during probe.",
+      "gap_closure_delta": "availability evidence: RENDERED"
+    },
+    "brta-route-permit": {
+      "readiness": "YELLOW",
+      "reason": "Route permit portal metadata captured; route-type matrix UNRESOLVED.",
+      "gap_closure_delta": "metadata captured; route-type gap UNRESOLVED"
+    },
+    "brta-tax-token": {
+      "readiness": "YELLOW",
+      "reason": "Tax token portal metadata captured; CMS body empty. Fees CALCULATOR_DERIVED.",
+      "gap_closure_delta": "UNVERIFIED procedure → YELLOW metadata"
+    },
+    "brta-tire-size-change": {
+      "readiness": "YELLOW",
+      "reason": "Tire size change portal metadata captured; CMS body empty.",
+      "gap_closure_delta": "UNVERIFIED procedure → YELLOW metadata"
+    },
+    "transport-driving-school-licence": {
+      "readiness": "YELLOW",
+      "reason": "Licence workflow not captured; BSP roadSafety off-hours.",
+      "gap_closure_delta": "unchanged YELLOW"
+    },
+    "transport-route-permit": {
+      "readiness": "YELLOW",
+      "reason": "BSP operator route permit workflow not captured; route-type matrix UNRESOLVED.",
+      "gap_closure_delta": "unchanged YELLOW"
+    }
+  },
+  "summary": {
+    "green": 0,
+    "yellow": 15,
+    "red": 0
+  },
+  "prior_readiness_source": "data/research/raw/batch-03c-brta-fitness-tax-permit/metadata.json",
+  "updated_at": "2026-08-25T03:41:07.414061+00:00",
+  "note": "All 15 BATCH_03C services YELLOW — no RED; fitness validity intentionally UNRESOLVED."
+}

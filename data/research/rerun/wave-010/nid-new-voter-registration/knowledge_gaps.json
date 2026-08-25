@@ -1,0 +1,19 @@
+{
+  "service_id": "nid-new-voter-registration",
+  "gaps": [
+    {
+      "gap_id": "gap-nid-new-voter-registration-fee-unverified",
+      "service_id": "nid-new-voter-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for New Voter and National ID Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-nid-new-voter-registration-documents-unverified",
+      "service_id": "nid-new-voter-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for New Voter and National ID Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

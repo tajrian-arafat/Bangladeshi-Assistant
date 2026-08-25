@@ -1,0 +1,4066 @@
+{
+  "wave_id": "wave-009",
+  "wave_number": 9,
+  "run_id": "wave-009-67309ccf",
+  "commit_sha": "9989ff0e38e5",
+  "generated_at": "2026-08-25T03:29:05.894437+00:00",
+  "wave_size": 30,
+  "services_attempted": [
+    "housing-rajuk-occupancy-certificate",
+    "housing-rajuk-planning-permit",
+    "housing-rajuk-professional-registration",
+    "identity-voter-slip-download",
+    "judiciary-supreme-court-certified-copy",
+    "judiciary-supreme-court-e-filing",
+    "judiciary-virtual-court-services",
+    "legal-aid-district-helpline-16430",
+    "legal-aid-government-service",
+    "legal-aid-helpline-16699",
+    "legal-aid-online-application",
+    "legal-aid-panel-lawyer-list",
+    "licence-trade-local-government",
+    "local-certificate-verify",
+    "local-death-certificate-union",
+    "local-holding-tax-payment",
+    "local-marital-status-certificate",
+    "local-nationality-certificate",
+    "local-noc-certificate",
+    "local-passport-attestation",
+    "local-unno-digital-upazila-services",
+    "local-voter-transfer-attestation",
+    "migration-e-apostille",
+    "mofa-csat",
+    "mofa-document-attestation",
+    "mofa-education-attestation-chain",
+    "mofa-nv-loi-application",
+    "nid-card-info-correction",
+    "nid-claim-account",
+    "nid-combined-correction"
+  ],
+  "service_results": [
+    {
+      "service_id": "housing-rajuk-occupancy-certificate",
+      "service_name_en": "RAJUK Occupancy Certificate",
+      "category_id": "housing",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "housing-rajuk-occupancy-certificate",
+        "service_name_en": "RAJUK Occupancy Certificate",
+        "service_name_bn": "RAJUK Occupancy Certificate (OC)",
+        "category_id": "housing",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Rajdhani Unnayan Kartripakkha (RAJUK)",
+          "rajdhani-unnayan-kartripakkha-rajuk"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "building completion certificate RAJUK",
+          "RAJUK Occupancy Certificate"
+        ],
+        "official_source": "https://ecps.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "housing-rajuk-occupancy-certificate",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "housing-rajuk-occupancy-certificate-en-procedure",
+            "query": "How do I apply for RAJUK Occupancy Certificate?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-occupancy-certificate-bn-procedure",
+            "query": "RAJUK Occupancy Certificate (OC) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-occupancy-certificate-fee",
+            "query": "What is the fee for RAJUK Occupancy Certificate?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-occupancy-certificate-documents",
+            "query": "What documents are needed for RAJUK Occupancy Certificate?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-occupancy-certificate-url",
+            "query": "What is the official website for RAJUK Occupancy Certificate?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "housing-rajuk-occupancy-certificate",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "housing-rajuk-planning-permit",
+      "service_name_en": "RAJUK Planning Permit (PP)",
+      "category_id": "housing",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "housing-rajuk-planning-permit",
+        "service_name_en": "RAJUK Planning Permit (PP)",
+        "service_name_bn": "RAJUK পরিকল্পনা অনুমোদন (PP)",
+        "category_id": "housing",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Rajdhani Unnayan Kartripakkha (RAJUK)",
+          "rajdhani-unnayan-kartripakkha-rajuk"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "land use clearance RAJUK",
+          "planning permission Dhaka",
+          "RAJUK Planning Permit (PP)"
+        ],
+        "official_source": "https://ecps.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "housing-rajuk-planning-permit",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "housing-rajuk-planning-permit-en-procedure",
+            "query": "How do I apply for RAJUK Planning Permit (PP)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-planning-permit-bn-procedure",
+            "query": "RAJUK পরিকল্পনা অনুমোদন (PP) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-planning-permit-fee",
+            "query": "What is the fee for RAJUK Planning Permit (PP)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-planning-permit-documents",
+            "query": "What documents are needed for RAJUK Planning Permit (PP)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-planning-permit-url",
+            "query": "What is the official website for RAJUK Planning Permit (PP)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "housing-rajuk-planning-permit",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "housing-rajuk-professional-registration",
+      "service_name_en": "RAJUK Professional Registration (ECPS)",
+      "category_id": "housing",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "housing-rajuk-professional-registration",
+        "service_name_en": "RAJUK Professional Registration (ECPS)",
+        "service_name_bn": "RAJUK পেশাজীবী নিবন্ধন (ECPS)",
+        "category_id": "housing",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Rajdhani Unnayan Kartripakkha (RAJUK)",
+          "rajdhani-unnayan-kartripakkha-rajuk"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "architect engineer registration RAJUK",
+          "RAJUK Professional Registration (ECPS)"
+        ],
+        "official_source": "https://ecps.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "housing-rajuk-professional-registration",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "housing-rajuk-professional-registration-en-procedure",
+            "query": "How do I apply for RAJUK Professional Registration (ECPS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-professional-registration-bn-procedure",
+            "query": "RAJUK পেশাজীবী নিবন্ধন (ECPS) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-professional-registration-fee",
+            "query": "What is the fee for RAJUK Professional Registration (ECPS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-professional-registration-documents",
+            "query": "What documents are needed for RAJUK Professional Registration (ECPS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "housing-rajuk-professional-registration-url",
+            "query": "What is the official website for RAJUK Professional Registration (ECPS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "housing-rajuk-professional-registration",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "identity-voter-slip-download",
+      "service_name_en": "Voter Information Slip Download",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "identity-voter-slip-download",
+        "service_name_en": "Voter Information Slip Download",
+        "service_name_bn": "ভোটার স্লিপ/তথ্য ডাউনলোড",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "voter slip",
+          "voter ID slip EC"
+        ],
+        "official_source": "https://services.nidw.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "identity-voter-slip-download",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "identity-voter-slip-download-en-procedure",
+            "query": "How do I apply for Voter Information Slip Download?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "identity-voter-slip-download-bn-procedure",
+            "query": "ভোটার স্লিপ/তথ্য ডাউনলোড কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "identity-voter-slip-download-fee",
+            "query": "What is the fee for Voter Information Slip Download?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "identity-voter-slip-download-documents",
+            "query": "What documents are needed for Voter Information Slip Download?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "identity-voter-slip-download-url",
+            "query": "What is the official website for Voter Information Slip Download?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "identity-voter-slip-download",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "judiciary-supreme-court-certified-copy",
+      "service_name_en": "Supreme Court Certified Copy of Judgment/Order",
+      "category_id": "judiciary",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "judiciary-supreme-court-certified-copy",
+        "service_name_en": "Supreme Court Certified Copy of Judgment/Order",
+        "service_name_bn": "সুপ্রীম কোর্ট certified copy",
+        "category_id": "judiciary",
+        "research_profile": "JUDICIARY",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Supreme Court of Bangladesh",
+          "supreme-court-of-bangladesh"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "court certified copy",
+          "SC copy",
+          "High Court certified copy application"
+        ],
+        "official_source": "https://supremecourt.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "judiciary-supreme-court-certified-copy",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "judiciary-supreme-court-certified-copy-en-procedure",
+            "query": "How do I apply for Supreme Court Certified Copy of Judgment/Order?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-certified-copy-bn-procedure",
+            "query": "সুপ্রীম কোর্ট certified copy কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-certified-copy-fee",
+            "query": "What is the fee for Supreme Court Certified Copy of Judgment/Order?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-certified-copy-documents",
+            "query": "What documents are needed for Supreme Court Certified Copy of Judgment/Order?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-certified-copy-url",
+            "query": "What is the official website for Supreme Court Certified Copy of Judgment/Order?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "judiciary-supreme-court-certified-copy",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "judiciary-supreme-court-e-filing",
+      "service_name_en": "Supreme Court e-Filing (Lawyers Panel)",
+      "category_id": "judiciary",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "judiciary-supreme-court-e-filing",
+        "service_name_en": "Supreme Court e-Filing (Lawyers Panel)",
+        "service_name_bn": "সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel)",
+        "category_id": "judiciary",
+        "research_profile": "JUDICIARY",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Supreme Court of Bangladesh",
+          "supreme-court-of-bangladesh"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "apps.supremecourt.gov.bd",
+          "mycase portal",
+          "SC e-filing"
+        ],
+        "official_source": "https://apps.supremecourt.gov.bd/mycase",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "judiciary-supreme-court-e-filing",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "judiciary-supreme-court-e-filing-en-procedure",
+            "query": "How do I apply for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-bn-procedure",
+            "query": "সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-fee",
+            "query": "What is the fee for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-documents",
+            "query": "What documents are needed for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-supreme-court-e-filing-url",
+            "query": "What is the official website for Supreme Court e-Filing (Lawyers Panel)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "judiciary-supreme-court-e-filing",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "judiciary-virtual-court-services",
+      "service_name_en": "Virtual Court Services",
+      "category_id": "judiciary",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "judiciary-virtual-court-services",
+        "service_name_en": "Virtual Court Services",
+        "service_name_bn": "ভার্চুয়াল/অনলাইন আদালত সেবা",
+        "category_id": "judiciary",
+        "research_profile": "JUDICIARY",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Law and Justice Division / Supreme Court of Bangladesh",
+          "law-and-justice-division-supreme-court-of-bangladesh"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "virtual court Bangladesh",
+          "e-court hearing"
+        ],
+        "official_source": "https://supremecourt.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "judiciary-virtual-court-services",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "judiciary-virtual-court-services-en-procedure",
+            "query": "How do I apply for Virtual Court Services?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-virtual-court-services-bn-procedure",
+            "query": "ভার্চুয়াল/অনলাইন আদালত সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-virtual-court-services-fee",
+            "query": "What is the fee for Virtual Court Services?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-virtual-court-services-documents",
+            "query": "What documents are needed for Virtual Court Services?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "judiciary-virtual-court-services-url",
+            "query": "What is the official website for Virtual Court Services?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "judiciary-virtual-court-services",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "legal-aid-district-helpline-16430",
+      "service_name_en": "District Legal Aid Toll-free Helpline (16430)",
+      "category_id": "legal_aid",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "legal-aid-district-helpline-16430",
+        "service_name_en": "District Legal Aid Toll-free Helpline (16430)",
+        "service_name_bn": "জেলা আইন সহায়তা হেল্পলাইন (১৬৪৩০)",
+        "category_id": "legal_aid",
+        "research_profile": "JUDICIARY",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "District Legal Aid Office (NLASO)",
+          "district-legal-aid-office-nlaso"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "16430 legal aid",
+          "District Legal Aid Toll-free Helpline (16430)"
+        ],
+        "official_source": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "legal-aid-district-helpline-16430",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "legal-aid-district-helpline-16430-en-procedure",
+            "query": "How do I apply for District Legal Aid Toll-free Helpline (16430)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-district-helpline-16430-bn-procedure",
+            "query": "জেলা আইন সহায়তা হেল্পলাইন (১৬৪৩০) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-district-helpline-16430-fee",
+            "query": "What is the fee for District Legal Aid Toll-free Helpline (16430)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-district-helpline-16430-documents",
+            "query": "What documents are needed for District Legal Aid Toll-free Helpline (16430)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-district-helpline-16430-url",
+            "query": "What is the official website for District Legal Aid Toll-free Helpline (16430)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "legal-aid-district-helpline-16430",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "legal-aid-government-service",
+      "service_name_en": "Government-funded Legal Aid Service",
+      "category_id": "legal_aid",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "legal-aid-government-service",
+        "service_name_en": "Government-funded Legal Aid Service",
+        "service_name_bn": "সরকারি খরচে আইনগত সহায়তা",
+        "category_id": "legal_aid",
+        "research_profile": "JUDICIARY",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "National Legal Aid Services Organization (NLASO)",
+          "national-legal-aid-services-organization-nlaso"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "free legal aid Bangladesh",
+          "state legal aid",
+          "Government-funded Legal Aid Service"
+        ],
+        "official_source": "http://nlaso.portal.gov.bd/pages/static-pages/6922dc72933eb65569e106d0",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "legal-aid-government-service",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "legal-aid-government-service-en-procedure",
+            "query": "How do I apply for Government-funded Legal Aid Service?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-government-service-bn-procedure",
+            "query": "সরকারি খরচে আইনগত সহায়তা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-government-service-fee",
+            "query": "What is the fee for Government-funded Legal Aid Service?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-government-service-documents",
+            "query": "What documents are needed for Government-funded Legal Aid Service?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-government-service-url",
+            "query": "What is the official website for Government-funded Legal Aid Service?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "legal-aid-government-service",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "legal-aid-helpline-16699",
+      "service_name_en": "National Legal Aid Helpline (16699)",
+      "category_id": "legal_aid",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "legal-aid-helpline-16699",
+        "service_name_en": "National Legal Aid Helpline (16699)",
+        "service_name_bn": "জাতীয় আইনি হেল্পলাইন (১৬৬৯৯)",
+        "category_id": "legal_aid",
+        "research_profile": "JUDICIARY",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "National Legal Aid Services Organization (NLASO)",
+          "national-legal-aid-services-organization-nlaso"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "legal aid helpline",
+          "16699 NLASO",
+          "National Legal Aid Helpline (16699)"
+        ],
+        "official_source": "http://nlaso.portal.gov.bd/pages/static-pages/69ca4e8234fc363bf320ca55",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "legal-aid-helpline-16699",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "legal-aid-helpline-16699-en-procedure",
+            "query": "How do I apply for National Legal Aid Helpline (16699)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-helpline-16699-bn-procedure",
+            "query": "জাতীয় আইনি হেল্পলাইন (১৬৬৯৯) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-helpline-16699-fee",
+            "query": "What is the fee for National Legal Aid Helpline (16699)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-helpline-16699-documents",
+            "query": "What documents are needed for National Legal Aid Helpline (16699)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-helpline-16699-url",
+            "query": "What is the official website for National Legal Aid Helpline (16699)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "legal-aid-helpline-16699",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "legal-aid-online-application",
+      "service_name_en": "National Legal Aid Online Application",
+      "category_id": "legal_aid",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "legal-aid-online-application",
+        "service_name_en": "National Legal Aid Online Application",
+        "service_name_bn": "আইনগত সহায়তা অনলাইন আবেদন",
+        "category_id": "legal_aid",
+        "research_profile": "JUDICIARY",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "National Legal Aid Services Organization (NLASO)",
+          "national-legal-aid-services-organization-nlaso"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "NLASO online application",
+          "legal aid apply",
+          "National Legal Aid Online Application"
+        ],
+        "official_source": "https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "legal-aid-online-application",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "legal-aid-online-application-en-procedure",
+            "query": "How do I apply for National Legal Aid Online Application?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-online-application-bn-procedure",
+            "query": "আইনগত সহায়তা অনলাইন আবেদন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-online-application-fee",
+            "query": "What is the fee for National Legal Aid Online Application?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-online-application-documents",
+            "query": "What documents are needed for National Legal Aid Online Application?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-online-application-url",
+            "query": "What is the official website for National Legal Aid Online Application?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "legal-aid-online-application",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "legal-aid-panel-lawyer-list",
+      "service_name_en": "Panel Lawyer List (District Legal Aid)",
+      "category_id": "legal_aid",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "legal-aid-panel-lawyer-list",
+        "service_name_en": "Panel Lawyer List (District Legal Aid)",
+        "service_name_bn": "প্যানেল আইনজীবী তালিকা",
+        "category_id": "legal_aid",
+        "research_profile": "JUDICIARY",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "District Legal Aid Office (NLASO)",
+          "district-legal-aid-office-nlaso"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "legal aid lawyers list",
+          "Panel Lawyer List (District Legal Aid)"
+        ],
+        "official_source": "http://nlaso.portal.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "legal-aid-panel-lawyer-list",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "legal-aid-panel-lawyer-list-en-procedure",
+            "query": "How do I apply for Panel Lawyer List (District Legal Aid)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-panel-lawyer-list-bn-procedure",
+            "query": "প্যানেল আইনজীবী তালিকা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-panel-lawyer-list-fee",
+            "query": "What is the fee for Panel Lawyer List (District Legal Aid)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-panel-lawyer-list-documents",
+            "query": "What documents are needed for Panel Lawyer List (District Legal Aid)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "legal-aid-panel-lawyer-list-url",
+            "query": "What is the official website for Panel Lawyer List (District Legal Aid)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "legal-aid-panel-lawyer-list",
+        "profile_key": "JUDICIARY",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "licence-trade-local-government",
+      "service_name_en": "Local Government Trade Licence",
+      "category_id": "licences",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "licence-trade-local-government",
+        "service_name_en": "Local Government Trade Licence",
+        "service_name_bn": "স্থানীয় সরকার ট্রেড লাইসেন্স",
+        "category_id": "licences",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "City Corporation / Municipality / Union Parishad",
+          "local-government-institutions"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "trade licence",
+          "trade license",
+          "ট্রেড লাইসেন্স",
+          "business licence LGI",
+          "CCC trade license",
+          "Shapla OSS trade license",
+          "Chattogram City Corporation Trade Licence",
+          "local-ccc-trade-licence",
+          "DNCC trade license",
+          "e-trade license DNCC",
+          "Trade Licence (Dhaka North City Corporation)",
+          "licence-trade-dncc",
+          "DSCC trade license",
+          "Trade Licence (Dhaka South City Corporation)",
+          "licence-trade-dscc",
+          "pourashava trade license",
+          "Trade Licence (Municipality/Pourashava)",
+          "licence-trade-municipality",
+          "union trade license",
+          "business licence union",
+          "Trade Licence (Union Parishad)",
+          "licence-trade-union-parishad",
+          "trade license renewal",
+          "Trade Licence Renewal",
+          "business-trade-license-renewal"
+        ],
+        "official_source": "https://dncc.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "licence-trade-local-government",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "licence-trade-local-government-en-procedure",
+            "query": "How do I apply for Local Government Trade Licence?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "licence-trade-local-government-bn-procedure",
+            "query": "স্থানীয় সরকার ট্রেড লাইসেন্স কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "licence-trade-local-government-fee",
+            "query": "What is the fee for Local Government Trade Licence?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "licence-trade-local-government-documents",
+            "query": "What documents are needed for Local Government Trade Licence?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "licence-trade-local-government-url",
+            "query": "What is the official website for Local Government Trade Licence?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "licence-trade-local-government",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-certificate-verify",
+      "service_name_en": "Union Certificate Verification Search",
+      "category_id": "certificates",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-certificate-verify",
+        "service_name_en": "Union Certificate Verification Search",
+        "service_name_bn": "ইউনিয়ন সনদ যাচাই",
+        "category_id": "certificates",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Union Parishad (Digital Union Tax System)",
+          "union-parishad-digital-union-tax-system"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "sonod search",
+          "certificate tracking"
+        ],
+        "official_source": "https://uniontax.gov.bd/sonod/search",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "local-certificate-verify",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-certificate-verify-en-procedure",
+            "query": "How do I apply for Union Certificate Verification Search?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-certificate-verify-bn-procedure",
+            "query": "ইউনিয়ন সনদ যাচাই কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-certificate-verify-fee",
+            "query": "What is the fee for Union Certificate Verification Search?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-certificate-verify-documents",
+            "query": "What documents are needed for Union Certificate Verification Search?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-certificate-verify-url",
+            "query": "What is the official website for Union Certificate Verification Search?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-certificate-verify",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-death-certificate-union",
+      "service_name_en": "Death Certificate (Union Parishad)",
+      "category_id": "certificates",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-death-certificate-union",
+        "service_name_en": "Death Certificate (Union Parishad)",
+        "service_name_bn": "মৃত্যু সনদ (ইউনিয়ন)",
+        "category_id": "certificates",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Union Parishad",
+          "union-parishad"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "union death certificate"
+        ],
+        "official_source": "https://www.chandanpurup.gov.bd/new/application/citizen",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "local-death-certificate-union",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-death-certificate-union-en-procedure",
+            "query": "How do I apply for Death Certificate (Union Parishad)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-death-certificate-union-bn-procedure",
+            "query": "মৃত্যু সনদ (ইউনিয়ন) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-death-certificate-union-fee",
+            "query": "What is the fee for Death Certificate (Union Parishad)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-death-certificate-union-documents",
+            "query": "What documents are needed for Death Certificate (Union Parishad)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-death-certificate-union-url",
+            "query": "What is the official website for Death Certificate (Union Parishad)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-death-certificate-union",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-holding-tax-payment",
+      "service_name_en": "Local Government Holding Tax Payment",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-holding-tax-payment",
+        "service_name_en": "Local Government Holding Tax Payment",
+        "service_name_bn": "স্থানীয় সরকার হোল্ডিং ট্যাক্স পরিশোধ",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "City Corporation / Municipality / Pourashava",
+          "local-government-institutions"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "holding tax",
+          "হোল্ডিং ট্যাক্স",
+          "municipal holding tax",
+          "city corporation holding tax",
+          "DNCC holding tax payment",
+          "DNCC tax",
+          "Dhaka North City Corporation Holding Tax",
+          "local-dncc-holding-tax",
+          "DSCC holding tax payment",
+          "Dhaka South City Corporation Holding Tax",
+          "local-dscc-holding-tax",
+          "CCC holding tax",
+          "Amader Chattogram holding tax",
+          "Chattogram City Corporation Holding Tax Payment",
+          "local-ccc-holding-tax",
+          "pourashava holding tax",
+          "Municipality (Pourashava) Holding Tax",
+          "local-pourashava-holding-tax"
+        ],
+        "official_source": "https://dncc.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "local-holding-tax-payment",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-holding-tax-payment-en-procedure",
+            "query": "How do I apply for Local Government Holding Tax Payment?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-holding-tax-payment-bn-procedure",
+            "query": "স্থানীয় সরকার হোল্ডিং ট্যাক্স পরিশোধ কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-holding-tax-payment-fee",
+            "query": "What is the fee for Local Government Holding Tax Payment?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-holding-tax-payment-documents",
+            "query": "What documents are needed for Local Government Holding Tax Payment?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-holding-tax-payment-url",
+            "query": "What is the official website for Local Government Holding Tax Payment?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-holding-tax-payment",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-marital-status-certificate",
+      "service_name_en": "Marital Status Certificate",
+      "category_id": "certificates",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-marital-status-certificate",
+        "service_name_en": "Marital Status Certificate",
+        "service_name_bn": "বিবাহিত/অবিবাহিত/তালাকপ্রাপ্ত সনদ",
+        "category_id": "certificates",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Union Parishad",
+          "union-parishad"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "unmarried certificate",
+          "married certificate",
+          "divorce certificate union"
+        ],
+        "official_source": "https://www.palshaup.gov.bd/new/application/citizen/17",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "local-marital-status-certificate",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-marital-status-certificate-en-procedure",
+            "query": "How do I apply for Marital Status Certificate?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-marital-status-certificate-bn-procedure",
+            "query": "বিবাহিত/অবিবাহিত/তালাকপ্রাপ্ত সনদ কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-marital-status-certificate-fee",
+            "query": "What is the fee for Marital Status Certificate?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-marital-status-certificate-documents",
+            "query": "What documents are needed for Marital Status Certificate?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-marital-status-certificate-url",
+            "query": "What is the official website for Marital Status Certificate?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-marital-status-certificate",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-nationality-certificate",
+      "service_name_en": "Nationality Certificate",
+      "category_id": "certificates",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-nationality-certificate",
+        "service_name_en": "Nationality Certificate",
+        "service_name_bn": "জাতীয়তা সনদ",
+        "category_id": "certificates",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Union Parishad",
+          "union-parishad"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "nationality attestation"
+        ],
+        "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "local-nationality-certificate",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-nationality-certificate-en-procedure",
+            "query": "How do I apply for Nationality Certificate?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-nationality-certificate-bn-procedure",
+            "query": "জাতীয়তা সনদ কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-nationality-certificate-fee",
+            "query": "What is the fee for Nationality Certificate?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-nationality-certificate-documents",
+            "query": "What documents are needed for Nationality Certificate?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-nationality-certificate-url",
+            "query": "What is the official website for Nationality Certificate?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-nationality-certificate",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-noc-certificate",
+      "service_name_en": "No Objection Certificate (NOC)",
+      "category_id": "certificates",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-noc-certificate",
+        "service_name_en": "No Objection Certificate (NOC)",
+        "service_name_bn": "অনাপত্তি সনদ (NOC)",
+        "category_id": "certificates",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Union Parishad",
+          "union-parishad"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "NOC union parishad"
+        ],
+        "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "local-noc-certificate",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-noc-certificate-en-procedure",
+            "query": "How do I apply for No Objection Certificate (NOC)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-noc-certificate-bn-procedure",
+            "query": "অনাপত্তি সনদ (NOC) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-noc-certificate-fee",
+            "query": "What is the fee for No Objection Certificate (NOC)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-noc-certificate-documents",
+            "query": "What documents are needed for No Objection Certificate (NOC)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-noc-certificate-url",
+            "query": "What is the official website for No Objection Certificate (NOC)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-noc-certificate",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-passport-attestation",
+      "service_name_en": "Passport-related Attestation (Union)",
+      "category_id": "certificates",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-passport-attestation",
+        "service_name_en": "Passport-related Attestation (Union)",
+        "service_name_bn": "পাসপোর্ট সংক্রান্ত প্রত্যয়ন",
+        "category_id": "certificates",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Union Parishad",
+          "union-parishad"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "passport attestation union"
+        ],
+        "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "local-passport-attestation",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-passport-attestation-en-procedure",
+            "query": "How do I apply for Passport-related Attestation (Union)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-passport-attestation-bn-procedure",
+            "query": "পাসপোর্ট সংক্রান্ত প্রত্যয়ন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-passport-attestation-fee",
+            "query": "What is the fee for Passport-related Attestation (Union)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-passport-attestation-documents",
+            "query": "What documents are needed for Passport-related Attestation (Union)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-passport-attestation-url",
+            "query": "What is the official website for Passport-related Attestation (Union)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-passport-attestation",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-unno-digital-upazila-services",
+      "service_name_en": "Upazila Nirbahi Officer (UNO) Digital Citizen Services",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-unno-digital-upazila-services",
+        "service_name_en": "Upazila Nirbahi Officer (UNO) Digital Citizen Services",
+        "service_name_bn": "উন্নত উপজেলা (UNO) ডিজিটাল সেবা",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Upazila Nirbahi Officer (UNO) Office",
+          "upazila-nirbahi-officer-uno-office"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "UNO office services",
+          "upazila citizen charter"
+        ],
+        "official_source": null,
+        "existing_claims_count": 1,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "OFFICIAL_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "PARTIAL",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 2,
+      "verified_claims": 2,
+      "service_specific_sources": 2,
+      "completeness_score": 0.9333,
+      "flags": [
+        "MISSING_REQUIRED_DIMENSIONS"
+      ],
+      "e2e": {
+        "service_id": "local-unno-digital-upazila-services",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-unno-digital-upazila-services-en-procedure",
+            "query": "How do I apply for Upazila Nirbahi Officer (UNO) Digital Citizen Services?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-unno-digital-upazila-services-bn-procedure",
+            "query": "উন্নত উপজেলা (UNO) ডিজিটাল সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-unno-digital-upazila-services-fee",
+            "query": "What is the fee for Upazila Nirbahi Officer (UNO) Digital Citizen Services?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-unno-digital-upazila-services-documents",
+            "query": "What documents are needed for Upazila Nirbahi Officer (UNO) Digital Citizen Services?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-unno-digital-upazila-services-url",
+            "query": "What is the official website for Upazila Nirbahi Officer (UNO) Digital Citizen Services?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-unno-digital-upazila-services",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "PARTIAL",
+        "completeness_score": 0.9333,
+        "meaningful_claims": 2,
+        "verified_claims": 2,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [
+          "MISSING_REQUIRED_DIMENSIONS"
+        ],
+        "dimension_coverage": {
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [
+          "official_url"
+        ],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.1333,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "local-voter-transfer-attestation",
+      "service_name_en": "Voter Area Transfer Attestation",
+      "category_id": "certificates",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "local-voter-transfer-attestation",
+        "service_name_en": "Voter Area Transfer Attestation",
+        "service_name_bn": "ভোটার এলাকা স্থানান্তর প্রত্যয়ন",
+        "category_id": "certificates",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Union Parishad",
+          "union-parishad"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "voter region change certificate"
+        ],
+        "official_source": "https://tilokpursonod.gov.bd/select_certificate/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "local-voter-transfer-attestation",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "local-voter-transfer-attestation-en-procedure",
+            "query": "How do I apply for Voter Area Transfer Attestation?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-voter-transfer-attestation-bn-procedure",
+            "query": "ভোটার এলাকা স্থানান্তর প্রত্যয়ন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-voter-transfer-attestation-fee",
+            "query": "What is the fee for Voter Area Transfer Attestation?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-voter-transfer-attestation-documents",
+            "query": "What documents are needed for Voter Area Transfer Attestation?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "local-voter-transfer-attestation-url",
+            "query": "What is the official website for Voter Area Transfer Attestation?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "local-voter-transfer-attestation",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "migration-e-apostille",
+      "service_name_en": "e-Apostille Document Authentication",
+      "category_id": "passport_immigration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "migration-e-apostille",
+        "service_name_en": "e-Apostille Document Authentication",
+        "service_name_bn": "ই-আপোস্টিল (MOFA)",
+        "category_id": "passport_immigration",
+        "research_profile": "POLICE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Foreign Affairs (MOFA)",
+          "ministry-of-foreign-affairs-mofa"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "e-Apostille",
+          "Hague apostille Bangladesh",
+          "apostille.mygov.bd"
+        ],
+        "official_source": "https://apostille.mygov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "migration-e-apostille",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "migration-e-apostille-en-procedure",
+            "query": "How do I apply for e-Apostille Document Authentication?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "migration-e-apostille-bn-procedure",
+            "query": "ই-আপোস্টিল (MOFA) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "migration-e-apostille-fee",
+            "query": "What is the fee for e-Apostille Document Authentication?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "migration-e-apostille-documents",
+            "query": "What documents are needed for e-Apostille Document Authentication?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "migration-e-apostille-url",
+            "query": "What is the official website for e-Apostille Document Authentication?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "migration-e-apostille",
+        "profile_key": "POLICE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "mofa-csat",
+      "service_name_en": "MOFA Consular Service Appointment (CSAT)",
+      "category_id": "passport_immigration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "mofa-csat",
+        "service_name_en": "MOFA Consular Service Appointment (CSAT)",
+        "service_name_bn": "MOFA CSAT (Consular Service Appointment)",
+        "category_id": "passport_immigration",
+        "research_profile": "POLICE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Foreign Affairs (MOFA)",
+          "ministry-of-foreign-affairs-mofa"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "MOFA appointment consular",
+          "MOFA Consular Service Appointment (CSAT)"
+        ],
+        "official_source": "https://csat.mofa.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "mofa-csat",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "mofa-csat-en-procedure",
+            "query": "How do I apply for MOFA Consular Service Appointment (CSAT)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-csat-bn-procedure",
+            "query": "MOFA CSAT (Consular Service Appointment) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-csat-fee",
+            "query": "What is the fee for MOFA Consular Service Appointment (CSAT)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-csat-documents",
+            "query": "What documents are needed for MOFA Consular Service Appointment (CSAT)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-csat-url",
+            "query": "What is the official website for MOFA Consular Service Appointment (CSAT)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "mofa-csat",
+        "profile_key": "POLICE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "mofa-document-attestation",
+      "service_name_en": "MOFA Document Attestation",
+      "category_id": "passport_immigration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "mofa-document-attestation",
+        "service_name_en": "MOFA Document Attestation",
+        "service_name_bn": "পররাষ্ট্র মন্ত্রণালয় নথি সত্যায়ন",
+        "category_id": "passport_immigration",
+        "research_profile": "POLICE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Foreign Affairs (MOFA) - Consular Section",
+          "mofa"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "MOFA attestation",
+          "consular attestation",
+          "document legalization MOFA",
+          "নথি সত্যায়ন",
+          "attestation form MOFA",
+          "MOFA Attestation Application Form",
+          "mofa-attestation-application-form",
+          "MOFA attestation requirements",
+          "consular attestation Dhaka",
+          "MOFA Document Attestation General Requirements",
+          "mofa-document-attestation-requirements"
+        ],
+        "official_source": "https://csat.mofa.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "mofa-document-attestation",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "mofa-document-attestation-en-procedure",
+            "query": "How do I apply for MOFA Document Attestation?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-document-attestation-bn-procedure",
+            "query": "পররাষ্ট্র মন্ত্রণালয় নথি সত্যায়ন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-document-attestation-fee",
+            "query": "What is the fee for MOFA Document Attestation?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-document-attestation-documents",
+            "query": "What documents are needed for MOFA Document Attestation?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-document-attestation-url",
+            "query": "What is the official website for MOFA Document Attestation?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "mofa-document-attestation",
+        "profile_key": "POLICE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "mofa-education-attestation-chain",
+      "service_name_en": "Educational Certificate MOFA Attestation (via Ministry of Education)",
+      "category_id": "passport_immigration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "mofa-education-attestation-chain",
+        "service_name_en": "Educational Certificate MOFA Attestation (via Ministry of Education)",
+        "service_name_bn": "শিক্ষা সনদ MOFA attestation (Ministry of Education chain)",
+        "category_id": "passport_immigration",
+        "research_profile": "POLICE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Foreign Affairs (MOFA)",
+          "ministry-of-foreign-affairs-mofa"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "degree attestation MOFA",
+          "education certificate attestation",
+          "Educational Certificate MOFA Attestation (via Ministry of Education)"
+        ],
+        "official_source": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "mofa-education-attestation-chain",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "mofa-education-attestation-chain-en-procedure",
+            "query": "How do I apply for Educational Certificate MOFA Attestation (via Ministry of Education)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-education-attestation-chain-bn-procedure",
+            "query": "শিক্ষা সনদ MOFA attestation (Ministry of Education chain) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-education-attestation-chain-fee",
+            "query": "What is the fee for Educational Certificate MOFA Attestation (via Ministry of Education)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-education-attestation-chain-documents",
+            "query": "What documents are needed for Educational Certificate MOFA Attestation (via Ministry of Education)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-education-attestation-chain-url",
+            "query": "What is the official website for Educational Certificate MOFA Attestation (via Ministry of Education)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "mofa-education-attestation-chain",
+        "profile_key": "POLICE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "mofa-nv-loi-application",
+      "service_name_en": "Note Verbale and Letter of Introduction (LOI) Application",
+      "category_id": "passport_immigration",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "mofa-nv-loi-application",
+        "service_name_en": "Note Verbale and Letter of Introduction (LOI) Application",
+        "service_name_bn": "Note Verbale / LOI আবেদন",
+        "category_id": "passport_immigration",
+        "research_profile": "POLICE",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Foreign Affairs (MOFA)",
+          "ministry-of-foreign-affairs-mofa"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "nvloi MOFA",
+          "diplomatic note application",
+          "Note Verbale and Letter of Introduction (LOI) Application"
+        ],
+        "official_source": "https://nvloi.mofa.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "mofa-nv-loi-application",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "mofa-nv-loi-application-en-procedure",
+            "query": "How do I apply for Note Verbale and Letter of Introduction (LOI) Application?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-nv-loi-application-bn-procedure",
+            "query": "Note Verbale / LOI আবেদন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-nv-loi-application-fee",
+            "query": "What is the fee for Note Verbale and Letter of Introduction (LOI) Application?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-nv-loi-application-documents",
+            "query": "What documents are needed for Note Verbale and Letter of Introduction (LOI) Application?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "mofa-nv-loi-application-url",
+            "query": "What is the official website for Note Verbale and Letter of Introduction (LOI) Application?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "mofa-nv-loi-application",
+        "profile_key": "POLICE",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-card-info-correction",
+      "service_name_en": "NID Card Information Correction",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-card-info-correction",
+        "service_name_en": "NID Card Information Correction",
+        "service_name_bn": "জাতীয় পরিচয়পত্র তথ্য সংশোধন",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "NID correction",
+          "voter ID correction"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/fees",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-card-info-correction",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-card-info-correction-en-procedure",
+            "query": "How do I apply for NID Card Information Correction?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-card-info-correction-bn-procedure",
+            "query": "জাতীয় পরিচয়পত্র তথ্য সংশোধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-card-info-correction-fee",
+            "query": "What is the fee for NID Card Information Correction?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-card-info-correction-documents",
+            "query": "What documents are needed for NID Card Information Correction?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-card-info-correction-url",
+            "query": "What is the official website for NID Card Information Correction?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-card-info-correction",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-claim-account",
+      "service_name_en": "Claim NID Online Account",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-claim-account",
+        "service_name_en": "Claim NID Online Account",
+        "service_name_bn": "অ্যাকাউন্ট দাবি (ক্লেইম)",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "claim account",
+          "existing NID registration online"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-claim-account",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-claim-account-en-procedure",
+            "query": "How do I apply for Claim NID Online Account?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-claim-account-bn-procedure",
+            "query": "অ্যাকাউন্ট দাবি (ক্লেইম) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-claim-account-fee",
+            "query": "What is the fee for Claim NID Online Account?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-claim-account-documents",
+            "query": "What documents are needed for Claim NID Online Account?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-claim-account-url",
+            "query": "What is the official website for Claim NID Online Account?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-claim-account",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "nid-combined-correction",
+      "service_name_en": "Combined NID and Other Information Correction",
+      "category_id": "identity",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "nid-combined-correction",
+        "service_name_en": "Combined NID and Other Information Correction",
+        "service_name_bn": "কার্ড ও অন্যান্য তথ্য একত্রে সংশোধন",
+        "category_id": "identity",
+        "research_profile": "IDENTITY_CIVIL",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "procedure",
+          "fees",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Election Commission (NID Wing)",
+          "ec-nid"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "full NID correction"
+        ],
+        "official_source": "https://services.nidw.gov.bd/nid-pub/fees",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "nid-combined-correction",
+        "wave_id": "wave-009",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "nid-combined-correction-en-procedure",
+            "query": "How do I apply for Combined NID and Other Information Correction?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-combined-correction-bn-procedure",
+            "query": "কার্ড ও অন্যান্য তথ্য একত্রে সংশোধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-combined-correction-fee",
+            "query": "What is the fee for Combined NID and Other Information Correction?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-combined-correction-documents",
+            "query": "What documents are needed for Combined NID and Other Information Correction?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "nid-combined-correction-url",
+            "query": "What is the official website for Combined NID and Other Information Correction?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "nid-combined-correction",
+        "profile_key": "IDENTITY_CIVIL",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    }
+  ],
+  "status_counts": {
+    "COMPLETE": 0,
+    "PARTIAL": 30,
+    "DEFERRED": 0,
+    "BLOCKED": 0
+  },
+  "verified_claims": 80,
+  "partial_claims": 9,
+  "conflicts": 0,
+  "knowledge_gaps": 69,
+  "staging_path": "/workspace/data/research/waves/wave-009/staging",
+  "e2e_summary": {
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "answer_supported": 0
+  },
+  "regression": {
+    "passed": true,
+    "metrics": {
+      "hallucinations": 0,
+      "citation_failures": 0,
+      "batch_01_pass_pct": 100.0,
+      "passport_pass_pct": 100.0,
+      "batch_02b_pass_pct": 100.0,
+      "routing_pass_pct": 100.0,
+      "pytest_failed": 0,
+      "batch_03a_pass_pct": 100.0,
+      "batch_03b_pass_pct": 100.0,
+      "batch_03c_pass_pct": 100.0
+    },
+    "failures": [],
+    "automation_exit_code": 0
+  },
+  "wave_quality": {
+    "passed": true,
+    "wave_id": "wave-009",
+    "services_total": 30,
+    "false_completion_count": 0,
+    "services_with_sources": 30,
+    "services_with_verified_claims": 30,
+    "source_rate": 1.0,
+    "verified_rate": 1.0,
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "regression_failures": [],
+    "blocking_reasons": [],
+    "service_statuses": {
+      "housing-rajuk-occupancy-certificate": "PARTIAL",
+      "housing-rajuk-planning-permit": "PARTIAL",
+      "housing-rajuk-professional-registration": "PARTIAL",
+      "identity-voter-slip-download": "PARTIAL",
+      "judiciary-supreme-court-certified-copy": "PARTIAL",
+      "judiciary-supreme-court-e-filing": "PARTIAL",
+      "judiciary-virtual-court-services": "PARTIAL",
+      "legal-aid-district-helpline-16430": "PARTIAL",
+      "legal-aid-government-service": "PARTIAL",
+      "legal-aid-helpline-16699": "PARTIAL",
+      "legal-aid-online-application": "PARTIAL",
+      "legal-aid-panel-lawyer-list": "PARTIAL",
+      "licence-trade-local-government": "PARTIAL",
+      "local-certificate-verify": "PARTIAL",
+      "local-death-certificate-union": "PARTIAL",
+      "local-holding-tax-payment": "PARTIAL",
+      "local-marital-status-certificate": "PARTIAL",
+      "local-nationality-certificate": "PARTIAL",
+      "local-noc-certificate": "PARTIAL",
+      "local-passport-attestation": "PARTIAL",
+      "local-unno-digital-upazila-services": "PARTIAL",
+      "local-voter-transfer-attestation": "PARTIAL",
+      "migration-e-apostille": "PARTIAL",
+      "mofa-csat": "PARTIAL",
+      "mofa-document-attestation": "PARTIAL",
+      "mofa-education-attestation-chain": "PARTIAL",
+      "mofa-nv-loi-application": "PARTIAL",
+      "nid-card-info-correction": "PARTIAL",
+      "nid-claim-account": "PARTIAL",
+      "nid-combined-correction": "PARTIAL"
+    }
+  },
+  "quality_passed": true
+}

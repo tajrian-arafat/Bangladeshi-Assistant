@@ -1,0 +1,72 @@
+{
+  "service_id": "education-ssc-hsc-result-verify",
+  "claims": [
+    {
+      "claim_id": "education-ssc-hsc-result-verify::c-catalogue-authority",
+      "service_id": "education-ssc-hsc-result-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Intermediate and Secondary Education Boards Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-hsc-result-verify::c-official-portal",
+      "service_id": "education-ssc-hsc-result-verify",
+      "claim_type": "application_url",
+      "claim_text": "SSC/HSC Result Verification official information is published at http://www.educationboard.gov.bd/ (page title: Education Board Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/"
+      },
+      "source_ids": [
+        "src-education-ssc-hsc-result-verify-official"
+      ],
+      "evidence_ids": [
+        "ev-education-ssc-hsc-result-verify::c-official-portal-src-education-ssc-hsc-result-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-hsc-result-verify::c-procedure-overview",
+      "service_id": "education-ssc-hsc-result-verify",
+      "claim_type": "procedure_step",
+      "claim_text": "SSC/HSC Result Verification is a government service under Intermediate and Secondary Education Boards Bangladesh (result verification). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-hsc-result-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-hsc-result-verify::c-service-identity",
+      "service_id": "education-ssc-hsc-result-verify",
+      "claim_type": "eligibility",
+      "claim_text": "SSC/HSC Result Verification (SSC/HSC ফলাফল যাচাই) is a confirmed government service in category education, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-hsc-result-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}
