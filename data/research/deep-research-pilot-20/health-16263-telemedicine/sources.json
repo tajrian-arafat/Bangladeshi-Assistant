@@ -1,0 +1,72 @@
+{
+  "service_id": "health-16263-telemedicine",
+  "sources": [
+    {
+      "source_id": "src-health-16263-telemedicine-official",
+      "service_id": "health-16263-telemedicine",
+      "url": "http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update",
+      "title": "বাংলাদেশ মেডিকেল এন্ড ডেন্টাল কাউন্সিল এ নিবন্ধনকৃত সকল মেডিকেল/ডেন্টাল চিকি‘সকদের Profile Update সংক্রান্ত বিজ্ঞপ্তি",
+      "authority_id": "dghs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update",
+        "status_code": 200,
+        "reachable": true,
+        "title": "বাংলাদেশ মেডিকেল এন্ড ডেন্টাল কাউন্সিল এ নিবন্ধনকৃত সকল মেডিকেল/ডেন্টাল চিকি‘সকদের Profile Update সংক্রান্ত বিজ্ঞপ্তি",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "d8f4d239e5f09771",
+        "retrieved_at": "2026-08-25T04:37:24.331590+00:00"
+      },
+      "evidence_locator": "probe:http://old.dghs.gov.bd/index.php/bd/home/5518-profile-update"
+    },
+    {
+      "source_id": "src-health-16263-telemedicine-alt-1",
+      "service_id": "health-16263-telemedicine",
+      "url": "https://dghs.gov.bd/",
+      "title": "হোম | স্বাস্থ্য অধিদপ্তর",
+      "authority_id": "dghs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dghs.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | স্বাস্থ্য অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "b9c565c566d2436d",
+        "retrieved_at": "2026-08-25T04:37:29.549222+00:00"
+      }
+    },
+    {
+      "source_id": "src-health-16263-telemedicine-alt-2",
+      "service_id": "health-16263-telemedicine",
+      "url": "https://www.dghs.gov.bd/",
+      "title": "হোম | স্বাস্থ্য অধিদপ্তর",
+      "authority_id": "dghs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dghs.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | স্বাস্থ্য অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "b9c565c566d2436d",
+        "retrieved_at": "2026-08-25T04:37:32.444823+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

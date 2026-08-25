@@ -535,6 +535,139 @@ class PartialKnowledgeAnalyzer:
             ),
         }
 
+    def _load_runtime_mapped_ids(self) -> set[str]:
+        path = self.repo_root / "data" / "research" / "catalogue_runtime_mappings.json"
+        if not path.exists():
+            return set()
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        return {m["catalogue_service_id"] for m in doc.get("mappings") or [] if m.get("catalogue_service_id")}
+
+    def select_pilot_20_services(
+        self,
+        *,
+        exclude: frozenset[str] | None = None,
+    ) -> list[dict[str, Any]]:
+        """Select 20 diverse PARTIAL services for second deep-research pilot (Step 32)."""
+        exclude = exclude or frozenset()
+        step31 = frozenset(
+            {
+                "nid-new-voter-registration",
+                "education-ssc-certificate",
+                "tax-income-return-file",
+                "business-company-incorporation",
+                "land-mutation-apply",
+                "land-khatian-certified-copy",
+                "education-foreign-equivalency",
+                "education-duplicate-certificate",
+                "snp-old-age-allowance",
+                "disability-dis-registration",
+                "health-bmdc-full-registration",
+                "judiciary-supreme-court-e-filing",
+            }
+        )
+        exclude = exclude | step31
+
+        taxonomy_path = self.repo_root / "data" / "audit" / "partial-knowledge-taxonomy.json"
+        if taxonomy_path.exists():
+            tax_doc = json.loads(taxonomy_path.read_text(encoding="utf-8"))
+            records = tax_doc.get("services") or tax_doc.get("taxonomy", {}).get("services") or []
+        else:
+            analysis = self.run_full_analysis()
+            records = analysis.get("taxonomy", {}).get("services") or []
+
+        mapped = self._load_runtime_mapped_ids()
+        candidates: list[dict[str, Any]] = []
+        for rec in records:
+            sid = rec.get("service_id")
+            if not sid or sid in exclude or sid not in mapped:
+                continue
+            reasons = set(rec.get("partial_reasons") or [])
+            entry = self.catalogue.get(sid) or {}
+            score = 0
+            if sid in HIGH_USAGE_SERVICE_IDS:
+                score += 30
+            if sid in HIGH_RISK_SERVICE_IDS:
+                score += 25
+            if "MISSING_MUST_NEED_DOCUMENTS" in reasons:
+                score += 15
+            if "MISSING_FEES" in reasons or "CALCULATOR_REQUIRED" in reasons:
+                score += 12
+            if "JS_RENDERING_LIMITATION" in reasons:
+                score += 10
+            if "MISSING_GEOGRAPHIC_VARIATION" in reasons or "LOCAL_VARIATION" in reasons:
+                score += 10
+            if rec.get("category_id"):
+                score += 2
+            candidates.append(
+                {
+                    "service_id": sid,
+                    "service_name_en": rec.get("service_name_en") or entry.get("service_name_en") or sid,
+                    "category_id": rec.get("category_id") or entry.get("category_id"),
+                    "profile_key": rec.get("profile_key"),
+                    "partial_reasons": rec.get("partial_reasons") or [],
+                    "selection_score": score,
+                }
+            )
+
+        candidates.sort(key=lambda c: (-c["selection_score"], c["service_id"]))
+
+        # Curated anchors ensuring domain + gap diversity (exclude Step 31 set)
+        anchor_specs: list[tuple[str, str, str | None]] = [
+            ("high_usage", "nid-download-copy", "identity"),
+            ("high_usage", "education-hsc-certificate", "education"),
+            ("high_usage", "local-passport-attestation", "certificates"),
+            ("high_usage", "tax-etin-registration", "tax"),
+            ("high_risk", "customs-import-export-control-licence", "customs"),
+            ("high_risk", "permits-fire-noc-enoc", "permits"),
+            ("high_risk", "nid-combined-correction", "identity"),
+            ("land", "land-deed-registration", "land"),
+            ("land", "land-khatian-online-copy", "land"),
+            ("education", "education-class-registration", "education"),
+            ("health", "health-16263-telemedicine", "health"),
+            ("agriculture", "agri-bamis-farmer-registration", "agriculture"),
+            ("employment", "employment-boesl-overseas-recruitment", "employment"),
+            ("local_gov", "dc-attestation-photocopy", "local_government"),
+            ("utilities", "ff-g2p-electronic-payment", "utilities"),
+            ("tax", "vat-bin-registration", "tax"),
+            ("judiciary", "judiciary-case-status-tracking", "judiciary"),
+            ("geographic", "dc-citizen-charter-dhaka", "local_government"),
+            ("geographic", "dc-citizen-charter-rajshahi", "local_government"),
+            ("js_heavy", "customs-asycuda-declaration", "customs"),
+            ("professional", "health-bmdc-eligibility-certificate", "health"),
+        ]
+
+        by_id = {c["service_id"]: c for c in candidates}
+        partial_ids = {c["service_id"] for c in candidates}
+        selected: list[dict[str, Any]] = []
+        used_domains: Counter[str] = Counter()
+
+        for role, sid, domain in anchor_specs:
+            if len(selected) >= 20:
+                break
+            if sid in exclude or sid not in partial_ids:
+                continue
+            if sid in {s["service_id"] for s in selected}:
+                continue
+            dom = domain or (by_id[sid].get("category_id") or "other")
+            if dom == "local_government" and used_domains["local_government"] >= 2:
+                continue
+            entry = by_id[sid]
+            selected.append({**entry, "pilot_role": role})
+            used_domains[dom] += 1
+
+        for c in candidates:
+            if len(selected) >= 20:
+                break
+            if c["service_id"] in {s["service_id"] for s in selected}:
+                continue
+            dom = c.get("category_id") or "other"
+            if used_domains[dom] >= 3:
+                continue
+            selected.append({**c, "pilot_role": "diverse_fill"})
+            used_domains[dom] += 1
+
+        return selected[:20]
+
     def select_pilot_services(self) -> list[dict[str, Any]]:
         """Select 12 representative PARTIAL services for deep-research pilot."""
         selections = [

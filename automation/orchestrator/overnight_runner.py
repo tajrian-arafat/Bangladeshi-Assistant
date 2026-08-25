@@ -565,6 +565,24 @@ class OvernightRunner:
                 return summary
             if summary.get("waves_run", 0) > 0 and not summary.get("global_blocked"):
                 return summary
-            # fall through to batch overnight if queue complete
+
+        # Deep-research queue: PARTIAL services awaiting pilot gate — do NOT autorun 416+
+        deep_queue = self.repo_root / "data" / "research" / "rerun_queue.json"
+        if deep_queue.exists():
+            qdoc = json.loads(deep_queue.read_text(encoding="utf-8"))
+            if qdoc.get("do_not_autorun_until_pilot_passes"):
+                deep_required = [
+                    e for e in qdoc.get("queue") or [] if e.get("target_status") == "DEEP_RESEARCH_REQUIRED"
+                ]
+                if deep_required:
+                    self._append_log(
+                        f"Deep-research queue blocked — {len(deep_required)} services "
+                        "DEEP_RESEARCH_REQUIRED; awaiting 20-service pilot gate"
+                    )
+                    return {
+                        "status": "DEEP_RESEARCH_QUEUE_BLOCKED",
+                        "deep_research_required_count": len(deep_required),
+                        "reason": "20-service pilot must pass before scaling deep research",
+                    }
 
         return self.run_until_terminal(max_ticks=max_ticks, steps_per_tick=steps_per_tick)

@@ -141,6 +141,138 @@ DEEP_SERVICE_HINTS: dict[str, dict[str, Any]] = {
         "document_hint": "Case documents, advocate enrollment (where applicable), and prescribed court forms are typically required.",
         "eligibility_hint": "Litigants and enrolled advocates filing cases before the Supreme Court of Bangladesh via e-filing.",
     },
+    "nid-download-copy": {
+        "probe_urls": ["https://services.nidw.gov.bd/nid-pub/", "https://www.nidw.gov.bd/"],
+        "procedure_hint": "NID copy/download is available through the NID Wing online portal after identity verification.",
+        "document_hint": "NID number, date of birth, and registered mobile number are typically required.",
+        "eligibility_hint": "Citizens with an existing NID record seeking a downloadable copy.",
+    },
+    "education-hsc-certificate": {
+        "probe_urls": ["https://www.educationboard.gov.bd/", "http://www.educationboardresults.gov.bd/"],
+        "procedure_hint": "HSC certificate services are handled by the relevant Education Board.",
+        "document_hint": "Roll number, registration number, exam year, and applicant NID are typically required.",
+        "eligibility_hint": "Students or former students who appeared in HSC examinations under a Bangladesh Education Board.",
+    },
+    "local-passport-attestation": {
+        "probe_urls": ["https://www.digitalcentre.gov.bd/", "https://www.bangladesh.gov.bd/"],
+        "procedure_hint": "Passport attestation at Digital Centres/Union Digital Centres follows prescribed document verification steps.",
+        "document_hint": "Original passport, NID, and application form are typically required.",
+        "eligibility_hint": "Citizens requiring attestation of passport copies for official use.",
+    },
+    "tax-etin-registration": {
+        "probe_urls": ["https://secure.incometax.gov.bd", "https://nbr.gov.bd/all-eservices/eng"],
+        "procedure_hint": "e-TIN registration is completed through the NBR secure portal.",
+        "document_hint": "NID, passport-size photograph, and contact details are typically required.",
+        "eligibility_hint": "Individuals and entities requiring a Tax Identification Number from NBR.",
+        "fee_hint": "e-TIN registration is generally free; verify current NBR notice.",
+    },
+    "customs-import-export-control-licence": {
+        "probe_urls": ["https://www.nbr.gov.bd/", "https://customs.gov.bd/"],
+        "procedure_hint": "Import/export control licences are applied through NBR Customs channels with prescribed documentation.",
+        "document_hint": "Trade licence, TIN, company documents, and application forms are typically required.",
+        "eligibility_hint": "Registered importers/exporters meeting Customs licensing criteria.",
+        "fee_hint": "Licence fees follow official Customs schedule — verify current circular.",
+    },
+    "permits-fire-noc-enoc": {
+        "probe_urls": ["https://fd.gov.bd/", "https://www.bangladesh.gov.bd/"],
+        "procedure_hint": "Fire NOC/e-NOC is applied through the Fire Service and Civil Defence.",
+        "document_hint": "Building plans, ownership documents, and application form are typically required.",
+        "eligibility_hint": "Building owners/occupiers requiring fire safety clearance.",
+        "fee_hint": "NOC fees vary by building type and area — check official schedule.",
+    },
+    "nid-combined-correction": {
+        "probe_urls": ["https://services.nidw.gov.bd/nid-pub/", "https://www.nidw.gov.bd/"],
+        "procedure_hint": "Combined NID correction is submitted through the NID online portal with supporting documents.",
+        "document_hint": "Existing NID, supporting correction documents (birth certificate, educational certificate) are typically required.",
+        "eligibility_hint": "NID holders requiring correction of multiple data fields.",
+    },
+    "land-deed-registration": {
+        "probe_urls": ["https://land.gov.bd/", "https://mutation.land.gov.bd/"],
+        "procedure_hint": "Deed registration is processed through sub-registry/land record offices with stamp duty payment.",
+        "document_hint": "Original deed, NID of parties, and stamp payment receipt are typically required.",
+        "eligibility_hint": "Parties to a registrable property transfer deed.",
+        "fee_hint": "Stamp duty and registration fees follow official schedule based on deed value.",
+        "conditional_rules": [
+            {"if": "applicant_type=minor", "then": "guardian documents required", "claim_type": "document", "text": "If the applicant is a minor, guardian NID and guardianship proof are required."},
+        ],
+    },
+    "vat-bin-registration": {
+        "probe_urls": ["https://nbr.gov.bd/", "https://secure.incometax.gov.bd/"],
+        "procedure_hint": "VAT BIN registration is completed through NBR online services.",
+        "document_hint": "Trade licence, TIN, business address proof are typically required.",
+        "eligibility_hint": "Businesses meeting VAT registration thresholds.",
+    },
+    "judiciary-case-status-tracking": {
+        "probe_urls": ["https://ecourts.gov.bd/", "https://www.supremecourt.gov.bd/"],
+        "procedure_hint": "Case status can be tracked through judiciary e-Courts portals where enabled.",
+        "document_hint": "Case number, court name, and party details are typically required.",
+        "eligibility_hint": "Litigants and advocates with an active case reference.",
+    },
+    "health-16263-telemedicine": {
+        "probe_urls": ["https://dghs.gov.bd/", "https://www.dghs.gov.bd/"],
+        "procedure_hint": "16263 telemedicine health advice is accessed via the national health helpline.",
+        "document_hint": "Patient identity and symptom description may be requested during the call.",
+        "eligibility_hint": "Any citizen seeking telemedicine health advice via 16263.",
+    },
+    "agri-bamis-farmer-registration": {
+        "probe_urls": ["https://www.bamis.gov.bd/en/registration/farmer/"],
+        "procedure_hint": "Farmer registration is completed through BAMIS online registration.",
+        "document_hint": "NID, land ownership/lease documents, and mobile number are typically required.",
+        "eligibility_hint": "Farmers seeking registration under the BAMIS programme.",
+    },
+    "employment-boesl-overseas-recruitment": {
+        "probe_urls": ["https://www.boesl.gov.bd/", "https://bmet.gov.bd/"],
+        "procedure_hint": "Overseas recruitment through BOESL follows BMET clearance and agency procedures.",
+        "document_hint": "Passport, medical certificate, training certificates, and BMET clearance are typically required.",
+        "eligibility_hint": "Bangladeshi workers seeking overseas employment through BOESL channels.",
+        "fee_hint": "Recruitment and processing fees follow official BOESL/BMET schedules.",
+    },
+    "dc-attestation-photocopy": {
+        "probe_urls": ["https://www.bangladesh.gov.bd/", "https://www.digitalcentre.gov.bd/"],
+        "procedure_hint": "DC office attestation of photocopies follows district commissioner verification procedures.",
+        "document_hint": "Original document, photocopy, NID, and application are typically required.",
+        "eligibility_hint": "Citizens requiring attested photocopies for official submissions.",
+        "conditional_rules": [
+            {"if": "geography=district", "then": "apply at local DC office", "claim_type": "procedure", "text": "Attestation is processed at the Deputy Commissioner office for the applicant's district."},
+        ],
+    },
+    "ff-g2p-electronic-payment": {
+        "probe_urls": ["https://www.bangladesh.gov.bd/", "https://www.mygov.gov.bd/"],
+        "procedure_hint": "G2P electronic payments are disbursed through designated government payment channels.",
+        "document_hint": "Beneficiary NID/bank account and programme enrolment details are typically required.",
+        "eligibility_hint": "Registered beneficiaries of government-to-person payment programmes.",
+    },
+    "education-class-registration": {
+        "probe_urls": ["https://www.educationboard.gov.bd/", "https://www.moedu.gov.bd/"],
+        "procedure_hint": "Class registration is managed by schools/Education Board per academic calendar.",
+        "document_hint": "Birth certificate, prior academic records, and guardian NID are typically required.",
+        "eligibility_hint": "Students enrolling in the relevant class per board rules.",
+    },
+    "land-land-tax-payment": {
+        "probe_urls": ["https://ldtax.gov.bd/", "https://land.gov.bd/"],
+        "procedure_hint": "Land tax (holding tax) is paid through the Land Development Tax portal or Union Land Office.",
+        "document_hint": "Khatian/dag numbers, mouza, and prior payment receipt are typically required.",
+        "eligibility_hint": "Landowners/occupiers liable for land development tax.",
+        "fee_hint": "Tax amount is assessed by holding/khatian — use official ldtax.gov.bd calculator where available.",
+        "calculator_required": True,
+        "conditional_rules": [
+            {"if": "geography=upazila", "then": "local union land office rules apply", "claim_type": "procedure", "text": "Payment and assessment may vary by upazila — verify at local Union Land Office."},
+        ],
+    },
+    "brta-driving-licence-renewal": {
+        "probe_urls": ["https://www.brta.gov.bd/", "https://bsp.brta.gov.bd/"],
+        "procedure_hint": "Driving licence renewal is processed through BRTA online or designated BRTA offices.",
+        "document_hint": "Existing licence, NID, medical certificate (if required), and fee payment are typically required.",
+        "eligibility_hint": "Licence holders whose driving licence is due for renewal.",
+        "fee_hint": "Renewal fees follow official BRTA fee schedule.",
+    },
+    "transport-route-permit": {
+        "probe_urls": ["https://www.brta.gov.bd/", "https://bsp.brta.gov.bd/"],
+        "procedure_hint": "Route permits for commercial vehicles are issued by BRTA following vehicle and route inspection.",
+        "document_hint": "Vehicle registration, fitness certificate, tax token, and route application are typically required.",
+        "eligibility_hint": "Commercial vehicle owners/operators seeking route permits.",
+        "fee_hint": "Route permit fees follow BRTA schedule by vehicle class.",
+    },
 }
 
 PIPELINE_STAGES = (
@@ -160,9 +292,10 @@ PIPELINE_STAGES = (
 class DeepResearchBuilder(ServiceResearchBuilder):
     """Extended research builder with deeper official-source investigation."""
 
-    def __init__(self, repo_root: Path) -> None:
+    def __init__(self, repo_root: Path, *, output_subdir: str = "deep-research-pilot") -> None:
         super().__init__(repo_root)
-        self.output_root = repo_root / "data" / "research" / "deep-research-pilot"
+        self.output_subdir = output_subdir
+        self.output_root = repo_root / "data" / "research" / output_subdir
 
     def _service_hints(self, service_id: str, entry: dict[str, Any], profile_key: str) -> dict[str, Any]:
         curated = dict(DEEP_SERVICE_HINTS.get(service_id) or {})
@@ -569,7 +702,7 @@ class DeepResearchBuilder(ServiceResearchBuilder):
             "product_failure": sum(1 for o in outcomes if o["outcome"] == "PRODUCT_FAILURE"),
             "outcomes": outcomes,
         }
-        eval_dir = self.repo_root / "data" / "evaluation" / "deep-research-pilot"
+        eval_dir = self.repo_root / "data" / "evaluation" / self.output_subdir
         eval_dir.mkdir(parents=True, exist_ok=True)
         (eval_dir / f"{service_id}.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
         return summary

@@ -259,5 +259,51 @@
     "e2e_supported_coverage": 0.15,
     "source_quality": 0.1,
     "citation_integrity": 0.1
+  },
+  "deep_research_dimensions": {
+    "description": "Per-profile deep-research protocol fields — not a one-size-fits-all checklist.",
+    "common_fields": [
+      "critical_research_dimensions",
+      "high_risk_dimensions",
+      "service_specific_aliases",
+      "authority_types",
+      "official_domains",
+      "expected_user_intents",
+      "expected_claim_types",
+      "conditional_dimensions",
+      "geographic_dimensions",
+      "fee_strategy",
+      "status_strategy",
+      "url_strategy",
+      "browser_rendering_requirement",
+      "calculator_requirement"
+    ],
+    "claim_density_model": "Complexity-tier scoring via automation/orchestrator/claim_density.py — critical/optional/conditional/variant/evidence-backed counts, not arbitrary N claims per service."
+  },
+  "profile_extensions": {
+    "IDENTITY_CIVIL": {
+      "expected_user_intents": ["SERVICE_DISCOVERY", "ELIGIBILITY", "DOCUMENT_LIST", "FEE_INQUIRY", "PROCEDURE", "APPLICATION_URL", "STATUS"],
+      "expected_claim_types": ["eligibility", "document", "procedure", "application_url", "fee"],
+      "conditional_dimensions": ["applicant_type", "document_state"],
+      "fee_strategy": "official_schedule",
+      "browser_rendering_requirement": true,
+      "calculator_requirement": false
+    },
+    "TAX": {
+      "expected_user_intents": ["PROCEDURE", "DOCUMENT_LIST", "FEE_INQUIRY", "PAYMENT", "APPLICATION_URL"],
+      "fee_strategy": "calculator_or_assessment",
+      "calculator_requirement": true
+    },
+    "LAND": {
+      "expected_user_intents": ["PROCEDURE", "DOCUMENT_LIST", "FEE_INQUIRY", "STATUS", "OFFICE_LOCATION"],
+      "conditional_dimensions": ["geography", "transfer_type", "applicant_type"],
+      "geographic_dimensions": ["district", "upazila", "union"],
+      "fee_strategy": "schedule_plus_local_tax"
+    },
+    "LOCAL_GOVERNMENT": {
+      "expected_user_intents": ["PROCEDURE", "DOCUMENT_LIST", "FEE_INQUIRY", "OFFICE_LOCATION"],
+      "geographic_dimensions": ["district"],
+      "conditional_dimensions": ["geography", "service_variant"]
+    }
   }
 }

@@ -70,6 +70,9 @@ class CloudExecutor:
     def build_task(self, batch: dict[str, Any], phase: str, run_id: str, state: ProjectState | None = None) -> CloudTaskSpec:
         builders = {
             "RESEARCH": self.task_factory.create_research_task,
+            "DEEP_RESEARCH": lambda batch, run_id, state=None: self.task_factory.create_deep_research_task(
+                (batch.get("service_ids") or [""])[0], run_id, state
+            ),
             "VERIFICATION": self.task_factory.create_verification_task,
             "GAP_CLOSURE": self.task_factory.create_gap_closure_task,
             "PUBLICATION": self.task_factory.create_publication_task,

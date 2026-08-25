@@ -1,0 +1,72 @@
+{
+  "service_id": "customs-asycuda-declaration",
+  "claims": [
+    {
+      "claim_id": "customs-asycuda-declaration::c-catalogue-authority",
+      "service_id": "customs-asycuda-declaration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue - Customs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-asycuda-declaration::c-official-portal",
+      "service_id": "customs-asycuda-declaration",
+      "claim_type": "application_url",
+      "claim_text": "Customs Declaration (ASYCUDA World) official information is published at https://nbr.gov.bd/all-eservices/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/all-eservices/eng"
+      },
+      "source_ids": [
+        "src-customs-asycuda-declaration-official"
+      ],
+      "evidence_ids": [
+        "ev-customs-asycuda-declaration::c-official-portal-src-customs-asycuda-declaration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-asycuda-declaration::c-procedure-overview",
+      "service_id": "customs-asycuda-declaration",
+      "claim_type": "procedure_step",
+      "claim_text": "Customs Declaration (ASYCUDA World) is a government service under National Board of Revenue - Customs (declaration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-customs-asycuda-declaration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-asycuda-declaration::c-service-identity",
+      "service_id": "customs-asycuda-declaration",
+      "claim_type": "eligibility",
+      "claim_text": "Customs Declaration (ASYCUDA World) (কাস্টমস ASYCUDA ঘোষণা) is a confirmed government service in category customs, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-customs-asycuda-declaration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

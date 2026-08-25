@@ -1,0 +1,140 @@
+{
+  "service_id": "tax-etin-registration",
+  "claims": [
+    {
+      "claim_id": "tax-etin-registration::c-catalogue-authority",
+      "service_id": "tax-etin-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-official-portal",
+      "service_id": "tax-etin-registration",
+      "claim_type": "application_url",
+      "claim_text": "e-TIN Registration official information is published at https://secure.incometax.gov.bd (page title: - NBR TIN Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://secure.incometax.gov.bd"
+      },
+      "source_ids": [
+        "src-tax-etin-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-etin-registration::c-official-portal-src-tax-etin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-procedure-overview",
+      "service_id": "tax-etin-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "e-TIN registration is completed through the NBR secure portal.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-etin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-document-overview",
+      "service_id": "tax-etin-registration",
+      "claim_type": "document",
+      "claim_text": "NID, passport-size photograph, and contact details are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-tax-etin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-service-identity",
+      "service_id": "tax-etin-registration",
+      "claim_type": "eligibility",
+      "claim_text": "e-TIN Registration (ই-টিআইএন নিবন্ধন) is a confirmed government service in category tax, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-etin-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-eligibility-deep",
+      "service_id": "tax-etin-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Individuals and entities requiring a Tax Identification Number from NBR.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-etin-registration-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-fee-deep",
+      "service_id": "tax-etin-registration",
+      "claim_type": "fee",
+      "claim_text": "e-TIN registration is generally free; verify current NBR notice.",
+      "information_class": "OFFICIAL_FEE",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-etin-registration-official"
+      ],
+      "provenance": "deep_research_curated",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-document-must-need",
+      "service_id": "tax-etin-registration",
+      "claim_type": "document",
+      "claim_text": "NID, passport-size photograph, and contact details are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-etin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

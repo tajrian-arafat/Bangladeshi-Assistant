@@ -1,0 +1,140 @@
+{
+  "service_id": "employment-boesl-overseas-recruitment",
+  "claims": [
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-catalogue-authority",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Overseas Employment and Services Ltd. (BOESL).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-official-portal",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "application_url",
+      "claim_text": "BOESL Overseas Job Seeker Registration official information is published at https://brms.boesl.gov.bd/ (page title: BOESL Overseas Job Seeker Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://brms.boesl.gov.bd/"
+      },
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official"
+      ],
+      "evidence_ids": [
+        "ev-employment-boesl-overseas-recruitment::c-official-portal-src-employment-boesl-overseas-recruitment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-procedure-overview",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "procedure_step",
+      "claim_text": "Overseas recruitment through BOESL follows BMET clearance and agency procedures.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-document-overview",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "document",
+      "claim_text": "Passport, medical certificate, training certificates, and BMET clearance are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-service-identity",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "eligibility",
+      "claim_text": "BOESL Overseas Job Seeker Registration (BOESL বিদেশি চাকরি নিবন্ধন) is a confirmed government service in category employment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-eligibility-deep",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "eligibility",
+      "claim_text": "Bangladeshi workers seeking overseas employment through BOESL channels.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-fee-deep",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "fee",
+      "claim_text": "Recruitment and processing fees follow official BOESL/BMET schedules.",
+      "information_class": "OFFICIAL_FEE",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official"
+      ],
+      "provenance": "deep_research_curated",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-document-must-need",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "document",
+      "claim_text": "Passport, medical certificate, training certificates, and BMET clearance are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

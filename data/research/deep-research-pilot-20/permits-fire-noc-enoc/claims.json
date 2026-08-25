@@ -1,0 +1,140 @@
+{
+  "service_id": "permits-fire-noc-enoc",
+  "claims": [
+    {
+      "claim_id": "permits-fire-noc-enoc::c-catalogue-authority",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Fire Service and Civil Defence Directorate.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-official-portal",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "application_url",
+      "claim_text": "Fire Service No Objection Certificate (e-NOC) official information is published at https://enoc.fireservice.gov.bd/ (page title: Fire Service No Objection Certificate (e-NOC)).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://enoc.fireservice.gov.bd/"
+      },
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official"
+      ],
+      "evidence_ids": [
+        "ev-permits-fire-noc-enoc::c-official-portal-src-permits-fire-noc-enoc-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-procedure-overview",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "procedure_step",
+      "claim_text": "Fire NOC/e-NOC is applied through the Fire Service and Civil Defence.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-document-overview",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "document",
+      "claim_text": "Building plans, ownership documents, and application form are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-service-identity",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "eligibility",
+      "claim_text": "Fire Service No Objection Certificate (e-NOC) (ফায়ার সার্ভিস অনাপত্তি সনদ (e-NOC)) is a confirmed government service in category permits, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-eligibility-deep",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "eligibility",
+      "claim_text": "Building owners/occupiers requiring fire safety clearance.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-fee-deep",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "fee",
+      "claim_text": "NOC fees vary by building type and area — check official schedule.",
+      "information_class": "OFFICIAL_FEE",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official"
+      ],
+      "provenance": "deep_research_curated",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "permits-fire-noc-enoc::c-document-must-need",
+      "service_id": "permits-fire-noc-enoc",
+      "claim_type": "document",
+      "claim_text": "Building plans, ownership documents, and application form are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-permits-fire-noc-enoc-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

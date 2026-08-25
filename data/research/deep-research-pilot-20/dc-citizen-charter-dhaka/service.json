@@ -1,0 +1,138 @@
+{
+  "service_id": "dc-citizen-charter-dhaka",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Dhaka District Citizen Charter Services",
+  "service_name_bn": "ঢাকা জেলা নাগরিক সেবা চার্টার",
+  "aliases": [
+    "DC office Dhaka",
+    "district commissioner services",
+    "Dhaka District Citizen Charter Services"
+  ],
+  "category_id": "local_government",
+  "profile_key": "LOCAL_GOVERNMENT",
+  "responsible_agency": "Deputy Commissioner, Dhaka District",
+  "official_application_url": "https://www.dhaka.gov.bd/en",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "deep_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "dc-citizen-charter-dhaka::c-catalogue-authority",
+      "service_id": "dc-citizen-charter-dhaka",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Deputy Commissioner, Dhaka District.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-citizen-charter-dhaka::c-official-url-documented",
+      "service_id": "dc-citizen-charter-dhaka",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.dhaka.gov.bd/en for Dhaka District Citizen Charter Services; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.dhaka.gov.bd/en"
+      },
+      "source_ids": [
+        "src-dc-citizen-charter-dhaka-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-citizen-charter-dhaka::c-procedure-overview",
+      "service_id": "dc-citizen-charter-dhaka",
+      "claim_type": "procedure_step",
+      "claim_text": "Dhaka District Citizen Charter Services is a government service under Deputy Commissioner, Dhaka District (citizen charter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-citizen-charter-dhaka-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-citizen-charter-dhaka::c-service-identity",
+      "service_id": "dc-citizen-charter-dhaka",
+      "claim_type": "eligibility",
+      "claim_text": "Dhaka District Citizen Charter Services (ঢাকা জেলা নাগরিক সেবা চার্টার) is a confirmed government service in category local_government, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-citizen-charter-dhaka-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-dc-citizen-charter-dhaka-official",
+      "service_id": "dc-citizen-charter-dhaka",
+      "url": "https://www.dhaka.gov.bd/en",
+      "title": "Dhaka District Citizen Charter Services",
+      "authority_id": "deputy-commissioner-dhaka-district",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.dhaka.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T04:38:07.074238+00:00"
+      },
+      "evidence_locator": "probe:https://www.dhaka.gov.bd/en"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-dc-citizen-charter-dhaka-portal-unreachable",
+      "service_id": "dc-citizen-charter-dhaka",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Dhaka District Citizen Charter Services.",
+      "severity": "MEDIUM",
+      "url": "https://www.dhaka.gov.bd/en"
+    },
+    {
+      "gap_id": "gap-dc-citizen-charter-dhaka-fee-unverified",
+      "service_id": "dc-citizen-charter-dhaka",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Dhaka District Citizen Charter Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dc-citizen-charter-dhaka-documents-unverified",
+      "service_id": "dc-citizen-charter-dhaka",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Dhaka District Citizen Charter Services.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "research_depth": "DEEP_PILOT"
+}

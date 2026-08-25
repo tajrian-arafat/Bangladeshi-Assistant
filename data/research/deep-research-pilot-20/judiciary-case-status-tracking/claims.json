@@ -1,0 +1,124 @@
+{
+  "service_id": "judiciary-case-status-tracking",
+  "claims": [
+    {
+      "claim_id": "judiciary-case-status-tracking::c-catalogue-authority",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Supreme Court of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-case-status-tracking::c-official-portal",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "application_url",
+      "claim_text": "Court Case Status Tracking official information is published at https://supremecourt.gov.bd/ (page title: Home : Supreme Court of Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://supremecourt.gov.bd/"
+      },
+      "source_ids": [
+        "src-judiciary-case-status-tracking-official"
+      ],
+      "evidence_ids": [
+        "ev-judiciary-case-status-tracking::c-official-portal-src-judiciary-case-status-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-case-status-tracking::c-procedure-overview",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "procedure_step",
+      "claim_text": "Case status can be tracked through judiciary e-Courts portals where enabled.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-case-status-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-case-status-tracking::c-document-overview",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "document",
+      "claim_text": "Case number, court name, and party details are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-judiciary-case-status-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-case-status-tracking::c-service-identity",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Court Case Status Tracking (মামলার স্ট্যাটাস/ট্র্যাকিং) is a confirmed government service in category judiciary, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-case-status-tracking-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-case-status-tracking::c-eligibility-deep",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Litigants and advocates with an active case reference.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-case-status-tracking-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-case-status-tracking::c-document-must-need",
+      "service_id": "judiciary-case-status-tracking",
+      "claim_type": "document",
+      "claim_text": "Case number, court name, and party details are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-case-status-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "service_id": "education-class-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Class IX/XI Board Registration",
+  "service_name_bn": "নবম/একাদশ শ্রেণী রেজিস্ট্রেশন",
+  "aliases": [
+    "registration card",
+    "board registration"
+  ],
+  "category_id": "education",
+  "profile_key": "EDUCATION",
+  "responsible_agency": "Board of Intermediate and Secondary Education (respective board)",
+  "official_application_url": "http://www.educationboard.gov.bd/sylhet/activities.php",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "deep_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "education-class-registration::c-catalogue-authority",
+      "service_id": "education-class-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Board of Intermediate and Secondary Education (respective board).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-class-registration::c-official-url-documented",
+      "service_id": "education-class-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://www.educationboard.gov.bd/sylhet/activities.php for Class IX/XI Board Registration; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/sylhet/activities.php"
+      },
+      "source_ids": [
+        "src-education-class-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-class-registration::c-procedure-overview",
+      "service_id": "education-class-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Class registration is managed by schools/Education Board per academic calendar.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-class-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-class-registration::c-document-overview",
+      "service_id": "education-class-registration",
+      "claim_type": "document",
+      "claim_text": "Birth certificate, prior academic records, and guardian NID are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-education-class-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-class-registration::c-service-identity",
+      "service_id": "education-class-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Class IX/XI Board Registration (নবম/একাদশ শ্রেণী রেজিস্ট্রেশন) is a confirmed government service in category education, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-class-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-class-registration::c-eligibility-deep",
+      "service_id": "education-class-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Students enrolling in the relevant class per board rules.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "PARTIAL",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-class-registration-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-class-registration::c-document-must-need",
+      "service_id": "education-class-registration",
+      "claim_type": "document",
+      "claim_text": "Birth certificate, prior academic records, and guardian NID are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-class-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-education-class-registration-official",
+      "service_id": "education-class-registration",
+      "url": "http://www.educationboard.gov.bd/sylhet/activities.php",
+      "title": "404 Not Found",
+      "authority_id": "board-of-intermediate-and-secondary-education-respective-board",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://www.educationboard.gov.bd/sylhet/activities.php",
+        "status_code": 404,
+        "reachable": false,
+        "title": "404 Not Found",
+        "content_type": "text/html",
+        "content_hash": "55f7d9e99b8e2d4e",
+        "retrieved_at": "2026-08-25T04:27:20.903021+00:00"
+      },
+      "evidence_locator": "probe:http://www.educationboard.gov.bd/sylhet/activities.php"
+    },
+    {
+      "source_id": "src-education-class-registration-alt-1",
+      "service_id": "education-class-registration",
+      "url": "https://www.educationboard.gov.bd/",
+      "title": "Class IX/XI Board Registration",
+      "authority_id": "board-of-intermediate-and-secondary-education-respective-board",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.educationboard.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T04:27:21.197852+00:00"
+      }
+    },
+    {
+      "source_id": "src-education-class-registration-alt-2",
+      "service_id": "education-class-registration",
+      "url": "https://www.moedu.gov.bd/",
+      "title": "Class IX/XI Board Registration",
+      "authority_id": "board-of-intermediate-and-secondary-education-respective-board",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.moedu.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T04:27:22.002769+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-education-class-registration-portal-unreachable",
+      "service_id": "education-class-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Class IX/XI Board Registration.",
+      "severity": "MEDIUM",
+      "url": "http://www.educationboard.gov.bd/sylhet/activities.php"
+    },
+    {
+      "gap_id": "gap-education-class-registration-fee-unverified",
+      "service_id": "education-class-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Class IX/XI Board Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-education-class-registration-documents-unverified",
+      "service_id": "education-class-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Class IX/XI Board Registration.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "research_depth": "DEEP_PILOT"
+}

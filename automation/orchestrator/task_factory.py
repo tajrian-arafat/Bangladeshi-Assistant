@@ -53,6 +53,15 @@ class TaskFactory:
     ]
 
     PHASE_OUTPUTS: dict[str, list[str]] = {
+        "DEEP_RESEARCH": [
+            "data/research/deep-research-pilot-20/{service_id}/service.json",
+            "data/research/deep-research-pilot-20/{service_id}/claims.json",
+            "data/research/deep-research-pilot-20/{service_id}/sources.json",
+            "data/research/deep-research-pilot-20/{service_id}/verification/claims_verification.json",
+            "data/research/staging/deep-research-pilot-20/",
+            "data/audit/deep-research-runtime-consistency.json",
+            ".automation/runs/{run_id}/result.json",
+        ],
         "RESEARCH": [
             "data/research/raw/{slug}/scope.json",
             "data/research/raw/{slug}/services_index.json",
@@ -147,6 +156,7 @@ class TaskFactory:
     def _read_template(self, phase: str) -> str:
         name = {
             "RESEARCH": "research",
+            "DEEP_RESEARCH": "research",
             "VERIFICATION": "verification",
             "GAP_CLOSURE": "gap_closure",
             "PUBLICATION": "publication",
@@ -306,6 +316,139 @@ class TaskFactory:
             no_external_paid_api=True,
             prompt_text=prompt,
             metadata={"created_at": self._now(), "service_research_brief": brief},
+        )
+
+    def build_deep_research_brief(self, service_id: str) -> dict[str, Any]:
+        """Deep-research brief for a PARTIAL service — attacks missing dimensions."""
+        base = self.build_service_research_brief(service_id, batch=None)
+        profiles_doc = load_profiles(self.repo_root)
+        profile = (profiles_doc.get("profiles") or {}).get(base.get("research_profile") or "OTHER", {})
+
+        verified: list[dict[str, Any]] = []
+        partial_claims: list[dict[str, Any]] = []
+        gaps: list[dict[str, Any]] = []
+        source_urls: list[str] = []
+        false_sources: list[str] = []
+
+        rerun_root = self.repo_root / "data" / "research" / "rerun"
+        if rerun_root.is_dir():
+            for wave_dir in sorted(rerun_root.iterdir(), reverse=True):
+                svc_dir = wave_dir / service_id
+                if not svc_dir.is_dir():
+                    continue
+                claims = json.loads((svc_dir / "claims.json").read_text(encoding="utf-8")).get("claims") or []
+                for c in claims:
+                    st = c.get("verification_status")
+                    if st == "VERIFIED":
+                        verified.append(c)
+                    elif c.get("claim_class") == "SERVICE_SPECIFIC":
+                        partial_claims.append(c)
+                gaps_path = svc_dir / "knowledge_gaps.json"
+                if gaps_path.exists():
+                    gaps = json.loads(gaps_path.read_text(encoding="utf-8")).get("gaps") or []
+                src_doc = json.loads((svc_dir / "sources.json").read_text(encoding="utf-8"))
+                for s in src_doc.get("sources") or []:
+                    if s.get("url"):
+                        source_urls.append(s["url"])
+                    if s.get("false_positive"):
+                        false_sources.append(s.get("url") or s.get("source_id"))
+                break
+
+        taxonomy_path = self.repo_root / "data" / "audit" / "partial-knowledge-taxonomy.json"
+        missing_dims: list[str] = []
+        e2e_failures: list[str] = []
+        if taxonomy_path.exists():
+            tax = json.loads(taxonomy_path.read_text(encoding="utf-8"))
+            for rec in tax.get("services") or tax.get("taxonomy", {}).get("services") or []:
+                if rec.get("service_id") == service_id:
+                    missing_dims = list(rec.get("critical_missing") or rec.get("partial_reasons") or [])
+                    if (rec.get("e2e_supported_rate") or 0) == 0:
+                        e2e_failures.append("MISSING_E2E_SUPPORTED_COVERAGE")
+                    break
+
+        intent_map = {
+            "procedure": "PROCEDURE",
+            "document_list": "DOCUMENT_LIST",
+            "fee": "FEE_INQUIRY",
+            "eligibility": "ELIGIBILITY",
+            "status": "STATUS",
+            "payment": "PAYMENT",
+        }
+        expected_intents = [intent_map[i] for i in (profile.get("e2e_intents") or []) if i in intent_map]
+
+        return {
+            **base,
+            "instruction": "DEEP RESEARCH THIS EXACT SERVICE",
+            "pipeline": "DEEP_RESEARCH",
+            "current_verified_claims": verified[:20],
+            "current_partial_claims": partial_claims[:20],
+            "current_gaps_detail": gaps[:15],
+            "previous_source_urls": source_urls[:10],
+            "false_source_history": false_sources[:5],
+            "service_profile": profile,
+            "expected_critical_user_questions": expected_intents,
+            "current_e2e_failures": e2e_failures,
+            "missing_knowledge_dimensions": missing_dims,
+            "attack_plan": {
+                "MUST_NEED documents": "Search official form, instructions, circular, portal, PDF; cross-check.",
+                "Fee": "Check official schedule, calculator, PDF, circular, current notice.",
+                "Conditional document": "Identify applicant/service variants; verify conditions; store conditional rule.",
+            },
+        }
+
+    def create_deep_research_task(
+        self,
+        service_id: str,
+        run_id: str,
+        state: ProjectState | None = None,
+    ) -> CloudTaskSpec:
+        brief = self.build_deep_research_brief(service_id)
+        batch = {
+            "batch_id": "DEEP_RESEARCH_PILOT_20",
+            "slug": "deep-research-pilot-20",
+            "service_ids": [service_id],
+        }
+        task_id = f"DEEP_RESEARCH:{service_id}:{run_id}"
+        template = self._read_template("RESEARCH")
+        outputs = [
+            f"data/research/deep-research-pilot-20/{service_id}/service.json",
+            "data/research/staging/deep-research-pilot-20/",
+            f".automation/runs/{run_id}/result.json",
+        ]
+        prompt = (
+            f"# BDA Deep Research Task\n\n"
+            f"**DEEP RESEARCH THIS EXACT SERVICE:** `{service_id}`\n"
+            f"**Run ID:** {run_id}\n\n"
+            f"## Deep Research Brief\n```json\n{json.dumps(brief, indent=2, ensure_ascii=False)}\n```\n\n"
+            f"## Pipeline\n"
+            f"SERVICE PROFILE → DISCOVERY → DEEP OFFICIAL RETRIEVAL → BROWSER/JS IF NEEDED → "
+            f"CLAIM EXTRACTION → CONDITIONAL RULES → INDEPENDENT VERIFICATION → GAP CLOSURE → "
+            f"LOCAL PUBLICATION → RUNTIME VALIDATION → E2E → REGRESSION\n\n"
+            f"## Safety\n"
+            + "\n".join(f"- {s}" for s in self.SAFETY)
+            + "\n\nShallow/service-builder output is scaffolding only — not authoritative.\n\n"
+            f"## Phase instructions\n{template}\n"
+        )
+        return CloudTaskSpec(
+            task_id=task_id,
+            batch_id=batch["batch_id"],
+            batch_slug=batch["slug"],
+            phase="DEEP_RESEARCH",
+            run_id=run_id,
+            service_ids=[service_id],
+            service_names={service_id: brief.get("service_name_en") or service_id},
+            domain=str(brief.get("category_id") or "government"),
+            project_state=state.to_dict() if state else {},
+            previous_artifacts=[],
+            knowledge_gaps=brief.get("current_gaps_detail") or [],
+            known_conflicts=[],
+            required_outputs=outputs,
+            result_schema="automation.schemas.result.PhaseResult",
+            safety_constraints=self.SAFETY,
+            deployment_locked=True,
+            no_external_paid_api=True,
+            prompt_text=prompt,
+            metadata={"created_at": self._now(), "deep_research_brief": brief},
         )
 
     def create_research_task(self, batch: dict[str, Any], run_id: str, state: ProjectState | None = None) -> CloudTaskSpec:
