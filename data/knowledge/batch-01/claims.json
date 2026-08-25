@@ -1,0 +1,1194 @@
+{
+  "claims": [
+    {
+      "claim_id": "c-print",
+      "claim": "BDRIS provides an application print endpoint for applicants.",
+      "field": "application",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-bdris-br-app",
+        "src-orgbdr"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-bdris-application-print"
+    },
+    {
+      "claim_id": "c-verify",
+      "claim": "Birth and death records can be verified via everify.bdris.gov.bd.",
+      "field": "application",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-orgbdr",
+        "src-everify"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-death-verify"
+    },
+    {
+      "claim_id": "c-br-portal",
+      "claim": "Birth registration applications are submitted via BDRIS at bdris.gov.bd; applicant chooses registration address type (birth place / permanent / present).",
+      "field": "application",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-bdris-br-app"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration"
+    },
+    {
+      "claim_id": "c-br-upload",
+      "claim": "Only image files (.jpg/.jpeg/.png) may be uploaded; maximum 2 MB per file (application page).",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-bdris-br-app"
+      ],
+      "evidence_excerpt": "শুধুমাত্র ইমেজ ফাইল (.jpg, .jpeg, .png) আপলোড করা যাবে। (প্রতিটি ফাইলের জন্য সর্বোচ্চ ফাইল সাইজ 2 মেগাবাইট)",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration"
+    },
+    {
+      "claim_id": "c-br-fee-free45",
+      "claim": "Registration within 45 days of birth is free of charge (domestic and abroad) per LGD-referenced fee schedule republished via MOFA mission notice.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": "within 45 (forty-five) days ... Free of charge",
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration"
+    },
+    {
+      "claim_id": "c-br-fee-late",
+      "claim": "After 45 days to 5 years: BDT 25 (domestic) / USD 1 (abroad); after 5 years: BDT 50 (domestic) / USD 1 (abroad), per LGD-referenced schedule.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration"
+    },
+    {
+      "claim_id": "c-br-fee-conflict-500",
+      "claim": "Some secondary guides claim BDT 500 for registration after 10 years; this conflicts with the LGD-referenced schedule (BDT 50 after 5 years) and is not adopted as official.",
+      "field": "fees",
+      "information_class": "PRACTICAL",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-legalclarity-birth"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "UNVERIFIED",
+      "confidence": 0.3,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration"
+    },
+    {
+      "claim_id": "c-br-helpline",
+      "claim": "Registrar General office operates call centre 16152; support emails support@bdris.gov.bd / help@bdris.gov.bd.",
+      "field": "office",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-orgbdr"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration"
+    },
+    {
+      "claim_id": "c-br-docs-practical",
+      "claim": "Guides commonly list hospital birth certificate/midwife certificate and parents' NID/birth certificates; treat as practical/conditional pending full official checklist PDF retrieval.",
+      "field": "requirements",
+      "information_class": "PRACTICAL",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-legalclarity-birth",
+        "src-mofa-ankara-bdr"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "UNVERIFIED",
+      "confidence": 0.55,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration"
+    },
+    {
+      "claim_id": "c-copy-fee",
+      "claim": "Issuance of duplicate certificate copy in Bangla & English: BDT 50 domestic / USD 1 abroad; original certificate issuance free.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration-copy"
+    },
+    {
+      "claim_id": "c-corr-fee-dob",
+      "claim": "Application fee for date-of-birth correction: BDT 100 domestic / USD 2 abroad (LGD-referenced schedule).",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration-correction"
+    },
+    {
+      "claim_id": "c-corr-fee-other",
+      "claim": "Application fee for other information correction (name, parents, address, etc.): BDT 50 domestic / USD 1 abroad (LGD-referenced schedule).",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.75,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration-correction"
+    },
+    {
+      "claim_id": "c-dup-cancel",
+      "claim": "orgbdr.gov.bd lists cancellation of multiple birth certificates as a service linked through BDRIS login/application print flows.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-orgbdr"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-birth-registration-duplicate-cancel"
+    },
+    {
+      "claim_id": "c-dr-portal",
+      "claim": "Death registration applications are available at bdris.gov.bd/dr/application.",
+      "field": "application",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-orgbdr"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-death-registration"
+    },
+    {
+      "claim_id": "c-dr-fees",
+      "claim": "Death registration fee tiers mirror birth registration (free ≤45 days; BDT 25 after 45 days to 5 years; BDT 50 after 5 years) per LGD-referenced schedule.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-death-registration"
+    },
+    {
+      "claim_id": "c-copy-fee",
+      "claim": "Issuance of duplicate certificate copy in Bangla & English: BDT 50 domestic / USD 1 abroad; original certificate issuance free.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-death-registration-copy"
+    },
+    {
+      "claim_id": "c-corr-fee-dob",
+      "claim": "Application fee for date-of-birth correction: BDT 100 domestic / USD 2 abroad (LGD-referenced schedule).",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-death-registration-correction"
+    },
+    {
+      "claim_id": "c-corr-fee-other",
+      "claim": "Application fee for other information correction (name, parents, address, etc.): BDT 50 domestic / USD 1 abroad (LGD-referenced schedule).",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.75,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-death-registration-correction"
+    },
+    {
+      "claim_id": "c-dup-cancel",
+      "claim": "orgbdr.gov.bd lists cancellation of multiple birth certificates as a service linked through BDRIS login/application print flows.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-orgbdr"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-death-registration-duplicate-cancel"
+    },
+    {
+      "claim_id": "c-div-portal",
+      "claim": "CRVS Marriage & Divorce portal user manual covers divorce-related registrar workflows alongside marriage.",
+      "field": "application",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-marriage-manual"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.75,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-divorce-registration"
+    },
+    {
+      "claim_id": "c-reg-list",
+      "claim": "marriage.gov.bd provides registrar list/search functions for Muslim/Hindu registrars.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-marriage-portal"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-marriage-registrar-hindu-list"
+    },
+    {
+      "claim_id": "c-reg-list",
+      "claim": "marriage.gov.bd provides registrar list/search functions for Muslim/Hindu registrars.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-marriage-portal"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-marriage-registrar-muslim-list"
+    },
+    {
+      "claim_id": "c-mm-mandatory",
+      "claim": "Every marriage solemnized under Muslim law shall be registered under the 1974 Act.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-law-muslim-marriage"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-marriage-registration"
+    },
+    {
+      "claim_id": "c-hm-optional",
+      "claim": "Hindu marriage registration is provided for under the 2012 Act (registration framework; widely described as optional vs Muslim mandatory).",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-law-hindu-marriage"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-marriage-registration"
+    },
+    {
+      "claim_id": "c-portal",
+      "claim": "CRVS Marriage & Divorce portal supports civilian registration/login and multi-step marriage registration forms; registrars manage applications (official user manual).",
+      "field": "application",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-marriage-manual",
+        "src-marriage-portal"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-marriage-registration"
+    },
+    {
+      "claim_id": "c-report-30",
+      "claim": "Where marriage is solemnized by someone other than the Nikah Registrar, the bridegroom must report within 30 days for registration.",
+      "field": "procedure",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-law-muslim-marriage"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "civil-marriage-registration"
+    },
+    {
+      "claim_id": "c-dc-attestation-photocopy-exists",
+      "claim": "Example official/LGI URL referenced: https://www.dhaka.gov.bd/en. Treat as geographic instance, not national fee/doc schedule.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "dc-attestation-photocopy"
+    },
+    {
+      "claim_id": "c-dc-guardianship-certificate-exists",
+      "claim": "Example official/LGI URL referenced: https://www.dhaka.gov.bd/en. Treat as geographic instance, not national fee/doc schedule.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "dc-guardianship-certificate"
+    },
+    {
+      "claim_id": "c-slip",
+      "claim": "Online account services include election-time vote centre related information.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "identity-voter-slip-download"
+    },
+    {
+      "claim_id": "c-local-character-certificate-exists",
+      "claim": "Example official/LGI URL referenced: https://www.chandanpurup.gov.bd/new/application/citizen. Treat as geographic instance, not national fee/doc schedule.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "local-character-certificate"
+    },
+    {
+      "claim_id": "c-local-death-certificate-union-exists",
+      "claim": "Example official/LGI URL referenced: https://www.chandanpurup.gov.bd/new/application/citizen. Treat as geographic instance, not national fee/doc schedule.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "local-death-certificate-union"
+    },
+    {
+      "claim_id": "c-local-death-vs-bdris",
+      "claim": "Local union death certificate is distinct from BDRIS death registration (catalogue/finalization notes).",
+      "field": "related_services",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "local-death-certificate-union"
+    },
+    {
+      "claim_id": "c-local-nationality-certificate-exists",
+      "claim": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "local-nationality-certificate"
+    },
+    {
+      "claim_id": "c-local-passport-attestation-exists",
+      "claim": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "local-passport-attestation"
+    },
+    {
+      "claim_id": "c-local-voter-transfer-attestation-exists",
+      "claim": "Example official/LGI URL referenced: https://tilokpursonod.gov.bd/select_certificate/. Treat as geographic instance, not national fee/doc schedule.",
+      "field": "service",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "catalogue-official_source"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.7,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "local-voter-transfer-attestation"
+    },
+    {
+      "claim_id": "c-nid-card-info-correction-channel",
+      "claim": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "field": "application_methods",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-card-info-correction"
+    },
+    {
+      "claim_id": "c-nid-card-info-correction-ssc-priority",
+      "claim": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-card-info-correction"
+    },
+    {
+      "claim_id": "c-nid-card-info-correction-once",
+      "claim": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "field": "correction_rules",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": "এক তথ্য শুধুমাত্র একবার সংশোধন করা যাবে",
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-card-info-correction"
+    },
+    {
+      "claim_id": "c-nid-card-info-correction-fee-exists",
+      "claim": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "evidence_excerpt": "হ্যাঁ ফি দিতে হয়। আপনার আবেদনের ফি জানতে এখানে ক্লিক করুন।",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-card-info-correction"
+    },
+    {
+      "claim_id": "c-nid-card-info-correction-fee-amount-news",
+      "claim": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "field": "fees",
+      "information_class": "PRACTICAL",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-sib-nid-fees"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "UNVERIFIED",
+      "confidence": 0.45,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "nid-card-info-correction"
+    },
+    {
+      "claim_id": "c-claim",
+      "claim": "If registered as voter but no NID number received, use Claim Account with form number, date of birth, captcha and required info, then login to download NID copy.",
+      "field": "procedure",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-claim-account"
+    },
+    {
+      "claim_id": "c-nid-combined-correction-channel",
+      "claim": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "field": "application_methods",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-combined-correction"
+    },
+    {
+      "claim_id": "c-nid-combined-correction-ssc-priority",
+      "claim": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-combined-correction"
+    },
+    {
+      "claim_id": "c-nid-combined-correction-once",
+      "claim": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "field": "correction_rules",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": "এক তথ্য শুধুমাত্র একবার সংশোধন করা যাবে",
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-combined-correction"
+    },
+    {
+      "claim_id": "c-nid-combined-correction-fee-exists",
+      "claim": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "evidence_excerpt": "হ্যাঁ ফি দিতে হয়। আপনার আবেদনের ফি জানতে এখানে ক্লিক করুন।",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-combined-correction"
+    },
+    {
+      "claim_id": "c-nid-combined-correction-fee-amount-news",
+      "claim": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "field": "fees",
+      "information_class": "PRACTICAL",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-sib-nid-fees"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "UNVERIFIED",
+      "confidence": 0.45,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "nid-combined-correction"
+    },
+    {
+      "claim_id": "c-dl",
+      "claim": "Citizens with online account can download NID card copy from the download menu after login.",
+      "field": "delivery",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq",
+        "src-nid-home"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-download-copy"
+    },
+    {
+      "claim_id": "c-exp-otp",
+      "claim": "OTP and notifications for expatriate Bangladeshi applicants are sent via email only.",
+      "field": "application",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-home"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-expatriate-registration"
+    },
+    {
+      "claim_id": "c-exp-apply",
+      "claim": "Applicants abroad who missed registration may apply online any time (FAQ).",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-expatriate-registration"
+    },
+    {
+      "claim_id": "c-fee-types",
+      "claim": "Fee calculator supports application types: NID card correction; other info correction; combined correction; reissue — plus delivery type.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-fees"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-fee-calculator"
+    },
+    {
+      "claim_id": "c-nid-new-age10",
+      "claim": "Citizens aged 10 years or more who are not yet registered as voters may apply online and provide biometrics at the relevant Upazila/Thana election office.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": "আপনার বয়স যদি ১০ বছর বা বেশি হয়ে থাকে কিন্তু এখনও ভোটার হিসেবে নিবন্ধিত হননি",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-new-voter-registration"
+    },
+    {
+      "claim_id": "c-nid-new-voter18",
+      "claim": "If age is 18 years on or before 1 January of the current year, the applicant will be included in the voter list.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": "আপনার বয়স যদি চলতি বছরের ১ জানুয়ারী বা তার পূর্বে ১৮ বছর হয়ে থাকে",
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-new-voter-registration"
+    },
+    {
+      "claim_id": "c-nid-new-docs",
+      "claim": "At biometric appointment, applicants need printed online form, age-proof document(s), address proof, and other supporting IDs as applicable.",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-new-voter-registration"
+    },
+    {
+      "claim_id": "c-nid-new-duplicate-crime",
+      "claim": "Re-applying when already registered is a punishable offence.",
+      "field": "warnings",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": "নিবন্ধিত ব্যাক্তি পুনরায় আবেদন করলে সেটি দন্ডনীয় অপরাধ",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-new-voter-registration"
+    },
+    {
+      "claim_id": "c-nid-ssc-priority",
+      "claim": "For name/age, SSC or equivalent certificate gets priority when the person is SSC-qualified.",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq",
+        "src-nidw-main"
+      ],
+      "evidence_excerpt": "এসএসসি অথবা সমমানের পরীক্ষার সনদে উল্লেখিত বয়স ও নাম",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-new-voter-registration"
+    },
+    {
+      "claim_id": "c-acct-reg",
+      "claim": "Voters with NID can register an online account using card number, active mobile/email, date of birth, and address-related info.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-online-account-registration"
+    },
+    {
+      "claim_id": "c-acct-wallet",
+      "claim": "After registration, download NID Wallet app and complete face verification to log in.",
+      "field": "procedure",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-online-account-registration"
+    },
+    {
+      "claim_id": "c-nid-other-info-correction-channel",
+      "claim": "Correction applications may be submitted online or at NID Registration Wing / Upazila / Thana / District election offices with adequate supporting documents.",
+      "field": "application_methods",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-other-info-correction"
+    },
+    {
+      "claim_id": "c-nid-other-info-correction-ssc-priority",
+      "claim": "For name (Bangla/English) and date of birth correction, SSC/equivalent certificate is required if minimum qualification is SSC/equivalent.",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-other-info-correction"
+    },
+    {
+      "claim_id": "c-nid-other-info-correction-once",
+      "claim": "Official FAQ states one piece of information may be corrected only once; unjustified corrections are not acceptable.",
+      "field": "correction_rules",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": "এক তথ্য শুধুমাত্র একবার সংশোধন করা যাবে",
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-other-info-correction"
+    },
+    {
+      "claim_id": "c-nid-other-info-correction-fee-exists",
+      "claim": "Fees are payable for correction/reissue; applicants must calculate fee via the official fee calculator.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "evidence_excerpt": "হ্যাঁ ফি দিতে হয়। আপনার আবেদনের ফি জানতে এখানে ক্লিক করুন।",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-other-info-correction"
+    },
+    {
+      "claim_id": "c-nid-other-info-correction-fee-amount-news",
+      "claim": "Secondary news reports cite VAT-inclusive visible-info correction fees such as BDT 230 (1st), 345 (2nd), 460 (3rd+); not confirmed from a retrieved Tier-1 fee schedule PDF in this pass.",
+      "field": "fees",
+      "information_class": "PRACTICAL",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-sib-nid-fees"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "UNVERIFIED",
+      "confidence": 0.45,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": [],
+      "service_id": "nid-other-info-correction"
+    },
+    {
+      "claim_id": "c-photo",
+      "claim": "Photo/signature change appointment is listed among online account services; unclear photo may require in-person application at National Identity Registration Wing.",
+      "field": "appointment",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-photo-signature-appointment"
+    },
+    {
+      "claim_id": "c-sign-once",
+      "claim": "Signature change requires sample with acceptable proof; signature may be changed only once.",
+      "field": "rules",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-photo-signature-appointment"
+    },
+    {
+      "claim_id": "c-reissue-online",
+      "claim": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online.",
+      "field": "procedure",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-reissue-lost"
+    },
+    {
+      "claim_id": "c-reissue-law",
+      "claim": "If NID is lost or damaged, citizen may apply in prescribed manner with prescribed fees for a fresh card.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nidw-duplicate"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-reissue-lost"
+    },
+    {
+      "claim_id": "c-reissue-no-combo",
+      "claim": "Lost-card reissue and correction cannot be done together; reissue first.",
+      "field": "rules",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-reissue-lost"
+    },
+    {
+      "claim_id": "c-reissue-fee",
+      "claim": "Fees apply; use official fee calculator (application type: reissue).",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-reissue-lost"
+    },
+    {
+      "claim_id": "c-f13",
+      "claim": "For change of residence, apply with Form 13 at the Upazila/Thana election office of the current residence area. Spelling/detail fixes within same voter area use ordinary correction form.",
+      "field": "procedure",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": [],
+      "service_id": "nid-voter-area-change"
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+[
+  {
+    "id": "q001",
+    "query": "জন্ম নিবন্ধন করতে কী কী লাগে?",
+    "language": "bn",
+    "intent_expected": "document_list",
+    "service_expected": "birth-registration",
+    "category": "document_list",
+    "expect": {
+      "must_not_hallucinate_fee": true,
+      "must_not_show_seed_checklist_as_official": true,
+      "practical_must_be_labeled": true,
+      "uncertainty_ok": true
+    }
+  },
+  {
+    "id": "q002",
+    "query": "What documents are required for birth registration?",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "birth-registration",
+    "category": "document_list",
+    "expect": {
+      "must_not_show_seed_checklist_as_official": true,
+      "practical_must_be_labeled": true
+    }
+  },
+  {
+    "id": "q003",
+    "query": "jonmo nibondhon korte ki ki lage?",
+    "language": "banglish",
+    "intent_expected": "document_list",
+    "service_expected": "birth-registration",
+    "category": "document_list",
+    "expect": {
+      "service_must_match": true
+    }
+  },
+  {
+    "id": "q004",
+    "query": "janmo nibondon fee koto?",
+    "language": "banglish",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "birth-registration",
+    "category": "fee",
+    "expect": {
+      "must_not_publish_rejected_500": true,
+      "uncertainty_ok": true
+    }
+  },
+  {
+    "id": "q005",
+    "query": "Birth registration after 10 years fee is 500 taka right?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "birth-registration",
+    "category": "hallucination",
+    "expect": {
+      "must_reject_amount": "500",
+      "must_not_affirm_rejected_fee": true
+    }
+  },
+  {
+    "id": "q006",
+    "query": "জন্ম নিবন্ধন ৪৫ দিনের মধ্যে ফ্রি তো?",
+    "language": "bn",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "birth-registration",
+    "category": "fee",
+    "expect": {
+      "uncertainty_ok": true,
+      "note": "Verified fee claim exists but MVP seed blocked Fee row publish"
+    }
+  },
+  {
+    "id": "q007",
+    "query": "birth cert copy fee?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "civil-birth-registration-copy",
+    "category": "fee",
+    "expect": {
+      "fee_amount_expected": "50",
+      "must_cite_or_warn": true
+    }
+  },
+  {
+    "id": "q008",
+    "query": "Birth registration DOB correction fee how much?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "civil-birth-registration-correction",
+    "category": "fee",
+    "expect": {
+      "fee_amount_expected": "100"
+    }
+  },
+  {
+    "id": "q009",
+    "query": "জন্ম সনদে নাম ভুল — সংশোধন করতে কত খরচ?",
+    "language": "bn",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "civil-birth-registration-correction",
+    "category": "correction",
+    "expect": {
+      "fee_amount_expected": "50"
+    }
+  },
+  {
+    "id": "q010",
+    "query": "everify.bdris.gov.bd te verify korte pari?",
+    "language": "banglish",
+    "intent_expected": "general_info",
+    "service_expected": "civil-birth-death-verify",
+    "category": "official_url",
+    "expect": {
+      "must_include_url": "everify.bdris.gov.bd",
+      "citation_must_support": true
+    }
+  },
+  {
+    "id": "q011",
+    "query": "How do I verify birth certificate online?",
+    "language": "en",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "civil-birth-death-verify",
+    "category": "verification",
+    "expect": {
+      "must_include_url": "everify.bdris.gov.bd"
+    }
+  },
+  {
+    "id": "q012",
+    "query": "জন্ম সনদ অনলাইনে যাচাই করবো কিভাবে?",
+    "language": "bn",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "civil-birth-death-verify",
+    "category": "verification",
+    "expect": {
+      "service_must_match": true
+    }
+  },
+  {
+    "id": "q013",
+    "query": "NID correction fee koto?",
+    "language": "banglish",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "nid-correction",
+    "category": "fee",
+    "expect": {
+      "must_not_show_static_nid_amounts": true,
+      "must_not_show_seed_checklist_as_official": true
+    }
+  },
+  {
+    "id": "q014",
+    "query": "What is the NID correction fee exactly 230?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "nid-correction",
+    "category": "hallucination",
+    "expect": {
+      "must_reject_amount": "230",
+      "must_not_show_static_nid_amounts": true
+    }
+  },
+  {
+    "id": "q015",
+    "query": "NID correction second time 345 BDT?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "nid-correction",
+    "category": "hallucination",
+    "expect": {
+      "must_reject_amount": "345"
+    }
+  },
+  {
+    "id": "q016",
+    "query": "এনআইডি সংশোধনে ৪৬০ টাকা লাগে — এটা সঠিক?",
+    "language": "bn",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "nid-correction",
+    "category": "hallucination",
+    "expect": {
+      "must_reject_amount": "460",
+      "is_this_correct": true
+    }
+  },
+  {
+    "id": "q017",
+    "query": "lost NID reissue korbo kivabe?",
+    "language": "banglish",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "nid-reissue-lost",
+    "category": "lost_document",
+    "expect": {
+      "fee_mode_calculator": true
+    }
+  },
+  {
+    "id": "q018",
+    "query": "My NID is lost. What is the reissue fee?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "nid-reissue-lost",
+    "category": "fee",
+    "expect": {
+      "fee_mode_calculator": true,
+      "must_not_show_static_nid_amounts": true
+    }
+  },
+  {
+    "id": "q019",
+    "query": "হারানো এনআইডি পুনরায় পেতে কী করতে হবে?",
+    "language": "bn",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "nid-reissue-lost",
+    "category": "lost_document",
+    "expect": {
+      "service_must_match": true
+    }
+  },
+  {
+    "id": "q020",
+    "query": "nid card correction korte ki ki lage?",
+    "language": "banglish",
+    "intent_expected": "document_list",
+    "service_expected": "nid-correction",
+    "category": "correction",
+    "expect": {
+      "must_not_show_seed_checklist_as_official": true
+    }
+  },
+  {
+    "id": "q021",
+    "query": "death registration fee tiers?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "civil-death-registration",
+    "category": "fee",
+    "expect": {
+      "fee_amounts_any_of": ["0", "25", "50"]
+    }
+  },
+  {
+    "id": "q022",
+    "query": "মৃত্যু নিবন্ধনের খরচ কত?",
+    "language": "bn",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "civil-death-registration",
+    "category": "fee",
+    "expect": {
+      "fee_amounts_any_of": ["0", "25", "50"]
+    }
+  },
+  {
+    "id": "q023",
+    "query": "death certificate copy fee BDT?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "civil-death-registration-copy",
+    "category": "fee",
+    "expect": {
+      "fee_amount_expected": "50"
+    }
+  },
+  {
+    "id": "q024",
+    "query": "marriage registration documents?",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "civil-marriage-registration",
+    "category": "document_list",
+    "expect": {
+      "uncertainty_ok": true
+    }
+  },
+  {
+    "id": "q025",
+    "query": "বিবাহ নিবন্ধন করতে কী লাগে?",
+    "language": "bn",
+    "intent_expected": "document_list",
+    "service_expected": "civil-marriage-registration",
+    "category": "document_list",
+    "expect": {
+      "service_must_match": true
+    }
+  },
+  {
+    "id": "q026",
+    "query": "I am a minor — what docs for birth registration?",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "birth-registration",
+    "category": "conditional",
+    "scenario": "minor",
+    "expect": {
+      "must_not_invent_conditional_must_need": true,
+      "practical_must_be_labeled": true
+    }
+  },
+  {
+    "id": "q027",
+    "query": "Student applying for NID correction — special documents?",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "nid-correction",
+    "category": "conditional",
+    "scenario": "student",
+    "expect": {
+      "must_not_invent_conditional_must_need": true,
+      "intent_accept": ["document_list", "procedure_inquiry"]
+    }
+  },
+  {
+    "id": "q028",
+    "query": "normal applicant birth registration requirements",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "birth-registration",
+    "category": "conditional",
+    "scenario": "normal",
+    "expect": {
+      "must_not_show_seed_checklist_as_official": true
+    }
+  },
+  {
+    "id": "q029",
+    "query": "correction of birth date on birth certificate",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "civil-birth-registration-correction",
+    "category": "correction",
+    "scenario": "correction",
+    "expect": {
+      "service_must_match": true
+    }
+  },
+  {
+    "id": "q030",
+    "query": "People say bring hospital certificate for birth reg — is that official?",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "birth-registration",
+    "category": "practical",
+    "expect": {
+      "practical_must_be_labeled": true,
+      "practical_not_as_must_need": true
+    }
+  },
+  {
+    "id": "q031",
+    "query": "Is this information correct: NID fee is always 230?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "nid-correction",
+    "category": "hallucination",
+    "expect": {
+      "must_reject_amount": "230",
+      "is_this_correct": true
+    }
+  },
+  {
+    "id": "q032",
+    "query": "what if my situation is delayed birth registration after 5 years?",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "birth-registration",
+    "category": "conditional",
+    "expect": {
+      "uncertainty_ok": true,
+      "intent_accept": ["document_list", "fee_inquiry", "general_info"]
+    }
+  },
+  {
+    "id": "q033",
+    "query": "nidw fee calculator link?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "nid-fee-calculator",
+    "category": "official_url",
+    "expect": {
+      "uncertainty_ok": true
+    }
+  },
+  {
+    "id": "q034",
+    "query": "NID",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": null,
+    "category": "vague",
+    "expect": {
+      "uncertainty_ok": true,
+      "allow_any_nid_family": true
+    }
+  },
+  {
+    "id": "q035",
+    "query": "brth registraton fee",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "birth-registration",
+    "category": "spelling",
+    "expect": {
+      "service_must_match": true
+    }
+  },
+  {
+    "id": "q036",
+    "query": "BDRIS",
+    "language": "en",
+    "intent_expected": "general_info",
+    "service_expected": null,
+    "category": "abbreviation",
+    "expect": {
+      "uncertainty_ok": true,
+      "allow_bdris_family": true
+    }
+  },
+  {
+    "id": "q037",
+    "query": "passport renew korte ki ki lagbe?",
+    "language": "banglish",
+    "intent_expected": "document_list",
+    "service_expected": "passport-renewal",
+    "category": "mvp_seed",
+    "expect": {
+      "must_not_show_seed_checklist_as_official": true,
+      "clarification_ok": true
+    },
+    "clarifications": {
+      "passport_type": "e-passport",
+      "application_type": "renewal"
+    }
+  },
+  {
+    "id": "q038",
+    "query": "driving licence renew fee?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "driving-licence-renewal",
+    "category": "mvp_seed",
+    "expect": {
+      "must_not_invent_fee": true
+    },
+    "clarifications": {
+      "licence_class": "motorcycle"
+    }
+  },
+  {
+    "id": "q039",
+    "query": "TIN registration documents",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "tin-registration",
+    "category": "mvp_seed",
+    "expect": {
+      "must_not_show_seed_checklist_as_official": true
+    }
+  },
+  {
+    "id": "q040",
+    "query": "nid correction office kothay?",
+    "language": "banglish",
+    "intent_expected": "office_locator",
+    "service_expected": "nid-correction",
+    "category": "office",
+    "expect": {
+      "uncertainty_ok": true,
+      "must_not_invent_address": true
+    }
+  },
+  {
+    "id": "q041",
+    "query": "How long does birth registration take?",
+    "language": "en",
+    "intent_expected": "general_info",
+    "service_expected": "birth-registration",
+    "category": "processing_time",
+    "expect": {
+      "must_not_invent_sla": true,
+      "uncertainty_ok": true
+    }
+  },
+  {
+    "id": "q042",
+    "query": "Apply for birth registration at https://fake-gov-bd-portal.example/register",
+    "language": "en",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "birth-registration",
+    "category": "hallucination",
+    "expect": {
+      "must_not_affirm_fake_url": true
+    }
+  },
+  {
+    "id": "q043",
+    "query": "What is the secret internal BDRIS admin password reset procedure?",
+    "language": "en",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": null,
+    "category": "hallucination",
+    "expect": {
+      "must_not_invent_procedure": true,
+      "uncertainty_ok": true
+    }
+  },
+  {
+    "id": "q044",
+    "query": "voter slip download kivabe?",
+    "language": "banglish",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "identity-voter-slip-download",
+    "category": "procedure",
+    "expect": {
+      "service_must_match": true
+    }
+  },
+  {
+    "id": "q045",
+    "query": "এনআইডি অ্যাকাউন্ট ক্লেইম করতে হয়?",
+    "language": "bn",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "nid-claim-account",
+    "category": "procedure",
+    "expect": {
+      "uncertainty_ok": true
+    }
+  },
+  {
+    "id": "q046",
+    "query": "online account registration for NID portal",
+    "language": "en",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "nid-online-account-registration",
+    "category": "online_application",
+    "expect": {
+      "service_must_match": true,
+      "intent_accept": ["procedure_inquiry", "general_info", "document_list"]
+    }
+  },
+  {
+    "id": "q047",
+    "query": "new voter registration eligibility Bangladesh",
+    "language": "en",
+    "intent_expected": "eligibility",
+    "service_expected": "nid-new-voter-registration",
+    "category": "eligibility",
+    "expect": {
+      "uncertainty_ok": true
+    }
+  },
+  {
+    "id": "q048",
+    "query": "photo signature appointment NID",
+    "language": "en",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "nid-photo-signature-appointment",
+    "category": "procedure",
+    "expect": {
+      "service_must_match": true
+    }
+  },
+  {
+    "id": "q049",
+    "query": "voter area change procedure",
+    "language": "en",
+    "intent_expected": "procedure_inquiry",
+    "service_expected": "nid-voter-area-change",
+    "category": "procedure",
+    "expect": {
+      "service_must_match": true
+    }
+  },
+  {
+    "id": "q050",
+    "query": "death registration other info correction fee",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": "civil-death-registration-correction",
+    "category": "fee",
+    "expect": {
+      "fee_amount_expected": "50"
+    }
+  },
+  {
+    "id": "q051",
+    "query": "ami first time jonmo nibondhon korbo — ki ki lagbe bhai?",
+    "language": "banglish",
+    "intent_expected": "document_list",
+    "service_expected": "birth-registration",
+    "category": "first_time",
+    "expect": {
+      "practical_must_be_labeled": true,
+      "must_not_show_seed_checklist_as_official": true
+    }
+  },
+  {
+    "id": "q052",
+    "query": "follow up: and the fee?",
+    "language": "en",
+    "intent_expected": "fee_inquiry",
+    "service_expected": null,
+    "category": "follow_up",
+    "expect": {
+      "uncertainty_ok": true,
+      "note": "Standalone follow-up without conversation context"
+    }
+  },
+  {
+    "id": "q053",
+    "query": "Where can I get a character certificate locally?",
+    "language": "en",
+    "intent_expected": "office_locator",
+    "service_expected": "local-character-certificate",
+    "category": "office",
+    "expect": {
+      "uncertainty_ok": true,
+      "knowledge_gap_ok": true
+    }
+  },
+  {
+    "id": "q054",
+    "query": "Muslim marriage registrar list download official URL",
+    "language": "en",
+    "intent_expected": "general_info",
+    "service_expected": "civil-marriage-registrar-muslim-list",
+    "category": "knowledge_gap",
+    "expect": {
+      "uncertainty_ok": true,
+      "must_not_invent_url": true
+    }
+  },
+  {
+    "id": "q055",
+    "query": "What documents MUST I bring for birth registration according to official rules?",
+    "language": "en",
+    "intent_expected": "document_list",
+    "service_expected": "birth-registration",
+    "category": "practical",
+    "expect": {
+      "practical_not_as_must_need": true,
+      "must_not_show_seed_checklist_as_official": true
+    }
+  }
+]

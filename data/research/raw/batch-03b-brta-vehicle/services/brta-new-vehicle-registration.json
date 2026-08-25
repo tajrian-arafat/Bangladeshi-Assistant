@@ -1,0 +1,268 @@
+{
+  "service_id": "brta-new-vehicle-registration",
+  "batch_id": "batch-03b-brta-vehicle",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "New Motor Vehicle Registration",
+  "service_name_bn": "নতুন মোটরযান নিবন্ধন",
+  "aliases": [
+    "vehicle registration",
+    "motor registration",
+    "DRC issuance"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner",
+    "vehicle_dealer"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-new-vehicle-registration::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "application_url",
+      "claim_text": "New motor vehicle registration applications are initiated via BSP at bsp.brta.gov.bd/vehicleRegistration (English UI ?lan=en).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-vehicle-registration",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-portal-url-src-bsp-vehicle-registration"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-bsp-owner-registration-prerequisite",
+      "legacy_claim_id": "c-bsp-owner-registration-prerequisite",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Applicant must register a BSP owner or dealer account (NID-linked mobile) at bsp.brta.gov.bd/register before vehicle registration services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-register-owner",
+        "src-bsp-vehicle-registration"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-bsp-owner-registration-prerequisite-src-bsp-register-owner"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-bundle-includes-fitness-tax-drc",
+      "legacy_claim_id": "c-bundle-includes-fitness-tax-drc",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "New registration bundle includes vehicle inspection, fitness certificate, tax token, and DRC biometric steps per catalogue discovery notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-drc"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-bundle-includes-fitness-tax-drc-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-vehicle-type-fee-variation",
+      "legacy_claim_id": "c-vehicle-type-fee-variation",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "fee",
+      "claim_text": "Registration fees depend on vehicle type and class; amounts are computed via BSP fee calculator — not a single flat registration fee.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-new-vehicle-registration",
+        "vehicle_type": "VARIES",
+        "action": "new_registration",
+        "condition": "vehicle_class_selected_in_calculator",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-vehicle-registration"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-vehicle-type-fee-variation-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-imported-vehicle-documents",
+      "legacy_claim_id": "c-imported-vehicle-documents",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "conditional_document",
+      "claim_text": "Imported or customs-cleared vehicles require customs/VAT/release-related documents in addition to standard ownership proof before BRTA registration.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "vehicle_origin_imported_or_customs_cleared"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-imported-vehicle-documents-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-nid-identity-required",
+      "legacy_claim_id": "c-nid-identity-required",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "document",
+      "claim_text": "Owner NID (or authorized representative identity proof) required for BSP registration identity verification.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-register-owner",
+        "src-bsp-vehicle-registration"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-nid-identity-required-src-bsp-register-owner"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-dealer-eligible",
+      "legacy_claim_id": "c-dealer-eligible",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Vehicle dealers listed as target users in catalogue may initiate registration on behalf of buyers via BSP dealer account.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "applicant_is_registered_dealer"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-register-owner"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-dealer-eligible-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-circle-office-inspection",
+      "legacy_claim_id": "c-circle-office-inspection",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Physical vehicle inspection and circle office processing required as part of new registration workflow (not fully online-only).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-circle-office-inspection-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-fitness-prerequisite-crossref",
+      "legacy_claim_id": "c-fitness-prerequisite-crossref",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Valid fitness certificate is part of new registration bundle; standalone fitness renewal is brta-fitness-certificate (BATCH_03C).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED",
+        "if": "vehicle_requires_fitness_by_class"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-fitness-crossref"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-fitness-prerequisite-crossref-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-practical-bsp-hours",
+      "legacy_claim_id": "c-practical-bsp-hours",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "practical_tip",
+      "claim_text": "Apply during BSP operating hours (08:00–22:00 BST); vehicleRegistration deep link may 404 outside window even when URL is correct.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-brta-new-vehicle-registration::c-practical-bsp-hours-src-bsp-maintenance-notice"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Includes inspection, fitness certificate, tax token, and DRC biometrics.",
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator, hours)"
+}

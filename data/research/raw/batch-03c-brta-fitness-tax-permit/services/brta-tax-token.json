@@ -1,0 +1,218 @@
+{
+  "service_id": "brta-tax-token",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Motor Vehicle Tax Token Issue and Renewal",
+  "service_name_bn": "ট্যাক্স টোকেন ইস্যু ও নবায়ন",
+  "aliases": [
+    "tax token",
+    "e-tax token",
+    "MV tax token"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner"
+  ],
+  "official_application_url": "http://brta.portal.gov.bd/pages/static-pages/6922e0ab933eb65569e281ad",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-tax-token::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-tax-token",
+      "claim_type": "application_url",
+      "claim_text": "Motor vehicle tax token issue and renewal process published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-portal-url-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-tax-token",
+      "claim_type": "eligibility",
+      "claim_text": "Tax token issued for vehicles already registered with BRTA; requires valid registration record.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-registered-vehicle-required-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-tax-token-fee-calculator",
+      "legacy_claim_id": "c-tax-token-fee-calculator",
+      "service_id": "brta-tax-token",
+      "claim_type": "fee",
+      "claim_text": "Tax token issue/renewal fees vary by vehicle type and engine capacity; amounts via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-tax-token",
+        "vehicle_type": "VARIES",
+        "action": "tax_token_issue_or_renewal",
+        "condition": "vehicle_class_and_tax_year",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-tax-token-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-distinct-from-mv-tax",
+      "legacy_claim_id": "c-distinct-from-mv-tax",
+      "service_id": "brta-tax-token",
+      "claim_type": "restriction",
+      "claim_text": "Tax token issue/renewal is distinct from MV tax payment (brta-mv-tax-payment at brta.cnsbd.com/mvtax_brta) — related but separate procedures.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-mvtax-portal",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-distinct-from-mv-tax-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-circle-office-collection",
+      "legacy_claim_id": "c-circle-office-collection",
+      "service_id": "brta-tax-token",
+      "claim_type": "procedure_step",
+      "claim_text": "Physical tax token sticker or e-tax token collection may require circle office visit after fee payment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-tax-token"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-circle-office-collection-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-tax-token::c-fitness-may-be-prerequisite",
+      "legacy_claim_id": "c-fitness-may-be-prerequisite",
+      "service_id": "brta-tax-token",
+      "claim_type": "conditional_document",
+      "claim_text": "Valid fitness certificate may be required before tax token renewal for applicable vehicle classes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "vehicle_class_requires_fitness"
+      },
+      "source_ids": [
+        "src-brta-portal-tax-token",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-fitness-may-be-prerequisite-src-brta-portal-tax-token"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-e-tax-token-verifiable",
+      "legacy_claim_id": "c-e-tax-token-verifiable",
+      "service_id": "brta-tax-token",
+      "claim_type": "procedure_step",
+      "claim_text": "E-tax token can be verified via BSP e-document verification service (brta-e-document-verification).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "RECOMMENDED"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-e-tax-token-verifiable-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-tax-token::c-practical-verify-payment-first",
+      "legacy_claim_id": "c-practical-verify-payment-first",
+      "service_id": "brta-tax-token",
+      "claim_type": "practical_tip",
+      "claim_text": "Use BSP payment verification before visiting circle office for tax token collection to confirm fee settlement.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-tax-token::c-practical-verify-payment-first-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator); batch-03b-brta-vehicle (fitness/tax cross-refs)"
+}

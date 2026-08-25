@@ -1,0 +1,228 @@
+{
+  "service_id": "brta-driving-license-renewal",
+  "batch_id": "batch-03a-brta-driving-licence",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Driving License Renewal",
+  "service_name_bn": "ড্রাইভিং লাইসেন্স নবায়ন",
+  "aliases": [
+    "DL renewal",
+    "license renewal BSP"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "driver"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-driving-license-renewal::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-driving-license-renewal",
+      "claim_type": "application_url",
+      "claim_text": "Driving license renewal is handled through BRTA Service Portal at bsp.brta.gov.bd/bsp (English UI ?lan=en).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-portal-url-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-bsp-login-required",
+      "legacy_claim_id": "c-bsp-login-required",
+      "service_id": "brta-driving-license-renewal",
+      "claim_type": "procedure_step",
+      "claim_text": "Renewal workflow requires BSP login with registered driver account (post bsp.brta.gov.bd/register).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-register"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-bsp-login-required-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-existing-license-required",
+      "legacy_claim_id": "c-existing-license-required",
+      "service_id": "brta-driving-license-renewal",
+      "claim_type": "eligibility",
+      "claim_text": "Applicant must hold an existing BRTA-issued driving license eligible for renewal (not first-time learner issuance).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-existing-license-required-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-renewal-fee-calculator",
+      "legacy_claim_id": "c-renewal-fee-calculator",
+      "service_id": "brta-driving-license-renewal",
+      "claim_type": "fee",
+      "claim_text": "Renewal fee amount is determined via BSP fee calculator; depends on license class, validity extension, and late renewal penalties if applicable.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-renewal-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-medical-for-renewal-professional",
+      "legacy_claim_id": "c-medical-for-renewal-professional",
+      "service_id": "brta-driving-license-renewal",
+      "claim_type": "conditional_document",
+      "claim_text": "Professional and certain license classes require updated medical fitness certificate at renewal per BRTA driving license rules.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "professional_or_class_requires_medical"
+      },
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-medical-for-renewal-professional-src-brta-portal-dl-services"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-online-payment-bsp",
+      "legacy_claim_id": "c-online-payment-bsp",
+      "service_id": "brta-driving-license-renewal",
+      "claim_type": "payment_method",
+      "claim_text": "BSP supports online fee payment for license services (cards/mobile banking channels per BSP payment integration).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-online-payment-bsp-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-renew-before-expiry",
+      "legacy_claim_id": "c-renew-before-expiry",
+      "service_id": "brta-driving-license-renewal",
+      "claim_type": "restriction",
+      "claim_text": "License should be renewed before expiry; late renewal may incur additional fees per fee calculator rules.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "license_expired_or_near_expiry"
+      },
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-renew-before-expiry-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-circle-office-collection",
+      "legacy_claim_id": "c-circle-office-collection",
+      "service_id": "brta-driving-license-renewal",
+      "claim_type": "procedure_step",
+      "claim_text": "Renewed smart card license may require biometric capture or collection at circle office depending on BSP workflow stage.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-circle-office-collection-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-driving-license-renewal::c-practical-track-payment",
+      "legacy_claim_id": "c-practical-track-payment",
+      "service_id": "brta-driving-license-renewal",
+      "claim_type": "practical_tip",
+      "claim_text": "Use BSP payment verification module after fee payment before visiting circle office to avoid rejected applications.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-driving-license-renewal::c-practical-track-payment-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": null
+}

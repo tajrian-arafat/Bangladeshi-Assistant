@@ -1,0 +1,45 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "conflict-fitness-batch-assignment",
+      "service_ids": [
+        "brta-new-vehicle-registration",
+        "brta-ownership-transfer"
+      ],
+      "topic": "cross_batch_prerequisite",
+      "description": "Fitness certificate is prerequisite for registration/transfer workflows but brta-fitness-certificate is assigned to BATCH_03C, not BATCH_03B. Cross-reference claims must not duplicate 03C research.",
+      "hypotheses": [
+        "batch_split_by_subcategory",
+        "intentional_prerequisite_reference"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-bsp-subportal-404-vs-catalogue-url",
+      "service_ids": [
+        "brta-new-vehicle-registration",
+        "brta-trustee-board-certificate"
+      ],
+      "topic": "application_url",
+      "description": "Catalogue lists BSP deep links (vehicleRegistration, tbc) as official_source but live fetch returned 404 outside BSP operating hours; URLs treated as valid per catalogue with availability caveat.",
+      "hypotheses": [
+        "operating_hours_gate",
+        "catalogue_url_correct"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-retro-plate-page-age",
+      "service_ids": [
+        "brta-retro-reflective-number-plate"
+      ],
+      "topic": "freshness",
+      "description": "Retro-reflective plate portal page metadata shows last update November 2023 while ownership transfer page shows June 2026 — potential policy/fee drift on plate mandate not cross-verified.",
+      "hypotheses": [
+        "stale_page_metadata",
+        "stable_policy"
+      ],
+      "status": "UNRESOLVED"
+    }
+  ]
+}

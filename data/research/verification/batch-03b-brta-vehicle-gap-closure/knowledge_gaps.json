@@ -1,0 +1,110 @@
+{
+  "knowledge_gaps": [
+    {
+      "gap_id": "MISSING_BSP_VEHICLE_SUBPORTAL_SNAPSHOT",
+      "priority": "HIGH",
+      "classification": "RESOLVABLE_NOW",
+      "status": "PARTIALLY_RESOLVED",
+      "original_description": "BSP vehicleRegistration and tbc URLs returned 404 outside operating window.",
+      "evidence_attempted": [
+        "puppeteer_headless_chrome probe of vehicleRegistration, tbc, register, feeCalculator, bsp/home",
+        "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/scrape_results.json"
+      ],
+      "new_evidence": [
+        "src-gap-bsp-vehicle-registration-browser",
+        "src-gap-bsp-tbc-browser",
+        "gap-closure::c-bsp-subportals-temporarily-unavailable"
+      ],
+      "resolution": "Availability snapshots captured with TEMPORARILY_UNAVAILABLE classification. Catalogue-backed URLs confirmed; procedural BSP workflow text not available off-hours.",
+      "remaining_uncertainty": "Tier-1 procedural steps inside BSP UI require in-hours interactive session.",
+      "new_claim_ids": [
+        "gap-closure::c-bsp-subportals-temporarily-unavailable",
+        "gap-closure::c-tbc-portal-url-catalogue-confirmed"
+      ]
+    },
+    {
+      "gap_id": "MISSING_PORTAL_JS_BODY",
+      "priority": "HIGH",
+      "classification": "PARTIALLY_RESOLVABLE",
+      "status": "PARTIALLY_RESOLVED",
+      "original_description": "BRTA portal static pages JS-rendered; procedural checklists not in HTML shell.",
+      "evidence_attempted": [
+        "puppeteer render with 15s wait on ownership, DRC, info correction, retro plate pages"
+      ],
+      "new_evidence": [
+        "src-gap-brta-ownership-transfer-browser",
+        "gap-closure::c-brta-portal-cms-body-empty",
+        "gap-closure::c-brta-ownership-page-metadata"
+      ],
+      "resolution": "Browser render captured page titles and last-updated metadata. CMS instructional body shows empty 'Content: Pages' placeholder — not searchable snippet substitute.",
+      "remaining_uncertainty": "Full procedural checklists may require authenticated CMS or PDF attachments not linked in render.",
+      "new_claim_ids": [
+        "gap-closure::c-brta-portal-cms-body-empty",
+        "gap-closure::c-brta-ownership-page-metadata"
+      ]
+    },
+    {
+      "gap_id": "MISSING_VEHICLE_FEE_MATRIX",
+      "priority": "MEDIUM",
+      "classification": "UNRESOLVED",
+      "status": "UNRESOLVED",
+      "original_description": "Fee calculator referenced but per-vehicle-type matrix not extracted.",
+      "evidence_attempted": [
+        "puppeteer interaction probe on feeCalculator",
+        "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/scrape_results.json fee_calculator_probe"
+      ],
+      "new_evidence": [
+        "gap-closure::c-vehicle-fees-calculator-derived"
+      ],
+      "resolution": "Fees explicitly represented as CALCULATOR_DERIVED. Calculator returned 404 off-hours; no numeric matrix invented.",
+      "remaining_uncertainty": "Interactive in-hours BSP session required for sample fee captures.",
+      "new_claim_ids": [
+        "gap-closure::c-vehicle-fees-calculator-derived"
+      ]
+    },
+    {
+      "gap_id": "MISSING_FITNESS_VALIDITY_BY_CLASS",
+      "priority": "MEDIUM",
+      "classification": "DEFERRED_TO_NEXT_BATCH",
+      "status": "DEFERRED",
+      "original_description": "Fitness validity by vehicle class belongs to brta-fitness-certificate (BATCH_03C).",
+      "evidence_attempted": [
+        "brta.portal.gov.bd fitness renewal page browser render"
+      ],
+      "new_evidence": [
+        "gap-closure::c-fitness-validity-deferred-batch03c"
+      ],
+      "resolution": "Cross-batch dependency recorded. BATCH_03C must verify validity periods, commercial vs private rules, and inspection intervals.",
+      "remaining_uncertainty": "03C scope: brta-fitness-certificate service claims and BSP fitness fee paths.",
+      "deferred_to_batch": "BATCH_03C",
+      "deferred_requirements": [
+        "Fitness validity period by vehicle class",
+        "Commercial vs private inspection rules",
+        "Renewal interval and grace rules"
+      ],
+      "new_claim_ids": [
+        "gap-closure::c-fitness-validity-deferred-batch03c"
+      ]
+    },
+    {
+      "gap_id": "MISSING_LOST_RC_PROCEDURE_DETAIL",
+      "priority": "MEDIUM",
+      "classification": "PARTIALLY_RESOLVABLE",
+      "status": "PARTIALLY_RESOLVED",
+      "original_description": "Lost/damaged RC replacement/GD procedure not fully captured.",
+      "evidence_attempted": [
+        "DRC and ownership transfer portal browser renders",
+        "catalogue cross-check (no standalone lost RC service ID)"
+      ],
+      "new_evidence": [
+        "gap-closure::c-lost-rc-subprocedure-insufficient"
+      ],
+      "resolution": "Confirmed sub-procedure under DRC/ownership — no new catalogue service created. Official step-by-step lost RC/GD/collection checklist not found in rendered portal bodies.",
+      "remaining_uncertainty": "GD requirement and replacement steps may exist in circle-office circulars not online.",
+      "new_claim_ids": [
+        "gap-closure::c-lost-rc-subprocedure-insufficient"
+      ]
+    }
+  ],
+  "closed_at": "2026-08-25T02:39:57.706546+00:00"
+}

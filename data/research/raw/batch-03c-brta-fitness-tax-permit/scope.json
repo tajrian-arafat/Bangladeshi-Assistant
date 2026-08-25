@@ -1,0 +1,168 @@
+{
+  "batch_id": "BATCH_03C",
+  "slug": "batch-03c-brta-fitness-tax-permit",
+  "name": "BRTA Fitness / Tax Token / Route Permit",
+  "in_scope": [
+    "brta-advance-income-tax",
+    "brta-bsp-user-registration",
+    "brta-color-change",
+    "brta-driving-school-registration",
+    "brta-e-document-verification",
+    "brta-engine-change",
+    "brta-fee-calculator",
+    "brta-fitness-certificate",
+    "brta-mv-tax-payment",
+    "brta-payment-verification",
+    "brta-route-permit",
+    "brta-tax-token",
+    "brta-tire-size-change",
+    "transport-driving-school-licence",
+    "transport-route-permit"
+  ],
+  "out_of_scope_noted": [
+    {
+      "service_id": "brta-new-vehicle-registration",
+      "reason": "Vehicle registration bundle; assigned to BATCH_03B. Fitness/tax may be bundled at first registration."
+    },
+    {
+      "service_id": "brta-ownership-transfer",
+      "reason": "Ownership transfer; BATCH_03B. May require current tax/fitness as prerequisites only."
+    },
+    {
+      "service_id": "brta-vehicle-info-correction",
+      "reason": "RC data correction; BATCH_03B. Distinct from vehicle modification services in this batch."
+    },
+    {
+      "subprocedure": "vehicle_modification_vs_fitness_tax",
+      "reason": "Engine/color/tyre modification services researched in 03C but are separate procedures from fitness renewal, tax token, and route permit."
+    }
+  ],
+  "fitness_tax_variant_model": {
+    "dimensions": [
+      {
+        "id": "vehicle_type",
+        "values": [
+          "motorcycle",
+          "private_car",
+          "jeep_microbus",
+          "bus",
+          "truck",
+          "auto_rickshaw",
+          "trailer",
+          "other_commercial"
+        ],
+        "notes": "Fee, fitness inspection, route permit, and tax rules vary by vehicle class."
+      },
+      {
+        "id": "usage_class",
+        "values": [
+          "private",
+          "commercial"
+        ],
+        "notes": "Commercial vehicles typically require fitness, route permit, and periodic tax; private rules differ by class."
+      },
+      {
+        "id": "procedure_action",
+        "values": [
+          "fitness_issue",
+          "fitness_renewal",
+          "tax_token_issue",
+          "tax_token_renewal",
+          "mv_tax_payment",
+          "advance_income_tax",
+          "route_permit_issue",
+          "route_permit_renewal",
+          "vehicle_modification"
+        ]
+      },
+      {
+        "id": "route_permit_type",
+        "values": [
+          "UNKNOWN"
+        ],
+        "notes": "Route-type matrix (inter-district, city, long-route, etc.) not extracted in this research pass."
+      },
+      {
+        "id": "fitness_validity_period",
+        "values": [
+          "UNVERIFIED"
+        ],
+        "notes": "Validity periods by vehicle class are NOT verified in this batch — do not publish invented durations."
+      }
+    ],
+    "do_not_flatten": [
+      "brta-route-permit (portal static page) vs transport-route-permit (BSP operator service)",
+      "brta-driving-school-registration vs transport-driving-school-licence",
+      "fitness/tax renewal vs engine/color/tyre modification",
+      "MV tax payment portal vs tax token issue/renewal",
+      "private car fitness rules vs commercial bus/truck fitness rules"
+    ]
+  },
+  "subprocess_coverage": [
+    {
+      "topic": "fitness_certificate_issue_renewal",
+      "catalogue_services": [
+        "brta-fitness-certificate"
+      ]
+    },
+    {
+      "topic": "tax_token_issue_renewal",
+      "catalogue_services": [
+        "brta-tax-token"
+      ]
+    },
+    {
+      "topic": "mv_tax_online_payment",
+      "catalogue_services": [
+        "brta-mv-tax-payment"
+      ]
+    },
+    {
+      "topic": "advance_income_tax",
+      "catalogue_services": [
+        "brta-advance-income-tax"
+      ]
+    },
+    {
+      "topic": "route_permit_portal",
+      "catalogue_services": [
+        "brta-route-permit"
+      ]
+    },
+    {
+      "topic": "route_permit_bsp",
+      "catalogue_services": [
+        "transport-route-permit"
+      ]
+    },
+    {
+      "topic": "vehicle_modification_color_engine_tire",
+      "catalogue_services": [
+        "brta-color-change",
+        "brta-engine-change",
+        "brta-tire-size-change"
+      ]
+    },
+    {
+      "topic": "driving_school_registration",
+      "catalogue_services": [
+        "brta-driving-school-registration"
+      ]
+    },
+    {
+      "topic": "driving_school_licence",
+      "catalogue_services": [
+        "transport-driving-school-licence"
+      ]
+    },
+    {
+      "topic": "bsp_cross_cutting_tools",
+      "catalogue_services": [
+        "brta-fee-calculator",
+        "brta-payment-verification",
+        "brta-e-document-verification",
+        "brta-bsp-user-registration"
+      ]
+    }
+  ]
+}

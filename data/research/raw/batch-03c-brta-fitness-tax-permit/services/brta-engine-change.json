@@ -1,0 +1,216 @@
+{
+  "service_id": "brta-engine-change",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Vehicle Engine Change",
+  "service_name_bn": "ইঞ্জিন পরিবর্তন",
+  "aliases": [
+    "engine replacement registration"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner"
+  ],
+  "official_application_url": "http://brta.portal.gov.bd/pages/static-pages/6922dfbe933eb65569e23c89",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-engine-change::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-engine-change",
+      "claim_type": "application_url",
+      "claim_text": "Vehicle engine change approval process published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-engine-change",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-portal-url-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-modification-not-fitness",
+      "legacy_claim_id": "c-modification-not-fitness",
+      "service_id": "brta-engine-change",
+      "claim_type": "restriction",
+      "claim_text": "Engine change is a vehicle modification — distinct from fitness renewal, tax token, and route permit procedures.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "procedure_is_fitness_or_tax_only"
+      },
+      "source_ids": [
+        "src-brta-portal-engine-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-modification-not-fitness-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-engine-change",
+      "claim_type": "eligibility",
+      "claim_text": "Vehicle must be registered before engine change approval.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-registered-vehicle-required-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-engine-proof-required",
+      "legacy_claim_id": "c-engine-proof-required",
+      "service_id": "brta-engine-change",
+      "claim_type": "conditional_document",
+      "claim_text": "Supporting documents for new engine (invoice, customs release if imported engine) required per modification type.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "engine_origin_and_type"
+      },
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-engine-proof-required-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-engine-change-fee-calculator",
+      "legacy_claim_id": "c-engine-change-fee-calculator",
+      "service_id": "brta-engine-change",
+      "claim_type": "fee",
+      "claim_text": "Engine change fees vehicle-type dependent via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-engine-change",
+        "vehicle_type": "VARIES",
+        "action": "vehicle_modification_engine",
+        "condition": "vehicle_class",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-engine-change-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-fitness-reinspection-likely",
+      "legacy_claim_id": "c-fitness-reinspection-likely",
+      "service_id": "brta-engine-change",
+      "claim_type": "conditional_document",
+      "claim_text": "Fitness re-inspection likely required after engine change due to altered vehicle specifications.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "post_engine_change"
+      },
+      "source_ids": [
+        "src-brta-portal-engine-change",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-fitness-reinspection-likely-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-engine-change::c-circle-office-application",
+      "legacy_claim_id": "c-circle-office-application",
+      "service_id": "brta-engine-change",
+      "claim_type": "procedure_step",
+      "claim_text": "Engine change application submitted to BRTA circle office with technical inspection.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-circle-office-application-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-engine-change::c-practical-update-rc-after-approval",
+      "legacy_claim_id": "c-practical-update-rc-after-approval",
+      "service_id": "brta-engine-change",
+      "claim_type": "practical_tip",
+      "claim_text": "Ensure RC/engine number updated on registration record after approved engine change.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-engine-change"
+      ],
+      "evidence_ids": [
+        "ev-brta-engine-change::c-practical-update-rc-after-approval-src-brta-portal-engine-change"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator); batch-03b-brta-vehicle (fitness/tax cross-refs)"
+}

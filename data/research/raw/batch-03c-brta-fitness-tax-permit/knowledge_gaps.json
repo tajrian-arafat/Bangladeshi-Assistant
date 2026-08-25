@@ -1,0 +1,84 @@
+{
+  "knowledge_gaps": [
+    {
+      "gap_id": "MISSING_FITNESS_VALIDITY_BY_CLASS",
+      "service_ids": [
+        "brta-fitness-certificate"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "HIGH",
+      "description": "Fitness certificate validity periods by vehicle class (private car, motorcycle, bus, truck, etc.) not verified from official sources. Do NOT invent durations such as '5 years for private car'."
+    },
+    {
+      "gap_id": "MISSING_VEHICLE_FEE_MATRIX",
+      "service_ids": [
+        "brta-fee-calculator",
+        "brta-fitness-certificate",
+        "brta-tax-token",
+        "brta-route-permit",
+        "brta-advance-income-tax",
+        "brta-color-change",
+        "brta-engine-change",
+        "brta-tire-size-change",
+        "transport-route-permit"
+      ],
+      "classification": "missing_fee_schedule",
+      "priority": "HIGH",
+      "description": "BSP fee calculator referenced but per-vehicle-type numeric matrix not extracted without interactive session."
+    },
+    {
+      "gap_id": "MISSING_ROUTE_PERMIT_TYPE_MATRIX",
+      "service_ids": [
+        "brta-route-permit",
+        "transport-route-permit"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "HIGH",
+      "description": "Route permit categories (inter-district, city, long-route, special permit types) and applicability by vehicle class not extracted from portal or BSP."
+    },
+    {
+      "gap_id": "MISSING_PORTAL_JS_BODY",
+      "service_ids": [
+        "brta-fitness-certificate",
+        "brta-tax-token",
+        "brta-route-permit",
+        "brta-advance-income-tax",
+        "brta-color-change",
+        "brta-engine-change",
+        "brta-tire-size-change"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "HIGH",
+      "description": "BRTA portal static pages are JS-rendered; procedural checklists in page body not captured in HTML shell snapshots."
+    },
+    {
+      "gap_id": "MISSING_MVTAX_PORTAL_SNAPSHOT",
+      "service_ids": [
+        "brta-mv-tax-payment"
+      ],
+      "classification": "source_discovery_problem",
+      "priority": "MEDIUM",
+      "description": "MV tax portal (brta.cnsbd.com/mvtax_brta) workflow and payment fields not snapshotted in this pass."
+    },
+    {
+      "gap_id": "MISSING_E_FITNESS_WORKFLOW_DETAIL",
+      "service_ids": [
+        "brta-fitness-certificate",
+        "brta-e-document-verification"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "MEDIUM",
+      "description": "E-Fitness on BSP noted in catalogue but step-by-step digital inspection workflow not captured."
+    },
+    {
+      "gap_id": "MISSING_DRIVING_SCHOOL_LICENCE_WORKFLOW",
+      "service_ids": [
+        "brta-driving-school-registration",
+        "transport-driving-school-licence"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "MEDIUM",
+      "description": "Registration vs licence sequencing and facility requirements not fully documented from BSP roadSafety portal."
+    }
+  ]
+}

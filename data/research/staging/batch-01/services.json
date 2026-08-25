@@ -1,0 +1,686 @@
+{
+  "services": [
+    {
+      "service_id": "civil-bdris-application-print",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 70.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://bdris.gov.bd/application/print",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-birth-death-verify",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 75.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://everify.bdris.gov.bd/",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-birth-registration",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 71.8,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://bdris.gov.bd/br/application",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/",
+        "https://everify.bdris.gov.bd/"
+      ],
+      "missing_information": [
+        "Full official document checklist from Guidelines 2021 PDF not extracted in this pass.",
+        "Payment channel details for domestic fees (online vs cash at UP/pourashava) not fully verified."
+      ],
+      "manual_review_required": [
+        "Retrieve and attach Guidelines 2021 + official fee gazette PDF."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-birth-registration-copy",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 69.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://bdris.gov.bd/br/reprint/add",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-birth-registration-correction",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 65.8,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://bdris.gov.bd/br/correction",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/"
+      ],
+      "missing_information": [
+        "Field-by-field supporting document matrix for birth/death corrections."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 60.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://bdris.gov.bd/application/print",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/"
+      ],
+      "missing_information": [
+        "Detailed eligibility, evidence, and fee for duplicate cancellation."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-death-registration",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 69.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://bdris.gov.bd/dr/application",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/"
+      ],
+      "missing_information": [
+        "Full death-registration document checklist from official guidelines PDF."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-death-registration-copy",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 69.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://bdris.gov.bd/dr/reprint/add",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-death-registration-correction",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 65.8,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://bdris.gov.bd/dr/correction",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/"
+      ],
+      "missing_information": [
+        "Field-by-field supporting document matrix for birth/death corrections."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-death-registration-duplicate-cancel",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 60.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://bdris.gov.bd/application/print",
+      "official_information_urls": [
+        "https://www.bdris.gov.bd/",
+        "https://orgbdr.gov.bd/"
+      ],
+      "missing_information": [
+        "Detailed eligibility, evidence, and fee for duplicate cancellation."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-divorce-registration",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 63.0,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://marriage.gov.bd/",
+      "official_information_urls": [
+        "https://marriage.gov.bd/",
+        "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+      ],
+      "missing_information": [
+        "Citizen divorce registration document checklist and fees"
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-marriage-registrar-hindu-list",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 67.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://marriage.gov.bd/",
+      "official_information_urls": [
+        "https://marriage.gov.bd/",
+        "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-marriage-registrar-muslim-list",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 67.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://marriage.gov.bd/",
+      "official_information_urls": [
+        "https://marriage.gov.bd/",
+        "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "civil-marriage-registration",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 70.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://marriage.gov.bd/",
+      "official_information_urls": [
+        "https://marriage.gov.bd/",
+        "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+      ],
+      "missing_information": [
+        "Citizen-facing fee schedule for nikah registration",
+        "Complete document upload list from portal UI"
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "dc-attestation-photocopy",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 52.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://www.dhaka.gov.bd/en",
+      "official_information_urls": [],
+      "missing_information": [
+        "Nationally uniform fee schedule (does not exist — local variance).",
+        "Authoritative per-LGI document checklists beyond sample portals."
+      ],
+      "manual_review_required": [
+        "Populate geographic_availability with verified LGI URLs/fees before publishing as authoritative."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "dc-guardianship-certificate",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 52.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://www.dhaka.gov.bd/en",
+      "official_information_urls": [],
+      "missing_information": [
+        "Nationally uniform fee schedule (does not exist — local variance).",
+        "Authoritative per-LGI document checklists beyond sample portals."
+      ],
+      "manual_review_required": [
+        "Populate geographic_availability with verified LGI URLs/fees before publishing as authoritative."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "identity-voter-slip-download",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 64.8,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "missing_information": [
+        "Dedicated voter slip download URL/steps not separately documented beyond general account benefits."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "local-character-certificate",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 52.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://www.chandanpurup.gov.bd/new/application/citizen",
+      "official_information_urls": [],
+      "missing_information": [
+        "Nationally uniform fee schedule (does not exist — local variance).",
+        "Authoritative per-LGI document checklists beyond sample portals."
+      ],
+      "manual_review_required": [
+        "Populate geographic_availability with verified LGI URLs/fees before publishing as authoritative."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "local-death-certificate-union",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 52.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://www.chandanpurup.gov.bd/new/application/citizen",
+      "official_information_urls": [],
+      "missing_information": [
+        "Nationally uniform fee schedule (does not exist — local variance).",
+        "Authoritative per-LGI document checklists beyond sample portals."
+      ],
+      "manual_review_required": [
+        "Populate geographic_availability with verified LGI URLs/fees before publishing as authoritative."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "local-nationality-certificate",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 52.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://tilokpursonod.gov.bd/select_certificate/",
+      "official_information_urls": [],
+      "missing_information": [
+        "Nationally uniform fee schedule (does not exist — local variance).",
+        "Authoritative per-LGI document checklists beyond sample portals."
+      ],
+      "manual_review_required": [
+        "Populate geographic_availability with verified LGI URLs/fees before publishing as authoritative."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "local-passport-attestation",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 52.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://tilokpursonod.gov.bd/select_certificate/",
+      "official_information_urls": [],
+      "missing_information": [
+        "Nationally uniform fee schedule (does not exist — local variance).",
+        "Authoritative per-LGI document checklists beyond sample portals."
+      ],
+      "manual_review_required": [
+        "Populate geographic_availability with verified LGI URLs/fees before publishing as authoritative."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "local-voter-transfer-attestation",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 52.2,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://tilokpursonod.gov.bd/select_certificate/",
+      "official_information_urls": [],
+      "missing_information": [
+        "Nationally uniform fee schedule (does not exist — local variance).",
+        "Authoritative per-LGI document checklists beyond sample portals."
+      ],
+      "manual_review_required": [
+        "Populate geographic_availability with verified LGI URLs/fees before publishing as authoritative."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-card-info-correction",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 76.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+        "https://services.nidw.gov.bd/nid-pub/fees",
+        "https://nidw.gov.bd/"
+      ],
+      "missing_information": [
+        "Authoritative published fee schedule PDF/gazette not retrieved in this pass.",
+        "Exact processing SLA not stated on FAQ."
+      ],
+      "manual_review_required": [
+        "Confirm fee schedule from EC gazette or calculator output screenshots under controlled capture."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-claim-account",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 78.8,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-combined-correction",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 76.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+        "https://services.nidw.gov.bd/nid-pub/fees",
+        "https://nidw.gov.bd/"
+      ],
+      "missing_information": [
+        "Authoritative published fee schedule PDF/gazette not retrieved in this pass.",
+        "Exact processing SLA not stated on FAQ."
+      ],
+      "manual_review_required": [
+        "Confirm fee schedule from EC gazette or calculator output screenshots under controlled capture."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-download-copy",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 77.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-expatriate-registration",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 69.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "missing_information": [
+        "Mission-specific biometric capture workflow and document checklist for expatriates."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-fee-calculator",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 78.0,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/fees",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-new-voter-registration",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "PENDING_REVIEW",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 80.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+        "https://nidw.gov.bd/"
+      ],
+      "missing_information": [
+        "Exact new-registration card fee amount not published as a static table on retrieved Tier-1 pages (fee calculator covers correction/reissue types).",
+        "Exact biometric appointment booking URL/workflow details beyond FAQ summary.",
+        "District-wise office hours beyond national helpline hours."
+      ],
+      "manual_review_required": [
+        "Confirm whether any fee applies for first-time NID issuance vs correction/reissue only."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-online-account-registration",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 80.0,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "missing_information": [],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-other-info-correction",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CONFLICTING",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 76.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+        "https://services.nidw.gov.bd/nid-pub/fees",
+        "https://nidw.gov.bd/"
+      ],
+      "missing_information": [
+        "Authoritative published fee schedule PDF/gazette not retrieved in this pass.",
+        "Exact processing SLA not stated on FAQ."
+      ],
+      "manual_review_required": [
+        "Confirm fee schedule from EC gazette or calculator output screenshots under controlled capture."
+      ],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-photo-signature-appointment",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "PARTIAL",
+      "pipeline_status": "NORMALIZED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 72.0,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "missing_information": [
+        "Exact appointment booking UI steps and fees for photo capture."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-reissue-lost",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 79.7,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+        "https://www.nidw.gov.bd/IssuanceDuplicateNID.php",
+        "https://services.nidw.gov.bd/nid-pub/fees"
+      ],
+      "missing_information": [
+        "Exact reissue fee amounts not hardcoded from Tier-1 schedule."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    },
+    {
+      "service_id": "nid-voter-area-change",
+      "catalogue_status": "CONFIRMED",
+      "research_depth": "SUBSTANTIAL",
+      "pipeline_status": "CROSS_CHECKED",
+      "publication_status": "STAGING_ONLY",
+      "knowledge_quality_research_only": 79.5,
+      "kqs_disclaimer": "Research-phase completeness heuristic only. Not a publication readiness score. Not runtime confidence.",
+      "official_application_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "official_information_urls": [
+        "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      ],
+      "missing_information": [
+        "Complete Form 13 supporting document checklist on Tier-1 page."
+      ],
+      "manual_review_required": [],
+      "runtime_service_row": null,
+      "notes": "Not written to services table. MVP seed rows (if any) must not be overwritten by this pack."
+    }
+  ]
+}

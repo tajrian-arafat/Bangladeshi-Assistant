@@ -1,0 +1,103 @@
+[
+  {
+    "id": "cd-mt01",
+    "domain": "passport",
+    "description": "Passport fee → e-passport → express variant",
+    "turns": [
+      {"role": "user", "query": "Passport fee koto?"},
+      {"role": "assistant", "clarification": "e-passport naki MRP?"},
+      {"role": "user", "query": "e-passport", "clarifications": {"service": "epassport-fee-payment", "domain": "passport", "intent": "fee_inquiry"}},
+      {"role": "user", "query": "Express?", "intent_expected": "fee_inquiry", "service_expected": "epassport-fee-payment", "clarifications": {"service": "epassport-fee-payment", "domain": "passport", "variant": "express", "intent": "fee_inquiry"}}
+    ]
+  },
+  {
+    "id": "cd-mt02",
+    "domain": "police",
+    "description": "PCC fee → online channel follow-up (b018 pattern)",
+    "turns": [
+      {"role": "user", "query": "Police clearance er fee koto?"},
+      {"role": "assistant", "clarification": "Online naki offline?"},
+      {"role": "user", "query": "follow up: online channel?", "intent_expected": "fee_inquiry", "service_expected": "police-clearance-certificate", "clarifications": {"service": "police-clearance-certificate", "domain": "police", "channel": "online", "intent": "fee_inquiry"}}
+    ]
+  },
+  {
+    "id": "cd-mt03",
+    "domain": "passport",
+    "description": "New passport → where to apply follow-up",
+    "turns": [
+      {"role": "user", "query": "new e-passport korte chai"},
+      {"role": "assistant", "clarification": "48 page naki 64 page?"},
+      {"role": "user", "query": "kothay?", "intent_expected": "application_url", "service_expected": "epassport-new-application", "clarifications": {"service": "epassport-new-application", "domain": "passport", "intent": "application"}}
+    ]
+  },
+  {
+    "id": "cd-mt04",
+    "domain": "gd",
+    "description": "GD procedure → thana follow-up (b028 pattern)",
+    "turns": [
+      {"role": "user", "query": "Can I file GD at any police station?"},
+      {"role": "assistant", "clarification": "Online naki offline?"},
+      {"role": "user", "query": "follow up: thana teo jay?", "intent_expected": "procedure_inquiry", "service_expected": "police-general-diary", "clarifications": {"service": "police-general-diary", "domain": "police", "intent": "procedure_inquiry"}}
+    ]
+  },
+  {
+    "id": "cd-mt05",
+    "domain": "nid",
+    "description": "NID correction → fee follow-up",
+    "turns": [
+      {"role": "user", "query": "nid correction kivabe?"},
+      {"role": "assistant", "clarification": "Online naki union parishad?"},
+      {"role": "user", "query": "fee?", "intent_expected": "fee_inquiry", "service_expected": "nid-correction", "clarifications": {"service": "nid-correction", "domain": "nid", "intent": "fee_inquiry"}}
+    ]
+  },
+  {
+    "id": "cd-mt06",
+    "domain": "birth",
+    "description": "Birth registration → documents follow-up",
+    "turns": [
+      {"role": "user", "query": "birth registration kivabe?"},
+      {"role": "assistant", "clarification": "Online naki union parishad?"},
+      {"role": "user", "query": "ki ki lagbe?", "intent_expected": "document_list", "service_expected": "birth-registration", "clarifications": {"service": "birth-registration", "domain": "civil_registration", "intent": "document_list"}}
+    ]
+  },
+  {
+    "id": "cd-mt07",
+    "domain": "visa",
+    "description": "Visa apply → processing time follow-up",
+    "turns": [
+      {"role": "user", "query": "business visa Bangladesh apply"},
+      {"role": "assistant", "clarification": "MRV naki on-arrival?"},
+      {"role": "user", "query": "koto din lage?", "intent_expected": "processing_time", "service_expected": "migration-visa-application-dip", "clarifications": {"service": "migration-visa-application-dip", "domain": "immigration", "intent": "processing_time"}}
+    ]
+  },
+  {
+    "id": "cd-mt08",
+    "domain": "firearms",
+    "description": "Firearms license → documents (must not bleed to driving licence)",
+    "turns": [
+      {"role": "user", "query": "Firearms license processing time Bangladesh"},
+      {"role": "assistant", "clarification": "New naki renewal?"},
+      {"role": "user", "query": "documents?", "intent_expected": "document_list", "service_expected": "police-firearms-license", "must_not_service": ["driving-licence-renewal"], "clarifications": {"service": "police-firearms-license", "domain": "police", "intent": "document_list"}}
+    ]
+  },
+  {
+    "id": "cd-mt09",
+    "domain": "brta",
+    "description": "Driving licence → renewal follow-up (must not bleed to firearms)",
+    "turns": [
+      {"role": "user", "query": "driving licence renew kivabe?"},
+      {"role": "assistant", "clarification": "Professional naki non-professional?"},
+      {"role": "user", "query": "fee?", "intent_expected": "fee_inquiry", "service_expected": "driving-licence-renewal", "must_not_service": ["police-firearms-license"], "clarifications": {"service": "driving-licence-renewal", "domain": "transport", "intent": "fee_inquiry"}}
+    ]
+  },
+  {
+    "id": "cd-mt10",
+    "domain": "passport",
+    "description": "Passport verification SLA → urgent variant must stay police domain",
+    "turns": [
+      {"role": "user", "query": "Police passport verification koto din?"},
+      {"role": "assistant", "clarification": "Normal naki urgent?"},
+      {"role": "user", "query": "urgent?", "intent_expected": "processing_time", "service_expected": "police-passport-verification", "must_not_service": ["epassport-urgent-super-express"], "clarifications": {"service": "police-passport-verification", "domain": "police", "intent": "processing_time", "variant": "urgent"}}
+    ]
+  }
+]

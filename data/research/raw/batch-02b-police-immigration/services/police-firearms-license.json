@@ -1,0 +1,111 @@
+{
+  "service_id": "police-firearms-license",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Firearms License",
+  "service_name_bn": "আগ্নেয়াস্ত্র লাইসেন্স",
+  "aliases": [
+    "arms license",
+    "gun license"
+  ],
+  "banglish_variants": [],
+  "category_id": "licences",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police (District Special Branch)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://www.police.gov.bd/index.php/en/citizen_charter",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "police-firearms-license::c-firearms-charter-pathway",
+      "legacy_claim_id": "c-firearms-charter-pathway",
+      "service_id": "police-firearms-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Firearms license applications processed on application at District Special Branch per citizen charter.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-firearms-license::c-firearms-charter-pathway-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-firearms-license::c-firearms-charter-fee-na",
+      "legacy_claim_id": "c-firearms-charter-fee-na",
+      "service_id": "police-firearms-license",
+      "claim_type": "fee",
+      "claim_text": "Citizen charter lists firearms license service fee as not applicable (প্রযোজ্য নহে) on charter table.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-firearms-license::c-firearms-charter-fee-na-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-firearms-license::c-firearms-charter-sla",
+      "legacy_claim_id": "c-firearms-charter-sla",
+      "service_id": "police-firearms-license",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA for firearms license: 21–30 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 21,
+        "official_sla_days_max": 30
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-firearms-license::c-firearms-charter-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-firearms-license::c-firearms-responsible-officer",
+      "legacy_claim_id": "c-firearms-responsible-officer",
+      "service_id": "police-firearms-license",
+      "claim_type": "office",
+      "claim_text": "Responsible: SP (DSB) / metropolitan unit officer / Special Superintendent (City SB).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-firearms-license::c-firearms-responsible-officer-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": null
+}

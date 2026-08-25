@@ -1,0 +1,112 @@
+{
+  "service_id": "civil-death-registration-copy",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Death Registration Copy (Reprint)",
+  "service_name_bn": "মৃত্যু নিবন্ধন প্রতিলিপি",
+  "aliases": [
+    "duplicate death certificate"
+  ],
+  "banglish_variants": [],
+  "category_id": "civil_registration",
+  "responsible_ministry": "Local Government Division, MoLGRD&C",
+  "responsible_agency": "Office of the Registrar General, Birth and Death Registration",
+  "target_applicant": [
+    "citizen",
+    "relative"
+  ],
+  "eligibility": [],
+  "prerequisites": [],
+  "application_methods": [],
+  "online_application": null,
+  "offline_application": null,
+  "official_application_url": "https://bdris.gov.bd/dr/reprint/add",
+  "official_information_urls": [
+    "https://www.bdris.gov.bd/",
+    "https://orgbdr.gov.bd/"
+  ],
+  "official_forms": [],
+  "requirements": [],
+  "fees": [
+    {
+      "fee_id": "f-dup-copy",
+      "description": "Duplicate certificate copy (domestic)",
+      "amount": 50,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "c-copy-fee"
+      ],
+      "verification_status": "VERIFIED",
+      "notes": null,
+      "retrieved_at": "2026-08-24"
+    }
+  ],
+  "payment_methods": [],
+  "processing_time": null,
+  "procedure_steps": [],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [],
+  "office_locations": [],
+  "geographic_limitations": [],
+  "service_availability": "AVAILABLE",
+  "related_services": [
+    "civil-birth-registration",
+    "civil-death-registration"
+  ],
+  "dependencies": [],
+  "renewal_rules": [],
+  "correction_rules": [],
+  "replacement_rules": [],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [],
+  "common_mistakes": [],
+  "practical_experience": [],
+  "warnings": [],
+  "legal_basis": [],
+  "claims": [
+    {
+      "claim_id": "c-copy-fee",
+      "claim": "Issuance of duplicate certificate copy in Bangla & English: BDT 50 domestic / USD 1 abroad; original certificate issuance free.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [],
+  "research_status": "PARTIAL",
+  "missing_information": [],
+  "manual_review_required": [],
+  "knowledge_quality": {
+    "knowledge_quality_score": 69.2,
+    "dimensions": {
+      "coverage": 48,
+      "authority": 85,
+      "freshness": 75,
+      "consistency": 90,
+      "usability": 50.0
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Reprint URL+fee known; identity verification steps thin.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24"
+}
