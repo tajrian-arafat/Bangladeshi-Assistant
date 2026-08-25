@@ -7,6 +7,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+from automation.orchestrator.research_quality import evaluate_batch_research_quality
+
 
 @dataclass
 class CompletionReport:
@@ -72,12 +74,45 @@ def check_research_complete(repo_root: Path, batch: dict[str, Any]) -> Completio
         claims_total = int(meta.get("claims_total") or 0)
         if claims_total <= 0:
             missing.append("metadata.claims_total must be > 0")
+        if meta.get("scaffolding_only") or meta.get("authoritative_research") is False:
+            details["scaffolding_only"] = True
+            missing.append("generic builder output is scaffolding-only — not authoritative research")
+
+    quality = evaluate_batch_research_quality(repo_root, batch)
+    details["research_quality"] = {
+        "complete": quality.complete,
+        "false_completion_count": quality.false_completion_count,
+        "services_research_complete": quality.services_research_complete,
+        "missing": quality.missing,
+    }
+    if quality.false_completion_count > 0:
+        missing.append(f"{quality.false_completion_count} services have FALSE_COMPLETION_RISK")
+    if not quality.complete and not missing:
+        missing.extend(quality.missing)
 
     return CompletionReport(
         complete=len(missing) == 0,
         phase="RESEARCH",
         missing=missing,
         details=details,
+    )
+
+
+def check_batch_research_quality(repo_root: Path, batch: dict[str, Any]) -> CompletionReport:
+    """Service-level research quality gate — blocks batch completion on false completion."""
+    report = evaluate_batch_research_quality(repo_root, batch)
+    missing = list(report.missing)
+    if report.false_completion_count > 0:
+        missing.append(f"batch blocked: {report.false_completion_count} FALSE_COMPLETION_RISK services")
+    return CompletionReport(
+        complete=report.complete,
+        phase="BATCH_QUALITY",
+        missing=missing,
+        details={
+            "services_total": report.services_total,
+            "services_research_complete": report.services_research_complete,
+            "false_completion_count": report.false_completion_count,
+        },
     )
 
 

@@ -14,7 +14,7 @@ from automation.orchestrator.escalation_manager import EscalationManager
 from automation.orchestrator.gate_engine import GateEngine
 from automation.orchestrator.github_adapter import GitHubAdapter
 from automation.orchestrator.logging import setup_logging, write_report
-from automation.orchestrator.phase_completion import phase_artifacts_complete
+from automation.orchestrator.phase_completion import phase_artifacts_complete, check_batch_research_quality
 from automation.orchestrator.phase_executor import PhaseExecutor
 from automation.orchestrator.result_validator import ResultValidator
 from automation.orchestrator.retry_manager import RetryManager
@@ -433,6 +433,14 @@ class PhaseRunner:
         """Mark the active batch complete after REGRESSION (STABILIZATION is optional/skipped)."""
         batch_id = state.current_batch or ""
         if batch_id:
+            batch = self.batch_manager.get_batch(batch_id)
+            if batch:
+                quality = check_batch_research_quality(self.repo_root, batch)
+                if not quality.complete:
+                    state.retry_count = 0
+                    state.current_phase = WorkflowPhase.RESEARCH.value
+                    self.state_machine.save(state)
+                    return self.state_machine.transition(state, WorkflowStatus.RETRY)
             self.batch_manager.mark_batch_status(batch_id, "COMPLETE")
             state.last_completed_batch = batch_id
         next_batch = self.batch_manager.next_pending_batch(state.last_completed_batch)

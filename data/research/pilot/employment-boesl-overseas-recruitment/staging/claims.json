@@ -1,0 +1,74 @@
+{
+  "claims": [
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-official-portal",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "application_url",
+      "claim_text": "BOESL Overseas Job Seeker Registration official information is published at https://brms.boesl.gov.bd/ (page title: BOESL Overseas Job Seeker Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://brms.boesl.gov.bd/"
+      },
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official"
+      ],
+      "evidence_ids": [
+        "ev-employment-boesl-overseas-recruitment::c-official-portal-src-employment-boesl-overseas-recruitment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-procedure-overview",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "procedure_step",
+      "claim_text": "BOESL facilitates overseas employment recruitment through registered agencies under BMET oversight.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-document-overview",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "document",
+      "claim_text": "Passport, medical fitness certificate, and training certificates typically required for overseas employment.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-boesl-overseas-recruitment::c-service-identity",
+      "service_id": "employment-boesl-overseas-recruitment",
+      "claim_type": "eligibility",
+      "claim_text": "BOESL Overseas Job Seeker Registration (BOESL \u09ac\u09bf\u09a6\u09c7\u09b6\u09bf \u099a\u09be\u0995\u09b0\u09bf \u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09a8) is a confirmed government service in category employment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-employment-boesl-overseas-recruitment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -43,6 +43,11 @@ def test_task_factory_research_task(batch04: dict) -> None:
 
 
 def test_research_builder_produces_artifacts(batch04: dict, tmp_path: Path) -> None:
+    import shutil
+    cat_src = REPO / "data" / "service_catalogue"
+    cat_dst = tmp_path / "data" / "service_catalogue"
+    shutil.copytree(cat_src, cat_dst)
+
     raw = tmp_path / "data" / "research" / "raw" / "batch-04-tax-vat-customs"
     raw.mkdir(parents=True)
     (raw / "scope.json").write_text('{"in_scope": []}')
@@ -84,6 +89,8 @@ def test_cloud_worker_research_in_process(batch04: dict) -> None:
                 "claims_total": 33,
                 "knowledge_gaps": 22,
                 "conflicts": 0,
+                "scaffolding_only": True,
+                "authoritative_research": False,
             }
             (raw / "metadata.json").write_text(json.dumps(meta))
             for name in ["scope.json", "services_index.json", "claims.json", "sources.json", "conflicts.json", "knowledge_gaps.json"]:
@@ -94,12 +101,10 @@ def test_cloud_worker_research_in_process(batch04: dict) -> None:
             for sid in batch04["service_ids"]:
                 (services / f"{sid}.json").write_text(json.dumps({"service_id": sid}))
 
-            from automation.orchestrator.phase_completion import check_research_complete
-
-            assert check_research_complete(REPO, batch04).complete
             result = worker.execute(task, batch04)
-            assert result.status == "SUCCESS"
-            assert result.recommended_next_phase == "VERIFICATION"
+            # Generic builder batches fail service-level quality gate
+            assert result.status == "PARTIAL"
+            assert result.recommended_next_phase == "RESEARCH"
 
 
 def test_verification_builder(batch04: dict, tmp_path: Path) -> None:

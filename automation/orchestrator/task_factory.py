@@ -9,7 +9,8 @@ from pathlib import Path
 from typing import Any
 
 from automation.orchestrator.batch_manager import BatchManager
-from automation.orchestrator.phase_completion import batch_slug, raw_research_dir
+from automation.orchestrator.phase_completion import batch_slug, raw_research_dir, check_batch_research_quality
+from automation.orchestrator.research_quality import load_profiles, resolve_profile_key
 from automation.schemas.state import ProjectState
 
 
@@ -213,8 +214,110 @@ class TaskFactory:
             metadata={"created_at": self._now()},
         )
 
+    def build_service_research_brief(self, service_id: str, batch: dict[str, Any] | None = None) -> dict[str, Any]:
+        """Per-service research brief — RESEARCH THIS EXACT SERVICE, not generic category."""
+        catalogue = {s.get("service_id") or s.get("id"): s for s in self.batch_manager.load_catalogue()}
+        entry = catalogue.get(service_id) or {}
+        profiles_doc = load_profiles(self.repo_root)
+        profile_key = resolve_profile_key(entry, profiles_doc)
+        profile = (profiles_doc.get("profiles") or {}).get(profile_key, {})
+
+        existing_claims: list[dict[str, Any]] = []
+        existing_sources: list[dict[str, Any]] = []
+        gaps: list[str] = []
+        if batch:
+            raw = raw_research_dir(self.repo_root, batch)
+            if (raw / "claims.json").exists():
+                all_claims = json.loads((raw / "claims.json").read_text(encoding="utf-8")).get("claims") or []
+                existing_claims = [c for c in all_claims if c.get("service_id") == service_id]
+            if (raw / "sources.json").exists():
+                all_sources = json.loads((raw / "sources.json").read_text(encoding="utf-8")).get("sources") or []
+                existing_sources = [s for s in all_sources if s.get("service_id") == service_id]
+            if (raw / "knowledge_gaps.json").exists():
+                all_gaps = json.loads((raw / "knowledge_gaps.json").read_text(encoding="utf-8")).get("gaps") or []
+                gaps = [g.get("gap_type", "") for g in all_gaps if g.get("service_id") == service_id]
+
+        authority_id = entry.get("authority_id") or ""
+        hints = profiles_doc.get("authority_domain_hints") or {}
+        known_domains = hints.get(authority_id, []) + list(profile.get("expected_domain_patterns") or [])
+
+        return {
+            "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+            "service_id": service_id,
+            "service_name_en": entry.get("service_name_en"),
+            "service_name_bn": entry.get("service_name_bn"),
+            "category_id": entry.get("category_id"),
+            "research_profile": profile_key,
+            "required_research_dimensions": profile.get("required_dimensions") or [],
+            "high_risk_dimensions": profile.get("high_risk_dimensions") or [],
+            "responsible_authority_candidates": [entry.get("responsible_authority"), entry.get("authority_id")],
+            "known_official_domains": known_domains,
+            "service_aliases": entry.get("aliases") or [],
+            "official_source": entry.get("official_source"),
+            "existing_claims_count": len(existing_claims),
+            "existing_sources_count": len(existing_sources),
+            "current_gaps": gaps,
+            "related_services": [],
+            "geographic_scope": entry.get("geographic_scope", "NATIONAL"),
+            "minimum_meaningful_claims": profile.get("minimum_meaningful_claims", 2),
+            "minimum_service_specific_sources": profile.get("minimum_service_specific_sources", 1),
+        }
+
+    def create_service_research_task(
+        self,
+        service_id: str,
+        batch: dict[str, Any],
+        run_id: str,
+        state: ProjectState | None = None,
+    ) -> CloudTaskSpec:
+        brief = self.build_service_research_brief(service_id, batch)
+        slug = batch_slug(batch)
+        task_id = f"{batch['batch_id']}:RESEARCH:{service_id}:{run_id}"
+        template = self._read_template("RESEARCH")
+        prompt = (
+            f"# BDA Service Research Task\n\n"
+            f"**RESEARCH THIS EXACT SERVICE:** `{service_id}`\n"
+            f"**Batch context:** {batch['batch_id']} ({batch.get('name', slug)})\n"
+            f"**Run ID:** {run_id}\n\n"
+            f"## Research Brief\n```json\n{json.dumps(brief, indent=2, ensure_ascii=False)}\n```\n\n"
+            f"## Safety\n"
+            + "\n".join(f"- {s}" for s in self.SAFETY)
+            + f"\n\nGeneric catalogue metadata does NOT satisfy research completeness.\n"
+            f"CATALOGUE_METADATA and DISCOVERY_ONLY claims must not count as authoritative.\n\n"
+            f"## Phase instructions\n{template}\n"
+        )
+        return CloudTaskSpec(
+            task_id=task_id,
+            batch_id=batch["batch_id"],
+            batch_slug=slug,
+            phase="RESEARCH",
+            run_id=run_id,
+            service_ids=[service_id],
+            service_names={service_id: brief.get("service_name_en") or service_id},
+            domain=str(brief.get("category_id") or "government"),
+            project_state=state.to_dict() if state else {},
+            previous_artifacts=[],
+            knowledge_gaps=[],
+            known_conflicts=[],
+            required_outputs=self._format_outputs(batch, "RESEARCH", run_id),
+            result_schema="automation.schemas.result.PhaseResult",
+            safety_constraints=self.SAFETY,
+            deployment_locked=True,
+            no_external_paid_api=True,
+            prompt_text=prompt,
+            metadata={"created_at": self._now(), "service_research_brief": brief},
+        )
+
     def create_research_task(self, batch: dict[str, Any], run_id: str, state: ProjectState | None = None) -> CloudTaskSpec:
-        return self.build_task(batch=batch, phase="RESEARCH", run_id=run_id, state=state)
+        briefs = [self.build_service_research_brief(sid, batch) for sid in (batch.get("service_ids") or [])]
+        task = self.build_task(batch=batch, phase="RESEARCH", run_id=run_id, state=state, extra_context={"service_briefs": briefs})
+        task.prompt_text = (
+            task.prompt_text
+            + "\n\n## Per-service research briefs (RESEARCH EACH EXACT SERVICE)\n"
+            + "\n".join(f"- `{b['service_id']}`: {b.get('service_name_en')} — profile {b.get('research_profile')}" for b in briefs[:20])
+            + ("\n..." if len(briefs) > 20 else "")
+        )
+        return task
 
     def create_verification_task(self, batch: dict[str, Any], run_id: str, state: ProjectState | None = None) -> CloudTaskSpec:
         return self.build_task(batch=batch, phase="VERIFICATION", run_id=run_id, state=state)

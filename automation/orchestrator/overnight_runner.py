@@ -12,6 +12,7 @@ from automation.orchestrator.cloud_executor import CloudExecutor
 from automation.orchestrator.escalation_manager import EscalationManager
 from automation.orchestrator.gate_engine import GateEngine
 from automation.orchestrator.logging import write_report
+from automation.orchestrator.phase_completion import check_batch_research_quality
 from automation.orchestrator.phase_runner import PhaseRunner
 from automation.orchestrator.policy_engine import EscalationPolicy, PolicyEngine
 from automation.orchestrator.state_machine import StateMachine
@@ -179,6 +180,17 @@ class OvernightRunner:
             if batch and batch.get("status") == "COMPLETE":
                 return self._advance_to_next_batch(state)
             if regression_done and state.continuous_mode:
+                batch = self.batch_manager.get_batch(state.current_batch)
+                if batch:
+                    quality = check_batch_research_quality(self.repo_root, batch)
+                    if not quality.complete:
+                        self._append_log(
+                            f"Batch {state.current_batch} blocked from COMPLETE: "
+                            f"{quality.false_completion_count} false-completion services"
+                        )
+                        state.current_phase = "RESEARCH"
+                        self.state_machine.save(state)
+                        return True
                 self.batch_manager.mark_batch_status(state.current_batch, "COMPLETE")
                 state.last_completed_batch = state.current_batch
                 self.state_machine.save(state)

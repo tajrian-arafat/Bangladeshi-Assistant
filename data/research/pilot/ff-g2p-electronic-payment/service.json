@@ -1,0 +1,166 @@
+{
+  "service_id": "ff-g2p-electronic-payment",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Freedom Fighter Allowance G2P Electronic Payment",
+  "service_name_bn": "মুক্তিযোদ্ধা ভাতা G2P ইলেকট্রনিক পরিশোধ",
+  "aliases": [
+    "FF G2P payment",
+    "electronic FF allowance",
+    "Freedom Fighter Allowance G2P Electronic Payment"
+  ],
+  "category_id": "social_protection",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Ministry of Liberation War Affairs",
+  "official_application_url": "https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "ff-g2p-electronic-payment::c-catalogue-authority",
+      "service_id": "ff-g2p-electronic-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Liberation War Affairs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-g2p-electronic-payment::c-official-portal",
+      "service_id": "ff-g2p-electronic-payment",
+      "claim_type": "application_url",
+      "claim_text": "Freedom Fighter Allowance G2P Electronic Payment official information is published at https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf (page title: Freedom Fighter Allowance G2P Electronic Payment).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf"
+      },
+      "source_ids": [
+        "src-ff-g2p-electronic-payment-official"
+      ],
+      "evidence_ids": [
+        "ev-ff-g2p-electronic-payment::c-official-portal-src-ff-g2p-electronic-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-g2p-electronic-payment::c-procedure-overview",
+      "service_id": "ff-g2p-electronic-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "Government-to-person (G2P) social protection payments are disbursed electronically to enrolled beneficiaries.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-g2p-electronic-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-g2p-electronic-payment::c-service-identity",
+      "service_id": "ff-g2p-electronic-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Freedom Fighter Allowance G2P Electronic Payment (মুক্তিযোদ্ধা ভাতা G2P ইলেকট্রনিক পরিশোধ) is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-g2p-electronic-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-ff-g2p-electronic-payment-official",
+      "service_id": "ff-g2p-electronic-payment",
+      "url": "https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf",
+      "title": "Freedom Fighter Allowance G2P Electronic Payment",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "application/pdf",
+        "content_hash": "fd2bae99d9ccb474",
+        "retrieved_at": "2026-08-25T03:12:27.138000+00:00"
+      },
+      "evidence_locator": "probe:https://socialprotection.gov.bd/wp-content/uploads/2018/11/MOLWA-SSP-1.pdf"
+    },
+    {
+      "source_id": "src-ff-g2p-electronic-payment-alt-1",
+      "service_id": "ff-g2p-electronic-payment",
+      "url": "https://www.nsda.gov.bd/",
+      "title": "Freedom Fighter Allowance G2P Electronic Payment",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.nsda.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:12:27.668405+00:00"
+      }
+    },
+    {
+      "source_id": "src-ff-g2p-electronic-payment-alt-2",
+      "service_id": "ff-g2p-electronic-payment",
+      "url": "https://g2p.gov.bd/",
+      "title": "Freedom Fighter Allowance G2P Electronic Payment",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://g2p.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:12:27.682419+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-ff-g2p-electronic-payment-fee-unverified",
+      "service_id": "ff-g2p-electronic-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Freedom Fighter Allowance G2P Electronic Payment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-ff-g2p-electronic-payment-documents-unverified",
+      "service_id": "ff-g2p-electronic-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Freedom Fighter Allowance G2P Electronic Payment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

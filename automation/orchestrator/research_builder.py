@@ -1,4 +1,4 @@
-"""Generic research artifact builder — no batch-specific generator script required."""
+"""Generic research artifact builder — SCAFFOLDING ONLY, not authoritative research."""
 
 from __future__ import annotations
 
@@ -79,7 +79,14 @@ class ResearchBuilder:
         for sid in service_ids:
             entry = catalogue.get(sid) or {}
             official = entry.get("official_source") or entry.get("official_url") or ""
-            portal = NBR_PORTALS.get(sid, official)
+            # NBR portals only for tax/vat/customs — never bleed to land/education/etc.
+            category_id = entry.get("category_id") or ""
+            if sid in NBR_PORTALS:
+                portal = NBR_PORTALS[sid]
+            elif category_id in {"tax", "vat", "customs"}:
+                portal = official or NBR_PORTALS.get(sid, "")
+            else:
+                portal = official
             source_id = f"src-{sid}"
             probe_key = portal or official
             if probe_key and probe_key not in probed_urls:
@@ -107,13 +114,16 @@ class ResearchBuilder:
             name_bn = entry.get("service_name_bn") or ""
 
             if portal:
+                portal_label = "NBR e-service portal" if category_id in {"tax", "vat", "customs"} else "official portal"
                 claims.append(
                     {
                         "claim_id": f"{sid}::c-application-portal",
                         "service_id": sid,
                         "claim_type": "application_url",
-                        "claim_text": f"{name_en} is associated with NBR e-service portal {portal}.",
-                        "information_class": "OFFICIAL",
+                        "claim_text": f"Catalogue associates {name_en} with {portal_label} {portal}.",
+                        "information_class": "CATALOGUE_METADATA",
+                        "claim_class": "CATALOGUE_METADATA",
+                        "authoritative_for_completeness": False,
                         "pipeline_status": "DISCOVERED",
                         "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
                         "source_ids": [source_id, "src-catalogue"],
@@ -127,7 +137,9 @@ class ResearchBuilder:
                         "service_id": sid,
                         "claim_type": "application_url",
                         "claim_text": f"Catalogue official source documented for {name_en}.",
-                        "information_class": "OFFICIAL",
+                        "information_class": "CATALOGUE_METADATA",
+                        "claim_class": "CATALOGUE_METADATA",
+                        "authoritative_for_completeness": False,
                         "pipeline_status": "DISCOVERED",
                         "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
                         "source_ids": [source_id, "src-catalogue"],
@@ -141,8 +153,10 @@ class ResearchBuilder:
                     "claim_id": f"{sid}::c-responsible-authority",
                     "service_id": sid,
                     "claim_type": "eligibility",
-                    "claim_text": f"Responsible authority: {entry.get('responsible_authority', entry.get('authority_id', 'NBR'))}.",
-                    "information_class": "OFFICIAL",
+                    "claim_text": f"Catalogue responsible authority: {entry.get('responsible_authority', entry.get('authority_id', 'unknown'))}.",
+                    "information_class": "CATALOGUE_METADATA",
+                    "claim_class": "CATALOGUE_METADATA",
+                    "authoritative_for_completeness": False,
                     "pipeline_status": "DISCOVERED",
                     "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
                     "source_ids": ["src-catalogue"],
@@ -201,7 +215,8 @@ class ResearchBuilder:
                 "category_id": entry.get("category_id"),
                 "responsible_agency": entry.get("responsible_authority") or entry.get("authority_id"),
                 "official_application_url": portal or official or None,
-                "research_status": "SUBSTANTIAL" if probe.get("reachable") else "PARTIAL",
+                "research_status": "SCAFFOLDING_ONLY",
+                "authoritative_research": False,
                 "claims": claims,
             }
             (services_dir / f"{sid}.json").write_text(
@@ -260,6 +275,8 @@ class ResearchBuilder:
             "verification_status": "NOT_STARTED",
             "publication_status": "NOT_STARTED",
             "builder": "generic_research_builder",
+            "authoritative_research": False,
+            "scaffolding_only": True,
         }
 
         for name, payload in [

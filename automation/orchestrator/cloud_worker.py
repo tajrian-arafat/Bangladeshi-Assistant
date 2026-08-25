@@ -11,8 +11,9 @@ from typing import Any
 
 from automation.orchestrator.batch_manager import BatchManager
 from automation.orchestrator.gap_closure_builder import GapClosureBuilder
-from automation.orchestrator.phase_completion import batch_slug, check_research_complete, phase_artifacts_complete
+from automation.orchestrator.phase_completion import batch_slug, check_research_complete, check_batch_research_quality, phase_artifacts_complete
 from automation.orchestrator.research_builder import ResearchBuilder
+from automation.orchestrator.service_research_builder import ServiceResearchBuilder, PILOT_SERVICE_IDS
 from automation.orchestrator.task_factory import CloudTaskSpec
 from automation.orchestrator.verification_builder import VerificationBuilder
 from automation.schemas.result import PhaseResult
@@ -28,6 +29,7 @@ class CloudWorker:
         self.repo_root = repo_root
         self.batch_manager = BatchManager(repo_root)
         self.research_builder = ResearchBuilder(repo_root)
+        self.service_research_builder = ServiceResearchBuilder(repo_root)
         self.verification_builder = VerificationBuilder(repo_root)
         self.gap_closure_builder = GapClosureBuilder(repo_root)
 
@@ -65,15 +67,22 @@ class CloudWorker:
         )
 
     def _execute_research(self, task: CloudTaskSpec, batch: dict[str, Any], started: str) -> PhaseResult:
+        service_ids = list(batch.get("service_ids") or [])
+        pilot_ids = [sid for sid in service_ids if sid in PILOT_SERVICE_IDS]
+        if pilot_ids and set(pilot_ids) == set(service_ids):
+            for sid in pilot_ids:
+                self.service_research_builder.build_service_research(sid)
+
         report = check_research_complete(self.repo_root, batch)
         if not report.complete:
             self.research_builder.build_batch_research(batch)
             report = check_research_complete(self.repo_root, batch)
 
+        quality = check_batch_research_quality(self.repo_root, batch)
         meta_path = self.repo_root / "data" / "research" / "raw" / batch_slug(batch) / "metadata.json"
         meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
 
-        if not report.complete:
+        if not report.complete or not quality.complete:
             return PhaseResult(
                 run_id=task.run_id,
                 batch_id=task.batch_id,
@@ -81,13 +90,21 @@ class CloudWorker:
                 status="PARTIAL",
                 started_at=started,
                 completed_at=self._now(),
-                services_total=len(batch.get("service_ids") or []),
+                services_total=len(service_ids),
                 services_processed=int(meta.get("services_researched") or 0),
                 claims_total=int(meta.get("claims_total") or 0),
                 knowledge_gaps=int(meta.get("knowledge_gaps") or 0),
-                summary=f"Research incomplete after generic builder: {len(report.missing)} missing",
+                summary=(
+                    f"Research incomplete: artifacts={len(report.missing)} missing, "
+                    f"quality={quality.details.get('false_completion_count', 0)} false-completion"
+                ),
                 recommended_next_phase="RESEARCH",
-                metadata={"missing": report.missing[:10], "execution_mode": "IN_PROCESS_CLOUD"},
+                metadata={
+                    "missing": report.missing[:10],
+                    "quality_missing": quality.missing[:10],
+                    "execution_mode": "IN_PROCESS_CLOUD",
+                    "authoritative_research": False,
+                },
                 idempotency_key=f"{task.batch_id}:RESEARCH:{task.run_id}",
             )
 
@@ -98,14 +115,14 @@ class CloudWorker:
             status="SUCCESS",
             started_at=started,
             completed_at=self._now(),
-            services_total=int(meta.get("services_in_scope") or len(batch.get("service_ids") or [])),
+            services_total=int(meta.get("services_in_scope") or len(service_ids)),
             services_processed=int(meta.get("services_researched") or 0),
             claims_total=int(meta.get("claims_total") or 0),
             knowledge_gaps=int(meta.get("knowledge_gaps") or 0),
             conflicting=int(meta.get("conflicts") or 0),
-            summary=f"Research complete via generic builder: {meta.get('claims_total', 0)} claims",
+            summary=f"Research complete with service-specific quality: {meta.get('claims_total', 0)} claims",
             recommended_next_phase="VERIFICATION",
-            metadata={"execution_mode": "IN_PROCESS_CLOUD", "builder": "generic_research_builder"},
+            metadata={"execution_mode": "IN_PROCESS_CLOUD", "authoritative_research": True},
             idempotency_key=f"{task.batch_id}:RESEARCH:complete",
         )
 
