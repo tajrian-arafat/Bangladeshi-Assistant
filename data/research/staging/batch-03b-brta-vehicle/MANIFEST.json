@@ -1,0 +1,29 @@
+{
+  "batch_id": "batch-03b-brta-vehicle",
+  "normalized_at": "2026-08-25",
+  "claim_count": 60,
+  "original_claims": 53,
+  "gap_closure_claims": 7,
+  "fee_tiers_staged": 1,
+  "supersession_pairs": [
+    {
+      "old": "brta-new-vehicle-registration::c-portal-url",
+      "current": "gap-closure::c-bsp-subportals-temporarily-unavailable"
+    },
+    {
+      "old": "brta-new-vehicle-registration::c-fitness-prerequisite-crossref",
+      "current": "gap-closure::c-fitness-validity-deferred-batch03c"
+    }
+  ],
+  "pipeline_status_counts": {
+    "PARTIALLY_VERIFIED": 45,
+    "VERIFIED": 12,
+    "UNVERIFIED": 3
+  },
+  "publication_rules": [
+    "Publish only VERIFIED + OFFICIAL + complete evidence",
+    "Fee claims remain CALCULATOR_DERIVED — do not publish invented amounts",
+    "BSP off-hours 404 classified TEMPORARILY_UNAVAILABLE not invalid URL",
+    "Fitness validity-by-class deferred to BATCH_03C"
+  ]
+}

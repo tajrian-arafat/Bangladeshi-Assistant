@@ -60,6 +60,7 @@ def _write_initial_state() -> None:
                 "BLOCKED",
                 "COMPLETE",
             ],
+            "BLOCKED": ["READY", "RETRY", "HUMAN_APPROVAL_REQUIRED", "STOPPED"],
         },
         "publication_mode": "LOCAL_DEV_ONLY",
         "merge_policy": "MANUAL_ONLY",

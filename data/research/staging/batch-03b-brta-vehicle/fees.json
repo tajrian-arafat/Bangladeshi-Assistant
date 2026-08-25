@@ -1,0 +1,20 @@
+{
+  "fees": [
+    {
+      "fee_id": "gap-closure::c-vehicle-fees-calculator-derived",
+      "service_id": "brta-new-vehicle-registration",
+      "description": "Vehicle fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "bsp_fee_calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "claim_ids": [
+        "gap-closure::c-vehicle-fees-calculator-derived"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    }
+  ]
+}

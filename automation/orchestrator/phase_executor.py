@@ -276,8 +276,12 @@ class PhaseExecutor:
                     recommended_next_phase="GAP_CLOSURE",
                     idempotency_key=f"{batch['batch_id']}:GAP_CLOSURE:{run_id}",
                 )
-        # Re-run verification after gap closure
-        return self.execute_verification(run_id=run_id, batch=batch)
+        # Re-run verification after gap closure; one-shot — never loop GAP_CLOSURE again
+        ver_result = self.execute_verification(run_id=run_id, batch=batch)
+        if ver_result.status == "SUCCESS" and ver_result.recommended_next_phase == "GAP_CLOSURE":
+            ver_result.recommended_next_phase = "PUBLICATION"
+        ver_result.phase = "GAP_CLOSURE"
+        return ver_result
 
     def execute_publication(self, *, run_id: str, batch: dict[str, Any]) -> PhaseResult:
         started = self._now()
@@ -443,6 +447,7 @@ class PhaseExecutor:
             ("evaluate_batch01_e2e.py", "batch_01_pass_pct", "data/evaluation/batch-01/summary.json", "pass_pct"),
             ("evaluate_batch02a_e2e.py", "passport_pass_pct", "data/evaluation/batch-02a-passport/summary.json", "pass_pct"),
             ("evaluate_batch02b_e2e.py", "batch_02b_pass_pct", "data/evaluation/batch-02b-police-immigration/summary.json", "pass_pct"),
+            ("evaluate_batch03a_brta_driving_licence_e2e.py", "batch_03a_pass_pct", "data/evaluation/batch-03a-brta-driving-licence/summary.json", "pass_pct"),
             ("evaluate_service_routing.py", "routing_pass_pct", "data/evaluation/service-routing/summary.json", "pass_pct"),
             ("evaluate_cross_domain_hardening.py", None, "data/evaluation/cross-domain-hardening/summary.json", "pass_pct"),
         ]

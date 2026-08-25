@@ -8,8 +8,8 @@
       "claim_text": "New motor vehicle registration applications are initiated via BSP at bsp.brta.gov.bd/vehicleRegistration (English UI ?lan=en).",
       "claim_type": "application_url",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
-      "knowledge_gap": "MISSING_BSP_VEHICLE_SUBPORTAL_SNAPSHOT",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
       "source_ids": [
         "src-bsp-vehicle-registration",
         "src-catalogue-transport"
@@ -20,8 +20,9 @@
           "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_vehicle_registration.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-catalogue-transport",
@@ -33,9 +34,9 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Gap-closure availability evidence: catalogue URL valid, BSP TEMPORARILY_UNAVAILABLE off-hours."
     },
     {
       "claim_id": "brta-new-vehicle-registration::c-bsp-owner-registration-prerequisite",
@@ -55,20 +56,22 @@
           "source_url": "https://bsp.brta.gov.bd/register",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_register.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-bsp-vehicle-registration",
           "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_vehicle_registration.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -97,13 +100,13 @@
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -113,7 +116,7 @@
       "claim_text": "Registration fees depend on vehicle type and class; amounts are computed via BSP fee calculator — not a single flat registration fee.",
       "claim_type": "fee",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
+      "verification_status": "PARTIALLY_VERIFIED",
       "knowledge_gap": "MISSING_VEHICLE_FEE_MATRIX",
       "source_ids": [
         "src-bsp-fee-calculator",
@@ -125,22 +128,24 @@
           "source_url": "https://bsp.brta.gov.bd/feeCalculator",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-bsp-vehicle-registration",
           "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_vehicle_registration.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
     },
     {
       "claim_id": "brta-new-vehicle-registration::c-imported-vehicle-documents",
@@ -173,7 +178,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -195,20 +200,22 @@
           "source_url": "https://bsp.brta.gov.bd/register",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_register.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-bsp-vehicle-registration",
           "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_vehicle_registration.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -238,12 +245,13 @@
           "source_url": "https://bsp.brta.gov.bd/register",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_register.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -278,7 +286,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -288,8 +296,8 @@
       "claim_text": "Valid fitness certificate is part of new registration bundle; standalone fitness renewal is brta-fitness-certificate (BATCH_03C).",
       "claim_type": "eligibility",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
-      "knowledge_gap": "MISSING_FITNESS_VALIDITY_BY_CLASS",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
       "source_ids": [
         "src-catalogue-transport",
         "src-brta-portal-fitness-crossref"
@@ -307,15 +315,15 @@
           "source_id": "src-brta-portal-fitness-crossref",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_fitness_crossref.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty."
     },
     {
       "claim_id": "brta-new-vehicle-registration::c-practical-bsp-hours",
@@ -339,7 +347,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -349,7 +357,7 @@
       "claim_text": "Motor vehicle ownership transfer guidance is published on BRTA portal static page for মালিকানা বদল/হস্তান্তর.",
       "claim_type": "application_url",
       "information_class": "OFFICIAL",
-      "verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
       "knowledge_gap": null,
       "source_ids": [
         "src-brta-portal-ownership-transfer",
@@ -360,8 +368,8 @@
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -374,7 +382,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -403,13 +411,13 @@
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -438,13 +446,13 @@
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -473,13 +481,13 @@
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -508,13 +516,13 @@
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -535,8 +543,8 @@
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -549,7 +557,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -559,7 +567,7 @@
       "claim_text": "Ownership transfer fees differ from new registration fees; amounts are vehicle-type dependent via BSP fee calculator.",
       "claim_type": "fee",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
+      "verification_status": "PARTIALLY_VERIFIED",
       "knowledge_gap": "MISSING_VEHICLE_FEE_MATRIX",
       "source_ids": [
         "src-bsp-fee-calculator",
@@ -571,22 +579,23 @@
           "source_url": "https://bsp.brta.gov.bd/feeCalculator",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
     },
     {
       "claim_id": "brta-ownership-transfer::c-tax-fitness-current",
@@ -605,21 +614,21 @@
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         },
         {
           "source_id": "src-brta-portal-fitness-crossref",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_fitness_crossref.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -629,8 +638,8 @@
       "claim_text": "Ownership transfer application submitted to relevant BRTA circle office with completed forms and supporting documents.",
       "claim_type": "procedure_step",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
-      "knowledge_gap": "MISSING_PORTAL_JS_BODY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
       "source_ids": [
         "src-brta-portal-ownership-transfer"
       ],
@@ -639,15 +648,15 @@
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty."
     },
     {
       "claim_id": "brta-ownership-transfer::c-lost-rc-gd-conditional",
@@ -655,8 +664,8 @@
       "claim_text": "If original RC is lost, General Diary (GD) and replacement/DRC reissue steps may be required before transfer — not a separate catalogue service.",
       "claim_type": "conditional_document",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
-      "knowledge_gap": "MISSING_LOST_RC_PROCEDURE_DETAIL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
       "source_ids": [
         "src-brta-portal-ownership-transfer",
         "src-brta-portal-drc"
@@ -666,23 +675,23 @@
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         },
         {
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty."
     },
     {
       "claim_id": "brta-ownership-transfer::c-practical-verify-fees-before-visit",
@@ -701,12 +710,13 @@
           "source_url": "https://bsp.brta.gov.bd/feeCalculator",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -716,7 +726,7 @@
       "claim_text": "Digital Registration Certificate (DRC) biometric provision and collection process documented on BRTA portal static page.",
       "claim_type": "application_url",
       "information_class": "OFFICIAL",
-      "verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
       "knowledge_gap": null,
       "source_ids": [
         "src-brta-portal-drc",
@@ -727,8 +737,8 @@
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -741,7 +751,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -762,8 +772,8 @@
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -776,7 +786,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -797,8 +807,8 @@
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -811,7 +821,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -842,20 +852,21 @@
           "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_vehicle_registration.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -876,21 +887,21 @@
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         },
         {
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -900,7 +911,7 @@
       "claim_text": "DRC-related fees listed under DNP/DRC fee section on BRTA portal menu; numeric amounts via BSP fee calculator.",
       "claim_type": "fee",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
+      "verification_status": "PARTIALLY_VERIFIED",
       "knowledge_gap": "MISSING_VEHICLE_FEE_MATRIX",
       "source_ids": [
         "src-bsp-fee-calculator",
@@ -912,22 +923,23 @@
           "source_url": "https://bsp.brta.gov.bd/feeCalculator",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
     },
     {
       "claim_id": "brta-digital-registration-certificate::c-collection-at-circle",
@@ -945,13 +957,13 @@
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -961,8 +973,8 @@
       "claim_text": "Lost or damaged DRC replacement handled via DRC reissue/replacement procedure (GD may be required if lost) — no separate catalogue service ID.",
       "claim_type": "eligibility",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
-      "knowledge_gap": "MISSING_LOST_RC_PROCEDURE_DETAIL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
       "source_ids": [
         "src-brta-portal-drc",
         "src-catalogue-transport"
@@ -972,8 +984,8 @@
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -986,9 +998,9 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty."
     },
     {
       "claim_id": "brta-digital-registration-certificate::c-practical-bring-original-if-available",
@@ -1006,13 +1018,13 @@
           "source_id": "src-brta-portal-drc",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1022,7 +1034,7 @@
       "claim_text": "Registration certificate information correction/change approval process published on BRTA portal static page.",
       "claim_type": "application_url",
       "information_class": "OFFICIAL",
-      "verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
       "knowledge_gap": null,
       "source_ids": [
         "src-brta-portal-info-correction",
@@ -1033,8 +1045,8 @@
           "source_id": "src-brta-portal-info-correction",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -1047,7 +1059,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1068,21 +1080,21 @@
           "source_id": "src-brta-portal-info-correction",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.html",
           "retrieved_at": "2026-08-25"
         },
         {
           "source_id": "src-brta-portal-ownership-transfer",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1102,13 +1114,13 @@
           "source_id": "src-brta-portal-info-correction",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1128,13 +1140,13 @@
           "source_id": "src-brta-portal-info-correction",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1154,13 +1166,13 @@
           "source_id": "src-brta-portal-info-correction",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1170,7 +1182,7 @@
       "claim_text": "Registration information correction fees are vehicle-type dependent via BSP fee calculator.",
       "claim_type": "fee",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
+      "verification_status": "PARTIALLY_VERIFIED",
       "knowledge_gap": "MISSING_VEHICLE_FEE_MATRIX",
       "source_ids": [
         "src-bsp-fee-calculator",
@@ -1182,22 +1194,23 @@
           "source_url": "https://bsp.brta.gov.bd/feeCalculator",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-brta-portal-info-correction",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Fee amounts CALCULATOR_DERIVED; interactive matrix not captured."
     },
     {
       "claim_id": "brta-vehicle-info-correction::c-fields-not-fully-enumerated",
@@ -1205,8 +1218,8 @@
       "claim_text": "Full list of correctable RC fields not machine-read from portal page in this research pass (JS-rendered content).",
       "claim_type": "document",
       "information_class": "DISCOVERY",
-      "verification_status": "UNVERIFIED",
-      "knowledge_gap": "MISSING_PORTAL_JS_BODY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
       "source_ids": [
         "src-brta-portal-info-correction"
       ],
@@ -1215,15 +1228,15 @@
           "source_id": "src-brta-portal-info-correction",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty."
     },
     {
       "claim_id": "brta-vehicle-info-correction::c-practical-separate-from-modifications",
@@ -1242,8 +1255,8 @@
           "source_id": "src-brta-portal-info-correction",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -1256,7 +1269,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1266,7 +1279,7 @@
       "claim_text": "Retro-reflective number plate and RFID tag installation process published on BRTA portal static page.",
       "claim_type": "application_url",
       "information_class": "OFFICIAL",
-      "verification_status": "PARTIALLY_VERIFIED",
+      "verification_status": "VERIFIED",
       "knowledge_gap": null,
       "source_ids": [
         "src-brta-portal-retro-plate",
@@ -1277,8 +1290,8 @@
           "source_id": "src-brta-portal-retro-plate",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -1291,7 +1304,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1311,13 +1324,13 @@
           "source_id": "src-brta-portal-retro-plate",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1338,8 +1351,8 @@
           "source_id": "src-brta-portal-retro-plate",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -1352,7 +1365,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1374,20 +1387,21 @@
           "source_url": "https://bsp.brta.gov.bd/feeCalculator",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-brta-portal-retro-plate",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Portal procedural body not captured in JS-rendered page shell."
     },
@@ -1397,8 +1411,8 @@
       "claim_text": "Plate installation typically completed at BRTA circle office or authorized plate vendor per national retrofit program.",
       "claim_type": "procedure_step",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
-      "knowledge_gap": "MISSING_PORTAL_JS_BODY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
       "source_ids": [
         "src-brta-portal-retro-plate"
       ],
@@ -1407,15 +1421,15 @@
           "source_id": "src-brta-portal-retro-plate",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Gap-closure browser render: portal metadata verified; CMS procedural body empty."
     },
     {
       "claim_id": "brta-retro-reflective-number-plate::c-private-vs-commercial-plate-rules",
@@ -1434,8 +1448,8 @@
           "source_id": "src-brta-portal-retro-plate",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.html",
           "retrieved_at": "2026-08-25"
         },
         {
@@ -1448,7 +1462,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1468,13 +1482,13 @@
           "source_id": "src-brta-portal-retro-plate",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Portal procedural body not captured in JS-rendered page shell."
     },
@@ -1494,13 +1508,13 @@
           "source_id": "src-brta-portal-retro-plate",
           "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
           "authority_tier": 2,
-          "retrieval_method": "live_html_shell",
-          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.html",
           "retrieved_at": "2026-08-25"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1510,8 +1524,8 @@
       "claim_text": "Trustee Board Certificate download available via BSP at bsp.brta.gov.bd/tbc/ per catalogue official_source.",
       "claim_type": "application_url",
       "information_class": "OFFICIAL",
-      "verification_status": "UNVERIFIED",
-      "knowledge_gap": "MISSING_BSP_VEHICLE_SUBPORTAL_SNAPSHOT",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
       "source_ids": [
         "src-bsp-tbc",
         "src-catalogue-transport"
@@ -1522,8 +1536,9 @@
           "source_url": "https://bsp.brta.gov.bd/tbc/",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_tbc.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-catalogue-transport",
@@ -1535,9 +1550,9 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Gap-closure availability evidence: catalogue URL valid, BSP TEMPORARILY_UNAVAILABLE off-hours."
     },
     {
       "claim_id": "brta-trustee-board-certificate::c-grant-certificate-purpose",
@@ -1557,8 +1572,9 @@
           "source_url": "https://bsp.brta.gov.bd/tbc/",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_tbc.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-brta-portal-home",
@@ -1570,7 +1586,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1592,8 +1608,9 @@
           "source_url": "https://bsp.brta.gov.bd/tbc/",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_tbc.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-catalogue-transport",
@@ -1605,7 +1622,7 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1615,8 +1632,8 @@
       "claim_text": "Download may require BSP account login linked to vehicle/owner record (portal workflow not snapshotted in this pass).",
       "claim_type": "procedure_step",
       "information_class": "DISCOVERY",
-      "verification_status": "UNVERIFIED",
-      "knowledge_gap": "MISSING_BSP_VEHICLE_SUBPORTAL_SNAPSHOT",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
       "source_ids": [
         "src-bsp-tbc",
         "src-bsp-register-owner"
@@ -1627,22 +1644,24 @@
           "source_url": "https://bsp.brta.gov.bd/tbc/",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_tbc.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-bsp-register-owner",
           "source_url": "https://bsp.brta.gov.bd/register",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_register.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_register.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
-      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+      "reasoning": "Gap-closure availability evidence: catalogue URL valid, BSP TEMPORARILY_UNAVAILABLE off-hours."
     },
     {
       "claim_id": "brta-trustee-board-certificate::c-eligibility-not-fully-captured",
@@ -1661,12 +1680,13 @@
           "source_url": "https://bsp.brta.gov.bd/tbc/",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_tbc.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
     },
@@ -1688,20 +1708,22 @@
           "source_url": "https://bsp.brta.gov.bd/tbc/",
           "authority_tier": 1,
           "retrieval_method": "catalogue_reference",
-          "snapshot": null,
-          "retrieved_at": "2026-08-25"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_tbc.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         },
         {
           "source_id": "src-bsp-fee-calculator",
           "source_url": "https://bsp.brta.gov.bd/feeCalculator",
           "authority_tier": 1,
           "retrieval_method": "catalogue_cross_batch_03a",
-          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
-          "retrieved_at": "2026-08-24"
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Portal procedural body not captured in JS-rendered page shell."
     },
@@ -1727,9 +1749,332 @@
         }
       ],
       "verifier": "cursor-cloud-agent",
-      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
       "publication_status": "STAGING_ONLY",
       "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "gap-closure::c-bsp-subportals-temporarily-unavailable",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "BSP vehicleRegistration, register, feeCalculator, and tbc URLs returned HTTP 404 during 2026-08-25 off-hours browser probe. Classification: TEMPORARILY_UNAVAILABLE — catalogue confirms official URLs; not INVALID_URL.",
+      "claim_type": "availability",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-bsp-vehicle-registration-browser",
+        "src-gap-bsp-fee-calculator-browser",
+        "src-gap-scrape-results-index",
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-bsp-vehicle-registration-browser",
+          "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_vehicle_registration.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-gap-bsp-fee-calculator-browser",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-gap-scrape-results-index",
+          "source_url": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/scrape_results.json",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/scrape_results.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03b-brta-vehicle/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Apache 404 Not Found on bsp.brta.gov.bd sub-portals during probe; BSP hours notice 08:00–22:00 BST",
+      "gap_closure": true,
+      "supersedes_interpretation_of": "404 interpreted as invalid URL",
+      "related_prior_claim_ids": [
+        "brta-new-vehicle-registration::c-portal-url",
+        "brta-trustee-board-certificate::c-portal-url"
+      ],
+      "deferred_to_batch": null
+    },
+    {
+      "claim_id": "gap-closure::c-brta-portal-cms-body-empty",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "BRTA portal static pages (ownership transfer, DRC, info correction, retro plate) load with verified page titles and last-updated dates, but rendered CMS instructional body shows 'Content: Pages' placeholder only — procedural checklists not captured in innerText.",
+      "claim_type": "official_metadata",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-brta-ownership-transfer-browser",
+        "src-gap-brta-drc-browser",
+        "src-gap-brta-info-correction-browser",
+        "src-gap-brta-retro-plate-browser"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-brta-ownership-transfer-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-brta-drc-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-brta-info-correction-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_info_correction.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-brta-retro-plate-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_retro_plate.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Rendered text includes page title (e.g. মালিকানা বদলী) then 'কন্টেন্ট: পাতা' with no checklist steps",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-ownership-transfer::c-circle-office-submission",
+        "brta-vehicle-info-correction::c-fields-not-fully-enumerated",
+        "brta-retro-reflective-number-plate::c-circle-office-or-approved-vendor"
+      ],
+      "deferred_to_batch": null
+    },
+    {
+      "claim_id": "gap-closure::c-brta-ownership-page-metadata",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "BRTA ownership transfer portal page title 'মালিকানা বদলী' verified; content last updated Tuesday 30 June 2026 02:06 PM (browser-rendered capture).",
+      "claim_type": "official_metadata",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-brta-ownership-transfer-browser"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-brta-ownership-transfer-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "কনটেন্টটি শেষ হাল-নাগাদ করা হয়েছে: মঙ্গলবার, ৩০ জুন, ২০২৬ ... মালিকানা বদলী",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": null,
+      "deferred_to_batch": null
+    },
+    {
+      "claim_id": "gap-closure::c-vehicle-fees-calculator-derived",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Vehicle registration/transfer/DRC/correction fees are CALCULATOR_DERIVED via BSP feeCalculator; no static fee matrix published. Interactive calculator returned 404 during off-hours probe — numeric amounts remain UNVERIFIED.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-bsp-fee-calculator-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-bsp-fee-calculator-browser",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_fee_calculator.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-gap-scrape-results-index",
+          "source_url": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/scrape_results.json",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/scrape_results.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "fee_calculator_probe: captured=false, note=404 outside operating hours",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-new-vehicle-registration::c-vehicle-type-fee-variation",
+        "brta-ownership-transfer::c-transfer-fee-calculator",
+        "brta-digital-registration-certificate::c-drc-fee-calculator",
+        "brta-vehicle-info-correction::c-correction-fee-calculator"
+      ],
+      "deferred_to_batch": null
+    },
+    {
+      "claim_id": "gap-closure::c-fitness-validity-deferred-batch03c",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Fitness validity periods and commercial-vs-private inspection rules belong to brta-fitness-certificate (BATCH_03C). Batch 3B may reference fitness as a prerequisite but must not publish unverified validity-by-class rules.",
+      "claim_type": "cross_batch_dependency",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-brta-fitness-crossref-browser",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-brta-fitness-crossref-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_fitness_crossref.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal page title 'ফিটনেস নবায়ন' captured; validity matrix deferred to BATCH_03C",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-new-vehicle-registration::c-fitness-prerequisite-crossref"
+      ],
+      "deferred_to_batch": "BATCH_03C"
+    },
+    {
+      "claim_id": "gap-closure::c-lost-rc-subprocedure-insufficient",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "Lost/damaged RC replacement is a sub-procedure under DRC/ownership transfer — no standalone catalogue service. Gap-closure browser capture did not retrieve an official step-by-step lost RC / GD / collection checklist; conditional GD requirement remains PARTIALLY_VERIFIED only.",
+      "claim_type": "procedure_gap",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-brta-drc-browser",
+        "src-gap-brta-ownership-transfer-browser"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-brta-drc-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-gap-brta-ownership-transfer-browser",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "DRC and ownership portal pages have empty CMS bodies; no lost RC checklist text captured",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-digital-registration-certificate::c-lost-damaged-replacement",
+        "brta-ownership-transfer::c-lost-rc-gd-conditional"
+      ],
+      "deferred_to_batch": null
+    },
+    {
+      "claim_id": "gap-closure::c-tbc-portal-url-catalogue-confirmed",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_text": "Trustee Board Certificate official application URL confirmed as https://bsp.brta.gov.bd/tbc/ via service catalogue; live BSP path TEMPORARILY_UNAVAILABLE (404) during off-hours probe.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-gap-bsp-tbc-browser",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-gap-bsp-tbc-browser",
+          "source_url": "https://bsp.brta.gov.bd/tbc/",
+          "authority_tier": 1,
+          "retrieval_method": "puppeteer_headless_chrome",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle-gap-closure/source_snapshots/bsp_tbc.txt",
+          "retrieved_at": "2026-08-25",
+          "availability": "TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:49:16.464542+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Catalogue official_source matches probed URL; 404 availability not invalid URL",
+      "gap_closure": true,
+      "supersedes_interpretation_of": null,
+      "related_prior_claim_ids": [
+        "brta-trustee-board-certificate::c-portal-url"
+      ],
+      "deferred_to_batch": null
     }
   ]
 }

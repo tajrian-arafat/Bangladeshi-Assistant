@@ -1,34 +1,43 @@
 {
-  "steps": 2,
-  "final_status": "GAP_CLOSURE",
+  "steps": 3,
+  "final_status": "AUTO_CONTINUE",
   "last": {
-    "status": "GAP_CLOSURE",
-    "batch": "BATCH_03B",
-    "phase": "VERIFICATION",
-    "run_id": "run-7500f93b1207",
+    "status": "AUTO_CONTINUE",
+    "batch": "BATCH_03A",
+    "phase": "PUBLICATION",
+    "run_id": "run-test123",
     "result_status": "SUCCESS",
-    "summary": "Verification complete: 4 verified, 5 gaps",
-    "next_phase": "GAP_CLOSURE"
+    "summary": "PUBLICATION ok",
+    "next_phase": "E2E"
   },
   "history": [
     {
       "status": "AUTO_CONTINUE",
-      "batch": "BATCH_03B",
+      "batch": "BATCH_03A",
       "phase": "RESEARCH",
-      "run_id": "run-7500f93b1207",
+      "run_id": "run-test123",
       "result_status": "SUCCESS",
-      "summary": "Research complete for BATCH_03B: 53 claims",
+      "summary": "RESEARCH ok",
       "next_phase": "VERIFICATION"
     },
     {
-      "status": "GAP_CLOSURE",
-      "batch": "BATCH_03B",
+      "status": "AUTO_CONTINUE",
+      "batch": "BATCH_03A",
       "phase": "VERIFICATION",
-      "run_id": "run-7500f93b1207",
+      "run_id": "run-test123",
       "result_status": "SUCCESS",
-      "summary": "Verification complete: 4 verified, 5 gaps",
-      "next_phase": "GAP_CLOSURE"
+      "summary": "VERIFICATION ok",
+      "next_phase": "PUBLICATION"
+    },
+    {
+      "status": "AUTO_CONTINUE",
+      "batch": "BATCH_03A",
+      "phase": "PUBLICATION",
+      "run_id": "run-test123",
+      "result_status": "SUCCESS",
+      "summary": "PUBLICATION ok",
+      "next_phase": "E2E"
     }
   ],
-  "generated_at": "2026-08-25T01:24:18.038302+00:00"
+  "generated_at": "2026-08-25T01:49:16.298535+00:00"
 }

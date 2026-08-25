@@ -1,0 +1,134 @@
+{
+  "schema": "bda.research.gap_closure.claims/1.0",
+  "batch_id": "batch-03b-brta-vehicle",
+  "created_at": "2026-08-25T01:49:16.438099+00:00",
+  "claims": [
+    {
+      "claim_id": "gap-closure::c-bsp-subportals-temporarily-unavailable",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "availability",
+      "claim_text": "BSP vehicleRegistration, register, feeCalculator, and tbc URLs returned HTTP 404 during 2026-08-25 off-hours browser probe. Classification: TEMPORARILY_UNAVAILABLE — catalogue confirms official URLs; not INVALID_URL.",
+      "verification_status": "VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-bsp-vehicle-registration-browser",
+        "src-gap-bsp-fee-calculator-browser",
+        "src-gap-scrape-results-index",
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_excerpt": "Apache 404 Not Found on bsp.brta.gov.bd sub-portals during probe; BSP hours notice 08:00–22:00 BST",
+      "supersedes_interpretation_of": "404 interpreted as invalid URL",
+      "related_prior_claim_ids": [
+        "brta-new-vehicle-registration::c-portal-url",
+        "brta-trustee-board-certificate::c-portal-url"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-brta-portal-cms-body-empty",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "official_metadata",
+      "claim_text": "BRTA portal static pages (ownership transfer, DRC, info correction, retro plate) load with verified page titles and last-updated dates, but rendered CMS instructional body shows 'Content: Pages' placeholder only — procedural checklists not captured in innerText.",
+      "verification_status": "VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-brta-ownership-transfer-browser",
+        "src-gap-brta-drc-browser",
+        "src-gap-brta-info-correction-browser",
+        "src-gap-brta-retro-plate-browser"
+      ],
+      "evidence_excerpt": "Rendered text includes page title (e.g. মালিকানা বদলী) then 'কন্টেন্ট: পাতা' with no checklist steps",
+      "related_prior_claim_ids": [
+        "brta-ownership-transfer::c-circle-office-submission",
+        "brta-vehicle-info-correction::c-fields-not-fully-enumerated",
+        "brta-retro-reflective-number-plate::c-circle-office-or-approved-vendor"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-brta-ownership-page-metadata",
+      "service_id": "brta-ownership-transfer",
+      "claim_type": "official_metadata",
+      "claim_text": "BRTA ownership transfer portal page title 'মালিকানা বদলী' verified; content last updated Tuesday 30 June 2026 02:06 PM (browser-rendered capture).",
+      "verification_status": "VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-brta-ownership-transfer-browser"
+      ],
+      "evidence_excerpt": "কনটেন্টটি শেষ হাল-নাগাদ করা হয়েছে: মঙ্গলবার, ৩০ জুন, ২০২৬ ... মালিকানা বদলী"
+    },
+    {
+      "claim_id": "gap-closure::c-vehicle-fees-calculator-derived",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "fee",
+      "claim_text": "Vehicle registration/transfer/DRC/correction fees are CALCULATOR_DERIVED via BSP feeCalculator; no static fee matrix published. Interactive calculator returned 404 during off-hours probe — numeric amounts remain UNVERIFIED.",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "information_class": "OFFICIAL",
+      "structured_value": {
+        "amount": "CALCULATOR_DERIVED",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "source": "src-gap-bsp-fee-calculator-browser"
+      },
+      "source_ids": [
+        "src-gap-bsp-fee-calculator-browser",
+        "src-gap-scrape-results-index"
+      ],
+      "evidence_excerpt": "fee_calculator_probe: captured=false, note=404 outside operating hours",
+      "related_prior_claim_ids": [
+        "brta-new-vehicle-registration::c-vehicle-type-fee-variation",
+        "brta-ownership-transfer::c-transfer-fee-calculator",
+        "brta-digital-registration-certificate::c-drc-fee-calculator",
+        "brta-vehicle-info-correction::c-correction-fee-calculator"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-fitness-validity-deferred-batch03c",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_type": "cross_batch_dependency",
+      "claim_text": "Fitness validity periods and commercial-vs-private inspection rules belong to brta-fitness-certificate (BATCH_03C). Batch 3B may reference fitness as a prerequisite but must not publish unverified validity-by-class rules.",
+      "verification_status": "VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-brta-fitness-crossref-browser",
+        "src-catalogue-transport"
+      ],
+      "evidence_excerpt": "Portal page title 'ফিটনেস নবায়ন' captured; validity matrix deferred to BATCH_03C",
+      "deferred_to_batch": "BATCH_03C",
+      "deferred_service_id": "brta-fitness-certificate",
+      "related_prior_claim_ids": [
+        "brta-new-vehicle-registration::c-fitness-prerequisite-crossref"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-lost-rc-subprocedure-insufficient",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_type": "procedure_gap",
+      "claim_text": "Lost/damaged RC replacement is a sub-procedure under DRC/ownership transfer — no standalone catalogue service. Gap-closure browser capture did not retrieve an official step-by-step lost RC / GD / collection checklist; conditional GD requirement remains PARTIALLY_VERIFIED only.",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-brta-drc-browser",
+        "src-gap-brta-ownership-transfer-browser"
+      ],
+      "evidence_excerpt": "DRC and ownership portal pages have empty CMS bodies; no lost RC checklist text captured",
+      "related_prior_claim_ids": [
+        "brta-digital-registration-certificate::c-lost-damaged-replacement",
+        "brta-ownership-transfer::c-lost-rc-gd-conditional"
+      ]
+    },
+    {
+      "claim_id": "gap-closure::c-tbc-portal-url-catalogue-confirmed",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Trustee Board Certificate official application URL confirmed as https://bsp.brta.gov.bd/tbc/ via service catalogue; live BSP path TEMPORARILY_UNAVAILABLE (404) during off-hours probe.",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "information_class": "OFFICIAL",
+      "source_ids": [
+        "src-gap-bsp-tbc-browser",
+        "src-catalogue-transport"
+      ],
+      "evidence_excerpt": "Catalogue official_source matches probed URL; 404 availability not invalid URL",
+      "related_prior_claim_ids": [
+        "brta-trustee-board-certificate::c-portal-url"
+      ]
+    }
+  ]
+}

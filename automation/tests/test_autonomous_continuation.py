@@ -224,6 +224,31 @@ def test_h_three_retries_escalates(isolated_state, monkeypatch: pytest.MonkeyPat
     assert report["status"] == WorkflowStatus.HUMAN_APPROVAL_REQUIRED.value
 
 
+def test_blocked_e2e_resumes_on_run(isolated_state, monkeypatch: pytest.MonkeyPatch) -> None:
+    """BLOCKED at E2E should auto-resume to READY when run is invoked after fixes."""
+    runner = PhaseRunner(REPO)
+    state = _state(workflow_status=WorkflowStatus.BLOCKED.value, current_phase="E2E", retry_count=3)
+    result = PhaseResult(
+        run_id="run-test123-e2e",
+        batch_id="BATCH_03B",
+        phase="E2E",
+        status="SUCCESS",
+        started_at="2026-08-24T00:00:00+00:00",
+        completed_at="2026-08-24T00:00:01+00:00",
+        e2e_total=55,
+        e2e_passed=55,
+        hallucinations=0,
+        citation_failures=0,
+        summary="E2E: 55/55 passed",
+        recommended_next_phase="REGRESSION",
+    )
+    monkeypatch.setattr(runner, "execute_current_phase", lambda s, b: result)
+    StateMachine(REPO).save(state)
+    report = runner.run_autonomous_step(state)
+    assert report["result_status"] == "SUCCESS"
+    assert report["next_phase"] == "REGRESSION"
+
+
 def test_i_daemon_resumes_from_state(isolated_state, monkeypatch: pytest.MonkeyPatch) -> None:
     runner = PhaseRunner(REPO)
     state = _state(

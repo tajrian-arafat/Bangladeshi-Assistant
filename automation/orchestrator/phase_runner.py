@@ -471,6 +471,19 @@ class PhaseRunner:
                 "pending": state.pending_escalations,
             }
 
+        # Allow autonomous resume after E2E/REGRESSION fixes (non-hallucination BLOCKED).
+        if state.workflow_status == WorkflowStatus.BLOCKED.value:
+            if state.current_phase in {WorkflowPhase.E2E.value, WorkflowPhase.REGRESSION.value}:
+                state.retry_count = 0
+                self.state_machine.transition(state, WorkflowStatus.READY)
+                state = self.state_machine.load()
+            else:
+                return {
+                    "status": state.workflow_status,
+                    "batch": state.current_batch,
+                    "phase": state.current_phase,
+                }
+
         batch = self.batch_manager.get_batch(state.current_batch or "")
         if not batch:
             batch = self.batch_manager.next_ready_batch()
