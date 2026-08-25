@@ -1,0 +1,53 @@
+{
+  "service_id": "health-blood-bank-license",
+  "sources": [
+    {
+      "source_id": "src-health-blood-bank-license-official",
+      "service_id": "health-blood-bank-license",
+      "url": "https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md",
+      "title": "Access Restricted – Bangladesh Only",
+      "authority_id": "dghs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Access Restricted – Bangladesh Only",
+        "content_type": "text/html",
+        "content_hash": "2829257bd06faeb9",
+        "retrieved_at": "2026-08-25T03:19:38.343944+00:00"
+      },
+      "evidence_locator": "probe:https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md"
+    },
+    {
+      "source_id": "src-health-blood-bank-license-alt-1",
+      "service_id": "health-blood-bank-license",
+      "url": "https://dghs.gov.bd",
+      "title": "হোম | স্বাস্থ্য অধিদপ্তর",
+      "authority_id": "dghs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dghs.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | স্বাস্থ্য অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "031c2ad361ff94fc",
+        "retrieved_at": "2026-08-25T03:19:40.490028+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

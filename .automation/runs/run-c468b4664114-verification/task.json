@@ -1,0 +1,595 @@
+{
+  "task_id": "BATCH_11:VERIFICATION:run-c468b4664114-verification",
+  "batch_id": "BATCH_11",
+  "batch_slug": "batch-11-business-trade",
+  "phase": "VERIFICATION",
+  "run_id": "run-c468b4664114-verification",
+  "service_ids": [
+    "bida-aftercare-services",
+    "bida-commercial-office-services",
+    "bida-invest-bangladesh-oss",
+    "bida-irms-platform",
+    "bida-osspid-registration",
+    "bida-work-permit-security-clearance",
+    "business-company-incorporation",
+    "business-cooperative-society-registration",
+    "business-entity-name-search",
+    "business-foreign-company-registration",
+    "business-name-clearance",
+    "business-ngoab-ngo-registration",
+    "business-partnership-registration",
+    "business-rjsc-certified-copy",
+    "business-society-registration",
+    "business-trade-organization-registration",
+    "professional-bar-council-enrolment",
+    "professional-bmdc-doctor-registration",
+    "professional-engineer-registration",
+    "professional-nursing-council-registration",
+    "professional-pharmacy-council-registration",
+    "trade-bsti-standard-certification",
+    "trade-dpd-patent-registration",
+    "trade-dpd-trademark-registration",
+    "trade-erc-registration",
+    "trade-irc-erc-renewal",
+    "trade-irc-registration"
+  ],
+  "service_names": {
+    "bida-aftercare-services": "BIDA Aftercare Services for Investors",
+    "bida-commercial-office-services": "Branch, Liaison and Representative Office Services (BIDA)",
+    "bida-invest-bangladesh-oss": "Invest Bangladesh OSS Portal",
+    "bida-irms-platform": "BIDA Investment Relationship Management System (IRMS)",
+    "bida-osspid-registration": "OSSPID Account Registration (BIDA)",
+    "bida-work-permit-security-clearance": "BIDA Work Permit Security Clearance (Online)",
+    "business-company-incorporation": "Company Incorporation",
+    "business-cooperative-society-registration": "Cooperative Society Registration",
+    "business-entity-name-search": "Entity Name Search",
+    "business-foreign-company-registration": "Foreign Company Registration (Branch/Liaison)",
+    "business-name-clearance": "Company Name Clearance",
+    "business-ngoab-ngo-registration": "NGO Registration (NGO Affairs Bureau)",
+    "business-partnership-registration": "Partnership Firm Registration",
+    "business-rjsc-certified-copy": "RJSC Certified Copy of Documents",
+    "business-society-registration": "Society Registration",
+    "business-trade-organization-registration": "Trade Organization Registration",
+    "professional-bar-council-enrolment": "Bangladesh Bar Council Advocate Enrolment",
+    "professional-bmdc-doctor-registration": "BMDC Doctor Registration",
+    "professional-engineer-registration": "Professional Engineer Registration",
+    "professional-nursing-council-registration": "Nursing and Midwifery Council Registration",
+    "professional-pharmacy-council-registration": "Pharmacy Council Pharmacist Registration",
+    "trade-bsti-standard-certification": "BSTI Product Standard Certification",
+    "trade-dpd-patent-registration": "Patent Registration",
+    "trade-dpd-trademark-registration": "Trademark Registration",
+    "trade-erc-registration": "Export Registration Certificate (ERC)",
+    "trade-irc-erc-renewal": "IRC/ERC Renewal",
+    "trade-irc-registration": "Import Registration Certificate (IRC)"
+  },
+  "domain": "business,investment,professional,registrations,trade",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-bida-aftercare-services-fee-unverified",
+      "service_id": "bida-aftercare-services",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BIDA Aftercare Services for Investors.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-aftercare-services-documents-unverified",
+      "service_id": "bida-aftercare-services",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for BIDA Aftercare Services for Investors.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-bida-commercial-office-services-fee-unverified",
+      "service_id": "bida-commercial-office-services",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Branch, Liaison and Representative Office Services (BIDA).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-commercial-office-services-documents-unverified",
+      "service_id": "bida-commercial-office-services",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Branch, Liaison and Representative Office Services (BIDA).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-bida-invest-bangladesh-oss-fee-unverified",
+      "service_id": "bida-invest-bangladesh-oss",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Invest Bangladesh OSS Portal.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-invest-bangladesh-oss-documents-unverified",
+      "service_id": "bida-invest-bangladesh-oss",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Invest Bangladesh OSS Portal.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-bida-irms-platform-fee-unverified",
+      "service_id": "bida-irms-platform",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BIDA Investment Relationship Management System (IRMS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-irms-platform-documents-unverified",
+      "service_id": "bida-irms-platform",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for BIDA Investment Relationship Management System (IRMS).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-bida-osspid-registration-portal-unreachable",
+      "service_id": "bida-osspid-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for OSSPID Account Registration (BIDA).",
+      "severity": "MEDIUM",
+      "url": "https://irms.bida.gov.bd/set-registration-type/investor"
+    },
+    {
+      "gap_id": "gap-bida-osspid-registration-fee-unverified",
+      "service_id": "bida-osspid-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for OSSPID Account Registration (BIDA).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-osspid-registration-documents-unverified",
+      "service_id": "bida-osspid-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for OSSPID Account Registration (BIDA).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-bida-work-permit-security-clearance-fee-unverified",
+      "service_id": "bida-work-permit-security-clearance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BIDA Work Permit Security Clearance (Online).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bida-work-permit-security-clearance-documents-unverified",
+      "service_id": "bida-work-permit-security-clearance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for BIDA Work Permit Security Clearance (Online).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-company-incorporation-portal-unreachable",
+      "service_id": "business-company-incorporation",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Company Incorporation.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm"
+    },
+    {
+      "gap_id": "gap-business-company-incorporation-fee-unverified",
+      "service_id": "business-company-incorporation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Company Incorporation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-company-incorporation-documents-unverified",
+      "service_id": "business-company-incorporation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Company Incorporation.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-cooperative-society-registration-fee-unverified",
+      "service_id": "business-cooperative-society-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Cooperative Society Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-cooperative-society-registration-documents-unverified",
+      "service_id": "business-cooperative-society-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Cooperative Society Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-entity-name-search-portal-unreachable",
+      "service_id": "business-entity-name-search",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Entity Name Search.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/psp/nc_search"
+    },
+    {
+      "gap_id": "gap-business-entity-name-search-fee-unverified",
+      "service_id": "business-entity-name-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Entity Name Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-entity-name-search-documents-unverified",
+      "service_id": "business-entity-name-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Entity Name Search.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-foreign-company-registration-portal-unreachable",
+      "service_id": "business-foreign-company-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Foreign Company Registration (Branch/Liaison).",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm"
+    },
+    {
+      "gap_id": "gap-business-foreign-company-registration-fee-unverified",
+      "service_id": "business-foreign-company-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Foreign Company Registration (Branch/Liaison).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-foreign-company-registration-documents-unverified",
+      "service_id": "business-foreign-company-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Foreign Company Registration (Branch/Liaison).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-name-clearance-portal-unreachable",
+      "service_id": "business-name-clearance",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Company Name Clearance.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm"
+    },
+    {
+      "gap_id": "gap-business-name-clearance-fee-unverified",
+      "service_id": "business-name-clearance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Company Name Clearance.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-name-clearance-documents-unverified",
+      "service_id": "business-name-clearance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Company Name Clearance.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-ngoab-ngo-registration-portal-unreachable",
+      "service_id": "business-ngoab-ngo-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for NGO Registration (NGO Affairs Bureau).",
+      "severity": "MEDIUM",
+      "url": "https://ngoa.gov.bd/"
+    },
+    {
+      "gap_id": "gap-business-ngoab-ngo-registration-fee-unverified",
+      "service_id": "business-ngoab-ngo-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for NGO Registration (NGO Affairs Bureau).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-ngoab-ngo-registration-documents-unverified",
+      "service_id": "business-ngoab-ngo-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for NGO Registration (NGO Affairs Bureau).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-partnership-registration-portal-unreachable",
+      "service_id": "business-partnership-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Partnership Firm Registration.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm"
+    },
+    {
+      "gap_id": "gap-business-partnership-registration-fee-unverified",
+      "service_id": "business-partnership-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Partnership Firm Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-partnership-registration-documents-unverified",
+      "service_id": "business-partnership-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Partnership Firm Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-rjsc-certified-copy-portal-unreachable",
+      "service_id": "business-rjsc-certified-copy",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for RJSC Certified Copy of Documents.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/psp/RJSC_Fees"
+    },
+    {
+      "gap_id": "gap-business-rjsc-certified-copy-fee-unverified",
+      "service_id": "business-rjsc-certified-copy",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for RJSC Certified Copy of Documents.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-rjsc-certified-copy-documents-unverified",
+      "service_id": "business-rjsc-certified-copy",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for RJSC Certified Copy of Documents.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-society-registration-portal-unreachable",
+      "service_id": "business-society-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Society Registration.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm"
+    },
+    {
+      "gap_id": "gap-business-society-registration-fee-unverified",
+      "service_id": "business-society-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Society Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-society-registration-documents-unverified",
+      "service_id": "business-society-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Society Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-business-trade-organization-registration-portal-unreachable",
+      "service_id": "business-trade-organization-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Trade Organization Registration.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm"
+    },
+    {
+      "gap_id": "gap-business-trade-organization-registration-fee-unverified",
+      "service_id": "business-trade-organization-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Trade Organization Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-trade-organization-registration-documents-unverified",
+      "service_id": "business-trade-organization-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Trade Organization Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-professional-bar-council-enrolment-portal-unreachable",
+      "service_id": "professional-bar-council-enrolment",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Bangladesh Bar Council Advocate Enrolment.",
+      "severity": "MEDIUM",
+      "url": "https://www.barcouncil.gov.bd/"
+    },
+    {
+      "gap_id": "gap-professional-bar-council-enrolment-fee-unverified",
+      "service_id": "professional-bar-council-enrolment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Bangladesh Bar Council Advocate Enrolment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-professional-bar-council-enrolment-documents-unverified",
+      "service_id": "professional-bar-council-enrolment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Bangladesh Bar Council Advocate Enrolment.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-professional-bmdc-doctor-registration-portal-unreachable",
+      "service_id": "professional-bmdc-doctor-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for BMDC Doctor Registration.",
+      "severity": "MEDIUM",
+      "url": "https://www.bmdc.org.bd/"
+    },
+    {
+      "gap_id": "gap-professional-bmdc-doctor-registration-fee-unverified",
+      "service_id": "professional-bmdc-doctor-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BMDC Doctor Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-professional-bmdc-doctor-registration-documents-unverified",
+      "service_id": "professional-bmdc-doctor-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for BMDC Doctor Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-professional-engineer-registration-portal-unreachable",
+      "service_id": "professional-engineer-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Professional Engineer Registration.",
+      "severity": "MEDIUM",
+      "url": "https://www.ieb.org.bd/"
+    },
+    {
+      "gap_id": "gap-professional-engineer-registration-fee-unverified",
+      "service_id": "professional-engineer-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Professional Engineer Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-professional-engineer-registration-documents-unverified",
+      "service_id": "professional-engineer-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Professional Engineer Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-professional-nursing-council-registration-portal-unreachable",
+      "service_id": "professional-nursing-council-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Nursing and Midwifery Council Registration.",
+      "severity": "MEDIUM",
+      "url": "https://www.bnmc.gov.bd/"
+    },
+    {
+      "gap_id": "gap-professional-nursing-council-registration-fee-unverified",
+      "service_id": "professional-nursing-council-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Nursing and Midwifery Council Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-professional-nursing-council-registration-documents-unverified",
+      "service_id": "professional-nursing-council-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Nursing and Midwifery Council Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-professional-pharmacy-council-registration-portal-unreachable",
+      "service_id": "professional-pharmacy-council-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Pharmacy Council Pharmacist Registration.",
+      "severity": "MEDIUM",
+      "url": "https://www.pcb.gov.bd/"
+    },
+    {
+      "gap_id": "gap-professional-pharmacy-council-registration-fee-unverified",
+      "service_id": "professional-pharmacy-council-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Pharmacy Council Pharmacist Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-professional-pharmacy-council-registration-documents-unverified",
+      "service_id": "professional-pharmacy-council-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Pharmacy Council Pharmacist Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-trade-bsti-standard-certification-portal-unreachable",
+      "service_id": "trade-bsti-standard-certification",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for BSTI Product Standard Certification.",
+      "severity": "MEDIUM",
+      "url": "https://bsti.gov.bd/"
+    },
+    {
+      "gap_id": "gap-trade-bsti-standard-certification-fee-unverified",
+      "service_id": "trade-bsti-standard-certification",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BSTI Product Standard Certification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-bsti-standard-certification-documents-unverified",
+      "service_id": "trade-bsti-standard-certification",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for BSTI Product Standard Certification.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-trade-dpd-patent-registration-fee-unverified",
+      "service_id": "trade-dpd-patent-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Patent Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-dpd-patent-registration-documents-unverified",
+      "service_id": "trade-dpd-patent-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Patent Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-trade-dpd-trademark-registration-fee-unverified",
+      "service_id": "trade-dpd-trademark-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Trademark Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-dpd-trademark-registration-documents-unverified",
+      "service_id": "trade-dpd-trademark-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Trademark Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-trade-erc-registration-fee-unverified",
+      "service_id": "trade-erc-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Export Registration Certificate (ERC).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-erc-registration-documents-unverified",
+      "service_id": "trade-erc-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Export Registration Certificate (ERC).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-trade-irc-erc-renewal-fee-unverified",
+      "service_id": "trade-irc-erc-renewal",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for IRC/ERC Renewal.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-irc-erc-renewal-documents-unverified",
+      "service_id": "trade-irc-erc-renewal",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for IRC/ERC Renewal.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-trade-irc-registration-fee-unverified",
+      "service_id": "trade-irc-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Import Registration Certificate (IRC).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-irc-registration-documents-unverified",
+      "service_id": "trade-irc-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Import Registration Certificate (IRC).",
+      "severity": "MEDIUM"
+    }
+  ],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/verification/batch-11-business-trade/claims_verification.json",
+    "data/research/verification/batch-11-business-trade/summary.json",
+    ".automation/runs/run-c468b4664114-verification/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — VERIFICATION\n\n**Batch:** BATCH_11 (Business / Trade / Industry / Professional)\n**Run ID:** run-c468b4664114-verification\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/verification/batch-11-business-trade/claims_verification.json`\n- `data/research/verification/batch-11-business-trade/summary.json`\n- `.automation/runs/run-c468b4664114-verification/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_11\",\n    \"slug\": \"batch-11-business-trade\",\n    \"name\": \"Business / Trade / Industry / Professional\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"bida-aftercare-services\",\n      \"bida-commercial-office-services\",\n      \"bida-invest-bangladesh-oss\",\n      \"bida-irms-platform\",\n      \"bida-osspid-registration\",\n      \"bida-work-permit-security-clearance\",\n      \"business-company-incorporation\",\n      \"business-cooperative-society-registration\",\n      \"business-entity-name-search\",\n      \"business-foreign-company-registration\",\n      \"business-name-clearance\",\n      \"business-ngoab-ngo-registration\",\n      \"business-partnership-registration\",\n      \"business-rjsc-certified-copy\",\n      \"business-society-registration\",\n      \"business-trade-organization-registration\",\n      \"professional-bar-council-enrolment\",\n      \"professional-bmdc-doctor-registration\",\n      \"professional-engineer-registration\",\n      \"professional-nursing-council-registration\",\n      \"professional-pharmacy-council-registration\",\n      \"trade-bsti-standard-certification\",\n      \"trade-dpd-patent-registration\",\n      \"trade-dpd-trademark-registration\",\n      \"trade-erc-registration\",\n      \"trade-irc-erc-renewal\",\n      \"trade-irc-registration\"\n    ],\n    \"service_count\": 27,\n    \"phases_completed\": [\n      \"RESEARCH\"\n    ]\n  },\n  \"phase\": \"VERIFICATION\",\n  \"run_id\": \"run-c468b4664114-verification\",\n  \"service_ids\": [\n    \"bida-aftercare-services\",\n    \"bida-commercial-office-services\",\n    \"bida-invest-bangladesh-oss\",\n    \"bida-irms-platform\",\n    \"bida-osspid-registration\",\n    \"bida-work-permit-security-clearance\",\n    \"business-company-incorporation\",\n    \"business-cooperative-society-registration\",\n    \"business-entity-name-search\",\n    \"business-foreign-company-registration\",\n    \"business-name-clearance\",\n    \"business-ngoab-ngo-registration\",\n    \"business-partnership-registration\",\n    \"business-rjsc-certified-copy\",\n    \"business-society-registration\",\n    \"business-trade-organization-registration\",\n    \"professional-bar-council-enrolment\",\n    \"professional-bmdc-doctor-registration\",\n    \"professional-engineer-registration\",\n    \"professional-nursing-council-registration\",\n    \"professional-pharmacy-council-registration\",\n    \"trade-bsti-standard-certification\",\n    \"trade-dpd-patent-registration\",\n    \"trade-dpd-trademark-registration\",\n    \"trade-erc-registration\",\n    \"trade-irc-erc-renewal\",\n    \"trade-irc-registration\"\n  ],\n  \"gaps\": [\n    {\n      \"gap_id\": \"gap-bida-aftercare-services-fee-unverified\",\n      \"service_id\": \"bida-aftercare-services\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for BIDA Aftercare Services for Investors.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-bida-aftercare-services-documents-unverified\",\n      \"service_id\": \"bida-aftercare-services\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for BIDA Aftercare Services for Investors.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-bida-commercial-office-services-fee-unverified\",\n      \"service_id\": \"bida-commercial-office-services\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Branch, Liaison and Representative Office Services (BIDA).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-bida-commercial-office-services-documents-unverified\",\n      \"service_id\": \"bida-commercial-office-services\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Branch, Liaison and Representative Office Services (BIDA).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-bida-invest-bangladesh-oss-fee-unverified\",\n      \"service_id\": \"bida-invest-bangladesh-oss\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Invest Bangladesh OSS Portal.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-bida-invest-bangladesh-oss-documents-unverified\",\n      \"service_id\": \"bida-invest-bangladesh-oss\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Invest Bangladesh OSS Portal.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-bida-irms-platform-fee-unverified\",\n      \"service_id\": \"bida-irms-platform\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for BIDA Investment Relationship Management System (IRMS).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-bida-irms-platform-documents-unverified\",\n      \"service_id\": \"bida-irms-platform\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for BIDA Investment Relationship Management System (IRMS).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-bida-osspid-registration-portal-unreachable\",\n      \"service_id\": \"bida-osspid-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for OSSPID Account Registration (BIDA).\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://irms.bida.gov.bd/set-registration-type/investor\"\n    },\n    {\n      \"gap_id\": \"gap-bida-osspid-registration-fee-unverified\",\n      \"service_id\": \"bida-osspid-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for OSSPID Account Registration (BIDA).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-bida-osspid-registration-documents-unverified\",\n      \"service_id\": \"bida-osspid-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for OSSPID Account Registration (BIDA).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-bida-work-permit-security-clearance-fee-unverified\",\n      \"service_id\": \"bida-work-permit-security-clearance\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for BIDA Work Permit Security Clearance (Online).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-bida-work-permit-security-clearance-documents-unverified\",\n      \"service_id\": \"bida-work-permit-security-clearance\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for BIDA Work Permit Security Clearance (Online).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-company-incorporation-portal-unreachable\",\n      \"service_id\": \"business-company-incorporation\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Company Incorporation.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://app.roc.gov.bd/Guidlines/Introduction.htm\"\n    },\n    {\n      \"gap_id\": \"gap-business-company-incorporation-fee-unverified\",\n      \"service_id\": \"business-company-incorporation\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Company Incorporation.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-company-incorporation-documents-unverified\",\n      \"service_id\": \"business-company-incorporation\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Company Incorporation.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-cooperative-society-registration-fee-unverified\",\n      \"service_id\": \"business-cooperative-society-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Cooperative Society Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-cooperative-society-registration-documents-unverified\",\n      \"service_id\": \"business-cooperative-society-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Cooperative Society Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-entity-name-search-portal-unreachable\",\n      \"service_id\": \"business-entity-name-search\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Entity Name Search.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://app.roc.gov.bd/psp/nc_search\"\n    },\n    {\n      \"gap_id\": \"gap-business-entity-name-search-fee-unverified\",\n      \"service_id\": \"business-entity-name-search\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Entity Name Search.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-entity-name-search-documents-unverified\",\n      \"service_id\": \"business-entity-name-search\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Entity Name Search.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-foreign-company-registration-portal-unreachable\",\n      \"service_id\": \"business-foreign-company-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Foreign Company Registration (Branch/Liaison).\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://app.roc.gov.bd/Guidlines/Introduction.htm\"\n    },\n    {\n      \"gap_id\": \"gap-business-foreign-company-registration-fee-unverified\",\n      \"service_id\": \"business-foreign-company-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Foreign Company Registration (Branch/Liaison).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-foreign-company-registration-documents-unverified\",\n      \"service_id\": \"business-foreign-company-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Foreign Company Registration (Branch/Liaison).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-name-clearance-portal-unreachable\",\n      \"service_id\": \"business-name-clearance\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Company Name Clearance.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm\"\n    },\n    {\n      \"gap_id\": \"gap-business-name-clearance-fee-unverified\",\n      \"service_id\": \"business-name-clearance\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Company Name Clearance.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-name-clearance-documents-unverified\",\n      \"service_id\": \"business-name-clearance\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Company Name Clearance.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-ngoab-ngo-registration-portal-unreachable\",\n      \"service_id\": \"business-ngoab-ngo-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for NGO Registration (NGO Affairs Bureau).\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://ngoa.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-business-ngoab-ngo-registration-fee-unverified\",\n      \"service_id\": \"business-ngoab-ngo-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for NGO Registration (NGO Affairs Bureau).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-ngoab-ngo-registration-documents-unverified\",\n      \"service_id\": \"business-ngoab-ngo-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for NGO Registration (NGO Affairs Bureau).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-partnership-registration-portal-unreachable\",\n      \"service_id\": \"business-partnership-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Partnership Firm Registration.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://app.roc.gov.bd/Guidlines/Download/Downloads.htm\"\n    },\n    {\n      \"gap_id\": \"gap-business-partnership-registration-fee-unverified\",\n      \"service_id\": \"business-partnership-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Partnership Firm Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-partnership-registration-documents-unverified\",\n      \"service_id\": \"business-partnership-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Partnership Firm Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-rjsc-certified-copy-portal-unreachable\",\n      \"service_id\": \"business-rjsc-certified-copy\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for RJSC Certified Copy of Documents.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://app.roc.gov.bd/psp/RJSC_Fees\"\n    },\n    {\n      \"gap_id\": \"gap-business-rjsc-certified-copy-fee-unverified\",\n      \"service_id\": \"business-rjsc-certified-copy\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for RJSC Certified Copy of Documents.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-rjsc-certified-copy-documents-unverified\",\n      \"service_id\": \"business-rjsc-certified-copy\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for RJSC Certified Copy of Documents.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-society-registration-portal-unreachable\",\n      \"service_id\": \"business-society-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Society Registration.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://app.roc.gov.bd/Guidlines/Download/Downloads.htm\"\n    },\n    {\n      \"gap_id\": \"gap-business-society-registration-fee-unverified\",\n      \"service_id\": \"business-society-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Society Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-society-registration-documents-unverified\",\n      \"service_id\": \"business-society-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Society Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-business-trade-organization-registration-portal-unreachable\",\n      \"service_id\": \"business-trade-organization-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Trade Organization Registration.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://app.roc.gov.bd/Guidlines/Introduction.htm\"\n    },\n    {\n      \"gap_id\": \"gap-business-trade-organization-registration-fee-unverified\",\n      \"service_id\": \"business-trade-organization-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Trade Organization Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-business-trade-organization-registration-documents-unverified\",\n      \"service_id\": \"business-trade-organization-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Trade Organization Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-professional-bar-council-enrolment-portal-unreachable\",\n      \"service_id\": \"professional-bar-council-enrolment\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Bangladesh Bar Council Advocate Enrolment.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://www.barcouncil.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-professional-bar-council-enrolment-fee-unverified\",\n      \"service_id\": \"professional-bar-council-enrolment\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Bangladesh Bar Council Advocate Enrolment.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-professional-bar-council-enrolment-documents-unverified\",\n      \"service_id\": \"professional-bar-council-enrolment\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Bangladesh Bar Council Advocate Enrolment.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-professional-bmdc-doctor-registration-portal-unreachable\",\n      \"service_id\": \"professional-bmdc-doctor-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for BMDC Doctor Registration.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://www.bmdc.org.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-professional-bmdc-doctor-registration-fee-unverified\",\n      \"service_id\": \"professional-bmdc-doctor-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for BMDC Doctor Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-professional-bmdc-doctor-registration-documents-unverified\",\n      \"service_id\": \"professional-bmdc-doctor-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for BMDC Doctor Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-professional-engineer-registration-portal-unreachable\",\n      \"service_id\": \"professional-engineer-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Professional Engineer Registration.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://www.ieb.org.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-professional-engineer-registration-fee-unverified\",\n      \"service_id\": \"professional-engineer-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Professional Engineer Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-professional-engineer-registration-documents-unverified\",\n      \"service_id\": \"professional-engineer-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Professional Engineer Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-professional-nursing-council-registration-portal-unreachable\",\n      \"service_id\": \"professional-nursing-council-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Nursing and Midwifery Council Registration.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://www.bnmc.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-professional-nursing-council-registration-fee-unverified\",\n      \"service_id\": \"professional-nursing-council-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Nursing and Midwifery Council Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-professional-nursing-council-registration-documents-unverified\",\n      \"service_id\": \"professional-nursing-council-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Nursing and Midwifery Council Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-professional-pharmacy-council-registration-portal-unreachable\",\n      \"service_id\": \"professional-pharmacy-council-registration\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for Pharmacy Council Pharmacist Registration.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://www.pcb.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-professional-pharmacy-council-registration-fee-unverified\",\n      \"service_id\": \"professional-pharmacy-council-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Pharmacy Council Pharmacist Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-professional-pharmacy-council-registration-documents-unverified\",\n      \"service_id\": \"professional-pharmacy-council-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Pharmacy Council Pharmacist Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-trade-bsti-standard-certification-portal-unreachable\",\n      \"service_id\": \"trade-bsti-standard-certification\",\n      \"gap_type\": \"CURRENT_URL_MISSING\",\n      \"description\": \"Catalogue/portal URL not reachable at research time for BSTI Product Standard Certification.\",\n      \"severity\": \"MEDIUM\",\n      \"url\": \"https://bsti.gov.bd/\"\n    },\n    {\n      \"gap_id\": \"gap-trade-bsti-standard-certification-fee-unverified\",\n      \"service_id\": \"trade-bsti-standard-certification\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for BSTI Product Standard Certification.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-trade-bsti-standard-certification-documents-unverified\",\n      \"service_id\": \"trade-bsti-standard-certification\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for BSTI Product Standard Certification.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-trade-dpd-patent-registration-fee-unverified\",\n      \"service_id\": \"trade-dpd-patent-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Patent Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-trade-dpd-patent-registration-documents-unverified\",\n      \"service_id\": \"trade-dpd-patent-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Patent Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-trade-dpd-trademark-registration-fee-unverified\",\n      \"service_id\": \"trade-dpd-trademark-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Trademark Registration.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-trade-dpd-trademark-registration-documents-unverified\",\n      \"service_id\": \"trade-dpd-trademark-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Trademark Registration.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-trade-erc-registration-fee-unverified\",\n      \"service_id\": \"trade-erc-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Export Registration Certificate (ERC).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-trade-erc-registration-documents-unverified\",\n      \"service_id\": \"trade-erc-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Export Registration Certificate (ERC).\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-trade-irc-erc-renewal-fee-unverified\",\n      \"service_id\": \"trade-irc-erc-renewal\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for IRC/ERC Renewal.\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-trade-irc-erc-renewal-documents-unverified\",\n      \"service_id\": \"trade-irc-erc-renewal\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for IRC/ERC Renewal.\",\n      \"severity\": \"MEDIUM\"\n    },\n    {\n      \"gap_id\": \"gap-trade-irc-registration-fee-unverified\",\n      \"service_id\": \"trade-irc-registration\",\n      \"gap_type\": \"CURRENT_FEE_MISSING\",\n      \"description\": \"Fee schedule not independently verified for Import Registration Certificate (IRC).\",\n      \"severity\": \"HIGH\"\n    },\n    {\n      \"gap_id\": \"gap-trade-irc-registration-documents-unverified\",\n      \"service_id\": \"trade-irc-registration\",\n      \"gap_type\": \"LOCAL_RULE_MISSING\",\n      \"description\": \"Mandatory document checklist not fully verified for Import Registration Certificate (IRC).\",\n      \"severity\": \"MEDIUM\"\n    }\n  ],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Verification phase prompt\n\nVerification is **independent** from research.\n\n## Verdicts per claim\nVERIFIED | PARTIALLY_VERIFIED | UNVERIFIED | CONFLICTING | OUTDATED | REJECTED\n\n## High-risk claims require stronger evidence\n- fees, mandatory documents, legal requirements, eligibility\n- official URLs, payment instructions, deadlines, SLAs\n\n## Outputs\n- `data/research/verification/<batch-slug>/claims_verification.json`\n- `data/research/verification/<batch-slug>/conflicts_resolution.json`\n- `data/research/verification/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-c468b4664114-verification/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:48:14.337457+00:00"
+  }
+}

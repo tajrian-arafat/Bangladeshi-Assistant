@@ -1,0 +1,137 @@
+{
+  "service_id": "food-ministry-vgf-card",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Vulnerable Group Feeding (VGF) / Food Assistance Card",
+  "service_name_bn": "VGF/খাদ্য সহায়তা কার্ড",
+  "aliases": [
+    "VGF card",
+    "food ministry relief card",
+    "TR rice card"
+  ],
+  "category_id": "social_protection",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Ministry of Food",
+  "official_application_url": "https://food.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "food-ministry-vgf-card::c-catalogue-authority",
+      "service_id": "food-ministry-vgf-card",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Food.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "food-ministry-vgf-card::c-official-url-documented",
+      "service_id": "food-ministry-vgf-card",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://food.gov.bd/ for Vulnerable Group Feeding (VGF) / Food Assistance Card; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://food.gov.bd/"
+      },
+      "source_ids": [
+        "src-food-ministry-vgf-card-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "food-ministry-vgf-card::c-procedure-overview",
+      "service_id": "food-ministry-vgf-card",
+      "claim_type": "procedure_step",
+      "claim_text": "Vulnerable Group Feeding (VGF) / Food Assistance Card is a government service under Ministry of Food (food assistance). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-food-ministry-vgf-card-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "food-ministry-vgf-card::c-service-identity",
+      "service_id": "food-ministry-vgf-card",
+      "claim_type": "eligibility",
+      "claim_text": "Vulnerable Group Feeding (VGF) / Food Assistance Card (VGF/খাদ্য সহায়তা কার্ড) is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-food-ministry-vgf-card-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-food-ministry-vgf-card-official",
+      "service_id": "food-ministry-vgf-card",
+      "url": "https://food.gov.bd/",
+      "title": "Vulnerable Group Feeding (VGF) / Food Assistance Card",
+      "authority_id": "ministry-of-food",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://food.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:27:26.692712+00:00"
+      },
+      "evidence_locator": "probe:https://food.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-food-ministry-vgf-card-portal-unreachable",
+      "service_id": "food-ministry-vgf-card",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Vulnerable Group Feeding (VGF) / Food Assistance Card.",
+      "severity": "MEDIUM",
+      "url": "https://food.gov.bd/"
+    },
+    {
+      "gap_id": "gap-food-ministry-vgf-card-fee-unverified",
+      "service_id": "food-ministry-vgf-card",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Vulnerable Group Feeding (VGF) / Food Assistance Card.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-food-ministry-vgf-card-documents-unverified",
+      "service_id": "food-ministry-vgf-card",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Vulnerable Group Feeding (VGF) / Food Assistance Card.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

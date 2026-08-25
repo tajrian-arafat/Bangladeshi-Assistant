@@ -1,0 +1,544 @@
+{
+  "category_id": "civil_registration",
+  "count": 14,
+  "services": [
+    {
+      "service_id": "civil-bdris-application-print",
+      "uuid": "2701e22d-4aa9-5da4-8ffe-317da61bd550",
+      "service_name_bn": "আবেদনপত্র প্রিন্ট",
+      "service_name_en": "BDRIS Application Print",
+      "aliases": [
+        "BRIS application print"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "application_management",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bdris.gov.bd/application/print",
+      "discovery_sources": [
+        "https://bdris.gov.bd/application/print"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-birth-death-verify",
+      "uuid": "d749f2fc-ecb3-514e-abeb-3c2a8a81af29",
+      "service_name_bn": "জন্ম/মৃত্যু নিবন্ধন যাচাই",
+      "service_name_en": "Birth and Death Record Verification",
+      "aliases": [
+        "BDRIS verification",
+        "e-verify birth"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "verification",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen",
+        "employer",
+        "government_employee"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://everify.bdris.gov.bd/",
+      "discovery_sources": [
+        "https://everify.bdris.gov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-birth-registration",
+      "uuid": "b89e34a9-6160-57e5-9bc0-ad55a35a9ce3",
+      "service_name_bn": "জন্ম নিবন্ধন",
+      "service_name_en": "Birth Registration",
+      "aliases": [
+        "birth certificate",
+        "BRIS birth registration",
+        "জন্ম সনদ"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "birth",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration (Local Government Division)",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen",
+        "parent",
+        "guardian"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bdris.gov.bd/br/application",
+      "discovery_sources": [
+        "https://bdris.gov.bd/br/application"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Registration and certificate issuance are one BRIS workflow; do not list separately as birth certificate service.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-birth-registration-copy",
+      "uuid": "b38c6c0c-4309-5a5e-bcd9-d0593a652de7",
+      "service_name_bn": "জন্ম নিবন্ধন প্রতিলিপি",
+      "service_name_en": "Birth Registration Copy (Reprint)",
+      "aliases": [
+        "duplicate birth certificate",
+        "birth registration reprint"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "birth_copy",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bdris.gov.bd/br/reprint/add",
+      "discovery_sources": [
+        "https://bdris.gov.bd/br/reprint/add"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Copy/reprint variant; distinct from initial registration.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-birth-registration-correction",
+      "uuid": "49c428af-d340-5e4e-83b0-1327fc762c45",
+      "service_name_bn": "জন্ম তথ্য সংশোধন",
+      "service_name_en": "Birth Registration Information Correction",
+      "aliases": [
+        "birth record correction",
+        "BRIS correction"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "birth_correction",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen",
+        "parent",
+        "guardian"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bdris.gov.bd/br/correction",
+      "discovery_sources": [
+        "https://bdris.gov.bd/br/correction"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "uuid": "f412b90c-03c6-5b47-a97b-261ef40b3a34",
+      "service_name_bn": "একাধিক জন্ম নিবন্ধন সনদ বাতিল",
+      "service_name_en": "Cancellation of Duplicate Birth Registrations",
+      "aliases": [
+        "duplicate birth cancel"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "birth_duplicate_cancel",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bdris.gov.bd/application/print",
+      "discovery_sources": [
+        "https://bdris.gov.bd/application/print"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Listed as application type on BDRIS print portal.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-death-registration",
+      "uuid": "42f5f3a1-6208-544e-bfa2-8736f22f6f43",
+      "service_name_bn": "মৃত্যু নিবন্ধন",
+      "service_name_en": "Death Registration",
+      "aliases": [
+        "death certificate",
+        "BRIS death registration"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "death",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen",
+        "relative",
+        "guardian"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bdris.gov.bd/dr/application",
+      "discovery_sources": [
+        "https://bdris.gov.bd/dr/application"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Registration and certificate issuance are one BRIS workflow.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-death-registration-copy",
+      "uuid": "87b86100-9eb3-5c36-b8d4-0089a0c7b90b",
+      "service_name_bn": "মৃত্যু নিবন্ধন প্রতিলিপি",
+      "service_name_en": "Death Registration Copy (Reprint)",
+      "aliases": [
+        "duplicate death certificate"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "death_copy",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen",
+        "relative"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bdris.gov.bd/dr/reprint/add",
+      "discovery_sources": [
+        "https://bdris.gov.bd/dr/reprint/add"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-death-registration-correction",
+      "uuid": "482ba03f-ee48-5270-8ea6-a143969ba992",
+      "service_name_bn": "মৃত্যু তথ্য সংশোধন",
+      "service_name_en": "Death Registration Information Correction",
+      "aliases": [
+        "death record correction"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "death_correction",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen",
+        "relative"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bdris.gov.bd/dr/correction",
+      "discovery_sources": [
+        "https://bdris.gov.bd/dr/correction"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-death-registration-duplicate-cancel",
+      "uuid": "b64f53c8-ff05-5b6c-8173-27488ea196ad",
+      "service_name_bn": "একাধিক মৃত্যু নিবন্ধন সনদ বাতিল",
+      "service_name_en": "Cancellation of Duplicate Death Registrations",
+      "aliases": [
+        "duplicate death cancel"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "death_duplicate_cancel",
+      "responsible_authority": "Office of the Registrar General, Birth and Death Registration",
+      "authority_id": "bdris",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://bdris.gov.bd/application/print",
+      "discovery_sources": [
+        "https://bdris.gov.bd/application/print"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-divorce-registration",
+      "uuid": "0c774aa3-105c-5a10-bcec-304ae8556128",
+      "service_name_bn": "তালাক নিবন্ধন",
+      "service_name_en": "Divorce Registration",
+      "aliases": [
+        "talak registration",
+        "Muslim divorce registration"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "divorce",
+      "responsible_authority": "Ministry of Law, Justice and Parliamentary Affairs (CRVS Marriage & Divorce Portal)",
+      "authority_id": "ministry-of-law-justice-and-parliamentary-affairs-crvs-marriage-",
+      "target_user": [
+        "citizen",
+        "nikah_registrar"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+      "discovery_sources": [
+        "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Portal name includes Divorce; governed also by Muslim Marriages and Divorces (Registration) Act 1974.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": "2026-08-24",
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": "CRVS/marriage.gov.bd documentation references divorce registration pathway."
+    },
+    {
+      "service_id": "civil-marriage-registrar-hindu-list",
+      "uuid": "a41be70d-7201-5b9d-937d-3b385cdd835f",
+      "service_name_bn": "হিন্দু বিবাহ নিবন্ধক তালিকা",
+      "service_name_en": "Hindu Marriage Registrar List",
+      "aliases": [
+        "Hindu marriage registrar"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "registrar_directory",
+      "responsible_authority": "Law and Justice Division",
+      "authority_id": "law-and-justice-division",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "DIVISION",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://marriage.gov.bd/",
+      "discovery_sources": [
+        "https://marriage.gov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-marriage-registrar-muslim-list",
+      "uuid": "2422032a-7b2f-5bdb-aab4-ad838a975052",
+      "service_name_bn": "মুসলিম বিবাহ নিবন্ধক তালিকা",
+      "service_name_en": "Muslim Marriage Registrar List",
+      "aliases": [
+        "Muslim kazi list"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "registrar_directory",
+      "responsible_authority": "Law and Justice Division",
+      "authority_id": "law-and-justice-division",
+      "target_user": [
+        "citizen"
+      ],
+      "geographic_scope": "DIVISION",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://marriage.gov.bd/",
+      "discovery_sources": [
+        "https://marriage.gov.bd/"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": null,
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    },
+    {
+      "service_id": "civil-marriage-registration",
+      "uuid": "a95abf67-39cc-55c9-8af0-8229374cea3e",
+      "service_name_bn": "বিবাহ নিবন্ধন",
+      "service_name_en": "Marriage Registration",
+      "aliases": [
+        "nikah registration",
+        "CRVS marriage registration"
+      ],
+      "category": "CIVIL_REGISTRATION",
+      "category_id": "civil_registration",
+      "subcategory": "marriage",
+      "responsible_authority": "Ministry of Law, Justice and Parliamentary Affairs (CRVS Marriage & Divorce Portal)",
+      "authority_id": "ministry-of-law-justice-and-parliamentary-affairs-crvs-marriage-",
+      "target_user": [
+        "citizen",
+        "nikah_registrar"
+      ],
+      "geographic_scope": "NATIONAL",
+      "geographic_availability": [],
+      "lifecycle_stage": [],
+      "official_source": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+      "discovery_sources": [
+        "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+      ],
+      "mygov_service_ids": [],
+      "status": "CONFIRMED",
+      "canonical_service_id": null,
+      "relationship_type": null,
+      "notes": "Multi-step form via CRVS portal; registrars and civilians use separate roles.",
+      "discovered_at": "2026-08-24",
+      "confirmed_at": "2026-08-24",
+      "last_checked_at": null,
+      "effective_from": null,
+      "effective_until": null,
+      "deprecated_at": null,
+      "catalogue_version": "1.0.0-finalized",
+      "finalization_notes": null
+    }
+  ]
+}

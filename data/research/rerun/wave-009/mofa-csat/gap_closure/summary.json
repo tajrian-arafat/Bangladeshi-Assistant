@@ -1,0 +1,20 @@
+{
+  "service_id": "mofa-csat",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-mofa-csat-fee-unverified",
+      "service_id": "mofa-csat",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for MOFA Consular Service Appointment (CSAT).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-mofa-csat-documents-unverified",
+      "service_id": "mofa-csat",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for MOFA Consular Service Appointment (CSAT).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

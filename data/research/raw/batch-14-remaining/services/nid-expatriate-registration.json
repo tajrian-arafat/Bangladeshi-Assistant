@@ -1,0 +1,43 @@
+{
+  "service_id": "nid-expatriate-registration",
+  "batch_id": "batch-14-remaining",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Expatriate Bangladeshi NID Application",
+  "service_name_bn": "প্রবাসী বাংলাদেশি এনআইডি আবেদন",
+  "aliases": [
+    "NID for overseas Bangladeshis"
+  ],
+  "category_id": "identity",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "nid-expatriate-registration::c-application-portal",
+      "service_id": "nid-expatriate-registration",
+      "claim_type": "application_url",
+      "claim_text": "Expatriate Bangladeshi NID Application is associated with NBR e-service portal https://services.nidw.gov.bd/nid-pub/?locale=en.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-nid-expatriate-registration",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-expatriate-registration::c-responsible-authority",
+      "service_id": "nid-expatriate-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Election Commission (NID Wing).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

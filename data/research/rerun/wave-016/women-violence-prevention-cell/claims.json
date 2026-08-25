@@ -1,0 +1,72 @@
+{
+  "service_id": "women-violence-prevention-cell",
+  "claims": [
+    {
+      "claim_id": "women-violence-prevention-cell::c-catalogue-authority",
+      "service_id": "women-violence-prevention-cell",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Women Affairs (DWA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-violence-prevention-cell::c-official-portal",
+      "service_id": "women-violence-prevention-cell",
+      "claim_type": "application_url",
+      "claim_text": "Violence Against Women Prevention Cell official information is published at http://dwa.portal.gov.bd/ (page title: হোম | মহিলা বিষয়ক অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://dwa.portal.gov.bd/"
+      },
+      "source_ids": [
+        "src-women-violence-prevention-cell-official"
+      ],
+      "evidence_ids": [
+        "ev-women-violence-prevention-cell::c-official-portal-src-women-violence-prevention-cell-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-violence-prevention-cell::c-procedure-overview",
+      "service_id": "women-violence-prevention-cell",
+      "claim_type": "procedure_step",
+      "claim_text": "Violence Against Women Prevention Cell is a government service under Department of Women Affairs (DWA) (protection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-violence-prevention-cell-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-violence-prevention-cell::c-service-identity",
+      "service_id": "women-violence-prevention-cell",
+      "claim_type": "eligibility",
+      "claim_text": "Violence Against Women Prevention Cell (নারী নির্যাতন প্রতিরোধ সেল) is a confirmed government service in category women_children, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-violence-prevention-cell-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

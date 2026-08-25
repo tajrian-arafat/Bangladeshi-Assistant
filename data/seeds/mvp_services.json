@@ -1,0 +1,366 @@
+{
+  "services": [
+    {
+      "slug": "passport-renewal",
+      "name_bn": "পাসপোর্ট নবায়ন",
+      "name_en": "Passport Renewal",
+      "aliases": ["passport renew", "পাসপোর্ট রিনিউ", "e-passport renewal"],
+      "agency_slug": "dip",
+      "category": "IDENTITY",
+      "status": "UNDER_REVIEW",
+      "eligibility": {
+        "note": "Seed placeholder — eligibility must be verified from official sources during curation."
+      },
+      "procedure": {
+        "key": "passport-renewal-default",
+        "title_bn": "পাসপোর্ট নবায়ন প্রক্রিয়া",
+        "title_en": "Passport Renewal Procedure",
+        "steps": [
+          {
+            "order": 1,
+            "key": "check_eligibility",
+            "title_bn": "যোগ্যতা যাচাই",
+            "title_en": "Check eligibility",
+            "description_bn": "বর্তমান পাসপোর্টের মেয়াদ ও নবায়নের উপযুক্ততা যাচাই করুন।",
+            "description_en": "Verify current passport validity and renewal eligibility.",
+            "official_url": null
+          },
+          {
+            "order": 2,
+            "key": "gather_documents",
+            "title_bn": "প্রয়োজনীয় কাগজপত্র সংগ্রহ",
+            "title_en": "Gather required documents",
+            "description_bn": "আবেদনের জন্য প্রয়োজনীয় কাগজপত্র সংগ্রহ করুন।",
+            "description_en": "Collect documents required for the application.",
+            "official_url": null
+          },
+          {
+            "order": 3,
+            "key": "submit_application",
+            "title_bn": "আবেদন জমা",
+            "title_en": "Submit application",
+            "description_bn": "নির্ধারিত অফিস বা অনলাইন চ্যানেলে আবেদন জমা দিন (URL যাচাই প্রয়োজন)।",
+            "description_en": "Submit application at designated office or online channel (URL requires verification).",
+            "official_url": null
+          }
+        ]
+      },
+      "checklist_items": [
+        {
+          "order": 1,
+          "item_type": "REQUIRED",
+          "label_bn": "বর্তমান/মেয়াদোত্তীর্ণ পাসপোর্ট",
+          "label_en": "Current or expired passport"
+        },
+        {
+          "order": 2,
+          "item_type": "REQUIRED",
+          "label_bn": "জাতীয় পরিচয়পত্র (এনআইডি)",
+          "label_en": "National Identity Card (NID)"
+        },
+        {
+          "order": 3,
+          "item_type": "REQUIRED",
+          "label_bn": "পাসপোর্ট সাইজ ছবি",
+          "label_en": "Passport-size photographs"
+        },
+        {
+          "order": 4,
+          "item_type": "CONDITIONAL",
+          "label_bn": "পূর্ববর্তী পাসপোর্ট হারিয়ে গেলে সংশ্লিষ্ট ঘোষণাপত্র",
+          "label_en": "Declaration if previous passport was lost",
+          "conditions": {"passport_status": "lost"}
+        }
+      ],
+      "fees": [],
+      "forms": [],
+      "service_links": []
+    },
+    {
+      "slug": "nid-correction",
+      "name_bn": "এনআইডি সংশোধন",
+      "name_en": "NID Correction",
+      "aliases": ["nid correction", "এনআইডি ঠিক", "voter id correction"],
+      "agency_slug": "ec-nid",
+      "category": "IDENTITY",
+      "status": "UNDER_REVIEW",
+      "eligibility": {
+        "note": "Seed placeholder — correction types and eligibility require official verification."
+      },
+      "procedure": {
+        "key": "nid-correction-default",
+        "title_bn": "এনআইডি সংশোধন প্রক্রিয়া",
+        "title_en": "NID Correction Procedure",
+        "steps": [
+          {
+            "order": 1,
+            "key": "identify_correction_type",
+            "title_bn": "সংশোধনের ধরন নির্ধারণ",
+            "title_en": "Identify correction type",
+            "description_bn": "নাম, ঠিকানা, জন্মতারিখ ইত্যাদি কোন তথ্য সংশোধন করতে হবে তা নির্ধারণ করুন।",
+            "description_en": "Determine which fields need correction (name, address, date of birth, etc.).",
+            "official_url": null
+          },
+          {
+            "order": 2,
+            "key": "prepare_supporting_documents",
+            "title_bn": "সহায়ক কাগজপত্র প্রস্তুত",
+            "title_en": "Prepare supporting documents",
+            "description_bn": "সংশোধনের ধরন অনুযায়ী প্রয়োজনীয় কাগজপত্র সংগ্রহ করুন।",
+            "description_en": "Gather supporting documents based on correction type.",
+            "official_url": null
+          },
+          {
+            "order": 3,
+            "key": "apply_correction",
+            "title_bn": "আবেদন জমা",
+            "title_en": "Submit correction application",
+            "description_bn": "নির্বাচন কমিশনের নির্ধারিত পদ্ধতিতে আবেদন করুন (চ্যানেল যাচাই প্রয়োজন)।",
+            "description_en": "Apply through Election Commission designated channels (requires verification).",
+            "official_url": null
+          }
+        ]
+      },
+      "checklist_items": [
+        {
+          "order": 1,
+          "item_type": "REQUIRED",
+          "label_bn": "বর্তমান এনআইডি কার্ড",
+          "label_en": "Current NID card"
+        },
+        {
+          "order": 2,
+          "item_type": "REQUIRED",
+          "label_bn": "জন্ম সনদ (যদি প্রযোজ্য)",
+          "label_en": "Birth certificate (if applicable)"
+        },
+        {
+          "order": 3,
+          "item_type": "CONDITIONAL",
+          "label_bn": "আদালতের/Affidavit (যদি প্রযোজ্য)",
+          "label_en": "Court affidavit (if applicable)",
+          "conditions": {"correction_type": "name_change"}
+        }
+      ],
+      "fees": [],
+      "forms": [],
+      "service_links": []
+    },
+    {
+      "slug": "driving-licence-renewal",
+      "name_bn": "ড্রাইভিং লাইসেন্স নবায়ন",
+      "name_en": "Driving Licence Renewal",
+      "aliases": ["driving license renew", "license renew", "dl renew", "BRTA license"],
+      "agency_slug": "brta",
+      "category": "TRANSPORT",
+      "status": "UNDER_REVIEW",
+      "eligibility": {
+        "note": "Seed placeholder — licence class and medical requirements need official verification."
+      },
+      "procedure": {
+        "key": "driving-licence-renewal-default",
+        "title_bn": "ড্রাইভিং লাইসেন্স নবায়ন প্রক্রিয়া",
+        "title_en": "Driving Licence Renewal Procedure",
+        "steps": [
+          {
+            "order": 1,
+            "key": "check_licence_status",
+            "title_bn": "লাইসেন্সের অবস্থা যাচাই",
+            "title_en": "Check licence status",
+            "description_bn": "বর্তমান লাইসেন্সের মেয়াদ ও শ্রেণি যাচাই করুন।",
+            "description_en": "Verify current licence validity and class.",
+            "official_url": null
+          },
+          {
+            "order": 2,
+            "key": "medical_test",
+            "title_bn": "চিকিৎসা পরীক্ষা (যদি প্রয়োজন)",
+            "title_en": "Medical test (if required)",
+            "description_bn": "প্রয়োজনে BRTA-অনুমোদিত চিকিৎসা পরীক্ষা করুন।",
+            "description_en": "Complete medical test at BRTA-approved facility if required.",
+            "official_url": null
+          },
+          {
+            "order": 3,
+            "key": "submit_renewal",
+            "title_bn": "নবায়ন আবেদন",
+            "title_en": "Submit renewal application",
+            "description_bn": "নিকটস্থ BRTA অফিসে আবেদন জমা দিন (ফি ও URL যাচাই প্রয়োজন)।",
+            "description_en": "Submit renewal at nearest BRTA office (fees and URLs require verification).",
+            "official_url": null
+          }
+        ]
+      },
+      "checklist_items": [
+        {
+          "order": 1,
+          "item_type": "REQUIRED",
+          "label_bn": "বর্তমান/মেয়াদোত্তীর্ণ ড্রাইভিং লাইসেন্স",
+          "label_en": "Current or expired driving licence"
+        },
+        {
+          "order": 2,
+          "item_type": "REQUIRED",
+          "label_bn": "জাতীয় পরিচয়পত্র (এনআইডি)",
+          "label_en": "National Identity Card (NID)"
+        },
+        {
+          "order": 3,
+          "item_type": "REQUIRED",
+          "label_bn": "পাসপোর্ট সাইজ ছবি",
+          "label_en": "Passport-size photographs"
+        },
+        {
+          "order": 4,
+          "item_type": "CONDITIONAL",
+          "label_bn": "চিকিৎসা সনদ",
+          "label_en": "Medical certificate",
+          "conditions": {"licence_class": "professional"}
+        }
+      ],
+      "fees": [],
+      "forms": [],
+      "service_links": []
+    },
+    {
+      "slug": "birth-registration",
+      "name_bn": "জন্ম নিবন্ধন",
+      "name_en": "Birth Registration",
+      "aliases": ["birth certificate", "জন্ম সনদ", "birth reg"],
+      "agency_slug": "dgfp",
+      "category": "CIVIL_REGISTRATION",
+      "status": "UNDER_REVIEW",
+      "eligibility": {
+        "note": "Seed placeholder — new registration vs correction paths require official verification."
+      },
+      "procedure": {
+        "key": "birth-registration-default",
+        "title_bn": "জন্ম নিবন্ধন প্রক্রিয়া",
+        "title_en": "Birth Registration Procedure",
+        "steps": [
+          {
+            "order": 1,
+            "key": "determine_registration_type",
+            "title_bn": "নিবন্ধনের ধরন নির্ধারণ",
+            "title_en": "Determine registration type",
+            "description_bn": "নতুন নিবন্ধন, সংশোধন, বা ডুপ্লিকেট কপি — কোন সেবা প্রয়োজন তা নির্ধারণ করুন।",
+            "description_en": "Determine whether new registration, correction, or duplicate copy is needed.",
+            "official_url": null
+          },
+          {
+            "order": 2,
+            "key": "visit_registration_office",
+            "title_bn": "নিবন্ধন অফিসে যোগাযোগ",
+            "title_en": "Contact registration office",
+            "description_bn": "স্থানীয় ইউনিয়ন/পৌরসভা/সিটি কর্পোরেশন জন্ম নিবন্ধন কার্যালয়ে যোগাযোগ করুন।",
+            "description_en": "Contact local union/municipality/city corporation birth registration office.",
+            "official_url": null
+          },
+          {
+            "order": 3,
+            "key": "submit_application",
+            "title_bn": "আবেদন ও কাগজপত্র জমা",
+            "title_en": "Submit application and documents",
+            "description_bn": "প্রয়োজনীয় ফর্ম ও কাগজপত্র জমা দিন (ফি যাচাই প্রয়োজন)।",
+            "description_en": "Submit required forms and documents (fees require verification).",
+            "official_url": null
+          }
+        ]
+      },
+      "checklist_items": [
+        {
+          "order": 1,
+          "item_type": "REQUIRED",
+          "label_bn": "হাসপাতাল/ক্লিনিকের জন্ম সংক্রান্ত সনদ (যদি থাকে)",
+          "label_en": "Hospital/clinic birth record (if available)"
+        },
+        {
+          "order": 2,
+          "item_type": "REQUIRED",
+          "label_bn": "পিতা-মাতার পরিচয়পত্র",
+          "label_en": "Parents' identity documents"
+        },
+        {
+          "order": 3,
+          "item_type": "CONDITIONAL",
+          "label_bn": "আদালতের/Affidavit (বিলম্বিত নিবন্ধনের ক্ষেত্রে)",
+          "label_en": "Affidavit (for delayed registration)",
+          "conditions": {"registration_delay": "true"}
+        }
+      ],
+      "fees": [],
+      "forms": [],
+      "service_links": []
+    },
+    {
+      "slug": "tin-registration",
+      "name_bn": "টিআইএন নিবন্ধন",
+      "name_en": "TIN Registration",
+      "aliases": ["tin certificate", "tax id", "TIN reg", "e-TIN"],
+      "agency_slug": "nbr",
+      "category": "TAX",
+      "status": "UNDER_REVIEW",
+      "eligibility": {
+        "note": "Seed placeholder — individual vs business TIN paths require official verification."
+      },
+      "procedure": {
+        "key": "tin-registration-default",
+        "title_bn": "টিআইএন নিবন্ধন প্রক্রিয়া",
+        "title_en": "TIN Registration Procedure",
+        "steps": [
+          {
+            "order": 1,
+            "key": "determine_tin_type",
+            "title_bn": "টিআইএন ধরন নির্ধারণ",
+            "title_en": "Determine TIN type",
+            "description_bn": "ব্যক্তি, ব্যবসা, বা অন্যান্য — কোন ধরনের TIN প্রয়োজন তা নির্ধারণ করুন।",
+            "description_en": "Determine whether individual, business, or other TIN type is needed.",
+            "official_url": null
+          },
+          {
+            "order": 2,
+            "key": "prepare_documents",
+            "title_bn": "কাগজপত্র প্রস্তুত",
+            "title_en": "Prepare documents",
+            "description_bn": "NBR-এর নির্দেশনা অনুযায়ী প্রয়োজনীয় কাগজপত্র সংগ্রহ করুন।",
+            "description_en": "Gather required documents per NBR guidelines.",
+            "official_url": null
+          },
+          {
+            "order": 3,
+            "key": "apply_tin",
+            "title_bn": "আবেদন জমা",
+            "title_en": "Submit TIN application",
+            "description_bn": "NBR-এর নির্ধারিত চ্যানেলে আবেদন করুন (URL যাচাই প্রয়োজন)।",
+            "description_en": "Apply through NBR designated channels (URL requires verification).",
+            "official_url": null
+          }
+        ]
+      },
+      "checklist_items": [
+        {
+          "order": 1,
+          "item_type": "REQUIRED",
+          "label_bn": "জাতীয় পরিচয়পত্র (এনআইডি)",
+          "label_en": "National Identity Card (NID)"
+        },
+        {
+          "order": 2,
+          "item_type": "REQUIRED",
+          "label_bn": "পাসপোর্ট সাইজ ছবি",
+          "label_en": "Passport-size photograph"
+        },
+        {
+          "order": 3,
+          "item_type": "CONDITIONAL",
+          "label_bn": "ট্রেড লাইসেন্স (ব্যবসার TIN-এর ক্ষেত্রে)",
+          "label_en": "Trade licence (for business TIN)",
+          "conditions": {"tin_type": "business"}
+        }
+      ],
+      "fees": [],
+      "forms": [],
+      "service_links": []
+    }
+  ]
+}

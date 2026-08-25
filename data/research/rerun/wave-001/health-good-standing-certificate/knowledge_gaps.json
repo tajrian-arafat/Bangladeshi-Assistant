@@ -1,0 +1,27 @@
+{
+  "service_id": "health-good-standing-certificate",
+  "gaps": [
+    {
+      "gap_id": "gap-health-good-standing-certificate-portal-unreachable",
+      "service_id": "health-good-standing-certificate",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Certificate of Good Standing (BMDC).",
+      "severity": "MEDIUM",
+      "url": "https://payment.bmdc.org.bd/home/page/form-list"
+    },
+    {
+      "gap_id": "gap-health-good-standing-certificate-fee-unverified",
+      "service_id": "health-good-standing-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Certificate of Good Standing (BMDC).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-good-standing-certificate-documents-unverified",
+      "service_id": "health-good-standing-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Certificate of Good Standing (BMDC).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

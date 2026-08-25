@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-08-25T03:13:30.684039+00:00",
+  "diagnosis_code": "D_WRONG_AUDIT_PATH",
+  "diagnosis": "Audit path data/bda.db is empty (0 bytes) but populated database exists at /workspace/backend/data/bda.db (3444736 bytes). Runtime knowledge may exist via backend path; final audit inspected the wrong canonical path.",
+  "recommendation": "Align publication and audit on a single canonical runtime DB path. E2E/backend tests use backend/data/bda.db; do not treat empty data/bda.db alone as total absence of runtime knowledge.",
+  "database_url_env": null,
+  "files_inspected": [
+    {
+      "path": "/workspace/data/bda.db",
+      "exists": true,
+      "size_bytes": 0
+    },
+    {
+      "path": "/workspace/backend/data/bda.db",
+      "exists": true,
+      "size_bytes": 3444736
+    }
+  ],
+  "staging_batches_with_claims": 17,
+  "publication_script_exists": true,
+  "deployment_locked": true,
+  "runtime_knowledge_available": true,
+  "populated_database_path": "/workspace/backend/data/bda.db",
+  "verdict": "Runtime knowledge available at alternate backend path"
+}

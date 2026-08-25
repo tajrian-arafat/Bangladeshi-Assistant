@@ -1,0 +1,120 @@
+{
+  "service_id": "nid-voter-area-change",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Voter Area or Address Change (Form 13)",
+  "service_name_bn": "ভোটার এলাকা/ঠিকানা পরিবর্তন (ফর্ম ১৩)",
+  "aliases": [
+    "address migration",
+    "voter transfer"
+  ],
+  "banglish_variants": [],
+  "category_id": "identity",
+  "responsible_ministry": "Bangladesh Election Commission",
+  "responsible_agency": "NID Wing, Bangladesh Election Commission",
+  "target_applicant": [
+    "citizen",
+    "voter"
+  ],
+  "eligibility": [],
+  "prerequisites": [],
+  "application_methods": [],
+  "online_application": null,
+  "offline_application": null,
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+  "official_information_urls": [
+    "https://services.nidw.gov.bd/nid-pub/?locale=en",
+    "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+  ],
+  "official_forms": [],
+  "requirements": [],
+  "fees": [],
+  "payment_methods": [],
+  "processing_time": null,
+  "procedure_steps": [
+    {
+      "step_id": "f1",
+      "order": 1,
+      "title": "Determine if area transfer or local address correction",
+      "description": "Area transfer (residence change) uses Form 13; same-area spelling uses correction form.",
+      "claim_ids": [
+        "c-f13"
+      ]
+    },
+    {
+      "step_id": "f2",
+      "order": 2,
+      "title": "Apply at current area election office",
+      "description": "Submit Form 13 at Upazila/Thana election office where currently residing.",
+      "claim_ids": [
+        "c-f13"
+      ]
+    }
+  ],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [],
+  "office_locations": [],
+  "geographic_limitations": [],
+  "service_availability": "AVAILABLE",
+  "related_services": [
+    "nid-new-voter-registration",
+    "nid-card-info-correction",
+    "nid-reissue-lost"
+  ],
+  "dependencies": [],
+  "renewal_rules": [],
+  "correction_rules": [],
+  "replacement_rules": [],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [],
+  "common_mistakes": [],
+  "practical_experience": [],
+  "warnings": [],
+  "legal_basis": [],
+  "claims": [
+    {
+      "claim_id": "c-f13",
+      "claim": "For change of residence, apply with Form 13 at the Upazila/Thana election office of the current residence area. Spelling/detail fixes within same voter area use ordinary correction form.",
+      "field": "procedure",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [],
+  "research_status": "SUBSTANTIAL",
+  "missing_information": [
+    "Complete Form 13 supporting document checklist on Tier-1 page."
+  ],
+  "manual_review_required": [],
+  "knowledge_quality": {
+    "knowledge_quality_score": 79.5,
+    "dimensions": {
+      "coverage": 68,
+      "authority": 95,
+      "freshness": 85,
+      "consistency": 95,
+      "usability": 50.0
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Form 13 rule clear; supporting docs for Form 13 not fully enumerated on FAQ.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24"
+}

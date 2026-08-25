@@ -1,0 +1,72 @@
+{
+  "service_id": "judiciary-supreme-court-e-filing",
+  "claims": [
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-catalogue-authority",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Supreme Court of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-official-portal",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "application_url",
+      "claim_text": "Supreme Court e-Filing (Lawyers Panel) official information is published at https://apps.supremecourt.gov.bd/mycase (page title: MyCase : E-Filing System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://apps.supremecourt.gov.bd/mycase"
+      },
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official"
+      ],
+      "evidence_ids": [
+        "ev-judiciary-supreme-court-e-filing::c-official-portal-src-judiciary-supreme-court-e-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-procedure-overview",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "procedure_step",
+      "claim_text": "Supreme Court e-Filing (Lawyers Panel) is a government service under Supreme Court of Bangladesh (case filing). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-service-identity",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Supreme Court e-Filing (Lawyers Panel) (সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel)) is a confirmed government service in category judiciary, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

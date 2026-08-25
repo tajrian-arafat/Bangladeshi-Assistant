@@ -1,0 +1,177 @@
+{
+  "service_id": "brta-trustee-board-certificate",
+  "batch_id": "batch-03b-brta-vehicle",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Trustee Board Certificate Download",
+  "service_name_bn": "ট্রাস্টি বোর্ড সনদ ডাউনলোড",
+  "aliases": [
+    "trust board certificate",
+    "TBC download"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/tbc/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-trustee-board-certificate::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Trustee Board Certificate download available via BSP at bsp.brta.gov.bd/tbc/ per catalogue official_source.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-trustee-board-certificate::c-portal-url-src-bsp-tbc"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-grant-certificate-purpose",
+      "legacy_claim_id": "c-grant-certificate-purpose",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Certificate relates to Trustee Board grant/disbursement for registered vehicles under BRTA Trustee Board scheme.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-trustee-board-certificate::c-grant-certificate-purpose-src-bsp-tbc"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-download-not-registration",
+      "legacy_claim_id": "c-download-not-registration",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_type": "restriction",
+      "claim_text": "TBC download is certificate retrieval for trustee-board-eligible vehicles — not a substitute for vehicle registration or transfer.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-trustee-board-certificate::c-download-not-registration-src-bsp-tbc"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-bsp-login-may-be-required",
+      "legacy_claim_id": "c-bsp-login-may-be-required",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Download may require BSP account login linked to vehicle/owner record (portal workflow not snapshotted in this pass).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-bsp-register-owner"
+      ],
+      "evidence_ids": [
+        "ev-brta-trustee-board-certificate::c-bsp-login-may-be-required-src-bsp-tbc"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-eligibility-not-fully-captured",
+      "legacy_claim_id": "c-eligibility-not-fully-captured",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Trustee Board eligibility criteria and required vehicle grant status not extracted from Tier 1–2 pages in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-tbc"
+      ],
+      "evidence_ids": [
+        "ev-brta-trustee-board-certificate::c-eligibility-not-fully-captured-src-bsp-tbc"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-fee-if-any-unknown",
+      "legacy_claim_id": "c-fee-if-any-unknown",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_type": "fee",
+      "claim_text": "Certificate download fee (if any) not published on sources reviewed in this research pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-trustee-board-certificate::c-fee-if-any-unknown-src-bsp-tbc"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-practical-trustee-board-forms",
+      "legacy_claim_id": "c-practical-trustee-board-forms",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_type": "practical_tip",
+      "claim_text": "Trustee Board grant applications may require separate paper forms on BRTA portal forms section before certificate download.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-trustee-board-certificate::c-practical-trustee-board-forms-src-brta-portal-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator, hours)"
+}

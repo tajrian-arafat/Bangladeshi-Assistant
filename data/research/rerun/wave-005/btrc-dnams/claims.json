@@ -1,0 +1,72 @@
+{
+  "service_id": "btrc-dnams",
+  "claims": [
+    {
+      "claim_id": "btrc-dnams::c-catalogue-authority",
+      "service_id": "btrc-dnams",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Telecommunication Regulatory Commission (BTRC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-dnams::c-official-portal",
+      "service_id": "btrc-dnams",
+      "claim_type": "application_url",
+      "claim_text": "Demand Note Automation Management System (DNAMS) official information is published at https://dnams.btrc.gov.bd/ (page title: Welcome).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dnams.btrc.gov.bd/"
+      },
+      "source_ids": [
+        "src-btrc-dnams-official"
+      ],
+      "evidence_ids": [
+        "ev-btrc-dnams::c-official-portal-src-btrc-dnams-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-dnams::c-procedure-overview",
+      "service_id": "btrc-dnams",
+      "claim_type": "procedure_step",
+      "claim_text": "Demand Note Automation Management System (DNAMS) is a government service under Bangladesh Telecommunication Regulatory Commission (BTRC) (telecom licensing). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-dnams-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-dnams::c-service-identity",
+      "service_id": "btrc-dnams",
+      "claim_type": "eligibility",
+      "claim_text": "Demand Note Automation Management System (DNAMS) (ডিমান্ড নোট অটোমেশন (ডিএনএএমএস)) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-dnams-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

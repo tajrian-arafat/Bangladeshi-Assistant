@@ -1,0 +1,72 @@
+{
+  "service_id": "desco-load-calculator",
+  "claims": [
+    {
+      "claim_id": "desco-load-calculator::c-catalogue-authority",
+      "service_id": "desco-load-calculator",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Electric Supply Company Limited (DESCO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-load-calculator::c-official-portal",
+      "service_id": "desco-load-calculator",
+      "claim_type": "application_url",
+      "claim_text": "DESCO Load Calculator official information is published at https://ocsms.desco.org.bd/ (page title: Online Customer Service Management System | DESCO).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ocsms.desco.org.bd/"
+      },
+      "source_ids": [
+        "src-desco-load-calculator-official"
+      ],
+      "evidence_ids": [
+        "ev-desco-load-calculator::c-official-portal-src-desco-load-calculator-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-load-calculator::c-procedure-overview",
+      "service_id": "desco-load-calculator",
+      "claim_type": "procedure_step",
+      "claim_text": "DESCO Load Calculator is a government service under Dhaka Electric Supply Company Limited (DESCO) (electricity portal). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-load-calculator-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-load-calculator::c-service-identity",
+      "service_id": "desco-load-calculator",
+      "claim_type": "eligibility",
+      "claim_text": "DESCO Load Calculator (ডেসকো লোড ক্যালকুলেটর) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-load-calculator-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

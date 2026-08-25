@@ -1,0 +1,72 @@
+{
+  "service_id": "land-mutation-apply",
+  "sources": [
+    {
+      "source_id": "src-land-mutation-apply-official",
+      "service_id": "land-mutation-apply",
+      "url": "https://mutation.land.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "3f85c2f7c7f78bc1",
+        "retrieved_at": "2026-08-25T03:52:49.206759+00:00"
+      },
+      "evidence_locator": "probe:https://mutation.land.gov.bd/"
+    },
+    {
+      "source_id": "src-land-mutation-apply-alt-1",
+      "service_id": "land-mutation-apply",
+      "url": "https://land.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "6f6bc0e8a7121b3e",
+        "retrieved_at": "2026-08-25T03:52:49.236449+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-mutation-apply-alt-2",
+      "service_id": "land-mutation-apply",
+      "url": "https://ldtax.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ldtax.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "7c5e57d6d48ec5ea",
+        "retrieved_at": "2026-08-25T03:52:49.268647+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

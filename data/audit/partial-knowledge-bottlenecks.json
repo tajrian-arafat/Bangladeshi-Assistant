@@ -1,0 +1,49 @@
+{
+  "primary_bottleneck": "RESEARCH",
+  "bottleneck_scores": {
+    "RESEARCH": 428,
+    "SOURCE_DISCOVERY": 24,
+    "SOURCE_ACCESS": 31,
+    "VERIFICATION": 139,
+    "DATA_MODEL": 42,
+    "RETRIEVAL": 416,
+    "E2E": 416,
+    "GOVERNMENT_INFO_AVAILABILITY": 11
+  },
+  "top_missing_dimensions": {
+    "MISSING_E2E_SUPPORTED_COVERAGE": 416,
+    "MISSING_MUST_NEED_DOCUMENTS": 408,
+    "MISSING_CLAIM_DENSITY": 406,
+    "MISSING_CONDITIONAL_DOCUMENTS": 377,
+    "MISSING_FEES": 252,
+    "MISSING_GEOGRAPHIC_VARIATION": 200,
+    "LOCAL_VARIATION": 42,
+    "MISSING_PAYMENT": 41,
+    "MISSING_FRESHNESS": 27,
+    "MISSING_ELIGIBILITY": 26
+  },
+  "source_limitations": {
+    "official_source_unavailable_pct": 2.6,
+    "js_rendering_limitation_pct": 4.8,
+    "calculator_required_pct": 0.0
+  },
+  "dimension_missing_pct": {
+    "fees": 60.6,
+    "documents": 98.1,
+    "procedure": 5.3,
+    "official_url": 5.8,
+    "eligibility": 6.2,
+    "e2e_supported": 100.0
+  },
+  "high_usage_partial": [
+    "education-hsc-certificate",
+    "education-ssc-certificate",
+    "land-mutation-apply",
+    "local-passport-attestation",
+    "nid-download-copy",
+    "nid-new-voter-registration",
+    "snp-old-age-allowance",
+    "tax-etin-registration"
+  ],
+  "interpretation": "Primary bottleneck inferred as RESEARCH based on aggregated partial-reason frequencies, not guesswork. High rates of MISSING_E2E_SUPPORTED_COVERAGE indicate retrieval/E2E gap even when basic service-specific sources exist post-wave rerun."
+}

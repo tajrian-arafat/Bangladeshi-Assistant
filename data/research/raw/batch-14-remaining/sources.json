@@ -1,0 +1,1957 @@
+{
+  "batch_id": "batch-14-remaining",
+  "sources": [
+    {
+      "source_id": "src-bpdb-high-tension-connection",
+      "service_id": "bpdb-high-tension-connection",
+      "url": "https://bpdb.gov.bd/",
+      "portal_url": null,
+      "title": "BPDB High Tension Connection Application",
+      "authority_id": "bangladesh-power-development-board-bpdb",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bpdb.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-bpdb-new-connection-general",
+      "service_id": "bpdb-new-connection-general",
+      "url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717",
+      "portal_url": null,
+      "title": "BPDB New Electricity Connection (General Customer)",
+      "authority_id": "bangladesh-power-development-board-bpdb",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-bpdb-online-bill",
+      "service_id": "bpdb-online-bill",
+      "url": "https://billonweb.bpdb.gov.bd",
+      "portal_url": null,
+      "title": "BpdbUi",
+      "authority_id": "bangladesh-power-development-board-bpdb",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://billonweb.bpdb.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "BpdbUi",
+        "content_type": "text/html"
+      }
+    },
+    {
+      "source_id": "src-btrc-dnams",
+      "service_id": "btrc-dnams",
+      "url": "https://dnams.btrc.gov.bd/",
+      "portal_url": null,
+      "title": "Welcome",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dnams.btrc.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Welcome",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-btrc-lims-license",
+      "service_id": "btrc-lims-license",
+      "url": "https://lims.btrc.gov.bd/",
+      "portal_url": null,
+      "title": "Bangladesh Telecommunication Regulatory Commission",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://lims.btrc.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh Telecommunication Regulatory Commission",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-btrc-neir-device-registration",
+      "service_id": "btrc-neir-device-registration",
+      "url": "https://neir.btrc.gov.bd/",
+      "portal_url": null,
+      "title": "NEIR Citizen",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://neir.btrc.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "NEIR Citizen",
+        "content_type": "text/html"
+      }
+    },
+    {
+      "source_id": "src-btrc-neir-imei-check",
+      "service_id": "btrc-neir-imei-check",
+      "url": "https://neir.btrc.gov.bd/",
+      "portal_url": null,
+      "title": "NEIR Citizen",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://neir.btrc.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "NEIR Citizen",
+        "content_type": "text/html"
+      }
+    },
+    {
+      "source_id": "src-btrc-nid-sim-check",
+      "service_id": "btrc-nid-sim-check",
+      "url": "https://neir.btrc.gov.bd/homepage",
+      "portal_url": null,
+      "title": "SIM Numbers Registered Under NID Check",
+      "authority_id": "bangladesh-telecommunication-regulatory-commission-btrc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://neir.btrc.gov.bd/homepage",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out"
+      }
+    },
+    {
+      "source_id": "src-civil-birth-registration-copy",
+      "service_id": "civil-birth-registration-copy",
+      "url": "https://bdris.gov.bd/br/reprint/add",
+      "portal_url": null,
+      "title": "Birth Registration Copy (Reprint)",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/br/reprint/add",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null
+      }
+    },
+    {
+      "source_id": "src-civil-birth-registration-duplicate-cancel",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "url": "https://bdris.gov.bd/application/print",
+      "portal_url": null,
+      "title": "Cancellation of Duplicate Birth Registrations",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/application/print",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null
+      }
+    },
+    {
+      "source_id": "src-civil-death-registration-copy",
+      "service_id": "civil-death-registration-copy",
+      "url": "https://bdris.gov.bd/dr/reprint/add",
+      "portal_url": null,
+      "title": "Death Registration Copy (Reprint)",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/dr/reprint/add",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null
+      }
+    },
+    {
+      "source_id": "src-civil-death-registration-correction",
+      "service_id": "civil-death-registration-correction",
+      "url": "https://bdris.gov.bd/dr/correction",
+      "portal_url": null,
+      "title": "Death Registration Information Correction",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/dr/correction",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null
+      }
+    },
+    {
+      "source_id": "src-civil-death-registration-duplicate-cancel",
+      "service_id": "civil-death-registration-duplicate-cancel",
+      "url": "https://bdris.gov.bd/application/print",
+      "portal_url": null,
+      "title": "Cancellation of Duplicate Death Registrations",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/application/print",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null
+      }
+    },
+    {
+      "source_id": "src-civil-marriage-certificate-search",
+      "service_id": "civil-marriage-certificate-search",
+      "url": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+      "portal_url": null,
+      "title": "Completed Marriage Certificate Search",
+      "authority_id": "ministry-of-law-justice-and-parliamentary-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "application/pdf"
+      }
+    },
+    {
+      "source_id": "src-desco-application-fee-payment",
+      "service_id": "desco-application-fee-payment",
+      "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=31d11841-2770-4c71-918d-259a32084a0f",
+      "portal_url": null,
+      "title": "Preview of Process Flow | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=31d11841-2770-4c71-918d-259a32084a0f",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Preview of Process Flow | DESCO",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-desco-demand-note-payment",
+      "service_id": "desco-demand-note-payment",
+      "url": "https://ocsms.desco.org.bd/publicinfo/processflow",
+      "portal_url": null,
+      "title": "Process Flows | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Process Flows | DESCO",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-desco-emergency-service",
+      "service_id": "desco-emergency-service",
+      "url": "https://ocsms.desco.org.bd/home",
+      "portal_url": null,
+      "title": "Online Customer Service Management System | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/home",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Online Customer Service Management System | DESCO",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-desco-load-calculator",
+      "service_id": "desco-load-calculator",
+      "url": "https://ocsms.desco.org.bd/",
+      "portal_url": null,
+      "title": "Online Customer Service Management System | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/login",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Online Customer Service Management System | DESCO",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-desco-load-change",
+      "service_id": "desco-load-change",
+      "url": "https://ocsms.desco.org.bd/publicinfo/processflow",
+      "portal_url": null,
+      "title": "Process Flows | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Process Flows | DESCO",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-desco-meter-information-submission",
+      "service_id": "desco-meter-information-submission",
+      "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=e6fb7cdc-88e7-4a13-9917-ae22d3d91e05",
+      "portal_url": null,
+      "title": "Preview of Process Flow | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=e6fb7cdc-88e7-4a13-9917-ae22d3d91e05",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Preview of Process Flow | DESCO",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-desco-new-connection",
+      "service_id": "desco-new-connection",
+      "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=c16ac52e-1db4-46f1-a372-53d01ffa4b66",
+      "portal_url": null,
+      "title": "Preview of Process Flow | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=c16ac52e-1db4-46f1-a372-53d01ffa4b66",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Preview of Process Flow | DESCO",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-desco-ocsms-registration",
+      "service_id": "desco-ocsms-registration",
+      "url": "https://ocsms.desco.org.bd/publicinfo/processflow",
+      "portal_url": null,
+      "title": "Process Flows | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Process Flows | DESCO",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-desco-solar-document-submission",
+      "service_id": "desco-solar-document-submission",
+      "url": "https://ocsms.desco.org.bd/publicinfo/processflow",
+      "portal_url": null,
+      "title": "Process Flows | DESCO",
+      "authority_id": "dhaka-electric-supply-company-limited-desco",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Process Flows | DESCO",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-digital-centre-assisted-services",
+      "service_id": "digital-centre-assisted-services",
+      "url": "https://uddokta.eksheba.gov.bd/",
+      "portal_url": null,
+      "title": "Digital Center | Services at People&#039;s Doorstep",
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://digitalcentre.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Digital Center | Services at People&#039;s Doorstep",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-digital-centre-entrepreneur-registration",
+      "service_id": "digital-centre-entrepreneur-registration",
+      "url": "https://uddokta.eksheba.gov.bd/",
+      "portal_url": null,
+      "title": "Digital Center | Services at People&#039;s Doorstep",
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://digitalcentre.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Digital Center | Services at People&#039;s Doorstep",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-digital-centre-helpdesk",
+      "service_id": "digital-centre-helpdesk",
+      "url": "https://support.digitalcentre.gov.bd/",
+      "portal_url": null,
+      "title": "My Helpdesk",
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://support.digitalcentre.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "My Helpdesk",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-digital-challan-treasury-payment",
+      "service_id": "digital-challan-treasury-payment",
+      "url": "https://www.achallan.gov.bd/",
+      "portal_url": null,
+      "title": "Treasury Challan Online Payment (aChallan)",
+      "authority_id": "finance-division-office-of-the-controller-general-of-accounts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.achallan.gov.bd/",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out"
+      }
+    },
+    {
+      "source_id": "src-digital-ekpay-government-payment",
+      "service_id": "digital-ekpay-government-payment",
+      "url": "https://ekpay.gov.bd/",
+      "portal_url": null,
+      "title": "Ekpay",
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ekpay.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Ekpay",
+        "content_type": "text/html"
+      }
+    },
+    {
+      "source_id": "src-digital-mygov-citizen-registration",
+      "service_id": "digital-mygov-citizen-registration",
+      "url": "https://www.mygov.bd/",
+      "portal_url": null,
+      "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.mygov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-dm-committee-database",
+      "service_id": "dm-committee-database",
+      "url": "http://ddm.portal.gov.bd/pages/internal-eservices/%E0%A6%A6%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A7%8B%E0%A6%97-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A6%BE%E0%A6%AA%E0%A6%A8%E0%A6%BE-%E0%A6%95%E0%A6%AE%E0%A6%BF%E0%A6%9F%E0%A6%BF-%E0%A6%A1%E0%A6%BE%E0%A6%9F%E0%A6%BE%E0%A6%AC%E0%A7%87%E0%A6%9C-771864-6922d95edbfbab28ce04be2a",
+      "portal_url": null,
+      "title": "দুর্যোগ ব্যবস্থাপনা কমিটি ডাটাবেজ | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর",
+      "authority_id": "department-of-disaster-management-ddm",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://ddm.portal.gov.bd/pages/internal-eservices/%E0%A6%A6%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A7%8B%E0%A6%97-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A6%BE%E0%A6%AA%E0%A6%A8%E0%A6%BE-%E0%A6%95%E0%A6%AE%E0%A6%BF%E0%A6%9F%E0%A6%BF-%E0%A6%A1%E0%A6%BE%E0%A6%9F%E0%A6%BE%E0%A6%AC%E0%A7%87%E0%A6%9C-771864-6922d95edbfbab28ce04be2a",
+        "status_code": 200,
+        "reachable": true,
+        "title": "দুর্যোগ ব্যবস্থাপনা কমিটি ডাটাবেজ | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-dm-disaster-alert-app",
+      "service_id": "dm-disaster-alert-app",
+      "url": "https://disasteralertforbd.app/",
+      "portal_url": null,
+      "title": "Disaster Alert for BD",
+      "authority_id": "department-of-disaster-management-ddm",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://disasteralertforbd.app/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Disaster Alert for BD",
+        "content_type": "text/html"
+      }
+    },
+    {
+      "source_id": "src-dm-egpp-plus-mis",
+      "service_id": "dm-egpp-plus-mis",
+      "url": "https://egppplus.ddm.gov.bd/",
+      "portal_url": null,
+      "title": "Ministry of Disaster Management and Relief",
+      "authority_id": "ministry-of-disaster-management-and-relief",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://egppplus.ddm.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Ministry of Disaster Management and Relief",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-dm-emergency-operational-dashboard",
+      "service_id": "dm-emergency-operational-dashboard",
+      "url": "http://ddm.portal.gov.bd/pages/internal-eservices/emergency-operational-dashboard-eod-444cba-6922d97bdbfbab28ce04d12f",
+      "portal_url": null,
+      "title": "Emergency Operational Dashboard (Eod) | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর",
+      "authority_id": "department-of-disaster-management-ddm",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://ddm.portal.gov.bd/pages/internal-eservices/emergency-operational-dashboard-eod-444cba-6922d97bdbfbab28ce04d12f",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Emergency Operational Dashboard (Eod) | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-dm-lims-lightning",
+      "service_id": "dm-lims-lightning",
+      "url": "http://ddm.portal.gov.bd/pages/internal-eservices/lightning-information-management-system-lims-ec3337-6922d96fdbfbab28ce04c94a",
+      "portal_url": null,
+      "title": "Lightning Information Management System (Lims) | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর",
+      "authority_id": "department-of-disaster-management-ddm",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://ddm.portal.gov.bd/pages/internal-eservices/lightning-information-management-system-lims-ec3337-6922d96fdbfbab28ce04c94a",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Lightning Information Management System (Lims) | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-dm-rapid-services-list",
+      "service_id": "dm-rapid-services-list",
+      "url": "https://rapid.ddm.gov.bd/service/list",
+      "portal_url": null,
+      "title": "Department of Disaster Management",
+      "authority_id": "department-of-disaster-management-ddm",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://rapid.ddm.gov.bd/service/list",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Department of Disaster Management",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-dm-shelter-information-system",
+      "service_id": "dm-shelter-information-system",
+      "url": "http://ddm.portal.gov.bd/",
+      "portal_url": null,
+      "title": "Cyclone Shelter Information Management System",
+      "authority_id": "department-of-disaster-management-ddm",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://ddm.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-dpdc-application-tracking",
+      "service_id": "dpdc-application-tracking",
+      "url": "https://onlineapplication.dpdc.org.bd/home.php",
+      "portal_url": null,
+      "title": "Online Application System | DPDC",
+      "authority_id": "dhaka-power-distribution-company-limited-dpdc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://onlineapplication.dpdc.org.bd/home.php",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Online Application System | DPDC",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-dpdc-net-metering",
+      "service_id": "dpdc-net-metering",
+      "url": "https://onlineapplication.dpdc.org.bd/frm_Apply_NetMetering.php",
+      "portal_url": null,
+      "title": "DPDC Net Metering Application",
+      "authority_id": "dhaka-power-distribution-company-limited-dpdc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://onlineapplication.dpdc.org.bd/frm_Apply_NetMetering.php",
+        "status_code": 404,
+        "reachable": false,
+        "title": "",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-dpdc-new-connection",
+      "service_id": "dpdc-new-connection",
+      "url": "https://onlineapplication.dpdc.org.bd/frm_main_application.php",
+      "portal_url": null,
+      "title": "New Connection | Application",
+      "authority_id": "dhaka-power-distribution-company-limited-dpdc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://onlineapplication.dpdc.org.bd/frm_main_application.php",
+        "status_code": 200,
+        "reachable": true,
+        "title": "New Connection | Application",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-dpdc-online-bill-payment",
+      "service_id": "dpdc-online-bill-payment",
+      "url": "https://www.dpdc.org.bd/public/",
+      "portal_url": null,
+      "title": "Dhaka Power Distribution Company Ltd.",
+      "authority_id": "dhaka-power-distribution-company-limited-dpdc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.dpdc.org.bd/public/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Dhaka Power Distribution Company Ltd.",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-dpdc-online-complaint",
+      "service_id": "dpdc-online-complaint",
+      "url": "https://dpdc.org.bd/site/home_gov/contact/-",
+      "portal_url": null,
+      "title": "Dhaka Power Distribution Company Ltd",
+      "authority_id": "dhaka-power-distribution-company-limited-dpdc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dpdc.org.bd/site/home_gov/contact/-",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Dhaka Power Distribution Company Ltd",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-dpdc-prepaid-recharge",
+      "service_id": "dpdc-prepaid-recharge",
+      "url": "https://www.dpdc.org.bd/public/",
+      "portal_url": null,
+      "title": "Dhaka Power Distribution Company Ltd.",
+      "authority_id": "dhaka-power-distribution-company-limited-dpdc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.dpdc.org.bd/public/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Dhaka Power Distribution Company Ltd.",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-election-candidate-nomination",
+      "service_id": "election-candidate-nomination",
+      "url": "https://www.ecs.gov.bd/",
+      "portal_url": null,
+      "title": "Just a moment...",
+      "authority_id": "ec-nid",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecs.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-env-ecc-certificate-verification",
+      "service_id": "env-ecc-certificate-verification",
+      "url": "https://ecc-beta.doe.gov.bd/certificate-verification",
+      "portal_url": null,
+      "title": "DoE ECC System",
+      "authority_id": "department-of-environment-doe",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecc-beta.doe.gov.bd/certificate-verification",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DoE ECC System",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-env-ecc-entrepreneur-registration",
+      "service_id": "env-ecc-entrepreneur-registration",
+      "url": "https://ecc-beta.doe.gov.bd/register",
+      "portal_url": null,
+      "title": "DoE ECC System",
+      "authority_id": "department-of-environment-doe",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecc-beta.doe.gov.bd/register",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DoE ECC System",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-env-ecc-online-application",
+      "service_id": "env-ecc-online-application",
+      "url": "https://ecc-beta.doe.gov.bd/",
+      "portal_url": null,
+      "title": "DoE ECC System",
+      "authority_id": "department-of-environment-doe",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecc-beta.doe.gov.bd/login",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DoE ECC System",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-environment-forest-clearance",
+      "service_id": "environment-forest-clearance",
+      "url": "https://bforest.gov.bd/",
+      "portal_url": null,
+      "title": "Forest Clearance Certificate",
+      "authority_id": "forest-department-ministry-of-environment-forest",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bforest.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-hajj-call-center",
+      "service_id": "hajj-call-center",
+      "url": "https://pilgrim.hajj.gov.bd/",
+      "portal_url": null,
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-religious-affairs-hajj-wing",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://pilgrim.hajj.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-hajj-pilgrim-search",
+      "service_id": "hajj-pilgrim-search",
+      "url": "https://hajj.gov.bd/",
+      "portal_url": null,
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-religious-affairs-hajj-wing",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://hajj.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-hajj-pre-registration",
+      "service_id": "hajj-pre-registration",
+      "url": "https://pilgrim.hajj.gov.bd/",
+      "portal_url": null,
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-religious-affairs-hajj-wing",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://pilgrim.hajj.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-housing-bhbfc-loan-application",
+      "service_id": "housing-bhbfc-loan-application",
+      "url": "https://bhbfc.khulna.gov.bd/en/site/page/%E0%A6%AC%E0%A6%BE%E0%A7%9C%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A3-%E0%A6%8B%E0%A6%A3-%E0%A6%B8%E0%A6%82%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A4-%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0",
+      "portal_url": null,
+      "title": "সমস্যা হয়েছে | বাংলাদেশ হাউজ বিল্ডিং ফাইনান্স কর্পোরেশন, জোনাল অফিস, খুলনা।",
+      "authority_id": "bangladesh-house-building-finance-corporation-bhbfc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bhbfc.khulna.gov.bd/en/site/page/%E0%A6%AC%E0%A6%BE%E0%A7%9C%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A3-%E0%A6%8B%E0%A6%A3-%E0%A6%B8%E0%A6%82%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A4-%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0",
+        "status_code": 404,
+        "reachable": false,
+        "title": "সমস্যা হয়েছে | বাংলাদেশ হাউজ বিল্ডিং ফাইনান্স কর্পোরেশন, জোনাল অফিস, খুলনা।",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-housing-cda-building-permit",
+      "service_id": "housing-cda-building-permit",
+      "url": "https://cda.gov.bd/",
+      "portal_url": null,
+      "title": "Chattogram Development Authority Building Plan Approval",
+      "authority_id": "chattogram-development-authority-cda",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://cda.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-housing-nha-allotment-application",
+      "service_id": "housing-nha-allotment-application",
+      "url": "https://nha.gov.bd/",
+      "portal_url": null,
+      "title": "National Housing Authority Flat Allotment Application",
+      "authority_id": "national-housing-authority-nha",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nha.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-housing-nha-citizen-charter",
+      "service_id": "housing-nha-citizen-charter",
+      "url": "https://nha.gov.bd/site/office_citizen_charter/7e6aa951-ece7-40fb-af0a-0abd5bd4ad3f/-",
+      "portal_url": null,
+      "title": "NHA Citizen Charter Services",
+      "authority_id": "national-housing-authority-nha",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nha.gov.bd/site/office_citizen_charter/7e6aa951-ece7-40fb-af0a-0abd5bd4ad3f/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-housing-nha-projects",
+      "service_id": "housing-nha-projects",
+      "url": "https://nha.gov.bd/",
+      "portal_url": null,
+      "title": "National Housing Authority (NHA) Projects",
+      "authority_id": "national-housing-authority-nha",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nha.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-housing-rajuk-construction-permit",
+      "service_id": "housing-rajuk-construction-permit",
+      "url": "https://ecps.gov.bd/permits/construction-permit/",
+      "portal_url": null,
+      "title": "RAJUK Construction Permit (CP)",
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecps.gov.bd/permits/construction-permit/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-housing-rajuk-large-special-project",
+      "service_id": "housing-rajuk-large-special-project",
+      "url": "https://ecps.gov.bd/",
+      "portal_url": null,
+      "title": "RAJUK Large and Special Project Clearance (LSP)",
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecps.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-housing-rajuk-occupancy-certificate",
+      "service_id": "housing-rajuk-occupancy-certificate",
+      "url": "https://ecps.gov.bd/",
+      "portal_url": null,
+      "title": "RAJUK Occupancy Certificate",
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecps.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-housing-rajuk-planning-permit",
+      "service_id": "housing-rajuk-planning-permit",
+      "url": "https://ecps.gov.bd/",
+      "portal_url": null,
+      "title": "RAJUK Planning Permit (PP)",
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecps.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-housing-rajuk-professional-registration",
+      "service_id": "housing-rajuk-professional-registration",
+      "url": "https://ecps.gov.bd/",
+      "portal_url": null,
+      "title": "RAJUK Professional Registration (ECPS)",
+      "authority_id": "rajdhani-unnayan-kartripakkha-rajuk",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ecps.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-identity-voter-slip-download",
+      "service_id": "identity-voter-slip-download",
+      "url": "https://services.nidw.gov.bd/",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-licence-trade-local-government",
+      "service_id": "licence-trade-local-government",
+      "url": "https://dncc.gov.bd/",
+      "portal_url": null,
+      "title": "Local Government Trade Licence",
+      "authority_id": "local-government-institutions",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dncc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-local-certificate-verify",
+      "service_id": "local-certificate-verify",
+      "url": "https://uniontax.gov.bd/sonod/search",
+      "portal_url": null,
+      "title": "ইউনিয়ন পরিষদ ক্যাশলেস সেবা সিস্টেম",
+      "authority_id": "union-parishad-digital-union-tax-system",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://uniontax.gov.bd/sonod/search",
+        "status_code": 200,
+        "reachable": true,
+        "title": "ইউনিয়ন পরিষদ ক্যাশলেস সেবা সিস্টেম",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-local-death-certificate-union",
+      "service_id": "local-death-certificate-union",
+      "url": "https://www.chandanpurup.gov.bd/new/application/citizen",
+      "portal_url": null,
+      "title": "Chandanpur Union Parishad :: Smart Union",
+      "authority_id": "union-parishad",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.chandanpurup.gov.bd/new/application/citizen",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Chandanpur Union Parishad :: Smart Union",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-local-marital-status-certificate",
+      "service_id": "local-marital-status-certificate",
+      "url": "https://www.palshaup.gov.bd/new/application/citizen/17",
+      "portal_url": null,
+      "title": "Checking your browser before accessing. Just a moment...",
+      "authority_id": "union-parishad",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.palshaup.gov.bd/new/application/citizen/17",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Checking your browser before accessing. Just a moment...",
+        "content_type": "text/html"
+      }
+    },
+    {
+      "source_id": "src-local-nationality-certificate",
+      "service_id": "local-nationality-certificate",
+      "url": "https://tilokpursonod.gov.bd/select_certificate/",
+      "portal_url": null,
+      "title": "তিলকপুর ইউনিয়ন",
+      "authority_id": "union-parishad",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://tilokpursonod.gov.bd/select_certificate/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "তিলকপুর ইউনিয়ন",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-local-noc-certificate",
+      "service_id": "local-noc-certificate",
+      "url": "https://tilokpursonod.gov.bd/select_certificate/",
+      "portal_url": null,
+      "title": "তিলকপুর ইউনিয়ন",
+      "authority_id": "union-parishad",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://tilokpursonod.gov.bd/select_certificate/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "তিলকপুর ইউনিয়ন",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-local-passport-attestation",
+      "service_id": "local-passport-attestation",
+      "url": "https://tilokpursonod.gov.bd/select_certificate/",
+      "portal_url": null,
+      "title": "তিলকপুর ইউনিয়ন",
+      "authority_id": "union-parishad",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://tilokpursonod.gov.bd/select_certificate/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "তিলকপুর ইউনিয়ন",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-local-voter-transfer-attestation",
+      "service_id": "local-voter-transfer-attestation",
+      "url": "https://tilokpursonod.gov.bd/select_certificate/",
+      "portal_url": null,
+      "title": "তিলকপুর ইউনিয়ন",
+      "authority_id": "union-parishad",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://tilokpursonod.gov.bd/select_certificate/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "তিলকপুর ইউনিয়ন",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-nid-card-info-correction",
+      "service_id": "nid-card-info-correction",
+      "url": "https://services.nidw.gov.bd/nid-pub/fees",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/fees",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-claim-account",
+      "service_id": "nid-claim-account",
+      "url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-combined-correction",
+      "service_id": "nid-combined-correction",
+      "url": "https://services.nidw.gov.bd/nid-pub/fees",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/fees",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-download-copy",
+      "service_id": "nid-download-copy",
+      "url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-expatriate-registration",
+      "service_id": "nid-expatriate-registration",
+      "url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-fee-calculator",
+      "service_id": "nid-fee-calculator",
+      "url": "https://services.nidw.gov.bd/nid-pub/fees",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/fees",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-new-voter-registration",
+      "service_id": "nid-new-voter-registration",
+      "url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System | New Register",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | New Register",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-online-account-registration",
+      "service_id": "nid-online-account-registration",
+      "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System | Frequently Asked Question",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | Frequently Asked Question",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-other-info-correction",
+      "service_id": "nid-other-info-correction",
+      "url": "https://services.nidw.gov.bd/nid-pub/fees",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/fees",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-photo-signature-appointment",
+      "service_id": "nid-photo-signature-appointment",
+      "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System | Frequently Asked Question",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | Frequently Asked Question",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-reissue-lost",
+      "service_id": "nid-reissue-lost",
+      "url": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System | সাধারন জিজ্ঞাসা",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | সাধারন জিজ্ঞাসা",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-nid-voter-area-change",
+      "service_id": "nid-voter-area-change",
+      "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+      "portal_url": null,
+      "title": "Bangladesh NID Application System | Frequently Asked Question",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | Frequently Asked Question",
+        "content_type": "text/html;charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-permits-fire-e-license",
+      "service_id": "permits-fire-e-license",
+      "url": "https://elicense.fireservice.gov.bd/",
+      "portal_url": null,
+      "title": "লগইন - বাংলাদেশ ফায়ার সার্ভিস ও সিভিল ডিফেন্স",
+      "authority_id": "fire-service-and-civil-defence-directorate",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://elicense.fireservice.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "লগইন - বাংলাদেশ ফায়ার সার্ভিস ও সিভিল ডিফেন্স",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-permits-fire-noc-enoc",
+      "service_id": "permits-fire-noc-enoc",
+      "url": "https://enoc.fireservice.gov.bd/",
+      "portal_url": null,
+      "title": "Fire Service No Objection Certificate (e-NOC)",
+      "authority_id": "fire-service-and-civil-defence-directorate",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://enoc.fireservice.gov.bd/login",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-permits-fire-safety-firm-registration",
+      "service_id": "permits-fire-safety-firm-registration",
+      "url": "https://enoc.fireservice.gov.bd/safety_firm/register",
+      "portal_url": null,
+      "title": "Fire Safety Firm Registration",
+      "authority_id": "fire-service-and-civil-defence-directorate",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://enoc.fireservice.gov.bd/safety_firm/register",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-permits-forest-timber-transit",
+      "service_id": "permits-forest-timber-transit",
+      "url": "https://bforest.gov.bd/",
+      "portal_url": null,
+      "title": "Forest Timber Transit Permit",
+      "authority_id": "forest-department-ministry-of-environment-forest",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bforest.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-cash-card",
+      "service_id": "post-cash-card",
+      "url": "https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-",
+      "portal_url": null,
+      "title": "Postal Cash Card",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/3f85b1c5-c356-47a9-b55c-de1938dc6c76/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-domestic-mail",
+      "service_id": "post-domestic-mail",
+      "url": "https://bdpost.gov.bd/site/page/921b98dc-cb15-4be4-8f0d-0125130c19f3/-",
+      "portal_url": null,
+      "title": "Domestic Mail Service",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/921b98dc-cb15-4be4-8f0d-0125130c19f3/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-ems",
+      "service_id": "post-ems",
+      "url": "https://bdpost.gov.bd/site/page/a375dd34-3e14-4021-83f9-736d357d7eda/-",
+      "portal_url": null,
+      "title": "Express Mail Service (EMS)",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/a375dd34-3e14-4021-83f9-736d357d7eda/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-emts",
+      "service_id": "post-emts",
+      "url": "https://bdpost.portal.gov.bd/site/page/f51a53e6-926b-48a7-a927-8331e2f326ff/-",
+      "portal_url": null,
+      "title": "Electronic Money Transfer Service (EMTS)",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.portal.gov.bd/site/page/f51a53e6-926b-48a7-a927-8331e2f326ff/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-gep",
+      "service_id": "post-gep",
+      "url": "https://bdpost.gov.bd/site/page/7eadb9ba-596e-482b-a1fe-712ec361a946/-",
+      "portal_url": null,
+      "title": "Government Express Post (GEP)",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/7eadb9ba-596e-482b-a1fe-712ec361a946/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-international-mail",
+      "service_id": "post-international-mail",
+      "url": "https://bdpost.gov.bd/site/page/1e0924ce-788d-4304-b47a-54d76748abf5/%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%95-%E0%A6%A1%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE",
+      "portal_url": null,
+      "title": "International Mail Service",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/1e0924ce-788d-4304-b47a-54d76748abf5/%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%95-%E0%A6%A1%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-life-insurance",
+      "service_id": "post-life-insurance",
+      "url": "https://bdpost.gov.bd/site/page/4ad27a53-60f4-4fb8-9c7e-28d9ec5669a2/-",
+      "portal_url": null,
+      "title": "Postal Life Insurance",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/4ad27a53-60f4-4fb8-9c7e-28d9ec5669a2/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-mail-tracking",
+      "service_id": "post-mail-tracking",
+      "url": "https://report.dms.bdpost.gov.bd/",
+      "portal_url": null,
+      "title": "DMS Item Tracking",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://report.dms.bdpost.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DMS Item Tracking",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-post-money-order",
+      "service_id": "post-money-order",
+      "url": "https://bdpost.gov.bd/site/page/2b5d6dac-0cd7-4342-9cab-e0b66765aa69/-",
+      "portal_url": null,
+      "title": "Postal Money Order",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/2b5d6dac-0cd7-4342-9cab-e0b66765aa69/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-postage-calculator",
+      "service_id": "post-postage-calculator",
+      "url": "https://booking.bpodms.gov.bd/mashul",
+      "portal_url": null,
+      "title": "Bangladesh Post",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://booking.bpodms.gov.bd/mashul",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh Post",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-post-savings-bank",
+      "service_id": "post-savings-bank",
+      "url": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-",
+      "portal_url": null,
+      "title": "Post Office Savings Bank",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-savings-certificate",
+      "service_id": "post-savings-certificate",
+      "url": "https://bdpost.gov.bd/site/page/32495e81-3fa6-420d-a368-b05587397d0a/-",
+      "portal_url": null,
+      "title": "Postal Savings Certificate",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/32495e81-3fa6-420d-a368-b05587397d0a/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-post-speed-post",
+      "service_id": "post-speed-post",
+      "url": "https://bdpost.gov.bd/site/page/34b7ea83-3911-429f-8ec5-58f0367c53bd/-",
+      "portal_url": null,
+      "title": "Speed Post",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/34b7ea83-3911-429f-8ec5-58f0367c53bd/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-railway-helpline-131",
+      "service_id": "railway-helpline-131",
+      "url": "http://railway.gov.bd/",
+      "portal_url": null,
+      "title": "হোম | বাংলাদেশ রেলওয়ে",
+      "authority_id": "bangladesh-railway",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://railway.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | বাংলাদেশ রেলওয়ে",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-railway-online-ticket",
+      "service_id": "railway-online-ticket",
+      "url": "https://eticket.railway.gov.bd/",
+      "portal_url": null,
+      "title": "Bangladesh Railway E-Ticketing Service",
+      "authority_id": "bangladesh-railway",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://eticket.railway.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh Railway E-Ticketing Service",
+        "content_type": "text/html"
+      }
+    },
+    {
+      "source_id": "src-railway-rail-sheba-app",
+      "service_id": "railway-rail-sheba-app",
+      "url": "http://railway.gov.bd/pages/notices/6919973281fc96cef9e5923d",
+      "portal_url": null,
+      "title": "রেল সেবা অ্যাপসে রেজিস্ট্রেশন করার প্রক্রিয়া | নোটিশ | বাংলাদেশ রেলওয়ে",
+      "authority_id": "bangladesh-railway",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://railway.gov.bd/pages/notices/6919973281fc96cef9e5923d",
+        "status_code": 200,
+        "reachable": true,
+        "title": "রেল সেবা অ্যাপসে রেজিস্ট্রেশন করার প্রক্রিয়া | নোটিশ | বাংলাদেশ রেলওয়ে",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-tax-challan-payment",
+      "service_id": "tax-challan-payment",
+      "url": "https://nbr.gov.bd/all-eservices/eng",
+      "portal_url": null,
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/all-eservices/eng",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-titas-domestic-gas-connection",
+      "service_id": "titas-domestic-gas-connection",
+      "url": "https://onlineapplication.titasgas.org.bd/application/domestic/add",
+      "portal_url": null,
+      "title": "TGTDCL Online Application",
+      "authority_id": "titas-gas-transmission-and-distribution-plc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://onlineapplication.titasgas.org.bd/application/domestic/add",
+        "status_code": 200,
+        "reachable": true,
+        "title": "TGTDCL Online Application",
+        "content_type": "text/html;charset=ISO-8859-1"
+      }
+    },
+    {
+      "source_id": "src-titas-industry-gas-connection",
+      "service_id": "titas-industry-gas-connection",
+      "url": "https://titasonlineapp.titasgas.org.bd/login",
+      "portal_url": null,
+      "title": "Titas Oss",
+      "authority_id": "titas-gas-transmission-and-distribution-plc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://titasonlineapp.titasgas.org.bd/login",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Titas Oss",
+        "content_type": "text/html"
+      }
+    },
+    {
+      "source_id": "src-wasa-application-tracking",
+      "service_id": "wasa-application-tracking",
+      "url": "http://newconnection.dwasa.org.bd/Pages/User/FindTrackingNo.aspx",
+      "portal_url": null,
+      "title": "WASA Application Tracking",
+      "authority_id": "dhaka-water-supply-and-sewerage-authority-dwasa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://newconnection.dwasa.org.bd/Login.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-wasa-connection-enlargement",
+      "service_id": "wasa-connection-enlargement",
+      "url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx?type=enlargement",
+      "portal_url": null,
+      "title": "Water Connection Enlargement",
+      "authority_id": "dhaka-water-supply-and-sewerage-authority-dwasa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://newconnection.dwasa.org.bd/Login.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-wasa-line-shifting",
+      "service_id": "wasa-line-shifting",
+      "url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx?type=shifting",
+      "portal_url": null,
+      "title": "Water Line Shifting",
+      "authority_id": "dhaka-water-supply-and-sewerage-authority-dwasa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://newconnection.dwasa.org.bd/Login.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-wasa-new-water-connection",
+      "service_id": "wasa-new-water-connection",
+      "url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx",
+      "portal_url": null,
+      "title": "Dhaka WASA New Water Connection",
+      "authority_id": "dhaka-water-supply-and-sewerage-authority-dwasa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://newconnection.dwasa.org.bd/Login.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-wasa-second-connection",
+      "service_id": "wasa-second-connection",
+      "url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx?type=second",
+      "portal_url": null,
+      "title": "Second or Additional Water Connection",
+      "authority_id": "dhaka-water-supply-and-sewerage-authority-dwasa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://newconnection.dwasa.org.bd/Login.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-wasa-sewerage-connection",
+      "service_id": "wasa-sewerage-connection",
+      "url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx?type=sewarage",
+      "portal_url": null,
+      "title": "Dhaka WASA Sewerage Connection",
+      "authority_id": "dhaka-water-supply-and-sewerage-authority-dwasa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://newconnection.dwasa.org.bd/Login.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-wasa-temporary-connection",
+      "service_id": "wasa-temporary-connection",
+      "url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx?type=temporary",
+      "portal_url": null,
+      "title": "Temporary Water Connection",
+      "authority_id": "dhaka-water-supply-and-sewerage-authority-dwasa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://newconnection.dwasa.org.bd/Login.aspx",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

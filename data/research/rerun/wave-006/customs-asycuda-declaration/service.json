@@ -1,0 +1,172 @@
+{
+  "service_id": "customs-asycuda-declaration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Customs Declaration (ASYCUDA World)",
+  "service_name_bn": "কাস্টমস ASYCUDA ঘোষণা",
+  "aliases": [
+    "bill of entry",
+    "customs clearance",
+    "SAD"
+  ],
+  "category_id": "customs",
+  "profile_key": "TAX",
+  "responsible_agency": "National Board of Revenue - Customs",
+  "official_application_url": "https://nbr.gov.bd/all-eservices/eng",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "customs-asycuda-declaration::c-catalogue-authority",
+      "service_id": "customs-asycuda-declaration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue - Customs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-asycuda-declaration::c-official-portal",
+      "service_id": "customs-asycuda-declaration",
+      "claim_type": "application_url",
+      "claim_text": "Customs Declaration (ASYCUDA World) official information is published at https://nbr.gov.bd/all-eservices/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/all-eservices/eng"
+      },
+      "source_ids": [
+        "src-customs-asycuda-declaration-official"
+      ],
+      "evidence_ids": [
+        "ev-customs-asycuda-declaration::c-official-portal-src-customs-asycuda-declaration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-asycuda-declaration::c-procedure-overview",
+      "service_id": "customs-asycuda-declaration",
+      "claim_type": "procedure_step",
+      "claim_text": "Customs Declaration (ASYCUDA World) is a government service under National Board of Revenue - Customs (declaration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-customs-asycuda-declaration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-asycuda-declaration::c-service-identity",
+      "service_id": "customs-asycuda-declaration",
+      "claim_type": "eligibility",
+      "claim_text": "Customs Declaration (ASYCUDA World) (কাস্টমস ASYCUDA ঘোষণা) is a confirmed government service in category customs, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-customs-asycuda-declaration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-customs-asycuda-declaration-official",
+      "service_id": "customs-asycuda-declaration",
+      "url": "https://nbr.gov.bd/all-eservices/eng",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/all-eservices/eng",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "f0b1374c2afca7b9",
+        "retrieved_at": "2026-08-25T03:24:59.689817+00:00"
+      },
+      "evidence_locator": "probe:https://nbr.gov.bd/all-eservices/eng"
+    },
+    {
+      "source_id": "src-customs-asycuda-declaration-alt-1",
+      "service_id": "customs-asycuda-declaration",
+      "url": "https://nbr.gov.bd/uploads/publications/Final_Newsletter_Design_for_NBR_Customs.pdf",
+      "title": "Customs Declaration (ASYCUDA World)",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/uploads/publications/Final_Newsletter_Design_for_NBR_Customs.pdf",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "application/pdf",
+        "content_hash": "f497434f08edeaba",
+        "retrieved_at": "2026-08-25T03:25:02.798092+00:00"
+      }
+    },
+    {
+      "source_id": "src-customs-asycuda-declaration-alt-2",
+      "service_id": "customs-asycuda-declaration",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:25:04.198524+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-customs-asycuda-declaration-fee-unverified",
+      "service_id": "customs-asycuda-declaration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Customs Declaration (ASYCUDA World).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-customs-asycuda-declaration-documents-unverified",
+      "service_id": "customs-asycuda-declaration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Customs Declaration (ASYCUDA World).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

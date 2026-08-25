@@ -1,0 +1,208 @@
+{
+  "service_id": "brta-retro-reflective-number-plate",
+  "batch_id": "batch-03b-brta-vehicle",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Retro-Reflective Number Plate",
+  "service_name_bn": "রেট্রো-রিফ্লেক্টিভ নম্বর প্লেট",
+  "aliases": [
+    "reflective plate",
+    "number plate upgrade"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner"
+  ],
+  "official_application_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_type": "application_url",
+      "claim_text": "Retro-reflective number plate and RFID tag installation process published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-retro-reflective-number-plate::c-portal-url-src-brta-portal-retro-plate"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-rfid-tag-component",
+      "legacy_claim_id": "c-rfid-tag-component",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_type": "procedure_step",
+      "claim_text": "Process covers both retro-reflective number plate and RFID tag installation per official page title.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence_ids": [
+        "ev-brta-retro-reflective-number-plate::c-rfid-tag-component-src-brta-portal-retro-plate"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_type": "eligibility",
+      "claim_text": "Vehicle must already be registered with BRTA before retro-reflective plate upgrade.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-retro-plate",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-retro-reflective-number-plate::c-registered-vehicle-required-src-brta-portal-retro-plate"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-plate-fee-not-static",
+      "legacy_claim_id": "c-plate-fee-not-static",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_type": "fee",
+      "claim_text": "Number plate upgrade fees not statically published on Tier 1–2 pages reviewed; likely via fee calculator or circle office schedule.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-retro-reflective-number-plate",
+        "vehicle_type": "VARIES",
+        "action": "retro_reflective_plate",
+        "condition": "plate_type",
+        "amount": "UNKNOWN",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence_ids": [
+        "ev-brta-retro-reflective-number-plate::c-plate-fee-not-static-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-circle-office-or-approved-vendor",
+      "legacy_claim_id": "c-circle-office-or-approved-vendor",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_type": "procedure_step",
+      "claim_text": "Plate installation typically completed at BRTA circle office or authorized plate vendor per national retrofit program.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence_ids": [
+        "ev-brta-retro-reflective-number-plate::c-circle-office-or-approved-vendor-src-brta-portal-retro-plate"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-private-vs-commercial-plate-rules",
+      "legacy_claim_id": "c-private-vs-commercial-plate-rules",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_type": "restriction",
+      "claim_text": "Plate format and color rules differ between private and commercial vehicles; do not generalize private-car plate rules to all classes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-retro-reflective-number-plate::c-private-vs-commercial-plate-rules-src-brta-portal-retro-plate"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-page-last-updated-2023",
+      "legacy_claim_id": "c-page-last-updated-2023",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_type": "official_metadata",
+      "claim_text": "Portal page metadata indicates content last updated November 2023 — verify against current circulars for mandate deadlines.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence_ids": [
+        "ev-brta-retro-reflective-number-plate::c-page-last-updated-2023-src-brta-portal-retro-plate"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-practical-check-rfid-after-install",
+      "legacy_claim_id": "c-practical-check-rfid-after-install",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_type": "practical_tip",
+      "claim_text": "Confirm RFID tag registration appears on BSP/e-document verification after plate installation before leaving vendor.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence_ids": [
+        "ev-brta-retro-reflective-number-plate::c-practical-check-rfid-after-install-src-brta-portal-retro-plate"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator, hours)"
+}

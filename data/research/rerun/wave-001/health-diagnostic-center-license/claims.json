@@ -1,0 +1,72 @@
+{
+  "service_id": "health-diagnostic-center-license",
+  "claims": [
+    {
+      "claim_id": "health-diagnostic-center-license::c-catalogue-authority",
+      "service_id": "health-diagnostic-center-license",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Health Services (DGHS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-diagnostic-center-license::c-official-portal",
+      "service_id": "health-diagnostic-center-license",
+      "claim_type": "application_url",
+      "claim_text": "Diagnostic/Pathology Center Licence official information is published at https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice (page title: All private Pathology/Diagnostic center Notice).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice"
+      },
+      "source_ids": [
+        "src-health-diagnostic-center-license-official"
+      ],
+      "evidence_ids": [
+        "ev-health-diagnostic-center-license::c-official-portal-src-health-diagnostic-center-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-diagnostic-center-license::c-procedure-overview",
+      "service_id": "health-diagnostic-center-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Diagnostic/Pathology Center Licence is a government service under Directorate General of Health Services (DGHS) (facility licence). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-diagnostic-center-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-diagnostic-center-license::c-service-identity",
+      "service_id": "health-diagnostic-center-license",
+      "claim_type": "eligibility",
+      "claim_text": "Diagnostic/Pathology Center Licence (ডায়াগনostic/প্যাথলজি সেন্টার লাইসেন্স) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-diagnostic-center-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

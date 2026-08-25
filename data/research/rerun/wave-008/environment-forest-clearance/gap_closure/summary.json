@@ -1,0 +1,28 @@
+{
+  "service_id": "environment-forest-clearance",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-environment-forest-clearance-portal-unreachable",
+      "service_id": "environment-forest-clearance",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Forest Clearance Certificate.",
+      "severity": "MEDIUM",
+      "url": "https://bforest.gov.bd/"
+    },
+    {
+      "gap_id": "gap-environment-forest-clearance-fee-unverified",
+      "service_id": "environment-forest-clearance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Forest Clearance Certificate.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-environment-forest-clearance-documents-unverified",
+      "service_id": "environment-forest-clearance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Forest Clearance Certificate.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

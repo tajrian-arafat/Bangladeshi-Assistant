@@ -1,0 +1,122 @@
+{
+  "service_id": "education-ssc-certificate",
+  "claims": [
+    {
+      "claim_id": "education-ssc-certificate::c-catalogue-authority",
+      "service_id": "education-ssc-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Board of Intermediate and Secondary Education (respective board).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-certificate::c-official-url-documented",
+      "service_id": "education-ssc-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://www.educationboard.gov.bd/sylhet/activities.php for SSC Certificate Issuance; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/sylhet/activities.php"
+      },
+      "source_ids": [
+        "src-education-ssc-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-certificate::c-procedure-overview",
+      "service_id": "education-ssc-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "SSC certificate/result services are handled by the relevant Education Board — duplicate certificates and result verification follow board-specific procedures.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-certificate::c-document-overview",
+      "service_id": "education-ssc-certificate",
+      "claim_type": "document",
+      "claim_text": "Previous roll number, registration number, exam year, and applicant identity documents are typically required for certificate/result services.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-education-ssc-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-certificate::c-service-identity",
+      "service_id": "education-ssc-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "SSC Certificate Issuance (SSC সনদ প্রদান) is a confirmed government service in category education, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-certificate::c-eligibility-deep",
+      "service_id": "education-ssc-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Students or former students who appeared in SSC examinations under a Bangladesh Education Board.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "PARTIAL",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-certificate-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ssc-certificate::c-document-must-need",
+      "service_id": "education-ssc-certificate",
+      "claim_type": "document",
+      "claim_text": "Previous roll number, registration number, exam year, and applicant identity documents are typically required for certificate/result services.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ssc-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

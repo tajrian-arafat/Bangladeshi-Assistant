@@ -1,0 +1,28 @@
+{
+  "service_id": "health-blood-bank-license",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-health-blood-bank-license-portal-unreachable",
+      "service_id": "health-blood-bank-license",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Blood Bank Licence.",
+      "severity": "MEDIUM",
+      "url": "https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md"
+    },
+    {
+      "gap_id": "gap-health-blood-bank-license-fee-unverified",
+      "service_id": "health-blood-bank-license",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Blood Bank Licence.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-blood-bank-license-documents-unverified",
+      "service_id": "health-blood-bank-license",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Blood Bank Licence.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

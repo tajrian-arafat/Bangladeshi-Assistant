@@ -1,0 +1,19 @@
+{
+  "service_id": "env-ecc-certificate-verification",
+  "gaps": [
+    {
+      "gap_id": "gap-env-ecc-certificate-verification-fee-unverified",
+      "service_id": "env-ecc-certificate-verification",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Environmental Clearance Certificate Verification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-env-ecc-certificate-verification-documents-unverified",
+      "service_id": "env-ecc-certificate-verification",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Environmental Clearance Certificate Verification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

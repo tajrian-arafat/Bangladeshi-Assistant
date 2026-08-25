@@ -1,0 +1,28 @@
+{
+  "service_id": "business-partnership-registration",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-business-partnership-registration-portal-unreachable",
+      "service_id": "business-partnership-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Partnership Firm Registration.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm"
+    },
+    {
+      "gap_id": "gap-business-partnership-registration-fee-unverified",
+      "service_id": "business-partnership-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Partnership Firm Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-partnership-registration-documents-unverified",
+      "service_id": "business-partnership-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Partnership Firm Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

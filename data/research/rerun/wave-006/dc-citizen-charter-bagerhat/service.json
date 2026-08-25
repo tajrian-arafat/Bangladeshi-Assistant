@@ -1,0 +1,136 @@
+{
+  "service_id": "dc-citizen-charter-bagerhat",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Bagerhat District Citizen Charter Services",
+  "service_name_bn": "বাগেরহাট জেলা নাগরিক সেবা",
+  "aliases": [
+    "DC Bagerhat",
+    "Bagerhat District Citizen Charter Services"
+  ],
+  "category_id": "local_government",
+  "profile_key": "LOCAL_GOVERNMENT",
+  "responsible_agency": "Deputy Commissioner, Bagerhat District",
+  "official_application_url": "https://bagerhat.gov.bd/en",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "dc-citizen-charter-bagerhat::c-catalogue-authority",
+      "service_id": "dc-citizen-charter-bagerhat",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Deputy Commissioner, Bagerhat District.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-citizen-charter-bagerhat::c-official-url-documented",
+      "service_id": "dc-citizen-charter-bagerhat",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bagerhat.gov.bd/en for Bagerhat District Citizen Charter Services; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bagerhat.gov.bd/en"
+      },
+      "source_ids": [
+        "src-dc-citizen-charter-bagerhat-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-citizen-charter-bagerhat::c-procedure-overview",
+      "service_id": "dc-citizen-charter-bagerhat",
+      "claim_type": "procedure_step",
+      "claim_text": "Bagerhat District Citizen Charter Services is a government service under Deputy Commissioner, Bagerhat District (citizen charter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-citizen-charter-bagerhat-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-citizen-charter-bagerhat::c-service-identity",
+      "service_id": "dc-citizen-charter-bagerhat",
+      "claim_type": "eligibility",
+      "claim_text": "Bagerhat District Citizen Charter Services (বাগেরহাট জেলা নাগরিক সেবা) is a confirmed government service in category local_government, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-citizen-charter-bagerhat-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-dc-citizen-charter-bagerhat-official",
+      "service_id": "dc-citizen-charter-bagerhat",
+      "url": "https://bagerhat.gov.bd/en",
+      "title": "Bagerhat District Citizen Charter Services",
+      "authority_id": "deputy-commissioner-bagerhat-district",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bagerhat.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:25:13.505474+00:00"
+      },
+      "evidence_locator": "probe:https://bagerhat.gov.bd/en"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-dc-citizen-charter-bagerhat-portal-unreachable",
+      "service_id": "dc-citizen-charter-bagerhat",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Bagerhat District Citizen Charter Services.",
+      "severity": "MEDIUM",
+      "url": "https://bagerhat.gov.bd/en"
+    },
+    {
+      "gap_id": "gap-dc-citizen-charter-bagerhat-fee-unverified",
+      "service_id": "dc-citizen-charter-bagerhat",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Bagerhat District Citizen Charter Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dc-citizen-charter-bagerhat-documents-unverified",
+      "service_id": "dc-citizen-charter-bagerhat",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Bagerhat District Citizen Charter Services.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

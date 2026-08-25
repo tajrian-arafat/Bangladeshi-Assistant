@@ -1,0 +1,28 @@
+{
+  "service_id": "education-foreign-enrollment-permission",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-education-foreign-enrollment-permission-portal-unreachable",
+      "service_id": "education-foreign-enrollment-permission",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Permission for Class XI Enrollment (Foreign Qualification).",
+      "severity": "MEDIUM",
+      "url": "http://www.educationboard.gov.bd/dhaka/rules_business.php"
+    },
+    {
+      "gap_id": "gap-education-foreign-enrollment-permission-fee-unverified",
+      "service_id": "education-foreign-enrollment-permission",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Permission for Class XI Enrollment (Foreign Qualification).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-education-foreign-enrollment-permission-documents-unverified",
+      "service_id": "education-foreign-enrollment-permission",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Permission for Class XI Enrollment (Foreign Qualification).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

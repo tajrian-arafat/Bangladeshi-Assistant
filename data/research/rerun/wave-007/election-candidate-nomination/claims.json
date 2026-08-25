@@ -1,0 +1,70 @@
+{
+  "service_id": "election-candidate-nomination",
+  "claims": [
+    {
+      "claim_id": "election-candidate-nomination::c-catalogue-authority",
+      "service_id": "election-candidate-nomination",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "election-candidate-nomination::c-official-url-documented",
+      "service_id": "election-candidate-nomination",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.ecs.gov.bd/ for Election Candidate Nomination and Schedule Services; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.ecs.gov.bd/"
+      },
+      "source_ids": [
+        "src-election-candidate-nomination-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "election-candidate-nomination::c-procedure-overview",
+      "service_id": "election-candidate-nomination",
+      "claim_type": "procedure_step",
+      "claim_text": "Election Candidate Nomination and Schedule Services is a government service under Bangladesh Election Commission (election). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-election-candidate-nomination-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "election-candidate-nomination::c-service-identity",
+      "service_id": "election-candidate-nomination",
+      "claim_type": "eligibility",
+      "claim_text": "Election Candidate Nomination and Schedule Services (প্রার্থী মনোনয়ন/নির্বাচনী তফসিল) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-election-candidate-nomination-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

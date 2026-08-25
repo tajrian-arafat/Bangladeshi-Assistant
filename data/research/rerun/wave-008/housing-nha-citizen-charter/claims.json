@@ -1,0 +1,70 @@
+{
+  "service_id": "housing-nha-citizen-charter",
+  "claims": [
+    {
+      "claim_id": "housing-nha-citizen-charter::c-catalogue-authority",
+      "service_id": "housing-nha-citizen-charter",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Housing Authority (NHA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "housing-nha-citizen-charter::c-official-url-documented",
+      "service_id": "housing-nha-citizen-charter",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://nha.gov.bd/site/office_citizen_charter/7e6aa951-ece7-40fb-af0a-0abd5bd4ad3f/- for NHA Citizen Charter Services; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nha.gov.bd/site/office_citizen_charter/7e6aa951-ece7-40fb-af0a-0abd5bd4ad3f/-"
+      },
+      "source_ids": [
+        "src-housing-nha-citizen-charter-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "housing-nha-citizen-charter::c-procedure-overview",
+      "service_id": "housing-nha-citizen-charter",
+      "claim_type": "procedure_step",
+      "claim_text": "NHA Citizen Charter Services is a government service under National Housing Authority (NHA) (citizen charter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-housing-nha-citizen-charter-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "housing-nha-citizen-charter::c-service-identity",
+      "service_id": "housing-nha-citizen-charter",
+      "claim_type": "eligibility",
+      "claim_text": "NHA Citizen Charter Services (NHA নাগরিক সেবা চার্টার) is a confirmed government service in category housing, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-housing-nha-citizen-charter-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

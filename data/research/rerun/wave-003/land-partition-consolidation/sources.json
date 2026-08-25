@@ -1,0 +1,72 @@
+{
+  "service_id": "land-partition-consolidation",
+  "sources": [
+    {
+      "source_id": "src-land-partition-consolidation-official",
+      "service_id": "land-partition-consolidation",
+      "url": "https://www.land.gov.bd/nagorik-subidha",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.land.gov.bd/nagorik-subidha",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "b6922c0b38d6efc6",
+        "retrieved_at": "2026-08-25T03:21:57.719342+00:00"
+      },
+      "evidence_locator": "probe:https://www.land.gov.bd/nagorik-subidha"
+    },
+    {
+      "source_id": "src-land-partition-consolidation-alt-1",
+      "service_id": "land-partition-consolidation",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "c6ab817e41083375",
+        "retrieved_at": "2026-08-25T03:21:57.752242+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-partition-consolidation-alt-2",
+      "service_id": "land-partition-consolidation",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "ab2d55bc241fdee0",
+        "retrieved_at": "2026-08-25T03:21:57.784678+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

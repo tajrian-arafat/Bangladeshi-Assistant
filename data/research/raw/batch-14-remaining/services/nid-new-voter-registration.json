@@ -1,0 +1,45 @@
+{
+  "service_id": "nid-new-voter-registration",
+  "batch_id": "batch-14-remaining",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "New Voter and National ID Registration",
+  "service_name_bn": "নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন",
+  "aliases": [
+    "new NID",
+    "voter registration",
+    "NID application"
+  ],
+  "category_id": "identity",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "nid-new-voter-registration::c-application-portal",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "application_url",
+      "claim_text": "New Voter and National ID Registration is associated with NBR e-service portal https://services.nidw.gov.bd/nid-pub/register-account?locale=en.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-nid-new-voter-registration",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-responsible-authority",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Election Commission (NID Wing).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "local-noc-certificate",
+  "claims": [
+    {
+      "claim_id": "local-noc-certificate::c-catalogue-authority",
+      "service_id": "local-noc-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-noc-certificate::c-official-portal",
+      "service_id": "local-noc-certificate",
+      "claim_type": "application_url",
+      "claim_text": "No Objection Certificate (NOC) official information is published at https://tilokpursonod.gov.bd/select_certificate/ (page title: তিলকপুর ইউনিয়ন).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://tilokpursonod.gov.bd/select_certificate/"
+      },
+      "source_ids": [
+        "src-local-noc-certificate-official"
+      ],
+      "evidence_ids": [
+        "ev-local-noc-certificate::c-official-portal-src-local-noc-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-noc-certificate::c-procedure-overview",
+      "service_id": "local-noc-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "No Objection Certificate (NOC) is a government service under Union Parishad (noc). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-noc-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-noc-certificate::c-service-identity",
+      "service_id": "local-noc-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "No Objection Certificate (NOC) (অনাপত্তি সনদ (NOC)) is a confirmed government service in category certificates, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-noc-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

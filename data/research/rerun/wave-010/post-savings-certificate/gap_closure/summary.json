@@ -1,0 +1,28 @@
+{
+  "service_id": "post-savings-certificate",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-post-savings-certificate-portal-unreachable",
+      "service_id": "post-savings-certificate",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Postal Savings Certificate.",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/32495e81-3fa6-420d-a368-b05587397d0a/-"
+    },
+    {
+      "gap_id": "gap-post-savings-certificate-fee-unverified",
+      "service_id": "post-savings-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Postal Savings Certificate.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-savings-certificate-documents-unverified",
+      "service_id": "post-savings-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Postal Savings Certificate.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

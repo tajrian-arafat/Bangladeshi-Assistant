@@ -1,0 +1,218 @@
+{
+  "service_id": "brta-route-permit",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Route Permit Issue and Renewal",
+  "service_name_bn": "রুট পারমিট ইস্যু ও নবায়ন",
+  "aliases": [
+    "route permit",
+    "transport route authorization"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "business",
+    "transport_operator"
+  ],
+  "official_application_url": "http://brta.portal.gov.bd/pages/static-pages/6922df7a933eb65569e2240e",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-route-permit::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-route-permit",
+      "claim_type": "application_url",
+      "claim_text": "Route permit issue and renewal process published on BRTA portal static page for brta-route-permit.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-portal-url-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-commercial-operator-target",
+      "legacy_claim_id": "c-commercial-operator-target",
+      "service_id": "brta-route-permit",
+      "claim_type": "eligibility",
+      "claim_text": "Route permits target commercial transport operators and businesses per catalogue target_user.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-route-permit"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-commercial-operator-target-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-not-applicable-private-car",
+      "legacy_claim_id": "c-not-applicable-private-car",
+      "service_id": "brta-route-permit",
+      "claim_type": "restriction",
+      "claim_text": "Route permit not applicable to standard private passenger vehicles — commercial/public transport service authorization.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "usage_class_private_passenger"
+      },
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-not-applicable-private-car-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-route-permit-fee-calculator",
+      "legacy_claim_id": "c-route-permit-fee-calculator",
+      "service_id": "brta-route-permit",
+      "claim_type": "fee",
+      "claim_text": "Route permit fees depend on vehicle type and permit category; amounts via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-route-permit",
+        "vehicle_type": "VARIES",
+        "action": "route_permit_issue_or_renewal",
+        "condition": "route_type_and_vehicle_class",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-route-permit"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-route-permit-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-fitness-prerequisite",
+      "legacy_claim_id": "c-fitness-prerequisite",
+      "service_id": "brta-route-permit",
+      "claim_type": "conditional_document",
+      "claim_text": "Valid fitness certificate typically required before route permit issue/renewal for commercial vehicles.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "commercial_vehicle"
+      },
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-brta-portal-fitness"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-fitness-prerequisite-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-crossref-transport-route-permit",
+      "legacy_claim_id": "c-crossref-transport-route-permit",
+      "service_id": "brta-route-permit",
+      "claim_type": "restriction",
+      "claim_text": "brta-route-permit (portal static page) differs from transport-route-permit (BSP operator service) — related but separate catalogue entries; do not merge workflows.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-route-permit",
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-crossref-transport-route-permit-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-route-permit::c-route-type-matrix-unverified",
+      "legacy_claim_id": "c-route-type-matrix-unverified",
+      "service_id": "brta-route-permit",
+      "claim_type": "restriction",
+      "claim_text": "Route permit categories (inter-district, city, long-route, etc.) and applicability matrix not extracted from portal in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-route-permit"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-route-type-matrix-unverified-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "UNVERIFIED"
+    },
+    {
+      "claim_id": "brta-route-permit::c-circle-office-submission",
+      "legacy_claim_id": "c-circle-office-submission",
+      "service_id": "brta-route-permit",
+      "claim_type": "procedure_step",
+      "claim_text": "Route permit applications submitted to relevant BRTA circle office with supporting documents.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-route-permit"
+      ],
+      "evidence_ids": [
+        "ev-brta-route-permit::c-circle-office-submission-src-brta-portal-route-permit"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator); batch-03b-brta-vehicle (fitness/tax cross-refs)"
+}

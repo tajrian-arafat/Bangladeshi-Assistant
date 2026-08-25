@@ -1,0 +1,72 @@
+{
+  "service_id": "mofa-csat",
+  "claims": [
+    {
+      "claim_id": "mofa-csat::c-catalogue-authority",
+      "service_id": "mofa-csat",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-csat::c-official-portal",
+      "service_id": "mofa-csat",
+      "claim_type": "application_url",
+      "claim_text": "MOFA Consular Service Appointment (CSAT) official information is published at https://csat.mofa.gov.bd/ (page title: CSAT | Ministry of Foreign Affairs).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://csat.mofa.gov.bd/"
+      },
+      "source_ids": [
+        "src-mofa-csat-official"
+      ],
+      "evidence_ids": [
+        "ev-mofa-csat::c-official-portal-src-mofa-csat-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-csat::c-procedure-overview",
+      "service_id": "mofa-csat",
+      "claim_type": "procedure_step",
+      "claim_text": "MOFA Consular Service Appointment (CSAT) is a government service under Ministry of Foreign Affairs (MOFA) (consular). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-csat-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-csat::c-service-identity",
+      "service_id": "mofa-csat",
+      "claim_type": "eligibility",
+      "claim_text": "MOFA Consular Service Appointment (CSAT) (MOFA CSAT (Consular Service Appointment)) is a confirmed government service in category passport_immigration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-csat-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "service_id": "professional-pharmacy-council-registration",
+  "sources": [
+    {
+      "source_id": "src-professional-pharmacy-council-registration-official",
+      "service_id": "professional-pharmacy-council-registration",
+      "url": "https://www.pcb.gov.bd/",
+      "title": "Pharmacy Council Pharmacist Registration",
+      "authority_id": "pharmacy-council-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.pcb.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:29:41.278780+00:00"
+      },
+      "evidence_locator": "probe:https://www.pcb.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "service_id": "civil-death-registration-correction",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Death Registration Information Correction",
+  "service_name_bn": "মৃত্যু তথ্য সংশোধন",
+  "aliases": [
+    "death record correction"
+  ],
+  "category_id": "civil_registration",
+  "profile_key": "IDENTITY_CIVIL",
+  "responsible_agency": "Office of the Registrar General, Birth and Death Registration",
+  "official_application_url": "https://bdris.gov.bd/dr/correction",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "civil-death-registration-correction::c-catalogue-authority",
+      "service_id": "civil-death-registration-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Office of the Registrar General, Birth and Death Registration.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-official-url-documented",
+      "service_id": "civil-death-registration-correction",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdris.gov.bd/dr/correction for Death Registration Information Correction; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdris.gov.bd/dr/correction"
+      },
+      "source_ids": [
+        "src-civil-death-registration-correction-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-procedure-overview",
+      "service_id": "civil-death-registration-correction",
+      "claim_type": "procedure_step",
+      "claim_text": "Death Registration Information Correction is a government service under Office of the Registrar General, Birth and Death Registration (death correction). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-death-registration-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-service-identity",
+      "service_id": "civil-death-registration-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Death Registration Information Correction (মৃত্যু তথ্য সংশোধন) is a confirmed government service in category civil_registration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-death-registration-correction-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-civil-death-registration-correction-official",
+      "service_id": "civil-death-registration-correction",
+      "url": "https://bdris.gov.bd/dr/correction",
+      "title": "Death Registration Information Correction",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/dr/correction",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null,
+        "content_hash": "b531159ca46f89ab",
+        "retrieved_at": "2026-08-25T03:24:28.810849+00:00"
+      },
+      "evidence_locator": "probe:https://bdris.gov.bd/dr/correction"
+    },
+    {
+      "source_id": "src-civil-death-registration-correction-alt-1",
+      "service_id": "civil-death-registration-correction",
+      "url": "https://bdris.gov.bd",
+      "title": "হোমপেজ",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোমপেজ",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "5d006d07db3e38c0",
+        "retrieved_at": "2026-08-25T03:24:30.898912+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-civil-death-registration-correction-portal-unreachable",
+      "service_id": "civil-death-registration-correction",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Death Registration Information Correction.",
+      "severity": "MEDIUM",
+      "url": "https://bdris.gov.bd/dr/correction"
+    },
+    {
+      "gap_id": "gap-civil-death-registration-correction-fee-unverified",
+      "service_id": "civil-death-registration-correction",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Death Registration Information Correction.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-civil-death-registration-correction-documents-unverified",
+      "service_id": "civil-death-registration-correction",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Death Registration Information Correction.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "service_id": "trade-erc-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Export Registration Certificate (ERC)",
+  "service_name_bn": "রপ্তানি নিবন্ধন সনদ (ERC)",
+  "aliases": [
+    "ERC",
+    "export licence"
+  ],
+  "category_id": "trade",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Office of the Chief Controller of Imports and Exports (CCI&E)",
+  "official_application_url": "https://olm.ccie.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "trade-erc-registration::c-catalogue-authority",
+      "service_id": "trade-erc-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Office of the Chief Controller of Imports and Exports (CCI&E).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-erc-registration::c-official-portal",
+      "service_id": "trade-erc-registration",
+      "claim_type": "application_url",
+      "claim_text": "Export Registration Certificate (ERC) official information is published at https://olm.ccie.gov.bd/ (page title: CCI&amp;E - OLM).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://olm.ccie.gov.bd/"
+      },
+      "source_ids": [
+        "src-trade-erc-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-trade-erc-registration::c-official-portal-src-trade-erc-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-erc-registration::c-procedure-overview",
+      "service_id": "trade-erc-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Export Registration Certificate (ERC) is a government service under Office of the Chief Controller of Imports and Exports (CCI&E) (export registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-erc-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-erc-registration::c-service-identity",
+      "service_id": "trade-erc-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Export Registration Certificate (ERC) (রপ্তানি নিবন্ধন সনদ (ERC)) is a confirmed government service in category trade, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-erc-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-trade-erc-registration-official",
+      "service_id": "trade-erc-registration",
+      "url": "https://olm.ccie.gov.bd/",
+      "title": "CCI&amp;E - OLM",
+      "authority_id": "office-of-the-chief-controller-of-imports-and-exports-cci-e",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://olm.ccie.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "CCI&amp;E - OLM",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "7bbbd222314d8bf5",
+        "retrieved_at": "2026-08-25T03:36:52.751234+00:00"
+      },
+      "evidence_locator": "probe:https://olm.ccie.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-trade-erc-registration-fee-unverified",
+      "service_id": "trade-erc-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Export Registration Certificate (ERC).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-erc-registration-documents-unverified",
+      "service_id": "trade-erc-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Export Registration Certificate (ERC).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "service_id": "vat-bin-registration",
+  "claims": [
+    {
+      "claim_id": "vat-bin-registration::c-catalogue-authority",
+      "service_id": "vat-bin-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-bin-registration::c-official-portal",
+      "service_id": "vat-bin-registration",
+      "claim_type": "application_url",
+      "claim_text": "VAT Registration (Business Identification Number) official information is published at https://nbr.gov.bd/faq/vat-faq/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/faq/vat-faq/eng"
+      },
+      "source_ids": [
+        "src-vat-bin-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-vat-bin-registration::c-official-portal-src-vat-bin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-bin-registration::c-procedure-overview",
+      "service_id": "vat-bin-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "VAT BIN registration is completed through NBR online services.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-bin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-bin-registration::c-document-overview",
+      "service_id": "vat-bin-registration",
+      "claim_type": "document",
+      "claim_text": "Trade licence, TIN, business address proof are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-vat-bin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-bin-registration::c-service-identity",
+      "service_id": "vat-bin-registration",
+      "claim_type": "eligibility",
+      "claim_text": "VAT Registration (Business Identification Number) (ভ্যাট/টার্নওভার ট্যাক্স নিবন্ধন (BIN)) is a confirmed government service in category vat, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-bin-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-bin-registration::c-eligibility-deep",
+      "service_id": "vat-bin-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Businesses meeting VAT registration thresholds.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-bin-registration-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-bin-registration::c-document-must-need",
+      "service_id": "vat-bin-registration",
+      "claim_type": "document",
+      "claim_text": "Trade licence, TIN, business address proof are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-bin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

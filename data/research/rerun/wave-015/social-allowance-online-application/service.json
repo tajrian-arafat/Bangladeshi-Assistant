@@ -1,0 +1,157 @@
+{
+  "service_id": "social-allowance-online-application",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Social Allowance and Stipend Online Application",
+  "service_name_bn": "ভাতা ও উপবৃত্তি অনলাইন আবেদন (mis.bhata)",
+  "aliases": [
+    "bhata online application",
+    "old age allowance application",
+    "disability allowance application",
+    "widow allowance application"
+  ],
+  "category_id": "social_protection",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Department of Social Services (DSS)",
+  "official_application_url": "https://mis.bhata.gov.bd/online-application",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "social-allowance-online-application::c-catalogue-authority",
+      "service_id": "social-allowance-online-application",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Social Services (DSS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "social-allowance-online-application::c-official-url-documented",
+      "service_id": "social-allowance-online-application",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://mis.bhata.gov.bd/online-application for Social Allowance and Stipend Online Application; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://mis.bhata.gov.bd/online-application"
+      },
+      "source_ids": [
+        "src-social-allowance-online-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "social-allowance-online-application::c-procedure-overview",
+      "service_id": "social-allowance-online-application",
+      "claim_type": "procedure_step",
+      "claim_text": "Social Allowance and Stipend Online Application is a government service under Department of Social Services (DSS) (allowance application). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-social-allowance-online-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "social-allowance-online-application::c-service-identity",
+      "service_id": "social-allowance-online-application",
+      "claim_type": "eligibility",
+      "claim_text": "Social Allowance and Stipend Online Application (ভাতা ও উপবৃত্তি অনলাইন আবেদন (mis.bhata)) is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-social-allowance-online-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-social-allowance-online-application-official",
+      "service_id": "social-allowance-online-application",
+      "url": "https://mis.bhata.gov.bd/online-application",
+      "title": "Social Allowance and Stipend Online Application",
+      "authority_id": "dss",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mis.bhata.gov.bd/online-application",
+        "reachable": false,
+        "error": "[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:36:35.711210+00:00"
+      },
+      "evidence_locator": "probe:https://mis.bhata.gov.bd/online-application"
+    },
+    {
+      "source_id": "src-social-allowance-online-application-alt-1",
+      "service_id": "social-allowance-online-application",
+      "url": "https://outlookbangla.com/2026/07/03/online-applications-for-allowances-stipends-to-begin-on-aug-1/",
+      "title": "Online applications for allowances, stipends to begin on Aug 1",
+      "authority_id": "dss",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://outlookbangla.com/2026/07/03/online-applications-for-allowances-stipends-to-begin-on-aug-1/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Online applications for allowances, stipends to begin on Aug 1",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "c7a3f1b6f3b9d6f4",
+        "retrieved_at": "2026-08-25T03:36:37.505279+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-social-allowance-online-application-portal-unreachable",
+      "service_id": "social-allowance-online-application",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Social Allowance and Stipend Online Application.",
+      "severity": "MEDIUM",
+      "url": "https://mis.bhata.gov.bd/online-application"
+    },
+    {
+      "gap_id": "gap-social-allowance-online-application-fee-unverified",
+      "service_id": "social-allowance-online-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Social Allowance and Stipend Online Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-social-allowance-online-application-documents-unverified",
+      "service_id": "social-allowance-online-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Social Allowance and Stipend Online Application.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

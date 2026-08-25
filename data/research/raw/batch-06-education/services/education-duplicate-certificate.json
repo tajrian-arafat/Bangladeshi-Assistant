@@ -1,0 +1,44 @@
+{
+  "service_id": "education-duplicate-certificate",
+  "batch_id": "batch-06-education",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Duplicate SSC/HSC Certificate or Transcript",
+  "service_name_bn": "SSC/HSC সনদ/ট্রান্সক্রিপ্টের ডুপ্লিকেট",
+  "aliases": [
+    "lost certificate board",
+    "duplicate marksheet"
+  ],
+  "category_id": "education",
+  "responsible_agency": "Controller of Examinations (respective board)",
+  "official_application_url": "http://www.educationboard.gov.bd/edb_rules_regulations_powers_duties_controller.php",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "education-duplicate-certificate::c-application-portal",
+      "service_id": "education-duplicate-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Duplicate SSC/HSC Certificate or Transcript is associated with NBR e-service portal http://www.educationboard.gov.bd/edb_rules_regulations_powers_duties_controller.php.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-education-duplicate-certificate",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-duplicate-certificate::c-responsible-authority",
+      "service_id": "education-duplicate-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Controller of Examinations (respective board).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "service_id": "post-money-order",
+  "claims": [
+    {
+      "claim_id": "post-money-order::c-catalogue-authority",
+      "service_id": "post-money-order",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-money-order::c-official-url-documented",
+      "service_id": "post-money-order",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdpost.gov.bd/site/page/2b5d6dac-0cd7-4342-9cab-e0b66765aa69/- for Postal Money Order; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdpost.gov.bd/site/page/2b5d6dac-0cd7-4342-9cab-e0b66765aa69/-"
+      },
+      "source_ids": [
+        "src-post-money-order-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-money-order::c-procedure-overview",
+      "service_id": "post-money-order",
+      "claim_type": "procedure_step",
+      "claim_text": "Postal Money Order is a government service under Bangladesh Post Office (Directorate of Posts) (financial). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-money-order-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-money-order::c-service-identity",
+      "service_id": "post-money-order",
+      "claim_type": "eligibility",
+      "claim_text": "Postal Money Order (মানি অর্ডার) is a confirmed government service in category post, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-money-order-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

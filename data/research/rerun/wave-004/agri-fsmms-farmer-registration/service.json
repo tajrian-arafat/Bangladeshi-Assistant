@@ -1,0 +1,134 @@
+{
+  "service_id": "agri-fsmms-farmer-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Food Department Farmer/Mill Owner Registration (FSMMS)",
+  "service_name_bn": "খাদ্য অধিদপ্তর কৃষক/চালকল নিবন্ধন",
+  "aliases": [
+    "paddy procurement registration",
+    "FSMMS farmer",
+    "Food Department Farmer/Mill Owner Registration (FSMMS)"
+  ],
+  "category_id": "agriculture",
+  "profile_key": "AGRICULTURE",
+  "responsible_agency": "Directorate General of Food",
+  "official_application_url": "https://fsmms.dgf.gov.bd/portal/bn/farmer",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "agri-fsmms-farmer-registration::c-catalogue-authority",
+      "service_id": "agri-fsmms-farmer-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Food.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-fsmms-farmer-registration::c-official-portal",
+      "service_id": "agri-fsmms-farmer-registration",
+      "claim_type": "application_url",
+      "claim_text": "Food Department Farmer/Mill Owner Registration (FSMMS) official information is published at https://fsmms.dgf.gov.bd/portal/bn/farmer (page title: কৃষক).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://fsmms.dgf.gov.bd/portal/bn/farmer"
+      },
+      "source_ids": [
+        "src-agri-fsmms-farmer-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-agri-fsmms-farmer-registration::c-official-portal-src-agri-fsmms-farmer-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-fsmms-farmer-registration::c-procedure-overview",
+      "service_id": "agri-fsmms-farmer-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Food Department Farmer/Mill Owner Registration (FSMMS) is a government service under Directorate General of Food (procurement). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-fsmms-farmer-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-fsmms-farmer-registration::c-service-identity",
+      "service_id": "agri-fsmms-farmer-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Food Department Farmer/Mill Owner Registration (FSMMS) (খাদ্য অধিদপ্তর কৃষক/চালকল নিবন্ধন) is a confirmed government service in category agriculture, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-fsmms-farmer-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-agri-fsmms-farmer-registration-official",
+      "service_id": "agri-fsmms-farmer-registration",
+      "url": "https://fsmms.dgf.gov.bd/portal/bn/farmer",
+      "title": "কৃষক",
+      "authority_id": "directorate-general-of-food",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://fsmms.dgf.gov.bd/portal/bn/farmer",
+        "status_code": 200,
+        "reachable": true,
+        "title": "কৃষক",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "517f3f5ff17d9ff5",
+        "retrieved_at": "2026-08-25T03:23:13.755317+00:00"
+      },
+      "evidence_locator": "probe:https://fsmms.dgf.gov.bd/portal/bn/farmer"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-agri-fsmms-farmer-registration-fee-unverified",
+      "service_id": "agri-fsmms-farmer-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Food Department Farmer/Mill Owner Registration (FSMMS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-agri-fsmms-farmer-registration-documents-unverified",
+      "service_id": "agri-fsmms-farmer-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Food Department Farmer/Mill Owner Registration (FSMMS).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

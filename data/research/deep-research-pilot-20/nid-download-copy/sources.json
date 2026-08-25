@@ -1,0 +1,69 @@
+{
+  "service_id": "nid-download-copy",
+  "sources": [
+    {
+      "source_id": "src-nid-download-copy-official",
+      "service_id": "nid-download-copy",
+      "url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+      "title": "Bangladesh NID Application System",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "fd884956f83cfabd",
+        "retrieved_at": "2026-08-25T04:26:31.614302+00:00"
+      },
+      "evidence_locator": "probe:https://services.nidw.gov.bd/nid-pub/?locale=en"
+    },
+    {
+      "source_id": "src-nid-download-copy-alt-1",
+      "service_id": "nid-download-copy",
+      "url": "https://services.nidw.gov.bd/nid-pub/",
+      "title": "Bangladesh NID Application System",
+      "authority_id": "ec-nid",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "eaeb86274a5c23e2",
+        "retrieved_at": "2026-08-25T04:26:33.067472+00:00"
+      }
+    },
+    {
+      "source_id": "src-nid-download-copy-alt-2",
+      "service_id": "nid-download-copy",
+      "url": "https://www.nidw.gov.bd/",
+      "title": "Download NID Card Copy",
+      "authority_id": "ec-nid",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.nidw.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T04:26:33.681570+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "service_id": "civil-marriage-certificate-search",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Completed Marriage Certificate Search",
+  "service_name_bn": "নিবন্ধিত বিবাহ সনদ অনুসন্ধান",
+  "aliases": [
+    "marriage certificate lookup"
+  ],
+  "category_id": "certificates",
+  "profile_key": "OTHER",
+  "responsible_agency": "Ministry of Law, Justice and Parliamentary Affairs",
+  "official_application_url": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "civil-marriage-certificate-search::c-catalogue-authority",
+      "service_id": "civil-marriage-certificate-search",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Law, Justice and Parliamentary Affairs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-marriage-certificate-search::c-official-portal",
+      "service_id": "civil-marriage-certificate-search",
+      "claim_type": "application_url",
+      "claim_text": "Completed Marriage Certificate Search official information is published at https://marriage.gov.bd/docs/CRVS_User_Manual.pdf (page title: Completed Marriage Certificate Search).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+      },
+      "source_ids": [
+        "src-civil-marriage-certificate-search-official"
+      ],
+      "evidence_ids": [
+        "ev-civil-marriage-certificate-search::c-official-portal-src-civil-marriage-certificate-search-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-marriage-certificate-search::c-procedure-overview",
+      "service_id": "civil-marriage-certificate-search",
+      "claim_type": "procedure_step",
+      "claim_text": "Completed Marriage Certificate Search is a government service under Ministry of Law, Justice and Parliamentary Affairs (marriage certificate). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-marriage-certificate-search-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-marriage-certificate-search::c-service-identity",
+      "service_id": "civil-marriage-certificate-search",
+      "claim_type": "eligibility",
+      "claim_text": "Completed Marriage Certificate Search (নিবন্ধিত বিবাহ সনদ অনুসন্ধান) is a confirmed government service in category certificates, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-marriage-certificate-search-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-civil-marriage-certificate-search-official",
+      "service_id": "civil-marriage-certificate-search",
+      "url": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+      "title": "Completed Marriage Certificate Search",
+      "authority_id": "ministry-of-law-justice-and-parliamentary-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "application/pdf",
+        "content_hash": "b83405cfd2020845",
+        "retrieved_at": "2026-08-25T03:24:58.460884+00:00"
+      },
+      "evidence_locator": "probe:https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-civil-marriage-certificate-search-fee-unverified",
+      "service_id": "civil-marriage-certificate-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Completed Marriage Certificate Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-civil-marriage-certificate-search-documents-unverified",
+      "service_id": "civil-marriage-certificate-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Completed Marriage Certificate Search.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "service_id": "local-upazila-land-tax-payment",
+  "sources": [
+    {
+      "source_id": "src-local-upazila-land-tax-payment-official",
+      "service_id": "local-upazila-land-tax-payment",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "union-parishad-upazila-land-office",
+      "tier": 3,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d1ff3f114189bb34",
+        "retrieved_at": "2026-08-25T03:21:58.814011+00:00"
+      },
+      "evidence_locator": "probe:"
+    },
+    {
+      "source_id": "src-local-upazila-land-tax-payment-alt-0",
+      "service_id": "local-upazila-land-tax-payment",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "union-parishad-upazila-land-office",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d1ff3f114189bb34",
+        "retrieved_at": "2026-08-25T03:21:58.814011+00:00"
+      }
+    },
+    {
+      "source_id": "src-local-upazila-land-tax-payment-alt-1",
+      "service_id": "local-upazila-land-tax-payment",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "union-parishad-upazila-land-office",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "7ae7ec82592e6fe1",
+        "retrieved_at": "2026-08-25T03:21:58.846512+00:00"
+      }
+    },
+    {
+      "source_id": "src-local-upazila-land-tax-payment-alt-2",
+      "service_id": "local-upazila-land-tax-payment",
+      "url": "https://dlrms.land.gov.bd",
+      "title": "Upazila Land Development Tax Payment",
+      "authority_id": "union-parishad-upazila-land-office",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dlrms.land.gov.bd",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out",
+        "retrieved_at": "2026-08-25T03:22:08.870849+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

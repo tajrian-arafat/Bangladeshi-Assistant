@@ -1,0 +1,190 @@
+{
+  "service_id": "dc-attestation-photocopy",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "DC Office Document Attestation/Photocopy Certification",
+  "service_name_bn": "জেলা প্রশাসক কার্যালয়ে ফটোকপি/prattyoyon",
+  "aliases": [
+    "DC attestation",
+    "district attestation",
+    "DC Office Document Attestation/Photocopy Certification"
+  ],
+  "category_id": "local_government",
+  "profile_key": "LOCAL_GOVERNMENT",
+  "responsible_agency": "Deputy Commissioner Office",
+  "official_application_url": "https://www.dhaka.gov.bd/en",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "dc-attestation-photocopy::c-catalogue-authority",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Deputy Commissioner Office.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-official-url-documented",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.dhaka.gov.bd/en for DC Office Document Attestation/Photocopy Certification; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.dhaka.gov.bd/en"
+      },
+      "source_ids": [
+        "src-dc-attestation-photocopy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-procedure-overview",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "procedure_step",
+      "claim_text": "Deputy Commissioner (DC) office attestation of photocopies is a local government service at the district level.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-attestation-photocopy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-document-overview",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "document",
+      "claim_text": "Original document and photocopy to be attested; applicant NID typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-dc-attestation-photocopy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-service-identity",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "eligibility",
+      "claim_text": "DC Office Document Attestation/Photocopy Certification (জেলা প্রশাসক কার্যালয়ে ফটোকপি/prattyoyon) is a confirmed government service in category local_government, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-attestation-photocopy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-dc-attestation-photocopy-official",
+      "service_id": "dc-attestation-photocopy",
+      "url": "https://www.dhaka.gov.bd/en",
+      "title": "DC Office Document Attestation/Photocopy Certification",
+      "authority_id": "deputy-commissioner-office",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.dhaka.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:12:35.496821+00:00"
+      },
+      "evidence_locator": "probe:https://www.dhaka.gov.bd/en"
+    },
+    {
+      "source_id": "src-dc-attestation-photocopy-alt-1",
+      "service_id": "dc-attestation-photocopy",
+      "url": "https://www.bangladesh.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "deputy-commissioner-office",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bangladesh.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "548e6f62d5343a7c",
+        "retrieved_at": "2026-08-25T03:12:35.546924+00:00"
+      }
+    },
+    {
+      "source_id": "src-dc-attestation-photocopy-alt-2",
+      "service_id": "dc-attestation-photocopy",
+      "url": "https://cabinet.gov.bd/",
+      "title": "DC Office Document Attestation/Photocopy Certification",
+      "authority_id": "deputy-commissioner-office",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://cabinet.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:12:36.092138+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-dc-attestation-photocopy-portal-unreachable",
+      "service_id": "dc-attestation-photocopy",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for DC Office Document Attestation/Photocopy Certification.",
+      "severity": "MEDIUM",
+      "url": "https://www.dhaka.gov.bd/en"
+    },
+    {
+      "gap_id": "gap-dc-attestation-photocopy-fee-unverified",
+      "service_id": "dc-attestation-photocopy",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for DC Office Document Attestation/Photocopy Certification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dc-attestation-photocopy-documents-unverified",
+      "service_id": "dc-attestation-photocopy",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for DC Office Document Attestation/Photocopy Certification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

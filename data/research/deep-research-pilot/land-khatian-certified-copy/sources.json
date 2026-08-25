@@ -1,0 +1,95 @@
+{
+  "service_id": "land-khatian-certified-copy",
+  "sources": [
+    {
+      "source_id": "src-land-khatian-certified-copy-official",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://land.gov.bd/vumisheba-fee",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd/vumisheba-fee",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "13632d2eefa0e2b8",
+        "retrieved_at": "2026-08-25T03:52:03.667984+00:00"
+      },
+      "evidence_locator": "probe:https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "source_id": "src-land-khatian-certified-copy-alt-1",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://land.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d7e3e6470ee5d950",
+        "retrieved_at": "2026-08-25T03:52:03.698336+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-khatian-certified-copy-alt-2",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://eporcha.gov.bd/",
+      "title": "Certified Khatian Copy",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://eporcha.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:52:03.982142+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "source_id": "src-land-khatian-certified-copy-deep-2",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://ldtax.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ldtax.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "2961540bac9706a8",
+        "content_length": 5296,
+        "retrieved_at": "2026-08-25T03:52:04.066126+00:00",
+        "retrieval_method": "http_get",
+        "spa_shell": false,
+        "pdf_links": [],
+        "form_links": []
+      },
+      "evidence_locator": "deep_probe:https://ldtax.gov.bd/",
+      "snapshot_path": "source_snapshots/src-land-khatian-certified-copy-deep-2.probe.json"
+    }
+  ]
+}

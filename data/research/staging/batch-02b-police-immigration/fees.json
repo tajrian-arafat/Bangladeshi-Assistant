@@ -1,0 +1,23 @@
+{
+  "fees": [
+    {
+      "fee_id": "police-clearance-certificate::c-online-fee-1500",
+      "service_id": "police-clearance-certificate",
+      "description": "Online PCC application fee (online channel only)",
+      "amount": 1500,
+      "currency": "BDT",
+      "condition": {
+        "field": "channel",
+        "channel": "online_pcc",
+        "applicability": "online_pcc_channel",
+        "not_universal": true
+      },
+      "claim_ids": [
+        "police-clearance-certificate::c-online-fee-1500"
+      ],
+      "pipeline_status": "VERIFIED",
+      "source_version_id": "sv-src-pcc-portal",
+      "publication_status": "ELIGIBLE_WHEN_GATE_PASSES"
+    }
+  ]
+}

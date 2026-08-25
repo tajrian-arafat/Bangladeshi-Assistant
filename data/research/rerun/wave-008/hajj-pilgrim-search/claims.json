@@ -1,0 +1,70 @@
+{
+  "service_id": "hajj-pilgrim-search",
+  "claims": [
+    {
+      "claim_id": "hajj-pilgrim-search::c-catalogue-authority",
+      "service_id": "hajj-pilgrim-search",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Religious Affairs (Hajj Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "hajj-pilgrim-search::c-official-url-documented",
+      "service_id": "hajj-pilgrim-search",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://hajj.gov.bd/ for Hajj Pilgrim Search and Status; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://hajj.gov.bd/"
+      },
+      "source_ids": [
+        "src-hajj-pilgrim-search-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "hajj-pilgrim-search::c-procedure-overview",
+      "service_id": "hajj-pilgrim-search",
+      "claim_type": "procedure_step",
+      "claim_text": "Hajj Pilgrim Search and Status is a government service under Ministry of Religious Affairs (Hajj Wing) (hajj). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-hajj-pilgrim-search-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "hajj-pilgrim-search::c-service-identity",
+      "service_id": "hajj-pilgrim-search",
+      "claim_type": "eligibility",
+      "claim_text": "Hajj Pilgrim Search and Status (হজযাত্রী অনুসন্ধান) is a confirmed government service in category religious_affairs, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-hajj-pilgrim-search-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

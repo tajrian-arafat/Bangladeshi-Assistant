@@ -1,0 +1,70 @@
+{
+  "service_id": "business-name-clearance",
+  "claims": [
+    {
+      "claim_id": "business-name-clearance::c-catalogue-authority",
+      "service_id": "business-name-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Registrar of Joint Stock Companies and Firms (RJSC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-name-clearance::c-official-url-documented",
+      "service_id": "business-name-clearance",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm for Company Name Clearance; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm"
+      },
+      "source_ids": [
+        "src-business-name-clearance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-name-clearance::c-procedure-overview",
+      "service_id": "business-name-clearance",
+      "claim_type": "procedure_step",
+      "claim_text": "Company Name Clearance is a government service under Registrar of Joint Stock Companies and Firms (RJSC) (name clearance). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-name-clearance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-name-clearance::c-service-identity",
+      "service_id": "business-name-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "Company Name Clearance (নাম অনুমোদন (Name Clearance)) is a confirmed government service in category business, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-name-clearance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

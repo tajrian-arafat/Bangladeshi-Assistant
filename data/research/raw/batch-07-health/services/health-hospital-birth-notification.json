@@ -1,0 +1,44 @@
+{
+  "service_id": "health-hospital-birth-notification",
+  "batch_id": "batch-07-health",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Hospital Birth Notification (for BDRIS registration)",
+  "service_name_bn": "হাসপাতালে জন্ম নিবেদন",
+  "aliases": [
+    "hospital birth report",
+    "birth notification form"
+  ],
+  "category_id": "health",
+  "responsible_agency": "Directorate General of Health Services (DGHS)",
+  "official_application_url": "https://bdris.gov.bd/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "health-hospital-birth-notification::c-application-portal",
+      "service_id": "health-hospital-birth-notification",
+      "claim_type": "application_url",
+      "claim_text": "Hospital Birth Notification (for BDRIS registration) is associated with NBR e-service portal https://bdris.gov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-health-hospital-birth-notification",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-hospital-birth-notification::c-responsible-authority",
+      "service_id": "health-hospital-birth-notification",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Directorate General of Health Services (DGHS).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

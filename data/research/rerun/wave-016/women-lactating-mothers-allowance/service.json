@@ -1,0 +1,133 @@
+{
+  "service_id": "women-lactating-mothers-allowance",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Working Lactating Mothers Allowance Programme",
+  "service_name_bn": "কর্মজীবী ল্যাকটেটিং মাদার ভাতা",
+  "aliases": [
+    "lactating mother allowance MIS",
+    "Working Lactating Mothers Allowance Programme"
+  ],
+  "category_id": "women_children",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Department of Women Affairs (DWA)",
+  "official_application_url": "http://dwa.portal.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "women-lactating-mothers-allowance::c-catalogue-authority",
+      "service_id": "women-lactating-mothers-allowance",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Women Affairs (DWA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-lactating-mothers-allowance::c-official-portal",
+      "service_id": "women-lactating-mothers-allowance",
+      "claim_type": "application_url",
+      "claim_text": "Working Lactating Mothers Allowance Programme official information is published at http://dwa.portal.gov.bd/ (page title: হোম | মহিলা বিষয়ক অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://dwa.portal.gov.bd/"
+      },
+      "source_ids": [
+        "src-women-lactating-mothers-allowance-official"
+      ],
+      "evidence_ids": [
+        "ev-women-lactating-mothers-allowance::c-official-portal-src-women-lactating-mothers-allowance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-lactating-mothers-allowance::c-procedure-overview",
+      "service_id": "women-lactating-mothers-allowance",
+      "claim_type": "procedure_step",
+      "claim_text": "Working Lactating Mothers Allowance Programme is a government service under Department of Women Affairs (DWA) (allowance). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-lactating-mothers-allowance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-lactating-mothers-allowance::c-service-identity",
+      "service_id": "women-lactating-mothers-allowance",
+      "claim_type": "eligibility",
+      "claim_text": "Working Lactating Mothers Allowance Programme (কর্মজীবী ল্যাকটেটিং মাদার ভাতা) is a confirmed government service in category women_children, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-lactating-mothers-allowance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-women-lactating-mothers-allowance-official",
+      "service_id": "women-lactating-mothers-allowance",
+      "url": "http://dwa.portal.gov.bd/",
+      "title": "হোম | মহিলা বিষয়ক অধিদপ্তর",
+      "authority_id": "department-of-women-affairs-dwa",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://dwa.portal.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | মহিলা বিষয়ক অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "2f797f67825fe78f",
+        "retrieved_at": "2026-08-25T03:37:25.631653+00:00"
+      },
+      "evidence_locator": "probe:http://dwa.portal.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-women-lactating-mothers-allowance-fee-unverified",
+      "service_id": "women-lactating-mothers-allowance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Working Lactating Mothers Allowance Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-lactating-mothers-allowance-documents-unverified",
+      "service_id": "women-lactating-mothers-allowance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Working Lactating Mothers Allowance Programme.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

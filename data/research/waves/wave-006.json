@@ -1,0 +1,2700 @@
+{
+  "wave_id": "wave-006",
+  "wave_number": 6,
+  "run_id": "wave-006-32c960a1",
+  "commit_sha": "0abc805b3f71",
+  "generated_at": "2026-08-25T03:25:59.791521+00:00",
+  "wave_size": 20,
+  "services_attempted": [
+    "civil-marriage-certificate-search",
+    "customs-asycuda-declaration",
+    "customs-bond-up-application",
+    "customs-import-export-control-licence",
+    "dc-citizen-charter-bagerhat",
+    "dc-citizen-charter-comilla",
+    "dc-citizen-charter-dhaka",
+    "dc-citizen-charter-rajshahi",
+    "dc-district-e-application",
+    "dc-guardianship-certificate",
+    "dc-nothi-citizen-application",
+    "dc-revenue-branch-services",
+    "desco-demand-note-payment",
+    "desco-emergency-service",
+    "desco-load-calculator",
+    "desco-load-change",
+    "desco-meter-information-submission",
+    "desco-new-connection",
+    "desco-ocsms-registration",
+    "desco-solar-document-submission"
+  ],
+  "service_results": [
+    {
+      "service_id": "civil-marriage-certificate-search",
+      "service_name_en": "Completed Marriage Certificate Search",
+      "category_id": "certificates",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "civil-marriage-certificate-search",
+        "service_name_en": "Completed Marriage Certificate Search",
+        "service_name_bn": "নিবন্ধিত বিবাহ সনদ অনুসন্ধান",
+        "category_id": "certificates",
+        "research_profile": "OTHER",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "eligibility"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Law, Justice and Parliamentary Affairs",
+          "ministry-of-law-justice-and-parliamentary-affairs"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "marriage certificate lookup"
+        ],
+        "official_source": "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "civil-marriage-certificate-search",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "civil-marriage-certificate-search-en-procedure",
+            "query": "How do I apply for Completed Marriage Certificate Search?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-marriage-certificate-search-bn-procedure",
+            "query": "নিবন্ধিত বিবাহ সনদ অনুসন্ধান কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-marriage-certificate-search-fee",
+            "query": "What is the fee for Completed Marriage Certificate Search?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-marriage-certificate-search-documents",
+            "query": "What documents are needed for Completed Marriage Certificate Search?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "civil-marriage-certificate-search-url",
+            "query": "What is the official website for Completed Marriage Certificate Search?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "civil-marriage-certificate-search",
+        "profile_key": "OTHER",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "customs-asycuda-declaration",
+      "service_name_en": "Customs Declaration (ASYCUDA World)",
+      "category_id": "customs",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "customs-asycuda-declaration",
+        "service_name_en": "Customs Declaration (ASYCUDA World)",
+        "service_name_bn": "কাস্টমস ASYCUDA ঘোষণা",
+        "category_id": "customs",
+        "research_profile": "TAX",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "National Board of Revenue - Customs",
+          "nbr"
+        ],
+        "known_official_domains": [
+          "nbr.gov.bd",
+          "incometax.gov.bd",
+          "secure.incometax.gov.bd"
+        ],
+        "service_aliases": [
+          "bill of entry",
+          "customs clearance",
+          "SAD"
+        ],
+        "official_source": "https://nbr.gov.bd/uploads/publications/Final_Newsletter_Design_for_NBR_Customs.pdf",
+        "existing_claims_count": 3,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "customs-asycuda-declaration",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "customs-asycuda-declaration-en-procedure",
+            "query": "How do I apply for Customs Declaration (ASYCUDA World)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-asycuda-declaration-bn-procedure",
+            "query": "কাস্টমস ASYCUDA ঘোষণা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-asycuda-declaration-fee",
+            "query": "What is the fee for Customs Declaration (ASYCUDA World)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-asycuda-declaration-documents",
+            "query": "What documents are needed for Customs Declaration (ASYCUDA World)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-asycuda-declaration-url",
+            "query": "What is the official website for Customs Declaration (ASYCUDA World)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "customs-asycuda-declaration",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "customs-bond-up-application",
+      "service_name_en": "Customs Bond Utilization Permit (UP) Application",
+      "category_id": "customs",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "customs-bond-up-application",
+        "service_name_en": "Customs Bond Utilization Permit (UP) Application",
+        "service_name_bn": "বন্ড ইউটিলাইজেশন পারমিট (UP)",
+        "category_id": "customs",
+        "research_profile": "TAX",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "National Board of Revenue - Customs",
+          "nbr"
+        ],
+        "known_official_domains": [
+          "nbr.gov.bd",
+          "incometax.gov.bd",
+          "secure.incometax.gov.bd"
+        ],
+        "service_aliases": [
+          "UP module",
+          "bond UP"
+        ],
+        "official_source": "https://nbr.gov.bd/uploads/publications/5._User_Manual_of_UP_.pdf",
+        "existing_claims_count": 3,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "customs-bond-up-application",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "customs-bond-up-application-en-procedure",
+            "query": "How do I apply for Customs Bond Utilization Permit (UP) Application?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-bond-up-application-bn-procedure",
+            "query": "বন্ড ইউটিলাইজেশন পারমিট (UP) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-bond-up-application-fee",
+            "query": "What is the fee for Customs Bond Utilization Permit (UP) Application?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-bond-up-application-documents",
+            "query": "What documents are needed for Customs Bond Utilization Permit (UP) Application?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-bond-up-application-url",
+            "query": "What is the official website for Customs Bond Utilization Permit (UP) Application?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "customs-bond-up-application",
+        "profile_key": "TAX",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "customs-import-export-control-licence",
+      "service_name_en": "Import/Export Control Licence",
+      "category_id": "customs",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "customs-import-export-control-licence",
+        "service_name_en": "Import/Export Control Licence",
+        "service_name_bn": "আমদানি/রপ্তানি নিয়ন্ত্রণ লাইসেন্স",
+        "category_id": "customs",
+        "research_profile": "CUSTOMS",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "legal_basis"
+        ],
+        "responsible_authority_candidates": [
+          "Chief Controller of Imports and Exports / Customs",
+          "chief-controller-of-imports-and-exports-customs"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "import export control act licence"
+        ],
+        "official_source": "https://nbr.gov.bd/uploads/acts/236___.pdf",
+        "existing_claims_count": 3,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 2,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "customs-import-export-control-licence",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "customs-import-export-control-licence-en-procedure",
+            "query": "How do I apply for Import/Export Control Licence?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-import-export-control-licence-bn-procedure",
+            "query": "আমদানি/রপ্তানি নিয়ন্ত্রণ লাইসেন্স কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-import-export-control-licence-fee",
+            "query": "What is the fee for Import/Export Control Licence?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-import-export-control-licence-documents",
+            "query": "What documents are needed for Import/Export Control Licence?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "customs-import-export-control-licence-url",
+            "query": "What is the official website for Import/Export Control Licence?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "customs-import-export-control-licence",
+        "profile_key": "CUSTOMS",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 2,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "dc-citizen-charter-bagerhat",
+      "service_name_en": "Bagerhat District Citizen Charter Services",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "dc-citizen-charter-bagerhat",
+        "service_name_en": "Bagerhat District Citizen Charter Services",
+        "service_name_bn": "বাগেরহাট জেলা নাগরিক সেবা",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Deputy Commissioner, Bagerhat District",
+          "deputy-commissioner-bagerhat-district"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DC Bagerhat",
+          "Bagerhat District Citizen Charter Services"
+        ],
+        "official_source": "https://bagerhat.gov.bd/en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "dc-citizen-charter-bagerhat",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "dc-citizen-charter-bagerhat-en-procedure",
+            "query": "How do I apply for Bagerhat District Citizen Charter Services?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-bagerhat-bn-procedure",
+            "query": "বাগেরহাট জেলা নাগরিক সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-bagerhat-fee",
+            "query": "What is the fee for Bagerhat District Citizen Charter Services?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-bagerhat-documents",
+            "query": "What documents are needed for Bagerhat District Citizen Charter Services?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-bagerhat-url",
+            "query": "What is the official website for Bagerhat District Citizen Charter Services?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "dc-citizen-charter-bagerhat",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "dc-citizen-charter-comilla",
+      "service_name_en": "Cumilla District Citizen Charter Services",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "dc-citizen-charter-comilla",
+        "service_name_en": "Cumilla District Citizen Charter Services",
+        "service_name_bn": "কুমিল্লা জেলা নাগরিক সেবা",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Deputy Commissioner, Cumilla District",
+          "deputy-commissioner-cumilla-district"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DC Comilla",
+          "district e-application",
+          "Cumilla District Citizen Charter Services"
+        ],
+        "official_source": "https://www.comilla.gov.bd/en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "dc-citizen-charter-comilla",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "dc-citizen-charter-comilla-en-procedure",
+            "query": "How do I apply for Cumilla District Citizen Charter Services?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-comilla-bn-procedure",
+            "query": "কুমিল্লা জেলা নাগরিক সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-comilla-fee",
+            "query": "What is the fee for Cumilla District Citizen Charter Services?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-comilla-documents",
+            "query": "What documents are needed for Cumilla District Citizen Charter Services?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-comilla-url",
+            "query": "What is the official website for Cumilla District Citizen Charter Services?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "dc-citizen-charter-comilla",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "dc-citizen-charter-dhaka",
+      "service_name_en": "Dhaka District Citizen Charter Services",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "dc-citizen-charter-dhaka",
+        "service_name_en": "Dhaka District Citizen Charter Services",
+        "service_name_bn": "ঢাকা জেলা নাগরিক সেবা চার্টার",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Deputy Commissioner, Dhaka District",
+          "deputy-commissioner-dhaka-district"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DC office Dhaka",
+          "district commissioner services",
+          "Dhaka District Citizen Charter Services"
+        ],
+        "official_source": "https://www.dhaka.gov.bd/en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "dc-citizen-charter-dhaka",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "dc-citizen-charter-dhaka-en-procedure",
+            "query": "How do I apply for Dhaka District Citizen Charter Services?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-dhaka-bn-procedure",
+            "query": "ঢাকা জেলা নাগরিক সেবা চার্টার কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-dhaka-fee",
+            "query": "What is the fee for Dhaka District Citizen Charter Services?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-dhaka-documents",
+            "query": "What documents are needed for Dhaka District Citizen Charter Services?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-dhaka-url",
+            "query": "What is the official website for Dhaka District Citizen Charter Services?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "dc-citizen-charter-dhaka",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "dc-citizen-charter-rajshahi",
+      "service_name_en": "Rajshahi District Citizen Charter Services",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "dc-citizen-charter-rajshahi",
+        "service_name_en": "Rajshahi District Citizen Charter Services",
+        "service_name_bn": "রাজশাহী জেলা নাগরিক সেবা",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Deputy Commissioner, Rajshahi District",
+          "deputy-commissioner-rajshahi-district"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DC Rajshahi",
+          "Rajshahi District Citizen Charter Services"
+        ],
+        "official_source": "https://rajshahi.gov.bd/en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "dc-citizen-charter-rajshahi",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "dc-citizen-charter-rajshahi-en-procedure",
+            "query": "How do I apply for Rajshahi District Citizen Charter Services?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-rajshahi-bn-procedure",
+            "query": "রাজশাহী জেলা নাগরিক সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-rajshahi-fee",
+            "query": "What is the fee for Rajshahi District Citizen Charter Services?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-rajshahi-documents",
+            "query": "What documents are needed for Rajshahi District Citizen Charter Services?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-citizen-charter-rajshahi-url",
+            "query": "What is the official website for Rajshahi District Citizen Charter Services?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "dc-citizen-charter-rajshahi",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "dc-district-e-application",
+      "service_name_en": "District Online Forms Application",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "dc-district-e-application",
+        "service_name_en": "District Online Forms Application",
+        "service_name_bn": "জেলা অনলাইন ফর্ম/আবেদন",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Deputy Commissioner Office",
+          "deputy-commissioner-office"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "online.forms.gov.bd",
+          "district e-forms",
+          "District Online Forms Application"
+        ],
+        "official_source": "http://online.forms.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "dc-district-e-application",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "dc-district-e-application-en-procedure",
+            "query": "How do I apply for District Online Forms Application?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-district-e-application-bn-procedure",
+            "query": "জেলা অনলাইন ফর্ম/আবেদন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-district-e-application-fee",
+            "query": "What is the fee for District Online Forms Application?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-district-e-application-documents",
+            "query": "What documents are needed for District Online Forms Application?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-district-e-application-url",
+            "query": "What is the official website for District Online Forms Application?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "dc-district-e-application",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "dc-guardianship-certificate",
+      "service_name_en": "Guardianship Certificate (DC Office)",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "dc-guardianship-certificate",
+        "service_name_en": "Guardianship Certificate (DC Office)",
+        "service_name_bn": "অভিভাবকত্ব সনদ (জেলা প্রশাসক)",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Deputy Commissioner Office",
+          "deputy-commissioner-office"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "legal guardianship certificate",
+          "Guardianship Certificate (DC Office)"
+        ],
+        "official_source": "https://www.dhaka.gov.bd/en",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "dc-guardianship-certificate",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "dc-guardianship-certificate-en-procedure",
+            "query": "How do I apply for Guardianship Certificate (DC Office)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-guardianship-certificate-bn-procedure",
+            "query": "অভিভাবকত্ব সনদ (জেলা প্রশাসক) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-guardianship-certificate-fee",
+            "query": "What is the fee for Guardianship Certificate (DC Office)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-guardianship-certificate-documents",
+            "query": "What documents are needed for Guardianship Certificate (DC Office)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-guardianship-certificate-url",
+            "query": "What is the official website for Guardianship Certificate (DC Office)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "dc-guardianship-certificate",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "dc-nothi-citizen-application",
+      "service_name_en": "Nothi Citizen Application (District/DC Office)",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "dc-nothi-citizen-application",
+        "service_name_en": "Nothi Citizen Application (District/DC Office)",
+        "service_name_bn": "নথি নাগরিক আবেদন (DC/জেলা অফিস)",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Deputy Commissioner Office (via Nothi)",
+          "deputy-commissioner-office-via-nothi"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "nothi nagorik abedon",
+          "online citizen application DC",
+          "Nothi Citizen Application (District/DC Office)"
+        ],
+        "official_source": "http://nothi.gov.bd/dak_nagoriks/NagorikAbedon",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "dc-nothi-citizen-application",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "dc-nothi-citizen-application-en-procedure",
+            "query": "How do I apply for Nothi Citizen Application (District/DC Office)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-nothi-citizen-application-bn-procedure",
+            "query": "নথি নাগরিক আবেদন (DC/জেলা অফিস) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-nothi-citizen-application-fee",
+            "query": "What is the fee for Nothi Citizen Application (District/DC Office)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-nothi-citizen-application-documents",
+            "query": "What documents are needed for Nothi Citizen Application (District/DC Office)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-nothi-citizen-application-url",
+            "query": "What is the official website for Nothi Citizen Application (District/DC Office)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "dc-nothi-citizen-application",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "dc-revenue-branch-services",
+      "service_name_en": "DC Office Revenue Branch Services",
+      "category_id": "local_government",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "dc-revenue-branch-services",
+        "service_name_en": "DC Office Revenue Branch Services",
+        "service_name_bn": "জেলা প্রশাসক কার্যালয় রাজস্ব শাখা সেবা",
+        "category_id": "local_government",
+        "research_profile": "LOCAL_GOVERNMENT",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "procedure",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Deputy Commissioner Office (Revenue Branch)",
+          "deputy-commissioner-office-revenue-branch"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "landless certificate DC",
+          "citizenship certificate DC",
+          "trade licence DC",
+          "DC Office Revenue Branch Services"
+        ],
+        "official_source": "http://file-dhaka.portal.gov.bd/uploads/c744821c-aa9f-44f9-a403-07fc560350c2/61d/d71/949/61dd71949329c483376321.pdf",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "DISTRICT",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "dc-revenue-branch-services",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "dc-revenue-branch-services-en-procedure",
+            "query": "How do I apply for DC Office Revenue Branch Services?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-revenue-branch-services-bn-procedure",
+            "query": "জেলা প্রশাসক কার্যালয় রাজস্ব শাখা সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-revenue-branch-services-fee",
+            "query": "What is the fee for DC Office Revenue Branch Services?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-revenue-branch-services-documents",
+            "query": "What documents are needed for DC Office Revenue Branch Services?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "dc-revenue-branch-services-url",
+            "query": "What is the official website for DC Office Revenue Branch Services?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "dc-revenue-branch-services",
+        "profile_key": "LOCAL_GOVERNMENT",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "desco-demand-note-payment",
+      "service_name_en": "DESCO Demand Note Fee Payment",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "desco-demand-note-payment",
+        "service_name_en": "DESCO Demand Note Fee Payment",
+        "service_name_bn": "ডেসকো ডিমান্ড নোট ফি পরিশোধ",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Dhaka Electric Supply Company Limited (DESCO)",
+          "dhaka-electric-supply-company-limited-desco"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DESCO connection charge payment"
+        ],
+        "official_source": "https://ocsms.desco.org.bd/publicinfo/processflow",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "desco-demand-note-payment",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "desco-demand-note-payment-en-procedure",
+            "query": "How do I apply for DESCO Demand Note Fee Payment?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-demand-note-payment-bn-procedure",
+            "query": "ডেসকো ডিমান্ড নোট ফি পরিশোধ কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-demand-note-payment-fee",
+            "query": "What is the fee for DESCO Demand Note Fee Payment?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-demand-note-payment-documents",
+            "query": "What documents are needed for DESCO Demand Note Fee Payment?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-demand-note-payment-url",
+            "query": "What is the official website for DESCO Demand Note Fee Payment?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "desco-demand-note-payment",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "desco-emergency-service",
+      "service_name_en": "DESCO Power Interruption Emergency Service",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "desco-emergency-service",
+        "service_name_en": "DESCO Power Interruption Emergency Service",
+        "service_name_bn": "ডেসকো বিদ্যুৎ বিভ্রাট/জরুরি সেবা",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Dhaka Electric Supply Company Limited (DESCO)",
+          "dhaka-electric-supply-company-limited-desco"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DESCO emergency complaint"
+        ],
+        "official_source": "https://ocsms.desco.org.bd/home",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "desco-emergency-service",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "desco-emergency-service-en-procedure",
+            "query": "How do I apply for DESCO Power Interruption Emergency Service?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-emergency-service-bn-procedure",
+            "query": "ডেসকো বিদ্যুৎ বিভ্রাট/জরুরি সেবা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-emergency-service-fee",
+            "query": "What is the fee for DESCO Power Interruption Emergency Service?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-emergency-service-documents",
+            "query": "What documents are needed for DESCO Power Interruption Emergency Service?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-emergency-service-url",
+            "query": "What is the official website for DESCO Power Interruption Emergency Service?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "desco-emergency-service",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "desco-load-calculator",
+      "service_name_en": "DESCO Load Calculator",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "desco-load-calculator",
+        "service_name_en": "DESCO Load Calculator",
+        "service_name_bn": "ডেসকো লোড ক্যালকুলেটর",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Dhaka Electric Supply Company Limited (DESCO)",
+          "dhaka-electric-supply-company-limited-desco"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "electricity load estimate"
+        ],
+        "official_source": "https://ocsms.desco.org.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "desco-load-calculator",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "desco-load-calculator-en-procedure",
+            "query": "How do I apply for DESCO Load Calculator?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-load-calculator-bn-procedure",
+            "query": "ডেসকো লোড ক্যালকুলেটর কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-load-calculator-fee",
+            "query": "What is the fee for DESCO Load Calculator?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-load-calculator-documents",
+            "query": "What documents are needed for DESCO Load Calculator?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-load-calculator-url",
+            "query": "What is the official website for DESCO Load Calculator?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "desco-load-calculator",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "desco-load-change",
+      "service_name_en": "DESCO Load Change or Division",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "desco-load-change",
+        "service_name_en": "DESCO Load Change or Division",
+        "service_name_bn": "ডেসকো লোড পরিবর্তন/বিভাজন",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Dhaka Electric Supply Company Limited (DESCO)",
+          "dhaka-electric-supply-company-limited-desco"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "load enhancement DESCO",
+          "load reduction"
+        ],
+        "official_source": "https://ocsms.desco.org.bd/publicinfo/processflow",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "desco-load-change",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "desco-load-change-en-procedure",
+            "query": "How do I apply for DESCO Load Change or Division?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-load-change-bn-procedure",
+            "query": "ডেসকো লোড পরিবর্তন/বিভাজন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-load-change-fee",
+            "query": "What is the fee for DESCO Load Change or Division?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-load-change-documents",
+            "query": "What documents are needed for DESCO Load Change or Division?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-load-change-url",
+            "query": "What is the official website for DESCO Load Change or Division?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "desco-load-change",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "desco-meter-information-submission",
+      "service_name_en": "DESCO Meter Information Submission",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "desco-meter-information-submission",
+        "service_name_en": "DESCO Meter Information Submission",
+        "service_name_bn": "ডেসকো মিটার তথ্য জমা",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Dhaka Electric Supply Company Limited (DESCO)",
+          "dhaka-electric-supply-company-limited-desco"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "meter details upload DESCO"
+        ],
+        "official_source": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=e6fb7cdc-88e7-4a13-9917-ae22d3d91e05",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "desco-meter-information-submission",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "desco-meter-information-submission-en-procedure",
+            "query": "How do I apply for DESCO Meter Information Submission?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-meter-information-submission-bn-procedure",
+            "query": "ডেসকো মিটার তথ্য জমা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-meter-information-submission-fee",
+            "query": "What is the fee for DESCO Meter Information Submission?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-meter-information-submission-documents",
+            "query": "What documents are needed for DESCO Meter Information Submission?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-meter-information-submission-url",
+            "query": "What is the official website for DESCO Meter Information Submission?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "desco-meter-information-submission",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "desco-new-connection",
+      "service_name_en": "DESCO New Electricity Connection",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "desco-new-connection",
+        "service_name_en": "DESCO New Electricity Connection",
+        "service_name_bn": "ডেসকো নতুন বিদ্যুৎ সংযোগ",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Dhaka Electric Supply Company Limited (DESCO)",
+          "dhaka-electric-supply-company-limited-desco"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DESCO OCSMS new connection",
+          "electricity connection DESCO"
+        ],
+        "official_source": "https://ocsms.desco.org.bd/publicinfo/processflow/view?id=c16ac52e-1db4-46f1-a372-53d01ffa4b66",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "desco-new-connection",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "desco-new-connection-en-procedure",
+            "query": "How do I apply for DESCO New Electricity Connection?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-new-connection-bn-procedure",
+            "query": "ডেসকো নতুন বিদ্যুৎ সংযোগ কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-new-connection-fee",
+            "query": "What is the fee for DESCO New Electricity Connection?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-new-connection-documents",
+            "query": "What documents are needed for DESCO New Electricity Connection?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-new-connection-url",
+            "query": "What is the official website for DESCO New Electricity Connection?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "desco-new-connection",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "desco-ocsms-registration",
+      "service_name_en": "DESCO OCSMS User Registration",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "desco-ocsms-registration",
+        "service_name_en": "DESCO OCSMS User Registration",
+        "service_name_bn": "ডেসকো ওসিএসএমএস ব্যবহারকারী নিবন্ধন",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Dhaka Electric Supply Company Limited (DESCO)",
+          "dhaka-electric-supply-company-limited-desco"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "DESCO portal signup"
+        ],
+        "official_source": "https://ocsms.desco.org.bd/publicinfo/processflow",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "desco-ocsms-registration",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "desco-ocsms-registration-en-procedure",
+            "query": "How do I apply for DESCO OCSMS User Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-ocsms-registration-bn-procedure",
+            "query": "ডেসকো ওসিএসএমএস ব্যবহারকারী নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-ocsms-registration-fee",
+            "query": "What is the fee for DESCO OCSMS User Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-ocsms-registration-documents",
+            "query": "What documents are needed for DESCO OCSMS User Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-ocsms-registration-url",
+            "query": "What is the official website for DESCO OCSMS User Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "desco-ocsms-registration",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "desco-solar-document-submission",
+      "service_name_en": "DESCO Solar Document Submission",
+      "category_id": "utilities",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "desco-solar-document-submission",
+        "service_name_en": "DESCO Solar Document Submission",
+        "service_name_bn": "ডেসকো সোলার ডকুমেন্ট জমা",
+        "category_id": "utilities",
+        "research_profile": "UTILITIES",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "procedure",
+          "fees",
+          "payment"
+        ],
+        "responsible_authority_candidates": [
+          "Dhaka Electric Supply Company Limited (DESCO)",
+          "dhaka-electric-supply-company-limited-desco"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "solar connection documents DESCO"
+        ],
+        "official_source": "https://ocsms.desco.org.bd/publicinfo/processflow",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "LOCAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "desco-solar-document-submission",
+        "wave_id": "wave-006",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "desco-solar-document-submission-en-procedure",
+            "query": "How do I apply for DESCO Solar Document Submission?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-solar-document-submission-bn-procedure",
+            "query": "ডেসকো সোলার ডকুমেন্ট জমা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-solar-document-submission-fee",
+            "query": "What is the fee for DESCO Solar Document Submission?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-solar-document-submission-documents",
+            "query": "What documents are needed for DESCO Solar Document Submission?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "desco-solar-document-submission-url",
+            "query": "What is the official website for DESCO Solar Document Submission?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "desco-solar-document-submission",
+        "profile_key": "UTILITIES",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    }
+  ],
+  "status_counts": {
+    "COMPLETE": 0,
+    "PARTIAL": 20,
+    "DEFERRED": 0,
+    "BLOCKED": 0
+  },
+  "verified_claims": 52,
+  "partial_claims": 8,
+  "conflicts": 0,
+  "knowledge_gaps": 48,
+  "staging_path": "/workspace/data/research/waves/wave-006/staging",
+  "e2e_summary": {
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "answer_supported": 0
+  },
+  "regression": {
+    "passed": true,
+    "metrics": {
+      "hallucinations": 0,
+      "citation_failures": 0,
+      "batch_01_pass_pct": 100.0,
+      "passport_pass_pct": 100.0,
+      "batch_02b_pass_pct": 100.0,
+      "routing_pass_pct": 100.0,
+      "pytest_failed": 0,
+      "batch_03a_pass_pct": 100.0,
+      "batch_03b_pass_pct": 100.0,
+      "batch_03c_pass_pct": 100.0
+    },
+    "failures": [],
+    "automation_exit_code": 0
+  },
+  "wave_quality": {
+    "passed": true,
+    "wave_id": "wave-006",
+    "services_total": 20,
+    "false_completion_count": 0,
+    "services_with_sources": 20,
+    "services_with_verified_claims": 20,
+    "source_rate": 1.0,
+    "verified_rate": 1.0,
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "regression_failures": [],
+    "blocking_reasons": [],
+    "service_statuses": {
+      "civil-marriage-certificate-search": "PARTIAL",
+      "customs-asycuda-declaration": "PARTIAL",
+      "customs-bond-up-application": "PARTIAL",
+      "customs-import-export-control-licence": "PARTIAL",
+      "dc-citizen-charter-bagerhat": "PARTIAL",
+      "dc-citizen-charter-comilla": "PARTIAL",
+      "dc-citizen-charter-dhaka": "PARTIAL",
+      "dc-citizen-charter-rajshahi": "PARTIAL",
+      "dc-district-e-application": "PARTIAL",
+      "dc-guardianship-certificate": "PARTIAL",
+      "dc-nothi-citizen-application": "PARTIAL",
+      "dc-revenue-branch-services": "PARTIAL",
+      "desco-demand-note-payment": "PARTIAL",
+      "desco-emergency-service": "PARTIAL",
+      "desco-load-calculator": "PARTIAL",
+      "desco-load-change": "PARTIAL",
+      "desco-meter-information-submission": "PARTIAL",
+      "desco-new-connection": "PARTIAL",
+      "desco-ocsms-registration": "PARTIAL",
+      "desco-solar-document-submission": "PARTIAL"
+    }
+  },
+  "quality_passed": true
+}

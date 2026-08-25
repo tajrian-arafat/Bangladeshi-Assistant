@@ -1,0 +1,213 @@
+{
+  "claims": [
+    {
+      "claim_id": "land-mutation-apply::c-official-url-documented",
+      "legacy_claim_id": "c-official-url-documented",
+      "service_id": "land-mutation-apply",
+      "claim_text": "Catalogue documents official source URL https://mutation.land.gov.bd/ for Land Mutation (Namjari); independent reachability not confirmed at research time.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-land-mutation-apply::c-official-url-documented-src-land-mutation-apply-official"
+      ],
+      "source_ids": [
+        "src-land-mutation-apply-official"
+      ],
+      "source_version_ids": [
+        "sv-src-land-mutation-apply-official"
+      ],
+      "structured_value": {
+        "url": "https://mutation.land.gov.bd/"
+      },
+      "condition": null,
+      "provenance": {
+        "batch_id": "deep-research-pilot-20",
+        "discovered_at": "2026-08-25",
+        "normalized_at": "2026-08-25",
+        "publication_status": "STAGING_ONLY",
+        "research_builder": "deep_research_pipeline"
+      },
+      "independent_verification_status": "VERIFIED"
+    },
+    {
+      "claim_id": "land-mutation-apply::c-procedure-overview",
+      "legacy_claim_id": "c-procedure-overview",
+      "service_id": "land-mutation-apply",
+      "claim_text": "Land mutation (namjari) is applied through the online mutation portal or Union Land Office — submission includes deed/transfer documents and payment of applicable fees.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-land-mutation-apply::c-procedure-overview-src-land-mutation-apply-official"
+      ],
+      "source_ids": [
+        "src-land-mutation-apply-official"
+      ],
+      "source_version_ids": [
+        "sv-src-land-mutation-apply-official"
+      ],
+      "structured_value": null,
+      "condition": null,
+      "provenance": {
+        "batch_id": "deep-research-pilot-20",
+        "discovered_at": "2026-08-25",
+        "normalized_at": "2026-08-25",
+        "publication_status": "STAGING_ONLY",
+        "research_builder": "deep_research_pipeline"
+      },
+      "independent_verification_status": "VERIFIED"
+    },
+    {
+      "claim_id": "land-mutation-apply::c-document-overview",
+      "legacy_claim_id": "c-document-overview",
+      "service_id": "land-mutation-apply",
+      "claim_text": "Registered deed, kabala/donation deed, partition deed (as applicable), applicant NID, and prior khatian/dag information are typically required.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-land-mutation-apply::c-document-overview-src-land-mutation-apply-official"
+      ],
+      "source_ids": [
+        "src-land-mutation-apply-official"
+      ],
+      "source_version_ids": [
+        "sv-src-land-mutation-apply-official"
+      ],
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "provenance": {
+        "batch_id": "deep-research-pilot-20",
+        "discovered_at": "2026-08-25",
+        "normalized_at": "2026-08-25",
+        "publication_status": "STAGING_ONLY",
+        "research_builder": "deep_research_pipeline"
+      },
+      "independent_verification_status": "VERIFIED"
+    },
+    {
+      "claim_id": "land-mutation-apply::c-service-identity",
+      "legacy_claim_id": "c-service-identity",
+      "service_id": "land-mutation-apply",
+      "claim_text": "Land Mutation (Namjari) (নামজারি (মিউটেশন)) is a confirmed government service in category land, scope UPAZILA.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-land-mutation-apply::c-service-identity-src-land-mutation-apply-official"
+      ],
+      "source_ids": [
+        "src-land-mutation-apply-official"
+      ],
+      "source_version_ids": [
+        "sv-src-land-mutation-apply-official"
+      ],
+      "structured_value": null,
+      "condition": null,
+      "provenance": {
+        "batch_id": "deep-research-pilot-20",
+        "discovered_at": "2026-08-25",
+        "normalized_at": "2026-08-25",
+        "publication_status": "STAGING_ONLY",
+        "research_builder": "deep_research_pipeline"
+      },
+      "independent_verification_status": "VERIFIED"
+    },
+    {
+      "claim_id": "land-mutation-apply::c-eligibility-deep",
+      "legacy_claim_id": "c-eligibility-deep",
+      "service_id": "land-mutation-apply",
+      "claim_text": "Landowners or transferees with valid transfer documents seeking record-of-rights update after property transfer.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "NORMALIZED",
+      "confidence": 0.5,
+      "evidence_ids": [
+        "ev-land-mutation-apply::c-eligibility-deep-src-land-mutation-apply-official"
+      ],
+      "source_ids": [
+        "src-land-mutation-apply-official"
+      ],
+      "source_version_ids": [
+        "sv-src-land-mutation-apply-official"
+      ],
+      "structured_value": null,
+      "condition": null,
+      "provenance": {
+        "batch_id": "deep-research-pilot-20",
+        "discovered_at": "2026-08-25",
+        "normalized_at": "2026-08-25",
+        "publication_status": "STAGING_ONLY",
+        "research_builder": "deep_research_pipeline"
+      },
+      "independent_verification_status": "PARTIAL"
+    },
+    {
+      "claim_id": "land-mutation-apply::c-fee-deep",
+      "legacy_claim_id": "c-fee-deep",
+      "service_id": "land-mutation-apply",
+      "claim_text": "Mutation fees include government fees and local taxes — amounts vary by transfer type and assessed land value via official schedule.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL_FEE",
+      "pipeline_status": "VERIFIED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-land-mutation-apply::c-fee-deep-src-land-mutation-apply-official"
+      ],
+      "source_ids": [
+        "src-land-mutation-apply-official"
+      ],
+      "source_version_ids": [
+        "sv-src-land-mutation-apply-official"
+      ],
+      "structured_value": null,
+      "condition": null,
+      "provenance": {
+        "batch_id": "deep-research-pilot-20",
+        "discovered_at": "2026-08-25",
+        "normalized_at": "2026-08-25",
+        "publication_status": "STAGING_ONLY",
+        "research_builder": "deep_research_pipeline"
+      },
+      "independent_verification_status": "VERIFIED"
+    },
+    {
+      "claim_id": "land-mutation-apply::c-document-must-need",
+      "legacy_claim_id": "c-document-must-need",
+      "service_id": "land-mutation-apply",
+      "claim_text": "Registered deed, kabala/donation deed, partition deed (as applicable), applicant NID, and prior khatian/dag information are typically required.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "VERIFIED",
+      "confidence": 0.75,
+      "evidence_ids": [
+        "ev-land-mutation-apply::c-document-must-need-src-land-mutation-apply-official"
+      ],
+      "source_ids": [
+        "src-land-mutation-apply-official"
+      ],
+      "source_version_ids": [
+        "sv-src-land-mutation-apply-official"
+      ],
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "provenance": {
+        "batch_id": "deep-research-pilot-20",
+        "discovered_at": "2026-08-25",
+        "normalized_at": "2026-08-25",
+        "publication_status": "STAGING_ONLY",
+        "research_builder": "deep_research_pipeline"
+      },
+      "independent_verification_status": "VERIFIED"
+    }
+  ]
+}

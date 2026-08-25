@@ -1,0 +1,152 @@
+{
+  "service_id": "health-diagnostic-center-license",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Diagnostic/Pathology Center Licence",
+  "service_name_bn": "ডায়াগনostic/প্যাথলজি সেন্টার লাইসেন্স",
+  "aliases": [
+    "pathology center license",
+    "diagnostic center registration"
+  ],
+  "category_id": "health",
+  "profile_key": "HEALTH",
+  "responsible_agency": "Directorate General of Health Services (DGHS)",
+  "official_application_url": "https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "health-diagnostic-center-license::c-catalogue-authority",
+      "service_id": "health-diagnostic-center-license",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Health Services (DGHS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-diagnostic-center-license::c-official-portal",
+      "service_id": "health-diagnostic-center-license",
+      "claim_type": "application_url",
+      "claim_text": "Diagnostic/Pathology Center Licence official information is published at https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice (page title: All private Pathology/Diagnostic center Notice).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice"
+      },
+      "source_ids": [
+        "src-health-diagnostic-center-license-official"
+      ],
+      "evidence_ids": [
+        "ev-health-diagnostic-center-license::c-official-portal-src-health-diagnostic-center-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-diagnostic-center-license::c-procedure-overview",
+      "service_id": "health-diagnostic-center-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Diagnostic/Pathology Center Licence is a government service under Directorate General of Health Services (DGHS) (facility licence). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-diagnostic-center-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-diagnostic-center-license::c-service-identity",
+      "service_id": "health-diagnostic-center-license",
+      "claim_type": "eligibility",
+      "claim_text": "Diagnostic/Pathology Center Licence (ডায়াগনostic/প্যাথলজি সেন্টার লাইসেন্স) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-diagnostic-center-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-health-diagnostic-center-license-official",
+      "service_id": "health-diagnostic-center-license",
+      "url": "https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice",
+      "title": "All private Pathology/Diagnostic center Notice",
+      "authority_id": "dghs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All private Pathology/Diagnostic center Notice",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "165249a19aae8841",
+        "retrieved_at": "2026-08-25T03:19:41.701189+00:00"
+      },
+      "evidence_locator": "probe:https://old.dghs.gov.bd/index.php/en/home/1387-all-private-pathology-diagnostic-center-notice"
+    },
+    {
+      "source_id": "src-health-diagnostic-center-license-alt-1",
+      "service_id": "health-diagnostic-center-license",
+      "url": "https://dghs.gov.bd",
+      "title": "হোম | স্বাস্থ্য অধিদপ্তর",
+      "authority_id": "dghs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dghs.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | স্বাস্থ্য অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "031c2ad361ff94fc",
+        "retrieved_at": "2026-08-25T03:19:43.745622+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-health-diagnostic-center-license-fee-unverified",
+      "service_id": "health-diagnostic-center-license",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Diagnostic/Pathology Center Licence.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-diagnostic-center-license-documents-unverified",
+      "service_id": "health-diagnostic-center-license",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Diagnostic/Pathology Center Licence.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

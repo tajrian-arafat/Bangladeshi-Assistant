@@ -1,0 +1,1162 @@
+{
+  "generated_from": "data/evaluation/batch-02b-police-immigration/results.jsonl",
+  "total": 67,
+  "outcome_counts": {
+    "ANSWER_SUPPORTED": 25,
+    "CORRECT_UNCERTAINTY": 22,
+    "PRODUCT_FAILURE": 15,
+    "CORRECT_REFUSAL": 3,
+    "CLARIFICATION_REQUIRED": 2
+  },
+  "product_failure_count": 15,
+  "records": [
+    {
+      "id": "b001",
+      "query": "Police clearance er fee koto?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b002",
+      "query": "Online PCC fee koto?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b003",
+      "query": "Offline police clearance fee?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b004",
+      "query": "Online GD kora jay?",
+      "category": "GENERAL_DIARY",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b005",
+      "query": "Shob dhoroner GD online kora jay?",
+      "category": "GENERAL_DIARY",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b006",
+      "query": "Police passport verification koto din?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b007",
+      "query": "Police clearance pete koto din?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b008",
+      "query": "Employment verification koto din?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b009",
+      "query": "Bangladesh visa application kothay?",
+      "category": "VISA",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "migration-visa-application-dip",
+      "actual_service": "migration-visa-application-dip",
+      "expected_intent": "application_url",
+      "actual_intent": "office_locator",
+      "expected_claim_types": [
+        "application_url"
+      ],
+      "actual_claim_types": [
+        "application_url"
+      ],
+      "root_cause": "intent_classification (LANGUAGE_BUG)",
+      "reasons": [
+        "intent mismatch: expected=application_url got=office_locator"
+      ],
+      "failure_class": "LANGUAGE_BUG"
+    },
+    {
+      "id": "b010",
+      "query": "MRV fee koto?",
+      "category": "VISA",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b011",
+      "query": "PCC apply https://fake-police-gov.example/pcc",
+      "category": "ANTI_HALLUCINATION",
+      "outcome": "CORRECT_REFUSAL",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b012",
+      "query": "পুলিশ ক্লিয়ারেন্স অনলাইনে কোথায়?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b013",
+      "query": "Online police clearance 1500 taka right?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b014",
+      "query": "PCC er jonno passport koto din valid thakte hobe?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-clearance-certificate",
+      "actual_service": "police-clearance-certificate",
+      "expected_intent": "eligibility_inquiry",
+      "actual_intent": "processing_time",
+      "expected_claim_types": [
+        "eligibility"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "intent_classification (LANGUAGE_BUG)",
+      "reasons": [
+        "intent mismatch: expected=eligibility_inquiry got=processing_time"
+      ],
+      "failure_class": "LANGUAGE_BUG"
+    },
+    {
+      "id": "b015",
+      "query": "Bangladesh e job er jonno PCC online kora jay?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b016",
+      "query": "পুলিশ ক্লিয়ারেন্স ফি ৫০০ টাকা তো?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b017",
+      "query": "police clearence fee",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b018",
+      "query": "follow up: online channel?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-clearance-certificate",
+      "actual_service": "epassport-new-application",
+      "expected_intent": "fee_inquiry",
+      "actual_intent": "general_info",
+      "expected_claim_types": [
+        "fee"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "processing_time"
+      ],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-clearance-certificate got=epassport-new-application",
+        "intent mismatch: expected=fee_inquiry got=general_info",
+        "online PCC BDT 1500 not shown for online-channel query"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b019",
+      "query": "PCC expatriate authorization letter lagbe?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b020",
+      "query": "Offline paper PCC application kivabe?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b021",
+      "query": "GD free?",
+      "category": "GENERAL_DIARY",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b022",
+      "query": "জিডি করতে কত দিন লাগে?",
+      "category": "GENERAL_DIARY",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary",
+      "actual_service": "police-general-diary",
+      "expected_intent": "processing_time",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "processing_time"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "intent_classification (LANGUAGE_BUG)",
+      "reasons": [
+        "intent mismatch: expected=processing_time got=procedure_inquiry"
+      ],
+      "failure_class": "LANGUAGE_BUG"
+    },
+    {
+      "id": "b023",
+      "query": "GD korar jonno NID lagbe?",
+      "category": "GENERAL_DIARY",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary-online",
+      "actual_service": null,
+      "expected_intent": "document_list",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "document",
+        "conditional_document"
+      ],
+      "actual_claim_types": [],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-general-diary-online got=None",
+        "intent mismatch: expected=document_list got=procedure_inquiry"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b024",
+      "query": "Can I file GD at any police station?",
+      "category": "GENERAL_DIARY",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b025",
+      "query": "online gd lost mobile",
+      "category": "GENERAL_DIARY",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary-online",
+      "actual_service": "police-general-diary-online",
+      "expected_intent": "procedure_inquiry",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "procedure_step",
+        "application_url"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "intent_classification (OTHER)",
+      "reasons": [
+        "intent mismatch: expected=procedure_inquiry got=document_list"
+      ],
+      "failure_class": "OTHER"
+    },
+    {
+      "id": "b026",
+      "query": "All GD types nationwide online from Sep 2025?",
+      "category": "GENERAL_DIARY",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b027",
+      "query": "genaral diary online url",
+      "category": "GENERAL_DIARY",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary-online",
+      "actual_service": "police-general-diary-online",
+      "expected_intent": "application_url",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "application_url"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "intent_classification (LANGUAGE_BUG)",
+      "reasons": [
+        "intent mismatch: expected=application_url got=procedure_inquiry"
+      ],
+      "failure_class": "LANGUAGE_BUG"
+    },
+    {
+      "id": "b028",
+      "query": "follow up: thana teo jay?",
+      "category": "GENERAL_DIARY",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b029",
+      "query": "Urgent passport verification SLA?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-passport-verification",
+      "actual_service": "epassport-urgent-super-express",
+      "expected_intent": "processing_time",
+      "actual_intent": "processing_time",
+      "expected_claim_types": [
+        "processing_time"
+      ],
+      "actual_claim_types": [
+        "application_url"
+      ],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-passport-verification got=epassport-urgent-super-express"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b030",
+      "query": "Passport verification fee amount?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b031",
+      "query": "Employment verification kothay korte hobe?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b032",
+      "query": "চাকরির ভেরিফিকেশন ফি কত?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b033",
+      "query": "Is passport verification same as online PCC?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-passport-verification",
+      "actual_service": "police-clearance-certificate",
+      "expected_intent": "general_info",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "other",
+        "office"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-passport-verification got=police-clearance-certificate",
+        "intent mismatch: expected=general_info got=procedure_inquiry"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b034",
+      "query": "NID diye police verification",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b035",
+      "query": "Police clearance 15 days processing time?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b036",
+      "query": "District SB passport verification office",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b037",
+      "query": "e passport police verification pathway",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b038",
+      "query": "Department of Immigration and Passports responsible for what?",
+      "category": "IMMIGRATION",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "migration-visa-application-dip",
+      "actual_service": "migration-visa-application-dip",
+      "expected_intent": "general_info",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "other",
+        "office"
+      ],
+      "actual_claim_types": [
+        "application_url"
+      ],
+      "root_cause": "intent_classification (OTHER)",
+      "reasons": [
+        "intent mismatch: expected=general_info got=document_list"
+      ],
+      "failure_class": "OTHER"
+    },
+    {
+      "id": "b039",
+      "query": "DIP visa types documents list",
+      "category": "IMMIGRATION",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b040",
+      "query": "immigration department Bangladesh contact",
+      "category": "IMMIGRATION",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b041",
+      "query": "প্রবাসীদের জন্য ইমিগ্রেশন সেবা",
+      "category": "IMMIGRATION",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b042",
+      "query": "foreigner entry visa Bangladesh authority",
+      "category": "IMMIGRATION",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b043",
+      "query": "Apply Bangladesh visa online visa.gov.bd",
+      "category": "VISA",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b044",
+      "query": "MRV visa fee BDT 5000?",
+      "category": "VISA",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b045",
+      "query": "Tourist visa Bangladesh documents needed",
+      "category": "VISA",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b046",
+      "query": "business visa Bangladesh apply",
+      "category": "VISA",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "migration-visa-application-dip",
+      "actual_service": null,
+      "expected_intent": "procedure_inquiry",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "procedure_step",
+        "application_url"
+      ],
+      "actual_claim_types": [],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=migration-visa-application-dip got=None",
+        "missing official URL containing dip.gov.bd",
+        "missing official URL containing dip.gov.bd"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b047",
+      "query": "visa types essential documents DIP",
+      "category": "VISA",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b048",
+      "query": "MRV online application procedure",
+      "category": "VISA",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b049",
+      "query": "ভিসা ফি কত টাকা?",
+      "category": "VISA",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b050",
+      "query": "Expatriate cell police services",
+      "category": "EXPATRIATE",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-expatriate-services",
+      "actual_service": "police-expatriate-services",
+      "expected_intent": "general_info",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "other",
+        "office"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee",
+        "processing_time"
+      ],
+      "root_cause": "intent_classification (OTHER)",
+      "reasons": [
+        "intent mismatch: expected=general_info got=document_list"
+      ],
+      "failure_class": "OTHER"
+    },
+    {
+      "id": "b051",
+      "query": "প্রবাসী সেল সেবা বিনামূল্যে?",
+      "category": "EXPATRIATE",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b052",
+      "query": "probashi cell PCC help",
+      "category": "EXPATRIATE",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b053",
+      "query": "Expatriate authorization letter for PCC collection",
+      "category": "EXPATRIATE",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b054",
+      "query": "abroad theke PCC representative",
+      "category": "EXPATRIATE",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b055",
+      "query": "Expatriate cell responsible AIG",
+      "category": "EXPATRIATE",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-expatriate-services",
+      "actual_service": "police-expatriate-services",
+      "expected_intent": "general_info",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "other",
+        "office"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee",
+        "processing_time"
+      ],
+      "root_cause": "intent_classification (OTHER)",
+      "reasons": [
+        "intent mismatch: expected=general_info got=document_list"
+      ],
+      "failure_class": "OTHER"
+    },
+    {
+      "id": "b056",
+      "query": "Firearms license processing time Bangladesh",
+      "category": "FIREARMS",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b057",
+      "query": "আগ্নেয়াস্ত্র লাইসেন্স কোথায়?",
+      "category": "FIREARMS",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b058",
+      "query": "gun license fee Bangladesh police",
+      "category": "FIREARMS",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b059",
+      "query": "fire arms license documents list",
+      "category": "FIREARMS",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-firearms-license",
+      "actual_service": "driving-licence-renewal",
+      "expected_intent": "document_list",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "document",
+        "conditional_document"
+      ],
+      "actual_claim_types": [],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-firearms-license got=driving-licence-renewal"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b060",
+      "query": "firearms license SP DSB responsible",
+      "category": "FIREARMS",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b061",
+      "query": "PCC universal fee 1500 for all channels",
+      "category": "ANTI_HALLUCINATION",
+      "outcome": "CORRECT_UNCERTAINTY",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b062",
+      "query": "GD all complaint types online nationwide official",
+      "category": "ANTI_HALLUCINATION",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary-online",
+      "actual_service": "police-general-diary",
+      "expected_intent": "procedure_inquiry",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "procedure_step",
+        "application_url"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-general-diary-online got=police-general-diary"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b063",
+      "query": "Employment verification fee BDT 200",
+      "category": "ANTI_HALLUCINATION",
+      "outcome": "ANSWER_SUPPORTED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b064",
+      "query": "MRV tourist visa fee USD 51 confirmed",
+      "category": "ANTI_HALLUCINATION",
+      "outcome": "CORRECT_REFUSAL",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b065",
+      "query": "https://fake-dip-visa.example/apply Bangladesh visa",
+      "category": "ANTI_HALLUCINATION",
+      "outcome": "CORRECT_REFUSAL",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b066",
+      "query": "police",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "CLARIFICATION_REQUIRED",
+      "pass": true,
+      "counts_as_product_failure": false
+    },
+    {
+      "id": "b067",
+      "query": "পুলিশ",
+      "category": "GENERAL_DIARY",
+      "outcome": "CLARIFICATION_REQUIRED",
+      "pass": true,
+      "counts_as_product_failure": false
+    }
+  ],
+  "product_failures": [
+    {
+      "id": "b009",
+      "query": "Bangladesh visa application kothay?",
+      "category": "VISA",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "migration-visa-application-dip",
+      "actual_service": "migration-visa-application-dip",
+      "expected_intent": "application_url",
+      "actual_intent": "office_locator",
+      "expected_claim_types": [
+        "application_url"
+      ],
+      "actual_claim_types": [
+        "application_url"
+      ],
+      "root_cause": "intent_classification (LANGUAGE_BUG)",
+      "reasons": [
+        "intent mismatch: expected=application_url got=office_locator"
+      ],
+      "failure_class": "LANGUAGE_BUG"
+    },
+    {
+      "id": "b014",
+      "query": "PCC er jonno passport koto din valid thakte hobe?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-clearance-certificate",
+      "actual_service": "police-clearance-certificate",
+      "expected_intent": "eligibility_inquiry",
+      "actual_intent": "processing_time",
+      "expected_claim_types": [
+        "eligibility"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "intent_classification (LANGUAGE_BUG)",
+      "reasons": [
+        "intent mismatch: expected=eligibility_inquiry got=processing_time"
+      ],
+      "failure_class": "LANGUAGE_BUG"
+    },
+    {
+      "id": "b018",
+      "query": "follow up: online channel?",
+      "category": "POLICE_CLEARANCE",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-clearance-certificate",
+      "actual_service": "epassport-new-application",
+      "expected_intent": "fee_inquiry",
+      "actual_intent": "general_info",
+      "expected_claim_types": [
+        "fee"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "processing_time"
+      ],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-clearance-certificate got=epassport-new-application",
+        "intent mismatch: expected=fee_inquiry got=general_info",
+        "online PCC BDT 1500 not shown for online-channel query"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b022",
+      "query": "জিডি করতে কত দিন লাগে?",
+      "category": "GENERAL_DIARY",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary",
+      "actual_service": "police-general-diary",
+      "expected_intent": "processing_time",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "processing_time"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "intent_classification (LANGUAGE_BUG)",
+      "reasons": [
+        "intent mismatch: expected=processing_time got=procedure_inquiry"
+      ],
+      "failure_class": "LANGUAGE_BUG"
+    },
+    {
+      "id": "b023",
+      "query": "GD korar jonno NID lagbe?",
+      "category": "GENERAL_DIARY",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary-online",
+      "actual_service": null,
+      "expected_intent": "document_list",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "document",
+        "conditional_document"
+      ],
+      "actual_claim_types": [],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-general-diary-online got=None",
+        "intent mismatch: expected=document_list got=procedure_inquiry"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b025",
+      "query": "online gd lost mobile",
+      "category": "GENERAL_DIARY",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary-online",
+      "actual_service": "police-general-diary-online",
+      "expected_intent": "procedure_inquiry",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "procedure_step",
+        "application_url"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "intent_classification (OTHER)",
+      "reasons": [
+        "intent mismatch: expected=procedure_inquiry got=document_list"
+      ],
+      "failure_class": "OTHER"
+    },
+    {
+      "id": "b027",
+      "query": "genaral diary online url",
+      "category": "GENERAL_DIARY",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary-online",
+      "actual_service": "police-general-diary-online",
+      "expected_intent": "application_url",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "application_url"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "intent_classification (LANGUAGE_BUG)",
+      "reasons": [
+        "intent mismatch: expected=application_url got=procedure_inquiry"
+      ],
+      "failure_class": "LANGUAGE_BUG"
+    },
+    {
+      "id": "b029",
+      "query": "Urgent passport verification SLA?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-passport-verification",
+      "actual_service": "epassport-urgent-super-express",
+      "expected_intent": "processing_time",
+      "actual_intent": "processing_time",
+      "expected_claim_types": [
+        "processing_time"
+      ],
+      "actual_claim_types": [
+        "application_url"
+      ],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-passport-verification got=epassport-urgent-super-express"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b033",
+      "query": "Is passport verification same as online PCC?",
+      "category": "POLICE_VERIFICATION",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-passport-verification",
+      "actual_service": "police-clearance-certificate",
+      "expected_intent": "general_info",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "other",
+        "office"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-passport-verification got=police-clearance-certificate",
+        "intent mismatch: expected=general_info got=procedure_inquiry"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b038",
+      "query": "Department of Immigration and Passports responsible for what?",
+      "category": "IMMIGRATION",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "migration-visa-application-dip",
+      "actual_service": "migration-visa-application-dip",
+      "expected_intent": "general_info",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "other",
+        "office"
+      ],
+      "actual_claim_types": [
+        "application_url"
+      ],
+      "root_cause": "intent_classification (OTHER)",
+      "reasons": [
+        "intent mismatch: expected=general_info got=document_list"
+      ],
+      "failure_class": "OTHER"
+    },
+    {
+      "id": "b046",
+      "query": "business visa Bangladesh apply",
+      "category": "VISA",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "migration-visa-application-dip",
+      "actual_service": null,
+      "expected_intent": "procedure_inquiry",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "procedure_step",
+        "application_url"
+      ],
+      "actual_claim_types": [],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=migration-visa-application-dip got=None",
+        "missing official URL containing dip.gov.bd",
+        "missing official URL containing dip.gov.bd"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b050",
+      "query": "Expatriate cell police services",
+      "category": "EXPATRIATE",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-expatriate-services",
+      "actual_service": "police-expatriate-services",
+      "expected_intent": "general_info",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "other",
+        "office"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee",
+        "processing_time"
+      ],
+      "root_cause": "intent_classification (OTHER)",
+      "reasons": [
+        "intent mismatch: expected=general_info got=document_list"
+      ],
+      "failure_class": "OTHER"
+    },
+    {
+      "id": "b055",
+      "query": "Expatriate cell responsible AIG",
+      "category": "EXPATRIATE",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-expatriate-services",
+      "actual_service": "police-expatriate-services",
+      "expected_intent": "general_info",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "other",
+        "office"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee",
+        "processing_time"
+      ],
+      "root_cause": "intent_classification (OTHER)",
+      "reasons": [
+        "intent mismatch: expected=general_info got=document_list"
+      ],
+      "failure_class": "OTHER"
+    },
+    {
+      "id": "b059",
+      "query": "fire arms license documents list",
+      "category": "FIREARMS",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-firearms-license",
+      "actual_service": "driving-licence-renewal",
+      "expected_intent": "document_list",
+      "actual_intent": "document_list",
+      "expected_claim_types": [
+        "document",
+        "conditional_document"
+      ],
+      "actual_claim_types": [],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-firearms-license got=driving-licence-renewal"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    },
+    {
+      "id": "b062",
+      "query": "GD all complaint types online nationwide official",
+      "category": "ANTI_HALLUCINATION",
+      "outcome": "PRODUCT_FAILURE",
+      "pass": false,
+      "counts_as_product_failure": true,
+      "expected_service": "police-general-diary-online",
+      "actual_service": "police-general-diary",
+      "expected_intent": "procedure_inquiry",
+      "actual_intent": "procedure_inquiry",
+      "expected_claim_types": [
+        "procedure_step",
+        "application_url"
+      ],
+      "actual_claim_types": [
+        "application_url",
+        "fee"
+      ],
+      "root_cause": "service_routing (RETRIEVAL_BUG)",
+      "reasons": [
+        "service mismatch: expected=police-general-diary-online got=police-general-diary"
+      ],
+      "failure_class": "RETRIEVAL_BUG"
+    }
+  ]
+}

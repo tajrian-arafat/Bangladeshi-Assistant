@@ -1,0 +1,140 @@
+{
+  "service_id": "local-marital-status-certificate",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Marital Status Certificate",
+  "service_name_bn": "বিবাহিত/অবিবাহিত/তালাকপ্রাপ্ত সনদ",
+  "aliases": [
+    "unmarried certificate",
+    "married certificate",
+    "divorce certificate union"
+  ],
+  "category_id": "certificates",
+  "profile_key": "OTHER",
+  "responsible_agency": "Union Parishad",
+  "official_application_url": "https://www.palshaup.gov.bd/new/application/citizen/17",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "local-marital-status-certificate::c-catalogue-authority",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-marital-status-certificate::c-official-url-documented",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.palshaup.gov.bd/new/application/citizen/17 for Marital Status Certificate; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.palshaup.gov.bd/new/application/citizen/17"
+      },
+      "source_ids": [
+        "src-local-marital-status-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-marital-status-certificate::c-procedure-overview",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Marital Status Certificate is a government service under Union Parishad (marital status). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-marital-status-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-marital-status-certificate::c-service-identity",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Marital Status Certificate (বিবাহিত/অবিবাহিত/তালাকপ্রাপ্ত সনদ) is a confirmed government service in category certificates, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-marital-status-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-local-marital-status-certificate-official",
+      "service_id": "local-marital-status-certificate",
+      "url": "https://www.palshaup.gov.bd/new/application/citizen/17",
+      "title": "Checking your browser before accessing. Just a moment...",
+      "authority_id": "union-parishad",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.palshaup.gov.bd/new/application/citizen/17",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Checking your browser before accessing. Just a moment...",
+        "content_type": "text/html",
+        "content_hash": "fede7a249c4505a4",
+        "retrieved_at": "2026-08-25T03:28:22.838511+00:00"
+      },
+      "evidence_locator": "probe:https://www.palshaup.gov.bd/new/application/citizen/17"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-local-marital-status-certificate-portal-unreachable",
+      "service_id": "local-marital-status-certificate",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Marital Status Certificate.",
+      "severity": "MEDIUM",
+      "url": "https://www.palshaup.gov.bd/new/application/citizen/17"
+    },
+    {
+      "gap_id": "gap-local-marital-status-certificate-fee-unverified",
+      "service_id": "local-marital-status-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Marital Status Certificate.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-marital-status-certificate-documents-unverified",
+      "service_id": "local-marital-status-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Marital Status Certificate.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

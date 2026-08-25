@@ -1,0 +1,19 @@
+{
+  "service_id": "tax-clearance-foreigners",
+  "gaps": [
+    {
+      "gap_id": "gap-tax-clearance-foreigners-fee-unverified",
+      "service_id": "tax-clearance-foreigners",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Tax Clearance Certificate for Foreigners.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-clearance-foreigners-documents-unverified",
+      "service_id": "tax-clearance-foreigners",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Tax Clearance Certificate for Foreigners.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

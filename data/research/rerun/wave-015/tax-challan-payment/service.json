@@ -1,0 +1,171 @@
+{
+  "service_id": "tax-challan-payment",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Tax/VAT Challan Payment",
+  "service_name_bn": "কর/ভ্যাট চালান পরিশোধ",
+  "aliases": [
+    "online chalan",
+    "government payment NBR"
+  ],
+  "category_id": "government_payments",
+  "profile_key": "TAX",
+  "responsible_agency": "National Board of Revenue (NBR)",
+  "official_application_url": "https://nbr.gov.bd/all-eservices/eng",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "tax-challan-payment::c-catalogue-authority",
+      "service_id": "tax-challan-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-challan-payment::c-official-portal",
+      "service_id": "tax-challan-payment",
+      "claim_type": "application_url",
+      "claim_text": "Tax/VAT Challan Payment official information is published at https://nbr.gov.bd/all-eservices/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/all-eservices/eng"
+      },
+      "source_ids": [
+        "src-tax-challan-payment-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-challan-payment::c-official-portal-src-tax-challan-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-challan-payment::c-procedure-overview",
+      "service_id": "tax-challan-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "Tax/VAT Challan Payment is a government service under National Board of Revenue (NBR) (challan). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-challan-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-challan-payment::c-service-identity",
+      "service_id": "tax-challan-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Tax/VAT Challan Payment (কর/ভ্যাট চালান পরিশোধ) is a confirmed government service in category government_payments, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-challan-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-tax-challan-payment-official",
+      "service_id": "tax-challan-payment",
+      "url": "https://nbr.gov.bd/all-eservices/eng",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/all-eservices/eng",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "f0b1374c2afca7b9",
+        "retrieved_at": "2026-08-25T03:36:39.047507+00:00"
+      },
+      "evidence_locator": "probe:https://nbr.gov.bd/all-eservices/eng"
+    },
+    {
+      "source_id": "src-tax-challan-payment-alt-1",
+      "service_id": "tax-challan-payment",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:36:40.417925+00:00"
+      }
+    },
+    {
+      "source_id": "src-tax-challan-payment-alt-2",
+      "service_id": "tax-challan-payment",
+      "url": "https://incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "7dbc0d79e88c33d2",
+        "retrieved_at": "2026-08-25T03:36:42.483309+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-tax-challan-payment-fee-unverified",
+      "service_id": "tax-challan-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Tax/VAT Challan Payment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-challan-payment-documents-unverified",
+      "service_id": "tax-challan-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Tax/VAT Challan Payment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

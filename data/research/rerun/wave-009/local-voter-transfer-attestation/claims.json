@@ -1,0 +1,72 @@
+{
+  "service_id": "local-voter-transfer-attestation",
+  "claims": [
+    {
+      "claim_id": "local-voter-transfer-attestation::c-catalogue-authority",
+      "service_id": "local-voter-transfer-attestation",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-voter-transfer-attestation::c-official-portal",
+      "service_id": "local-voter-transfer-attestation",
+      "claim_type": "application_url",
+      "claim_text": "Voter Area Transfer Attestation official information is published at https://tilokpursonod.gov.bd/select_certificate/ (page title: তিলকপুর ইউনিয়ন).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://tilokpursonod.gov.bd/select_certificate/"
+      },
+      "source_ids": [
+        "src-local-voter-transfer-attestation-official"
+      ],
+      "evidence_ids": [
+        "ev-local-voter-transfer-attestation::c-official-portal-src-local-voter-transfer-attestation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-voter-transfer-attestation::c-procedure-overview",
+      "service_id": "local-voter-transfer-attestation",
+      "claim_type": "procedure_step",
+      "claim_text": "Voter Area Transfer Attestation is a government service under Union Parishad (voter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-voter-transfer-attestation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-voter-transfer-attestation::c-service-identity",
+      "service_id": "local-voter-transfer-attestation",
+      "claim_type": "eligibility",
+      "claim_text": "Voter Area Transfer Attestation (ভোটার এলাকা স্থানান্তর প্রত্যয়ন) is a confirmed government service in category certificates, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-voter-transfer-attestation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "service_id": "ff-g2p-electronic-payment",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-ff-g2p-electronic-payment-fee-unverified",
+      "service_id": "ff-g2p-electronic-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Freedom Fighter Allowance G2P Electronic Payment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-ff-g2p-electronic-payment-documents-unverified",
+      "service_id": "ff-g2p-electronic-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Freedom Fighter Allowance G2P Electronic Payment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

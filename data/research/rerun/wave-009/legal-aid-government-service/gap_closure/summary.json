@@ -1,0 +1,20 @@
+{
+  "service_id": "legal-aid-government-service",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-legal-aid-government-service-fee-unverified",
+      "service_id": "legal-aid-government-service",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Government-funded Legal Aid Service.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-legal-aid-government-service-documents-unverified",
+      "service_id": "legal-aid-government-service",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Government-funded Legal Aid Service.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

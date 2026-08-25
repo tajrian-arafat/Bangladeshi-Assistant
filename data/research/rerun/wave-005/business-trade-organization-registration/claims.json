@@ -1,0 +1,70 @@
+{
+  "service_id": "business-trade-organization-registration",
+  "claims": [
+    {
+      "claim_id": "business-trade-organization-registration::c-catalogue-authority",
+      "service_id": "business-trade-organization-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Registrar of Joint Stock Companies and Firms (RJSC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-trade-organization-registration::c-official-url-documented",
+      "service_id": "business-trade-organization-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://app.roc.gov.bd/Guidlines/Introduction.htm for Trade Organization Registration; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm"
+      },
+      "source_ids": [
+        "src-business-trade-organization-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-trade-organization-registration::c-procedure-overview",
+      "service_id": "business-trade-organization-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Trade Organization Registration is a government service under Registrar of Joint Stock Companies and Firms (RJSC) (trade organization). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-trade-organization-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-trade-organization-registration::c-service-identity",
+      "service_id": "business-trade-organization-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Trade Organization Registration (ট্রেড অর্গানাইজেশন নিবন্ধন) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-trade-organization-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

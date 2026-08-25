@@ -1,0 +1,44 @@
+{
+  "service_id": "health-bmdc-full-registration",
+  "batch_id": "batch-07-health",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "BMDC Full Registration (MBBS/BDS)",
+  "service_name_bn": "BMDC পূর্ণ নিবন্ধন (MBBS/BDS)",
+  "aliases": [
+    "medical council registration",
+    "doctor registration"
+  ],
+  "category_id": "health",
+  "responsible_agency": "Bangladesh Medical and Dental Council (BMDC)",
+  "official_application_url": "https://payment.bmdc.org.bd/home/page/form-list",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "health-bmdc-full-registration::c-application-portal",
+      "service_id": "health-bmdc-full-registration",
+      "claim_type": "application_url",
+      "claim_text": "BMDC Full Registration (MBBS/BDS) is associated with NBR e-service portal https://payment.bmdc.org.bd/home/page/form-list.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-health-bmdc-full-registration",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-full-registration::c-responsible-authority",
+      "service_id": "health-bmdc-full-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Medical and Dental Council (BMDC).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "service_id": "snp-national-service",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-snp-national-service-fee-unverified",
+      "service_id": "snp-national-service",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for National Service.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-national-service-documents-unverified",
+      "service_id": "snp-national-service",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for National Service.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

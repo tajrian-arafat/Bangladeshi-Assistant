@@ -1,0 +1,136 @@
+{
+  "service_id": "business-name-clearance",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Company Name Clearance",
+  "service_name_bn": "নাম অনুমোদন (Name Clearance)",
+  "aliases": [
+    "NC",
+    "name clearance certificate"
+  ],
+  "category_id": "business",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Registrar of Joint Stock Companies and Firms (RJSC)",
+  "official_application_url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "business-name-clearance::c-catalogue-authority",
+      "service_id": "business-name-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Registrar of Joint Stock Companies and Firms (RJSC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-name-clearance::c-official-url-documented",
+      "service_id": "business-name-clearance",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm for Company Name Clearance; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm"
+      },
+      "source_ids": [
+        "src-business-name-clearance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-name-clearance::c-procedure-overview",
+      "service_id": "business-name-clearance",
+      "claim_type": "procedure_step",
+      "claim_text": "Company Name Clearance is a government service under Registrar of Joint Stock Companies and Firms (RJSC) (name clearance). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-name-clearance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-name-clearance::c-service-identity",
+      "service_id": "business-name-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "Company Name Clearance (নাম অনুমোদন (Name Clearance)) is a confirmed government service in category business, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-name-clearance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-business-name-clearance-official",
+      "service_id": "business-name-clearance",
+      "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
+      "title": "Company Name Clearance",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:24:15.451866+00:00"
+      },
+      "evidence_locator": "probe:https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-business-name-clearance-portal-unreachable",
+      "service_id": "business-name-clearance",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Company Name Clearance.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm"
+    },
+    {
+      "gap_id": "gap-business-name-clearance-fee-unverified",
+      "service_id": "business-name-clearance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Company Name Clearance.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-name-clearance-documents-unverified",
+      "service_id": "business-name-clearance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Company Name Clearance.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

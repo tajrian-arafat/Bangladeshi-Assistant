@@ -1,0 +1,319 @@
+{
+  "generated_at": "2026-08-25T04:26:30.380374+00:00",
+  "services": [
+    {
+      "service_id": "nid-download-copy",
+      "service_name_en": "Download NID Card Copy",
+      "category_id": "identity",
+      "profile_key": "IDENTITY_CIVIL",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE"
+      ],
+      "selection_score": 59,
+      "pilot_role": "high_usage"
+    },
+    {
+      "service_id": "education-hsc-certificate",
+      "service_name_en": "HSC Certificate Issuance",
+      "category_id": "education",
+      "profile_key": "EDUCATION",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "LOCAL_VARIATION"
+      ],
+      "selection_score": 69,
+      "pilot_role": "high_usage"
+    },
+    {
+      "service_id": "local-passport-attestation",
+      "service_name_en": "Passport-related Attestation (Union)",
+      "category_id": "certificates",
+      "profile_key": "OTHER",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE"
+      ],
+      "selection_score": 59,
+      "pilot_role": "high_usage"
+    },
+    {
+      "service_id": "tax-etin-registration",
+      "service_name_en": "e-TIN Registration",
+      "category_id": "tax",
+      "profile_key": "TAX",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_PAYMENT",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE"
+      ],
+      "selection_score": 59,
+      "pilot_role": "high_usage"
+    },
+    {
+      "service_id": "customs-import-export-control-licence",
+      "service_name_en": "Import/Export Control Licence",
+      "category_id": "customs",
+      "profile_key": "CUSTOMS",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_LEGAL_BASIS",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "JS_RENDERING_LIMITATION"
+      ],
+      "selection_score": 64,
+      "pilot_role": "high_risk"
+    },
+    {
+      "service_id": "permits-fire-noc-enoc",
+      "service_name_en": "Fire Service No Objection Certificate (e-NOC)",
+      "category_id": "permits",
+      "profile_key": "OTHER",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "JS_RENDERING_LIMITATION"
+      ],
+      "selection_score": 64,
+      "pilot_role": "high_risk"
+    },
+    {
+      "service_id": "nid-combined-correction",
+      "service_name_en": "Combined NID and Other Information Correction",
+      "category_id": "identity",
+      "profile_key": "IDENTITY_CIVIL",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "MISSING_FRESHNESS"
+      ],
+      "selection_score": 54,
+      "pilot_role": "high_risk"
+    },
+    {
+      "service_id": "land-deed-registration",
+      "service_name_en": "Deed Registration (Sub-Registry)",
+      "category_id": "land",
+      "profile_key": "LAND",
+      "partial_reasons": [
+        "MISSING_FEES",
+        "MISSING_OFFICE_LOCATION",
+        "MISSING_GEOGRAPHIC_VARIATION",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "LOCAL_VARIATION"
+      ],
+      "selection_score": 24,
+      "pilot_role": "land"
+    },
+    {
+      "service_id": "land-khatian-online-copy",
+      "service_name_en": "Online Khatian Copy",
+      "category_id": "land",
+      "profile_key": "LAND",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_OFFICE_LOCATION",
+        "MISSING_GEOGRAPHIC_VARIATION",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "LOCAL_VARIATION"
+      ],
+      "selection_score": 39,
+      "pilot_role": "land"
+    },
+    {
+      "service_id": "education-class-registration",
+      "service_name_en": "Class IX/XI Board Registration",
+      "category_id": "education",
+      "profile_key": "EDUCATION",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "LOCAL_VARIATION"
+      ],
+      "selection_score": 39,
+      "pilot_role": "education"
+    },
+    {
+      "service_id": "health-16263-telemedicine",
+      "service_name_en": "16263 Telemedicine Health Advice",
+      "category_id": "health",
+      "profile_key": "HEALTH",
+      "partial_reasons": [
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE"
+      ],
+      "selection_score": 14,
+      "pilot_role": "health"
+    },
+    {
+      "service_id": "agri-bamis-farmer-registration",
+      "service_name_en": "BAMIS Farmer Registration",
+      "category_id": "agriculture",
+      "profile_key": "AGRICULTURE",
+      "partial_reasons": [
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE"
+      ],
+      "selection_score": 14,
+      "pilot_role": "agriculture"
+    },
+    {
+      "service_id": "employment-boesl-overseas-recruitment",
+      "service_name_en": "BOESL Overseas Job Seeker Registration",
+      "category_id": "employment",
+      "profile_key": "EMPLOYMENT",
+      "partial_reasons": [
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "JS_RENDERING_LIMITATION"
+      ],
+      "selection_score": 24,
+      "pilot_role": "employment"
+    },
+    {
+      "service_id": "dc-attestation-photocopy",
+      "service_name_en": "DC Office Document Attestation/Photocopy Certification",
+      "category_id": "local_government",
+      "profile_key": "LOCAL_GOVERNMENT",
+      "partial_reasons": [
+        "MISSING_FEES",
+        "MISSING_OFFICE_LOCATION",
+        "MISSING_GEOGRAPHIC_VARIATION",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "LOCAL_VARIATION"
+      ],
+      "selection_score": 24,
+      "pilot_role": "local_gov"
+    },
+    {
+      "service_id": "ff-g2p-electronic-payment",
+      "service_name_en": "Freedom Fighter Allowance G2P Electronic Payment",
+      "category_id": "social_protection",
+      "profile_key": "SOCIAL_PROTECTION",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_GEOGRAPHIC_VARIATION",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "JS_RENDERING_LIMITATION"
+      ],
+      "selection_score": 37,
+      "pilot_role": "utilities"
+    },
+    {
+      "service_id": "vat-bin-registration",
+      "service_name_en": "VAT Registration (Business Identification Number)",
+      "category_id": "vat",
+      "profile_key": "TAX",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_PAYMENT",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE"
+      ],
+      "selection_score": 29,
+      "pilot_role": "tax"
+    },
+    {
+      "service_id": "judiciary-case-status-tracking",
+      "service_name_en": "Court Case Status Tracking",
+      "category_id": "judiciary",
+      "profile_key": "JUDICIARY",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE"
+      ],
+      "selection_score": 29,
+      "pilot_role": "judiciary"
+    },
+    {
+      "service_id": "dc-citizen-charter-dhaka",
+      "service_name_en": "Dhaka District Citizen Charter Services",
+      "category_id": "local_government",
+      "profile_key": "LOCAL_GOVERNMENT",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_OFFICE_LOCATION",
+        "MISSING_GEOGRAPHIC_VARIATION",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "LOCAL_VARIATION"
+      ],
+      "selection_score": 39,
+      "pilot_role": "geographic"
+    },
+    {
+      "service_id": "customs-asycuda-declaration",
+      "service_name_en": "Customs Declaration (ASYCUDA World)",
+      "category_id": "customs",
+      "profile_key": "TAX",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_PAYMENT",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE",
+        "JS_RENDERING_LIMITATION"
+      ],
+      "selection_score": 39,
+      "pilot_role": "js_heavy"
+    },
+    {
+      "service_id": "health-bmdc-eligibility-certificate",
+      "service_name_en": "BMDC Eligibility Certificate",
+      "category_id": "health",
+      "profile_key": "HEALTH",
+      "partial_reasons": [
+        "MISSING_MUST_NEED_DOCUMENTS",
+        "MISSING_CONDITIONAL_DOCUMENTS",
+        "MISSING_FEES",
+        "MISSING_CLAIM_DENSITY",
+        "MISSING_E2E_SUPPORTED_COVERAGE"
+      ],
+      "selection_score": 29,
+      "pilot_role": "professional"
+    }
+  ]
+}

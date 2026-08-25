@@ -1,0 +1,140 @@
+{
+  "service_id": "land-deed-registration",
+  "claims": [
+    {
+      "claim_id": "land-deed-registration::c-catalogue-authority",
+      "service_id": "land-deed-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Registration (Ministry of Law).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-official-url-documented",
+      "service_id": "land-deed-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.land.gov.bd/poripotro for Deed Registration (Sub-Registry); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.land.gov.bd/poripotro"
+      },
+      "source_ids": [
+        "src-land-deed-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-procedure-overview",
+      "service_id": "land-deed-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Deed registration is processed through sub-registry/land record offices with stamp duty payment.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-deed-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-document-overview",
+      "service_id": "land-deed-registration",
+      "claim_type": "document",
+      "claim_text": "Original deed, NID of parties, and stamp payment receipt are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-land-deed-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-service-identity",
+      "service_id": "land-deed-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Deed Registration (Sub-Registry) (দলিল/দলিল রেজিস্ট্রেশন) is a confirmed government service in category land, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-deed-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-eligibility-deep",
+      "service_id": "land-deed-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Parties to a registrable property transfer deed.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "PARTIAL",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-deed-registration-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-fee-deep",
+      "service_id": "land-deed-registration",
+      "claim_type": "fee",
+      "claim_text": "Stamp duty and registration fees follow official schedule based on deed value.",
+      "information_class": "OFFICIAL_FEE",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-deed-registration-official"
+      ],
+      "provenance": "deep_research_curated",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-deed-registration::c-conditional-0",
+      "service_id": "land-deed-registration",
+      "claim_type": "document",
+      "claim_text": "If the applicant is a minor, guardian NID and guardianship proof are required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "if": "applicant_type=minor",
+        "then": "guardian documents required",
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-land-deed-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

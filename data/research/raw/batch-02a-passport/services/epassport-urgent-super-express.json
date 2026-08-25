@@ -1,0 +1,129 @@
+{
+  "service_id": "epassport-urgent-super-express",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Super Express (Urgent) e-Passport",
+  "service_name_bn": "সুপার এক্সপ্রেস (জরুরি) ই-পাসপোর্ট",
+  "aliases": [
+    "urgent passport",
+    "2-day passport"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://epassport.gov.bd/instructions/urgent-applications",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-2-days",
+      "legacy_claim_id": "c-super-express-2-days",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "processing_time",
+      "claim_text": "Super Express (urgent) passport issued within 2 working days under stated conditions.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-2-days-src-epassport-urgent"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-domestic-only",
+      "legacy_claim_id": "c-super-express-domestic-only",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "restriction",
+      "claim_text": "Super Express service not available at Bangladesh Missions abroad.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-domestic-only-src-epassport-urgent"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-pickup-agargaon",
+      "legacy_claim_id": "c-super-express-pickup-agargaon",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "office",
+      "claim_text": "Super Express passports picked up only at Divisional Passport and Visa Office, Agargaon, Dhaka.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-pickup-agargaon-src-epassport-urgent"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-mrp-no-address-change",
+      "legacy_claim_id": "c-super-express-mrp-no-address-change",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "eligibility",
+      "claim_text": "Current note: Super Express available only for e-Passport issuance where applicant already holds MRP without changing permanent address.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-mrp-no-address-change-src-epassport-urgent"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-urgent-super-express::c-super-express-fee-tier",
+      "legacy_claim_id": "c-super-express-fee-tier",
+      "service_id": "epassport-urgent-super-express",
+      "claim_type": "fee",
+      "claim_text": "Super Express delivery uses Super Express fee tier on official fee schedule.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-fees",
+        "src-epassport-urgent"
+      ],
+      "evidence_ids": [
+        "ev-epassport-urgent-super-express::c-super-express-fee-tier-src-epassport-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Pickup only at Divisional Passport and Visa Office, Agargaon; not available at missions."
+}

@@ -1,0 +1,42 @@
+{
+  "services": {
+    "brta-new-vehicle-registration": {
+      "readiness": "YELLOW",
+      "reason": "BSP URL catalogue-verified; off-hours TEMPORARILY_UNAVAILABLE. Fees CALCULATOR_DERIVED. Fitness validity deferred to 03C.",
+      "gap_closure_delta": "UNVERIFIED portal → YELLOW with availability evidence"
+    },
+    "brta-ownership-transfer": {
+      "readiness": "YELLOW",
+      "reason": "Portal page metadata verified (title, last updated June 2026); procedural CMS body empty. Lost RC sub-procedure partial only.",
+      "gap_closure_delta": "UNVERIFIED procedure → YELLOW metadata"
+    },
+    "brta-digital-registration-certificate": {
+      "readiness": "YELLOW",
+      "reason": "DRC portal title/metadata captured; lost/damaged replacement checklist not in render.",
+      "gap_closure_delta": "unchanged YELLOW, gap-closure claims added"
+    },
+    "brta-vehicle-info-correction": {
+      "readiness": "YELLOW",
+      "reason": "Info correction portal metadata captured; field enumeration not in CMS body.",
+      "gap_closure_delta": "unchanged YELLOW"
+    },
+    "brta-retro-reflective-number-plate": {
+      "readiness": "YELLOW",
+      "reason": "Retro plate portal metadata captured; vendor/circle-office steps not in CMS body.",
+      "gap_closure_delta": "unchanged YELLOW"
+    },
+    "brta-trustee-board-certificate": {
+      "readiness": "YELLOW",
+      "reason": "TBC URL catalogue-confirmed; BSP path TEMPORARILY_UNAVAILABLE off-hours.",
+      "gap_closure_delta": "UNVERIFIED → PARTIAL via availability evidence"
+    }
+  },
+  "summary": {
+    "green": 0,
+    "yellow": 6,
+    "red": 0
+  },
+  "prior_readiness_source": "data/research/verification/batch-03b-brta-vehicle/summary.json",
+  "updated_at": "2026-08-25T03:41:07.173973+00:00",
+  "note": "No service RED solely due to BATCH_03C fitness deferral."
+}

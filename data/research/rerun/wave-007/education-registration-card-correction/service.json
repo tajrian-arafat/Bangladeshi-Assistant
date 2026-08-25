@@ -1,0 +1,139 @@
+{
+  "service_id": "education-registration-card-correction",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Registration Card Information Correction",
+  "service_name_bn": "রেজিস্ট্রেশন কার্ড তথ্য সংশোধন",
+  "aliases": [
+    "SIF correction",
+    "registration card error fix"
+  ],
+  "category_id": "education",
+  "profile_key": "EDUCATION",
+  "responsible_agency": "Board of Intermediate and Secondary Education (respective board)",
+  "official_application_url": "http://www.educationboard.gov.bd/dhaka/rules_business.php",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "education-registration-card-correction::c-catalogue-authority",
+      "service_id": "education-registration-card-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Board of Intermediate and Secondary Education (respective board).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-registration-card-correction::c-official-url-documented",
+      "service_id": "education-registration-card-correction",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://www.educationboard.gov.bd/dhaka/rules_business.php for Registration Card Information Correction; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/dhaka/rules_business.php"
+      },
+      "source_ids": [
+        "src-education-registration-card-correction-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-registration-card-correction::c-procedure-overview",
+      "service_id": "education-registration-card-correction",
+      "claim_type": "procedure_step",
+      "claim_text": "Registration Card Information Correction is a government service under Board of Intermediate and Secondary Education (respective board) (correction). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-registration-card-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-registration-card-correction::c-service-identity",
+      "service_id": "education-registration-card-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Registration Card Information Correction (রেজিস্ট্রেশন কার্ড তথ্য সংশোধন) is a confirmed government service in category education, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-registration-card-correction-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-education-registration-card-correction-official",
+      "service_id": "education-registration-card-correction",
+      "url": "http://www.educationboard.gov.bd/dhaka/rules_business.php",
+      "title": "404 Not Found",
+      "authority_id": "board-of-intermediate-and-secondary-education-respective-board",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://www.educationboard.gov.bd/dhaka/rules_business.php",
+        "status_code": 404,
+        "reachable": false,
+        "title": "404 Not Found",
+        "content_type": "text/html",
+        "content_hash": "55f7d9e99b8e2d4e",
+        "retrieved_at": "2026-08-25T03:26:40.081560+00:00"
+      },
+      "evidence_locator": "probe:http://www.educationboard.gov.bd/dhaka/rules_business.php"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-education-registration-card-correction-portal-unreachable",
+      "service_id": "education-registration-card-correction",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Registration Card Information Correction.",
+      "severity": "MEDIUM",
+      "url": "http://www.educationboard.gov.bd/dhaka/rules_business.php"
+    },
+    {
+      "gap_id": "gap-education-registration-card-correction-fee-unverified",
+      "service_id": "education-registration-card-correction",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Registration Card Information Correction.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-education-registration-card-correction-documents-unverified",
+      "service_id": "education-registration-card-correction",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Registration Card Information Correction.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

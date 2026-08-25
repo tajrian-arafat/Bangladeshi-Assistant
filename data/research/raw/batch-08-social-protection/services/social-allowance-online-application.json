@@ -1,0 +1,46 @@
+{
+  "service_id": "social-allowance-online-application",
+  "batch_id": "batch-08-social-protection",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Social Allowance and Stipend Online Application",
+  "service_name_bn": "ভাতা ও উপবৃত্তি অনলাইন আবেদন (mis.bhata)",
+  "aliases": [
+    "bhata online application",
+    "old age allowance application",
+    "disability allowance application",
+    "widow allowance application"
+  ],
+  "category_id": "social_protection",
+  "responsible_agency": "Department of Social Services (DSS)",
+  "official_application_url": "https://mis.bhata.gov.bd/online-application",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "social-allowance-online-application::c-application-portal",
+      "service_id": "social-allowance-online-application",
+      "claim_type": "application_url",
+      "claim_text": "Social Allowance and Stipend Online Application is associated with NBR e-service portal https://mis.bhata.gov.bd/online-application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-social-allowance-online-application",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "social-allowance-online-application::c-responsible-authority",
+      "service_id": "social-allowance-online-application",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Department of Social Services (DSS).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

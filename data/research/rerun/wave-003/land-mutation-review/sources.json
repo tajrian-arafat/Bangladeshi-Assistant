@@ -1,0 +1,72 @@
+{
+  "service_id": "land-mutation-review",
+  "sources": [
+    {
+      "source_id": "src-land-mutation-review-official",
+      "service_id": "land-mutation-review",
+      "url": "https://land.gov.bd/vumisheba-fee",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd/vumisheba-fee",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "cf8affef485963ac",
+        "retrieved_at": "2026-08-25T03:21:57.500615+00:00"
+      },
+      "evidence_locator": "probe:https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "source_id": "src-land-mutation-review-alt-1",
+      "service_id": "land-mutation-review",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "b5440fc613f687a0",
+        "retrieved_at": "2026-08-25T03:21:57.532614+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-mutation-review-alt-2",
+      "service_id": "land-mutation-review",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "99f0b9165e1046d4",
+        "retrieved_at": "2026-08-25T03:21:57.563028+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

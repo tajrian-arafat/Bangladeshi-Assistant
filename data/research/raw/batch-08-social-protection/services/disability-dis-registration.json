@@ -1,0 +1,46 @@
+{
+  "service_id": "disability-dis-registration",
+  "batch_id": "batch-08-social-protection",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Disability Registration and Identity Card (DIS)",
+  "service_name_bn": "প্রতিবন্ধী নিবন্ধন ও পরিচয়পত্র (DIS)",
+  "aliases": [
+    "Subarna Nagorik Card",
+    "DIS registration",
+    "disability ID card",
+    "প্রতিবন্ধী পরিচয়পত্র"
+  ],
+  "category_id": "disability",
+  "responsible_agency": "Department of Social Services (DSS)",
+  "official_application_url": "https://www.dis.gov.bd/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "disability-dis-registration::c-application-portal",
+      "service_id": "disability-dis-registration",
+      "claim_type": "application_url",
+      "claim_text": "Disability Registration and Identity Card (DIS) is associated with NBR e-service portal https://www.dis.gov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-disability-dis-registration",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "disability-dis-registration::c-responsible-authority",
+      "service_id": "disability-dis-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Department of Social Services (DSS).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

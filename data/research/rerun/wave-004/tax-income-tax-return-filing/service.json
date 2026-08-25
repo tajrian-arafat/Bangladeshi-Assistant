@@ -1,0 +1,171 @@
+{
+  "service_id": "tax-income-tax-return-filing",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Income Tax Return Filing",
+  "service_name_bn": "আয়কর রিটার্ন দাখিল",
+  "aliases": [
+    "tax return Bangladesh",
+    "IT return NBR"
+  ],
+  "category_id": "tax",
+  "profile_key": "TAX",
+  "responsible_agency": "National Board of Revenue (NBR)",
+  "official_application_url": "https://secure.incometax.gov.bd",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "tax-income-tax-return-filing::c-catalogue-authority",
+      "service_id": "tax-income-tax-return-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-tax-return-filing::c-official-portal",
+      "service_id": "tax-income-tax-return-filing",
+      "claim_type": "application_url",
+      "claim_text": "Income Tax Return Filing official information is published at https://secure.incometax.gov.bd (page title: - NBR TIN Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://secure.incometax.gov.bd"
+      },
+      "source_ids": [
+        "src-tax-income-tax-return-filing-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-income-tax-return-filing::c-official-portal-src-tax-income-tax-return-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-tax-return-filing::c-procedure-overview",
+      "service_id": "tax-income-tax-return-filing",
+      "claim_type": "procedure_step",
+      "claim_text": "Income Tax Return Filing is a government service under National Board of Revenue (NBR) (income tax). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-income-tax-return-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-tax-return-filing::c-service-identity",
+      "service_id": "tax-income-tax-return-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Income Tax Return Filing (আয়কর রিটার্ন দাখিল) is a confirmed government service in category tax, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-income-tax-return-filing-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-tax-income-tax-return-filing-official",
+      "service_id": "tax-income-tax-return-filing",
+      "url": "https://secure.incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://secure.incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "7dbc0d79e88c33d2",
+        "retrieved_at": "2026-08-25T03:22:49.147881+00:00"
+      },
+      "evidence_locator": "probe:https://secure.incometax.gov.bd"
+    },
+    {
+      "source_id": "src-tax-income-tax-return-filing-alt-1",
+      "service_id": "tax-income-tax-return-filing",
+      "url": "https://nbr.gov.bd/",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:50.562905+00:00"
+      }
+    },
+    {
+      "source_id": "src-tax-income-tax-return-filing-alt-2",
+      "service_id": "tax-income-tax-return-filing",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:51.992694+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-tax-income-tax-return-filing-fee-unverified",
+      "service_id": "tax-income-tax-return-filing",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Income Tax Return Filing.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-income-tax-return-filing-documents-unverified",
+      "service_id": "tax-income-tax-return-filing",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Income Tax Return Filing.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

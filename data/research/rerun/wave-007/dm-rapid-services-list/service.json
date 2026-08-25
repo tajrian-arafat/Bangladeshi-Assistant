@@ -1,0 +1,134 @@
+{
+  "service_id": "dm-rapid-services-list",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "DDM RAPID Platform Services",
+  "service_name_bn": "DDM RAPID সেবা তালিকা",
+  "aliases": [
+    "RAPID DDM",
+    "disaster early warning IVR",
+    "DDM RAPID Platform Services"
+  ],
+  "category_id": "disaster_relief",
+  "profile_key": "OTHER",
+  "responsible_agency": "Department of Disaster Management (DDM)",
+  "official_application_url": "https://rapid.ddm.gov.bd/service/list",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "dm-rapid-services-list::c-catalogue-authority",
+      "service_id": "dm-rapid-services-list",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Disaster Management (DDM).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-rapid-services-list::c-official-portal",
+      "service_id": "dm-rapid-services-list",
+      "claim_type": "application_url",
+      "claim_text": "DDM RAPID Platform Services official information is published at https://rapid.ddm.gov.bd/service/list (page title: Department of Disaster Management).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://rapid.ddm.gov.bd/service/list"
+      },
+      "source_ids": [
+        "src-dm-rapid-services-list-official"
+      ],
+      "evidence_ids": [
+        "ev-dm-rapid-services-list::c-official-portal-src-dm-rapid-services-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-rapid-services-list::c-procedure-overview",
+      "service_id": "dm-rapid-services-list",
+      "claim_type": "procedure_step",
+      "claim_text": "DDM RAPID Platform Services is a government service under Department of Disaster Management (DDM) (platform). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-rapid-services-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-rapid-services-list::c-service-identity",
+      "service_id": "dm-rapid-services-list",
+      "claim_type": "eligibility",
+      "claim_text": "DDM RAPID Platform Services (DDM RAPID সেবা তালিকা) is a confirmed government service in category disaster_relief, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-rapid-services-list-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-dm-rapid-services-list-official",
+      "service_id": "dm-rapid-services-list",
+      "url": "https://rapid.ddm.gov.bd/service/list",
+      "title": "Department of Disaster Management",
+      "authority_id": "department-of-disaster-management-ddm",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://rapid.ddm.gov.bd/service/list",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Department of Disaster Management",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "03748c5bec557e2b",
+        "retrieved_at": "2026-08-25T03:26:27.145403+00:00"
+      },
+      "evidence_locator": "probe:https://rapid.ddm.gov.bd/service/list"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-dm-rapid-services-list-fee-unverified",
+      "service_id": "dm-rapid-services-list",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for DDM RAPID Platform Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dm-rapid-services-list-documents-unverified",
+      "service_id": "dm-rapid-services-list",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for DDM RAPID Platform Services.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

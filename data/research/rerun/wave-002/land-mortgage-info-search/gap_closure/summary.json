@@ -1,0 +1,28 @@
+{
+  "service_id": "land-mortgage-info-search",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-land-mortgage-info-search-portal-unreachable",
+      "service_id": "land-mortgage-info-search",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Land Mortgage Information Search.",
+      "severity": "MEDIUM",
+      "url": "https://mutation.land.gov.bd/search-mortgage-info"
+    },
+    {
+      "gap_id": "gap-land-mortgage-info-search-fee-unverified",
+      "service_id": "land-mortgage-info-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Land Mortgage Information Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mortgage-info-search-documents-unverified",
+      "service_id": "land-mortgage-info-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Land Mortgage Information Search.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

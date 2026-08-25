@@ -1,0 +1,20 @@
+{
+  "service_id": "snp-generation-breakthrough",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-snp-generation-breakthrough-fee-unverified",
+      "service_id": "snp-generation-breakthrough",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Generation Breakthrough.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-generation-breakthrough-documents-unverified",
+      "service_id": "snp-generation-breakthrough",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Generation Breakthrough.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "service_id": "dc-attestation-photocopy",
+  "gaps": [
+    {
+      "gap_id": "gap-dc-attestation-photocopy-portal-unreachable",
+      "service_id": "dc-attestation-photocopy",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for DC Office Document Attestation/Photocopy Certification.",
+      "severity": "MEDIUM",
+      "url": "https://www.dhaka.gov.bd/en"
+    },
+    {
+      "gap_id": "gap-dc-attestation-photocopy-fee-unverified",
+      "service_id": "dc-attestation-photocopy",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for DC Office Document Attestation/Photocopy Certification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dc-attestation-photocopy-documents-unverified",
+      "service_id": "dc-attestation-photocopy",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for DC Office Document Attestation/Photocopy Certification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

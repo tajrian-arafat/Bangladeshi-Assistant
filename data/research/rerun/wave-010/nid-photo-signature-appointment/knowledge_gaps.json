@@ -1,0 +1,19 @@
+{
+  "service_id": "nid-photo-signature-appointment",
+  "gaps": [
+    {
+      "gap_id": "gap-nid-photo-signature-appointment-fee-unverified",
+      "service_id": "nid-photo-signature-appointment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Photo or Signature Change Appointment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-nid-photo-signature-appointment-documents-unverified",
+      "service_id": "nid-photo-signature-appointment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Photo or Signature Change Appointment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

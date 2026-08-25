@@ -1,0 +1,53 @@
+{
+  "service_id": "local-unno-digital-upazila-services",
+  "sources": [
+    {
+      "source_id": "src-local-unno-digital-upazila-services-official",
+      "service_id": "local-unno-digital-upazila-services",
+      "url": "https://www.mygov.bd/",
+      "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+      "authority_id": "upazila-nirbahi-officer-uno-office",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.mygov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "b369e032cd275f01",
+        "retrieved_at": "2026-08-25T03:28:25.786836+00:00"
+      },
+      "evidence_locator": "probe:"
+    },
+    {
+      "source_id": "src-local-unno-digital-upazila-services-alt-0",
+      "service_id": "local-unno-digital-upazila-services",
+      "url": "https://www.mygov.bd/",
+      "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+      "authority_id": "upazila-nirbahi-officer-uno-office",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.mygov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "b369e032cd275f01",
+        "retrieved_at": "2026-08-25T03:28:25.786836+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

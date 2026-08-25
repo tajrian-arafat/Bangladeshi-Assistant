@@ -1,0 +1,173 @@
+{
+  "batch_id": "BATCH_03B",
+  "slug": "batch-03b-brta-vehicle",
+  "name": "BRTA Vehicle Registration / Ownership / Fitness",
+  "in_scope": [
+    "brta-digital-registration-certificate",
+    "brta-new-vehicle-registration",
+    "brta-ownership-transfer",
+    "brta-retro-reflective-number-plate",
+    "brta-trustee-board-certificate",
+    "brta-vehicle-info-correction"
+  ],
+  "out_of_scope_noted": [
+    {
+      "service_id": "brta-fitness-certificate",
+      "reason": "CONFIRMED catalogue service; assigned to BATCH_03C. Cross-referenced as prerequisite for registration/transfer, not researched as standalone service in 3B."
+    },
+    {
+      "service_id": "brta-fee-calculator",
+      "reason": "Cross-cutting fee tool; referenced as authoritative fee lookup for vehicle-type-dependent amounts."
+    },
+    {
+      "service_id": "brta-bsp-user-registration",
+      "reason": "BSP account prerequisite; covered as cross-cutting owner/dealer registration claim."
+    },
+    {
+      "service_id": "brta-mv-tax-payment",
+      "reason": "MV tax payment; assigned to BATCH_03C. Referenced as registration/transfer prerequisite only."
+    },
+    {
+      "service_id": "brta-tax-token",
+      "reason": "Tax token issue/renewal; assigned to BATCH_03C. Referenced as new-registration bundle component."
+    },
+    {
+      "service_id": "brta-route-permit",
+      "reason": "Commercial route permit; BATCH_03C. Not flattened into private vehicle registration."
+    },
+    {
+      "service_id": "brta-engine-change",
+      "reason": "Vehicle modification; BATCH_03C grouping (brta-other). Separate procedure from info correction."
+    },
+    {
+      "service_id": "brta-color-change",
+      "reason": "Vehicle modification; BATCH_03C. Separate procedure from registration correction."
+    },
+    {
+      "subprocedure": "lost_or_damaged_registration_certificate",
+      "reason": "No separate CONFIRMED catalogue service ID. Treated as replacement/DRC reissue sub-procedure under brta-digital-registration-certificate and brta-vehicle-info-correction workflows; GD/affidavit rules vary by case."
+    }
+  ],
+  "vehicle_variant_model": {
+    "dimensions": [
+      {
+        "id": "vehicle_type",
+        "values": [
+          "motorcycle",
+          "private_car",
+          "jeep_microbus",
+          "bus",
+          "truck",
+          "auto_rickshaw",
+          "trailer",
+          "other_commercial"
+        ],
+        "notes": "Fee and inspection rules vary by vehicle class on BSP fee calculator."
+      },
+      {
+        "id": "usage_class",
+        "values": [
+          "private",
+          "commercial"
+        ],
+        "notes": "Commercial vehicles may require fitness, route permit, and additional inspection (BATCH_03C)."
+      },
+      {
+        "id": "origin",
+        "values": [
+          "local_assembled",
+          "imported",
+          "reconditioned"
+        ],
+        "notes": "Imported vehicles may require customs/VAT/release documents before registration."
+      },
+      {
+        "id": "procedure_action",
+        "values": [
+          "new_registration",
+          "ownership_transfer",
+          "drc_biometric_issue",
+          "registration_info_correction",
+          "retro_reflective_plate",
+          "trustee_board_certificate_download"
+        ]
+      },
+      {
+        "id": "certificate_state",
+        "values": [
+          "valid",
+          "lost",
+          "damaged",
+          "outdated_booklet"
+        ],
+        "notes": "Lost/damaged RC handled via replacement/DRC reissue — no standalone catalogue service."
+      }
+    ],
+    "do_not_flatten": [
+      "private_car new registration vs commercial bus registration",
+      "ownership transfer vs registration data correction",
+      "DRC biometric collection vs retro-reflective plate upgrade",
+      "fitness renewal (03C) vs new registration bundled fitness (03B prerequisite reference)"
+    ]
+  },
+  "subprocess_coverage": [
+    {
+      "topic": "new_vehicle_registration_bsp",
+      "catalogue_services": [
+        "brta-new-vehicle-registration"
+      ]
+    },
+    {
+      "topic": "ownership_transfer_portal",
+      "catalogue_services": [
+        "brta-ownership-transfer"
+      ]
+    },
+    {
+      "topic": "drc_biometric_smart_card",
+      "catalogue_services": [
+        "brta-digital-registration-certificate"
+      ]
+    },
+    {
+      "topic": "registration_info_correction",
+      "catalogue_services": [
+        "brta-vehicle-info-correction"
+      ]
+    },
+    {
+      "topic": "retro_reflective_plate_rfid",
+      "catalogue_services": [
+        "brta-retro-reflective-number-plate"
+      ]
+    },
+    {
+      "topic": "trustee_board_certificate",
+      "catalogue_services": [
+        "brta-trustee-board-certificate"
+      ]
+    },
+    {
+      "topic": "bsp_owner_registration_prerequisite",
+      "catalogue_services": [
+        "brta-new-vehicle-registration"
+      ]
+    },
+    {
+      "topic": "fee_calculator_cross_cutting",
+      "catalogue_services": [
+        "brta-digital-registration-certificate",
+        "brta-new-vehicle-registration",
+        "brta-ownership-transfer",
+        "brta-retro-reflective-number-plate"
+      ]
+    },
+    {
+      "topic": "fitness_cross_reference_only",
+      "catalogue_services": [
+        "brta-new-vehicle-registration"
+      ],
+      "batch": "BATCH_03C"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "HUMAN_APPROVAL_REQUIRED",
+  "batch": "BATCH_06",
+  "phase": "PUBLICATION",
+  "run_id": "run-8fecce0cd898",
+  "result_status": "BLOCKED",
+  "summary": "Publication dry-run blocked: owledge.py\", line 55, in run\n    reports.append(await sync_publisher.sync_claims_from_staging(args.batch))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/backend/app/application/knowledge/publisher.py\", line 283, in sync_claims_from_staging\n    versions = json.loads((staging / \"source_versions.json\").read_text(encoding=\"utf-8\"))[\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'source_versions'\n",
+  "next_phase": "PUBLICATION",
+  "generated_at": "2026-08-25T02:45:05.790457+00:00"
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "wasa-line-shifting",
+  "claims": [
+    {
+      "claim_id": "wasa-line-shifting::c-catalogue-authority",
+      "service_id": "wasa-line-shifting",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Water Supply and Sewerage Authority (DWASA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "wasa-line-shifting::c-official-portal",
+      "service_id": "wasa-line-shifting",
+      "claim_type": "application_url",
+      "claim_text": "Water Line Shifting official information is published at http://newconnection.dwasa.org.bd/Pages/Application/New.aspx?type=shifting (page title: Water Line Shifting).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://newconnection.dwasa.org.bd/Pages/Application/New.aspx?type=shifting"
+      },
+      "source_ids": [
+        "src-wasa-line-shifting-official"
+      ],
+      "evidence_ids": [
+        "ev-wasa-line-shifting::c-official-portal-src-wasa-line-shifting-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "wasa-line-shifting::c-procedure-overview",
+      "service_id": "wasa-line-shifting",
+      "claim_type": "procedure_step",
+      "claim_text": "Water Line Shifting is a government service under Dhaka Water Supply and Sewerage Authority (DWASA) (water connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-wasa-line-shifting-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "wasa-line-shifting::c-service-identity",
+      "service_id": "wasa-line-shifting",
+      "claim_type": "eligibility",
+      "claim_text": "Water Line Shifting (পানি লাইন স্থানান্তর (শিফটিং)) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-wasa-line-shifting-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

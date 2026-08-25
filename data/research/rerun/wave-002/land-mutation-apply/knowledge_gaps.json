@@ -1,0 +1,27 @@
+{
+  "service_id": "land-mutation-apply",
+  "gaps": [
+    {
+      "gap_id": "gap-land-mutation-apply-portal-unreachable",
+      "service_id": "land-mutation-apply",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Land Mutation (Namjari).",
+      "severity": "MEDIUM",
+      "url": "https://mutation.land.gov.bd/"
+    },
+    {
+      "gap_id": "gap-land-mutation-apply-fee-unverified",
+      "service_id": "land-mutation-apply",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Land Mutation (Namjari).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-mutation-apply-documents-unverified",
+      "service_id": "land-mutation-apply",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Land Mutation (Namjari).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

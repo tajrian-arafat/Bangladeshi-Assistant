@@ -1,0 +1,72 @@
+{
+  "service_id": "bida-irms-platform",
+  "claims": [
+    {
+      "claim_id": "bida-irms-platform::c-catalogue-authority",
+      "service_id": "bida-irms-platform",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Investment Development Authority (BIDA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-irms-platform::c-official-portal",
+      "service_id": "bida-irms-platform",
+      "claim_type": "application_url",
+      "claim_text": "BIDA Investment Relationship Management System (IRMS) official information is published at https://irms.bida.gov.bd/ (page title: One Stop Service platform for Investment Relationship Management).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://irms.bida.gov.bd/"
+      },
+      "source_ids": [
+        "src-bida-irms-platform-official"
+      ],
+      "evidence_ids": [
+        "ev-bida-irms-platform::c-official-portal-src-bida-irms-platform-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-irms-platform::c-procedure-overview",
+      "service_id": "bida-irms-platform",
+      "claim_type": "procedure_step",
+      "claim_text": "BIDA Investment Relationship Management System (IRMS) is a government service under Bangladesh Investment Development Authority (BIDA) (investor relations). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-irms-platform-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-irms-platform::c-service-identity",
+      "service_id": "bida-irms-platform",
+      "claim_type": "eligibility",
+      "claim_text": "BIDA Investment Relationship Management System (IRMS) (BIDA Investment Relationship Management System) is a confirmed government service in category investment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-irms-platform-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

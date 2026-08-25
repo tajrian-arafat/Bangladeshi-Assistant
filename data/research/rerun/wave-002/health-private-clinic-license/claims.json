@@ -1,0 +1,70 @@
+{
+  "service_id": "health-private-clinic-license",
+  "claims": [
+    {
+      "claim_id": "health-private-clinic-license::c-catalogue-authority",
+      "service_id": "health-private-clinic-license",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Health Services (DGHS) - Hospitals and Clinics Branch.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-private-clinic-license::c-official-url-documented",
+      "service_id": "health-private-clinic-license",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://hospitaldghs.gov.bd/ for Private Clinic Licence; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://hospitaldghs.gov.bd/"
+      },
+      "source_ids": [
+        "src-health-private-clinic-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-private-clinic-license::c-procedure-overview",
+      "service_id": "health-private-clinic-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Private Clinic Licence is a government service under Directorate General of Health Services (DGHS) - Hospitals and Clinics Branch (facility licence). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-private-clinic-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-private-clinic-license::c-service-identity",
+      "service_id": "health-private-clinic-license",
+      "claim_type": "eligibility",
+      "claim_text": "Private Clinic Licence (বেসরকারি ক্লিনিক লাইসেন্স) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-private-clinic-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

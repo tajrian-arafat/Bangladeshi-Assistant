@@ -1,0 +1,133 @@
+{
+  "service_id": "railway-rail-sheba-app",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Rail Sheba Mobile App Registration and Booking",
+  "service_name_bn": "রেল সেবা মোবাইল অ্যাপ",
+  "aliases": [
+    "Rail Sheba app",
+    "dtrainpwa"
+  ],
+  "category_id": "railways",
+  "profile_key": "OTHER",
+  "responsible_agency": "Bangladesh Railway",
+  "official_application_url": "http://railway.gov.bd/pages/notices/6919973281fc96cef9e5923d",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "railway-rail-sheba-app::c-catalogue-authority",
+      "service_id": "railway-rail-sheba-app",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Railway.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-rail-sheba-app::c-official-portal",
+      "service_id": "railway-rail-sheba-app",
+      "claim_type": "application_url",
+      "claim_text": "Rail Sheba Mobile App Registration and Booking official information is published at http://railway.gov.bd/pages/notices/6919973281fc96cef9e5923d (page title: রেল সেবা অ্যাপসে রেজিস্ট্রেশন করার প্রক্রিয়া | নোটিশ | বাংলাদেশ রেলওয়ে).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://railway.gov.bd/pages/notices/6919973281fc96cef9e5923d"
+      },
+      "source_ids": [
+        "src-railway-rail-sheba-app-official"
+      ],
+      "evidence_ids": [
+        "ev-railway-rail-sheba-app::c-official-portal-src-railway-rail-sheba-app-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-rail-sheba-app::c-procedure-overview",
+      "service_id": "railway-rail-sheba-app",
+      "claim_type": "procedure_step",
+      "claim_text": "Rail Sheba Mobile App Registration and Booking is a government service under Bangladesh Railway (ticket booking). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-rail-sheba-app-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-rail-sheba-app::c-service-identity",
+      "service_id": "railway-rail-sheba-app",
+      "claim_type": "eligibility",
+      "claim_text": "Rail Sheba Mobile App Registration and Booking (রেল সেবা মোবাইল অ্যাপ) is a confirmed government service in category railways, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-rail-sheba-app-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-railway-rail-sheba-app-official",
+      "service_id": "railway-rail-sheba-app",
+      "url": "http://railway.gov.bd/pages/notices/6919973281fc96cef9e5923d",
+      "title": "রেল সেবা অ্যাপসে রেজিস্ট্রেশন করার প্রক্রিয়া | নোটিশ | বাংলাদেশ রেলওয়ে",
+      "authority_id": "bangladesh-railway",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://railway.gov.bd/pages/notices/6919973281fc96cef9e5923d",
+        "status_code": 200,
+        "reachable": true,
+        "title": "রেল সেবা অ্যাপসে রেজিস্ট্রেশন করার প্রক্রিয়া | নোটিশ | বাংলাদেশ রেলওয়ে",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "e104fd70f19ab6d9",
+        "retrieved_at": "2026-08-25T03:30:08.777685+00:00"
+      },
+      "evidence_locator": "probe:http://railway.gov.bd/pages/notices/6919973281fc96cef9e5923d"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-railway-rail-sheba-app-fee-unverified",
+      "service_id": "railway-rail-sheba-app",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rail Sheba Mobile App Registration and Booking.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-railway-rail-sheba-app-documents-unverified",
+      "service_id": "railway-rail-sheba-app",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Rail Sheba Mobile App Registration and Booking.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

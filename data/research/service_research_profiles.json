@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Service-type research completeness profiles — data-driven, not hardcoded in Python.",
+  "claim_classes": {
+    "SERVICE_SPECIFIC": "Meaningful service-specific claim backed by authoritative evidence",
+    "CATALOGUE_METADATA": "Catalogue-only metadata — does NOT satisfy research completeness",
+    "DISCOVERY_ONLY": "Discovery/practical hint — does NOT satisfy research completeness"
+  },
+  "research_statuses": {
+    "RESEARCH_REQUIRED": "No service-specific research yet",
+    "RESEARCH_IN_PROGRESS": "Research underway",
+    "RESEARCH_COMPLETE": "Service-specific evidence and meaningful claims present",
+    "PARTIAL": "Some dimensions covered, material gaps remain",
+    "FALSE_COMPLETION_RISK": "Metadata-only or generic boilerplate incorrectly marked complete"
+  },
+  "profiles": {
+    "IDENTITY_CIVIL": {
+      "category_ids": ["civil_registration", "identity"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "procedure", "fees", "eligibility"],
+      "recommended_source_tiers": [1, 2],
+      "minimum_meaningful_claims": 3,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee", "eligibility"]
+    },
+    "PASSPORT": {
+      "category_ids": ["passport"],
+      "required_dimensions": ["identity", "authority", "official_url", "procedure"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "processing_time"],
+      "recommended_source_tiers": [1, 2],
+      "minimum_meaningful_claims": 4,
+      "minimum_service_specific_sources": 2,
+      "minimum_verified_claims": 2,
+      "e2e_intents": ["procedure", "document_list", "fee", "status"]
+    },
+    "POLICE": {
+      "category_ids": ["police", "passport_immigration"],
+      "required_dimensions": ["identity", "authority", "official_url", "procedure"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "geography"],
+      "recommended_source_tiers": [1, 2],
+      "minimum_meaningful_claims": 3,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    },
+    "BRTA": {
+      "category_ids": ["transport"],
+      "authority_ids": ["brta"],
+      "required_dimensions": ["identity", "authority", "official_url", "procedure"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "conditions"],
+      "recommended_source_tiers": [1, 2],
+      "minimum_meaningful_claims": 4,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 2,
+      "e2e_intents": ["procedure", "document_list", "fee", "status"]
+    },
+    "TAX": {
+      "category_ids": ["tax"],
+      "authority_ids": ["nbr"],
+      "required_dimensions": ["identity", "authority", "official_url", "procedure"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "payment"],
+      "recommended_source_tiers": [1, 2],
+      "minimum_meaningful_claims": 3,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "fee", "document_list"]
+    },
+    "VAT": {
+      "category_ids": ["vat"],
+      "authority_ids": ["nbr"],
+      "required_dimensions": ["identity", "authority", "official_url", "procedure"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility"],
+      "recommended_source_tiers": [1, 2],
+      "minimum_meaningful_claims": 3,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "fee"]
+    },
+    "CUSTOMS": {
+      "category_ids": ["customs"],
+      "authority_ids": ["nbr", "customs"],
+      "required_dimensions": ["identity", "authority", "official_url", "procedure"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "legal_basis"],
+      "recommended_source_tiers": [1, 2],
+      "minimum_meaningful_claims": 3,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    },
+    "LAND": {
+      "category_ids": ["land"],
+      "authority_ids": ["land_ministry", "dlrs", "mutation"],
+      "required_dimensions": ["identity", "authority", "official_url", "procedure"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "geography", "office"],
+      "recommended_source_tiers": [1, 2],
+      "minimum_meaningful_claims": 3,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "forbidden_authority_domains": ["nbr.gov.bd", "incometax.gov.bd", "secure.incometax.gov.bd"],
+      "expected_domain_patterns": ["land.gov.bd", "mutation.land.gov.bd", "dlrms.land.gov.bd"],
+      "e2e_intents": ["procedure", "fee", "document_list", "status"]
+    },
+    "EDUCATION": {
+      "category_ids": ["education"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "procedure"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    },
+    "HEALTH": {
+      "category_ids": ["health"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "procedure"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "fee", "status"]
+    },
+    "SOCIAL_PROTECTION": {
+      "category_ids": ["social_protection", "women_children"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "eligibility", "procedure", "geography"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "eligibility", "document_list"]
+    },
+    "DISABILITY": {
+      "category_ids": ["disability"],
+      "required_dimensions": ["identity", "authority", "official_url", "eligibility"],
+      "high_risk_dimensions": ["documents", "procedure", "geography"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "eligibility", "document_list"]
+    },
+    "AGRICULTURE": {
+      "category_ids": ["agriculture"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "procedure", "eligibility"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    },
+    "LIVESTOCK": {
+      "category_ids": ["livestock"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "procedure"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list"]
+    },
+    "FISHERIES": {
+      "category_ids": ["fisheries"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "procedure"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list"]
+    },
+    "EMPLOYMENT": {
+      "category_ids": ["employment", "expatriate"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "procedure"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    },
+    "BUSINESS": {
+      "category_ids": ["business", "trade", "investment", "registrations"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "procedure", "eligibility"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    },
+    "PROFESSIONAL": {
+      "category_ids": ["professional"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "eligibility", "procedure"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    },
+    "JUDICIARY": {
+      "category_ids": ["judiciary", "legal_aid"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "procedure", "eligibility"],
+      "recommended_source_tiers": [1, 2],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    },
+    "LOCAL_GOVERNMENT": {
+      "category_ids": ["local_government"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "procedure", "geography", "office"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    },
+    "UTILITIES": {
+      "category_ids": ["utilities", "digital_government", "government_payments"],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["procedure", "fees", "payment"],
+      "recommended_source_tiers": [1, 2, 3],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "fee", "status"]
+    },
+    "OTHER": {
+      "category_ids": [],
+      "required_dimensions": ["identity", "authority", "official_url"],
+      "high_risk_dimensions": ["documents", "fees", "procedure", "eligibility"],
+      "recommended_source_tiers": [1, 2, 3, 4],
+      "minimum_meaningful_claims": 2,
+      "minimum_service_specific_sources": 1,
+      "minimum_verified_claims": 1,
+      "e2e_intents": ["procedure", "document_list", "fee"]
+    }
+  },
+  "authority_domain_hints": {
+    "nbr": ["nbr.gov.bd", "incometax.gov.bd", "secure.incometax.gov.bd"],
+    "brta": ["brta.gov.bd"],
+    "land_ministry": ["land.gov.bd", "mutation.land.gov.bd", "dlrms.land.gov.bd"],
+    "bdris": ["bdris.gov.bd"],
+    "nidw": ["services.nidw.gov.bd", "nidw.gov.bd"],
+    "dghs": ["dghs.gov.bd"],
+    "bmet": ["bmet.gov.bd"],
+    "boesl": ["boesl.gov.bd"]
+  },
+  "completeness_scoring_weights": {
+    "research_quality": 0.25,
+    "verification_quality": 0.2,
+    "knowledge_coverage": 0.2,
+    "e2e_supported_coverage": 0.15,
+    "source_quality": 0.1,
+    "citation_integrity": 0.1
+  },
+  "deep_research_dimensions": {
+    "description": "Per-profile deep-research protocol fields — not a one-size-fits-all checklist.",
+    "common_fields": [
+      "critical_research_dimensions",
+      "high_risk_dimensions",
+      "service_specific_aliases",
+      "authority_types",
+      "official_domains",
+      "expected_user_intents",
+      "expected_claim_types",
+      "conditional_dimensions",
+      "geographic_dimensions",
+      "fee_strategy",
+      "status_strategy",
+      "url_strategy",
+      "browser_rendering_requirement",
+      "calculator_requirement"
+    ],
+    "claim_density_model": "Complexity-tier scoring via automation/orchestrator/claim_density.py — critical/optional/conditional/variant/evidence-backed counts, not arbitrary N claims per service."
+  },
+  "profile_extensions": {
+    "IDENTITY_CIVIL": {
+      "expected_user_intents": ["SERVICE_DISCOVERY", "ELIGIBILITY", "DOCUMENT_LIST", "FEE_INQUIRY", "PROCEDURE", "APPLICATION_URL", "STATUS"],
+      "expected_claim_types": ["eligibility", "document", "procedure", "application_url", "fee"],
+      "conditional_dimensions": ["applicant_type", "document_state"],
+      "fee_strategy": "official_schedule",
+      "browser_rendering_requirement": true,
+      "calculator_requirement": false
+    },
+    "TAX": {
+      "expected_user_intents": ["PROCEDURE", "DOCUMENT_LIST", "FEE_INQUIRY", "PAYMENT", "APPLICATION_URL"],
+      "fee_strategy": "calculator_or_assessment",
+      "calculator_requirement": true
+    },
+    "LAND": {
+      "expected_user_intents": ["PROCEDURE", "DOCUMENT_LIST", "FEE_INQUIRY", "STATUS", "OFFICE_LOCATION"],
+      "conditional_dimensions": ["geography", "transfer_type", "applicant_type"],
+      "geographic_dimensions": ["district", "upazila", "union"],
+      "fee_strategy": "schedule_plus_local_tax"
+    },
+    "LOCAL_GOVERNMENT": {
+      "expected_user_intents": ["PROCEDURE", "DOCUMENT_LIST", "FEE_INQUIRY", "OFFICE_LOCATION"],
+      "geographic_dimensions": ["district"],
+      "conditional_dimensions": ["geography", "service_variant"]
+    }
+  }
+}

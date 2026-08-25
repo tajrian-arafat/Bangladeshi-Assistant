@@ -1,0 +1,28 @@
+{
+  "service_id": "post-speed-post",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-post-speed-post-portal-unreachable",
+      "service_id": "post-speed-post",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Speed Post.",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/34b7ea83-3911-429f-8ec5-58f0367c53bd/-"
+    },
+    {
+      "gap_id": "gap-post-speed-post-fee-unverified",
+      "service_id": "post-speed-post",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Speed Post.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-speed-post-documents-unverified",
+      "service_id": "post-speed-post",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Speed Post.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

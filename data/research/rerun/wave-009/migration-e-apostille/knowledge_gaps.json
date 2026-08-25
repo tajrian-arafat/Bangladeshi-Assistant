@@ -1,0 +1,27 @@
+{
+  "service_id": "migration-e-apostille",
+  "gaps": [
+    {
+      "gap_id": "gap-migration-e-apostille-portal-unreachable",
+      "service_id": "migration-e-apostille",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for e-Apostille Document Authentication.",
+      "severity": "MEDIUM",
+      "url": "https://apostille.mygov.bd/"
+    },
+    {
+      "gap_id": "gap-migration-e-apostille-fee-unverified",
+      "service_id": "migration-e-apostille",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for e-Apostille Document Authentication.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-migration-e-apostille-documents-unverified",
+      "service_id": "migration-e-apostille",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for e-Apostille Document Authentication.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

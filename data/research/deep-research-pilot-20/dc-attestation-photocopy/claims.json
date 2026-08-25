@@ -1,0 +1,124 @@
+{
+  "service_id": "dc-attestation-photocopy",
+  "claims": [
+    {
+      "claim_id": "dc-attestation-photocopy::c-catalogue-authority",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Deputy Commissioner Office.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-official-url-documented",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.dhaka.gov.bd/en for DC Office Document Attestation/Photocopy Certification; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.dhaka.gov.bd/en"
+      },
+      "source_ids": [
+        "src-dc-attestation-photocopy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-procedure-overview",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "procedure_step",
+      "claim_text": "DC office attestation of photocopies follows district commissioner verification procedures.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-attestation-photocopy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-document-overview",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "document",
+      "claim_text": "Original document, photocopy, NID, and application are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-dc-attestation-photocopy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-service-identity",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "eligibility",
+      "claim_text": "DC Office Document Attestation/Photocopy Certification (জেলা প্রশাসক কার্যালয়ে ফটোকপি/prattyoyon) is a confirmed government service in category local_government, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-attestation-photocopy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-eligibility-deep",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "eligibility",
+      "claim_text": "Citizens requiring attested photocopies for official submissions.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "PARTIAL",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-attestation-photocopy-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-conditional-0",
+      "service_id": "dc-attestation-photocopy",
+      "claim_type": "procedure",
+      "claim_text": "Attestation is processed at the Deputy Commissioner office for the applicant's district.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "if": "geography=district",
+        "then": "apply at local DC office",
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-dc-attestation-photocopy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

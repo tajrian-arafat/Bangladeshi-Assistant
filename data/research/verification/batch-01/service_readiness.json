@@ -1,0 +1,358 @@
+{
+  "services": {
+    "civil-bdris-application-print": {
+      "service_id": "civil-bdris-application-print",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Service existence partially corroborated; deep-page or channel details incomplete.",
+      "manual_review_recommended": true
+    },
+    "civil-birth-death-verify": {
+      "service_id": "civil-birth-death-verify",
+      "readiness": "GREEN",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "civil-birth-registration": {
+      "service_id": "civil-birth-registration",
+      "readiness": "GREEN",
+      "claim_count": 7,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 2,
+        "UNVERIFIED": 2,
+        "VERIFIED": 2,
+        "REJECTED": 1
+      },
+      "reason": "Fee schedule and key portal facts verified; helpline/email claim unverified (does not block fee publication).",
+      "manual_review_recommended": false
+    },
+    "civil-birth-registration-copy": {
+      "service_id": "civil-birth-registration-copy",
+      "readiness": "GREEN",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "civil-birth-registration-correction": {
+      "service_id": "civil-birth-registration-correction",
+      "readiness": "GREEN",
+      "claim_count": 2,
+      "status_counts": {
+        "VERIFIED": 2
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "civil-birth-registration-duplicate-cancel": {
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Service existence partially corroborated; deep-page or channel details incomplete.",
+      "manual_review_recommended": true
+    },
+    "civil-death-registration": {
+      "service_id": "civil-death-registration",
+      "readiness": "GREEN",
+      "claim_count": 2,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1,
+        "VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "civil-death-registration-copy": {
+      "service_id": "civil-death-registration-copy",
+      "readiness": "GREEN",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "civil-death-registration-correction": {
+      "service_id": "civil-death-registration-correction",
+      "readiness": "YELLOW",
+      "claim_count": 2,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1,
+        "VERIFIED": 1
+      },
+      "reason": "Other-info fee verified; DOB-analog fee only partially verified for death records.",
+      "manual_review_recommended": true
+    },
+    "civil-death-registration-duplicate-cancel": {
+      "service_id": "civil-death-registration-duplicate-cancel",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Service existence partially corroborated; deep-page or channel details incomplete.",
+      "manual_review_recommended": true
+    },
+    "civil-divorce-registration": {
+      "service_id": "civil-divorce-registration",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Service existence partially corroborated; deep-page or channel details incomplete.",
+      "manual_review_recommended": true
+    },
+    "civil-marriage-registrar-hindu-list": {
+      "service_id": "civil-marriage-registrar-hindu-list",
+      "readiness": "RED",
+      "claim_count": 1,
+      "status_counts": {
+        "UNVERIFIED": 1
+      },
+      "reason": "Registrar list/search function not independently confirmed; do not expose as authoritative.",
+      "manual_review_recommended": true
+    },
+    "civil-marriage-registrar-muslim-list": {
+      "service_id": "civil-marriage-registrar-muslim-list",
+      "readiness": "RED",
+      "claim_count": 1,
+      "status_counts": {
+        "UNVERIFIED": 1
+      },
+      "reason": "Registrar list/search function not independently confirmed; do not expose as authoritative.",
+      "manual_review_recommended": true
+    },
+    "civil-marriage-registration": {
+      "service_id": "civil-marriage-registration",
+      "readiness": "YELLOW",
+      "claim_count": 4,
+      "status_counts": {
+        "VERIFIED": 2,
+        "UNVERIFIED": 1,
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Service existence partially corroborated; deep-page or channel details incomplete.",
+      "manual_review_recommended": true
+    },
+    "dc-attestation-photocopy": {
+      "service_id": "dc-attestation-photocopy",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "UNVERIFIED": 1
+      },
+      "reason": "Local/LGI instance services — example URLs only; no national authoritative fee/doc pack.",
+      "manual_review_recommended": true
+    },
+    "dc-guardianship-certificate": {
+      "service_id": "dc-guardianship-certificate",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "UNVERIFIED": 1
+      },
+      "reason": "Local/LGI instance services — example URLs only; no national authoritative fee/doc pack.",
+      "manual_review_recommended": true
+    },
+    "identity-voter-slip-download": {
+      "service_id": "identity-voter-slip-download",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Useful verified/partial information exists but material gaps remain.",
+      "manual_review_recommended": true
+    },
+    "local-character-certificate": {
+      "service_id": "local-character-certificate",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Local/LGI instance services — example URLs only; no national authoritative fee/doc pack.",
+      "manual_review_recommended": true
+    },
+    "local-death-certificate-union": {
+      "service_id": "local-death-certificate-union",
+      "readiness": "YELLOW",
+      "claim_count": 2,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 2
+      },
+      "reason": "Local/LGI instance services — example URLs only; no national authoritative fee/doc pack.",
+      "manual_review_recommended": true
+    },
+    "local-nationality-certificate": {
+      "service_id": "local-nationality-certificate",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Local/LGI instance services — example URLs only; no national authoritative fee/doc pack.",
+      "manual_review_recommended": true
+    },
+    "local-passport-attestation": {
+      "service_id": "local-passport-attestation",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Local/LGI instance services — example URLs only; no national authoritative fee/doc pack.",
+      "manual_review_recommended": true
+    },
+    "local-voter-transfer-attestation": {
+      "service_id": "local-voter-transfer-attestation",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Local/LGI instance services — example URLs only; no national authoritative fee/doc pack.",
+      "manual_review_recommended": true
+    },
+    "nid-card-info-correction": {
+      "service_id": "nid-card-info-correction",
+      "readiness": "YELLOW",
+      "claim_count": 5,
+      "status_counts": {
+        "VERIFIED": 4,
+        "UNVERIFIED": 1
+      },
+      "reason": "Correction rules/channels/fees-exist verified; exact static fee amounts unresolved (use calculator). Not GREEN for authoritative amount publication.",
+      "manual_review_recommended": true
+    },
+    "nid-claim-account": {
+      "service_id": "nid-claim-account",
+      "readiness": "GREEN",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "nid-combined-correction": {
+      "service_id": "nid-combined-correction",
+      "readiness": "YELLOW",
+      "claim_count": 5,
+      "status_counts": {
+        "VERIFIED": 4,
+        "UNVERIFIED": 1
+      },
+      "reason": "Correction rules/channels/fees-exist verified; exact static fee amounts unresolved (use calculator). Not GREEN for authoritative amount publication.",
+      "manual_review_recommended": true
+    },
+    "nid-download-copy": {
+      "service_id": "nid-download-copy",
+      "readiness": "GREEN",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "nid-expatriate-registration": {
+      "service_id": "nid-expatriate-registration",
+      "readiness": "YELLOW",
+      "claim_count": 2,
+      "status_counts": {
+        "UNVERIFIED": 1,
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Service existence partially corroborated; deep-page or channel details incomplete.",
+      "manual_review_recommended": true
+    },
+    "nid-fee-calculator": {
+      "service_id": "nid-fee-calculator",
+      "readiness": "GREEN",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "nid-new-voter-registration": {
+      "service_id": "nid-new-voter-registration",
+      "readiness": "GREEN",
+      "claim_count": 5,
+      "status_counts": {
+        "VERIFIED": 4,
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "nid-online-account-registration": {
+      "service_id": "nid-online-account-registration",
+      "readiness": "GREEN",
+      "claim_count": 2,
+      "status_counts": {
+        "VERIFIED": 2
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "nid-other-info-correction": {
+      "service_id": "nid-other-info-correction",
+      "readiness": "YELLOW",
+      "claim_count": 5,
+      "status_counts": {
+        "VERIFIED": 4,
+        "UNVERIFIED": 1
+      },
+      "reason": "Correction rules/channels/fees-exist verified; exact static fee amounts unresolved (use calculator). Not GREEN for authoritative amount publication.",
+      "manual_review_recommended": true
+    },
+    "nid-photo-signature-appointment": {
+      "service_id": "nid-photo-signature-appointment",
+      "readiness": "GREEN",
+      "claim_count": 2,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1,
+        "VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "nid-reissue-lost": {
+      "service_id": "nid-reissue-lost",
+      "readiness": "GREEN",
+      "claim_count": 4,
+      "status_counts": {
+        "VERIFIED": 3,
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    },
+    "nid-voter-area-change": {
+      "service_id": "nid-voter-area-change",
+      "readiness": "GREEN",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Core official facts verified against Tier 1 sources.",
+      "manual_review_recommended": false
+    }
+  }
+}

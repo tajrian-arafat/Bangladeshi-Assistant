@@ -1,0 +1,133 @@
+{
+  "service_id": "post-mail-tracking",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Domestic Mail Item Tracking",
+  "service_name_bn": "ডাক প্রেরণ ট্র্যাকিং",
+  "aliases": [
+    "DMS tracking",
+    "parcel tracking post office"
+  ],
+  "category_id": "post",
+  "profile_key": "OTHER",
+  "responsible_agency": "Bangladesh Post Office (Directorate of Posts)",
+  "official_application_url": "https://report.dms.bdpost.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "post-mail-tracking::c-catalogue-authority",
+      "service_id": "post-mail-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-mail-tracking::c-official-portal",
+      "service_id": "post-mail-tracking",
+      "claim_type": "application_url",
+      "claim_text": "Domestic Mail Item Tracking official information is published at https://report.dms.bdpost.gov.bd/ (page title: DMS Item Tracking).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://report.dms.bdpost.gov.bd/"
+      },
+      "source_ids": [
+        "src-post-mail-tracking-official"
+      ],
+      "evidence_ids": [
+        "ev-post-mail-tracking::c-official-portal-src-post-mail-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-mail-tracking::c-procedure-overview",
+      "service_id": "post-mail-tracking",
+      "claim_type": "procedure_step",
+      "claim_text": "Domestic Mail Item Tracking is a government service under Bangladesh Post Office (Directorate of Posts) (tracking). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-mail-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-mail-tracking::c-service-identity",
+      "service_id": "post-mail-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Domestic Mail Item Tracking (ডাক প্রেরণ ট্র্যাকিং) is a confirmed government service in category post, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-mail-tracking-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-post-mail-tracking-official",
+      "service_id": "post-mail-tracking",
+      "url": "https://report.dms.bdpost.gov.bd/",
+      "title": "DMS Item Tracking",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://report.dms.bdpost.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DMS Item Tracking",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "f21af91a447d3bc6",
+        "retrieved_at": "2026-08-25T03:29:32.113963+00:00"
+      },
+      "evidence_locator": "probe:https://report.dms.bdpost.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-post-mail-tracking-fee-unverified",
+      "service_id": "post-mail-tracking",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Domestic Mail Item Tracking.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-mail-tracking-documents-unverified",
+      "service_id": "post-mail-tracking",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Domestic Mail Item Tracking.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

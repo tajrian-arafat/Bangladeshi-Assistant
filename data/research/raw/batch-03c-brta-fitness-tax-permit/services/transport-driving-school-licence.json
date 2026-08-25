@@ -1,0 +1,213 @@
+{
+  "service_id": "transport-driving-school-licence",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Driving School / Training Centre Licence",
+  "service_name_bn": "ড্রাইভিং স্কুল/প্রশিক্ষণ কেন্দ্র লাইসেন্স",
+  "aliases": [
+    "driving school licence BRTA"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "business"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "transport-driving-school-licence::c-bsp-service",
+      "legacy_claim_id": "c-bsp-service",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "application_url",
+      "claim_text": "Driving school/training centre licence is a BSP licensing service per catalogue finalization_notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-bsp-service-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-crossref-brta-registration",
+      "legacy_claim_id": "c-crossref-brta-registration",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "restriction",
+      "claim_text": "transport-driving-school-licence (BSP licence) distinct from brta-driving-school-registration (roadSafety registration) — related operator services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-road-safety",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-crossref-brta-registration-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-business-target",
+      "legacy_claim_id": "c-business-target",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "eligibility",
+      "claim_text": "Licence service targets business operators running driving training centres.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-business-target-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-licence-vs-registration",
+      "legacy_claim_id": "c-licence-vs-registration",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "restriction",
+      "claim_text": "Licence issuance is authorization to operate; registration is initial enrolment — may be sequential requirements.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-bsp-road-safety"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-licence-vs-registration-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-licence-fee-calculator",
+      "legacy_claim_id": "c-licence-fee-calculator",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "fee",
+      "claim_text": "Driving school licence fees may be listed in BSP fee calculator under licensing categories.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "transport-driving-school-licence",
+        "vehicle_type": "NOT_APPLICABLE",
+        "action": "driving_school_licence",
+        "condition": "licence_type",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-licence-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-bsp-account-required",
+      "legacy_claim_id": "c-bsp-account-required",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "eligibility",
+      "claim_text": "BSP business account required for licence application workflow.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "online_bsp_application"
+      },
+      "source_ids": [
+        "src-bsp-register",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-bsp-account-required-src-bsp-register"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-not-applicable-vehicle-owner",
+      "legacy_claim_id": "c-not-applicable-vehicle-owner",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "restriction",
+      "claim_text": "Driving school licence not applicable to individual vehicle owners — business/operator service only.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "applicant_is_individual_vehicle_owner"
+      },
+      "source_ids": [
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-not-applicable-vehicle-owner-src-catalogue-transport"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "transport-driving-school-licence::c-practical-bsp-hours",
+      "legacy_claim_id": "c-practical-bsp-hours",
+      "service_id": "transport-driving-school-licence",
+      "claim_type": "practical_tip",
+      "claim_text": "Apply for driving school licence via BSP during 08:00–22:00 BST operating window.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence_ids": [
+        "ev-transport-driving-school-licence::c-practical-bsp-hours-src-bsp-maintenance-notice"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator); batch-03b-brta-vehicle (fitness/tax cross-refs)"
+}

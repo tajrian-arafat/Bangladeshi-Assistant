@@ -1,0 +1,3124 @@
+{
+  "wave_id": "wave-01",
+  "generated_at": "2026-08-25T04:27:24.162472+00:00",
+  "service_ids": [
+    "nid-download-copy",
+    "education-hsc-certificate",
+    "local-passport-attestation",
+    "tax-etin-registration",
+    "customs-import-export-control-licence",
+    "permits-fire-noc-enoc",
+    "nid-combined-correction",
+    "land-deed-registration",
+    "land-khatian-online-copy",
+    "education-class-registration"
+  ],
+  "staging_path": "/workspace/data/research/staging/deep-research-pilot-20",
+  "publication": {
+    "returncode": 0,
+    "stdout": "\": {\n        \"readiness\": \"RED\",\n        \"knowledge_ready\": false,\n        \"legacy_replacement_pending\": false,\n        \"runtime_replacement_pending\": false,\n        \"blocking_reason\": \"KNOWLEDGE_GAP\",\n        \"verified_official_count\": 6,\n        \"published_verified_count\": 0,\n        \"seed_blocked_count\": 0,\n        \"knowledge_gap_count\": 3,\n        \"seed_blocked_claim_ids\": []\n      },\n      \"tax-etin-registration\": {\n        \"readiness\": \"RED\",\n        \"knowledge_ready\": false,\n        \"legacy_replacement_pending\": false,\n        \"runtime_replacement_pending\": false,\n        \"blocking_reason\": \"KNOWLEDGE_GAP\",\n        \"verified_official_count\": 6,\n        \"published_verified_count\": 0,\n        \"seed_blocked_count\": 0,\n        \"knowledge_gap_count\": 4,\n        \"seed_blocked_claim_ids\": []\n      },\n      \"customs-import-export-control-licence\": {\n        \"readiness\": \"RED\",\n        \"knowledge_ready\": false,\n        \"legacy_replacement_pending\": false,\n        \"runtime_replacement_pending\": false,\n        \"blocking_reason\": \"KNOWLEDGE_GAP\",\n        \"verified_official_count\": 6,\n        \"published_verified_count\": 0,\n        \"seed_blocked_count\": 0,\n        \"knowledge_gap_count\": 4,\n        \"seed_blocked_claim_ids\": []\n      },\n      \"permits-fire-noc-enoc\": {\n        \"readiness\": \"RED\",\n        \"knowledge_ready\": false,\n        \"legacy_replacement_pending\": false,\n        \"runtime_replacement_pending\": false,\n        \"blocking_reason\": \"KNOWLEDGE_GAP\",\n        \"verified_official_count\": 6,\n        \"published_verified_count\": 0,\n        \"seed_blocked_count\": 0,\n        \"knowledge_gap_count\": 4,\n        \"seed_blocked_claim_ids\": []\n      },\n      \"nid-combined-correction\": {\n        \"readiness\": \"YELLOW\",\n        \"knowledge_ready\": true,\n        \"legacy_replacement_pending\": true,\n        \"runtime_replacement_pending\": true,\n        \"blocking_reason\": \"LEGACY_DATA_REPLACEMENT_PENDING\",\n        \"verified_official_count\": 18,\n        \"published_verified_count\": 6,\n        \"seed_blocked_count\": 12,\n        \"knowledge_gap_count\": 0,\n        \"seed_blocked_claim_ids\": [\n          \"63ab6741-740d-4f49-a96c-08561070a5a0\",\n          \"9f2b029f-4f75-414d-a570-89fb9c7c4ba0\",\n          \"9478befd-1118-4d28-9a7e-066a6c606f3c\",\n          \"6f4302f8-bd91-40fd-87ec-002cf8fed5b0\",\n          \"11696c4e-f8f3-4d4c-848a-24fbf002eebc\",\n          \"2145517c-2b74-4677-b3b5-5d60d350bd67\",\n          \"83173634-fcc1-47c7-94b9-477f4f61f142\",\n          \"bd0ef57d-ec8b-453b-8679-d5b35392c2e7\",\n          \"2ea336d6-b062-4631-ac73-f91373a19627\",\n          \"b5c4dc78-6701-43a1-a3c3-48f438084acd\",\n          \"1cb5a2a4-da7e-4aa4-8f44-6c8edfdf5992\",\n          \"57b1536c-0bec-4eb3-b796-369366ce0d93\"\n        ]\n      },\n      \"land-deed-registration\": {\n        \"readiness\": \"RED\",\n        \"knowledge_ready\": false,\n        \"legacy_replacement_pending\": false,\n        \"runtime_replacement_pending\": false,\n        \"blocking_reason\": \"KNOWLEDGE_GAP\",\n        \"verified_official_count\": 5,\n        \"published_verified_count\": 0,\n        \"seed_blocked_count\": 0,\n        \"knowledge_gap_count\": 4,\n        \"seed_blocked_claim_ids\": []\n      },\n      \"land-khatian-online-copy\": {\n        \"readiness\": \"RED\",\n        \"knowledge_ready\": false,\n        \"legacy_replacement_pending\": false,\n        \"runtime_replacement_pending\": false,\n        \"blocking_reason\": \"KNOWLEDGE_GAP\",\n        \"verified_official_count\": 4,\n        \"published_verified_count\": 0,\n        \"seed_blocked_count\": 0,\n        \"knowledge_gap_count\": 2,\n        \"seed_blocked_claim_ids\": []\n      },\n      \"education-class-registration\": {\n        \"readiness\": \"RED\",\n        \"knowledge_ready\": false,\n        \"legacy_replacement_pending\": false,\n        \"runtime_replacement_pending\": false,\n        \"blocking_reason\": \"KNOWLEDGE_GAP\",\n        \"verified_official_count\": 5,\n        \"published_verified_count\": 0,\n        \"seed_blocked_count\": 0,\n        \"knowledge_gap_count\": 3,\n        \"seed_blocked_claim_ids\": []\n      }\n    }\n  }\n}\n",
+    "report": {
+      "ok": true,
+      "reports": [
+        {
+          "ok": true,
+          "dry_run": false,
+          "batch_id": "deep-research-pilot-20",
+          "synced_claims": 61,
+          "published_fees": 0,
+          "published_checklist": 0,
+          "published_steps": 0,
+          "published_urls": 0,
+          "published_practical": 0,
+          "skipped": 0,
+          "eligible_count": 0,
+          "rejected_by_gate_count": 0,
+          "errors": [],
+          "actions_sample": [],
+          "actions_total": 0,
+          "audit": {
+            "eligible_for_publication": 0,
+            "rejected_by_gate": 0,
+            "skipped": 0,
+            "published_fees": 0,
+            "published_checklist": 0,
+            "published_steps": 0,
+            "published_urls": 0,
+            "practical_stored": 0,
+            "synced_claims": 61,
+            "errors": [],
+            "rejected_samples": [],
+            "eligible_samples": [],
+            "skipped_samples": [],
+            "post_readiness": {},
+            "post_readiness_detail": {}
+          }
+        },
+        {
+          "ok": true,
+          "dry_run": false,
+          "batch_id": "deep-research-pilot-20",
+          "synced_claims": 0,
+          "published_fees": 0,
+          "published_checklist": 2,
+          "published_steps": 2,
+          "published_urls": 2,
+          "published_practical": 0,
+          "skipped": 66,
+          "eligible_count": 25,
+          "rejected_by_gate_count": 47,
+          "errors": [],
+          "actions_sample": [
+            {
+              "action": "mark_claim_published_metadata_only",
+              "claim_id": "2349a8ba-0c93-4d70-8936-7ae1157bf4f9",
+              "claim_type": "eligibility",
+              "research_claim_key": "nid-download-copy::c-service-identity"
+            },
+            {
+              "action": "mark_claim_published_metadata_only",
+              "claim_id": "267d00c9-b1ef-47d0-8e3c-b428127ed683",
+              "claim_type": "eligibility",
+              "research_claim_key": "nid-download-copy::c-eligibility-deep"
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "7aa2a128-3ba9-4126-9425-01050c3f3ac8",
+              "research_claim_key": "education-hsc-certificate::c-official-url-documented",
+              "claim_type": "application_url",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "0c4e028f-2ec3-49fb-9306-e6501e7d95af",
+              "research_claim_key": "education-hsc-certificate::c-procedure-overview",
+              "claim_type": "procedure_step",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "3e46946f-6fd9-4037-96d5-8967d1d49569",
+              "research_claim_key": "education-hsc-certificate::c-document-overview",
+              "claim_type": "document",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "0dcf4ef7-ee44-41b3-bfdd-d196290812a5",
+              "research_claim_key": "education-hsc-certificate::c-service-identity",
+              "claim_type": "eligibility",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "skip_unverified",
+              "claim_id": "8e526022-856a-4daf-a7d8-652695d783d7",
+              "research_claim_key": "education-hsc-certificate::c-eligibility-deep",
+              "status": "NORMALIZED",
+              "verification_status": "PARTIAL"
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "c48cd82d-31e9-4050-89c9-dbe8e75b166b",
+              "research_claim_key": "education-hsc-certificate::c-document-must-need",
+              "claim_type": "document",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "skip_unverified",
+              "claim_id": "e028486f-bf97-4e1c-9348-4284b4dbe582",
+              "research_claim_key": "local-passport-attestation::c-local-passport-attestation-exists",
+              "status": "PARTIALLY_VERIFIED",
+              "verification_status": null
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "d544716a-26bf-4d44-85c7-d20d01b44d0f",
+              "research_claim_key": "local-passport-attestation::c-official-portal",
+              "claim_type": "application_url",
+              "reasons": [
+                "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "1378957c-e1b6-4019-a026-6d68f89524c3",
+              "research_claim_key": "local-passport-attestation::c-procedure-overview",
+              "claim_type": "procedure_step",
+              "reasons": [
+                "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "8bc07db7-4fbb-4e44-ac0f-5271684e28a3",
+              "research_claim_key": "local-passport-attestation::c-document-overview",
+              "claim_type": "document",
+              "reasons": [
+                "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "0b5b8b52-9e77-489c-9a31-a0b9c16eb67c",
+              "research_claim_key": "local-passport-attestation::c-service-identity",
+              "claim_type": "eligibility",
+              "reasons": [
+                "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "865140da-45d3-4fcc-bb24-5b1a96e994cc",
+              "research_claim_key": "local-passport-attestation::c-eligibility-deep",
+              "claim_type": "eligibility",
+              "reasons": [
+                "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "fa0bef81-0cc6-4c72-ba1a-b009e95a0a22",
+              "research_claim_key": "local-passport-attestation::c-document-must-need",
+              "claim_type": "document",
+              "reasons": [
+                "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "ee3ceda3-f5aa-41e5-8650-fb8f2e7e471f",
+              "research_claim_key": "tax-etin-registration::c-official-portal",
+              "claim_type": "application_url",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "4f0f9d47-ef39-49ad-9c1a-22ef10aee3be",
+              "research_claim_key": "tax-etin-registration::c-procedure-overview",
+              "claim_type": "procedure_step",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "1bc3e8e4-f4fc-4cbc-b540-422746099271",
+              "research_claim_key": "tax-etin-registration::c-document-overview",
+              "claim_type": "document",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "77504422-e21a-4171-ac15-f46c793cc42f",
+              "research_claim_key": "tax-etin-registration::c-service-identity",
+              "claim_type": "eligibility",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "ee436044-36c3-46c5-a649-5bef60053b9d",
+              "research_claim_key": "tax-etin-registration::c-eligibility-deep",
+              "claim_type": "eligibility",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "2ab813e9-05f3-484d-ae1b-ddd79348bcc5",
+              "research_claim_key": "tax-etin-registration::c-fee-deep",
+              "claim_type": "fee",
+              "reasons": [
+                "information_class must be OFFICIAL for authoritative publish (got OFFICIAL_FEE)",
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "669b4ada-c0c2-47b4-a683-600024f1686e",
+              "research_claim_key": "tax-etin-registration::c-document-must-need",
+              "claim_type": "document",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "b67b135a-42c0-4f6d-aebd-e540aad1c593",
+              "research_claim_key": "customs-import-export-control-licence::c-official-portal",
+              "claim_type": "application_url",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "c07d2924-62d3-47f8-a3c1-c8bf45f122e3",
+              "research_claim_key": "customs-import-export-control-licence::c-procedure-overview",
+              "claim_type": "procedure_step",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "7036bc28-4ce0-4287-b900-2de13c6f6071",
+              "research_claim_key": "customs-import-export-control-licence::c-document-overview",
+              "claim_type": "document",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "5118725b-7b2d-48a6-9411-05dd98232b6f",
+              "research_claim_key": "customs-import-export-control-licence::c-service-identity",
+              "claim_type": "eligibility",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "ce1fad76-c3ac-4590-9d15-036502f8f529",
+              "research_claim_key": "customs-import-export-control-licence::c-eligibility-deep",
+              "claim_type": "eligibility",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "31132f47-5a75-4d18-a904-72a6c98244b4",
+              "research_claim_key": "customs-import-export-control-licence::c-fee-deep",
+              "claim_type": "fee",
+              "reasons": [
+                "information_class must be OFFICIAL for authoritative publish (got OFFICIAL_FEE)",
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "36d6e9e9-c087-4853-aa59-45e3ee0b27c0",
+              "research_claim_key": "customs-import-export-control-licence::c-document-must-need",
+              "claim_type": "document",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            },
+            {
+              "action": "reject_gate",
+              "claim_id": "196c6b3f-c4cc-4915-a215-21b86bf0f90a",
+              "research_claim_key": "permits-fire-noc-enoc::c-official-portal",
+              "claim_type": "application_url",
+              "reasons": [
+                "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+              ]
+            }
+          ],
+          "actions_total": 73,
+          "audit": {
+            "eligible_for_publication": 7,
+            "rejected_by_gate": 47,
+            "skipped": 66,
+            "published_fees": 0,
+            "published_checklist": 2,
+            "published_steps": 2,
+            "published_urls": 2,
+            "practical_stored": 0,
+            "synced_claims": 0,
+            "errors": [],
+            "rejected_samples": [
+              {
+                "action": "reject_gate",
+                "claim_id": "7aa2a128-3ba9-4126-9425-01050c3f3ac8",
+                "research_claim_key": "education-hsc-certificate::c-official-url-documented",
+                "claim_type": "application_url",
+                "reasons": [
+                  "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "0c4e028f-2ec3-49fb-9306-e6501e7d95af",
+                "research_claim_key": "education-hsc-certificate::c-procedure-overview",
+                "claim_type": "procedure_step",
+                "reasons": [
+                  "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "3e46946f-6fd9-4037-96d5-8967d1d49569",
+                "research_claim_key": "education-hsc-certificate::c-document-overview",
+                "claim_type": "document",
+                "reasons": [
+                  "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "0dcf4ef7-ee44-41b3-bfdd-d196290812a5",
+                "research_claim_key": "education-hsc-certificate::c-service-identity",
+                "claim_type": "eligibility",
+                "reasons": [
+                  "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "c48cd82d-31e9-4050-89c9-dbe8e75b166b",
+                "research_claim_key": "education-hsc-certificate::c-document-must-need",
+                "claim_type": "document",
+                "reasons": [
+                  "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "d544716a-26bf-4d44-85c7-d20d01b44d0f",
+                "research_claim_key": "local-passport-attestation::c-official-portal",
+                "claim_type": "application_url",
+                "reasons": [
+                  "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "1378957c-e1b6-4019-a026-6d68f89524c3",
+                "research_claim_key": "local-passport-attestation::c-procedure-overview",
+                "claim_type": "procedure_step",
+                "reasons": [
+                  "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "8bc07db7-4fbb-4e44-ac0f-5271684e28a3",
+                "research_claim_key": "local-passport-attestation::c-document-overview",
+                "claim_type": "document",
+                "reasons": [
+                  "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "0b5b8b52-9e77-489c-9a31-a0b9c16eb67c",
+                "research_claim_key": "local-passport-attestation::c-service-identity",
+                "claim_type": "eligibility",
+                "reasons": [
+                  "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "865140da-45d3-4fcc-bb24-5b1a96e994cc",
+                "research_claim_key": "local-passport-attestation::c-eligibility-deep",
+                "claim_type": "eligibility",
+                "reasons": [
+                  "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "fa0bef81-0cc6-4c72-ba1a-b009e95a0a22",
+                "research_claim_key": "local-passport-attestation::c-document-must-need",
+                "claim_type": "document",
+                "reasons": [
+                  "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "ee3ceda3-f5aa-41e5-8650-fb8f2e7e471f",
+                "research_claim_key": "tax-etin-registration::c-official-portal",
+                "claim_type": "application_url",
+                "reasons": [
+                  "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "4f0f9d47-ef39-49ad-9c1a-22ef10aee3be",
+                "research_claim_key": "tax-etin-registration::c-procedure-overview",
+                "claim_type": "procedure_step",
+                "reasons": [
+                  "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "1bc3e8e4-f4fc-4cbc-b540-422746099271",
+                "research_claim_key": "tax-etin-registration::c-document-overview",
+                "claim_type": "document",
+                "reasons": [
+                  "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+                ]
+              },
+              {
+                "action": "reject_gate",
+                "claim_id": "77504422-e21a-4171-ac15-f46c793cc42f",
+                "research_claim_key": "tax-etin-registration::c-service-identity",
+                "claim_type": "eligibility",
+                "reasons": [
+                  "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+                ]
+              }
+            ],
+            "eligible_samples": [
+              {
+                "action": "mark_claim_published_metadata_only",
+                "claim_id": "2349a8ba-0c93-4d70-8936-7ae1157bf4f9",
+                "claim_type": "eligibility",
+                "research_claim_key": "nid-download-copy::c-service-identity"
+              },
+              {
+                "action": "mark_claim_published_metadata_only",
+                "claim_id": "267d00c9-b1ef-47d0-8e3c-b428127ed683",
+                "claim_type": "eligibility",
+                "research_claim_key": "nid-download-copy::c-eligibility-deep"
+              },
+              {
+                "action": "mark_claim_published_metadata_only",
+                "claim_id": "fd2bfa1f-1c92-445d-8fcc-017a9bb01932",
+                "claim_type": "restriction",
+                "research_claim_key": "nid-card-info-correction::c-nid-card-info-correction-once"
+              },
+              {
+                "action": "mark_claim_published_metadata_only",
+                "claim_id": "a1c59188-af52-4778-8ea6-48e3847fb9a5",
+                "claim_type": "restriction",
+                "research_claim_key": "nid-combined-correction::c-nid-combined-correction-once"
+              },
+              {
+                "action": "mark_claim_published_metadata_only",
+                "claim_id": "55139864-727e-4024-8cde-7b2a04a2ce44",
+                "claim_type": "restriction",
+                "research_claim_key": "nid-other-info-correction::c-nid-other-info-correction-once"
+              },
+              {
+                "action": "mark_claim_published_metadata_only",
+                "claim_id": "d06fb657-e329-4887-9416-352ad3059683",
+                "claim_type": "eligibility",
+                "research_claim_key": "nid-combined-correction::c-service-identity"
+              },
+              {
+                "action": "mark_claim_published_metadata_only",
+                "claim_id": "326eb7df-d52a-49d4-a90d-a96f7c40d9e9",
+                "claim_type": "eligibility",
+                "research_claim_key": "nid-combined-correction::c-eligibility-deep"
+              }
+            ],
+            "skipped_samples": [
+              {
+                "action": "skip_unverified",
+                "claim_id": "8e526022-856a-4daf-a7d8-652695d783d7",
+                "research_claim_key": "education-hsc-certificate::c-eligibility-deep",
+                "status": "NORMALIZED",
+                "verification_status": "PARTIAL"
+              },
+              {
+                "action": "skip_unverified",
+                "claim_id": "e028486f-bf97-4e1c-9348-4284b4dbe582",
+                "research_claim_key": "local-passport-attestation::c-local-passport-attestation-exists",
+                "status": "PARTIALLY_VERIFIED",
+                "verification_status": null
+              },
+              {
+                "action": "skip_mvp_seed_step_overwrite",
+                "claim_id": "63ab6741-740d-4f49-a96c-08561070a5a0",
+                "service_slug": "nid-correction"
+              },
+              {
+                "action": "skip_mvp_seed_checklist_overwrite",
+                "claim_id": "9f2b029f-4f75-414d-a570-89fb9c7c4ba0",
+                "service_slug": "nid-correction"
+              },
+              {
+                "action": "skip_mvp_seed_fee_overwrite",
+                "claim_id": "9478befd-1118-4d28-9a7e-066a6c606f3c",
+                "service_slug": "nid-correction"
+              },
+              {
+                "action": "skip_practical_unverified",
+                "claim_id": "373866ca-090a-4f16-bb02-ff5ead3ecee2",
+                "research_claim_key": "nid-card-info-correction::c-nid-card-info-correction-fee-amount-news",
+                "status": "UNVERIFIED"
+              },
+              {
+                "action": "skip_mvp_seed_step_overwrite",
+                "claim_id": "6f4302f8-bd91-40fd-87ec-002cf8fed5b0",
+                "service_slug": "nid-correction"
+              },
+              {
+                "action": "skip_mvp_seed_checklist_overwrite",
+                "claim_id": "11696c4e-f8f3-4d4c-848a-24fbf002eebc",
+                "service_slug": "nid-correction"
+              },
+              {
+                "action": "skip_mvp_seed_fee_overwrite",
+                "claim_id": "2145517c-2b74-4677-b3b5-5d60d350bd67",
+                "service_slug": "nid-correction"
+              },
+              {
+                "action": "skip_practical_unverified",
+                "claim_id": "36bdf1db-86ac-400b-8288-1c352629084f",
+                "research_claim_key": "nid-combined-correction::c-nid-combined-correction-fee-amount-news",
+                "status": "UNVERIFIED"
+              },
+              {
+                "action": "skip_mvp_seed_step_overwrite",
+                "claim_id": "83173634-fcc1-47c7-94b9-477f4f61f142",
+                "service_slug": "nid-correction"
+              },
+              {
+                "action": "skip_mvp_seed_checklist_overwrite",
+                "claim_id": "bd0ef57d-ec8b-453b-8679-d5b35392c2e7",
+                "service_slug": "nid-correction"
+              },
+              {
+                "action": "skip_mvp_seed_fee_overwrite",
+                "claim_id": "2ea336d6-b062-4631-ac73-f91373a19627",
+                "service_slug": "nid-correction"
+              },
+              {
+                "action": "skip_practical_unverified",
+                "claim_id": "65a5ed42-a404-41fa-8645-6c5a8154443f",
+                "research_claim_key": "nid-other-info-correction::c-nid-other-info-correction-fee-amount-news",
+                "status": "UNVERIFIED"
+              },
+              {
+                "action": "skip_mvp_seed_step_overwrite",
+                "claim_id": "b5c4dc78-6701-43a1-a3c3-48f438084acd",
+                "service_slug": "nid-correction"
+              }
+            ],
+            "post_readiness": {
+              "nid-download-copy": "GREEN",
+              "education-hsc-certificate": "RED",
+              "local-passport-attestation": "RED",
+              "tax-etin-registration": "RED",
+              "customs-import-export-control-licence": "RED",
+              "permits-fire-noc-enoc": "RED",
+              "nid-combined-correction": "YELLOW",
+              "land-deed-registration": "RED",
+              "land-khatian-online-copy": "RED",
+              "education-class-registration": "RED"
+            },
+            "post_readiness_detail": {
+              "nid-download-copy": {
+                "readiness": "GREEN",
+                "knowledge_ready": true,
+                "legacy_replacement_pending": false,
+                "runtime_replacement_pending": false,
+                "blocking_reason": null,
+                "verified_official_count": 7,
+                "published_verified_count": 7,
+                "seed_blocked_count": 0,
+                "knowledge_gap_count": 0,
+                "seed_blocked_claim_ids": []
+              },
+              "education-hsc-certificate": {
+                "readiness": "RED",
+                "knowledge_ready": false,
+                "legacy_replacement_pending": false,
+                "runtime_replacement_pending": false,
+                "blocking_reason": "KNOWLEDGE_GAP",
+                "verified_official_count": 5,
+                "published_verified_count": 0,
+                "seed_blocked_count": 0,
+                "knowledge_gap_count": 3,
+                "seed_blocked_claim_ids": []
+              },
+              "local-passport-attestation": {
+                "readiness": "RED",
+                "knowledge_ready": false,
+                "legacy_replacement_pending": false,
+                "runtime_replacement_pending": false,
+                "blocking_reason": "KNOWLEDGE_GAP",
+                "verified_official_count": 6,
+                "published_verified_count": 0,
+                "seed_blocked_count": 0,
+                "knowledge_gap_count": 3,
+                "seed_blocked_claim_ids": []
+              },
+              "tax-etin-registration": {
+                "readiness": "RED",
+                "knowledge_ready": false,
+                "legacy_replacement_pending": false,
+                "runtime_replacement_pending": false,
+                "blocking_reason": "KNOWLEDGE_GAP",
+                "verified_official_count": 6,
+                "published_verified_count": 0,
+                "seed_blocked_count": 0,
+                "knowledge_gap_count": 4,
+                "seed_blocked_claim_ids": []
+              },
+              "customs-import-export-control-licence": {
+                "readiness": "RED",
+                "knowledge_ready": false,
+                "legacy_replacement_pending": false,
+                "runtime_replacement_pending": false,
+                "blocking_reason": "KNOWLEDGE_GAP",
+                "verified_official_count": 6,
+                "published_verified_count": 0,
+                "seed_blocked_count": 0,
+                "knowledge_gap_count": 4,
+                "seed_blocked_claim_ids": []
+              },
+              "permits-fire-noc-enoc": {
+                "readiness": "RED",
+                "knowledge_ready": false,
+                "legacy_replacement_pending": false,
+                "runtime_replacement_pending": false,
+                "blocking_reason": "KNOWLEDGE_GAP",
+                "verified_official_count": 6,
+                "published_verified_count": 0,
+                "seed_blocked_count": 0,
+                "knowledge_gap_count": 4,
+                "seed_blocked_claim_ids": []
+              },
+              "nid-combined-correction": {
+                "readiness": "YELLOW",
+                "knowledge_ready": true,
+                "legacy_replacement_pending": true,
+                "runtime_replacement_pending": true,
+                "blocking_reason": "LEGACY_DATA_REPLACEMENT_PENDING",
+                "verified_official_count": 18,
+                "published_verified_count": 6,
+                "seed_blocked_count": 12,
+                "knowledge_gap_count": 0,
+                "seed_blocked_claim_ids": [
+                  "63ab6741-740d-4f49-a96c-08561070a5a0",
+                  "9f2b029f-4f75-414d-a570-89fb9c7c4ba0",
+                  "9478befd-1118-4d28-9a7e-066a6c606f3c",
+                  "6f4302f8-bd91-40fd-87ec-002cf8fed5b0",
+                  "11696c4e-f8f3-4d4c-848a-24fbf002eebc",
+                  "2145517c-2b74-4677-b3b5-5d60d350bd67",
+                  "83173634-fcc1-47c7-94b9-477f4f61f142",
+                  "bd0ef57d-ec8b-453b-8679-d5b35392c2e7",
+                  "2ea336d6-b062-4631-ac73-f91373a19627",
+                  "b5c4dc78-6701-43a1-a3c3-48f438084acd",
+                  "1cb5a2a4-da7e-4aa4-8f44-6c8edfdf5992",
+                  "57b1536c-0bec-4eb3-b796-369366ce0d93"
+                ]
+              },
+              "land-deed-registration": {
+                "readiness": "RED",
+                "knowledge_ready": false,
+                "legacy_replacement_pending": false,
+                "runtime_replacement_pending": false,
+                "blocking_reason": "KNOWLEDGE_GAP",
+                "verified_official_count": 5,
+                "published_verified_count": 0,
+                "seed_blocked_count": 0,
+                "knowledge_gap_count": 4,
+                "seed_blocked_claim_ids": []
+              },
+              "land-khatian-online-copy": {
+                "readiness": "RED",
+                "knowledge_ready": false,
+                "legacy_replacement_pending": false,
+                "runtime_replacement_pending": false,
+                "blocking_reason": "KNOWLEDGE_GAP",
+                "verified_official_count": 4,
+                "published_verified_count": 0,
+                "seed_blocked_count": 0,
+                "knowledge_gap_count": 2,
+                "seed_blocked_claim_ids": []
+              },
+              "education-class-registration": {
+                "readiness": "RED",
+                "knowledge_ready": false,
+                "legacy_replacement_pending": false,
+                "runtime_replacement_pending": false,
+                "blocking_reason": "KNOWLEDGE_GAP",
+                "verified_official_count": 5,
+                "published_verified_count": 0,
+                "seed_blocked_count": 0,
+                "knowledge_gap_count": 3,
+                "seed_blocked_claim_ids": []
+              }
+            }
+          },
+          "post_readiness": {
+            "nid-download-copy": "GREEN",
+            "education-hsc-certificate": "RED",
+            "local-passport-attestation": "RED",
+            "tax-etin-registration": "RED",
+            "customs-import-export-control-licence": "RED",
+            "permits-fire-noc-enoc": "RED",
+            "nid-combined-correction": "YELLOW",
+            "land-deed-registration": "RED",
+            "land-khatian-online-copy": "RED",
+            "education-class-registration": "RED"
+          },
+          "post_readiness_detail": {
+            "nid-download-copy": {
+              "readiness": "GREEN",
+              "knowledge_ready": true,
+              "legacy_replacement_pending": false,
+              "runtime_replacement_pending": false,
+              "blocking_reason": null,
+              "verified_official_count": 7,
+              "published_verified_count": 7,
+              "seed_blocked_count": 0,
+              "knowledge_gap_count": 0,
+              "seed_blocked_claim_ids": []
+            },
+            "education-hsc-certificate": {
+              "readiness": "RED",
+              "knowledge_ready": false,
+              "legacy_replacement_pending": false,
+              "runtime_replacement_pending": false,
+              "blocking_reason": "KNOWLEDGE_GAP",
+              "verified_official_count": 5,
+              "published_verified_count": 0,
+              "seed_blocked_count": 0,
+              "knowledge_gap_count": 3,
+              "seed_blocked_claim_ids": []
+            },
+            "local-passport-attestation": {
+              "readiness": "RED",
+              "knowledge_ready": false,
+              "legacy_replacement_pending": false,
+              "runtime_replacement_pending": false,
+              "blocking_reason": "KNOWLEDGE_GAP",
+              "verified_official_count": 6,
+              "published_verified_count": 0,
+              "seed_blocked_count": 0,
+              "knowledge_gap_count": 3,
+              "seed_blocked_claim_ids": []
+            },
+            "tax-etin-registration": {
+              "readiness": "RED",
+              "knowledge_ready": false,
+              "legacy_replacement_pending": false,
+              "runtime_replacement_pending": false,
+              "blocking_reason": "KNOWLEDGE_GAP",
+              "verified_official_count": 6,
+              "published_verified_count": 0,
+              "seed_blocked_count": 0,
+              "knowledge_gap_count": 4,
+              "seed_blocked_claim_ids": []
+            },
+            "customs-import-export-control-licence": {
+              "readiness": "RED",
+              "knowledge_ready": false,
+              "legacy_replacement_pending": false,
+              "runtime_replacement_pending": false,
+              "blocking_reason": "KNOWLEDGE_GAP",
+              "verified_official_count": 6,
+              "published_verified_count": 0,
+              "seed_blocked_count": 0,
+              "knowledge_gap_count": 4,
+              "seed_blocked_claim_ids": []
+            },
+            "permits-fire-noc-enoc": {
+              "readiness": "RED",
+              "knowledge_ready": false,
+              "legacy_replacement_pending": false,
+              "runtime_replacement_pending": false,
+              "blocking_reason": "KNOWLEDGE_GAP",
+              "verified_official_count": 6,
+              "published_verified_count": 0,
+              "seed_blocked_count": 0,
+              "knowledge_gap_count": 4,
+              "seed_blocked_claim_ids": []
+            },
+            "nid-combined-correction": {
+              "readiness": "YELLOW",
+              "knowledge_ready": true,
+              "legacy_replacement_pending": true,
+              "runtime_replacement_pending": true,
+              "blocking_reason": "LEGACY_DATA_REPLACEMENT_PENDING",
+              "verified_official_count": 18,
+              "published_verified_count": 6,
+              "seed_blocked_count": 12,
+              "knowledge_gap_count": 0,
+              "seed_blocked_claim_ids": [
+                "63ab6741-740d-4f49-a96c-08561070a5a0",
+                "9f2b029f-4f75-414d-a570-89fb9c7c4ba0",
+                "9478befd-1118-4d28-9a7e-066a6c606f3c",
+                "6f4302f8-bd91-40fd-87ec-002cf8fed5b0",
+                "11696c4e-f8f3-4d4c-848a-24fbf002eebc",
+                "2145517c-2b74-4677-b3b5-5d60d350bd67",
+                "83173634-fcc1-47c7-94b9-477f4f61f142",
+                "bd0ef57d-ec8b-453b-8679-d5b35392c2e7",
+                "2ea336d6-b062-4631-ac73-f91373a19627",
+                "b5c4dc78-6701-43a1-a3c3-48f438084acd",
+                "1cb5a2a4-da7e-4aa4-8f44-6c8edfdf5992",
+                "57b1536c-0bec-4eb3-b796-369366ce0d93"
+              ]
+            },
+            "land-deed-registration": {
+              "readiness": "RED",
+              "knowledge_ready": false,
+              "legacy_replacement_pending": false,
+              "runtime_replacement_pending": false,
+              "blocking_reason": "KNOWLEDGE_GAP",
+              "verified_official_count": 5,
+              "published_verified_count": 0,
+              "seed_blocked_count": 0,
+              "knowledge_gap_count": 4,
+              "seed_blocked_claim_ids": []
+            },
+            "land-khatian-online-copy": {
+              "readiness": "RED",
+              "knowledge_ready": false,
+              "legacy_replacement_pending": false,
+              "runtime_replacement_pending": false,
+              "blocking_reason": "KNOWLEDGE_GAP",
+              "verified_official_count": 4,
+              "published_verified_count": 0,
+              "seed_blocked_count": 0,
+              "knowledge_gap_count": 2,
+              "seed_blocked_claim_ids": []
+            },
+            "education-class-registration": {
+              "readiness": "RED",
+              "knowledge_ready": false,
+              "legacy_replacement_pending": false,
+              "runtime_replacement_pending": false,
+              "blocking_reason": "KNOWLEDGE_GAP",
+              "verified_official_count": 5,
+              "published_verified_count": 0,
+              "seed_blocked_count": 0,
+              "knowledge_gap_count": 3,
+              "seed_blocked_claim_ids": []
+            }
+          }
+        }
+      ],
+      "dry_run_audit": {
+        "eligible_for_publication": 7,
+        "rejected_by_gate": 47,
+        "skipped": 66,
+        "published_fees": 0,
+        "published_checklist": 2,
+        "published_steps": 2,
+        "published_urls": 2,
+        "practical_stored": 0,
+        "synced_claims": 0,
+        "errors": [],
+        "rejected_samples": [
+          {
+            "action": "reject_gate",
+            "claim_id": "7aa2a128-3ba9-4126-9425-01050c3f3ac8",
+            "research_claim_key": "education-hsc-certificate::c-official-url-documented",
+            "claim_type": "application_url",
+            "reasons": [
+              "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "0c4e028f-2ec3-49fb-9306-e6501e7d95af",
+            "research_claim_key": "education-hsc-certificate::c-procedure-overview",
+            "claim_type": "procedure_step",
+            "reasons": [
+              "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "3e46946f-6fd9-4037-96d5-8967d1d49569",
+            "research_claim_key": "education-hsc-certificate::c-document-overview",
+            "claim_type": "document",
+            "reasons": [
+              "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "0dcf4ef7-ee44-41b3-bfdd-d196290812a5",
+            "research_claim_key": "education-hsc-certificate::c-service-identity",
+            "claim_type": "eligibility",
+            "reasons": [
+              "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "c48cd82d-31e9-4050-89c9-dbe8e75b166b",
+            "research_claim_key": "education-hsc-certificate::c-document-must-need",
+            "claim_type": "document",
+            "reasons": [
+              "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "d544716a-26bf-4d44-85c7-d20d01b44d0f",
+            "research_claim_key": "local-passport-attestation::c-official-portal",
+            "claim_type": "application_url",
+            "reasons": [
+              "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "1378957c-e1b6-4019-a026-6d68f89524c3",
+            "research_claim_key": "local-passport-attestation::c-procedure-overview",
+            "claim_type": "procedure_step",
+            "reasons": [
+              "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "8bc07db7-4fbb-4e44-ac0f-5271684e28a3",
+            "research_claim_key": "local-passport-attestation::c-document-overview",
+            "claim_type": "document",
+            "reasons": [
+              "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "0b5b8b52-9e77-489c-9a31-a0b9c16eb67c",
+            "research_claim_key": "local-passport-attestation::c-service-identity",
+            "claim_type": "eligibility",
+            "reasons": [
+              "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "865140da-45d3-4fcc-bb24-5b1a96e994cc",
+            "research_claim_key": "local-passport-attestation::c-eligibility-deep",
+            "claim_type": "eligibility",
+            "reasons": [
+              "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "fa0bef81-0cc6-4c72-ba1a-b009e95a0a22",
+            "research_claim_key": "local-passport-attestation::c-document-must-need",
+            "claim_type": "document",
+            "reasons": [
+              "best authority tier 3 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "ee3ceda3-f5aa-41e5-8650-fb8f2e7e471f",
+            "research_claim_key": "tax-etin-registration::c-official-portal",
+            "claim_type": "application_url",
+            "reasons": [
+              "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "4f0f9d47-ef39-49ad-9c1a-22ef10aee3be",
+            "research_claim_key": "tax-etin-registration::c-procedure-overview",
+            "claim_type": "procedure_step",
+            "reasons": [
+              "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "1bc3e8e4-f4fc-4cbc-b540-422746099271",
+            "research_claim_key": "tax-etin-registration::c-document-overview",
+            "claim_type": "document",
+            "reasons": [
+              "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "77504422-e21a-4171-ac15-f46c793cc42f",
+            "research_claim_key": "tax-etin-registration::c-service-identity",
+            "claim_type": "eligibility",
+            "reasons": [
+              "best authority tier 6 exceeds max 2 for OFFICIAL publication"
+            ]
+          }
+        ],
+        "eligible_samples": [
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "2349a8ba-0c93-4d70-8936-7ae1157bf4f9",
+            "claim_type": "eligibility",
+            "research_claim_key": "nid-download-copy::c-service-identity"
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "267d00c9-b1ef-47d0-8e3c-b428127ed683",
+            "claim_type": "eligibility",
+            "research_claim_key": "nid-download-copy::c-eligibility-deep"
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "fd2bfa1f-1c92-445d-8fcc-017a9bb01932",
+            "claim_type": "restriction",
+            "research_claim_key": "nid-card-info-correction::c-nid-card-info-correction-once"
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "a1c59188-af52-4778-8ea6-48e3847fb9a5",
+            "claim_type": "restriction",
+            "research_claim_key": "nid-combined-correction::c-nid-combined-correction-once"
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "55139864-727e-4024-8cde-7b2a04a2ce44",
+            "claim_type": "restriction",
+            "research_claim_key": "nid-other-info-correction::c-nid-other-info-correction-once"
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "d06fb657-e329-4887-9416-352ad3059683",
+            "claim_type": "eligibility",
+            "research_claim_key": "nid-combined-correction::c-service-identity"
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "326eb7df-d52a-49d4-a90d-a96f7c40d9e9",
+            "claim_type": "eligibility",
+            "research_claim_key": "nid-combined-correction::c-eligibility-deep"
+          }
+        ],
+        "skipped_samples": [
+          {
+            "action": "skip_unverified",
+            "claim_id": "8e526022-856a-4daf-a7d8-652695d783d7",
+            "research_claim_key": "education-hsc-certificate::c-eligibility-deep",
+            "status": "NORMALIZED",
+            "verification_status": "PARTIAL"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "e028486f-bf97-4e1c-9348-4284b4dbe582",
+            "research_claim_key": "local-passport-attestation::c-local-passport-attestation-exists",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": null
+          },
+          {
+            "action": "skip_mvp_seed_step_overwrite",
+            "claim_id": "63ab6741-740d-4f49-a96c-08561070a5a0",
+            "service_slug": "nid-correction"
+          },
+          {
+            "action": "skip_mvp_seed_checklist_overwrite",
+            "claim_id": "9f2b029f-4f75-414d-a570-89fb9c7c4ba0",
+            "service_slug": "nid-correction"
+          },
+          {
+            "action": "skip_mvp_seed_fee_overwrite",
+            "claim_id": "9478befd-1118-4d28-9a7e-066a6c606f3c",
+            "service_slug": "nid-correction"
+          },
+          {
+            "action": "skip_practical_unverified",
+            "claim_id": "373866ca-090a-4f16-bb02-ff5ead3ecee2",
+            "research_claim_key": "nid-card-info-correction::c-nid-card-info-correction-fee-amount-news",
+            "status": "UNVERIFIED"
+          },
+          {
+            "action": "skip_mvp_seed_step_overwrite",
+            "claim_id": "6f4302f8-bd91-40fd-87ec-002cf8fed5b0",
+            "service_slug": "nid-correction"
+          },
+          {
+            "action": "skip_mvp_seed_checklist_overwrite",
+            "claim_id": "11696c4e-f8f3-4d4c-848a-24fbf002eebc",
+            "service_slug": "nid-correction"
+          },
+          {
+            "action": "skip_mvp_seed_fee_overwrite",
+            "claim_id": "2145517c-2b74-4677-b3b5-5d60d350bd67",
+            "service_slug": "nid-correction"
+          },
+          {
+            "action": "skip_practical_unverified",
+            "claim_id": "36bdf1db-86ac-400b-8288-1c352629084f",
+            "research_claim_key": "nid-combined-correction::c-nid-combined-correction-fee-amount-news",
+            "status": "UNVERIFIED"
+          },
+          {
+            "action": "skip_mvp_seed_step_overwrite",
+            "claim_id": "83173634-fcc1-47c7-94b9-477f4f61f142",
+            "service_slug": "nid-correction"
+          },
+          {
+            "action": "skip_mvp_seed_checklist_overwrite",
+            "claim_id": "bd0ef57d-ec8b-453b-8679-d5b35392c2e7",
+            "service_slug": "nid-correction"
+          },
+          {
+            "action": "skip_mvp_seed_fee_overwrite",
+            "claim_id": "2ea336d6-b062-4631-ac73-f91373a19627",
+            "service_slug": "nid-correction"
+          },
+          {
+            "action": "skip_practical_unverified",
+            "claim_id": "65a5ed42-a404-41fa-8645-6c5a8154443f",
+            "research_claim_key": "nid-other-info-correction::c-nid-other-info-correction-fee-amount-news",
+            "status": "UNVERIFIED"
+          },
+          {
+            "action": "skip_mvp_seed_step_overwrite",
+            "claim_id": "b5c4dc78-6701-43a1-a3c3-48f438084acd",
+            "service_slug": "nid-correction"
+          }
+        ],
+        "post_readiness": {
+          "nid-download-copy": "GREEN",
+          "education-hsc-certificate": "RED",
+          "local-passport-attestation": "RED",
+          "tax-etin-registration": "RED",
+          "customs-import-export-control-licence": "RED",
+          "permits-fire-noc-enoc": "RED",
+          "nid-combined-correction": "YELLOW",
+          "land-deed-registration": "RED",
+          "land-khatian-online-copy": "RED",
+          "education-class-registration": "RED"
+        },
+        "post_readiness_detail": {
+          "nid-download-copy": {
+            "readiness": "GREEN",
+            "knowledge_ready": true,
+            "legacy_replacement_pending": false,
+            "runtime_replacement_pending": false,
+            "blocking_reason": null,
+            "verified_official_count": 7,
+            "published_verified_count": 7,
+            "seed_blocked_count": 0,
+            "knowledge_gap_count": 0,
+            "seed_blocked_claim_ids": []
+          },
+          "education-hsc-certificate": {
+            "readiness": "RED",
+            "knowledge_ready": false,
+            "legacy_replacement_pending": false,
+            "runtime_replacement_pending": false,
+            "blocking_reason": "KNOWLEDGE_GAP",
+            "verified_official_count": 5,
+            "published_verified_count": 0,
+            "seed_blocked_count": 0,
+            "knowledge_gap_count": 3,
+            "seed_blocked_claim_ids": []
+          },
+          "local-passport-attestation": {
+            "readiness": "RED",
+            "knowledge_ready": false,
+            "legacy_replacement_pending": false,
+            "runtime_replacement_pending": false,
+            "blocking_reason": "KNOWLEDGE_GAP",
+            "verified_official_count": 6,
+            "published_verified_count": 0,
+            "seed_blocked_count": 0,
+            "knowledge_gap_count": 3,
+            "seed_blocked_claim_ids": []
+          },
+          "tax-etin-registration": {
+            "readiness": "RED",
+            "knowledge_ready": false,
+            "legacy_replacement_pending": false,
+            "runtime_replacement_pending": false,
+            "blocking_reason": "KNOWLEDGE_GAP",
+            "verified_official_count": 6,
+            "published_verified_count": 0,
+            "seed_blocked_count": 0,
+            "knowledge_gap_count": 4,
+            "seed_blocked_claim_ids": []
+          },
+          "customs-import-export-control-licence": {
+            "readiness": "RED",
+            "knowledge_ready": false,
+            "legacy_replacement_pending": false,
+            "runtime_replacement_pending": false,
+            "blocking_reason": "KNOWLEDGE_GAP",
+            "verified_official_count": 6,
+            "published_verified_count": 0,
+            "seed_blocked_count": 0,
+            "knowledge_gap_count": 4,
+            "seed_blocked_claim_ids": []
+          },
+          "permits-fire-noc-enoc": {
+            "readiness": "RED",
+            "knowledge_ready": false,
+            "legacy_replacement_pending": false,
+            "runtime_replacement_pending": false,
+            "blocking_reason": "KNOWLEDGE_GAP",
+            "verified_official_count": 6,
+            "published_verified_count": 0,
+            "seed_blocked_count": 0,
+            "knowledge_gap_count": 4,
+            "seed_blocked_claim_ids": []
+          },
+          "nid-combined-correction": {
+            "readiness": "YELLOW",
+            "knowledge_ready": true,
+            "legacy_replacement_pending": true,
+            "runtime_replacement_pending": true,
+            "blocking_reason": "LEGACY_DATA_REPLACEMENT_PENDING",
+            "verified_official_count": 18,
+            "published_verified_count": 6,
+            "seed_blocked_count": 12,
+            "knowledge_gap_count": 0,
+            "seed_blocked_claim_ids": [
+              "63ab6741-740d-4f49-a96c-08561070a5a0",
+              "9f2b029f-4f75-414d-a570-89fb9c7c4ba0",
+              "9478befd-1118-4d28-9a7e-066a6c606f3c",
+              "6f4302f8-bd91-40fd-87ec-002cf8fed5b0",
+              "11696c4e-f8f3-4d4c-848a-24fbf002eebc",
+              "2145517c-2b74-4677-b3b5-5d60d350bd67",
+              "83173634-fcc1-47c7-94b9-477f4f61f142",
+              "bd0ef57d-ec8b-453b-8679-d5b35392c2e7",
+              "2ea336d6-b062-4631-ac73-f91373a19627",
+              "b5c4dc78-6701-43a1-a3c3-48f438084acd",
+              "1cb5a2a4-da7e-4aa4-8f44-6c8edfdf5992",
+              "57b1536c-0bec-4eb3-b796-369366ce0d93"
+            ]
+          },
+          "land-deed-registration": {
+            "readiness": "RED",
+            "knowledge_ready": false,
+            "legacy_replacement_pending": false,
+            "runtime_replacement_pending": false,
+            "blocking_reason": "KNOWLEDGE_GAP",
+            "verified_official_count": 5,
+            "published_verified_count": 0,
+            "seed_blocked_count": 0,
+            "knowledge_gap_count": 4,
+            "seed_blocked_claim_ids": []
+          },
+          "land-khatian-online-copy": {
+            "readiness": "RED",
+            "knowledge_ready": false,
+            "legacy_replacement_pending": false,
+            "runtime_replacement_pending": false,
+            "blocking_reason": "KNOWLEDGE_GAP",
+            "verified_official_count": 4,
+            "published_verified_count": 0,
+            "seed_blocked_count": 0,
+            "knowledge_gap_count": 2,
+            "seed_blocked_claim_ids": []
+          },
+          "education-class-registration": {
+            "readiness": "RED",
+            "knowledge_ready": false,
+            "legacy_replacement_pending": false,
+            "runtime_replacement_pending": false,
+            "blocking_reason": "KNOWLEDGE_GAP",
+            "verified_official_count": 5,
+            "published_verified_count": 0,
+            "seed_blocked_count": 0,
+            "knowledge_gap_count": 3,
+            "seed_blocked_claim_ids": []
+          }
+        }
+      }
+    }
+  },
+  "runtime": {
+    "audit_path": "/workspace/data/audit/deep-research-runtime-consistency.json",
+    "generated_at": "2026-08-25T04:27:24.160890+00:00",
+    "batch_slug": "deep-research-pilot-20",
+    "db_path": "/workspace/backend/data/bda.db",
+    "services": [
+      {
+        "catalogue_service_id": "nid-download-copy",
+        "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+        "runtime_exists": true,
+        "published_claim_count": 7,
+        "verified_published_claim_count": 7,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "nid-download-copy",
+            "catalogue_service_id": "nid-download-copy",
+            "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+            "query": "How do I apply for Download NID Card Copy?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "RETRIEVAL_BUG",
+            "details": {}
+          },
+          {
+            "service_id": "nid-download-copy",
+            "catalogue_service_id": "nid-download-copy",
+            "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+            "query": "What documents do I need for Download NID Card Copy?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": true,
+            "claim_id": "6efa472b-f235-4308-b29e-e82e8d1dc08f",
+            "evidence_count": 1,
+            "classification": "OK",
+            "details": {}
+          },
+          {
+            "service_id": "nid-download-copy",
+            "catalogue_service_id": "nid-download-copy",
+            "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+            "query": "Who is eligible for Download NID Card Copy?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": true,
+            "claim_id": "2349a8ba-0c93-4d70-8936-7ae1157bf4f9",
+            "evidence_count": 1,
+            "classification": "OK",
+            "details": {}
+          },
+          {
+            "service_id": "nid-download-copy",
+            "catalogue_service_id": "nid-download-copy",
+            "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+            "query": "What is the fee for Download NID Card Copy?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "RETRIEVAL_BUG",
+            "details": {}
+          },
+          {
+            "service_id": "nid-download-copy",
+            "catalogue_service_id": "nid-download-copy",
+            "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+            "query": "What is the official website for Download NID Card Copy?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": true,
+            "claim_id": "0ec046b3-9d5d-4bb8-92dd-6d6ac58ef8e1",
+            "evidence_count": 1,
+            "classification": "OK",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "nid-download-copy",
+        "synced_claim_count": 7,
+        "synced_verified_count": 7,
+        "retrieval_accuracy": 0.6
+      },
+      {
+        "catalogue_service_id": "education-hsc-certificate",
+        "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+        "runtime_exists": true,
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "education-hsc-certificate",
+            "catalogue_service_id": "education-hsc-certificate",
+            "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+            "query": "How do I apply for HSC Certificate Issuance?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "education-hsc-certificate",
+            "catalogue_service_id": "education-hsc-certificate",
+            "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+            "query": "What documents do I need for HSC Certificate Issuance?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "education-hsc-certificate",
+            "catalogue_service_id": "education-hsc-certificate",
+            "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+            "query": "Who is eligible for HSC Certificate Issuance?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "education-hsc-certificate",
+            "catalogue_service_id": "education-hsc-certificate",
+            "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+            "query": "What is the fee for HSC Certificate Issuance?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "education-hsc-certificate",
+            "catalogue_service_id": "education-hsc-certificate",
+            "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+            "query": "What is the official website for HSC Certificate Issuance?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "PUBLICATION_GATE_BLOCKED",
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "education-hsc-certificate",
+        "synced_claim_count": 6,
+        "synced_verified_count": 5,
+        "retrieval_accuracy": 0.0
+      },
+      {
+        "catalogue_service_id": "local-passport-attestation",
+        "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+        "runtime_exists": true,
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "local-passport-attestation",
+            "catalogue_service_id": "local-passport-attestation",
+            "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+            "query": "How do I apply for Passport-related Attestation (Union)?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "local-passport-attestation",
+            "catalogue_service_id": "local-passport-attestation",
+            "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+            "query": "What documents do I need for Passport-related Attestation (Union)?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "local-passport-attestation",
+            "catalogue_service_id": "local-passport-attestation",
+            "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+            "query": "Who is eligible for Passport-related Attestation (Union)?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "local-passport-attestation",
+            "catalogue_service_id": "local-passport-attestation",
+            "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+            "query": "What is the fee for Passport-related Attestation (Union)?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "local-passport-attestation",
+            "catalogue_service_id": "local-passport-attestation",
+            "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+            "query": "What is the official website for Passport-related Attestation (Union)?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "PUBLICATION_GATE_BLOCKED",
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "local-passport-attestation",
+        "synced_claim_count": 7,
+        "synced_verified_count": 6,
+        "retrieval_accuracy": 0.0
+      },
+      {
+        "catalogue_service_id": "tax-etin-registration",
+        "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+        "runtime_exists": true,
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "tax-etin-registration",
+            "catalogue_service_id": "tax-etin-registration",
+            "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+            "query": "How do I apply for e-TIN Registration?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "tax-etin-registration",
+            "catalogue_service_id": "tax-etin-registration",
+            "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+            "query": "What documents do I need for e-TIN Registration?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "tax-etin-registration",
+            "catalogue_service_id": "tax-etin-registration",
+            "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+            "query": "Who is eligible for e-TIN Registration?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "tax-etin-registration",
+            "catalogue_service_id": "tax-etin-registration",
+            "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+            "query": "What is the fee for e-TIN Registration?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "tax-etin-registration",
+            "catalogue_service_id": "tax-etin-registration",
+            "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+            "query": "What is the official website for e-TIN Registration?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "PUBLICATION_GATE_BLOCKED",
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "tin-registration",
+        "synced_claim_count": 7,
+        "synced_verified_count": 6,
+        "retrieval_accuracy": 0.0
+      },
+      {
+        "catalogue_service_id": "customs-import-export-control-licence",
+        "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+        "runtime_exists": true,
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "customs-import-export-control-licence",
+            "catalogue_service_id": "customs-import-export-control-licence",
+            "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+            "query": "How do I apply for Import/Export Control Licence?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "customs-import-export-control-licence",
+            "catalogue_service_id": "customs-import-export-control-licence",
+            "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+            "query": "What documents do I need for Import/Export Control Licence?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "customs-import-export-control-licence",
+            "catalogue_service_id": "customs-import-export-control-licence",
+            "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+            "query": "Who is eligible for Import/Export Control Licence?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "customs-import-export-control-licence",
+            "catalogue_service_id": "customs-import-export-control-licence",
+            "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+            "query": "What is the fee for Import/Export Control Licence?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "customs-import-export-control-licence",
+            "catalogue_service_id": "customs-import-export-control-licence",
+            "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+            "query": "What is the official website for Import/Export Control Licence?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "PUBLICATION_GATE_BLOCKED",
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "customs-import-export-control-licence",
+        "synced_claim_count": 7,
+        "synced_verified_count": 6,
+        "retrieval_accuracy": 0.0
+      },
+      {
+        "catalogue_service_id": "permits-fire-noc-enoc",
+        "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+        "runtime_exists": true,
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "permits-fire-noc-enoc",
+            "catalogue_service_id": "permits-fire-noc-enoc",
+            "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+            "query": "How do I apply for Fire Service No Objection Certificate (e-NOC)?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "permits-fire-noc-enoc",
+            "catalogue_service_id": "permits-fire-noc-enoc",
+            "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+            "query": "What documents do I need for Fire Service No Objection Certificate (e-NOC)?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "permits-fire-noc-enoc",
+            "catalogue_service_id": "permits-fire-noc-enoc",
+            "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+            "query": "Who is eligible for Fire Service No Objection Certificate (e-NOC)?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "permits-fire-noc-enoc",
+            "catalogue_service_id": "permits-fire-noc-enoc",
+            "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+            "query": "What is the fee for Fire Service No Objection Certificate (e-NOC)?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "permits-fire-noc-enoc",
+            "catalogue_service_id": "permits-fire-noc-enoc",
+            "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+            "query": "What is the official website for Fire Service No Objection Certificate (e-NOC)?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "PUBLICATION_GATE_BLOCKED",
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "permits-fire-noc-enoc",
+        "synced_claim_count": 7,
+        "synced_verified_count": 6,
+        "retrieval_accuracy": 0.0
+      },
+      {
+        "catalogue_service_id": "nid-combined-correction",
+        "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+        "runtime_exists": true,
+        "published_claim_count": 6,
+        "verified_published_claim_count": 6,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "nid-combined-correction",
+            "catalogue_service_id": "nid-combined-correction",
+            "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+            "query": "How do I apply for Combined NID and Other Information Correction?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "RETRIEVAL_BUG",
+            "details": {}
+          },
+          {
+            "service_id": "nid-combined-correction",
+            "catalogue_service_id": "nid-combined-correction",
+            "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+            "query": "What documents do I need for Combined NID and Other Information Correction?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "RETRIEVAL_BUG",
+            "details": {}
+          },
+          {
+            "service_id": "nid-combined-correction",
+            "catalogue_service_id": "nid-combined-correction",
+            "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+            "query": "Who is eligible for Combined NID and Other Information Correction?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": true,
+            "claim_id": "d06fb657-e329-4887-9416-352ad3059683",
+            "evidence_count": 1,
+            "classification": "OK",
+            "details": {}
+          },
+          {
+            "service_id": "nid-combined-correction",
+            "catalogue_service_id": "nid-combined-correction",
+            "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+            "query": "What is the fee for Combined NID and Other Information Correction?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "RETRIEVAL_BUG",
+            "details": {}
+          },
+          {
+            "service_id": "nid-combined-correction",
+            "catalogue_service_id": "nid-combined-correction",
+            "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+            "query": "What is the official website for Combined NID and Other Information Correction?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": true,
+            "claim_id": "b51df53d-fcbb-4482-b127-ba70204ffe6e",
+            "evidence_count": 1,
+            "classification": "OK",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "nid-correction",
+        "synced_claim_count": 21,
+        "synced_verified_count": 18,
+        "retrieval_accuracy": 0.4
+      },
+      {
+        "catalogue_service_id": "land-deed-registration",
+        "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+        "runtime_exists": true,
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "land-deed-registration",
+            "catalogue_service_id": "land-deed-registration",
+            "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+            "query": "How do I apply for Deed Registration (Sub-Registry)?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "land-deed-registration",
+            "catalogue_service_id": "land-deed-registration",
+            "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+            "query": "What documents do I need for Deed Registration (Sub-Registry)?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "land-deed-registration",
+            "catalogue_service_id": "land-deed-registration",
+            "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+            "query": "Who is eligible for Deed Registration (Sub-Registry)?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "land-deed-registration",
+            "catalogue_service_id": "land-deed-registration",
+            "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+            "query": "What is the fee for Deed Registration (Sub-Registry)?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "land-deed-registration",
+            "catalogue_service_id": "land-deed-registration",
+            "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+            "query": "What is the official website for Deed Registration (Sub-Registry)?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "PUBLICATION_GATE_BLOCKED",
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "land-deed-registration",
+        "synced_claim_count": 7,
+        "synced_verified_count": 5,
+        "retrieval_accuracy": 0.0
+      },
+      {
+        "catalogue_service_id": "land-khatian-online-copy",
+        "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+        "runtime_exists": true,
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "land-khatian-online-copy",
+            "catalogue_service_id": "land-khatian-online-copy",
+            "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+            "query": "How do I apply for Online Khatian Copy?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "land-khatian-online-copy",
+            "catalogue_service_id": "land-khatian-online-copy",
+            "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+            "query": "What documents do I need for Online Khatian Copy?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "land-khatian-online-copy",
+            "catalogue_service_id": "land-khatian-online-copy",
+            "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+            "query": "Who is eligible for Online Khatian Copy?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "land-khatian-online-copy",
+            "catalogue_service_id": "land-khatian-online-copy",
+            "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+            "query": "What is the fee for Online Khatian Copy?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "land-khatian-online-copy",
+            "catalogue_service_id": "land-khatian-online-copy",
+            "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+            "query": "What is the official website for Online Khatian Copy?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "PUBLICATION_GATE_BLOCKED",
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "land-khatian-online-copy",
+        "synced_claim_count": 4,
+        "synced_verified_count": 4,
+        "retrieval_accuracy": 0.0
+      },
+      {
+        "catalogue_service_id": "education-class-registration",
+        "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+        "runtime_exists": true,
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0,
+        "fee_links": 0,
+        "provenance_preserved": true,
+        "retrieval_probes": [
+          {
+            "service_id": "education-class-registration",
+            "catalogue_service_id": "education-class-registration",
+            "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+            "query": "How do I apply for Class IX/XI Board Registration?",
+            "intent": "procedure_inquiry",
+            "claim_type": "procedure",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "education-class-registration",
+            "catalogue_service_id": "education-class-registration",
+            "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+            "query": "What documents do I need for Class IX/XI Board Registration?",
+            "intent": "document_list",
+            "claim_type": "document",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "education-class-registration",
+            "catalogue_service_id": "education-class-registration",
+            "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+            "query": "Who is eligible for Class IX/XI Board Registration?",
+            "intent": "eligibility",
+            "claim_type": "eligibility",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "education-class-registration",
+            "catalogue_service_id": "education-class-registration",
+            "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+            "query": "What is the fee for Class IX/XI Board Registration?",
+            "intent": "fee_inquiry",
+            "claim_type": "fee",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          },
+          {
+            "service_id": "education-class-registration",
+            "catalogue_service_id": "education-class-registration",
+            "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+            "query": "What is the official website for Class IX/XI Board Registration?",
+            "intent": "application_url",
+            "claim_type": "application_url",
+            "claim_found": false,
+            "claim_id": null,
+            "evidence_count": 0,
+            "classification": "PUBLICATION_GAP",
+            "details": {}
+          }
+        ],
+        "issues": [
+          "PUBLICATION_GATE_BLOCKED",
+          "RETRIEVAL_GAPS"
+        ],
+        "runtime_slug": "education-class-registration",
+        "synced_claim_count": 6,
+        "synced_verified_count": 5,
+        "retrieval_accuracy": 0.0
+      }
+    ],
+    "retrieval_probes": [
+      {
+        "service_id": "nid-download-copy",
+        "catalogue_service_id": "nid-download-copy",
+        "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+        "query": "How do I apply for Download NID Card Copy?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "RETRIEVAL_BUG",
+        "details": {}
+      },
+      {
+        "service_id": "nid-download-copy",
+        "catalogue_service_id": "nid-download-copy",
+        "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+        "query": "What documents do I need for Download NID Card Copy?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": true,
+        "claim_id": "6efa472b-f235-4308-b29e-e82e8d1dc08f",
+        "evidence_count": 1,
+        "classification": "OK",
+        "details": {}
+      },
+      {
+        "service_id": "nid-download-copy",
+        "catalogue_service_id": "nid-download-copy",
+        "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+        "query": "Who is eligible for Download NID Card Copy?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": true,
+        "claim_id": "2349a8ba-0c93-4d70-8936-7ae1157bf4f9",
+        "evidence_count": 1,
+        "classification": "OK",
+        "details": {}
+      },
+      {
+        "service_id": "nid-download-copy",
+        "catalogue_service_id": "nid-download-copy",
+        "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+        "query": "What is the fee for Download NID Card Copy?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "RETRIEVAL_BUG",
+        "details": {}
+      },
+      {
+        "service_id": "nid-download-copy",
+        "catalogue_service_id": "nid-download-copy",
+        "runtime_service_id": "42fc72be-8af4-4aa5-a1d7-3ff9611888b8",
+        "query": "What is the official website for Download NID Card Copy?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": true,
+        "claim_id": "0ec046b3-9d5d-4bb8-92dd-6d6ac58ef8e1",
+        "evidence_count": 1,
+        "classification": "OK",
+        "details": {}
+      },
+      {
+        "service_id": "education-hsc-certificate",
+        "catalogue_service_id": "education-hsc-certificate",
+        "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+        "query": "How do I apply for HSC Certificate Issuance?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "education-hsc-certificate",
+        "catalogue_service_id": "education-hsc-certificate",
+        "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+        "query": "What documents do I need for HSC Certificate Issuance?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "education-hsc-certificate",
+        "catalogue_service_id": "education-hsc-certificate",
+        "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+        "query": "Who is eligible for HSC Certificate Issuance?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "education-hsc-certificate",
+        "catalogue_service_id": "education-hsc-certificate",
+        "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+        "query": "What is the fee for HSC Certificate Issuance?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "education-hsc-certificate",
+        "catalogue_service_id": "education-hsc-certificate",
+        "runtime_service_id": "a0a8f6e6-06f9-4aab-9f86-55c527e09749",
+        "query": "What is the official website for HSC Certificate Issuance?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "local-passport-attestation",
+        "catalogue_service_id": "local-passport-attestation",
+        "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+        "query": "How do I apply for Passport-related Attestation (Union)?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "local-passport-attestation",
+        "catalogue_service_id": "local-passport-attestation",
+        "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+        "query": "What documents do I need for Passport-related Attestation (Union)?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "local-passport-attestation",
+        "catalogue_service_id": "local-passport-attestation",
+        "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+        "query": "Who is eligible for Passport-related Attestation (Union)?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "local-passport-attestation",
+        "catalogue_service_id": "local-passport-attestation",
+        "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+        "query": "What is the fee for Passport-related Attestation (Union)?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "local-passport-attestation",
+        "catalogue_service_id": "local-passport-attestation",
+        "runtime_service_id": "21c02da0-09db-42f2-b5c3-d245521c6add",
+        "query": "What is the official website for Passport-related Attestation (Union)?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "tax-etin-registration",
+        "catalogue_service_id": "tax-etin-registration",
+        "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+        "query": "How do I apply for e-TIN Registration?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "tax-etin-registration",
+        "catalogue_service_id": "tax-etin-registration",
+        "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+        "query": "What documents do I need for e-TIN Registration?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "tax-etin-registration",
+        "catalogue_service_id": "tax-etin-registration",
+        "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+        "query": "Who is eligible for e-TIN Registration?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "tax-etin-registration",
+        "catalogue_service_id": "tax-etin-registration",
+        "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+        "query": "What is the fee for e-TIN Registration?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "tax-etin-registration",
+        "catalogue_service_id": "tax-etin-registration",
+        "runtime_service_id": "fdede37b-cef4-4b82-bd0c-36832c5fd756",
+        "query": "What is the official website for e-TIN Registration?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "customs-import-export-control-licence",
+        "catalogue_service_id": "customs-import-export-control-licence",
+        "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+        "query": "How do I apply for Import/Export Control Licence?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "customs-import-export-control-licence",
+        "catalogue_service_id": "customs-import-export-control-licence",
+        "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+        "query": "What documents do I need for Import/Export Control Licence?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "customs-import-export-control-licence",
+        "catalogue_service_id": "customs-import-export-control-licence",
+        "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+        "query": "Who is eligible for Import/Export Control Licence?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "customs-import-export-control-licence",
+        "catalogue_service_id": "customs-import-export-control-licence",
+        "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+        "query": "What is the fee for Import/Export Control Licence?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "customs-import-export-control-licence",
+        "catalogue_service_id": "customs-import-export-control-licence",
+        "runtime_service_id": "16591942-cda2-49d9-a62f-430518140511",
+        "query": "What is the official website for Import/Export Control Licence?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "permits-fire-noc-enoc",
+        "catalogue_service_id": "permits-fire-noc-enoc",
+        "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+        "query": "How do I apply for Fire Service No Objection Certificate (e-NOC)?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "permits-fire-noc-enoc",
+        "catalogue_service_id": "permits-fire-noc-enoc",
+        "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+        "query": "What documents do I need for Fire Service No Objection Certificate (e-NOC)?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "permits-fire-noc-enoc",
+        "catalogue_service_id": "permits-fire-noc-enoc",
+        "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+        "query": "Who is eligible for Fire Service No Objection Certificate (e-NOC)?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "permits-fire-noc-enoc",
+        "catalogue_service_id": "permits-fire-noc-enoc",
+        "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+        "query": "What is the fee for Fire Service No Objection Certificate (e-NOC)?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "permits-fire-noc-enoc",
+        "catalogue_service_id": "permits-fire-noc-enoc",
+        "runtime_service_id": "c48f2d14-0fe5-4312-a6c2-84c7a27922b2",
+        "query": "What is the official website for Fire Service No Objection Certificate (e-NOC)?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "nid-combined-correction",
+        "catalogue_service_id": "nid-combined-correction",
+        "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+        "query": "How do I apply for Combined NID and Other Information Correction?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "RETRIEVAL_BUG",
+        "details": {}
+      },
+      {
+        "service_id": "nid-combined-correction",
+        "catalogue_service_id": "nid-combined-correction",
+        "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+        "query": "What documents do I need for Combined NID and Other Information Correction?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "RETRIEVAL_BUG",
+        "details": {}
+      },
+      {
+        "service_id": "nid-combined-correction",
+        "catalogue_service_id": "nid-combined-correction",
+        "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+        "query": "Who is eligible for Combined NID and Other Information Correction?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": true,
+        "claim_id": "d06fb657-e329-4887-9416-352ad3059683",
+        "evidence_count": 1,
+        "classification": "OK",
+        "details": {}
+      },
+      {
+        "service_id": "nid-combined-correction",
+        "catalogue_service_id": "nid-combined-correction",
+        "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+        "query": "What is the fee for Combined NID and Other Information Correction?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "RETRIEVAL_BUG",
+        "details": {}
+      },
+      {
+        "service_id": "nid-combined-correction",
+        "catalogue_service_id": "nid-combined-correction",
+        "runtime_service_id": "86671906-c90a-40c7-9c0a-2e107cfb23ae",
+        "query": "What is the official website for Combined NID and Other Information Correction?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": true,
+        "claim_id": "b51df53d-fcbb-4482-b127-ba70204ffe6e",
+        "evidence_count": 1,
+        "classification": "OK",
+        "details": {}
+      },
+      {
+        "service_id": "land-deed-registration",
+        "catalogue_service_id": "land-deed-registration",
+        "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+        "query": "How do I apply for Deed Registration (Sub-Registry)?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "land-deed-registration",
+        "catalogue_service_id": "land-deed-registration",
+        "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+        "query": "What documents do I need for Deed Registration (Sub-Registry)?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "land-deed-registration",
+        "catalogue_service_id": "land-deed-registration",
+        "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+        "query": "Who is eligible for Deed Registration (Sub-Registry)?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "land-deed-registration",
+        "catalogue_service_id": "land-deed-registration",
+        "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+        "query": "What is the fee for Deed Registration (Sub-Registry)?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "land-deed-registration",
+        "catalogue_service_id": "land-deed-registration",
+        "runtime_service_id": "f7770cce-6cf1-41e9-b0ce-80e0ff16840a",
+        "query": "What is the official website for Deed Registration (Sub-Registry)?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "land-khatian-online-copy",
+        "catalogue_service_id": "land-khatian-online-copy",
+        "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+        "query": "How do I apply for Online Khatian Copy?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "land-khatian-online-copy",
+        "catalogue_service_id": "land-khatian-online-copy",
+        "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+        "query": "What documents do I need for Online Khatian Copy?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "land-khatian-online-copy",
+        "catalogue_service_id": "land-khatian-online-copy",
+        "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+        "query": "Who is eligible for Online Khatian Copy?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "land-khatian-online-copy",
+        "catalogue_service_id": "land-khatian-online-copy",
+        "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+        "query": "What is the fee for Online Khatian Copy?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "land-khatian-online-copy",
+        "catalogue_service_id": "land-khatian-online-copy",
+        "runtime_service_id": "43c69570-5a8d-4c31-aeae-301e11460909",
+        "query": "What is the official website for Online Khatian Copy?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "education-class-registration",
+        "catalogue_service_id": "education-class-registration",
+        "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+        "query": "How do I apply for Class IX/XI Board Registration?",
+        "intent": "procedure_inquiry",
+        "claim_type": "procedure",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "education-class-registration",
+        "catalogue_service_id": "education-class-registration",
+        "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+        "query": "What documents do I need for Class IX/XI Board Registration?",
+        "intent": "document_list",
+        "claim_type": "document",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "education-class-registration",
+        "catalogue_service_id": "education-class-registration",
+        "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+        "query": "Who is eligible for Class IX/XI Board Registration?",
+        "intent": "eligibility",
+        "claim_type": "eligibility",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "education-class-registration",
+        "catalogue_service_id": "education-class-registration",
+        "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+        "query": "What is the fee for Class IX/XI Board Registration?",
+        "intent": "fee_inquiry",
+        "claim_type": "fee",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      },
+      {
+        "service_id": "education-class-registration",
+        "catalogue_service_id": "education-class-registration",
+        "runtime_service_id": "0545b71d-d8c4-460d-8cfb-a12d0818dd82",
+        "query": "What is the official website for Class IX/XI Board Registration?",
+        "intent": "application_url",
+        "claim_type": "application_url",
+        "claim_found": false,
+        "claim_id": null,
+        "evidence_count": 0,
+        "classification": "PUBLICATION_GAP",
+        "details": {}
+      }
+    ],
+    "aggregate": {
+      "service_count": 10,
+      "runtime_mapped": 10,
+      "published_services": 2,
+      "retrieval_accuracy": 0.1,
+      "retrieval_correctness_pct": 10.0
+    },
+    "bottlenecks": [
+      {
+        "layer": "PUBLICATION",
+        "count": 8
+      },
+      {
+        "layer": "PUBLICATION",
+        "count": 40
+      },
+      {
+        "layer": "RETRIEVAL",
+        "count": 5
+      }
+    ]
+  },
+  "results": [
+    {
+      "service_id": "nid-download-copy",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/nid-download-copy",
+      "verified_claims": 6,
+      "document_coverage": {
+        "MUST_NEED": 1,
+        "CONDITIONAL": 1,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 1,
+      "fee_coverage": false,
+      "supported_answer_coverage": 0.75,
+      "runtime_publication": {
+        "published_claim_count": 7,
+        "verified_published_claim_count": 7
+      },
+      "retrieval_accuracy": 0.6,
+      "citation_correct": true,
+      "issues": [
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    },
+    {
+      "service_id": "education-hsc-certificate",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/education-hsc-certificate",
+      "verified_claims": 5,
+      "document_coverage": {
+        "MUST_NEED": 1,
+        "CONDITIONAL": 1,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 1,
+      "fee_coverage": false,
+      "supported_answer_coverage": 0.75,
+      "runtime_publication": {
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0
+      },
+      "retrieval_accuracy": 0.0,
+      "citation_correct": true,
+      "issues": [
+        "PUBLICATION_NO_CLAIMS",
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    },
+    {
+      "service_id": "local-passport-attestation",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/local-passport-attestation",
+      "verified_claims": 6,
+      "document_coverage": {
+        "MUST_NEED": 1,
+        "CONDITIONAL": 1,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 1,
+      "fee_coverage": false,
+      "supported_answer_coverage": 0.75,
+      "runtime_publication": {
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0
+      },
+      "retrieval_accuracy": 0.0,
+      "citation_correct": true,
+      "issues": [
+        "PUBLICATION_NO_CLAIMS",
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    },
+    {
+      "service_id": "tax-etin-registration",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/tax-etin-registration",
+      "verified_claims": 7,
+      "document_coverage": {
+        "MUST_NEED": 1,
+        "CONDITIONAL": 1,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 1,
+      "fee_coverage": true,
+      "supported_answer_coverage": 0.75,
+      "runtime_publication": {
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0
+      },
+      "retrieval_accuracy": 0.0,
+      "citation_correct": true,
+      "issues": [
+        "PUBLICATION_NO_CLAIMS",
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    },
+    {
+      "service_id": "customs-import-export-control-licence",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/customs-import-export-control-licence",
+      "verified_claims": 7,
+      "document_coverage": {
+        "MUST_NEED": 1,
+        "CONDITIONAL": 1,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 1,
+      "fee_coverage": true,
+      "supported_answer_coverage": 0.75,
+      "runtime_publication": {
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0
+      },
+      "retrieval_accuracy": 0.0,
+      "citation_correct": true,
+      "issues": [
+        "PUBLICATION_NO_CLAIMS",
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    },
+    {
+      "service_id": "permits-fire-noc-enoc",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/permits-fire-noc-enoc",
+      "verified_claims": 7,
+      "document_coverage": {
+        "MUST_NEED": 1,
+        "CONDITIONAL": 1,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 1,
+      "fee_coverage": true,
+      "supported_answer_coverage": 0.75,
+      "runtime_publication": {
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0
+      },
+      "retrieval_accuracy": 0.0,
+      "citation_correct": true,
+      "issues": [
+        "PUBLICATION_NO_CLAIMS",
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    },
+    {
+      "service_id": "nid-combined-correction",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/nid-combined-correction",
+      "verified_claims": 6,
+      "document_coverage": {
+        "MUST_NEED": 1,
+        "CONDITIONAL": 1,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 1,
+      "fee_coverage": false,
+      "supported_answer_coverage": 0.75,
+      "runtime_publication": {
+        "published_claim_count": 6,
+        "verified_published_claim_count": 6
+      },
+      "retrieval_accuracy": 0.4,
+      "citation_correct": true,
+      "issues": [
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    },
+    {
+      "service_id": "land-deed-registration",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/land-deed-registration",
+      "verified_claims": 6,
+      "document_coverage": {
+        "MUST_NEED": 0,
+        "CONDITIONAL": 2,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 3,
+      "fee_coverage": true,
+      "supported_answer_coverage": 0.75,
+      "runtime_publication": {
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0
+      },
+      "retrieval_accuracy": 0.0,
+      "citation_correct": true,
+      "issues": [
+        "PUBLICATION_NO_CLAIMS",
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    },
+    {
+      "service_id": "land-khatian-online-copy",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/land-khatian-online-copy",
+      "verified_claims": 3,
+      "document_coverage": {
+        "MUST_NEED": 0,
+        "CONDITIONAL": 0,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 0,
+      "fee_coverage": false,
+      "supported_answer_coverage": 0.5833,
+      "runtime_publication": {
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0
+      },
+      "retrieval_accuracy": 0.0,
+      "citation_correct": true,
+      "issues": [
+        "PUBLICATION_NO_CLAIMS",
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    },
+    {
+      "service_id": "education-class-registration",
+      "output_dir": "/workspace/data/research/deep-research-pilot-20/education-class-registration",
+      "verified_claims": 5,
+      "document_coverage": {
+        "MUST_NEED": 1,
+        "CONDITIONAL": 1,
+        "RECOMMENDED": 0,
+        "NOT_APPLICABLE": 0
+      },
+      "conditional_coverage": 1,
+      "fee_coverage": false,
+      "supported_answer_coverage": 0.75,
+      "runtime_publication": {
+        "published_claim_count": 0,
+        "verified_published_claim_count": 0
+      },
+      "retrieval_accuracy": 0.0,
+      "citation_correct": true,
+      "issues": [
+        "PUBLICATION_NO_CLAIMS",
+        "RETRIEVAL_BELOW_TARGET"
+      ]
+    }
+  ],
+  "gate": {
+    "wave_id": "wave-01",
+    "passed": false,
+    "services_processed": 10,
+    "avg_supported_coverage": 0.7333,
+    "avg_retrieval_accuracy": 0.1,
+    "citation_accuracy": 1.0,
+    "failures": [
+      "supported_answer_coverage 73.33% < 75%",
+      "retrieval_accuracy 10.00% < 95%",
+      "nid-download-copy: RETRIEVAL_BELOW_TARGET",
+      "education-hsc-certificate: PUBLICATION_NO_CLAIMS",
+      "education-hsc-certificate: RETRIEVAL_BELOW_TARGET",
+      "local-passport-attestation: PUBLICATION_NO_CLAIMS",
+      "local-passport-attestation: RETRIEVAL_BELOW_TARGET",
+      "tax-etin-registration: PUBLICATION_NO_CLAIMS",
+      "tax-etin-registration: RETRIEVAL_BELOW_TARGET",
+      "customs-import-export-control-licence: PUBLICATION_NO_CLAIMS",
+      "customs-import-export-control-licence: RETRIEVAL_BELOW_TARGET",
+      "permits-fire-noc-enoc: PUBLICATION_NO_CLAIMS",
+      "permits-fire-noc-enoc: RETRIEVAL_BELOW_TARGET",
+      "nid-combined-correction: RETRIEVAL_BELOW_TARGET",
+      "land-deed-registration: PUBLICATION_NO_CLAIMS",
+      "land-deed-registration: RETRIEVAL_BELOW_TARGET",
+      "land-khatian-online-copy: PUBLICATION_NO_CLAIMS",
+      "land-khatian-online-copy: RETRIEVAL_BELOW_TARGET",
+      "education-class-registration: PUBLICATION_NO_CLAIMS",
+      "education-class-registration: RETRIEVAL_BELOW_TARGET"
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "service_id": "nid-other-info-correction",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "NID Other Information Correction",
+  "service_name_bn": "অন্যান্য তথ্য সংশোধন",
+  "aliases": [
+    "non-printed NID field correction"
+  ],
+  "category_id": "identity",
+  "profile_key": "IDENTITY_CIVIL",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/fees",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "nid-other-info-correction::c-catalogue-authority",
+      "service_id": "nid-other-info-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-official-portal",
+      "service_id": "nid-other-info-correction",
+      "claim_type": "application_url",
+      "claim_text": "NID Other Information Correction official information is published at https://services.nidw.gov.bd/nid-pub/fees (page title: Bangladesh NID Application System | ফি হিসাব করুন).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/fees"
+      },
+      "source_ids": [
+        "src-nid-other-info-correction-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-other-info-correction::c-official-portal-src-nid-other-info-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-procedure-overview",
+      "service_id": "nid-other-info-correction",
+      "claim_type": "procedure_step",
+      "claim_text": "NID Other Information Correction is a government service under Bangladesh Election Commission (NID Wing) (nid correction). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-other-info-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-service-identity",
+      "service_id": "nid-other-info-correction",
+      "claim_type": "eligibility",
+      "claim_text": "NID Other Information Correction (অন্যান্য তথ্য সংশোধন) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-other-info-correction-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-nid-other-info-correction-official",
+      "service_id": "nid-other-info-correction",
+      "url": "https://services.nidw.gov.bd/nid-pub/fees",
+      "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/fees",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "d2e22f00c99b03eb",
+        "retrieved_at": "2026-08-25T03:29:12.769580+00:00"
+      },
+      "evidence_locator": "probe:https://services.nidw.gov.bd/nid-pub/fees"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-nid-other-info-correction-fee-unverified",
+      "service_id": "nid-other-info-correction",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for NID Other Information Correction.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-nid-other-info-correction-documents-unverified",
+      "service_id": "nid-other-info-correction",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for NID Other Information Correction.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "service_id": "post-savings-bank",
+  "claims": [
+    {
+      "claim_id": "post-savings-bank::c-catalogue-authority",
+      "service_id": "post-savings-bank",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-savings-bank::c-official-url-documented",
+      "service_id": "post-savings-bank",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/- for Post Office Savings Bank; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-"
+      },
+      "source_ids": [
+        "src-post-savings-bank-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-savings-bank::c-procedure-overview",
+      "service_id": "post-savings-bank",
+      "claim_type": "procedure_step",
+      "claim_text": "Post Office Savings Bank is a government service under Bangladesh Post Office (Directorate of Posts) (financial). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-savings-bank-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-savings-bank::c-service-identity",
+      "service_id": "post-savings-bank",
+      "claim_type": "eligibility",
+      "claim_text": "Post Office Savings Bank (ডাক সঞ্চয় ব্যাংক) is a confirmed government service in category post, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-savings-bank-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

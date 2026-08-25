@@ -1,0 +1,122 @@
+{
+  "service_id": "health-bmdc-full-registration",
+  "claims": [
+    {
+      "claim_id": "health-bmdc-full-registration::c-catalogue-authority",
+      "service_id": "health-bmdc-full-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Medical and Dental Council (BMDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-full-registration::c-official-url-documented",
+      "service_id": "health-bmdc-full-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://payment.bmdc.org.bd/home/page/form-list for BMDC Full Registration (MBBS/BDS); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://payment.bmdc.org.bd/home/page/form-list"
+      },
+      "source_ids": [
+        "src-health-bmdc-full-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-full-registration::c-procedure-overview",
+      "service_id": "health-bmdc-full-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "BMDC full registration for medical practitioners requires application through the Bangladesh Medical and Dental Council with qualification verification.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-bmdc-full-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-full-registration::c-document-overview",
+      "service_id": "health-bmdc-full-registration",
+      "claim_type": "document",
+      "claim_text": "Medical degree certificates, internship completion proof, NID, and photographs are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-health-bmdc-full-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-full-registration::c-service-identity",
+      "service_id": "health-bmdc-full-registration",
+      "claim_type": "eligibility",
+      "claim_text": "BMDC Full Registration (MBBS/BDS) (BMDC পূর্ণ নিবন্ধন (MBBS/BDS)) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-bmdc-full-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-full-registration::c-eligibility-deep",
+      "service_id": "health-bmdc-full-registration",
+      "claim_type": "eligibility",
+      "claim_text": "MBBS/BDS graduates seeking full BMDC registration to practice in Bangladesh.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "PARTIAL",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-bmdc-full-registration-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-full-registration::c-document-must-need",
+      "service_id": "health-bmdc-full-registration",
+      "claim_type": "document",
+      "claim_text": "Medical degree certificates, internship completion proof, NID, and photographs are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-bmdc-full-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "services": {
+    "epassport-application-status": {
+      "service_id": "epassport-application-status",
+      "readiness": "YELLOW",
+      "claim_count": 2,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1,
+        "UNVERIFIED": 1
+      },
+      "reason": "e-Passport claims rely on SPA/index excerpts; material gaps on fees, status fields, or mission rules.",
+      "manual_review_recommended": true
+    },
+    "epassport-enrollment-appointment": {
+      "service_id": "epassport-enrollment-appointment",
+      "readiness": "YELLOW",
+      "claim_count": 2,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 2
+      },
+      "reason": "Useful partial verification; gaps remain.",
+      "manual_review_recommended": true
+    },
+    "epassport-fee-payment": {
+      "service_id": "epassport-fee-payment",
+      "readiness": "RED",
+      "claim_count": 13,
+      "status_counts": {
+        "OUTDATED": 4,
+        "PARTIALLY_VERIFIED": 7,
+        "VERIFIED": 1,
+        "UNVERIFIED": 1
+      },
+      "reason": "Critical fee amounts OUTDATED or only index-excerpt sourced; not safe for authoritative fee publication.",
+      "manual_review_recommended": true
+    },
+    "epassport-new-application": {
+      "service_id": "epassport-new-application",
+      "readiness": "YELLOW",
+      "claim_count": 11,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 10,
+        "VERIFIED": 1
+      },
+      "reason": "Useful partial verification; gaps remain.",
+      "manual_review_recommended": true
+    },
+    "epassport-reissue": {
+      "service_id": "epassport-reissue",
+      "readiness": "YELLOW",
+      "claim_count": 8,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 6,
+        "VERIFIED": 2
+      },
+      "reason": "Useful partial verification; gaps remain.",
+      "manual_review_recommended": true
+    },
+    "epassport-rpo-secretariat": {
+      "service_id": "epassport-rpo-secretariat",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Useful partial verification; gaps remain.",
+      "manual_review_recommended": true
+    },
+    "epassport-urgent-super-express": {
+      "service_id": "epassport-urgent-super-express",
+      "readiness": "YELLOW",
+      "claim_count": 5,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 5
+      },
+      "reason": "Useful partial verification; gaps remain.",
+      "manual_review_recommended": true
+    },
+    "passport-application-status": {
+      "service_id": "passport-application-status",
+      "readiness": "GREEN",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Critical claims largely verified with Tier 1–2 evidence.",
+      "manual_review_recommended": false
+    },
+    "passport-mrp-initial": {
+      "service_id": "passport-mrp-initial",
+      "readiness": "YELLOW",
+      "claim_count": 6,
+      "status_counts": {
+        "VERIFIED": 5,
+        "REJECTED": 1
+      },
+      "reason": "Core MRP portal facts verified; one REJECTED claim (5-day validity error).",
+      "manual_review_recommended": true
+    },
+    "passport-mrp-reissue": {
+      "service_id": "passport-mrp-reissue",
+      "readiness": "YELLOW",
+      "claim_count": 1,
+      "status_counts": {
+        "VERIFIED": 1
+      },
+      "reason": "Form 2 URL verified; reissue/lost/damaged document matrix incomplete.",
+      "manual_review_recommended": true
+    },
+    "police-passport-police-verification": {
+      "service_id": "police-passport-police-verification",
+      "readiness": "YELLOW",
+      "claim_count": 3,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 3
+      },
+      "reason": "PV pathway partially corroborated; universal requirement and SB procedure page missing.",
+      "manual_review_recommended": true
+    },
+    "police-passport-verification": {
+      "service_id": "police-passport-verification",
+      "readiness": "YELLOW",
+      "claim_count": 2,
+      "status_counts": {
+        "VERIFIED": 2
+      },
+      "reason": "Charter SLAs verified; linkage to e-Passport universal PV requirement not established.",
+      "manual_review_recommended": true
+    }
+  }
+}

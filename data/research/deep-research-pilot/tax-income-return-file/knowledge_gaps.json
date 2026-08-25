@@ -1,0 +1,27 @@
+{
+  "service_id": "tax-income-return-file",
+  "gaps": [
+    {
+      "gap_id": "gap-tax-income-return-file-fee-unverified",
+      "service_id": "tax-income-return-file",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Income Tax Return Filing (e-Return).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-income-return-file-documents-unverified",
+      "service_id": "tax-income-return-file",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Income Tax Return Filing (e-Return).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-tax-income-return-file-calculator-fee",
+      "service_id": "tax-income-return-file",
+      "gap_type": "CALCULATOR_REQUIRED",
+      "description": "Fee for Income Tax Return Filing (e-Return) requires official calculator/assessment — static amount not published.",
+      "severity": "HIGH",
+      "resolvability": "UNRESOLVABLE_WITH_CURRENT_EVIDENCE"
+    }
+  ]
+}

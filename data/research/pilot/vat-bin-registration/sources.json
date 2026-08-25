@@ -1,0 +1,53 @@
+{
+  "service_id": "vat-bin-registration",
+  "sources": [
+    {
+      "source_id": "src-vat-bin-registration-official",
+      "service_id": "vat-bin-registration",
+      "url": "https://nbr.gov.bd/faq/vat-faq/eng",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/faq/vat-faq/eng",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "ddcde77f96d125e2",
+        "retrieved_at": "2026-08-25T03:12:32.539776+00:00"
+      },
+      "evidence_locator": "probe:https://nbr.gov.bd/faq/vat-faq/eng"
+    },
+    {
+      "source_id": "src-vat-bin-registration-alt-1",
+      "service_id": "vat-bin-registration",
+      "url": "https://secure.incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://secure.incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "7dbc0d79e88c33d2",
+        "retrieved_at": "2026-08-25T03:12:34.953649+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "desco-ocsms-registration",
+  "claims": [
+    {
+      "claim_id": "desco-ocsms-registration::c-catalogue-authority",
+      "service_id": "desco-ocsms-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Electric Supply Company Limited (DESCO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-ocsms-registration::c-official-portal",
+      "service_id": "desco-ocsms-registration",
+      "claim_type": "application_url",
+      "claim_text": "DESCO OCSMS User Registration official information is published at https://ocsms.desco.org.bd/publicinfo/processflow (page title: Process Flows | DESCO).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow"
+      },
+      "source_ids": [
+        "src-desco-ocsms-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-desco-ocsms-registration::c-official-portal-src-desco-ocsms-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-ocsms-registration::c-procedure-overview",
+      "service_id": "desco-ocsms-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "DESCO OCSMS User Registration is a government service under Dhaka Electric Supply Company Limited (DESCO) (electricity portal). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-ocsms-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-ocsms-registration::c-service-identity",
+      "service_id": "desco-ocsms-registration",
+      "claim_type": "eligibility",
+      "claim_text": "DESCO OCSMS User Registration (ডেসকো ওসিএসএমএস ব্যবহারকারী নিবন্ধন) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-ocsms-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

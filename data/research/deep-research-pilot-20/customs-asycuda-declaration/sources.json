@@ -1,0 +1,136 @@
+{
+  "service_id": "customs-asycuda-declaration",
+  "sources": [
+    {
+      "source_id": "src-customs-asycuda-declaration-official",
+      "service_id": "customs-asycuda-declaration",
+      "url": "https://nbr.gov.bd/all-eservices/eng",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/all-eservices/eng",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "f0b1374c2afca7b9",
+        "retrieved_at": "2026-08-25T04:38:09.075044+00:00"
+      },
+      "evidence_locator": "probe:https://nbr.gov.bd/all-eservices/eng"
+    },
+    {
+      "source_id": "src-customs-asycuda-declaration-alt-1",
+      "service_id": "customs-asycuda-declaration",
+      "url": "https://nbr.gov.bd/uploads/publications/Final_Newsletter_Design_for_NBR_Customs.pdf",
+      "title": "Customs Declaration (ASYCUDA World)",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/uploads/publications/Final_Newsletter_Design_for_NBR_Customs.pdf",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "application/pdf",
+        "content_hash": "f497434f08edeaba",
+        "retrieved_at": "2026-08-25T04:38:12.332689+00:00"
+      }
+    },
+    {
+      "source_id": "src-customs-asycuda-declaration-alt-2",
+      "service_id": "customs-asycuda-declaration",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T04:38:13.715604+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "source_id": "src-customs-asycuda-declaration-deep-2",
+      "service_id": "customs-asycuda-declaration",
+      "url": "https://incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "852f4daa6bced568",
+        "content_length": 14453,
+        "retrieved_at": "2026-08-25T04:38:21.066828+00:00",
+        "retrieval_method": "http_get",
+        "spa_shell": false,
+        "pdf_links": [],
+        "form_links": [
+          "https://incometax.gov.bd/Content/Forms/Notice.htm",
+          "https://secure.incometax.gov.bd/VerificationUserRegistration/Index",
+          "https://secure.incometax.gov.bd/Registration/ForgetPass",
+          "https://secure.incometax.gov.bd/Registration/Index",
+          "https://secure.incometax.gov.bd/Registration/Login"
+        ]
+      },
+      "evidence_locator": "deep_probe:https://incometax.gov.bd",
+      "snapshot_path": "source_snapshots/src-customs-asycuda-declaration-deep-2.probe.json"
+    },
+    {
+      "source_id": "src-customs-asycuda-declaration-deep-3",
+      "service_id": "customs-asycuda-declaration",
+      "url": "https://secure.incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://secure.incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "852f4daa6bced568",
+        "content_length": 14453,
+        "retrieved_at": "2026-08-25T04:38:23.414503+00:00",
+        "retrieval_method": "http_get",
+        "spa_shell": false,
+        "pdf_links": [],
+        "form_links": [
+          "https://secure.incometax.gov.bd/Content/Forms/Notice.htm",
+          "https://secure.incometax.gov.bd/VerificationUserRegistration/Index",
+          "https://secure.incometax.gov.bd/Registration/ForgetPass",
+          "https://secure.incometax.gov.bd/Registration/Index",
+          "https://secure.incometax.gov.bd/Registration/Login"
+        ]
+      },
+      "evidence_locator": "deep_probe:https://secure.incometax.gov.bd",
+      "snapshot_path": "source_snapshots/src-customs-asycuda-declaration-deep-3.probe.json"
+    }
+  ]
+}

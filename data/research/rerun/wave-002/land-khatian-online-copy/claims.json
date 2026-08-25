@@ -1,0 +1,72 @@
+{
+  "service_id": "land-khatian-online-copy",
+  "claims": [
+    {
+      "claim_id": "land-khatian-online-copy::c-catalogue-authority",
+      "service_id": "land-khatian-online-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land (DLRMS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-online-copy::c-official-portal",
+      "service_id": "land-khatian-online-copy",
+      "claim_type": "application_url",
+      "claim_text": "Online Khatian Copy official information is published at https://dlrms.land.gov.bd/ (page title: DLRMS).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dlrms.land.gov.bd/"
+      },
+      "source_ids": [
+        "src-land-khatian-online-copy-official"
+      ],
+      "evidence_ids": [
+        "ev-land-khatian-online-copy::c-official-portal-src-land-khatian-online-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-online-copy::c-procedure-overview",
+      "service_id": "land-khatian-online-copy",
+      "claim_type": "procedure_step",
+      "claim_text": "Online Khatian Copy is a government service under Ministry of Land (DLRMS) (khatian copy). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-online-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-online-copy::c-service-identity",
+      "service_id": "land-khatian-online-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Online Khatian Copy (খতিয়ান অনলাইন কপি) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-online-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "service_id": "local-marital-status-certificate",
+  "batch_id": "batch-14-remaining",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Marital Status Certificate",
+  "service_name_bn": "বিবাহিত/অবিবাহিত/তালাকপ্রাপ্ত সনদ",
+  "aliases": [
+    "unmarried certificate",
+    "married certificate",
+    "divorce certificate union"
+  ],
+  "category_id": "certificates",
+  "responsible_agency": "Union Parishad",
+  "official_application_url": "https://www.palshaup.gov.bd/new/application/citizen/17",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "local-marital-status-certificate::c-application-portal",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Marital Status Certificate is associated with NBR e-service portal https://www.palshaup.gov.bd/new/application/citizen/17.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-local-marital-status-certificate",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-marital-status-certificate::c-responsible-authority",
+      "service_id": "local-marital-status-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Union Parishad.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

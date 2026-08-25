@@ -1,0 +1,72 @@
+{
+  "service_id": "desco-solar-document-submission",
+  "claims": [
+    {
+      "claim_id": "desco-solar-document-submission::c-catalogue-authority",
+      "service_id": "desco-solar-document-submission",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Electric Supply Company Limited (DESCO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-solar-document-submission::c-official-portal",
+      "service_id": "desco-solar-document-submission",
+      "claim_type": "application_url",
+      "claim_text": "DESCO Solar Document Submission official information is published at https://ocsms.desco.org.bd/publicinfo/processflow (page title: Process Flows | DESCO).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ocsms.desco.org.bd/publicinfo/processflow"
+      },
+      "source_ids": [
+        "src-desco-solar-document-submission-official"
+      ],
+      "evidence_ids": [
+        "ev-desco-solar-document-submission::c-official-portal-src-desco-solar-document-submission-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-solar-document-submission::c-procedure-overview",
+      "service_id": "desco-solar-document-submission",
+      "claim_type": "procedure_step",
+      "claim_text": "DESCO Solar Document Submission is a government service under Dhaka Electric Supply Company Limited (DESCO) (electricity connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-solar-document-submission-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-solar-document-submission::c-service-identity",
+      "service_id": "desco-solar-document-submission",
+      "claim_type": "eligibility",
+      "claim_text": "DESCO Solar Document Submission (ডেসকো সোলার ডকুমেন্ট জমা) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-solar-document-submission-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

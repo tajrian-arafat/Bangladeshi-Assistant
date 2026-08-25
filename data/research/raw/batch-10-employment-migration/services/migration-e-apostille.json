@@ -1,0 +1,45 @@
+{
+  "service_id": "migration-e-apostille",
+  "batch_id": "batch-10-employment-migration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "e-Apostille Document Authentication",
+  "service_name_bn": "ই-আপোস্টিল (MOFA)",
+  "aliases": [
+    "e-Apostille",
+    "Hague apostille Bangladesh",
+    "apostille.mygov.bd"
+  ],
+  "category_id": "passport_immigration",
+  "responsible_agency": "Ministry of Foreign Affairs (MOFA)",
+  "official_application_url": "https://apostille.mygov.bd/",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "migration-e-apostille::c-application-portal",
+      "service_id": "migration-e-apostille",
+      "claim_type": "application_url",
+      "claim_text": "e-Apostille Document Authentication is associated with NBR e-service portal https://apostille.mygov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-migration-e-apostille",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "migration-e-apostille::c-responsible-authority",
+      "service_id": "migration-e-apostille",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

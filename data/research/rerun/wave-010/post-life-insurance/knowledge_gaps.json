@@ -1,0 +1,27 @@
+{
+  "service_id": "post-life-insurance",
+  "gaps": [
+    {
+      "gap_id": "gap-post-life-insurance-portal-unreachable",
+      "service_id": "post-life-insurance",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Postal Life Insurance.",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/4ad27a53-60f4-4fb8-9c7e-28d9ec5669a2/-"
+    },
+    {
+      "gap_id": "gap-post-life-insurance-fee-unverified",
+      "service_id": "post-life-insurance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Postal Life Insurance.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-life-insurance-documents-unverified",
+      "service_id": "post-life-insurance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Postal Life Insurance.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

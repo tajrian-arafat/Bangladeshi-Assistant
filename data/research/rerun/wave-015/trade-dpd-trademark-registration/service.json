@@ -1,0 +1,134 @@
+{
+  "service_id": "trade-dpd-trademark-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Trademark Registration",
+  "service_name_bn": "ট্রেডমার্ক নিবন্ধন (DPDT)",
+  "aliases": [
+    "trademark Bangladesh",
+    "DPDT trademark",
+    "brand registration"
+  ],
+  "category_id": "registrations",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Department of Patents, Designs and Trademarks (DPDT)",
+  "official_application_url": "https://dpdt.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "trade-dpd-trademark-registration::c-catalogue-authority",
+      "service_id": "trade-dpd-trademark-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Patents, Designs and Trademarks (DPDT).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-trademark-registration::c-official-portal",
+      "service_id": "trade-dpd-trademark-registration",
+      "claim_type": "application_url",
+      "claim_text": "Trademark Registration official information is published at https://dpdt.gov.bd/ (page title: হোম | পেটেন্ট, শিল্প-নকশা ও ট্রেডমার্কস অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dpdt.gov.bd/"
+      },
+      "source_ids": [
+        "src-trade-dpd-trademark-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-trade-dpd-trademark-registration::c-official-portal-src-trade-dpd-trademark-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-trademark-registration::c-procedure-overview",
+      "service_id": "trade-dpd-trademark-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Trademark Registration is a government service under Department of Patents, Designs and Trademarks (DPDT) (intellectual property). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-dpd-trademark-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-trademark-registration::c-service-identity",
+      "service_id": "trade-dpd-trademark-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Trademark Registration (ট্রেডমার্ক নিবন্ধন (DPDT)) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-dpd-trademark-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-trade-dpd-trademark-registration-official",
+      "service_id": "trade-dpd-trademark-registration",
+      "url": "https://dpdt.gov.bd/",
+      "title": "হোম | পেটেন্ট, শিল্প-নকশা ও ট্রেডমার্কস অধিদপ্তর",
+      "authority_id": "department-of-patents-designs-and-trademarks-dpdt",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dpdt.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | পেটেন্ট, শিল্প-নকশা ও ট্রেডমার্কস অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "4610f8c7503fb377",
+        "retrieved_at": "2026-08-25T03:36:50.690802+00:00"
+      },
+      "evidence_locator": "probe:https://dpdt.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-trade-dpd-trademark-registration-fee-unverified",
+      "service_id": "trade-dpd-trademark-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Trademark Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-dpd-trademark-registration-documents-unverified",
+      "service_id": "trade-dpd-trademark-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Trademark Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

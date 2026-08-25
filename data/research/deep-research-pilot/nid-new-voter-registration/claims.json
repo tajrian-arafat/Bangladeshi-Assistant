@@ -1,0 +1,124 @@
+{
+  "service_id": "nid-new-voter-registration",
+  "claims": [
+    {
+      "claim_id": "nid-new-voter-registration::c-catalogue-authority",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-official-portal",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "application_url",
+      "claim_text": "New Voter and National ID Registration official information is published at https://services.nidw.gov.bd/nid-pub/register-account?locale=en (page title: Bangladesh NID Application System | New Register).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en"
+      },
+      "source_ids": [
+        "src-nid-new-voter-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-new-voter-registration::c-official-portal-src-nid-new-voter-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-procedure-overview",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "New voter/NID registration is processed through the Election Commission NID Wing — citizens apply via the NID online portal or designated NID registration centres.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-new-voter-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-document-overview",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "document",
+      "claim_text": "Birth certificate or educational certificate, parent/guardian NID (if applicable), passport-size photograph, and proof of address are typically required for new voter registration.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-nid-new-voter-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-service-identity",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "eligibility",
+      "claim_text": "New Voter and National ID Registration (নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-new-voter-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-eligibility-deep",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Bangladeshi citizens who have reached the minimum age for voter registration and do not already hold a valid NID/voter ID.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-new-voter-registration-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-document-must-need",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "document",
+      "claim_text": "Birth certificate or educational certificate, parent/guardian NID (if applicable), passport-size photograph, and proof of address are typically required for new voter registration.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-new-voter-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

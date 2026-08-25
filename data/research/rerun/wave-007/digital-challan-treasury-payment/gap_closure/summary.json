@@ -1,0 +1,28 @@
+{
+  "service_id": "digital-challan-treasury-payment",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-digital-challan-treasury-payment-portal-unreachable",
+      "service_id": "digital-challan-treasury-payment",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Treasury Challan Online Payment (aChallan).",
+      "severity": "MEDIUM",
+      "url": "https://www.achallan.gov.bd/"
+    },
+    {
+      "gap_id": "gap-digital-challan-treasury-payment-fee-unverified",
+      "service_id": "digital-challan-treasury-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Treasury Challan Online Payment (aChallan).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-digital-challan-treasury-payment-documents-unverified",
+      "service_id": "digital-challan-treasury-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Treasury Challan Online Payment (aChallan).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

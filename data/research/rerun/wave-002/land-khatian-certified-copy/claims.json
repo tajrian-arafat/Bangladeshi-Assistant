@@ -1,0 +1,70 @@
+{
+  "service_id": "land-khatian-certified-copy",
+  "claims": [
+    {
+      "claim_id": "land-khatian-certified-copy::c-catalogue-authority",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land (DLRMS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-official-url-documented",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://land.gov.bd/vumisheba-fee for Certified Khatian Copy; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://land.gov.bd/vumisheba-fee"
+      },
+      "source_ids": [
+        "src-land-khatian-certified-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-procedure-overview",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "procedure_step",
+      "claim_text": "Certified Khatian Copy is a government service under Ministry of Land (DLRMS) (khatian certified). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-certified-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-service-identity",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Certified Khatian Copy (সার্টিফাইড/সত্যায়িত খতিয়ান) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-certified-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

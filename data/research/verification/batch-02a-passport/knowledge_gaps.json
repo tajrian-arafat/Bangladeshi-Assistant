@@ -1,0 +1,101 @@
+{
+  "knowledge_gaps": [
+    {
+      "gap_id": "MISSING_MRP_FEE_SCHEDULE_MACHINE_READABLE",
+      "service_ids": [
+        "passport-mrp-initial",
+        "passport-mrp-reissue"
+      ],
+      "classification": "missing_fee_schedule",
+      "priority": "HIGH",
+      "description": "MRP portal references bank deposit fees but structured fee table not extracted from official live source in this research pass."
+    },
+    {
+      "gap_id": "MISSING_PASSPORT_CANCELLATION_SERVICE",
+      "service_ids": [],
+      "classification": "service_identification_problem",
+      "priority": "MEDIUM",
+      "description": "No dedicated canonical catalogue entry for passport cancellation; may be embedded in reissue/lost workflows."
+    },
+    {
+      "gap_id": "MISSING_EXPATRIATE_UNIFIED_NATIONAL_PROCEDURE",
+      "service_ids": [
+        "epassport-new-application",
+        "epassport-reissue"
+      ],
+      "classification": "geographic_local_variation",
+      "priority": "HIGH",
+      "description": "Mission-specific document lists (Dubai, Singapore, etc.) vary; no single DIP page consolidates all expatriate requirements."
+    },
+    {
+      "gap_id": "MISSING_POLICE_PV_DEDICATED_OFFICIAL_URL",
+      "service_ids": [
+        "police-passport-police-verification"
+      ],
+      "classification": "source_discovery_problem",
+      "priority": "MEDIUM",
+      "description": "Catalogue points to dip.gov.bd for passport police verification; no standalone SB passport PV procedure page captured."
+    },
+    {
+      "gap_id": "MISSING_PAYMENT_GATEWAY_OFFICIAL_ENUM",
+      "service_ids": [
+        "epassport-fee-payment"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "MEDIUM",
+      "description": "Current official list of online payment gateways (ekpay vs A-Challan vs others) not fully captured from live JS portal in this pass."
+    },
+    {
+      "gap_id": "MISSING_DAMAGED_PASSPORT_DISTINCT_RULES",
+      "service_ids": [
+        "epassport-reissue"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "MEDIUM",
+      "description": "Lost passport GD rules found; damaged passport distinct documentary rules not separately enumerated on Tier-1 pages reviewed."
+    },
+    {
+      "gap_id": "MISSING_CURRENT_EPASSPORT_FEE_TIER1_SNAPSHOT",
+      "classification": "verification_discovered",
+      "priority": "HIGH",
+      "status": "OPEN",
+      "related_claims": [
+        "epassport-fee-payment::c-fee-48p-5y-regular",
+        "epassport-fee-payment::c-fee-48p-10y-regular",
+        "epassport-fee-payment::c-fee-64p-5y-regular",
+        "epassport-fee-payment::c-fee-64p-10y-regular"
+      ],
+      "description": "Identified during Batch 2A independent verification."
+    },
+    {
+      "gap_id": "MISSING_ABUDHABI_MISSION_EPASSPORT_PAGE",
+      "classification": "verification_discovered",
+      "priority": "HIGH",
+      "status": "OPEN",
+      "related_claims": [
+        "epassport-fee-payment::c-mission-weff-surcharge"
+      ],
+      "description": "Identified during Batch 2A independent verification."
+    },
+    {
+      "gap_id": "MISSING_EPASSPORT_STATUS_PORTAL_FIELDS",
+      "classification": "verification_discovered",
+      "priority": "HIGH",
+      "status": "OPEN",
+      "related_claims": [
+        "epassport-application-status::c-status-oid-dob"
+      ],
+      "description": "Identified during Batch 2A independent verification."
+    },
+    {
+      "gap_id": "MISSING_TIER1_PV_REQUIREMENT_RULE_2025",
+      "classification": "verification_discovered",
+      "priority": "HIGH",
+      "status": "OPEN",
+      "related_claims": [
+        "police-passport-police-verification::c-pv-pathway-exists"
+      ],
+      "description": "Identified during Batch 2A independent verification."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "desco-emergency-service",
+  "claims": [
+    {
+      "claim_id": "desco-emergency-service::c-catalogue-authority",
+      "service_id": "desco-emergency-service",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Electric Supply Company Limited (DESCO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-emergency-service::c-official-portal",
+      "service_id": "desco-emergency-service",
+      "claim_type": "application_url",
+      "claim_text": "DESCO Power Interruption Emergency Service official information is published at https://ocsms.desco.org.bd/home (page title: Online Customer Service Management System | DESCO).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://ocsms.desco.org.bd/home"
+      },
+      "source_ids": [
+        "src-desco-emergency-service-official"
+      ],
+      "evidence_ids": [
+        "ev-desco-emergency-service::c-official-portal-src-desco-emergency-service-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-emergency-service::c-procedure-overview",
+      "service_id": "desco-emergency-service",
+      "claim_type": "procedure_step",
+      "claim_text": "DESCO Power Interruption Emergency Service is a government service under Dhaka Electric Supply Company Limited (DESCO) (electricity complaint). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-emergency-service-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "desco-emergency-service::c-service-identity",
+      "service_id": "desco-emergency-service",
+      "claim_type": "eligibility",
+      "claim_text": "DESCO Power Interruption Emergency Service (ডেসকো বিদ্যুৎ বিভ্রাট/জরুরি সেবা) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-desco-emergency-service-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

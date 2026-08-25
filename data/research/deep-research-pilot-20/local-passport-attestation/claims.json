@@ -1,0 +1,124 @@
+{
+  "service_id": "local-passport-attestation",
+  "claims": [
+    {
+      "claim_id": "local-passport-attestation::c-catalogue-authority",
+      "service_id": "local-passport-attestation",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-official-portal",
+      "service_id": "local-passport-attestation",
+      "claim_type": "application_url",
+      "claim_text": "Passport-related Attestation (Union) official information is published at https://tilokpursonod.gov.bd/select_certificate/ (page title: তিলকপুর ইউনিয়ন).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://tilokpursonod.gov.bd/select_certificate/"
+      },
+      "source_ids": [
+        "src-local-passport-attestation-official"
+      ],
+      "evidence_ids": [
+        "ev-local-passport-attestation::c-official-portal-src-local-passport-attestation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-procedure-overview",
+      "service_id": "local-passport-attestation",
+      "claim_type": "procedure_step",
+      "claim_text": "Passport attestation at Digital Centres/Union Digital Centres follows prescribed document verification steps.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-passport-attestation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-document-overview",
+      "service_id": "local-passport-attestation",
+      "claim_type": "document",
+      "claim_text": "Original passport, NID, and application form are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-local-passport-attestation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-service-identity",
+      "service_id": "local-passport-attestation",
+      "claim_type": "eligibility",
+      "claim_text": "Passport-related Attestation (Union) (পাসপোর্ট সংক্রান্ত প্রত্যয়ন) is a confirmed government service in category certificates, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-passport-attestation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-eligibility-deep",
+      "service_id": "local-passport-attestation",
+      "claim_type": "eligibility",
+      "claim_text": "Citizens requiring attestation of passport copies for official use.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-passport-attestation-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-document-must-need",
+      "service_id": "local-passport-attestation",
+      "claim_type": "document",
+      "claim_text": "Original passport, NID, and application form are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-passport-attestation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

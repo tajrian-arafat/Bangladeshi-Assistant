@@ -1,0 +1,140 @@
+{
+  "service_id": "tax-income-return-file",
+  "claims": [
+    {
+      "claim_id": "tax-income-return-file::c-catalogue-authority",
+      "service_id": "tax-income-return-file",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-official-portal",
+      "service_id": "tax-income-return-file",
+      "claim_type": "application_url",
+      "claim_text": "Income Tax Return Filing (e-Return) official information is published at https://secure.incometax.gov.bd (page title: - NBR TIN Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://secure.incometax.gov.bd"
+      },
+      "source_ids": [
+        "src-tax-income-return-file-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-income-return-file::c-official-portal-src-tax-income-return-file-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-procedure-overview",
+      "service_id": "tax-income-return-file",
+      "claim_type": "procedure_step",
+      "claim_text": "Income tax return filing is completed through the NBR e-Return portal (secure.incometax.gov.bd) after obtaining e-TIN and preparing income statements.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-income-return-file-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-document-overview",
+      "service_id": "tax-income-return-file",
+      "claim_type": "document",
+      "claim_text": "e-TIN certificate, income statements, bank statements, investment proofs, and prior acknowledgement (if applicable) are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-tax-income-return-file-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-service-identity",
+      "service_id": "tax-income-return-file",
+      "claim_type": "eligibility",
+      "claim_text": "Income Tax Return Filing (e-Return) (আয়কর রিটার্ন দাখিল) is a confirmed government service in category tax, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-income-return-file-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-eligibility-deep",
+      "service_id": "tax-income-return-file",
+      "claim_type": "eligibility",
+      "claim_text": "Taxpayers with e-TIN who meet NBR filing thresholds or voluntary filers as defined by NBR rules.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-income-return-file-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-fee-deep",
+      "service_id": "tax-income-return-file",
+      "claim_type": "fee",
+      "claim_text": "Tax liability is assessment-based via NBR e-Return — no flat application fee; payment follows assessed tax amount.",
+      "information_class": "CALCULATOR_DERIVED",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "UNVERIFIED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-tax-income-return-file-official"
+      ],
+      "provenance": "deep_research_curated",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-income-return-file::c-document-must-need",
+      "service_id": "tax-income-return-file",
+      "claim_type": "document",
+      "claim_text": "e-TIN certificate, income statements, bank statements, investment proofs, and prior acknowledgement (if applicable) are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-income-return-file-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

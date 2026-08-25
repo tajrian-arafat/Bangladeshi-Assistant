@@ -1,0 +1,137 @@
+{
+  "service_id": "mofa-education-attestation-chain",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Educational Certificate MOFA Attestation (via Ministry of Education)",
+  "service_name_bn": "শিক্ষা সনদ MOFA attestation (Ministry of Education chain)",
+  "aliases": [
+    "degree attestation MOFA",
+    "education certificate attestation",
+    "Educational Certificate MOFA Attestation (via Ministry of Education)"
+  ],
+  "category_id": "passport_immigration",
+  "profile_key": "POLICE",
+  "responsible_agency": "Ministry of Foreign Affairs (MOFA)",
+  "official_application_url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "mofa-education-attestation-chain::c-catalogue-authority",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-education-attestation-chain::c-official-url-documented",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://istanbul.mofa.gov.bd/en/site/page/Document-attestation for Educational Certificate MOFA Attestation (via Ministry of Education); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation"
+      },
+      "source_ids": [
+        "src-mofa-education-attestation-chain-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-education-attestation-chain::c-procedure-overview",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "procedure_step",
+      "claim_text": "Educational Certificate MOFA Attestation (via Ministry of Education) is a government service under Ministry of Foreign Affairs (MOFA) (attestation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-education-attestation-chain-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "mofa-education-attestation-chain::c-service-identity",
+      "service_id": "mofa-education-attestation-chain",
+      "claim_type": "eligibility",
+      "claim_text": "Educational Certificate MOFA Attestation (via Ministry of Education) (শিক্ষা সনদ MOFA attestation (Ministry of Education chain)) is a confirmed government service in category passport_immigration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-mofa-education-attestation-chain-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-mofa-education-attestation-chain-official",
+      "service_id": "mofa-education-attestation-chain",
+      "url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation",
+      "title": "Educational Certificate MOFA Attestation (via Ministry of Education)",
+      "authority_id": "ministry-of-foreign-affairs-mofa",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:28:39.029940+00:00"
+      },
+      "evidence_locator": "probe:https://istanbul.mofa.gov.bd/en/site/page/Document-attestation"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-mofa-education-attestation-chain-portal-unreachable",
+      "service_id": "mofa-education-attestation-chain",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Educational Certificate MOFA Attestation (via Ministry of Education).",
+      "severity": "MEDIUM",
+      "url": "https://istanbul.mofa.gov.bd/en/site/page/Document-attestation"
+    },
+    {
+      "gap_id": "gap-mofa-education-attestation-chain-fee-unverified",
+      "service_id": "mofa-education-attestation-chain",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Educational Certificate MOFA Attestation (via Ministry of Education).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-mofa-education-attestation-chain-documents-unverified",
+      "service_id": "mofa-education-attestation-chain",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Educational Certificate MOFA Attestation (via Ministry of Education).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

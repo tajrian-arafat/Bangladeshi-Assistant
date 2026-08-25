@@ -1,0 +1,20 @@
+{
+  "service_id": "nid-online-account-registration",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-nid-online-account-registration-fee-unverified",
+      "service_id": "nid-online-account-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Voter Online Account Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-nid-online-account-registration-documents-unverified",
+      "service_id": "nid-online-account-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Voter Online Account Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,473 @@
+{
+  "batch_id": "batch-11-business-trade",
+  "sources": [
+    {
+      "source_id": "src-bida-aftercare-services",
+      "service_id": "bida-aftercare-services",
+      "url": "https://bida.gov.bd/",
+      "portal_url": null,
+      "title": "Invest Bangladesh I Explore Opportunities",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://investbangladesh.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Invest Bangladesh I Explore Opportunities",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-bida-commercial-office-services",
+      "service_id": "bida-commercial-office-services",
+      "url": "https://bida.gov.bd/",
+      "portal_url": null,
+      "title": "Invest Bangladesh I Explore Opportunities",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://investbangladesh.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Invest Bangladesh I Explore Opportunities",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-bida-invest-bangladesh-oss",
+      "service_id": "bida-invest-bangladesh-oss",
+      "url": "https://investbangladesh.gov.bd/faq",
+      "portal_url": null,
+      "title": "Invest Bangladesh FAQ | Answers to Investment, Visa, Tax &amp; Business Setup Queries",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://investbangladesh.gov.bd/faq",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Invest Bangladesh FAQ | Answers to Investment, Visa, Tax &amp; Business Setup Queries",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-bida-irms-platform",
+      "service_id": "bida-irms-platform",
+      "url": "https://irms.bida.gov.bd/",
+      "portal_url": null,
+      "title": "One Stop Service platform for Investment Relationship Management",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://irms.bida.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "One Stop Service platform for Investment Relationship Management",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-bida-osspid-registration",
+      "service_id": "bida-osspid-registration",
+      "url": "https://irms.bida.gov.bd/set-registration-type/investor",
+      "portal_url": null,
+      "title": "Just a moment...",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://osspid.org/user/create?client_id=aa8a367e918753e3643af625217601a933df0c7f&cs=YzFhZDA1NzliNTBiZTJlMjVjN2E2Mjg2YmNiZDg4ZDc0NTA5NjhlOTo6_M4dQNYy9skdzbue1ufEvQ&callback_url=https://irms.bida.gov.bd/osspid-callback",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-bida-work-permit-security-clearance",
+      "service_id": "bida-work-permit-security-clearance",
+      "url": "https://bida.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital",
+      "portal_url": null,
+      "title": "Invest Bangladesh",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://investbangladesh.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Invest Bangladesh",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-business-company-incorporation",
+      "service_id": "business-company-incorporation",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+      "portal_url": null,
+      "title": "Company Incorporation",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-business-cooperative-society-registration",
+      "service_id": "business-cooperative-society-registration",
+      "url": "https://service.rdcd.gov.bd/",
+      "portal_url": null,
+      "title": "আবেদনের জন্য দপ্তর ভিত্তিক সেবা নির্বাচন | পল্লী উন্নয়ন ও সমবায় বিভাগ সেবা | RDCD Services",
+      "authority_id": "department-of-cooperatives-rdcd",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://service.rdcd.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "আবেদনের জন্য দপ্তর ভিত্তিক সেবা নির্বাচন | পল্লী উন্নয়ন ও সমবায় বিভাগ সেবা | RDCD Services",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-business-entity-name-search",
+      "service_id": "business-entity-name-search",
+      "url": "https://app.roc.gov.bd/psp/nc_search",
+      "portal_url": null,
+      "title": "Entity Name Search",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/psp/nc_search",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-business-foreign-company-registration",
+      "service_id": "business-foreign-company-registration",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+      "portal_url": null,
+      "title": "Foreign Company Registration (Branch/Liaison)",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-business-name-clearance",
+      "service_id": "business-name-clearance",
+      "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
+      "portal_url": null,
+      "title": "Company Name Clearance",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-business-ngoab-ngo-registration",
+      "service_id": "business-ngoab-ngo-registration",
+      "url": "https://ngoa.gov.bd/",
+      "portal_url": null,
+      "title": "NGO Registration (NGO Affairs Bureau)",
+      "authority_id": "ngo-affairs-bureau",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://ngoa.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known"
+      }
+    },
+    {
+      "source_id": "src-business-partnership-registration",
+      "service_id": "business-partnership-registration",
+      "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+      "portal_url": null,
+      "title": "Partnership Firm Registration",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-business-rjsc-certified-copy",
+      "service_id": "business-rjsc-certified-copy",
+      "url": "https://app.roc.gov.bd/psp/RJSC_Fees",
+      "portal_url": null,
+      "title": "RJSC Certified Copy of Documents",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/psp/RJSC_Fees",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-business-society-registration",
+      "service_id": "business-society-registration",
+      "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+      "portal_url": null,
+      "title": "Society Registration",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-business-trade-organization-registration",
+      "service_id": "business-trade-organization-registration",
+      "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+      "portal_url": null,
+      "title": "Trade Organization Registration",
+      "authority_id": "rjsc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://app.roc.gov.bd/Guidlines/Introduction.htm",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-professional-bar-council-enrolment",
+      "service_id": "professional-bar-council-enrolment",
+      "url": "https://www.barcouncil.gov.bd/",
+      "portal_url": null,
+      "title": "Just a moment...",
+      "authority_id": "bangladesh-bar-council",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.barcouncil.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-professional-bmdc-doctor-registration",
+      "service_id": "professional-bmdc-doctor-registration",
+      "url": "https://www.bmdc.org.bd/",
+      "portal_url": null,
+      "title": "Just a moment...",
+      "authority_id": "bmdc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.bmdc.org.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-professional-engineer-registration",
+      "service_id": "professional-engineer-registration",
+      "url": "https://www.ieb.org.bd/",
+      "portal_url": null,
+      "title": "Professional Engineer Registration",
+      "authority_id": "institution-of-engineers-bangladesh-ieb",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ieb.org.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known"
+      }
+    },
+    {
+      "source_id": "src-professional-nursing-council-registration",
+      "service_id": "professional-nursing-council-registration",
+      "url": "https://www.bnmc.gov.bd/",
+      "portal_url": null,
+      "title": "Nursing and Midwifery Council Registration",
+      "authority_id": "bangladesh-nursing-and-midwifery-council-bnmc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.bnmc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-professional-pharmacy-council-registration",
+      "service_id": "professional-pharmacy-council-registration",
+      "url": "https://www.pcb.gov.bd/",
+      "portal_url": null,
+      "title": "Pharmacy Council Pharmacist Registration",
+      "authority_id": "pharmacy-council-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.pcb.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-trade-bsti-standard-certification",
+      "service_id": "trade-bsti-standard-certification",
+      "url": "https://bsti.gov.bd/",
+      "portal_url": null,
+      "title": "BSTI Product Standard Certification",
+      "authority_id": "bangladesh-standards-and-testing-institution-bsti",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bsti.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)"
+      }
+    },
+    {
+      "source_id": "src-trade-dpd-patent-registration",
+      "service_id": "trade-dpd-patent-registration",
+      "url": "https://dpdt.gov.bd/",
+      "portal_url": null,
+      "title": "Patent Registration",
+      "authority_id": "department-of-patents-designs-and-trademarks-dpdt",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dpdt.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-trade-dpd-trademark-registration",
+      "service_id": "trade-dpd-trademark-registration",
+      "url": "https://dpdt.gov.bd/",
+      "portal_url": null,
+      "title": "Trademark Registration",
+      "authority_id": "department-of-patents-designs-and-trademarks-dpdt",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dpdt.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "",
+        "content_type": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "source_id": "src-trade-erc-registration",
+      "service_id": "trade-erc-registration",
+      "url": "https://olm.ccie.gov.bd/",
+      "portal_url": null,
+      "title": "CCI&amp;E - OLM",
+      "authority_id": "office-of-the-chief-controller-of-imports-and-exports-cci-e",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://olm.ccie.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "CCI&amp;E - OLM",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-trade-irc-erc-renewal",
+      "service_id": "trade-irc-erc-renewal",
+      "url": "https://olm.ccie.gov.bd/",
+      "portal_url": null,
+      "title": "CCI&amp;E - OLM",
+      "authority_id": "office-of-the-chief-controller-of-imports-and-exports-cci-e",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://olm.ccie.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "CCI&amp;E - OLM",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-trade-irc-registration",
+      "service_id": "trade-irc-registration",
+      "url": "https://olm.ccie.gov.bd/",
+      "portal_url": null,
+      "title": "CCI&amp;E - OLM",
+      "authority_id": "office-of-the-chief-controller-of-imports-and-exports-cci-e",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://olm.ccie.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "CCI&amp;E - OLM",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

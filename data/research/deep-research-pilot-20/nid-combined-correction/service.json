@@ -1,0 +1,220 @@
+{
+  "service_id": "nid-combined-correction",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Combined NID and Other Information Correction",
+  "service_name_bn": "কার্ড ও অন্যান্য তথ্য একত্রে সংশোধন",
+  "aliases": [
+    "full NID correction"
+  ],
+  "category_id": "identity",
+  "profile_key": "IDENTITY_CIVIL",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/fees",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "deep_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "nid-combined-correction::c-catalogue-authority",
+      "service_id": "nid-combined-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "CROSS_CHECKED",
+      "verification_status": "REJECTED",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-official-portal",
+      "service_id": "nid-combined-correction",
+      "claim_type": "application_url",
+      "claim_text": "Combined NID and Other Information Correction official information is published at https://services.nidw.gov.bd/nid-pub/fees (page title: Bangladesh NID Application System | ফি হিসাব করুন).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/fees"
+      },
+      "source_ids": [
+        "src-nid-combined-correction-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-combined-correction::c-official-portal-src-nid-combined-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-procedure-overview",
+      "service_id": "nid-combined-correction",
+      "claim_type": "procedure_step",
+      "claim_text": "Combined NID correction is submitted through the NID online portal with supporting documents.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-combined-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-document-overview",
+      "service_id": "nid-combined-correction",
+      "claim_type": "document",
+      "claim_text": "Existing NID, supporting correction documents (birth certificate, educational certificate) are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "condition": {
+        "requirement_class": "CONDITIONAL"
+      },
+      "source_ids": [
+        "src-nid-combined-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-service-identity",
+      "service_id": "nid-combined-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Combined NID and Other Information Correction (কার্ড ও অন্যান্য তথ্য একত্রে সংশোধন) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-combined-correction-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-eligibility-deep",
+      "service_id": "nid-combined-correction",
+      "claim_type": "eligibility",
+      "claim_text": "NID holders requiring correction of multiple data fields.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-combined-correction-official"
+      ],
+      "provenance": "deep_research_curated_with_official_portal_probe",
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-document-must-need",
+      "service_id": "nid-combined-correction",
+      "claim_type": "document",
+      "claim_text": "Existing NID, supporting correction documents (birth certificate, educational certificate) are typically required.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "VERIFIED",
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "verification_status": "VERIFIED",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-combined-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-nid-combined-correction-official",
+      "service_id": "nid-combined-correction",
+      "url": "https://services.nidw.gov.bd/nid-pub/fees",
+      "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/fees",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | ফি হিসাব করুন",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "ff35df45f51a3f75",
+        "retrieved_at": "2026-08-25T04:26:58.988346+00:00"
+      },
+      "evidence_locator": "probe:https://services.nidw.gov.bd/nid-pub/fees"
+    },
+    {
+      "source_id": "src-nid-combined-correction-alt-1",
+      "service_id": "nid-combined-correction",
+      "url": "https://services.nidw.gov.bd/nid-pub/",
+      "title": "Bangladesh NID Application System",
+      "authority_id": "ec-nid",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "d9bdb59d3802a372",
+        "retrieved_at": "2026-08-25T04:27:00.196150+00:00"
+      }
+    },
+    {
+      "source_id": "src-nid-combined-correction-alt-2",
+      "service_id": "nid-combined-correction",
+      "url": "https://www.nidw.gov.bd/",
+      "title": "Combined NID and Other Information Correction",
+      "authority_id": "ec-nid",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.nidw.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T04:27:00.783946+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-nid-combined-correction-fee-unverified",
+      "service_id": "nid-combined-correction",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Combined NID and Other Information Correction.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-nid-combined-correction-documents-unverified",
+      "service_id": "nid-combined-correction",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Combined NID and Other Information Correction.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "research_depth": "DEEP_PILOT"
+}

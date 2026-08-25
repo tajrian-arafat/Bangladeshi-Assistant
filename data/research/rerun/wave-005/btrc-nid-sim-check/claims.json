@@ -1,0 +1,70 @@
+{
+  "service_id": "btrc-nid-sim-check",
+  "claims": [
+    {
+      "claim_id": "btrc-nid-sim-check::c-catalogue-authority",
+      "service_id": "btrc-nid-sim-check",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Telecommunication Regulatory Commission (BTRC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-nid-sim-check::c-official-url-documented",
+      "service_id": "btrc-nid-sim-check",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://neir.btrc.gov.bd/homepage for SIM Numbers Registered Under NID Check; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://neir.btrc.gov.bd/homepage"
+      },
+      "source_ids": [
+        "src-btrc-nid-sim-check-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-nid-sim-check::c-procedure-overview",
+      "service_id": "btrc-nid-sim-check",
+      "claim_type": "procedure_step",
+      "claim_text": "SIM Numbers Registered Under NID Check is a government service under Bangladesh Telecommunication Regulatory Commission (BTRC) (telecom regulation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-nid-sim-check-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-nid-sim-check::c-service-identity",
+      "service_id": "btrc-nid-sim-check",
+      "claim_type": "eligibility",
+      "claim_text": "SIM Numbers Registered Under NID Check (এনআইডি-ভিত্তিক সিম তালিকা (*16001#)) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-nid-sim-check-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "health-hospital-birth-notification",
+  "claims": [
+    {
+      "claim_id": "health-hospital-birth-notification::c-catalogue-authority",
+      "service_id": "health-hospital-birth-notification",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Health Services (DGHS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-hospital-birth-notification::c-official-portal",
+      "service_id": "health-hospital-birth-notification",
+      "claim_type": "application_url",
+      "claim_text": "Hospital Birth Notification (for BDRIS registration) official information is published at https://bdris.gov.bd/ (page title: হোমপেজ).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdris.gov.bd/"
+      },
+      "source_ids": [
+        "src-health-hospital-birth-notification-official"
+      ],
+      "evidence_ids": [
+        "ev-health-hospital-birth-notification::c-official-portal-src-health-hospital-birth-notification-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-hospital-birth-notification::c-procedure-overview",
+      "service_id": "health-hospital-birth-notification",
+      "claim_type": "procedure_step",
+      "claim_text": "Hospital Birth Notification (for BDRIS registration) is a government service under Directorate General of Health Services (DGHS) (birth notification). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-hospital-birth-notification-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-hospital-birth-notification::c-service-identity",
+      "service_id": "health-hospital-birth-notification",
+      "claim_type": "eligibility",
+      "claim_text": "Hospital Birth Notification (for BDRIS registration) (হাসপাতালে জন্ম নিবেদন) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-hospital-birth-notification-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

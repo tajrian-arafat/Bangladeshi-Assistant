@@ -1,0 +1,72 @@
+{
+  "service_id": "local-passport-attestation",
+  "claims": [
+    {
+      "claim_id": "local-passport-attestation::c-catalogue-authority",
+      "service_id": "local-passport-attestation",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-official-portal",
+      "service_id": "local-passport-attestation",
+      "claim_type": "application_url",
+      "claim_text": "Passport-related Attestation (Union) official information is published at https://tilokpursonod.gov.bd/select_certificate/ (page title: তিলকপুর ইউনিয়ন).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://tilokpursonod.gov.bd/select_certificate/"
+      },
+      "source_ids": [
+        "src-local-passport-attestation-official"
+      ],
+      "evidence_ids": [
+        "ev-local-passport-attestation::c-official-portal-src-local-passport-attestation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-procedure-overview",
+      "service_id": "local-passport-attestation",
+      "claim_type": "procedure_step",
+      "claim_text": "Passport-related Attestation (Union) is a government service under Union Parishad (passport attestation). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-passport-attestation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-passport-attestation::c-service-identity",
+      "service_id": "local-passport-attestation",
+      "claim_type": "eligibility",
+      "claim_text": "Passport-related Attestation (Union) (পাসপোর্ট সংক্রান্ত প্রত্যয়ন) is a confirmed government service in category certificates, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-passport-attestation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

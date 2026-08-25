@@ -1,0 +1,132 @@
+{
+  "service_id": "snp-one-house-one-farm",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "One House One Farm",
+  "service_name_bn": "",
+  "aliases": [
+    "One House One Farm"
+  ],
+  "category_id": "social_protection",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Rural Development & Cooperatives Division, MoLGRD&C",
+  "official_application_url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "snp-one-house-one-farm::c-catalogue-authority",
+      "service_id": "snp-one-house-one-farm",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Rural Development & Cooperatives Division, MoLGRD&C.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-one-house-one-farm::c-official-portal",
+      "service_id": "snp-one-house-one-farm",
+      "claim_type": "application_url",
+      "claim_text": "One House One Farm official information is published at https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/ (page title: All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/"
+      },
+      "source_ids": [
+        "src-snp-one-house-one-farm-official"
+      ],
+      "evidence_ids": [
+        "ev-snp-one-house-one-farm::c-official-portal-src-snp-one-house-one-farm-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-one-house-one-farm::c-procedure-overview",
+      "service_id": "snp-one-house-one-farm",
+      "claim_type": "procedure_step",
+      "claim_text": "One House One Farm is a government service under Rural Development & Cooperatives Division, MoLGRD&C (social security program). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-one-house-one-farm-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-one-house-one-farm::c-service-identity",
+      "service_id": "snp-one-house-one-farm",
+      "claim_type": "eligibility",
+      "claim_text": "One House One Farm () is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-one-house-one-farm-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-snp-one-house-one-farm-official",
+      "service_id": "snp-one-house-one-farm",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "rural-development-cooperatives-division-molgrd-c",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "eb67cd296e0471bd",
+        "retrieved_at": "2026-08-25T03:33:47.762902+00:00"
+      },
+      "evidence_locator": "probe:https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-snp-one-house-one-farm-fee-unverified",
+      "service_id": "snp-one-house-one-farm",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for One House One Farm.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-one-house-one-farm-documents-unverified",
+      "service_id": "snp-one-house-one-farm",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for One House One Farm.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

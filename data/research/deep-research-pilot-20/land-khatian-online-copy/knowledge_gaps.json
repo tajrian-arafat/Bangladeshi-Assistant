@@ -1,0 +1,27 @@
+{
+  "service_id": "land-khatian-online-copy",
+  "gaps": [
+    {
+      "gap_id": "gap-land-khatian-online-copy-portal-unreachable",
+      "service_id": "land-khatian-online-copy",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Online Khatian Copy.",
+      "severity": "MEDIUM",
+      "url": "https://dlrms.land.gov.bd/"
+    },
+    {
+      "gap_id": "gap-land-khatian-online-copy-fee-unverified",
+      "service_id": "land-khatian-online-copy",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Online Khatian Copy.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-khatian-online-copy-documents-unverified",
+      "service_id": "land-khatian-online-copy",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Online Khatian Copy.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

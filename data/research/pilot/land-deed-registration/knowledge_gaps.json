@@ -1,0 +1,27 @@
+{
+  "service_id": "land-deed-registration",
+  "gaps": [
+    {
+      "gap_id": "gap-land-deed-registration-portal-unreachable",
+      "service_id": "land-deed-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Deed Registration (Sub-Registry).",
+      "severity": "MEDIUM",
+      "url": "https://www.land.gov.bd/poripotro"
+    },
+    {
+      "gap_id": "gap-land-deed-registration-fee-unverified",
+      "service_id": "land-deed-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Deed Registration (Sub-Registry).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-deed-registration-documents-unverified",
+      "service_id": "land-deed-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Deed Registration (Sub-Registry).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

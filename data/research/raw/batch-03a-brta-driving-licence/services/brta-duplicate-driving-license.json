@@ -1,0 +1,223 @@
+{
+  "service_id": "brta-duplicate-driving-license",
+  "batch_id": "batch-03a-brta-driving-licence",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Duplicate Driving License",
+  "service_name_bn": "ডুপ্লিকেট ড্রাইভিং লাইসেন্স",
+  "aliases": [
+    "lost driving license",
+    "replacement DL"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "driver"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-duplicate-driving-license::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_type": "application_url",
+      "claim_text": "Duplicate (replacement) driving license applications are submitted via BSP at bsp.brta.gov.bd/bsp.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-portal-url-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-lost-or-damaged-eligibility",
+      "legacy_claim_id": "c-lost-or-damaged-eligibility",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_type": "eligibility",
+      "claim_text": "Duplicate license issued when original smart card driving license is lost, stolen, or damaged beyond use.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-lost-or-damaged-eligibility-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-gd-for-lost-license",
+      "legacy_claim_id": "c-gd-for-lost-license",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_type": "conditional_document",
+      "claim_text": "General Diary (GD) or police report may be required when license reported lost/stolen before duplicate issuance.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "license_reported_lost_or_stolen"
+      },
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-gd-for-lost-license-src-brta-portal-dl-services"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-duplicate-fee-calculator",
+      "legacy_claim_id": "c-duplicate-fee-calculator",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_type": "fee",
+      "claim_text": "Duplicate driving license fee is listed in BSP fee calculator under license services; amount not statically published in this research pass.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-duplicate-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-existing-record-verification",
+      "legacy_claim_id": "c-existing-record-verification",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_type": "procedure_step",
+      "claim_text": "BRTA verifies existing license record in BSP database before issuing duplicate smart card.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-existing-record-verification-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-bsp-application-workflow",
+      "legacy_claim_id": "c-bsp-application-workflow",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Typical workflow: BSP login → select duplicate license service → pay fee online → attend circle office for biometrics/card issuance if required.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-home",
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-bsp-application-workflow-src-bsp-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-smart-card-format",
+      "legacy_claim_id": "c-smart-card-format",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_type": "restriction",
+      "claim_text": "Current duplicate issuances are smart card format; legacy booklet licenses follow migration/upgrade rules at circle office.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-smart-card-format-src-brta-portal-dl-services"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-processing-time-not-fixed",
+      "legacy_claim_id": "c-processing-time-not-fixed",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_type": "processing_time",
+      "claim_text": "Official numeric SLA for duplicate license not published on Tier 1–2 pages reviewed; depends on circle office queue.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-processing-time-not-fixed-src-brta-portal-dl-services"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-duplicate-driving-license::c-practical-file-gd-promptly",
+      "legacy_claim_id": "c-practical-file-gd-promptly",
+      "service_id": "brta-duplicate-driving-license",
+      "claim_type": "practical_tip",
+      "claim_text": "File GD immediately after loss; circle office may request GD copy even when applying online via BSP.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-dl-services"
+      ],
+      "evidence_ids": [
+        "ev-brta-duplicate-driving-license::c-practical-file-gd-promptly-src-brta-portal-dl-services"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": null
+}

@@ -1,0 +1,20 @@
+{
+  "service_id": "trade-irc-erc-renewal",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-trade-irc-erc-renewal-fee-unverified",
+      "service_id": "trade-irc-erc-renewal",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for IRC/ERC Renewal.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-irc-erc-renewal-documents-unverified",
+      "service_id": "trade-irc-erc-renewal",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for IRC/ERC Renewal.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

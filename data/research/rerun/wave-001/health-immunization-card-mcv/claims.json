@@ -1,0 +1,72 @@
+{
+  "service_id": "health-immunization-card-mcv",
+  "claims": [
+    {
+      "claim_id": "health-immunization-card-mcv::c-catalogue-authority",
+      "service_id": "health-immunization-card-mcv",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Health Services (DGHS) / EPI.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-immunization-card-mcv::c-official-portal",
+      "service_id": "health-immunization-card-mcv",
+      "claim_type": "application_url",
+      "claim_text": "Immunization / Vaccination Card (EPI) official information is published at https://dghs.gov.bd/ (page title: হোম | স্বাস্থ্য অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dghs.gov.bd/"
+      },
+      "source_ids": [
+        "src-health-immunization-card-mcv-official"
+      ],
+      "evidence_ids": [
+        "ev-health-immunization-card-mcv::c-official-portal-src-health-immunization-card-mcv-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-immunization-card-mcv::c-procedure-overview",
+      "service_id": "health-immunization-card-mcv",
+      "claim_type": "procedure_step",
+      "claim_text": "Immunization / Vaccination Card (EPI) is a government service under Directorate General of Health Services (DGHS) / EPI (immunization). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-immunization-card-mcv-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-immunization-card-mcv::c-service-identity",
+      "service_id": "health-immunization-card-mcv",
+      "claim_type": "eligibility",
+      "claim_text": "Immunization / Vaccination Card (EPI) (টিকা/card (EPI/MCV)) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-immunization-card-mcv-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}
