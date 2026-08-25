@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "batch_id": "batch-02b-police-immigration",
+  "verified_at": "2026-08-24T22:53:05.228339+00:00",
+  "rules": {
+    "high_risk_official": {
+      "preferred_tiers": [
+        1,
+        2
+      ],
+      "require_explicit_support": true,
+      "tier5_news_not_equal_to_official_fact": true,
+      "conflicting_fees_do_not_publish_as_universal": true
+    },
+    "service_separation": {
+      "passport_verification_vs_pcc_vs_employment": true,
+      "do_not_merge_slas": true
+    },
+    "pcc_fee_conflict": {
+      "online_1500_verified_channel": "online_pcc",
+      "offline_500_status": "CONFLICTING",
+      "do_not_publish_universal_current_fee": true
+    },
+    "publication": "STAGING_ONLY \u2014 do not run publish_verified_knowledge.py"
+  }
+}

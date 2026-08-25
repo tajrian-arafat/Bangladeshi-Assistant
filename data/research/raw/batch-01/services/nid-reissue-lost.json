@@ -1,0 +1,200 @@
+{
+  "service_id": "nid-reissue-lost",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "NID Reissue for Lost or Damaged Card",
+  "service_name_bn": "হারানো/নষ্ট এনআইডি পুনর্মুদ্রণ (রিইস্যু)",
+  "aliases": [
+    "duplicate NID",
+    "lost voter ID",
+    "NID reprint"
+  ],
+  "banglish_variants": [
+    "nid reissue",
+    "lost nid",
+    "duplicate nid",
+    "nid reprint"
+  ],
+  "category_id": "identity",
+  "responsible_ministry": "Bangladesh Election Commission",
+  "responsible_agency": "NID Wing, Bangladesh Election Commission",
+  "target_applicant": [
+    "citizen",
+    "voter"
+  ],
+  "eligibility": [],
+  "prerequisites": [],
+  "application_methods": [
+    "online"
+  ],
+  "online_application": true,
+  "offline_application": null,
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/?locale=en",
+  "official_information_urls": [
+    "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction",
+    "https://www.nidw.gov.bd/IssuanceDuplicateNID.php",
+    "https://services.nidw.gov.bd/nid-pub/fees"
+  ],
+  "official_forms": [],
+  "requirements": [
+    {
+      "requirement_id": "r-online-account",
+      "name_en": "Registered NID online account",
+      "name_bn": "অনলাইন একাউন্ট",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [
+        "c-reissue-online"
+      ],
+      "notes": null
+    },
+    {
+      "requirement_id": "r-gd-practical",
+      "name_en": "Police GD for lost card",
+      "name_bn": "হারানোর জিডি",
+      "classification": "RECOMMENDED",
+      "condition": null,
+      "claim_ids": [],
+      "notes": "Not stated as mandatory on retrieved official FAQ; sometimes reported in practice — keep RECOMMENDED/PRACTICAL only."
+    }
+  ],
+  "fees": [
+    {
+      "fee_id": "f-reissue-calc",
+      "description": "Calculate via official fee calculator (reissue + delivery type)",
+      "amount": null,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "c-reissue-fee"
+      ],
+      "verification_status": "VERIFIED",
+      "notes": null,
+      "retrieved_at": "2026-08-24"
+    }
+  ],
+  "payment_methods": [],
+  "processing_time": null,
+  "procedure_steps": [],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [
+    "Download digital NID copy online after approval notification (FAQ).",
+    "Physical card collection pathways via Upazila/Thana election office also referenced for undistributed cards."
+  ],
+  "office_locations": [],
+  "geographic_limitations": [],
+  "service_availability": "AVAILABLE",
+  "related_services": [
+    "nid-card-info-correction",
+    "nid-download-copy",
+    "nid-fee-calculator"
+  ],
+  "dependencies": [],
+  "renewal_rules": [],
+  "correction_rules": [],
+  "replacement_rules": [
+    "Apply online for reissue when lost/damaged (official).",
+    "If undistributed card not found at Upazila/Thana office, online reissue may be used (FAQ)."
+  ],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [],
+  "common_mistakes": [],
+  "practical_experience": [],
+  "warnings": [],
+  "legal_basis": [],
+  "claims": [
+    {
+      "claim_id": "c-reissue-online",
+      "claim": "For lost NID, apply online for reissue/reprint; after approval, receive SMS/email then download NID copy online.",
+      "field": "procedure",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-reissue-law",
+      "claim": "If NID is lost or damaged, citizen may apply in prescribed manner with prescribed fees for a fresh card.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nidw-duplicate"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-reissue-no-combo",
+      "claim": "Lost-card reissue and correction cannot be done together; reissue first.",
+      "field": "rules",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-reissue-fee",
+      "claim": "Fees apply; use official fee calculator (application type: reissue).",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-nid-faq-correction",
+        "src-nid-fees"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [],
+  "research_status": "SUBSTANTIAL",
+  "missing_information": [
+    "Exact reissue fee amounts not hardcoded from Tier-1 schedule."
+  ],
+  "manual_review_required": [],
+  "knowledge_quality": {
+    "knowledge_quality_score": 79.7,
+    "dimensions": {
+      "coverage": 75,
+      "authority": 93,
+      "freshness": 85,
+      "consistency": 88,
+      "usability": 50.0
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Clear Tier-1 reissue pathway; fee amounts via calculator.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24"
+}

@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bangladeshi-assistant.local/schemas/service-catalogue-entry.json",
+  "title": "Bangladeshi Assistant Finalized Service Catalogue Entry",
+  "description": "Finalized inventory entry. Does not include detailed requirements, fees, or procedures.",
+  "type": "object",
+  "required": [
+    "service_id",
+    "service_name_bn",
+    "service_name_en",
+    "aliases",
+    "category",
+    "category_id",
+    "subcategory",
+    "responsible_authority",
+    "target_user",
+    "geographic_scope",
+    "official_source",
+    "discovery_sources",
+    "status"
+  ],
+  "properties": {
+    "service_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{2,127}$",
+      "description": "Stable slug identifier (immutable)"
+    },
+    "uuid": {
+      "type": ["string", "null"],
+      "format": "uuid"
+    },
+    "service_name_bn": {
+      "type": ["string", "null"]
+    },
+    "service_name_en": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "category": {
+      "type": "string",
+      "description": "Legacy uppercase category label"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Stable taxonomy id from categories.json"
+    },
+    "subcategory": {
+      "type": "string"
+    },
+    "responsible_authority": {
+      "type": "string"
+    },
+    "authority_id": {
+      "type": ["string", "null"]
+    },
+    "target_user": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "geographic_scope": {
+      "type": "string",
+      "enum": ["NATIONAL", "DIVISION", "DISTRICT", "UPAZILA", "LOCAL"]
+    },
+    "geographic_availability": {
+      "type": "array",
+      "description": "LGI/location delivery variants; do not duplicate canonical services per district",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tier": {
+            "type": "string",
+            "enum": ["DIVISION", "DISTRICT", "CITY_CORPORATION", "MUNICIPALITY", "UPAZILA", "UNION", "WARD"]
+          },
+          "name_en": { "type": "string" },
+          "name_bn": { "type": ["string", "null"] },
+          "availability": {
+            "type": "string",
+            "enum": ["AVAILABLE", "UNAVAILABLE", "PROCEDURE_DIFFERS", "OFFICE_DIFFERS", "URL_DIFFERS", "FEE_DIFFERS"]
+          },
+          "url": { "type": ["string", "null"] },
+          "notes": { "type": ["string", "null"] }
+        },
+        "required": ["tier", "name_en", "availability"]
+      }
+    },
+    "lifecycle_stage": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "official_source": {
+      "type": ["string", "null"]
+    },
+    "discovery_sources": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "mygov_service_ids": {
+      "type": "array",
+      "description": "Only verified myGov service IDs",
+      "items": { "type": "string" }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["CONFIRMED", "UNVERIFIED", "DEPRECATED", "DUPLICATE", "NOT_A_SERVICE"]
+    },
+    "canonical_service_id": {
+      "type": ["string", "null"]
+    },
+    "relationship_type": {
+      "type": ["string", "null"],
+      "enum": ["MERGED", "DUPLICATE", null]
+    },
+    "notes": {
+      "type": ["string", "null"]
+    },
+    "finalization_notes": {
+      "type": ["string", "null"]
+    },
+    "discovered_at": {
+      "type": ["string", "null"]
+    },
+    "confirmed_at": {
+      "type": ["string", "null"]
+    },
+    "last_checked_at": {
+      "type": ["string", "null"]
+    },
+    "effective_from": {
+      "type": ["string", "null"]
+    },
+    "effective_until": {
+      "type": ["string", "null"]
+    },
+    "deprecated_at": {
+      "type": ["string", "null"]
+    },
+    "catalogue_version": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

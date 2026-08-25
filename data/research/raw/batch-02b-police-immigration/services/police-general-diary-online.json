@@ -1,0 +1,248 @@
+{
+  "service_id": "police-general-diary-online",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Online General Diary (GD) Filing",
+  "service_name_bn": "অনলাইন GD (General Diary)",
+  "aliases": [
+    "online GD police",
+    "e-GD Bangladesh"
+  ],
+  "banglish_variants": [],
+  "category_id": "police",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://gd.police.gov.bd/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "police-general-diary-online::c-gd-portal-url",
+      "legacy_claim_id": "c-gd-portal-url",
+      "service_id": "police-general-diary-online",
+      "claim_type": "application_url",
+      "claim_text": "Online General Diary is filed via gd.police.gov.bd and/or Online GD mobile app (per catalogue and police communications).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gd-portal",
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-portal-url-src-gd-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-charter-gd-fee-free",
+      "legacy_claim_id": "c-charter-gd-fee-free",
+      "service_id": "police-general-diary-online",
+      "claim_type": "fee",
+      "claim_text": "Citizen charter lists GD service fee as free (বিনামূল্যে).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 0,
+        "currency": "BDT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-charter-gd-fee-free-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-charter-gd-sla",
+      "legacy_claim_id": "c-charter-gd-sla",
+      "service_id": "police-general-diary-online",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA for GD: 1–7 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 1,
+        "official_sla_days_max": 7
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-charter-gd-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-charter-gd-channels",
+      "legacy_claim_id": "c-charter-gd-channels",
+      "service_id": "police-general-diary-online",
+      "claim_type": "procedure_step",
+      "claim_text": "Citizen charter states GD available directly at police station and online.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-charter-gd-channels-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-charter-gd-office",
+      "legacy_claim_id": "c-charter-gd-office",
+      "service_id": "police-general-diary-online",
+      "claim_type": "office",
+      "claim_text": "GD handled at relevant police station / unit (থানা).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-charter-gd-office-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-online-registration-nid",
+      "legacy_claim_id": "c-gd-online-registration-nid",
+      "service_id": "police-general-diary-online",
+      "claim_type": "eligibility",
+      "claim_text": "Online GD registration requires valid NID, active mobile number, and live photo during registration (per police rollout communications).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bss-online-gd-rollout",
+        "src-tbs-online-gd-expansion"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-online-registration-nid-src-bss-online-gd-rollout"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-online-hotline",
+      "legacy_claim_id": "c-gd-online-hotline",
+      "service_id": "police-general-diary-online",
+      "claim_type": "office",
+      "claim_text": "Online GD support hotline 01320001428 operates 24/7 per Police HQ statements.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bss-online-gd-rollout"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-online-hotline-src-bss-online-gd-rollout"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-all-types-expansion",
+      "legacy_claim_id": "c-gd-all-types-expansion",
+      "service_id": "police-general-diary-online",
+      "claim_type": "availability",
+      "claim_text": "Police HQ announced expansion from lost-and-found-only online GD to all GD types, with nationwide availability claimed from Sep 2025.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bss-online-gd-rollout",
+        "src-tbs-online-gd-expansion"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-all-types-expansion-src-bss-online-gd-rollout"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-digital-copy-no-seal",
+      "legacy_claim_id": "c-gd-digital-copy-no-seal",
+      "service_id": "police-general-diary-online",
+      "claim_type": "procedure_step",
+      "claim_text": "Digital GD copy may be downloaded/printed; rollout reporting states seal/signature not required on online GD copy.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-tbs-online-gd-expansion"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-digital-copy-no-seal-src-tbs-online-gd-expansion"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-cognizable-offence-thana",
+      "legacy_claim_id": "c-gd-cognizable-offence-thana",
+      "service_id": "police-general-diary-online",
+      "claim_type": "procedure_step",
+      "claim_text": "If online complaint concerns cognizable offence (case), applicant may need to attend thana with print copy or complaint code (per GD portal guidance cited in rollout reporting).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "complaint_type_cognizable_offence"
+      },
+      "source_ids": [
+        "src-bss-online-gd-rollout"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-cognizable-offence-thana-src-bss-online-gd-rollout"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": null
+}

@@ -1,0 +1,396 @@
+{
+  "generated_from": "data/evaluation/batch-02b-police-immigration/failure-classification.json",
+  "baseline": {
+    "normalized_pass_pct": 77.6,
+    "product_failure_count": 15,
+    "product_failure_ids": [
+      "b009",
+      "b014",
+      "b018",
+      "b022",
+      "b023",
+      "b025",
+      "b027",
+      "b029",
+      "b033",
+      "b038",
+      "b046",
+      "b050",
+      "b055",
+      "b059",
+      "b062"
+    ]
+  },
+  "step21_fixes": [
+    "backend/app/ai/routing/semantic_phrases.py",
+    "backend/app/ai/routing/context_resolution.py",
+    "backend/app/ai/pipeline/banglish.py",
+    "backend/app/ai/routing/intent_classifier.py",
+    "backend/app/ai/routing/intent_canonical.py",
+    "backend/app/ai/routing/domain_entities.py",
+    "backend/app/ai/routing/service_router.py",
+    "backend/app/application/services/conversation_context.py",
+    "backend/app/ai/orchestrator.py",
+    "data/routing/capability_aliases.json",
+    "data/routing/intent_taxonomy.json",
+    "data/routing/phrase_hints.json"
+  ],
+  "records": [
+    {
+      "id": "b009",
+      "query": "Bangladesh visa application kothay?",
+      "category": "VISA",
+      "failure_class": "LANGUAGE_BUG",
+      "root_cause": "kothay/where mapped to office_locator instead of application_url for visa apply queries",
+      "reusable_mechanism": "semantic_phrases.application_location + intent tie-break",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport"
+      ],
+      "problem_layer": "intent_classification",
+      "evaluator_error": false,
+      "expected": {
+        "service": "migration-visa-application-dip",
+        "intent": "application_url"
+      },
+      "actual_at_baseline": {
+        "service": "migration-visa-application-dip",
+        "intent": "office_locator"
+      }
+    },
+    {
+      "id": "b014",
+      "query": "PCC er jonno passport koto din valid thakte hobe?",
+      "category": "POLICE_CLEARANCE",
+      "failure_class": "LANGUAGE_BUG",
+      "root_cause": "koto din valid conflated with processing_time; bare koto triggered fee alias",
+      "reusable_mechanism": "validity_inquiry semantic group + banglish validity normalization",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport"
+      ],
+      "problem_layer": "language_normalization",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-clearance-certificate",
+        "intent": "eligibility_inquiry"
+      },
+      "actual_at_baseline": {
+        "service": "police-clearance-certificate",
+        "intent": "processing_time"
+      }
+    },
+    {
+      "id": "b018",
+      "query": "follow up: online channel?",
+      "category": "POLICE_CLEARANCE",
+      "failure_class": "RETRIEVAL_BUG",
+      "root_cause": "follow-up online channel lost PCC service context; routed to passport",
+      "reusable_mechanism": "context_resolution + clarification channel inheritance",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport",
+        "transport"
+      ],
+      "problem_layer": "context_resolution",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-clearance-certificate",
+        "intent": "fee_inquiry"
+      },
+      "actual_at_baseline": {
+        "service": "epassport-new-application",
+        "intent": "general_info"
+      }
+    },
+    {
+      "id": "b022",
+      "query": "জিডি করতে কত দিন লাগে?",
+      "category": "GENERAL_DIARY",
+      "failure_class": "LANGUAGE_BUG",
+      "root_cause": "Bangla কত দিন লাগে not detected as processing_time on raw text",
+      "reusable_mechanism": "semantic_phrases time_inquiry on raw_message",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport"
+      ],
+      "problem_layer": "language_normalization",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-general-diary",
+        "intent": "processing_time"
+      },
+      "actual_at_baseline": {
+        "service": "police-general-diary",
+        "intent": "procedure_inquiry"
+      }
+    },
+    {
+      "id": "b023",
+      "query": "GD korar jonno NID lagbe?",
+      "category": "GENERAL_DIARY",
+      "failure_class": "RETRIEVAL_BUG",
+      "root_cause": "GD document query had no service candidate match",
+      "reusable_mechanism": "phrase_hints + capability profiles for GD online",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport",
+        "transport"
+      ],
+      "problem_layer": "capability_matching",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-general-diary-online",
+        "intent": "document_list"
+      },
+      "actual_at_baseline": {
+        "service": null,
+        "intent": "procedure_inquiry"
+      }
+    },
+    {
+      "id": "b025",
+      "query": "online gd lost mobile",
+      "category": "GENERAL_DIARY",
+      "failure_class": "OTHER",
+      "root_cause": "lost mobile GD filed as document_list instead of procedure_inquiry",
+      "reusable_mechanism": "GD online lost-item procedure disambiguation",
+      "affected_domains": [
+        "police",
+        "immigration"
+      ],
+      "problem_layer": "intent_classification",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-general-diary-online",
+        "intent": "procedure_inquiry"
+      },
+      "actual_at_baseline": {
+        "service": "police-general-diary-online",
+        "intent": "document_list"
+      }
+    },
+    {
+      "id": "b027",
+      "query": "genaral diary online url",
+      "category": "GENERAL_DIARY",
+      "failure_class": "LANGUAGE_BUG",
+      "root_cause": "explicit url request downgraded to procedure_inquiry via public_intent",
+      "reusable_mechanism": "public_intent preserves application_url",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport"
+      ],
+      "problem_layer": "response_planning",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-general-diary-online",
+        "intent": "application_url"
+      },
+      "actual_at_baseline": {
+        "service": "police-general-diary-online",
+        "intent": "procedure_inquiry"
+      }
+    },
+    {
+      "id": "b029",
+      "query": "Urgent passport verification SLA?",
+      "category": "POLICE_VERIFICATION",
+      "failure_class": "RETRIEVAL_BUG",
+      "root_cause": "urgent passport verification SLA routed to epassport-urgent-super-express",
+      "reusable_mechanism": "service_bleed guard: domain + verification context before speed variant",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport",
+        "transport"
+      ],
+      "problem_layer": "service_candidate_scoring",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-passport-verification",
+        "intent": "processing_time"
+      },
+      "actual_at_baseline": {
+        "service": "epassport-urgent-super-express",
+        "intent": "processing_time"
+      }
+    },
+    {
+      "id": "b033",
+      "query": "Is passport verification same as online PCC?",
+      "category": "POLICE_VERIFICATION",
+      "failure_class": "RETRIEVAL_BUG",
+      "root_cause": "comparison query routed to PCC instead of passport verification",
+      "reusable_mechanism": "comparison intent + PV vs PCC bleed guard",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport",
+        "transport"
+      ],
+      "problem_layer": "service_candidate_scoring",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-passport-verification",
+        "intent": "general_info"
+      },
+      "actual_at_baseline": {
+        "service": "police-clearance-certificate",
+        "intent": "procedure_inquiry"
+      }
+    },
+    {
+      "id": "b038",
+      "query": "Department of Immigration and Passports responsible for what?",
+      "category": "IMMIGRATION",
+      "failure_class": "OTHER",
+      "root_cause": "responsible-for overview classified as document_list",
+      "reusable_mechanism": "semantic_phrases.overview → general_info",
+      "affected_domains": [
+        "police",
+        "immigration"
+      ],
+      "problem_layer": "intent_classification",
+      "evaluator_error": false,
+      "expected": {
+        "service": "migration-visa-application-dip",
+        "intent": "general_info"
+      },
+      "actual_at_baseline": {
+        "service": "migration-visa-application-dip",
+        "intent": "document_list"
+      }
+    },
+    {
+      "id": "b046",
+      "query": "business visa Bangladesh apply",
+      "category": "VISA",
+      "failure_class": "RETRIEVAL_BUG",
+      "root_cause": "business visa query missed immigration service match",
+      "reusable_mechanism": "visa_types phrase hints + immigration domain filter",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport",
+        "transport"
+      ],
+      "problem_layer": "capability_matching",
+      "evaluator_error": false,
+      "expected": {
+        "service": "migration-visa-application-dip",
+        "intent": "procedure_inquiry"
+      },
+      "actual_at_baseline": {
+        "service": null,
+        "intent": "procedure_inquiry"
+      }
+    },
+    {
+      "id": "b050",
+      "query": "Expatriate cell police services",
+      "category": "EXPATRIATE",
+      "failure_class": "OTHER",
+      "root_cause": "expatriate cell overview classified as document_list",
+      "reusable_mechanism": "semantic_phrases.overview → general_info",
+      "affected_domains": [
+        "police",
+        "immigration"
+      ],
+      "problem_layer": "intent_classification",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-expatriate-services",
+        "intent": "general_info"
+      },
+      "actual_at_baseline": {
+        "service": "police-expatriate-services",
+        "intent": "document_list"
+      }
+    },
+    {
+      "id": "b055",
+      "query": "Expatriate cell responsible AIG",
+      "category": "EXPATRIATE",
+      "failure_class": "OTHER",
+      "root_cause": "AIG responsibility query classified as document_list",
+      "reusable_mechanism": "semantic_phrases.overview → general_info",
+      "affected_domains": [
+        "police",
+        "immigration"
+      ],
+      "problem_layer": "intent_classification",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-expatriate-services",
+        "intent": "general_info"
+      },
+      "actual_at_baseline": {
+        "service": "police-expatriate-services",
+        "intent": "document_list"
+      }
+    },
+    {
+      "id": "b059",
+      "query": "fire arms license documents list",
+      "category": "FIREARMS",
+      "failure_class": "RETRIEVAL_BUG",
+      "root_cause": "firearms license documents routed to driving-licence-renewal via generic license token",
+      "reusable_mechanism": "firearms domain + licence family disambiguation",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport",
+        "transport"
+      ],
+      "problem_layer": "service_candidate_scoring",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-firearms-license",
+        "intent": "document_list"
+      },
+      "actual_at_baseline": {
+        "service": "driving-licence-renewal",
+        "intent": "document_list"
+      }
+    },
+    {
+      "id": "b062",
+      "query": "GD all complaint types online nationwide official",
+      "category": "ANTI_HALLUCINATION",
+      "failure_class": "RETRIEVAL_BUG",
+      "root_cause": "online nationwide GD query routed to offline GD service",
+      "reusable_mechanism": "online channel variant scoring for GD family",
+      "affected_domains": [
+        "police",
+        "immigration",
+        "passport",
+        "transport"
+      ],
+      "problem_layer": "service_candidate_scoring",
+      "evaluator_error": false,
+      "expected": {
+        "service": "police-general-diary-online",
+        "intent": "procedure_inquiry"
+      },
+      "actual_at_baseline": {
+        "service": "police-general-diary",
+        "intent": "procedure_inquiry"
+      }
+    }
+  ],
+  "summary_by_layer": {
+    "intent_classification": 5,
+    "language_normalization": 2,
+    "context_resolution": 1,
+    "capability_matching": 2,
+    "response_planning": 1,
+    "service_candidate_scoring": 4
+  }
+}
