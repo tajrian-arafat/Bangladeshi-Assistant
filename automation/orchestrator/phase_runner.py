@@ -387,7 +387,7 @@ class PhaseRunner:
 
         status = result.get("status")
         if status == "PARTIAL":
-            return self.state_machine.transition(state, WorkflowStatus.RUNNING)
+            return self.state_machine.transition(state, WorkflowStatus.RETRY)
 
         if status in {"FAILED", "BLOCKED"}:
             decision = self.retry.evaluate(result.get("summary", "phase failed"), state.retry_count)
@@ -438,6 +438,7 @@ class PhaseRunner:
             self.batch_manager.mark_batch_status(next_batch["batch_id"], "IN_PROGRESS")
             self.state_machine.clear_current_run()
             self.state_machine.save(state)
+            self.state_machine.transition(state, WorkflowStatus.COMPLETE)
             return self.state_machine.transition(state, WorkflowStatus.READY)
         state.current_batch = None
         state.current_phase = None
@@ -471,9 +472,10 @@ class PhaseRunner:
                 "pending": state.pending_escalations,
             }
 
-        # Allow autonomous resume after E2E/REGRESSION fixes (non-hallucination BLOCKED).
-        if state.workflow_status == WorkflowStatus.BLOCKED.value:
-            if state.current_phase in {WorkflowPhase.E2E.value, WorkflowPhase.REGRESSION.value}:
+        # Allow autonomous resume after E2E/REGRESSION fixes (non-hallucination BLOCKED/SUPERVISOR_REVIEW).
+        recoverable_phases = {WorkflowPhase.E2E.value, WorkflowPhase.REGRESSION.value}
+        if state.workflow_status in {WorkflowStatus.BLOCKED.value, WorkflowStatus.SUPERVISOR_REVIEW.value}:
+            if state.current_phase in recoverable_phases:
                 state.retry_count = 0
                 self.state_machine.transition(state, WorkflowStatus.READY)
                 state = self.state_machine.load()
@@ -543,6 +545,7 @@ class PhaseRunner:
 
     def run_autonomous_loop(self, state: ProjectState, *, max_steps: int = 20) -> dict[str, Any]:
         """Run until blocked, complete, or human approval required."""
+        recoverable_phases = {WorkflowPhase.E2E.value, WorkflowPhase.REGRESSION.value}
         steps: list[dict[str, Any]] = []
         for _ in range(max_steps):
             state = self.state_machine.load()
@@ -559,10 +562,12 @@ class PhaseRunner:
                 "HUMAN_APPROVAL_REQUIRED",
                 "BLOCKED",
                 "COMPLETE",
-                "SUPERVISOR_REVIEW",
             }
             if report.get("status") in terminal:
                 break
+            if report.get("status") == WorkflowStatus.SUPERVISOR_REVIEW.value:
+                if (state.current_phase or "") not in recoverable_phases:
+                    break
             if report.get("result_status") == "PARTIAL":
                 break
             state = self.state_machine.load()

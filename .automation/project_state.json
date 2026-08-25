@@ -2,11 +2,11 @@
   "project_name": "Bangladeshi Assistant",
   "mode": "LOCAL_DEV_ONLY",
   "deployment_allowed": false,
-  "current_batch": null,
-  "current_phase": null,
-  "current_run_id": null,
-  "workflow_status": "COMPLETE",
-  "last_completed_batch": "BATCH_03B",
+  "current_batch": "BATCH_04",
+  "current_phase": "RESEARCH",
+  "current_run_id": "run-1cfd083e93d9",
+  "workflow_status": "RETRY",
+  "last_completed_batch": "BATCH_03C",
   "catalogue": {
     "canonical_services": 464,
     "confirmed_services": 454,
@@ -22,8 +22,8 @@
     "citation_failures": 0
   },
   "pending_escalations": [],
-  "pilot_mode": true,
-  "continuous_mode": false,
+  "pilot_mode": false,
+  "continuous_mode": true,
   "simulation_mode": false,
   "retry_count": 0,
   "idempotency_keys": [
@@ -37,8 +37,13 @@
     "BATCH_03B:GAP_CLOSURE:complete",
     "BATCH_03B:PUBLICATION:complete",
     "BATCH_03B:E2E:complete",
-    "BATCH_03B:REGRESSION:complete"
+    "BATCH_03B:REGRESSION:complete",
+    "BATCH_03C:RESEARCH:complete",
+    "BATCH_03C:VERIFICATION:complete",
+    "BATCH_03C:PUBLICATION:complete",
+    "BATCH_03C:E2E:complete",
+    "BATCH_03C:REGRESSION:complete"
   ],
-  "updated_at": "2026-08-25T01:49:09.269785+00:00",
+  "updated_at": "2026-08-25T02:19:57.233693+00:00",
   "metadata": {}
 }

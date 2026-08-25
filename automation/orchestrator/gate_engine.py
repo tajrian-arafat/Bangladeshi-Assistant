@@ -17,9 +17,14 @@ DEPLOYMENT_PATTERNS = [
     re.compile(r"\bterraform\s+apply\b", re.I),
     re.compile(r"\bdocker\s+push\b", re.I),
     re.compile(r"\bgit\s+push\s+.*main\b", re.I),
+    re.compile(r"\bgit\s+push\s+.*--force\b", re.I),
+    re.compile(r"\bgit\s+push\s+-f\b", re.I),
     re.compile(r"\bgh\s+pr\s+merge\b", re.I),
     re.compile(r"\bproduction\b", re.I),
     re.compile(r"\bdeploy\s+to\s+prod", re.I),
+    re.compile(r"\bprisma\s+migrate\s+reset\b", re.I),
+    re.compile(r"\bdrop\s+database\b", re.I),
+    re.compile(r"\brm\s+-rf\s+.*\.git\b", re.I),
 ]
 
 PUBLICATION_SCRIPT = re.compile(r"publish_verified_knowledge\.py.*--publish", re.I)

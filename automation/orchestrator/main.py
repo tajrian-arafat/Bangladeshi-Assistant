@@ -14,6 +14,7 @@ from automation.orchestrator.batch_manager import BatchManager
 from automation.orchestrator.escalation_manager import EscalationManager
 from automation.orchestrator.gate_engine import GateEngine
 from automation.orchestrator.logging import setup_logging, write_report
+from automation.orchestrator.overnight_runner import OvernightRunner
 from automation.orchestrator.phase_runner import PhaseRunner
 from automation.orchestrator.state_machine import StateMachine
 from automation.schemas.state import ProjectState, WorkflowStatus
@@ -236,6 +237,19 @@ def cmd_approve(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_overnight(args: argparse.Namespace) -> int:
+    """Unattended overnight knowledge-construction loop."""
+    sm = StateMachine(REPO_ROOT)
+    if not sm.state_path.exists():
+        cmd_init(args)
+    runner = OvernightRunner(REPO_ROOT)
+    summary = runner.run(max_steps=args.max_ticks, steps_per_tick=args.steps_per_tick)
+    print(json.dumps(summary, indent=2))
+    if summary.get("status") == "BLOCKED_GLOBAL":
+        return 1
+    return 0
+
+
 def cmd_daemon(args: argparse.Namespace) -> int:
     interval = args.interval
     logger = setup_logging(REPO_ROOT, "daemon")
@@ -290,6 +304,10 @@ def main(argv: list[str] | None = None) -> int:
     daemon = sub.add_parser("daemon", help="Continuous mode loop")
     daemon.add_argument("--interval", type=int, default=60, help="Sleep seconds between ticks")
 
+    overnight = sub.add_parser("overnight", help="Unattended overnight knowledge-construction loop")
+    overnight.add_argument("--max-ticks", type=int, default=500, help="Maximum outer loop ticks")
+    overnight.add_argument("--steps-per-tick", type=int, default=25, help="Autonomous steps per tick")
+
     args = parser.parse_args(argv)
     commands = {
         "init": cmd_init,
@@ -302,6 +320,7 @@ def main(argv: list[str] | None = None) -> int:
         "stop": cmd_stop,
         "approve": cmd_approve,
         "daemon": cmd_daemon,
+        "overnight": cmd_overnight,
     }
     return commands[args.command](args)
 

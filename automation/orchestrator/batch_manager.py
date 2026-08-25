@@ -96,8 +96,8 @@ BATCH_GROUP_RULES: list[dict[str, Any]] = [
     },
     {
         "batch_id": "BATCH_03C",
-        "slug": "batch-03c-brta-other",
-        "name": "BRTA Tax Token / Route Permit / Other BRTA",
+        "slug": "batch-03c-brta-fitness-tax-permit",
+        "name": "BRTA Fitness / Tax Token / Route Permit",
         "authority_ids": ["brta"],
         "exclude_service_ids": BATCH_03A_SERVICES,
     },
@@ -283,6 +283,14 @@ class BatchManager:
         for batch in queue.get("batches", []):
             if batch.get("status") == "READY":
                 return batch
+        return None
+
+    def next_pending_batch(self) -> dict[str, Any] | None:
+        queue = self.load_queue()
+        for batch in queue.get("batches", []):
+            if batch.get("status") in {"READY", "PLANNED", "IN_PROGRESS"}:
+                if batch.get("status") != "COMPLETE":
+                    return batch
         return None
 
     def mark_batch_status(self, batch_id: str, status: str) -> None:

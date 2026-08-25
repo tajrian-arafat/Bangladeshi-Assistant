@@ -27,12 +27,13 @@ class EscalationManager:
         recommended_action: str = "",
         publication_blocked: bool = True,
         simulation: bool = False,
+        status: str = "HUMAN_APPROVAL_REQUIRED",
     ) -> DecisionRecord:
         prefix = "sim" if simulation else "dec"
         decision_id = f"{prefix}-{uuid.uuid4().hex[:12]}"
         record = DecisionRecord(
             decision_id=decision_id,
-            status="HUMAN_APPROVAL_REQUIRED",
+            status=status,
             batch=batch,
             issue=issue,
             severity=severity,
@@ -47,6 +48,26 @@ class EscalationManager:
             payload["simulation"] = True
         path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
         return record
+
+    def defer_for_human_review(
+        self,
+        *,
+        batch: str,
+        issue: str,
+        severity: str = "MEDIUM",
+        evidence: list[dict] | None = None,
+        recommended_action: str = "Review when available — overnight run continued",
+    ) -> DecisionRecord:
+        """Record deferred human review without blocking the autonomous catalogue run."""
+        return self.create_decision(
+            batch=batch,
+            issue=issue,
+            severity=severity,
+            evidence=evidence,
+            recommended_action=recommended_action,
+            publication_blocked=True,
+            status="DEFERRED_HUMAN_REVIEW",
+        )
 
     def load_decision(self, decision_id: str) -> DecisionRecord:
         path = self.decisions_dir / f"{decision_id}.json"

@@ -1,0 +1,52 @@
+{
+  "ticks": [
+    {
+      "steps": 1,
+      "final_status": "RETRY",
+      "last": {
+        "status": "RETRY",
+        "batch": "BATCH_04",
+        "phase": "RESEARCH",
+        "run_id": "run-1cfd083e93d9",
+        "result_status": "PARTIAL",
+        "summary": "Research incomplete: 6 missing artifacts",
+        "next_phase": "RESEARCH"
+      },
+      "history": [
+        {
+          "status": "RETRY",
+          "batch": "BATCH_04",
+          "phase": "RESEARCH",
+          "run_id": "run-1cfd083e93d9",
+          "result_status": "PARTIAL",
+          "summary": "Research incomplete: 6 missing artifacts",
+          "next_phase": "RESEARCH"
+        }
+      ]
+    }
+  ],
+  "final": {
+    "status": "IN_PROGRESS",
+    "updated_at": "2026-08-25T02:19:57.234831+00:00",
+    "deployment_allowed": false,
+    "catalogue_progress": {
+      "total_confirmed_services": 454,
+      "researched_services": 95,
+      "verified_services": 84,
+      "published_services": 84,
+      "partially_covered_services": 11,
+      "deferred_services": 0,
+      "blocked_services": 0,
+      "completed_services": 84,
+      "services_remaining": 370,
+      "completed_batches": 6,
+      "total_batches": 17
+    },
+    "last_completed_batch": "BATCH_03C",
+    "current_batch": "BATCH_04",
+    "workflow_status": "RETRY",
+    "overnight_ticks": 1,
+    "total_autonomous_steps": 1
+  },
+  "generated_at": "2026-08-25T02:19:57.234909+00:00"
+}

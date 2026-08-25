@@ -1,0 +1,79 @@
+{
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "normalized_at": "2026-08-25",
+  "claim_count": 128,
+  "original_claims": 121,
+  "gap_closure_claims": 7,
+  "fee_tiers_staged": 13,
+  "supersession_pairs": [
+    {
+      "old": "brta-fitness-certificate::c-validity-by-class-unverified",
+      "current": "gap-closure::c-fitness-validity-matrix-unverified"
+    },
+    {
+      "old": "brta-fitness-certificate::c-commercial-vs-private-rules-differ",
+      "current": "gap-closure::c-fitness-validity-matrix-unverified"
+    }
+  ],
+  "pipeline_status_counts": {
+    "VERIFIED": 37,
+    "PARTIALLY_VERIFIED": 83,
+    "UNVERIFIED": 8
+  },
+  "cross_batch_dependencies": [
+    {
+      "dependency_id": "dep-03b-fitness-validity-03c",
+      "from_batch": "BATCH_03B",
+      "to_batch": "BATCH_03C",
+      "from_service_ids": [
+        "brta-new-vehicle-registration",
+        "brta-ownership-transfer"
+      ],
+      "to_service_id": "brta-fitness-certificate",
+      "claim_id": "gap-closure::c-fitness-validity-deferred-batch03c",
+      "requirements": [
+        "Fitness validity period by vehicle class",
+        "Commercial vs private inspection rules",
+        "Renewal interval and grace rules"
+      ],
+      "status": "DEFERRED",
+      "resolution_status": "UNRESOLVED",
+      "source_batch": "batch-03b-brta-vehicle-gap-closure",
+      "note": "Fitness validity-by-class remains UNVERIFIED; authoritative matrix not captured."
+    },
+    {
+      "dependency_id": "dep-03b-fitness-validity-03c",
+      "from_batch": "BATCH_03B",
+      "to_batch": "BATCH_03C",
+      "from_service_ids": [
+        "brta-new-vehicle-registration",
+        "brta-ownership-transfer"
+      ],
+      "to_service_id": "brta-fitness-certificate",
+      "claim_id": "gap-closure::c-fitness-validity-unresolved",
+      "requirements": [
+        "Fitness validity period by vehicle class",
+        "Commercial vs private inspection rules",
+        "Renewal interval and grace rules"
+      ],
+      "status": "PARTIALLY_RESOLVED",
+      "source_batch": "batch-03c-brta-fitness-tax-permit-gap-closure",
+      "verification_status": "UNVERIFIED",
+      "resolution_status": "UNRESOLVED"
+    }
+  ],
+  "cross_batch_dependency_count": 2,
+  "upstream_batches": [
+    "batch-03a-brta-driving-licence",
+    "batch-03b-brta-vehicle"
+  ],
+  "publication_rules": [
+    "Publish only VERIFIED + OFFICIAL + complete evidence",
+    "Fee claims remain CALCULATOR_DERIVED — do not publish invented amounts",
+    "Fitness validity-by-class stays UNVERIFIED until authoritative matrix captured",
+    "BSP off-hours 404 classified TEMPORARILY_UNAVAILABLE not invalid URL",
+    "Resolve BATCH_03B dep-03b-fitness-validity-03c only with verified validity matrix",
+    "brta-route-permit vs transport-route-permit — do not flatten workflows",
+    "brta-driving-school-registration vs transport-driving-school-licence — do not flatten"
+  ]
+}

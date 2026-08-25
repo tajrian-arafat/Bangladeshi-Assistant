@@ -724,12 +724,22 @@ class Orchestrator:
                 .limit(5)
             )
             for claim in result.scalars().all():
-                for ev in claim.evidence_links[:1]:
+                ev_links = sorted(
+                    claim.evidence_links,
+                    key=lambda ev: (
+                        0
+                        if ev.locator and str(ev.locator).startswith("http")
+                        else 1
+                    ),
+                )
+                for ev in ev_links[:1]:
+                    if not ev.locator or not str(ev.locator).startswith("http"):
+                        continue
                     citations.append(
                         CitationResponse(
                             evidence_id=str(ev.id),
                             source_title=claim.subject[:120],
-                            source_url=ev.locator if ev.locator and str(ev.locator).startswith("http") else None,
+                            source_url=ev.locator,
                             tier=1,
                             last_verified_at=(
                                 claim.verified_at.isoformat() if claim.verified_at else None

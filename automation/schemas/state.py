@@ -53,7 +53,7 @@ ALLOWED_TRANSITIONS: dict[WorkflowStatus, frozenset[WorkflowStatus]] = {
     WorkflowStatus.RETRY: frozenset({WorkflowStatus.RUNNING}),
     WorkflowStatus.GAP_CLOSURE: frozenset({WorkflowStatus.RUNNING}),
     WorkflowStatus.SUPERVISOR_REVIEW: frozenset(
-        {WorkflowStatus.HUMAN_APPROVAL_REQUIRED, WorkflowStatus.RUNNING, WorkflowStatus.BLOCKED}
+        {WorkflowStatus.HUMAN_APPROVAL_REQUIRED, WorkflowStatus.RUNNING, WorkflowStatus.BLOCKED, WorkflowStatus.READY}
     ),
     WorkflowStatus.HUMAN_APPROVAL_REQUIRED: frozenset(
         {WorkflowStatus.RUNNING, WorkflowStatus.BLOCKED, WorkflowStatus.STOPPED}

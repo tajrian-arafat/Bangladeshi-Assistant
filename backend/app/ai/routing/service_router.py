@@ -54,6 +54,8 @@ def _query_is_gd_context(text: str) -> bool:
 
 
 def _query_is_driving_licence_context(text: str) -> bool:
+    if _query_is_brta_03c_context(text):
+        return False
     markers = [
         "driving licence",
         "driving license",
@@ -80,6 +82,127 @@ def _query_is_dctc_result_context(text: str) -> bool:
     return "dctc" in text or "dctb" in text or (
         "driving test" in text and "result" in text
     ) or ("field test" in text and "result" in text)
+
+
+def _query_is_fitness_context(text: str) -> bool:
+    return any(
+        m in text
+        for m in (
+            "fitness",
+            "e-fitness",
+            "efitness",
+            "ফিটনেস",
+            "fit certificate",
+            "vehicle inspection",
+            "inspection frequency",
+            "fitness reinspection",
+        )
+    )
+
+
+def _query_is_tax_token_context(text: str) -> bool:
+    if "tax token registration" in text or "tax token included" in text:
+        return False
+    return any(
+        m in text
+        for m in (
+            "tax token",
+            "tax-token",
+            "ট্যাক্স টোকেন",
+            "e-tax token",
+            "etax token",
+        )
+    )
+
+
+def _query_is_mv_tax_context(text: str) -> bool:
+    return any(
+        m in text
+        for m in (
+            "mv tax",
+            "motor vehicle tax",
+            "mvtax",
+            "mvtax_brta",
+            "brta.cnsbd.com",
+        )
+    )
+
+
+def _query_is_route_permit_context(text: str) -> bool:
+    return any(
+        m in text
+        for m in (
+            "route permit",
+            "route-permit",
+            "রুট পারমিট",
+            "inter-district route",
+            "transport route permit",
+        )
+    )
+
+
+def _query_is_brta_fee_calculator_context(text: str) -> bool:
+    if "nid" in text:
+        return False
+    return any(
+        m in text
+        for m in (
+            "fee calculator",
+            "feecalculator",
+            "feecalculator",
+            "bsp fee calculator",
+        )
+    ) or "feecalculator" in text.replace("-", "")
+
+
+def _query_is_vehicle_modification_context(text: str) -> bool:
+    return any(
+        m in text
+        for m in (
+            "engine change",
+            "color change",
+            "colour change",
+            "tire size",
+            "tyre size",
+            "tyre width",
+            "rong change",
+            "gari rong",
+            "ইঞ্জিন",
+            "রং পরিবর্তন",
+            "টায়ার",
+        )
+    )
+
+
+def _query_is_driving_school_context(text: str) -> bool:
+    return any(
+        m in text
+        for m in (
+            "driving school",
+            "training school",
+            "motor driving training",
+            "training centre",
+        )
+    )
+
+
+def _query_is_brta_03c_context(text: str) -> bool:
+    return (
+        _query_is_fitness_context(text)
+        or _query_is_tax_token_context(text)
+        or _query_is_mv_tax_context(text)
+        or _query_is_route_permit_context(text)
+        or _query_is_brta_fee_calculator_context(text)
+        or _query_is_vehicle_modification_context(text)
+        or _query_is_driving_school_context(text)
+        or "advance income tax" in text
+        or "ait payment" in text
+        or "ait motor" in text
+        or "payment verification bsp" in text
+        or "bsp transaction" in text
+        or "bsp user registration" in text
+        or "owner account" in text
+    )
 
 
 def _query_mentions_police_verification(text: str) -> bool:
@@ -848,6 +971,150 @@ class ServiceRouter:
                 score -= 20
                 reasons.append("penalty:new_voter_for_nid_application_docs")
 
+        # Batch 3C BRTA fitness / tax / route permit / modification routing
+        brta_03c_slugs = {
+            "brta-fitness-certificate",
+            "brta-tax-token",
+            "brta-route-permit",
+            "brta-fee-calculator",
+            "brta-mv-tax-payment",
+            "brta-advance-income-tax",
+            "brta-engine-change",
+            "brta-color-change",
+            "brta-tire-size-change",
+            "brta-driving-school-registration",
+            "transport-route-permit",
+            "transport-driving-school-licence",
+            "brta-e-document-verification",
+            "brta-bsp-user-registration",
+            "brta-payment-verification",
+        }
+        if _query_is_fitness_context(text):
+            if service.slug == "brta-fitness-certificate":
+                score += 55
+                reasons.append("boost:fitness_certificate")
+            if service.slug in {"driving-licence-renewal", "passport-renewal", "epassport-application-status"}:
+                score -= 70
+                reasons.append("penalty:renewal_status_for_fitness")
+            if service.slug == "brta-new-vehicle-registration":
+                score -= 40
+                reasons.append("penalty:registration_for_fitness")
+
+        if _query_is_tax_token_context(text):
+            if service.slug == "brta-tax-token":
+                score += 55
+                reasons.append("boost:tax_token")
+            if "verify" in text and service.slug == "brta-e-document-verification":
+                score += 60
+                reasons.append("boost:tax_token_verify_edocument")
+            if "verify" in text and service.slug == "brta-tax-token":
+                score -= 40
+                reasons.append("penalty:tax_token_for_verify_query")
+            if service.slug == "brta-new-vehicle-registration":
+                score -= 45
+                reasons.append("penalty:registration_for_tax_token")
+            if service.slug in {"driving-licence-renewal", "passport-renewal"}:
+                score -= 60
+                reasons.append("penalty:renewal_for_tax_token")
+
+        if _query_is_mv_tax_context(text):
+            if service.slug == "brta-mv-tax-payment":
+                score += 55
+                reasons.append("boost:mv_tax")
+            if service.slug == "brta-tax-token" and "mv tax" in text:
+                score -= 25
+                reasons.append("penalty:tax_token_for_mv_tax")
+
+        if "advance income tax" in text or "ait payment" in text or "ait motor" in text:
+            if service.slug == "brta-advance-income-tax":
+                score += 55
+                reasons.append("boost:advance_income_tax")
+            if service.slug == "brta-new-vehicle-registration":
+                score -= 50
+                reasons.append("penalty:registration_for_ait")
+
+        if _query_is_route_permit_context(text):
+            if service.slug == "brta-route-permit":
+                score += 50
+                reasons.append("boost:route_permit_portal")
+            if service.slug == "transport-route-permit" and any(
+                w in text for w in ("bsp", "operator", "transport route")
+            ):
+                score += 45
+                reasons.append("boost:transport_route_permit_bsp")
+            if service.slug in {"driving-licence-renewal", "passport-renewal", "brta-new-vehicle-registration"}:
+                score -= 50
+                reasons.append("penalty:wrong_service_for_route_permit")
+
+        if _query_is_brta_fee_calculator_context(text):
+            if service.slug == "brta-fee-calculator":
+                score += 55
+                reasons.append("boost:brta_fee_calculator")
+            if service.slug == "brta-new-vehicle-registration":
+                score -= 55
+                reasons.append("penalty:registration_for_fee_calculator")
+            if service.slug == "nid-fee-calculator":
+                score -= 40
+                reasons.append("penalty:nid_calculator_for_brta_fee")
+
+        if _query_is_vehicle_modification_context(text):
+            mod_slug = None
+            if "engine" in text or "ইঞ্জিন" in text:
+                mod_slug = "brta-engine-change"
+            elif "color" in text or "colour" in text or "rong" in text or "রং" in text:
+                mod_slug = "brta-color-change"
+            elif "tire" in text or "tyre" in text or "টায়ার" in text:
+                mod_slug = "brta-tire-size-change"
+            if mod_slug and service.slug == mod_slug:
+                score += 55
+                reasons.append(f"boost:vehicle_modification:{mod_slug}")
+            if mod_slug and service.slug == "brta-vehicle-info-correction":
+                score -= 30
+                reasons.append("penalty:rc_correction_for_modification")
+
+        if _query_is_driving_school_context(text):
+            if "licence" in text or "license" in text:
+                if service.slug == "transport-driving-school-licence":
+                    score += 50
+                    reasons.append("boost:driving_school_licence")
+                if service.slug == "brta-driving-school-registration":
+                    score += 20
+                    reasons.append("boost:driving_school_registration_secondary")
+            else:
+                if service.slug == "brta-driving-school-registration":
+                    score += 50
+                    reasons.append("boost:driving_school_registration")
+            if service.slug == "brta-ownership-transfer":
+                score -= 50
+                reasons.append("penalty:ownership_for_driving_school")
+
+        if "payment verification" in text and "bsp" in text:
+            if service.slug == "brta-payment-verification":
+                score += 50
+                reasons.append("boost:bsp_payment_verification")
+
+        if "bsp user registration" in text or "owner account" in text:
+            if service.slug == "brta-bsp-user-registration":
+                score += 50
+                reasons.append("boost:bsp_user_registration")
+
+        if "e-tax token verify" in text or "e-tax token verification" in text or "etax token verify" in text:
+            if service.slug == "brta-e-document-verification":
+                score += 50
+                reasons.append("boost:e_document_verification")
+
+        if _query_is_brta_03c_context(text) and service.slug in brta_03c_slugs:
+            score += 12
+            reasons.append("boost:brta_03c_family")
+
+        if _query_is_driving_licence_context(text):
+            if service.slug == "brta-e-document-verification":
+                score -= 75
+                reasons.append("penalty:edocument_for_driving_licence")
+            if service.slug in brta_03c_slugs and not _query_is_brta_03c_context(text):
+                score -= 40
+                reasons.append("penalty:brta_03c_without_03c_context")
+
         # Generic licence renewal without passport → driving, not passport reissue
         if re.search(r"\b(licence|license)\s+renew(al)?\b", text) and "passport" not in text:
             firearms_ctx = (
@@ -856,7 +1123,7 @@ class ServiceRouter:
                 or any(w in text for w in ("firearms", "fire arms", "gun license", "arms license"))
             )
             document_listing = "document" in text and not _query_is_driving_licence_context(text)
-            if not firearms_ctx and not document_listing:
+            if not firearms_ctx and not document_listing and not _query_is_brta_03c_context(text):
                 if service.slug == "driving-licence-renewal":
                     score += 38
                     reasons.append("boost:generic_licence_renewal_driving")

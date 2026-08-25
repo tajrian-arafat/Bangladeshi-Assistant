@@ -448,6 +448,8 @@ class PhaseExecutor:
             ("evaluate_batch02a_e2e.py", "passport_pass_pct", "data/evaluation/batch-02a-passport/summary.json", "pass_pct"),
             ("evaluate_batch02b_e2e.py", "batch_02b_pass_pct", "data/evaluation/batch-02b-police-immigration/summary.json", "pass_pct"),
             ("evaluate_batch03a_brta_driving_licence_e2e.py", "batch_03a_pass_pct", "data/evaluation/batch-03a-brta-driving-licence/summary.json", "pass_pct"),
+            ("evaluate_batch03b_brta_vehicle_e2e.py", "batch_03b_pass_pct", "data/evaluation/batch-03b-brta-vehicle/summary.json", "pass_pct"),
+            ("evaluate_batch03c_brta_fitness_tax_permit_e2e.py", "batch_03c_pass_pct", "data/evaluation/batch-03c-brta-fitness-tax-permit/summary.json", "pass_pct"),
             ("evaluate_service_routing.py", "routing_pass_pct", "data/evaluation/service-routing/summary.json", "pass_pct"),
             ("evaluate_cross_domain_hardening.py", None, "data/evaluation/cross-domain-hardening/summary.json", "pass_pct"),
         ]

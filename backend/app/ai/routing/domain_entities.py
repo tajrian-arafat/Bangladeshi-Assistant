@@ -79,11 +79,17 @@ def extract_domain_entities(message: str) -> DomainEntities:
         if "transport" in entities.domains:
             entities.domains.remove("transport")
     elif _group_hit(text, groups.get("driving_licence", {})):
-        if "transport" not in entities.domains:
+        if "transport" not in entities.domains and not _group_hit(text, groups.get("fitness_certificate", {})):
             entities.domains.append("transport")
 
     if _group_hit(text, groups.get("learner_licence", {})):
         entities.licence_type = "learner"
+    elif _group_hit(text, groups.get("fitness_certificate", {})):
+        pass  # fitness renewal must not trigger driving-licence renewal
+    elif _group_hit(text, groups.get("tax_token", {})) or _group_hit(text, groups.get("mv_tax", {})):
+        pass  # vehicle tax services are not driving licence renewal
+    elif _group_hit(text, groups.get("route_permit", {})):
+        pass
     elif _group_hit(text, groups.get("renewal_licence", {})):
         if "firearms" not in entities.domains and not _group_hit(text, groups.get("firearms", {})):
             entities.licence_type = "renewal"
