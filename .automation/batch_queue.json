@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T01:04:53.628439+00:00",
+  "generated_at": "2026-08-25T01:15:13.639936+00:00",
   "catalogue_source": "data/service_catalogue/services.json",
   "total_batches": 17,
   "confirmed_services_in_catalogue": 454,
@@ -115,7 +115,7 @@
       "batch_id": "BATCH_03A",
       "slug": "batch-03a-brta-driving-licence",
       "name": "BRTA Driving Licence",
-      "status": "READY",
+      "status": "COMPLETE",
       "service_ids": [
         "brta-learner-driving-license",
         "brta-driving-license-renewal",
@@ -125,7 +125,13 @@
         "brta-dctc-exam-result"
       ],
       "service_count": 6,
-      "phases_completed": [],
+      "phases_completed": [
+        "RESEARCH",
+        "VERIFICATION",
+        "PUBLICATION",
+        "E2E",
+        "REGRESSION"
+      ],
       "authority_id": "brta",
       "category_id": "transport"
     },
@@ -133,7 +139,7 @@
       "batch_id": "BATCH_03B",
       "slug": "batch-03b-brta-vehicle",
       "name": "BRTA Vehicle Registration / Ownership / Fitness",
-      "status": "PLANNED",
+      "status": "IN_PROGRESS",
       "service_ids": [
         "brta-digital-registration-certificate",
         "brta-new-vehicle-registration",
@@ -143,7 +149,10 @@
         "brta-vehicle-info-correction"
       ],
       "service_count": 6,
-      "phases_completed": []
+      "phases_completed": [
+        "RESEARCH",
+        "VERIFICATION"
+      ]
     },
     {
       "batch_id": "BATCH_03C",
@@ -673,5 +682,6 @@
       "service_count": 111,
       "phases_completed": []
     }
-  ]
+  ],
+  "updated_at": "2026-08-25T01:24:18.036308+00:00"
 }

@@ -1,43 +1,34 @@
 {
-  "steps": 3,
-  "final_status": "AUTO_CONTINUE",
+  "steps": 2,
+  "final_status": "GAP_CLOSURE",
   "last": {
-    "status": "AUTO_CONTINUE",
-    "batch": "BATCH_03A",
-    "phase": "PUBLICATION",
-    "run_id": "run-test123",
+    "status": "GAP_CLOSURE",
+    "batch": "BATCH_03B",
+    "phase": "VERIFICATION",
+    "run_id": "run-7500f93b1207",
     "result_status": "SUCCESS",
-    "summary": "PUBLICATION ok",
-    "next_phase": "E2E"
+    "summary": "Verification complete: 4 verified, 5 gaps",
+    "next_phase": "GAP_CLOSURE"
   },
   "history": [
     {
       "status": "AUTO_CONTINUE",
-      "batch": "BATCH_03A",
+      "batch": "BATCH_03B",
       "phase": "RESEARCH",
-      "run_id": "run-test123",
+      "run_id": "run-7500f93b1207",
       "result_status": "SUCCESS",
-      "summary": "RESEARCH ok",
+      "summary": "Research complete for BATCH_03B: 53 claims",
       "next_phase": "VERIFICATION"
     },
     {
-      "status": "AUTO_CONTINUE",
-      "batch": "BATCH_03A",
+      "status": "GAP_CLOSURE",
+      "batch": "BATCH_03B",
       "phase": "VERIFICATION",
-      "run_id": "run-test123",
+      "run_id": "run-7500f93b1207",
       "result_status": "SUCCESS",
-      "summary": "VERIFICATION ok",
-      "next_phase": "PUBLICATION"
-    },
-    {
-      "status": "AUTO_CONTINUE",
-      "batch": "BATCH_03A",
-      "phase": "PUBLICATION",
-      "run_id": "run-test123",
-      "result_status": "SUCCESS",
-      "summary": "PUBLICATION ok",
-      "next_phase": "E2E"
+      "summary": "Verification complete: 4 verified, 5 gaps",
+      "next_phase": "GAP_CLOSURE"
     }
   ],
-  "generated_at": "2026-08-25T01:04:53.618118+00:00"
+  "generated_at": "2026-08-25T01:24:18.038302+00:00"
 }

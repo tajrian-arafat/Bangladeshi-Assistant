@@ -1,0 +1,1735 @@
+{
+  "schema": "bda.research.verification.claims/1.0",
+  "batch_id": "batch-03b-brta-vehicle",
+  "claims": [
+    {
+      "claim_id": "brta-new-vehicle-registration::c-portal-url",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "New motor vehicle registration applications are initiated via BSP at bsp.brta.gov.bd/vehicleRegistration (English UI ?lan=en).",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_BSP_VEHICLE_SUBPORTAL_SNAPSHOT",
+      "source_ids": [
+        "src-bsp-vehicle-registration",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-vehicle-registration",
+          "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-bsp-owner-registration-prerequisite",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Applicant must register a BSP owner or dealer account (NID-linked mobile) at bsp.brta.gov.bd/register before vehicle registration services.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register-owner",
+        "src-bsp-vehicle-registration"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register-owner",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_register.html",
+          "retrieved_at": "2026-08-24"
+        },
+        {
+          "source_id": "src-bsp-vehicle-registration",
+          "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-bundle-includes-fitness-tax-drc",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "New registration bundle includes vehicle inspection, fitness certificate, tax token, and DRC biometric steps per catalogue discovery notes.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-drc"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-vehicle-type-fee-variation",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Registration fees depend on vehicle type and class; amounts are computed via BSP fee calculator — not a single flat registration fee.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_VEHICLE_FEE_MATRIX",
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-bsp-vehicle-registration"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
+          "retrieved_at": "2026-08-24"
+        },
+        {
+          "source_id": "src-bsp-vehicle-registration",
+          "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-imported-vehicle-documents",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Imported or customs-cleared vehicles require customs/VAT/release-related documents in addition to standard ownership proof before BRTA registration.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-home",
+          "source_url": "http://brta.portal.gov.bd/",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-nid-identity-required",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Owner NID (or authorized representative identity proof) required for BSP registration identity verification.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-register-owner",
+        "src-bsp-vehicle-registration"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-register-owner",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_register.html",
+          "retrieved_at": "2026-08-24"
+        },
+        {
+          "source_id": "src-bsp-vehicle-registration",
+          "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-dealer-eligible",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Vehicle dealers listed as target users in catalogue may initiate registration on behalf of buyers via BSP dealer account.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-register-owner"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-register-owner",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_register.html",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-circle-office-inspection",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Physical vehicle inspection and circle office processing required as part of new registration workflow (not fully online-only).",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-home",
+          "source_url": "http://brta.portal.gov.bd/",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-fitness-prerequisite-crossref",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Valid fitness certificate is part of new registration bundle; standalone fitness renewal is brta-fitness-certificate (BATCH_03C).",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_FITNESS_VALIDITY_BY_CLASS",
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-fitness-crossref"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness-crossref",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_fitness_crossref.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-new-vehicle-registration::c-practical-bsp-hours",
+      "service_id": "brta-new-vehicle-registration",
+      "claim_text": "Apply during BSP operating hours (08:00–22:00 BST); vehicleRegistration deep link may 404 outside window even when URL is correct.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-maintenance-notice"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-maintenance-notice",
+          "source_url": "https://bsp.brta.gov.bd/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/raw/batch-03b-brta-vehicle/source_snapshots/bsp_hours_notice.html",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-portal-url",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Motor vehicle ownership transfer guidance is published on BRTA portal static page for মালিকানা বদল/হস্তান্তর.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-ownership-transfer",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-to-tto-forms-required",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Transfer of ownership requires prescribed TO/TTO forms (Transfer Order / Transfer Take Over) per catalogue notes.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-original-rc-required",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Original registration certificate (RC/DRC) must be submitted for ownership transfer.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-buyer-tin-required",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Buyer TIN certificate required for ownership transfer per catalogue discovery notes.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-affidavits-required",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Seller and/or buyer affidavits required supporting ownership transfer application per catalogue notes.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-seller-buyer-both-parties",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Both seller (current registered owner) and buyer must participate in ownership transfer with identity and ownership proof.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-ownership-transfer",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-transfer-fee-calculator",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Ownership transfer fees differ from new registration fees; amounts are vehicle-type dependent via BSP fee calculator.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_VEHICLE_FEE_MATRIX",
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
+          "retrieved_at": "2026-08-24"
+        },
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-tax-fitness-current",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Current tax token and valid fitness (where applicable by vehicle class) may be required before transfer is processed.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-ownership-transfer",
+        "src-brta-portal-fitness-crossref"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-fitness-crossref",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db91933eb65569e0af12",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_fitness_crossref.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-circle-office-submission",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Ownership transfer application submitted to relevant BRTA circle office with completed forms and supporting documents.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_PORTAL_JS_BODY",
+      "source_ids": [
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-lost-rc-gd-conditional",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "If original RC is lost, General Diary (GD) and replacement/DRC reissue steps may be required before transfer — not a separate catalogue service.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_LOST_RC_PROCEDURE_DETAIL",
+      "source_ids": [
+        "src-brta-portal-ownership-transfer",
+        "src-brta-portal-drc"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-ownership-transfer::c-practical-verify-fees-before-visit",
+      "service_id": "brta-ownership-transfer",
+      "claim_text": "Use BSP fee calculator and payment verification before visiting circle office for ownership transfer to avoid rejected applications.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-digital-registration-certificate::c-portal-url",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "Digital Registration Certificate (DRC) biometric provision and collection process documented on BRTA portal static page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-drc",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-digital-registration-certificate::c-biometrics-required",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "DRC issuance requires biometric capture: photograph, signature, and fingerprints per catalogue and portal page title.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-drc",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-digital-registration-certificate::c-smart-card-format",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "DRC is smart-card format digital registration certificate replacing legacy booklet RC for enrolled vehicles.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-drc",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-digital-registration-certificate::c-part-of-new-registration",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "DRC biometrics collected as part of new vehicle registration workflow after inspection/fitness steps.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-catalogue-transport",
+        "src-bsp-vehicle-registration",
+        "src-brta-portal-drc"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-vehicle-registration",
+          "source_url": "https://bsp.brta.gov.bd/vehicleRegistration/?lan=en",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-digital-registration-certificate::c-after-ownership-transfer",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "After ownership transfer, buyer may require DRC update/reissuance with new owner biometrics at circle office.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-drc",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-digital-registration-certificate::c-drc-fee-calculator",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "DRC-related fees listed under DNP/DRC fee section on BRTA portal menu; numeric amounts via BSP fee calculator.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_VEHICLE_FEE_MATRIX",
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-drc"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
+          "retrieved_at": "2026-08-24"
+        },
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-digital-registration-certificate::c-collection-at-circle",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "DRC smart card collected at BRTA circle office after biometric enrollment and fee payment.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-drc"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-digital-registration-certificate::c-lost-damaged-replacement",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "Lost or damaged DRC replacement handled via DRC reissue/replacement procedure (GD may be required if lost) — no separate catalogue service ID.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_LOST_RC_PROCEDURE_DETAIL",
+      "source_ids": [
+        "src-brta-portal-drc",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-digital-registration-certificate::c-practical-bring-original-if-available",
+      "service_id": "brta-digital-registration-certificate",
+      "claim_text": "Bring damaged RC booklet/card to circle office when applying for DRC replacement to speed record matching.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-drc"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-drc",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dba6933eb65569e0b8fe",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_drc_biometric.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-portal-url",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_text": "Registration certificate information correction/change approval process published on BRTA portal static page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-info-correction",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-info-correction",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-not-ownership-transfer",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_text": "Registration data correction is distinct from ownership transfer (brta-ownership-transfer); owner identity unchanged.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-info-correction",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-info-correction",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-ownership-transfer",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc6b933eb65569e10468",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_ownership_transfer.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-original-rc-required",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_text": "Original registration certificate required for information correction application.",
+      "claim_type": "document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-info-correction"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-info-correction",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-supporting-proof-required",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_text": "Supporting documents proving correct information (e.g., factory invoice, customs papers, court order) required depending on field being corrected.",
+      "claim_type": "conditional_document",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-info-correction"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-info-correction",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-circle-office-application",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_text": "Information correction applications submitted to relevant BRTA circle office with prescribed forms.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-info-correction"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-info-correction",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-correction-fee-calculator",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_text": "Registration information correction fees are vehicle-type dependent via BSP fee calculator.",
+      "claim_type": "fee",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_VEHICLE_FEE_MATRIX",
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-info-correction"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
+          "retrieved_at": "2026-08-24"
+        },
+        {
+          "source_id": "src-brta-portal-info-correction",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-fields-not-fully-enumerated",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_text": "Full list of correctable RC fields not machine-read from portal page in this research pass (JS-rendered content).",
+      "claim_type": "document",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_PORTAL_JS_BODY",
+      "source_ids": [
+        "src-brta-portal-info-correction"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-info-correction",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-practical-separate-from-modifications",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_text": "Engine/color/tyre changes are separate BRTA modification services (BATCH_03C), not generic info correction.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-info-correction",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-info-correction",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_vehicle_info_correction.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-portal-url",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_text": "Retro-reflective number plate and RFID tag installation process published on BRTA portal static page.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-retro-plate",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-rfid-tag-component",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_text": "Process covers both retro-reflective number plate and RFID tag installation per official page title.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-retro-plate",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-registered-vehicle-required",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_text": "Vehicle must already be registered with BRTA before retro-reflective plate upgrade.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-retro-plate",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-plate-fee-not-static",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_text": "Number plate upgrade fees not statically published on Tier 1–2 pages reviewed; likely via fee calculator or circle office schedule.",
+      "claim_type": "fee",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
+          "retrieved_at": "2026-08-24"
+        },
+        {
+          "source_id": "src-brta-portal-retro-plate",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-circle-office-or-approved-vendor",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_text": "Plate installation typically completed at BRTA circle office or authorized plate vendor per national retrofit program.",
+      "claim_type": "procedure_step",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_PORTAL_JS_BODY",
+      "source_ids": [
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-retro-plate",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-private-vs-commercial-plate-rules",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_text": "Plate format and color rules differ between private and commercial vehicles; do not generalize private-car plate rules to all classes.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-retro-plate",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-page-last-updated-2023",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_text": "Portal page metadata indicates content last updated November 2023 — verify against current circulars for mandate deadlines.",
+      "claim_type": "official_metadata",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-retro-plate",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-retro-reflective-number-plate::c-practical-check-rfid-after-install",
+      "service_id": "brta-retro-reflective-number-plate",
+      "claim_text": "Confirm RFID tag registration appears on BSP/e-document verification after plate installation before leaving vendor.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-retro-plate"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-retro-plate",
+          "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db7a933eb65569e0a505",
+          "authority_tier": 2,
+          "retrieval_method": "live_html_shell",
+          "snapshot": "data/research/verification/batch-03b-brta-vehicle/source_snapshots/brta_retro_plate.html",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-portal-url",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_text": "Trustee Board Certificate download available via BSP at bsp.brta.gov.bd/tbc/ per catalogue official_source.",
+      "claim_type": "application_url",
+      "information_class": "OFFICIAL",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_BSP_VEHICLE_SUBPORTAL_SNAPSHOT",
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-tbc",
+          "source_url": "https://bsp.brta.gov.bd/tbc/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-grant-certificate-purpose",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_text": "Certificate relates to Trustee Board grant/disbursement for registered vehicles under BRTA Trustee Board scheme.",
+      "claim_type": "eligibility",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-brta-portal-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-tbc",
+          "source_url": "https://bsp.brta.gov.bd/tbc/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-brta-portal-home",
+          "source_url": "http://brta.portal.gov.bd/",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-download-not-registration",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_text": "TBC download is certificate retrieval for trustee-board-eligible vehicles — not a substitute for vehicle registration or transfer.",
+      "claim_type": "restriction",
+      "information_class": "OFFICIAL",
+      "verification_status": "VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-catalogue-transport"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-tbc",
+          "source_url": "https://bsp.brta.gov.bd/tbc/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-catalogue-transport",
+          "source_url": "data/service_catalogue/by_category/transport.json",
+          "authority_tier": 2,
+          "retrieval_method": "internal_catalogue",
+          "snapshot": "data/service_catalogue/by_category/transport.json",
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-bsp-login-may-be-required",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_text": "Download may require BSP account login linked to vehicle/owner record (portal workflow not snapshotted in this pass).",
+      "claim_type": "procedure_step",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": "MISSING_BSP_VEHICLE_SUBPORTAL_SNAPSHOT",
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-bsp-register-owner"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-tbc",
+          "source_url": "https://bsp.brta.gov.bd/tbc/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-register-owner",
+          "source_url": "https://bsp.brta.gov.bd/register",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_register.html",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-eligibility-not-fully-captured",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_text": "Trustee Board eligibility criteria and required vehicle grant status not extracted from Tier 1–2 pages in this pass.",
+      "claim_type": "eligibility",
+      "information_class": "DISCOVERY",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-tbc"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-tbc",
+          "source_url": "https://bsp.brta.gov.bd/tbc/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-fee-if-any-unknown",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_text": "Certificate download fee (if any) not published on sources reviewed in this research pass.",
+      "claim_type": "fee",
+      "information_class": "DISCOVERY",
+      "verification_status": "UNVERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-bsp-tbc",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-bsp-tbc",
+          "source_url": "https://bsp.brta.gov.bd/tbc/",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        },
+        {
+          "source_id": "src-bsp-fee-calculator",
+          "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+          "authority_tier": 1,
+          "retrieval_method": "catalogue_cross_batch_03a",
+          "snapshot": "data/research/verification/batch-03a-brta-driving-licence/source_snapshots/bsp_fee_calculator.html",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Portal procedural body not captured in JS-rendered page shell."
+    },
+    {
+      "claim_id": "brta-trustee-board-certificate::c-practical-trustee-board-forms",
+      "service_id": "brta-trustee-board-certificate",
+      "claim_text": "Trustee Board grant applications may require separate paper forms on BRTA portal forms section before certificate download.",
+      "claim_type": "practical_tip",
+      "information_class": "PRACTICAL",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "knowledge_gap": null,
+      "source_ids": [
+        "src-brta-portal-home"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-brta-portal-home",
+          "source_url": "http://brta.portal.gov.bd/",
+          "authority_tier": 2,
+          "retrieval_method": "catalogue_reference",
+          "snapshot": null,
+          "retrieved_at": "2026-08-25"
+        }
+      ],
+      "verifier": "cursor-cloud-agent",
+      "verified_at": "2026-08-25T01:24:18.025968+00:00",
+      "publication_status": "STAGING_ONLY",
+      "reasoning": "Supported by Tier 1–2 official sources at verification pass."
+    }
+  ]
+}
