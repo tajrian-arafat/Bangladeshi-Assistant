@@ -542,6 +542,29 @@ class OvernightRunner:
         *,
         max_ticks: int | None = None,
         steps_per_tick: int = 25,
+        wave_rerun: bool | None = None,
     ) -> dict[str, Any]:
-        """Backward-compatible entry — delegates to run_until_terminal."""
+        """Entry point — wave rerun queue takes priority when active."""
+        from automation.orchestrator.wave_runner import WaveRunner
+
+        queue_path = self.repo_root / "data" / "research" / "rerun_queue.json"
+        use_waves = wave_rerun
+        if use_waves is None and queue_path.exists():
+            q = json.loads(queue_path.read_text(encoding="utf-8"))
+            state_path = self.repo_root / "data" / "research" / "waves" / "state.json"
+            state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
+            pending = int(q.get("total_false_completion_services") or 0) - len(state.get("processed_service_ids") or [])
+            use_waves = pending > 0 and not state.get("global_blocked")
+
+        if use_waves:
+            self._append_log("Wave rerun mode — processing FALSE_COMPLETION_RISK queue")
+            runner = WaveRunner(self.repo_root)
+            max_waves = max_ticks if max_ticks is not None else None
+            summary = runner.run_until_blocked_or_complete(max_waves=max_waves)
+            if not summary.get("global_blocked") and runner.select_next_wave_services(1):
+                return summary
+            if summary.get("waves_run", 0) > 0 and not summary.get("global_blocked"):
+                return summary
+            # fall through to batch overnight if queue complete
+
         return self.run_until_terminal(max_ticks=max_ticks, steps_per_tick=steps_per_tick)

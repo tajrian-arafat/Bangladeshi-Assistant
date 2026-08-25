@@ -133,6 +133,46 @@ class ServiceResearchBuilder:
         probe_urls = hints.get("probe_urls") or []
         return official or (probe_urls[0] if probe_urls else "")
 
+    def _derive_hints(self, entry: dict[str, Any], profile_key: str) -> dict[str, Any]:
+        """Build probe URLs and hints from catalogue + profile when no curated hint exists."""
+        authority_id = str(entry.get("authority_id") or "")
+        profile = (self.profiles_doc.get("profiles") or {}).get(profile_key, {})
+        hints_doc = self.profiles_doc.get("authority_domain_hints") or {}
+
+        probe_urls: list[str] = []
+        official = entry.get("official_source") or entry.get("official_url") or ""
+        if official:
+            probe_urls.append(official)
+        for domain in (hints_doc.get(authority_id) or []) + list(profile.get("expected_domain_patterns") or []):
+            url = domain if str(domain).startswith("http") else f"https://{domain}"
+            if url not in probe_urls:
+                probe_urls.append(url)
+        for src in entry.get("discovery_sources") or []:
+            if src and src not in probe_urls:
+                probe_urls.append(src)
+
+        name_en = entry.get("service_name_en") or entry.get("service_id") or ""
+        authority = entry.get("responsible_authority") or authority_id
+        subcategory = entry.get("subcategory") or entry.get("category_id") or ""
+        procedure_hint = (
+            f"{name_en} is a government service under {authority}"
+            + (f" ({subcategory.replace('_', ' ')})" if subcategory else "")
+            + ". Apply through the official authority channels listed in authoritative sources."
+        )
+        return {"probe_urls": probe_urls[:4], "procedure_hint": procedure_hint}
+
+    def _service_hints(self, service_id: str, entry: dict[str, Any], profile_key: str) -> dict[str, Any]:
+        curated = dict(PILOT_SERVICE_HINTS.get(service_id) or {})
+        derived = self._derive_hints(entry, profile_key)
+        if not curated.get("probe_urls"):
+            curated["probe_urls"] = derived.get("probe_urls") or []
+        if not curated.get("procedure_hint"):
+            curated["procedure_hint"] = derived.get("procedure_hint")
+        return curated
+
+    def wave_output_dir(self, wave_id: str, service_id: str) -> Path:
+        return self.repo_root / "data" / "research" / "rerun" / wave_id / service_id
+
     def _metadata_claim(
         self,
         service_id: str,
@@ -155,14 +195,21 @@ class ServiceResearchBuilder:
             "retrieved_at": self._today(),
         }
 
-    def build_service_research(self, service_id: str, *, output_dir: Path | None = None) -> dict[str, Any]:
+    def build_service_research(
+        self,
+        service_id: str,
+        *,
+        output_dir: Path | None = None,
+        wave_id: str | None = None,
+        probe_timeout: float = 12.0,
+    ) -> dict[str, Any]:
         catalogue = {s.get("service_id") or s.get("id"): s for s in self.batch_manager.load_catalogue()}
         entry = catalogue.get(service_id)
         if not entry:
             return {"complete": False, "error": f"Unknown service_id: {service_id}"}
 
         profile_key = resolve_profile_key(entry, self.profiles_doc)
-        hints = PILOT_SERVICE_HINTS.get(service_id, {})
+        hints = self._service_hints(service_id, entry, profile_key)
         name_en = entry.get("service_name_en") or service_id
         name_bn = entry.get("service_name_bn") or ""
         authority = entry.get("responsible_authority") or entry.get("authority_id") or ""
@@ -175,7 +222,7 @@ class ServiceResearchBuilder:
         probes: dict[str, dict[str, Any]] = {}
         for idx, url in enumerate(probe_urls[:3]):
             if url not in probes:
-                probes[url] = self._fetch_probe(url)
+                probes[url] = self._fetch_probe(url, timeout=probe_timeout)
 
         primary_probe = probes.get(official_url) or next(iter(probes.values()), {})
         primary_source_id = f"src-{service_id}-official"
@@ -376,7 +423,7 @@ class ServiceResearchBuilder:
             "knowledge_gaps": gaps,
         }
 
-        out = output_dir or (self.repo_root / "data" / "research" / "pilot" / service_id)
+        out = output_dir or (self.wave_output_dir(wave_id, service_id) if wave_id else (self.repo_root / "data" / "research" / "pilot" / service_id))
         out.mkdir(parents=True, exist_ok=True)
         (out / "service.json").write_text(json.dumps(service_doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         (out / "claims.json").write_text(json.dumps({"service_id": service_id, "claims": claims}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
