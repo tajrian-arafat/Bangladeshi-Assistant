@@ -1,0 +1,25 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "conflict-super-express-eligibility",
+      "resolution_status": "RESOLVED",
+      "classification": "conditional_applicant_paths_not_contradiction",
+      "outcome": "Urgent page headline allows any citizen to apply for Super Express delivery type, but NOTE restricts current operational availability to existing MRP holders not changing permanent address. Represent as IF existing_mrp AND NOT permanent_address_change THEN super_express_available.",
+      "blocks_official_publication": false
+    },
+    {
+      "conflict_id": "conflict-mrp-vs-epassport-primary",
+      "resolution_status": "RESOLVED",
+      "classification": "transitional_dual_channel",
+      "outcome": "DIP home (live Tier-1) lists BOTH '\u0987-\u09aa\u09be\u09b8\u09aa\u09cb\u09b0\u09cd\u099f \u0986\u09ac\u09c7\u09a6\u09a8' (epassport.gov.bd) and '\u0985\u09a8\u09b2\u09be\u0987\u09a8 \u098f\u09ae\u0986\u09b0\u09aa\u09bf \u0986\u09ac\u09c7\u09a6\u09a8' (passport.gov.bd) as active internal e-services. e-Passport is primary/current for new biometric passports; MRP portal remains operational (legacy channel). Do not collapse to single channel.",
+      "blocks_official_publication": false
+    },
+    {
+      "conflict_id": "conflict-fee-freshness",
+      "resolution_status": "PARTIALLY_RESOLVED",
+      "classification": "historical_fee_page_no_superseding_doc_found",
+      "outcome": "Tier-1 fee page last updated 8 March 2023 per indexed metadata. No newer official fee gazette, notice, or machine-readable fee snapshot captured in verification pass. Domestic BDT amounts marked OUTDATED; fee tier structure PARTIALLY_VERIFIED via index excerpt only.",
+      "blocks_official_publication": true
+    }
+  ]
+}

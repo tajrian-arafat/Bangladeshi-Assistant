@@ -1,0 +1,36 @@
+{
+  "project_name": "Bangladeshi Assistant",
+  "mode": "LOCAL_DEV_ONLY",
+  "deployment_allowed": false,
+  "current_batch": "BATCH_03A",
+  "current_phase": "E2E",
+  "current_run_id": "run-2f560e76b418",
+  "workflow_status": "BLOCKED",
+  "last_completed_batch": "BATCH_02B",
+  "catalogue": {
+    "canonical_services": 464,
+    "confirmed_services": 454,
+    "unverified_services": 10
+  },
+  "regression_baseline": {
+    "batch_01_e2e": "55/55",
+    "passport_e2e_pct": 100.0,
+    "batch_02b_e2e_pct": 100.0,
+    "routing_benchmark_pct": 100.0,
+    "pytest_count": 58,
+    "hallucinations": 0,
+    "citation_failures": 0
+  },
+  "pending_escalations": [],
+  "pilot_mode": true,
+  "continuous_mode": false,
+  "simulation_mode": false,
+  "retry_count": 0,
+  "idempotency_keys": [
+    "BATCH_03A:RESEARCH:complete",
+    "BATCH_03A:VERIFICATION:complete",
+    "BATCH_03A:PUBLICATION:complete"
+  ],
+  "updated_at": "2026-08-25T00:06:46.851547+00:00",
+  "metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "batch_id": "batch-02b-police-immigration",
+  "normalized_at": "2026-08-24",
+  "claim_count": 77,
+  "fee_tiers_staged": 1,
+  "pipeline_status_counts": {
+    "VERIFIED": 60,
+    "CONFLICTING": 1,
+    "PARTIALLY_VERIFIED": 10,
+    "UNVERIFIED": 6
+  },
+  "publication_rules": [
+    "Publish only VERIFIED + OFFICIAL + complete evidence",
+    "Skip PARTIALLY_VERIFIED/UNVERIFIED/CONFLICTING/OUTDATED/REJECTED as authoritative",
+    "PCC offline BDT 500 CONFLICTING — never universal fee",
+    "Online PCC BDT 1500 channel-specific only",
+    "Tier-5 GD expansion and unverified MRV fees blocked"
+  ]
+}

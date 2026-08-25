@@ -1,0 +1,932 @@
+{
+  "ok": false,
+  "reports": [
+    {
+      "ok": false,
+      "dry_run": false,
+      "batch_id": "batch-02a-passport",
+      "synced_claims": 78,
+      "published_fees": 0,
+      "published_checklist": 0,
+      "published_steps": 0,
+      "published_urls": 0,
+      "published_practical": 0,
+      "skipped": 0,
+      "eligible_count": 0,
+      "rejected_by_gate_count": 0,
+      "errors": [
+        "No catalogue\u2192runtime mapping for None; refusing publish",
+        "No catalogue\u2192runtime mapping for None; refusing publish",
+        "No catalogue\u2192runtime mapping for None; refusing publish",
+        "No catalogue\u2192runtime mapping for None; refusing publish",
+        "No catalogue\u2192runtime mapping for None; refusing publish",
+        "No catalogue\u2192runtime mapping for None; refusing publish"
+      ],
+      "actions_sample": [],
+      "actions_total": 0,
+      "audit": {
+        "eligible_for_publication": 0,
+        "rejected_by_gate": 0,
+        "skipped": 0,
+        "published_fees": 0,
+        "published_checklist": 0,
+        "published_steps": 0,
+        "published_urls": 0,
+        "practical_stored": 0,
+        "synced_claims": 78,
+        "errors": [
+          "No catalogue\u2192runtime mapping for None; refusing publish",
+          "No catalogue\u2192runtime mapping for None; refusing publish",
+          "No catalogue\u2192runtime mapping for None; refusing publish",
+          "No catalogue\u2192runtime mapping for None; refusing publish",
+          "No catalogue\u2192runtime mapping for None; refusing publish",
+          "No catalogue\u2192runtime mapping for None; refusing publish"
+        ],
+        "rejected_samples": [],
+        "eligible_samples": [],
+        "skipped_samples": [],
+        "post_readiness": {}
+      }
+    },
+    {
+      "ok": true,
+      "dry_run": true,
+      "batch_id": "batch-02a-passport",
+      "synced_claims": 0,
+      "published_fees": 12,
+      "published_checklist": 3,
+      "published_steps": 3,
+      "published_urls": 3,
+      "published_practical": 2,
+      "skipped": 49,
+      "eligible_count": 29,
+      "rejected_by_gate_count": 2,
+      "errors": [],
+      "actions_sample": [
+        {
+          "action": "skip_unverified",
+          "claim_id": "be1151b6-16c6-471e-a864-7db541f83e7e",
+          "research_claim_key": "epassport-new-application::c-apply-online",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "50131205-f480-4f7e-af37-c37509670d51",
+          "research_claim_key": "epassport-new-application::c-no-attestation-online",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "74d4923b-1a2a-4a53-a185-3a769f67dc69",
+          "research_claim_key": "epassport-new-application::c-id-nid-or-brc",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "84ab5560-4773-4b11-b1f4-6705d817d230",
+          "research_claim_key": "epassport-new-application::c-minor-parent-nid",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "c6575b6a-6659-4caf-b3ab-fb273211fcb5",
+          "research_claim_key": "epassport-new-application::c-minor-3r-photo",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "4124cd33-d8e3-48d3-b5b4-f4c23695e82a",
+          "research_claim_key": "epassport-new-application::c-police-station-select",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "9baa3ba0-f618-494e-9ba0-db6f1c1d9e6a",
+          "research_claim_key": "epassport-new-application::c-govt-noc",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "349715a4-6589-4f67-8630-54c2aa945a28",
+          "research_claim_key": "epassport-new-application::c-enrollment-docs-list",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "2ef82b41-9d47-43fe-82fc-1524ba8277c7",
+          "research_claim_key": "epassport-new-application::c-five-step-workflow",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "45ba8bcf-e3ef-4c3f-9730-31206fd0cd70",
+          "research_claim_key": "epassport-new-application::c-expatriate-onboarding-no",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "would_publish_checklist",
+          "claim_id": "585ff118-0490-4204-9f5b-c94bceae5a64",
+          "research_claim_key": "epassport-new-application::c-brc-everify",
+          "item_type": "CONDITIONAL",
+          "condition": {
+            "field": "id_document_type",
+            "op": "eq",
+            "value": "brc"
+          }
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "4c0070e0-1b37-4391-b4bb-72abd8504c23",
+          "research_claim_key": "epassport-reissue::c-reissue-portal",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "6141f38e-bcd1-4458-ade7-da81eef42f24",
+          "research_claim_key": "epassport-reissue::c-show-previous-passport",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "517ccaf1-ce1d-4388-bbbc-2aa48669674d",
+          "research_claim_key": "epassport-reissue::c-lost-gd-copy",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "c21ff3e9-34ed-4b97-ae36-c3c1aef02e3c",
+          "research_claim_key": "epassport-reissue::c-lost-gd-immediate",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "0cd38c63-844f-4806-a4da-767868943c7c",
+          "research_claim_key": "epassport-reissue::c-correction-extra-docs",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_mvp_seed_checklist_overwrite",
+          "claim_id": "cf43ee1a-8d43-4b21-bd62-6d8a0501caac",
+          "service_slug": "passport-renewal"
+        },
+        {
+          "action": "mark_claim_published_metadata_only",
+          "claim_id": "dd9c4bb9-42bf-4aaa-95ea-d0fd33618c84",
+          "claim_type": "eligibility",
+          "research_claim_key": "epassport-reissue::c-dubai-mrp-validity-limit"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "cc9b5e59-56b9-46b8-9fc9-b3ae015b1c69",
+          "research_claim_key": "epassport-reissue::c-mission-biometric-presence",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_mvp_seed_step_overwrite",
+          "claim_id": "0dc7888d-f887-4ce8-8421-5202df551ce0",
+          "service_slug": "passport-renewal"
+        },
+        {
+          "action": "mark_claim_published_metadata_only",
+          "claim_id": "a7636110-a249-4fd6-89cd-094d122d717d",
+          "claim_type": "other",
+          "research_claim_key": "gap-closure::c-damaged-passport-not-distinct"
+        },
+        {
+          "action": "skip_superseded",
+          "claim_id": "a68f2d81-7dc2-410f-8bd2-f0fb50acd813",
+          "research_claim_key": "epassport-fee-payment::c-fee-48p-5y-regular",
+          "superseded_by_claim_id": "03d11538-7be6-4d3e-8107-5ecd8f35759d"
+        },
+        {
+          "action": "skip_superseded",
+          "claim_id": "b8b181bc-1414-49c5-8f85-368a4176b546",
+          "research_claim_key": "epassport-fee-payment::c-fee-48p-10y-regular",
+          "superseded_by_claim_id": "e907f822-fc03-4724-b313-9895e5f02de1"
+        },
+        {
+          "action": "skip_superseded",
+          "claim_id": "353245c3-a6df-4d90-b31f-59ce922fd8b8",
+          "research_claim_key": "epassport-fee-payment::c-fee-64p-5y-regular",
+          "superseded_by_claim_id": "49de74c0-f5cb-4d81-be13-2eef0a6c41e6"
+        },
+        {
+          "action": "skip_superseded",
+          "claim_id": "d5d385d2-a7f7-4e17-aadf-55e6ad2551e7",
+          "research_claim_key": "epassport-fee-payment::c-fee-64p-10y-regular",
+          "superseded_by_claim_id": "65b13dc4-b4ec-46b7-ab67-43c03af15426"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "d246cc85-c215-49eb-817b-94f36c5e61f9",
+          "research_claim_key": "epassport-fee-payment::c-fee-vat-included",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "4983b398-5a46-43bc-b682-786a521b5407",
+          "research_claim_key": "epassport-fee-payment::c-fee-mission-general-usd",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "93b39ab8-7ab3-43be-92db-0b9a735c2b5a",
+          "research_claim_key": "epassport-fee-payment::c-fee-mission-labor-student-usd",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "07ff526d-5d2d-402c-ad96-98a252cd776f",
+          "research_claim_key": "epassport-fee-payment::c-payment-online-offline",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        },
+        {
+          "action": "skip_unverified",
+          "claim_id": "804721b1-c665-408a-af73-c4290d8967a7",
+          "research_claim_key": "epassport-fee-payment::c-payment-slip-offline-only",
+          "status": "PARTIALLY_VERIFIED",
+          "verification_status": "PARTIALLY_VERIFIED"
+        }
+      ],
+      "actions_total": 78,
+      "audit": {
+        "eligible_for_publication": 28,
+        "rejected_by_gate": 2,
+        "skipped": 49,
+        "published_fees": 12,
+        "published_checklist": 3,
+        "published_steps": 3,
+        "published_urls": 3,
+        "practical_stored": 2,
+        "synced_claims": 0,
+        "errors": [],
+        "rejected_samples": [
+          {
+            "action": "reject_gate",
+            "claim_id": "a451c5dc-de3a-4929-b853-34e609d88825",
+            "research_claim_key": "police-passport-verification::c-pv-charter-sla",
+            "claim_type": "processing_time",
+            "reasons": [
+              "information_class must be OFFICIAL for authoritative publish (got DISCOVERY)"
+            ]
+          },
+          {
+            "action": "reject_gate",
+            "claim_id": "7422afb1-ece1-4441-9c74-9fd6e58ae733",
+            "research_claim_key": "police-passport-verification::c-pv-district-scope",
+            "claim_type": "office",
+            "reasons": [
+              "information_class must be OFFICIAL for authoritative publish (got DISCOVERY)"
+            ]
+          }
+        ],
+        "eligible_samples": [
+          {
+            "action": "would_publish_checklist",
+            "claim_id": "585ff118-0490-4204-9f5b-c94bceae5a64",
+            "research_claim_key": "epassport-new-application::c-brc-everify",
+            "item_type": "CONDITIONAL",
+            "condition": {
+              "field": "id_document_type",
+              "op": "eq",
+              "value": "brc"
+            }
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "dd9c4bb9-42bf-4aaa-95ea-d0fd33618c84",
+            "claim_type": "eligibility",
+            "research_claim_key": "epassport-reissue::c-dubai-mrp-validity-limit"
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "a7636110-a249-4fd6-89cd-094d122d717d",
+            "claim_type": "other",
+            "research_claim_key": "gap-closure::c-damaged-passport-not-distinct"
+          },
+          {
+            "action": "would_publish_practical",
+            "claim_id": "87f169b3-17cf-4e76-b15d-bc4387001f89",
+            "research_claim_key": "epassport-fee-payment::c-practical-ekpay-mention",
+            "pipeline_status": "VERIFIED"
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "0a801ff7-be20-4faf-8f2e-4e610eb7c350",
+            "claim_type": "other",
+            "research_claim_key": "gap-closure::c-epassport-fee-page-current-date"
+          },
+          {
+            "action": "mark_claim_published_metadata_only",
+            "claim_id": "3ff9708f-3229-4b24-9eed-c36630104711",
+            "claim_type": "other",
+            "research_claim_key": "gap-closure::c-payment-gateways-achallan-dgepay-shurjopay"
+          },
+          {
+            "action": "would_publish_fee",
+            "claim_id": "03d11538-7be6-4d3e-8107-5ecd8f35759d",
+            "research_claim_key": "gap-closure::c-fee-domestic-48p_5y-regular-current",
+            "amount": "4025",
+            "calculator_url": null,
+            "condition": {
+              "field": "delivery_tier",
+              "pages": 48,
+              "validity_years": 5,
+              "delivery": "regular",
+              "applicability": "domestic_inside_bangladesh"
+            }
+          },
+          {
+            "action": "would_publish_fee",
+            "claim_id": "a77be0c7-d870-40a1-a780-f59457e2979b",
+            "research_claim_key": "gap-closure::c-fee-domestic-48p_5y-express-current",
+            "amount": "6325",
+            "calculator_url": null,
+            "condition": {
+              "field": "delivery_tier",
+              "pages": 48,
+              "validity_years": 5,
+              "delivery": "express",
+              "applicability": "domestic_inside_bangladesh"
+            }
+          },
+          {
+            "action": "would_publish_fee",
+            "claim_id": "6d70f497-6be8-4ce7-9fed-053b21a99dd7",
+            "research_claim_key": "gap-closure::c-fee-domestic-48p_5y-super_express-current",
+            "amount": "8625",
+            "calculator_url": null,
+            "condition": {
+              "field": "delivery_tier",
+              "pages": 48,
+              "validity_years": 5,
+              "delivery": "super_express",
+              "applicability": "domestic_inside_bangladesh"
+            }
+          },
+          {
+            "action": "would_publish_fee",
+            "claim_id": "e907f822-fc03-4724-b313-9895e5f02de1",
+            "research_claim_key": "gap-closure::c-fee-domestic-48p_10y-regular-current",
+            "amount": "5750",
+            "calculator_url": null,
+            "condition": {
+              "field": "delivery_tier",
+              "pages": 48,
+              "validity_years": 10,
+              "delivery": "regular",
+              "applicability": "domestic_inside_bangladesh"
+            }
+          },
+          {
+            "action": "would_publish_fee",
+            "claim_id": "7b669bee-f8ba-436c-b170-a77539673191",
+            "research_claim_key": "gap-closure::c-fee-domestic-48p_10y-express-current",
+            "amount": "8050",
+            "calculator_url": null,
+            "condition": {
+              "field": "delivery_tier",
+              "pages": 48,
+              "validity_years": 10,
+              "delivery": "express",
+              "applicability": "domestic_inside_bangladesh"
+            }
+          },
+          {
+            "action": "would_publish_fee",
+            "claim_id": "d8214e50-6d40-4e77-90be-aca72d0e1336",
+            "research_claim_key": "gap-closure::c-fee-domestic-48p_10y-super_express-current",
+            "amount": "10350",
+            "calculator_url": null,
+            "condition": {
+              "field": "delivery_tier",
+              "pages": 48,
+              "validity_years": 10,
+              "delivery": "super_express",
+              "applicability": "domestic_inside_bangladesh"
+            }
+          },
+          {
+            "action": "would_publish_fee",
+            "claim_id": "49de74c0-f5cb-4d81-be13-2eef0a6c41e6",
+            "research_claim_key": "gap-closure::c-fee-domestic-64p_5y-regular-current",
+            "amount": "6325",
+            "calculator_url": null,
+            "condition": {
+              "field": "delivery_tier",
+              "pages": 64,
+              "validity_years": 5,
+              "delivery": "regular",
+              "applicability": "domestic_inside_bangladesh"
+            }
+          },
+          {
+            "action": "would_publish_fee",
+            "claim_id": "f160b05f-692c-45c5-b46d-58ed32acea01",
+            "research_claim_key": "gap-closure::c-fee-domestic-64p_5y-express-current",
+            "amount": "8625",
+            "calculator_url": null,
+            "condition": {
+              "field": "delivery_tier",
+              "pages": 64,
+              "validity_years": 5,
+              "delivery": "express",
+              "applicability": "domestic_inside_bangladesh"
+            }
+          },
+          {
+            "action": "would_publish_fee",
+            "claim_id": "edee890a-d6ed-4cd1-97f1-c8798f7d0d2e",
+            "research_claim_key": "gap-closure::c-fee-domestic-64p_5y-super_express-current",
+            "amount": "12075",
+            "calculator_url": null,
+            "condition": {
+              "field": "delivery_tier",
+              "pages": 64,
+              "validity_years": 5,
+              "delivery": "super_express",
+              "applicability": "domestic_inside_bangladesh"
+            }
+          }
+        ],
+        "skipped_samples": [
+          {
+            "action": "skip_unverified",
+            "claim_id": "be1151b6-16c6-471e-a864-7db541f83e7e",
+            "research_claim_key": "epassport-new-application::c-apply-online",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "50131205-f480-4f7e-af37-c37509670d51",
+            "research_claim_key": "epassport-new-application::c-no-attestation-online",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "74d4923b-1a2a-4a53-a185-3a769f67dc69",
+            "research_claim_key": "epassport-new-application::c-id-nid-or-brc",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "84ab5560-4773-4b11-b1f4-6705d817d230",
+            "research_claim_key": "epassport-new-application::c-minor-parent-nid",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "c6575b6a-6659-4caf-b3ab-fb273211fcb5",
+            "research_claim_key": "epassport-new-application::c-minor-3r-photo",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "4124cd33-d8e3-48d3-b5b4-f4c23695e82a",
+            "research_claim_key": "epassport-new-application::c-police-station-select",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "9baa3ba0-f618-494e-9ba0-db6f1c1d9e6a",
+            "research_claim_key": "epassport-new-application::c-govt-noc",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "349715a4-6589-4f67-8630-54c2aa945a28",
+            "research_claim_key": "epassport-new-application::c-enrollment-docs-list",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "2ef82b41-9d47-43fe-82fc-1524ba8277c7",
+            "research_claim_key": "epassport-new-application::c-five-step-workflow",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "45ba8bcf-e3ef-4c3f-9730-31206fd0cd70",
+            "research_claim_key": "epassport-new-application::c-expatriate-onboarding-no",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "4c0070e0-1b37-4391-b4bb-72abd8504c23",
+            "research_claim_key": "epassport-reissue::c-reissue-portal",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "6141f38e-bcd1-4458-ade7-da81eef42f24",
+            "research_claim_key": "epassport-reissue::c-show-previous-passport",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "517ccaf1-ce1d-4388-bbbc-2aa48669674d",
+            "research_claim_key": "epassport-reissue::c-lost-gd-copy",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "c21ff3e9-34ed-4b97-ae36-c3c1aef02e3c",
+            "research_claim_key": "epassport-reissue::c-lost-gd-immediate",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          },
+          {
+            "action": "skip_unverified",
+            "claim_id": "0cd38c63-844f-4806-a4da-767868943c7c",
+            "research_claim_key": "epassport-reissue::c-correction-extra-docs",
+            "status": "PARTIALLY_VERIFIED",
+            "verification_status": "PARTIALLY_VERIFIED"
+          }
+        ],
+        "post_readiness": {
+          "epassport-new-application": "YELLOW",
+          "epassport-reissue": "YELLOW",
+          "epassport-fee-payment": "YELLOW",
+          "epassport-enrollment-appointment": "RED",
+          "epassport-application-status": "RED",
+          "epassport-urgent-super-express": "YELLOW",
+          "epassport-rpo-secretariat": "RED",
+          "passport-mrp-initial": "YELLOW",
+          "passport-mrp-reissue": "YELLOW",
+          "passport-application-status": "YELLOW",
+          "police-passport-police-verification": "YELLOW",
+          "police-passport-verification": "RED"
+        }
+      },
+      "post_readiness": {
+        "epassport-new-application": "YELLOW",
+        "epassport-reissue": "YELLOW",
+        "epassport-fee-payment": "YELLOW",
+        "epassport-enrollment-appointment": "RED",
+        "epassport-application-status": "RED",
+        "epassport-urgent-super-express": "YELLOW",
+        "epassport-rpo-secretariat": "RED",
+        "passport-mrp-initial": "YELLOW",
+        "passport-mrp-reissue": "YELLOW",
+        "passport-application-status": "YELLOW",
+        "police-passport-police-verification": "YELLOW",
+        "police-passport-verification": "RED"
+      }
+    }
+  ],
+  "dry_run_audit": {
+    "eligible_for_publication": 28,
+    "rejected_by_gate": 2,
+    "skipped": 49,
+    "published_fees": 12,
+    "published_checklist": 3,
+    "published_steps": 3,
+    "published_urls": 3,
+    "practical_stored": 2,
+    "synced_claims": 0,
+    "errors": [],
+    "rejected_samples": [
+      {
+        "action": "reject_gate",
+        "claim_id": "a451c5dc-de3a-4929-b853-34e609d88825",
+        "research_claim_key": "police-passport-verification::c-pv-charter-sla",
+        "claim_type": "processing_time",
+        "reasons": [
+          "information_class must be OFFICIAL for authoritative publish (got DISCOVERY)"
+        ]
+      },
+      {
+        "action": "reject_gate",
+        "claim_id": "7422afb1-ece1-4441-9c74-9fd6e58ae733",
+        "research_claim_key": "police-passport-verification::c-pv-district-scope",
+        "claim_type": "office",
+        "reasons": [
+          "information_class must be OFFICIAL for authoritative publish (got DISCOVERY)"
+        ]
+      }
+    ],
+    "eligible_samples": [
+      {
+        "action": "would_publish_checklist",
+        "claim_id": "585ff118-0490-4204-9f5b-c94bceae5a64",
+        "research_claim_key": "epassport-new-application::c-brc-everify",
+        "item_type": "CONDITIONAL",
+        "condition": {
+          "field": "id_document_type",
+          "op": "eq",
+          "value": "brc"
+        }
+      },
+      {
+        "action": "mark_claim_published_metadata_only",
+        "claim_id": "dd9c4bb9-42bf-4aaa-95ea-d0fd33618c84",
+        "claim_type": "eligibility",
+        "research_claim_key": "epassport-reissue::c-dubai-mrp-validity-limit"
+      },
+      {
+        "action": "mark_claim_published_metadata_only",
+        "claim_id": "a7636110-a249-4fd6-89cd-094d122d717d",
+        "claim_type": "other",
+        "research_claim_key": "gap-closure::c-damaged-passport-not-distinct"
+      },
+      {
+        "action": "would_publish_practical",
+        "claim_id": "87f169b3-17cf-4e76-b15d-bc4387001f89",
+        "research_claim_key": "epassport-fee-payment::c-practical-ekpay-mention",
+        "pipeline_status": "VERIFIED"
+      },
+      {
+        "action": "mark_claim_published_metadata_only",
+        "claim_id": "0a801ff7-be20-4faf-8f2e-4e610eb7c350",
+        "claim_type": "other",
+        "research_claim_key": "gap-closure::c-epassport-fee-page-current-date"
+      },
+      {
+        "action": "mark_claim_published_metadata_only",
+        "claim_id": "3ff9708f-3229-4b24-9eed-c36630104711",
+        "claim_type": "other",
+        "research_claim_key": "gap-closure::c-payment-gateways-achallan-dgepay-shurjopay"
+      },
+      {
+        "action": "would_publish_fee",
+        "claim_id": "03d11538-7be6-4d3e-8107-5ecd8f35759d",
+        "research_claim_key": "gap-closure::c-fee-domestic-48p_5y-regular-current",
+        "amount": "4025",
+        "calculator_url": null,
+        "condition": {
+          "field": "delivery_tier",
+          "pages": 48,
+          "validity_years": 5,
+          "delivery": "regular",
+          "applicability": "domestic_inside_bangladesh"
+        }
+      },
+      {
+        "action": "would_publish_fee",
+        "claim_id": "a77be0c7-d870-40a1-a780-f59457e2979b",
+        "research_claim_key": "gap-closure::c-fee-domestic-48p_5y-express-current",
+        "amount": "6325",
+        "calculator_url": null,
+        "condition": {
+          "field": "delivery_tier",
+          "pages": 48,
+          "validity_years": 5,
+          "delivery": "express",
+          "applicability": "domestic_inside_bangladesh"
+        }
+      },
+      {
+        "action": "would_publish_fee",
+        "claim_id": "6d70f497-6be8-4ce7-9fed-053b21a99dd7",
+        "research_claim_key": "gap-closure::c-fee-domestic-48p_5y-super_express-current",
+        "amount": "8625",
+        "calculator_url": null,
+        "condition": {
+          "field": "delivery_tier",
+          "pages": 48,
+          "validity_years": 5,
+          "delivery": "super_express",
+          "applicability": "domestic_inside_bangladesh"
+        }
+      },
+      {
+        "action": "would_publish_fee",
+        "claim_id": "e907f822-fc03-4724-b313-9895e5f02de1",
+        "research_claim_key": "gap-closure::c-fee-domestic-48p_10y-regular-current",
+        "amount": "5750",
+        "calculator_url": null,
+        "condition": {
+          "field": "delivery_tier",
+          "pages": 48,
+          "validity_years": 10,
+          "delivery": "regular",
+          "applicability": "domestic_inside_bangladesh"
+        }
+      },
+      {
+        "action": "would_publish_fee",
+        "claim_id": "7b669bee-f8ba-436c-b170-a77539673191",
+        "research_claim_key": "gap-closure::c-fee-domestic-48p_10y-express-current",
+        "amount": "8050",
+        "calculator_url": null,
+        "condition": {
+          "field": "delivery_tier",
+          "pages": 48,
+          "validity_years": 10,
+          "delivery": "express",
+          "applicability": "domestic_inside_bangladesh"
+        }
+      },
+      {
+        "action": "would_publish_fee",
+        "claim_id": "d8214e50-6d40-4e77-90be-aca72d0e1336",
+        "research_claim_key": "gap-closure::c-fee-domestic-48p_10y-super_express-current",
+        "amount": "10350",
+        "calculator_url": null,
+        "condition": {
+          "field": "delivery_tier",
+          "pages": 48,
+          "validity_years": 10,
+          "delivery": "super_express",
+          "applicability": "domestic_inside_bangladesh"
+        }
+      },
+      {
+        "action": "would_publish_fee",
+        "claim_id": "49de74c0-f5cb-4d81-be13-2eef0a6c41e6",
+        "research_claim_key": "gap-closure::c-fee-domestic-64p_5y-regular-current",
+        "amount": "6325",
+        "calculator_url": null,
+        "condition": {
+          "field": "delivery_tier",
+          "pages": 64,
+          "validity_years": 5,
+          "delivery": "regular",
+          "applicability": "domestic_inside_bangladesh"
+        }
+      },
+      {
+        "action": "would_publish_fee",
+        "claim_id": "f160b05f-692c-45c5-b46d-58ed32acea01",
+        "research_claim_key": "gap-closure::c-fee-domestic-64p_5y-express-current",
+        "amount": "8625",
+        "calculator_url": null,
+        "condition": {
+          "field": "delivery_tier",
+          "pages": 64,
+          "validity_years": 5,
+          "delivery": "express",
+          "applicability": "domestic_inside_bangladesh"
+        }
+      },
+      {
+        "action": "would_publish_fee",
+        "claim_id": "edee890a-d6ed-4cd1-97f1-c8798f7d0d2e",
+        "research_claim_key": "gap-closure::c-fee-domestic-64p_5y-super_express-current",
+        "amount": "12075",
+        "calculator_url": null,
+        "condition": {
+          "field": "delivery_tier",
+          "pages": 64,
+          "validity_years": 5,
+          "delivery": "super_express",
+          "applicability": "domestic_inside_bangladesh"
+        }
+      }
+    ],
+    "skipped_samples": [
+      {
+        "action": "skip_unverified",
+        "claim_id": "be1151b6-16c6-471e-a864-7db541f83e7e",
+        "research_claim_key": "epassport-new-application::c-apply-online",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "50131205-f480-4f7e-af37-c37509670d51",
+        "research_claim_key": "epassport-new-application::c-no-attestation-online",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "74d4923b-1a2a-4a53-a185-3a769f67dc69",
+        "research_claim_key": "epassport-new-application::c-id-nid-or-brc",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "84ab5560-4773-4b11-b1f4-6705d817d230",
+        "research_claim_key": "epassport-new-application::c-minor-parent-nid",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "c6575b6a-6659-4caf-b3ab-fb273211fcb5",
+        "research_claim_key": "epassport-new-application::c-minor-3r-photo",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "4124cd33-d8e3-48d3-b5b4-f4c23695e82a",
+        "research_claim_key": "epassport-new-application::c-police-station-select",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "9baa3ba0-f618-494e-9ba0-db6f1c1d9e6a",
+        "research_claim_key": "epassport-new-application::c-govt-noc",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "349715a4-6589-4f67-8630-54c2aa945a28",
+        "research_claim_key": "epassport-new-application::c-enrollment-docs-list",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "2ef82b41-9d47-43fe-82fc-1524ba8277c7",
+        "research_claim_key": "epassport-new-application::c-five-step-workflow",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "45ba8bcf-e3ef-4c3f-9730-31206fd0cd70",
+        "research_claim_key": "epassport-new-application::c-expatriate-onboarding-no",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "4c0070e0-1b37-4391-b4bb-72abd8504c23",
+        "research_claim_key": "epassport-reissue::c-reissue-portal",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "6141f38e-bcd1-4458-ade7-da81eef42f24",
+        "research_claim_key": "epassport-reissue::c-show-previous-passport",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "517ccaf1-ce1d-4388-bbbc-2aa48669674d",
+        "research_claim_key": "epassport-reissue::c-lost-gd-copy",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "c21ff3e9-34ed-4b97-ae36-c3c1aef02e3c",
+        "research_claim_key": "epassport-reissue::c-lost-gd-immediate",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      },
+      {
+        "action": "skip_unverified",
+        "claim_id": "0cd38c63-844f-4806-a4da-767868943c7c",
+        "research_claim_key": "epassport-reissue::c-correction-extra-docs",
+        "status": "PARTIALLY_VERIFIED",
+        "verification_status": "PARTIALLY_VERIFIED"
+      }
+    ],
+    "post_readiness": {
+      "epassport-new-application": "YELLOW",
+      "epassport-reissue": "YELLOW",
+      "epassport-fee-payment": "YELLOW",
+      "epassport-enrollment-appointment": "RED",
+      "epassport-application-status": "RED",
+      "epassport-urgent-super-express": "YELLOW",
+      "epassport-rpo-secretariat": "RED",
+      "passport-mrp-initial": "YELLOW",
+      "passport-mrp-reissue": "YELLOW",
+      "passport-application-status": "YELLOW",
+      "police-passport-police-verification": "YELLOW",
+      "police-passport-verification": "RED"
+    }
+  }
+}

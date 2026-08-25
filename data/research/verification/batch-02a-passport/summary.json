@@ -1,0 +1,33 @@
+{
+  "batch_id": "batch-02a-passport",
+  "layer": "research/verification",
+  "publication_status": "STAGING_ONLY",
+  "published": false,
+  "verifier": "cursor-cloud-agent",
+  "verified_at": "2026-08-24T21:08:38.715778+00:00",
+  "total_claims": 55,
+  "status_counts": {
+    "PARTIALLY_VERIFIED": 35,
+    "VERIFIED": 13,
+    "OUTDATED": 4,
+    "UNVERIFIED": 2,
+    "REJECTED": 1
+  },
+  "official_claims_verified": 10,
+  "practical_claims": 2,
+  "conflicts_resolved": 2,
+  "conflicts_unresolved": 0,
+  "conflicts_partially_resolved": 1,
+  "knowledge_gaps_open": 4,
+  "services_green": 1,
+  "services_yellow": 10,
+  "services_red": 1,
+  "evidence_coverage_notes": "Live Tier-1 HTML: passport.gov.bd (MRP), dip.gov.bd (dual e-Passport+MRP links), police.gov.bd citizen charter (passport verification SLAs). Live Tier-2: bcgdubai.gov.bd/e-passport/ (mission rules). epassport.gov.bd landing HTTP 200 but instructional routes are Angular SPA shells; onboarding returned 403; Wayback captures also SPA-only. Fee/instruction/urgent/enrollment claims rely on search-index excerpts of official URLs \u2014 explicitly NOT treated as direct page evidence. Singapore e-passport rules URL returned 404. Abu Dhabi page body not retrieved.",
+  "verification_coverage": "55/55 claims assigned a primary verification status",
+  "main_limitations": [
+    "Cannot render epassport.gov.bd instructional text via curl/Wayback",
+    "Domestic fee BDT amounts marked OUTDATED (fee page March 2023)",
+    "No claims published to runtime",
+    "Police verification universal requirement post-2025 not Tier-1 confirmed"
+  ]
+}

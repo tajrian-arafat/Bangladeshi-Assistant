@@ -1,0 +1,143 @@
+{
+  "service_id": "police-passport-verification",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Passport Verification",
+  "service_name_bn": "পাসপোর্ট ভেরিফিকেশন",
+  "aliases": [
+    "passport police verification"
+  ],
+  "banglish_variants": [],
+  "category_id": "police",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police (District/Special Branch)",
+  "target_applicant": [
+    "citizen",
+    "employer",
+    "government_employee"
+  ],
+  "official_application_url": "https://www.police.gov.bd/index.php/en/citizen_charter",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "police-passport-verification::c-pv-charter-sla-normal",
+      "legacy_claim_id": "c-pv-charter-sla-normal",
+      "service_id": "police-passport-verification",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA: normal passport verification 15–21 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 15,
+        "official_sla_days_max": 21,
+        "tier": "normal"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-charter-sla-normal-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-charter-sla-urgent",
+      "legacy_claim_id": "c-pv-charter-sla-urgent",
+      "service_id": "police-passport-verification",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA: urgent passport verification 7 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days": 7,
+        "tier": "urgent"
+      },
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "urgent_request"
+      },
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-charter-sla-urgent-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-charter-fee",
+      "legacy_claim_id": "c-pv-charter-fee",
+      "service_id": "police-passport-verification",
+      "claim_type": "fee",
+      "claim_text": "Passport verification requires government-prescribed fee per citizen charter; amount not listed on charter page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-charter-fee-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-district-sb-office",
+      "legacy_claim_id": "c-pv-district-sb-office",
+      "service_id": "police-passport-verification",
+      "claim_type": "office",
+      "claim_text": "District-level passport verification handled by District Special Branch / Metropolitan Special Branch.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-district-sb-office-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-distinct-from-online-pcc",
+      "legacy_claim_id": "c-pv-distinct-from-online-pcc",
+      "service_id": "police-passport-verification",
+      "claim_type": "restriction",
+      "claim_text": "Charter 'passport verification' is distinct from online PCC portal service; purposes and channels differ.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter",
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-distinct-from-online-pcc-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    }
+  ],
+  "notes": "Normal 15-21 days; urgent 7 days per citizen charter.",
+  "prior_batch_research": "batch-02a-passport partial claims exist for police-passport-* services"
+}

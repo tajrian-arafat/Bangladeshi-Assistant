@@ -1,0 +1,434 @@
+{
+  "schema": "bda.routing.service_capabilities/1.0",
+  "services": [
+    {
+      "service_slug": "epassport-fee-payment",
+      "catalogue_service_id": "epassport-fee-payment",
+      "domain": "passport",
+      "service_type": "fee_payment",
+      "variants": {
+        "passport_type": ["e_passport"],
+        "actions": ["fee", "payment"],
+        "channels": ["domestic", "online"]
+      },
+      "intent_capabilities": ["fee_inquiry", "payment", "procedure_inquiry"],
+      "capability_keywords": ["fee", "payment", "taka", "charge", "express fee", "super express fee", "regular fee", "page", "year", "bochor", "vat"],
+      "aliases_en": ["e-passport fee", "epassport fee", "passport fee payment", "passport payment"],
+      "aliases_bn": ["ই-পাসপোর্ট ফি", "পাসপোর্ট ফি"],
+      "aliases_banglish": ["e passport fee", "epassport fee koto", "passport payment", "passport fee koto"],
+      "intent_boost": {"fee_inquiry": 35, "payment": 30}
+    },
+    {
+      "service_slug": "epassport-new-application",
+      "catalogue_service_id": "epassport-new-application",
+      "domain": "passport",
+      "service_type": "application",
+      "variants": {
+        "passport_type": ["e_passport"],
+        "actions": ["new", "application"],
+        "channels": ["domestic", "online"],
+        "applicants": ["adult", "minor"]
+      },
+      "intent_capabilities": ["application", "document_list", "procedure_inquiry", "eligibility", "general_info"],
+      "capability_keywords": ["new", "first time", "apply", "onboarding", "application", "new passport", "minor", "parent nid", "photo size"],
+      "aliases_en": ["new e-passport", "e-passport application", "apply e-passport"],
+      "aliases_bn": ["নতুন ই-পাসপোর্ট", "ই-পাসপোর্ট আবেদন"],
+      "aliases_banglish": ["new e passport", "e passport apply", "e passport korte chai"],
+      "intent_boost": {"application": 30, "document_list": 20}
+    },
+    {
+      "service_slug": "passport-renewal",
+      "catalogue_service_id": "epassport-reissue",
+      "domain": "passport",
+      "service_type": "reissue",
+      "variants": {
+        "passport_type": ["e_passport"],
+        "actions": ["reissue", "renewal"],
+        "channels": ["domestic", "online", "mission"]
+      },
+      "intent_capabilities": ["renewal", "reissue", "document_list", "procedure_inquiry", "fee_inquiry", "lost_document", "correction", "damaged_document"],
+      "capability_keywords": ["reissue", "renew", "renewal", "re-issue", "lost", "damaged", "correction"],
+      "aliases_en": ["e-passport reissue", "passport renew", "passport renewal", "passport reissue"],
+      "aliases_bn": ["পাসপোর্ট নবায়ন", "পুনঃইssue"],
+      "aliases_banglish": ["passport renew", "passport reissue", "passport renewal"],
+      "intent_boost": {"renewal": 25, "reissue": 25, "lost_document": 20}
+    },
+    {
+      "service_slug": "epassport-application-status",
+      "catalogue_service_id": "epassport-application-status",
+      "domain": "passport",
+      "service_type": "status",
+      "variants": {
+        "passport_type": ["e_passport"],
+        "actions": ["status", "tracking"],
+        "channels": ["online"]
+      },
+      "intent_capabilities": ["status", "procedure_inquiry", "general_info"],
+      "capability_keywords": ["status", "tracking", "check", "application status", "online registration id"],
+      "aliases_en": ["e-passport status", "epassport status check", "application status"],
+      "aliases_bn": ["ই-পাসপোর্ট স্ট্যাটাস", "আবেদনের অবস্থা"],
+      "aliases_banglish": ["passport status", "e passport status", "status check"],
+      "intent_boost": {"status": 40}
+    },
+    {
+      "service_slug": "passport-application-status",
+      "catalogue_service_id": "passport-application-status",
+      "domain": "passport",
+      "service_type": "status",
+      "variants": {
+        "passport_type": ["mrp"],
+        "actions": ["status", "tracking"],
+        "channels": ["online"]
+      },
+      "intent_capabilities": ["status", "procedure_inquiry"],
+      "capability_keywords": ["mrp status", "enrolment id", "online status", "passport status mrp"],
+      "aliases_en": ["mrp status", "passport online status", "enrolment id status"],
+      "aliases_bn": ["পাসপোর্ট স্ট্যাটাস"],
+      "aliases_banglish": ["mrp status check", "passport status mrp"],
+      "intent_boost": {"status": 35}
+    },
+    {
+      "service_slug": "epassport-enrollment-appointment",
+      "catalogue_service_id": "epassport-enrollment-appointment",
+      "domain": "passport",
+      "service_type": "appointment",
+      "variants": {
+        "passport_type": ["e_passport"],
+        "actions": ["appointment", "enrollment"],
+        "channels": ["domestic"]
+      },
+      "intent_capabilities": ["appointment", "document_list", "procedure_inquiry"],
+      "capability_keywords": ["appointment", "enrollment", "biometric", "booking", "slot"],
+      "aliases_en": ["enrollment appointment", "biometric appointment", "passport appointment"],
+      "aliases_bn": ["এনরোলমেন্ট", "অ্যাপয়েন্টমেন্ট"],
+      "aliases_banglish": ["passport appointment", "enrollment appointment", "biometric date"],
+      "intent_boost": {"appointment": 40}
+    },
+    {
+      "service_slug": "epassport-urgent-super-express",
+      "catalogue_service_id": "epassport-urgent-super-express",
+      "domain": "passport",
+      "service_type": "urgent",
+      "variants": {
+        "passport_type": ["e_passport"],
+        "actions": ["urgent", "super_express"],
+        "speeds": ["express", "super_express"],
+        "channels": ["domestic"]
+      },
+      "intent_capabilities": ["eligibility", "fee_inquiry", "procedure_inquiry", "general_info"],
+      "capability_keywords": ["super express", "urgent", "express delivery", "agargaon"],
+      "aliases_en": ["super express passport", "urgent e-passport", "express passport"],
+      "aliases_bn": ["সুপার এক্সপ্রেস", "জরুরি পাসপোর্ট"],
+      "aliases_banglish": ["super express", "urgent passport", "express passport"],
+      "intent_boost": {"eligibility": 25, "fee_inquiry": 15}
+    },
+    {
+      "service_slug": "passport-mrp-initial",
+      "catalogue_service_id": "passport-mrp-initial",
+      "domain": "passport",
+      "service_type": "application",
+      "variants": {
+        "passport_type": ["mrp"],
+        "actions": ["new", "application"],
+        "channels": ["domestic"]
+      },
+      "intent_capabilities": ["application", "document_list", "fee_inquiry", "general_info"],
+      "capability_keywords": ["mrp", "machine readable", "new mrp", "initial passport"],
+      "aliases_en": ["mrp passport", "machine readable passport", "new mrp passport"],
+      "aliases_bn": ["এমআরপি পাসপোর্ট"],
+      "aliases_banglish": ["mrp passport", "mrp apply"],
+      "intent_boost": {"application": 25, "document_list": 15}
+    },
+    {
+      "service_slug": "passport-mrp-reissue",
+      "catalogue_service_id": "passport-mrp-reissue",
+      "domain": "passport",
+      "service_type": "reissue",
+      "variants": {
+        "passport_type": ["mrp"],
+        "actions": ["reissue", "renewal", "correction"],
+        "channels": ["domestic"]
+      },
+      "intent_capabilities": ["reissue", "renewal", "document_list", "correction"],
+      "capability_keywords": ["mrp reissue", "mrp renewal", "mrp correction"],
+      "aliases_en": ["mrp reissue", "mrp renewal"],
+      "aliases_bn": ["এমআরপি পুনঃইssue"],
+      "aliases_banglish": ["mrp reissue", "mrp renew"],
+      "intent_boost": {"reissue": 30, "renewal": 25}
+    },
+    {
+      "service_slug": "police-passport-police-verification",
+      "catalogue_service_id": "police-passport-police-verification",
+      "domain": "passport",
+      "service_type": "verification",
+      "variants": {
+        "passport_type": ["e_passport", "mrp"],
+        "actions": ["police_verification"],
+        "channels": ["domestic", "mission"]
+      },
+      "intent_capabilities": ["procedure_inquiry", "eligibility", "document_list", "general_info"],
+      "capability_keywords": ["police verification", "pv", "police station", "clearance"],
+      "aliases_en": ["passport police verification", "police verification passport"],
+      "aliases_bn": ["পুলিশ ভেরিফিকেশন"],
+      "aliases_banglish": ["police verification", "passport pv"],
+      "intent_boost": {"procedure_inquiry": 20, "eligibility": 20}
+    },
+    {
+      "service_slug": "police-passport-verification",
+      "catalogue_service_id": "police-passport-verification",
+      "domain": "passport",
+      "service_type": "verification",
+      "variants": {
+        "passport_type": ["e_passport", "mrp"],
+        "actions": ["police_verification", "processing_time"],
+        "channels": ["domestic"]
+      },
+      "intent_capabilities": ["processing_time", "procedure_inquiry", "general_info"],
+      "capability_keywords": ["police charter", "verification timeline", "sla", "timeline", "charter"],
+      "aliases_en": ["passport verification timeline", "police verification time"],
+      "aliases_bn": ["পুলিশ ভেরিফিকেশন সময়"],
+      "aliases_banglish": ["pv time", "police verification time"],
+      "intent_boost": {"processing_time": 25}
+    },
+    {
+      "service_slug": "epassport-rpo-secretariat",
+      "catalogue_service_id": "epassport-rpo-secretariat",
+      "domain": "passport",
+      "service_type": "office",
+      "variants": {
+        "passport_type": ["e_passport"],
+        "actions": ["application", "office"],
+        "channels": ["domestic"]
+      },
+      "intent_capabilities": ["office_locator", "procedure_inquiry", "application"],
+      "capability_keywords": ["rpo", "secretariat", "agargaon", "regional passport office"],
+      "aliases_en": ["rpo secretariat", "bangladesh secretariat passport"],
+      "aliases_bn": ["সচিবালয় পাসপোর্ট"],
+      "aliases_banglish": ["rpo secretariat", "secretariat passport"],
+      "intent_boost": {"office_locator": 25, "application": 15}
+    },
+    {
+      "service_slug": "birth-registration",
+      "domain": "civil_registration",
+      "service_type": "registration",
+      "variants": {"actions": ["new", "registration"]},
+      "intent_capabilities": ["document_list", "procedure_inquiry", "fee_inquiry", "application"],
+      "capability_keywords": ["birth registration", "birth certificate register"],
+      "aliases_en": ["birth registration"],
+      "aliases_bn": ["জন্ম নিবন্ধন", "জন্ম সনদ"],
+      "aliases_banglish": ["jonmo nibondhon", "birth registration"],
+      "intent_boost": {"document_list": 25, "application": 20}
+    },
+    {
+      "service_slug": "civil-birth-registration-correction",
+      "domain": "civil_registration",
+      "service_type": "correction",
+      "variants": {"actions": ["correction"], "subjects": ["birth"]},
+      "intent_capabilities": ["correction", "document_list", "fee_inquiry"],
+      "capability_keywords": ["birth correction", "dob correction", "name correction birth"],
+      "aliases_en": ["birth registration correction", "birth date correction"],
+      "aliases_bn": ["জন্ম সংশোধন", "জন্ম তথ্য সংশোধন"],
+      "aliases_banglish": ["birth correction"],
+      "intent_boost": {"correction": 35}
+    },
+    {
+      "service_slug": "civil-birth-death-verify",
+      "domain": "civil_registration",
+      "service_type": "verification",
+      "variants": {"actions": ["verify"]},
+      "intent_capabilities": ["procedure_inquiry", "application", "general_info"],
+      "capability_keywords": ["everify", "verify birth", "verify death", "birth certificate verify"],
+      "aliases_en": ["birth verify", "everify bdris"],
+      "aliases_bn": ["যাচাই", "জন্ম সনদ যাচাই"],
+      "aliases_banglish": ["everify", "birth verify"],
+      "intent_boost": {"procedure_inquiry": 30}
+    },
+    {
+      "service_slug": "nid-correction",
+      "domain": "identity",
+      "service_type": "correction",
+      "variants": {"actions": ["correction"]},
+      "intent_capabilities": ["correction", "document_list", "fee_inquiry"],
+      "capability_keywords": ["nid correction", "national id correction"],
+      "aliases_en": ["nid correction", "nid card correction"],
+      "aliases_bn": ["এনআইডি সংশোধন"],
+      "aliases_banglish": ["nid correction", "nid soshodon"],
+      "intent_boost": {"correction": 30, "fee_inquiry": 20}
+    },
+    {
+      "service_slug": "nid-reissue-lost",
+      "domain": "identity",
+      "service_type": "reissue",
+      "variants": {"actions": ["reissue", "lost_document"]},
+      "intent_capabilities": ["reissue", "lost_document", "document_list", "fee_inquiry"],
+      "capability_keywords": ["lost nid", "nid reissue", "nid lost"],
+      "aliases_en": ["lost nid", "nid reissue"],
+      "aliases_bn": ["হারানো এনআইডি"],
+      "aliases_banglish": ["lost nid", "nid harano"],
+      "intent_boost": {"lost_document": 30, "reissue": 25}
+    },
+    {
+      "service_slug": "nid-fee-calculator",
+      "domain": "identity",
+      "service_type": "fee_payment",
+      "variants": {"actions": ["fee"]},
+      "intent_capabilities": ["fee_inquiry"],
+      "capability_keywords": ["nid fee calculator", "nid fee"],
+      "aliases_en": ["nid fee calculator"],
+      "aliases_bn": ["এনআইডি ফি"],
+      "aliases_banglish": ["nid fee koto", "nid fee calculator"],
+      "intent_boost": {"fee_inquiry": 35}
+    },
+    {
+      "service_slug": "driving-licence-renewal",
+      "domain": "transport",
+      "service_type": "renewal",
+      "variants": {"actions": ["renewal"]},
+      "intent_capabilities": ["renewal", "document_list", "fee_inquiry", "procedure_inquiry"],
+      "capability_keywords": ["driving licence", "license renewal", "brta"],
+      "aliases_en": ["driving licence renewal", "driving license renew"],
+      "aliases_bn": ["ড্রাইভিং লাইসেন্স"],
+      "aliases_banglish": ["driving licence renew"],
+      "intent_boost": {"renewal": 30}
+    },
+    {
+      "service_slug": "tin-registration",
+      "domain": "tax",
+      "service_type": "registration",
+      "variants": {"actions": ["new", "registration"]},
+      "intent_capabilities": ["application", "procedure_inquiry", "document_list"],
+      "capability_keywords": ["tin registration", "e-tin", "etin"],
+      "aliases_en": ["tin registration", "e-tin registration"],
+      "aliases_bn": ["টিন"],
+      "aliases_banglish": ["tin registration"],
+      "intent_boost": {"application": 25}
+    },
+    {
+      "service_slug": "local-character-certificate",
+      "domain": "civil_registration",
+      "service_type": "certificate",
+      "variants": {"actions": ["application", "office"]},
+      "intent_capabilities": ["office_locator", "procedure_inquiry", "document_list", "general_info"],
+      "capability_keywords": ["character certificate", "citizenship certificate", "local certificate"],
+      "aliases_en": ["character certificate", "local character certificate", "citizenship and character certificate"],
+      "aliases_bn": ["চারিত্রিক সনদ"],
+      "aliases_banglish": ["character certificate"],
+      "intent_boost": {"office_locator": 35, "document_list": 20}
+    },
+    {
+      "service_slug": "civil-marriage-registrar-muslim-list",
+      "domain": "civil_registration",
+      "service_type": "registry_list",
+      "variants": {"actions": ["list"]},
+      "intent_capabilities": ["general_info", "application_url", "document_list"],
+      "capability_keywords": ["muslim marriage registrar", "muslim registrar list", "nikah registrar"],
+      "aliases_en": ["muslim marriage registrar list", "muslim registrar list"],
+      "aliases_bn": ["মুসলিম বিবাহ রেজিস্ট্রার"],
+      "aliases_banglish": ["muslim marriage registrar"],
+      "intent_boost": {"general_info": 30}
+    },
+    {
+      "service_slug": "civil-marriage-registrar-hindu-list",
+      "domain": "civil_registration",
+      "service_type": "registry_list",
+      "variants": {"actions": ["list"]},
+      "intent_capabilities": ["general_info", "application_url", "document_list"],
+      "capability_keywords": ["hindu marriage registrar", "hindu registrar list"],
+      "aliases_en": ["hindu marriage registrar list", "hindu registrar list"],
+      "aliases_bn": ["হিন্দু বিবাহ রেজিস্ট্রার"],
+      "aliases_banglish": ["hindu marriage registrar"],
+      "intent_boost": {"general_info": 30}
+    },
+    {
+      "service_slug": "police-general-diary",
+      "catalogue_service_id": "police-general-diary",
+      "domain": "police",
+      "service_type": "application",
+      "variants": {"channels": ["domestic", "offline"], "actions": ["procedure", "application"]},
+      "intent_capabilities": ["procedure_inquiry", "fee_inquiry", "processing_time", "document_list", "general_info"],
+      "capability_keywords": ["general diary", "gd", "thana", "police station diary"],
+      "aliases_en": ["general diary", "gd at police station", "file gd"],
+      "aliases_bn": ["জিডি", "সাধারণ ডায়েরি"],
+      "aliases_banglish": ["gd", "general diary", "genaral diary"],
+      "intent_boost": {"procedure_inquiry": 25, "processing_time": 20}
+    },
+    {
+      "service_slug": "police-general-diary-online",
+      "catalogue_service_id": "police-general-diary-online",
+      "domain": "police",
+      "service_type": "application",
+      "variants": {"channels": ["online"], "actions": ["procedure", "application"]},
+      "intent_capabilities": ["procedure_inquiry", "application_url", "fee_inquiry", "processing_time", "document_list"],
+      "capability_keywords": ["online gd", "gd online", "gd portal", "gd.police.gov.bd"],
+      "aliases_en": ["online general diary", "online gd", "gd online portal"],
+      "aliases_bn": ["অনলাইন জিডি"],
+      "aliases_banglish": ["online gd", "gd online", "online gd kora jay"],
+      "intent_boost": {"procedure_inquiry": 30, "application_url": 25}
+    },
+    {
+      "service_slug": "police-clearance-certificate",
+      "catalogue_service_id": "police-clearance-certificate",
+      "domain": "police",
+      "service_type": "application",
+      "variants": {"channels": ["online", "offline"], "actions": ["application", "fee"]},
+      "intent_capabilities": ["fee_inquiry", "procedure_inquiry", "processing_time", "document_list", "application_url", "eligibility"],
+      "capability_keywords": ["police clearance", "pcc", "clearance certificate"],
+      "aliases_en": ["police clearance certificate", "pcc", "police clearance"],
+      "aliases_bn": ["পুলিশ ক্লিয়ারেন্স", "পুলিশ ক্লিয়ারেন্স"],
+      "aliases_banglish": ["pcc", "police clearance", "police clearence"],
+      "intent_boost": {"fee_inquiry": 30, "processing_time": 25}
+    },
+    {
+      "service_slug": "police-employment-verification",
+      "catalogue_service_id": "police-employment-verification",
+      "domain": "police",
+      "service_type": "verification",
+      "variants": {"channels": ["domestic"], "actions": ["verification", "processing_time"]},
+      "intent_capabilities": ["procedure_inquiry", "fee_inquiry", "processing_time", "document_list"],
+      "capability_keywords": ["employment verification", "employer verification", "special branch employment"],
+      "aliases_en": ["employment verification", "employer verification"],
+      "aliases_bn": ["চাকরির ভেরিফিকেশন"],
+      "aliases_banglish": ["employment verification"],
+      "intent_boost": {"processing_time": 20, "procedure_inquiry": 20}
+    },
+    {
+      "service_slug": "migration-visa-application-dip",
+      "catalogue_service_id": "migration-visa-application-dip",
+      "domain": "immigration",
+      "service_type": "application",
+      "variants": {"channels": ["online", "domestic"], "actions": ["application", "fee"]},
+      "intent_capabilities": ["application_url", "fee_inquiry", "document_list", "procedure_inquiry", "general_info"],
+      "capability_keywords": ["visa application", "mrv", "dip", "visa.gov.bd", "immigration department"],
+      "aliases_en": ["bangladesh visa", "mrv visa", "visa application dip", "department of immigration"],
+      "aliases_bn": ["ভিসা আবেদন", "ইমিগ্রেশন"],
+      "aliases_banglish": ["mrv fee", "mrv visa", "visa application kothay"],
+      "intent_boost": {"application_url": 25, "fee_inquiry": 30, "document_list": 20}
+    },
+    {
+      "service_slug": "police-firearms-license",
+      "catalogue_service_id": "police-firearms-license",
+      "domain": "police",
+      "service_type": "licence",
+      "variants": {"channels": ["domestic"], "actions": ["application", "processing_time"]},
+      "intent_capabilities": ["procedure_inquiry", "fee_inquiry", "processing_time", "document_list", "general_info"],
+      "capability_keywords": ["firearms license", "gun license", "arms license"],
+      "aliases_en": ["firearms license", "gun license"],
+      "aliases_bn": ["আগ্নেয়াস্ত্র লাইসেন্স"],
+      "aliases_banglish": ["fire arms license", "gun license"],
+      "intent_boost": {"processing_time": 20, "procedure_inquiry": 20}
+    },
+    {
+      "service_slug": "police-expatriate-services",
+      "catalogue_service_id": "police-expatriate-services",
+      "domain": "police",
+      "service_type": "office",
+      "variants": {"channels": ["domestic"], "actions": ["application"]},
+      "intent_capabilities": ["general_info", "procedure_inquiry", "fee_inquiry"],
+      "capability_keywords": ["expatriate cell", "probashi cell", "expatriate services"],
+      "aliases_en": ["expatriate cell", "expatriate services police"],
+      "aliases_bn": ["প্রবাসী সেল"],
+      "aliases_banglish": ["probashi cell", "expatriate cell"],
+      "intent_boost": {"general_info": 25}
+    }
+  ]
+}

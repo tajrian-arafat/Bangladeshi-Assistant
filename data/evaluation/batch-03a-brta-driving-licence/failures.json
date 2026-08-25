@@ -1,0 +1,1103 @@
+[
+  {
+    "id": "a001",
+    "query": "Learner driving license kothay apply korbo?",
+    "category": "LEARNER",
+    "expected": {
+      "id": "a001",
+      "query": "Learner driving license kothay apply korbo?",
+      "language": "banglish",
+      "category": "LEARNER",
+      "service_expected": "brta-learner-driving-license",
+      "intent_expected": "application_url",
+      "expect": {
+        "must_include_url": "bsp.brta.gov.bd",
+        "must_mention_bsp_register": true
+      }
+    },
+    "actual": {
+      "language": "banglish",
+      "normalized_message": "learner driving licence where apply how",
+      "intent": "application_url",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "url": false,
+      "official_url": false,
+      "bsp_register": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-learner-driving-license got=driving-licence-renewal",
+      "missing official URL containing bsp.brta.gov.bd",
+      "missing official URL fragment: bsp.brta.gov.bd",
+      "BSP registration prerequisite not mentioned"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a004",
+    "query": "শিক্ষানবিশ ড্রাইভিং লাইসেন্স আবেদন",
+    "category": "LEARNER",
+    "expected": {
+      "id": "a004",
+      "query": "শিক্ষানবিশ ড্রাইভিং লাইসেন্স আবেদন",
+      "language": "bn",
+      "category": "LEARNER",
+      "service_expected": "brta-learner-driving-license",
+      "intent_expected": "procedure_inquiry",
+      "expect": {
+        "must_include_url": "drivinglicense"
+      }
+    },
+    "actual": {
+      "language": "bn",
+      "normalized_message": "শিক্ষানবিশ ড্রাইভিং লাইসেন্স আবেদন",
+      "intent": "procedure_inquiry",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "Apnar jonno shothik tottho dite, ekti follow-up proshno ache.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-learner-driving-license got=driving-licence-renewal",
+      "missing official URL containing drivinglicense",
+      "missing official URL fragment: drivinglicense"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a005",
+    "query": "Driving license renewal online Bangladesh",
+    "category": "RENEWAL",
+    "expected": {
+      "id": "a005",
+      "query": "Driving license renewal online Bangladesh",
+      "language": "en",
+      "category": "RENEWAL",
+      "service_expected": "brta-driving-license-renewal",
+      "intent_expected": "application_url",
+      "expect": {
+        "must_include_url": "bsp.brta.gov.bd"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "driving licence renewal online bangladesh",
+      "intent": "document_list",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-driving-license-renewal got=driving-licence-renewal",
+      "intent mismatch: expected=application_url got=document_list",
+      "missing official URL containing bsp.brta.gov.bd",
+      "missing official URL fragment: bsp.brta.gov.bd"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a006",
+    "query": "DL renewal fee BRTA",
+    "category": "RENEWAL",
+    "expected": {
+      "id": "a006",
+      "query": "DL renewal fee BRTA",
+      "language": "en",
+      "category": "RENEWAL",
+      "service_expected": "brta-driving-license-renewal",
+      "intent_expected": "fee_inquiry",
+      "expect": {
+        "must_not_invent_fee": true,
+        "uncertainty_ok": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "dl renewal fee brta",
+      "intent": "fee_inquiry",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "no_invention": true,
+      "uncertainty": true,
+      "no_invented_fee": true
+    },
+    "reasons": [
+      "service mismatch: expected=brta-driving-license-renewal got=driving-licence-renewal"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 0,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a007",
+    "query": "License renew korar age ki korte hobe?",
+    "category": "RENEWAL",
+    "expected": {
+      "id": "a007",
+      "query": "License renew korar age ki korte hobe?",
+      "language": "banglish",
+      "category": "RENEWAL",
+      "service_expected": "brta-driving-license-renewal",
+      "intent_expected": "procedure_inquiry",
+      "expect": {
+        "must_include_url": "bsp.brta.gov.bd"
+      }
+    },
+    "actual": {
+      "language": "banglish",
+      "normalized_message": "licence renewal korar age what apply hobe",
+      "intent": "document_list",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-driving-license-renewal got=driving-licence-renewal",
+      "intent mismatch: expected=procedure_inquiry got=document_list",
+      "missing official URL containing bsp.brta.gov.bd",
+      "missing official URL fragment: bsp.brta.gov.bd"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a008",
+    "query": "ড্রাইভিং লাইসেন্স নবায়ন পোর্টাল",
+    "category": "RENEWAL",
+    "expected": {
+      "id": "a008",
+      "query": "ড্রাইভিং লাইসেন্স নবায়ন পোর্টাল",
+      "language": "bn",
+      "category": "RENEWAL",
+      "service_expected": "brta-driving-license-renewal",
+      "intent_expected": "application_url",
+      "expect": {
+        "must_include_url": "bsp.brta.gov.bd/bsp"
+      }
+    },
+    "actual": {
+      "language": "bn",
+      "normalized_message": "ড্রাইভিং লাইসেন্স নবায়ন পোর্টাল",
+      "intent": "document_list",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "Apnar jonno shothik tottho dite, ekti follow-up proshno ache.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-driving-license-renewal got=driving-licence-renewal",
+      "intent mismatch: expected=application_url got=document_list",
+      "missing official URL containing bsp.brta.gov.bd/bsp",
+      "missing official URL fragment: bsp.brta.gov.bd/bsp"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a009",
+    "query": "Lost driving license duplicate apply",
+    "category": "DUPLICATE",
+    "expected": {
+      "id": "a009",
+      "query": "Lost driving license duplicate apply",
+      "language": "en",
+      "category": "DUPLICATE",
+      "service_expected": "brta-duplicate-driving-license",
+      "intent_expected": "procedure_inquiry",
+      "expect": {
+        "must_include_url": "bsp.brta.gov.bd"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "lost driving licence duplicate apply",
+      "intent": "procedure_inquiry",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-duplicate-driving-license got=driving-licence-renewal",
+      "missing official URL containing bsp.brta.gov.bd",
+      "missing official URL fragment: bsp.brta.gov.bd"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a011",
+    "query": "Harano license er jonno GD lagbe?",
+    "category": "DUPLICATE",
+    "expected": {
+      "id": "a011",
+      "query": "Harano license er jonno GD lagbe?",
+      "language": "banglish",
+      "category": "DUPLICATE",
+      "service_expected": "brta-duplicate-driving-license",
+      "intent_expected": "document_list",
+      "expect": {
+        "uncertainty_ok": true,
+        "allow_brta_driving_family": true
+      }
+    },
+    "actual": {
+      "language": "banglish",
+      "normalized_message": "harano licence er jonno gd required",
+      "intent": "document_list",
+      "service_slug": "police-general-diary",
+      "support_level": "PARTIALLY_SUPPORTED",
+      "confidence": "medium",
+      "summary": "Here is available structured information for Online General Diary (GD). This is not fully verified official guidance yet.",
+      "fees": [
+        {
+          "amount": "0",
+          "currency": "BDT",
+          "evidence_id": "3b050b7a-5d77-407b-ba5b-e597d3070243",
+          "label": "Citizen charter lists GD service fee as free (বিনামূল্যে).",
+          "fee_mode": null
+        }
+      ],
+      "warnings": [
+        "Only some facts for this service are verified. Treat unverified parts as provisional.",
+        "Application URL is from the service catalogue reference; live portal verification is pending."
+      ],
+      "official_urls": [
+        "https://gd.police.gov.bd/"
+      ],
+      "citations": [
+        {
+          "evidence_id": "e530fd5a-55e5-458b-9c53-1da0aaa6bd84",
+          "source_title": "Citizen charter lists GD service fee as free (বিনামূল্যে).",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T22:53:05.228339",
+          "excerpt": "Charter row 3: GD fee 'বিনামূল্যে'."
+        },
+        {
+          "evidence_id": "43c33f05-0973-44ff-92d9-6ddbae45b879",
+          "source_title": "Citizen charter official SLA for GD: 1–7 days.",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T22:53:05.228339",
+          "excerpt": "Charter row 3: GD service time '১-৭ দিন'."
+        },
+        {
+          "evidence_id": "76e68131-1fc7-4df5-b895-c1ad8659b5ba",
+          "source_title": "Citizen charter states GD available directly at police station and online.",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T22:53:05.228339",
+          "excerpt": "Charter row 3: 'সরাসরি ও অনলাইনে'."
+        },
+        {
+          "evidence_id": "181e9400-2133-4243-9b5d-b96ab9d9055e",
+          "source_title": "GD handled at relevant police station / unit (থানা).",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T22:53:05.228339",
+          "excerpt": "Charter row 3: receiving unit 'থানা'."
+        }
+      ]
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "uncertainty": true
+    },
+    "reasons": [
+      "service mismatch: expected=brta-duplicate-driving-license got=police-general-diary"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 0,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a012",
+    "query": "Smart card driving license apply Bangladesh",
+    "category": "SMART_CARD",
+    "expected": {
+      "id": "a012",
+      "query": "Smart card driving license apply Bangladesh",
+      "language": "en",
+      "category": "SMART_CARD",
+      "service_expected": "brta-smart-card-driving-license",
+      "intent_expected": "application_url",
+      "expect": {
+        "must_include_url": "bsp.brta.gov.bd"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "smart card driving licence apply bangladesh",
+      "intent": "procedure_inquiry",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-smart-card-driving-license got=driving-licence-renewal",
+      "intent mismatch: expected=application_url got=procedure_inquiry",
+      "missing official URL containing bsp.brta.gov.bd",
+      "missing official URL fragment: bsp.brta.gov.bd"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a013",
+    "query": "Smart card license er age ki test lagbe?",
+    "category": "SMART_CARD",
+    "expected": {
+      "id": "a013",
+      "query": "Smart card license er age ki test lagbe?",
+      "language": "banglish",
+      "category": "SMART_CARD",
+      "service_expected": "brta-smart-card-driving-license",
+      "intent_expected": "procedure_inquiry",
+      "expect": {
+        "must_mention_dctc": true
+      }
+    },
+    "actual": {
+      "language": "banglish",
+      "normalized_message": "smart card licence er age what test required",
+      "intent": "document_list",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "dctc_mention": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-smart-card-driving-license got=driving-licence-renewal",
+      "intent mismatch: expected=procedure_inquiry got=document_list",
+      "DCTC examination pathway not mentioned"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 0,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a014",
+    "query": "Professional driving license smart card fee",
+    "category": "SMART_CARD",
+    "expected": {
+      "id": "a014",
+      "query": "Professional driving license smart card fee",
+      "language": "en",
+      "category": "SMART_CARD",
+      "service_expected": "brta-smart-card-driving-license",
+      "intent_expected": "fee_inquiry",
+      "expect": {
+        "must_not_invent_fee": true,
+        "uncertainty_ok": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "professional driving licence smart card fee",
+      "intent": "fee_inquiry",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "no_invention": true,
+      "uncertainty": true,
+      "no_invented_fee": true
+    },
+    "reasons": [
+      "service mismatch: expected=brta-smart-card-driving-license got=driving-licence-renewal"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 0,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a015",
+    "query": "Learner theke smart card license pathway",
+    "category": "SMART_CARD",
+    "expected": {
+      "id": "a015",
+      "query": "Learner theke smart card license pathway",
+      "language": "banglish",
+      "category": "SMART_CARD",
+      "service_expected": "brta-smart-card-driving-license",
+      "intent_expected": "procedure_inquiry",
+      "expect": {
+        "must_mention_dctc": true,
+        "allow_brta_driving_family": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "learner theke smart card licence pathway",
+      "intent": "general_info",
+      "service_slug": null,
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "summary": "I could not match your query to a government service in the catalog. Try browsing the service catalog or rephrase your question.",
+      "fees": [],
+      "warnings": [
+        "No service match found."
+      ],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "dctc_mention": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-smart-card-driving-license got=None",
+      "intent mismatch: expected=procedure_inquiry got=general_info",
+      "DCTC examination pathway not mentioned"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 0,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a016",
+    "query": "Driving instructor license Bangladesh",
+    "category": "INSTRUCTOR",
+    "expected": {
+      "id": "a016",
+      "query": "Driving instructor license Bangladesh",
+      "language": "en",
+      "category": "INSTRUCTOR",
+      "service_expected": "brta-driving-instructor-license",
+      "intent_expected": "application_url",
+      "expect": {
+        "must_include_url": "brta.portal.gov.bd"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "driving instructor licence bangladesh",
+      "intent": "general_info",
+      "service_slug": "brta-driving-instructor-license",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "summary": "Here is available structured information for Driving Instructor License. This is not fully verified official guidance yet. PRACTICAL notes (commonly reported, NOT official MUST NEED) are listed separately.",
+      "fees": [],
+      "warnings": [
+        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Application URL is from the service catalogue reference; live portal verification is pending."
+      ],
+      "official_urls": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922db6c933eb65569e0a116"
+      ],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": true,
+      "intent": false,
+      "url": true,
+      "official_url": true
+    },
+    "reasons": [
+      "intent mismatch: expected=application_url got=general_info"
+    ],
+    "failure_class": "OTHER",
+    "citation_failures": 0,
+    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
+  },
+  {
+    "id": "a017",
+    "query": "Motor driving instructor license requirements",
+    "category": "INSTRUCTOR",
+    "expected": {
+      "id": "a017",
+      "query": "Motor driving instructor license requirements",
+      "language": "en",
+      "category": "INSTRUCTOR",
+      "service_expected": "brta-driving-instructor-license",
+      "intent_expected": "document_list",
+      "expect": {
+        "uncertainty_ok": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "motor driving instructor licence requirements",
+      "intent": "general_info",
+      "service_slug": "brta-driving-instructor-license",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "summary": "Here is available structured information for Driving Instructor License. This is not fully verified official guidance yet. PRACTICAL notes (commonly reported, NOT official MUST NEED) are listed separately.",
+      "fees": [],
+      "warnings": [
+        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Application URL is from the service catalogue reference; live portal verification is pending."
+      ],
+      "official_urls": [
+        "http://brta.portal.gov.bd/pages/static-pages/6922db6c933eb65569e0a116"
+      ],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": true,
+      "intent": false,
+      "uncertainty": true
+    },
+    "reasons": [
+      "intent mismatch: expected=document_list got=general_info"
+    ],
+    "failure_class": "OTHER",
+    "citation_failures": 0,
+    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
+  },
+  {
+    "id": "a018",
+    "query": "Instructor license fee 2000 taka?",
+    "category": "INSTRUCTOR",
+    "expected": {
+      "id": "a018",
+      "query": "Instructor license fee 2000 taka?",
+      "language": "banglish",
+      "category": "INSTRUCTOR",
+      "service_expected": "brta-driving-instructor-license",
+      "intent_expected": "fee_inquiry",
+      "expect": {
+        "must_not_invent_fee": true,
+        "must_reject_amount": "2000",
+        "uncertainty_ok": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "instructor licence fee 2000 taka",
+      "intent": "fee_inquiry",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "reject_amount": false,
+      "no_invention": true,
+      "uncertainty": true,
+      "no_invented_fee": true
+    },
+    "reasons": [
+      "service mismatch: expected=brta-driving-instructor-license got=driving-licence-renewal",
+      "failed to reject unsupported amount 2000"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 0,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a019",
+    "query": "DCTC exam result kothay dekhte hobe?",
+    "category": "DCTC_RESULT",
+    "expected": {
+      "id": "a019",
+      "query": "DCTC exam result kothay dekhte hobe?",
+      "language": "banglish",
+      "category": "DCTC_RESULT",
+      "service_expected": "brta-dctc-exam-result",
+      "intent_expected": "application_url",
+      "expect": {
+        "must_include_url": "dctbresult"
+      }
+    },
+    "actual": {
+      "language": "banglish",
+      "normalized_message": "dctc exam result where dekhte hobe",
+      "intent": "office_locator",
+      "service_slug": "epassport-rpo-secretariat",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "summary": "Here is available structured information for Application at RPO Bangladesh Secretariat. This is not fully verified official guidance yet.",
+      "fees": [],
+      "warnings": [
+        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Application URL is from the service catalogue reference; live portal verification is pending."
+      ],
+      "official_urls": [
+        "https://epassport.gov.bd/instructions/application-form"
+      ],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-dctc-exam-result got=epassport-rpo-secretariat",
+      "intent mismatch: expected=application_url got=office_locator",
+      "missing official URL containing dctbresult",
+      "missing official URL fragment: dctbresult"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a020",
+    "query": "Driving test result division wise BRTA",
+    "category": "DCTC_RESULT",
+    "expected": {
+      "id": "a020",
+      "query": "Driving test result division wise BRTA",
+      "language": "en",
+      "category": "DCTC_RESULT",
+      "service_expected": "brta-dctc-exam-result",
+      "intent_expected": "procedure_inquiry",
+      "expect": {
+        "must_include_url": "bsp.brta.gov.bd"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "driving test result division wise brta",
+      "intent": "document_list",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-dctc-exam-result got=driving-licence-renewal",
+      "intent mismatch: expected=procedure_inquiry got=document_list",
+      "missing official URL containing bsp.brta.gov.bd",
+      "missing official URL fragment: bsp.brta.gov.bd"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a021",
+    "query": "DCTC result check after field test",
+    "category": "DCTC_RESULT",
+    "expected": {
+      "id": "a021",
+      "query": "DCTC result check after field test",
+      "language": "en",
+      "category": "DCTC_RESULT",
+      "service_expected": "brta-dctc-exam-result",
+      "intent_expected": "procedure_inquiry",
+      "expect": {
+        "must_include_url": "dctbresult"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "dctc result check after field test",
+      "intent": "procedure_inquiry",
+      "service_slug": "epassport-application-status",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "low",
+      "summary": "Here is available structured information for e-Passport Application Status Check. This is not fully verified official guidance yet.",
+      "fees": [],
+      "warnings": [
+        "Guidance below is incomplete or not yet verified from official sources. Confirm with the responsible government office.",
+        "Fee information is not yet verified. Confirm at the official office.",
+        "Application URL is from the service catalogue reference; live portal verification is pending."
+      ],
+      "official_urls": [
+        "https://www.epassport.gov.bd/authorization/application-status"
+      ],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-dctc-exam-result got=epassport-application-status",
+      "missing official URL containing dctbresult",
+      "missing official URL fragment: dctbresult"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a022",
+    "query": "BSP registration driver account",
+    "category": "LEARNER",
+    "expected": {
+      "id": "a022",
+      "query": "BSP registration driver account",
+      "language": "en",
+      "category": "LEARNER",
+      "service_expected": "brta-learner-driving-license",
+      "intent_expected": "procedure_inquiry",
+      "expect": {
+        "must_include_url": "register"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "bsp registration driver account",
+      "intent": "procedure_inquiry",
+      "service_slug": "civil-birth-death-verify",
+      "support_level": "VERIFIED",
+      "confidence": "high",
+      "summary": "Here is verified structured guidance for Birth and Death Record Verification. Facts below are backed by verified official claims.",
+      "fees": [],
+      "warnings": [
+        "Fee information is not yet verified. Confirm at the official office."
+      ],
+      "official_urls": [
+        "https://everify.bdris.gov.bd/"
+      ],
+      "citations": [
+        {
+          "evidence_id": "393d2a99-0220-4e8f-bca9-ed99443f4c60",
+          "source_title": "Birth and death records can be verified via everify.bdris.gov.bd.",
+          "source_url": "https://everify.bdris.gov.bd/",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Verified official URL for Birth and Death Record Verification"
+        },
+        {
+          "evidence_id": "b201930b-a4be-413f-ada7-446ff312f6f2",
+          "source_title": "Birth and death records can be verified via everify.bdris.gov.bd.",
+          "source_url": null,
+          "tier": 1,
+          "last_verified_at": "2026-08-24T19:28:51.522618",
+          "excerpt": "Birth and death records can be verified via everify.bdris.gov.bd."
+        }
+      ]
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": true,
+      "url": false,
+      "official_url": false
+    },
+    "reasons": [
+      "service mismatch: expected=brta-learner-driving-license got=civil-birth-death-verify",
+      "missing official URL containing register",
+      "missing official URL fragment: register"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 2,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a023",
+    "query": "https://fake-brta.example/learner-license apply",
+    "category": "ANTI_HALLUCINATION",
+    "expected": {
+      "id": "a023",
+      "query": "https://fake-brta.example/learner-license apply",
+      "language": "en",
+      "category": "ANTI_HALLUCINATION",
+      "service_expected": "brta-learner-driving-license",
+      "intent_expected": "application_url",
+      "expect": {
+        "must_not_hallucinate": true,
+        "fake_url": "https://fake-brta.example/learner-license"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "apply",
+      "intent": "procedure_inquiry",
+      "service_slug": null,
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": false,
+      "intent": false,
+      "no_hallucination": true
+    },
+    "reasons": [
+      "service mismatch: expected=brta-learner-driving-license got=None",
+      "intent mismatch: expected=application_url got=procedure_inquiry"
+    ],
+    "failure_class": "RETRIEVAL_BUG",
+    "citation_failures": 0,
+    "recommended_fix": "Improve service matching (Bangla aliases, phrase hints, published-claim boost)."
+  },
+  {
+    "id": "a024",
+    "query": "BRTA driving license",
+    "category": "GENERAL",
+    "expected": {
+      "id": "a024",
+      "query": "BRTA driving license",
+      "language": "en",
+      "category": "GENERAL",
+      "service_expected": null,
+      "intent_expected": "general_info",
+      "expect": {
+        "allow_brta_driving_family": true,
+        "clarification_ok": true
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "brta driving licence",
+      "intent": "document_list",
+      "service_slug": "driving-licence-renewal",
+      "support_level": "INSUFFICIENT_EVIDENCE",
+      "confidence": "medium",
+      "summary": "To provide accurate guidance, I need one follow-up answer.",
+      "fees": [],
+      "warnings": [],
+      "official_urls": [],
+      "citations": []
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "intent": false,
+      "service": true
+    },
+    "reasons": [
+      "intent mismatch: expected=general_info got=document_list"
+    ],
+    "failure_class": "OTHER",
+    "citation_failures": 0,
+    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
+  }
+]
