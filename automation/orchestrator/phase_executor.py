@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from automation.orchestrator.batch_manager import BatchManager
+from automation.orchestrator.cloud_executor import CloudExecutor, ExecutionMode
 from automation.orchestrator.phase_completion import (
     batch_slug,
     check_research_complete,
@@ -23,6 +24,7 @@ class PhaseExecutor:
     def __init__(self, repo_root: Path) -> None:
         self.repo_root = repo_root
         self.python = sys.executable
+        self.cloud = CloudExecutor(repo_root)
 
     def _now(self) -> str:
         return datetime.now(timezone.utc).isoformat()
@@ -89,6 +91,68 @@ class PhaseExecutor:
                     )
             else:
                 batch_manager.setup_research_artifacts(batch)
+                run_dir = self.repo_root / ".automation" / "runs" / run_id
+                run_dir.mkdir(parents=True, exist_ok=True)
+                if not self.cloud.executor_available():
+                    self.cloud.write_executor_unavailable_decision(
+                        batch["batch_id"],
+                        "No cloud executor available for generic research",
+                    )
+                    return PhaseResult(
+                        run_id=run_id,
+                        batch_id=batch["batch_id"],
+                        phase="RESEARCH",
+                        status="FAILED",
+                        started_at=started,
+                        completed_at=self._now(),
+                        summary="EXECUTOR_UNAVAILABLE — configure CURSOR_API_KEY or run in Cursor Cloud Agent",
+                        recommended_next_phase="RESEARCH",
+                        metadata={"execution_mode": ExecutionMode.UNAVAILABLE.value},
+                        idempotency_key=f"{batch['batch_id']}:RESEARCH:{run_id}",
+                    )
+                handle = self.cloud.dispatch(
+                    batch=batch,
+                    phase="RESEARCH",
+                    run_id=run_id,
+                    run_dir=run_dir,
+                )
+                if handle.execution_mode == ExecutionMode.UNAVAILABLE:
+                    return PhaseResult(
+                        run_id=run_id,
+                        batch_id=batch["batch_id"],
+                        phase="RESEARCH",
+                        status="FAILED",
+                        started_at=started,
+                        completed_at=self._now(),
+                        summary="EXECUTOR_UNAVAILABLE",
+                        recommended_next_phase="RESEARCH",
+                        metadata={"execution_mode": ExecutionMode.UNAVAILABLE.value},
+                        idempotency_key=f"{batch['batch_id']}:RESEARCH:{run_id}",
+                    )
+                if handle.execution_mode == ExecutionMode.REMOTE_CLOUD:
+                    remote_result = self.cloud.wait_for_remote(handle, run_dir)
+                    if remote_result:
+                        return self.cloud.enrich_result(remote_result, handle)
+                    return PhaseResult(
+                        run_id=run_id,
+                        batch_id=batch["batch_id"],
+                        phase="RESEARCH",
+                        status="PARTIAL",
+                        started_at=started,
+                        completed_at=self._now(),
+                        summary="Waiting for remote Cursor Cloud Agent",
+                        recommended_next_phase="RESEARCH",
+                        metadata={
+                            "execution_mode": "CLOUD",
+                            "agent_id": handle.agent_id,
+                            "agent_run_id": handle.agent_run_id,
+                            "waiting_for_agent": True,
+                        },
+                        idempotency_key=f"{batch['batch_id']}:RESEARCH:{run_id}",
+                    )
+                task = self.cloud.build_task(batch, "RESEARCH", run_id)
+                cloud_result = self.cloud.execute_in_process(task, batch)
+                return self.cloud.enrich_result(cloud_result, handle)
 
         report = check_research_complete(self.repo_root, batch)
         raw = raw_research_dir(self.repo_root, batch)
@@ -135,6 +199,70 @@ class PhaseExecutor:
             idempotency_key=f"{batch['batch_id']}:RESEARCH:complete",
         )
 
+    def _cloud_execute_phase(
+        self,
+        *,
+        run_id: str,
+        batch: dict[str, Any],
+        phase: str,
+        started: str,
+    ) -> PhaseResult | None:
+        """Dispatch to CloudExecutor when no legacy script exists. Returns None if legacy path should run."""
+        run_dir = self.repo_root / ".automation" / "runs" / run_id
+        run_dir.mkdir(parents=True, exist_ok=True)
+        if not self.cloud.executor_available():
+            self.cloud.write_executor_unavailable_decision(batch["batch_id"], f"No executor for {phase}")
+            return PhaseResult(
+                run_id=run_id,
+                batch_id=batch["batch_id"],
+                phase=phase,
+                status="FAILED",
+                started_at=started,
+                completed_at=self._now(),
+                summary="EXECUTOR_UNAVAILABLE",
+                recommended_next_phase=phase,
+                metadata={"execution_mode": ExecutionMode.UNAVAILABLE.value},
+                idempotency_key=f"{batch['batch_id']}:{phase}:{run_id}",
+            )
+        handle = self.cloud.dispatch(batch=batch, phase=phase, run_id=run_id, run_dir=run_dir)
+        if handle.execution_mode == ExecutionMode.UNAVAILABLE:
+            return PhaseResult(
+                run_id=run_id,
+                batch_id=batch["batch_id"],
+                phase=phase,
+                status="FAILED",
+                started_at=started,
+                completed_at=self._now(),
+                summary="EXECUTOR_UNAVAILABLE",
+                recommended_next_phase=phase,
+                metadata={"execution_mode": ExecutionMode.UNAVAILABLE.value},
+                idempotency_key=f"{batch['batch_id']}:{phase}:{run_id}",
+            )
+        if handle.execution_mode == ExecutionMode.REMOTE_CLOUD:
+            remote_result = self.cloud.wait_for_remote(handle, run_dir)
+            if remote_result:
+                return self.cloud.enrich_result(remote_result, handle)
+            return PhaseResult(
+                run_id=run_id,
+                batch_id=batch["batch_id"],
+                phase=phase,
+                status="PARTIAL",
+                started_at=started,
+                completed_at=self._now(),
+                summary="Waiting for remote Cursor Cloud Agent",
+                recommended_next_phase=phase,
+                metadata={
+                    "execution_mode": "CLOUD",
+                    "agent_id": handle.agent_id,
+                    "agent_run_id": handle.agent_run_id,
+                    "waiting_for_agent": True,
+                },
+                idempotency_key=f"{batch['batch_id']}:{phase}:{run_id}",
+            )
+        task = self.cloud.build_task(batch, phase, run_id)
+        cloud_result = self.cloud.execute_in_process(task, batch)
+        return self.cloud.enrich_result(cloud_result, handle)
+
     def execute_verification(self, *, run_id: str, batch: dict[str, Any]) -> PhaseResult:
         started = self._now()
         slug = batch_slug(batch)
@@ -142,17 +270,11 @@ class PhaseExecutor:
         script = f"verify_{prefix}_claims.py"
         script_path = self.repo_root / "scripts" / script
         if not script_path.exists():
-            return PhaseResult(
-                run_id=run_id,
-                batch_id=batch["batch_id"],
-                phase="VERIFICATION",
-                status="FAILED",
-                started_at=started,
-                completed_at=self._now(),
-                summary=f"Missing verification script: {script}",
-                recommended_next_phase="VERIFICATION",
-                idempotency_key=f"{batch['batch_id']}:VERIFICATION:{run_id}",
+            cloud_result = self._cloud_execute_phase(
+                run_id=run_id, batch=batch, phase="VERIFICATION", started=started
             )
+            if cloud_result is not None:
+                return cloud_result
 
         code, output = self._run_script(script, timeout=900)
         verify_path = self.repo_root / "data" / "research" / "verification" / slug / "claims_verification.json"
@@ -276,6 +398,18 @@ class PhaseExecutor:
                     recommended_next_phase="GAP_CLOSURE",
                     idempotency_key=f"{batch['batch_id']}:GAP_CLOSURE:{run_id}",
                 )
+        else:
+            cloud_result = self._cloud_execute_phase(
+                run_id=run_id, batch=batch, phase="GAP_CLOSURE", started=started
+            )
+            if cloud_result is not None:
+                if cloud_result.status == "SUCCESS":
+                    ver_result = self.execute_verification(run_id=run_id, batch=batch)
+                    ver_result.phase = "GAP_CLOSURE"
+                    if ver_result.recommended_next_phase == "GAP_CLOSURE":
+                        ver_result.recommended_next_phase = "PUBLICATION"
+                    return ver_result
+                return cloud_result
         # Re-run verification after gap closure; one-shot — never loop GAP_CLOSURE again
         ver_result = self.execute_verification(run_id=run_id, batch=batch)
         if ver_result.status == "SUCCESS" and ver_result.recommended_next_phase == "GAP_CLOSURE":
@@ -385,16 +519,11 @@ class PhaseExecutor:
         script = f"evaluate_{prefix}_e2e.py"
         script_path = self.repo_root / "scripts" / script
         if not script_path.exists():
-            return PhaseResult(
-                run_id=run_id,
-                batch_id=batch["batch_id"],
-                phase="E2E",
-                status="FAILED",
-                started_at=started,
-                completed_at=self._now(),
-                summary=f"Missing E2E script: {script}",
-                idempotency_key=f"{batch['batch_id']}:E2E:{run_id}",
+            cloud_result = self._cloud_execute_phase(
+                run_id=run_id, batch=batch, phase="E2E", started=started
             )
+            if cloud_result is not None:
+                return cloud_result
 
         code, output = self._run_script(script, timeout=900)
         summary_path = self.repo_root / "data" / "evaluation" / slug / "summary.json"

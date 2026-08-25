@@ -53,6 +53,15 @@ def check_research_complete(repo_root: Path, batch: dict[str, Any]) -> Completio
                 missing.append(str(svc_path))
 
     details: dict[str, Any] = {"raw_dir": str(raw)}
+    if (raw / "claims.json").exists():
+        try:
+            claims_doc = json.loads((raw / "claims.json").read_text(encoding="utf-8"))
+            claim_list = claims_doc.get("claims") if isinstance(claims_doc, dict) else None
+            if not claim_list:
+                missing.append(str(raw / "claims.json (empty or missing claims array)"))
+        except json.JSONDecodeError:
+            missing.append(str(raw / "claims.json (invalid JSON)"))
+
     if not missing and (raw / "metadata.json").exists():
         meta = json.loads((raw / "metadata.json").read_text(encoding="utf-8"))
         details["metadata"] = meta

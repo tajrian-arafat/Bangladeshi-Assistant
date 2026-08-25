@@ -1,0 +1,56 @@
+{
+  "task_id": "BATCH_04:VERIFICATION:run-1cfd083e93d9-verification",
+  "batch_id": "BATCH_04",
+  "batch_slug": "batch-04-tax-vat-customs",
+  "phase": "VERIFICATION",
+  "run_id": "run-1cfd083e93d9-verification",
+  "service_ids": [
+    "customs-asycuda-declaration",
+    "customs-bond-up-application",
+    "customs-import-export-control-licence",
+    "tax-clearance-foreigners",
+    "tax-etin-registration",
+    "tax-income-return-file",
+    "tax-income-tax-return-filing",
+    "tax-source-tax-deduction-certificate",
+    "vat-bin-registration",
+    "vat-return-filing",
+    "vat-turnover-enlistment"
+  ],
+  "service_names": {
+    "customs-asycuda-declaration": "Customs Declaration (ASYCUDA World)",
+    "customs-bond-up-application": "Customs Bond Utilization Permit (UP) Application",
+    "customs-import-export-control-licence": "Import/Export Control Licence",
+    "tax-clearance-foreigners": "Tax Clearance Certificate for Foreigners",
+    "tax-etin-registration": "e-TIN Registration",
+    "tax-income-return-file": "Income Tax Return Filing (e-Return)",
+    "tax-income-tax-return-filing": "Income Tax Return Filing",
+    "tax-source-tax-deduction-certificate": "Tax Deduction at Source Certificate",
+    "vat-bin-registration": "VAT Registration (Business Identification Number)",
+    "vat-return-filing": "VAT Return Filing",
+    "vat-turnover-enlistment": "Turnover Tax Enlistment"
+  },
+  "domain": "customs,tax,vat",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/verification/batch-04-tax-vat-customs/claims_verification.json",
+    "data/research/verification/batch-04-tax-vat-customs/summary.json",
+    ".automation/runs/run-1cfd083e93d9-verification/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — VERIFICATION\n\n**Batch:** BATCH_04 (Tax / VAT / Customs)\n**Run ID:** run-1cfd083e93d9-verification\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/verification/batch-04-tax-vat-customs/claims_verification.json`\n- `data/research/verification/batch-04-tax-vat-customs/summary.json`\n- `.automation/runs/run-1cfd083e93d9-verification/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_04\",\n    \"slug\": \"batch-04-tax-vat-customs\",\n    \"name\": \"Tax / VAT / Customs\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"customs-asycuda-declaration\",\n      \"customs-bond-up-application\",\n      \"customs-import-export-control-licence\",\n      \"tax-clearance-foreigners\",\n      \"tax-etin-registration\",\n      \"tax-income-return-file\",\n      \"tax-income-tax-return-filing\",\n      \"tax-source-tax-deduction-certificate\",\n      \"vat-bin-registration\",\n      \"vat-return-filing\",\n      \"vat-turnover-enlistment\"\n    ],\n    \"service_count\": 11,\n    \"phases_completed\": [\n      \"RESEARCH\"\n    ]\n  },\n  \"phase\": \"VERIFICATION\",\n  \"run_id\": \"run-1cfd083e93d9-verification\",\n  \"service_ids\": [\n    \"customs-asycuda-declaration\",\n    \"customs-bond-up-application\",\n    \"customs-import-export-control-licence\",\n    \"tax-clearance-foreigners\",\n    \"tax-etin-registration\",\n    \"tax-income-return-file\",\n    \"tax-income-tax-return-filing\",\n    \"tax-source-tax-deduction-certificate\",\n    \"vat-bin-registration\",\n    \"vat-return-filing\",\n    \"vat-turnover-enlistment\"\n  ],\n  \"gaps\": [],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Verification phase prompt\n\nVerification is **independent** from research.\n\n## Verdicts per claim\nVERIFIED | PARTIALLY_VERIFIED | UNVERIFIED | CONFLICTING | OUTDATED | REJECTED\n\n## High-risk claims require stronger evidence\n- fees, mandatory documents, legal requirements, eligibility\n- official URLs, payment instructions, deadlines, SLAs\n\n## Outputs\n- `data/research/verification/<batch-slug>/claims_verification.json`\n- `data/research/verification/<batch-slug>/conflicts_resolution.json`\n- `data/research/verification/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-1cfd083e93d9-verification/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:35:50.130283+00:00"
+  }
+}

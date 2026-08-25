@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from automation.orchestrator.batch_manager import BatchManager
+from automation.orchestrator.cloud_executor import CloudExecutor
 from automation.orchestrator.escalation_manager import EscalationManager
 from automation.orchestrator.gate_engine import GateEngine
 from automation.orchestrator.logging import write_report
@@ -26,6 +27,7 @@ class OvernightRunner:
         self.batch_manager = BatchManager(repo_root)
         self.gates = GateEngine(repo_root)
         self.runner = PhaseRunner(repo_root)
+        self.cloud = CloudExecutor(repo_root)
         self.policy = PolicyEngine()
         self.escalation = EscalationManager(repo_root)
         self.status_path = repo_root / ".automation" / "overnight_status.json"
@@ -118,15 +120,20 @@ class OvernightRunner:
         started_at: str | None = None,
         global_blocked: bool = False,
         reason: str = "",
+        cloud_handle: dict[str, Any] | None = None,
     ) -> dict[str, Any]:
         progress = self.compute_catalogue_progress()
         existing = self._load_status()
+        cloud_fields = self.cloud.overnight_status_fields(None, last_error=reason if global_blocked else None)
+        if cloud_handle:
+            cloud_fields.update(cloud_handle)
         return {
             "started_at": started_at or existing.get("started_at") or self._now(),
             "last_activity_at": self._now(),
             "current_batch": state.current_batch,
             "current_phase": state.current_phase,
             "current_run_id": state.current_run_id,
+            "current_task": f"{state.current_batch}:{state.current_phase}" if state.current_batch else None,
             "workflow_status": state.workflow_status,
             "services_complete": progress["completed_services"],
             "services_remaining": progress["services_remaining"],
@@ -135,6 +142,7 @@ class OvernightRunner:
             "global_block_reason": reason,
             "deployment_locked": not self.gates.read_deployment_lock(),
             "catalogue_progress": progress,
+            **cloud_fields,
         }
 
     def _advance_to_next_batch(self, state) -> bool:
@@ -173,6 +181,8 @@ class OvernightRunner:
         state = self.state_machine.load()
         state.continuous_mode = True
         state.pilot_mode = False
+        if state.current_batch:
+            self.batch_manager.mark_batch_status(state.current_batch, "IN_PROGRESS")
         self.state_machine.save(state)
 
         started_at = self._now()
@@ -242,7 +252,12 @@ class OvernightRunner:
                     return handled
                 if decision.continue_workflow:
                     state.pending_escalations = []
-                    self.state_machine.transition(state, WorkflowStatus.READY)
+                    if state.workflow_status == WorkflowStatus.HUMAN_APPROVAL_REQUIRED.value:
+                        if state.current_phase == "PUBLICATION":
+                            state.current_phase = "E2E"
+                        self.state_machine.transition(state, WorkflowStatus.RUNNING)
+                    else:
+                        self.state_machine.transition(state, WorkflowStatus.READY)
                     continue
                 break
 

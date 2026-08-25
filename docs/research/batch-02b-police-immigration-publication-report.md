@@ -1,6 +1,6 @@
 # Batch 2B — Controlled Publication Report
 
-**Generated:** 2026-08-25T01:49:00.549868+00:00
+**Generated:** 2026-08-25T02:38:59.700773+00:00
 **Mode:** LOCAL/DEV ONLY — not deployed
 
 ## Dry-run gate checks (A–G)

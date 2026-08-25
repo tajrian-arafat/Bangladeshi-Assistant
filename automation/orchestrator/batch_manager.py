@@ -289,8 +289,7 @@ class BatchManager:
         queue = self.load_queue()
         for batch in queue.get("batches", []):
             if batch.get("status") in {"READY", "PLANNED", "IN_PROGRESS"}:
-                if batch.get("status") != "COMPLETE":
-                    return batch
+                return batch
         return None
 
     def mark_batch_status(self, batch_id: str, status: str) -> None:

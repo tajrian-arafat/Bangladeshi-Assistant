@@ -6,7 +6,8 @@ import json
 import os
 import shutil
 import subprocess
-from dataclasses import dataclass
+import time
+from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any
 
@@ -28,7 +29,9 @@ class CursorRunHandle:
 
 
 class CursorAdapter:
-    """Adapter for Cursor Cloud Agents API v1 with local non-interactive fallback."""
+    """Adapter for Cursor Cloud Agents API v1 with in-process cloud fallback."""
+
+    TERMINAL_RUN_STATUSES = frozenset({"COMPLETED", "FINISHED", "SUCCEEDED", "SUCCESS", "FAILED", "CANCELLED", "ERROR"})
 
     def __init__(self, repo_root: Path) -> None:
         self.repo_root = repo_root
@@ -37,23 +40,30 @@ class CursorAdapter:
             "BDA_GITHUB_REPO",
             "https://github.com/tajrian-arafat/Bangladeshi-Assistant",
         )
-        self.default_branch = os.environ.get("BDA_GIT_BRANCH", "cursor/service-catalogue-discovery-3400")
+        self.default_branch = os.environ.get(
+            "BDA_GIT_BRANCH",
+            os.environ.get("GIT_BRANCH", "cursor/batch-03c-brta-fitness-tax-permit-3400"),
+        )
 
     @property
     def cloud_available(self) -> bool:
         return bool(self.api_key)
 
     @property
+    def in_process_cloud(self) -> bool:
+        return os.environ.get("CURSOR_AGENT") == "1" and bool(os.environ.get("CURSOR_CONVERSATION_ID"))
+
+    @property
     def cli_available(self) -> bool:
         return shutil.which("cursor") is not None
 
-    def _headers(self) -> dict[str, str]:
+    def _auth(self) -> tuple[str, str]:
         if not self.api_key:
             raise RuntimeError("CURSOR_API_KEY not configured")
-        return {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-        }
+        return (self.api_key, "")
+
+    def _headers(self) -> dict[str, str]:
+        return {"Content-Type": "application/json"}
 
     def create_cloud_agent(
         self,
@@ -61,18 +71,42 @@ class CursorAdapter:
         prompt: str,
         name: str,
         metadata: dict[str, str] | None = None,
+        starting_ref: str | None = None,
     ) -> dict[str, Any]:
-        payload = {
+        payload: dict[str, Any] = {
             "prompt": {"text": prompt},
-            "name": name,
-            "source": {
-                "repository": self.repo_url,
-                "ref": self.default_branch,
-            },
-            "metadata": metadata or {},
+            "name": name[:100],
+            "repos": [
+                {
+                    "url": self.repo_url if self.repo_url.startswith("http") else f"https://{self.repo_url}",
+                    "startingRef": starting_ref or self.default_branch,
+                }
+            ],
+            "autoCreatePR": False,
+            "mode": "agent",
         }
+        if metadata:
+            payload["metadata"] = metadata
         with httpx.Client(base_url=CURSOR_API_BASE, timeout=60.0) as client:
-            response = client.post("/v1/agents", headers=self._headers(), json=payload)
+            response = client.post("/v1/agents", auth=self._auth(), headers=self._headers(), json=payload)
+            response.raise_for_status()
+            return response.json()
+
+    def continue_run(self, agent_id: str, prompt: str) -> dict[str, Any]:
+        payload = {"prompt": {"text": prompt}, "mode": "agent"}
+        with httpx.Client(base_url=CURSOR_API_BASE, timeout=60.0) as client:
+            response = client.post(
+                f"/v1/agents/{agent_id}/runs",
+                auth=self._auth(),
+                headers=self._headers(),
+                json=payload,
+            )
+            response.raise_for_status()
+            return response.json()
+
+    def get_cloud_agent(self, agent_id: str) -> dict[str, Any]:
+        with httpx.Client(base_url=CURSOR_API_BASE, timeout=30.0) as client:
+            response = client.get(f"/v1/agents/{agent_id}", auth=self._auth(), headers=self._headers())
             response.raise_for_status()
             return response.json()
 
@@ -80,10 +114,52 @@ class CursorAdapter:
         with httpx.Client(base_url=CURSOR_API_BASE, timeout=30.0) as client:
             response = client.get(
                 f"/v1/agents/{agent_id}/runs/{run_id}",
+                auth=self._auth(),
                 headers=self._headers(),
             )
             response.raise_for_status()
             return response.json()
+
+    def cancel_run(self, agent_id: str, run_id: str) -> dict[str, Any]:
+        with httpx.Client(base_url=CURSOR_API_BASE, timeout=30.0) as client:
+            response = client.post(
+                f"/v1/agents/{agent_id}/runs/{run_id}/cancel",
+                auth=self._auth(),
+                headers=self._headers(),
+            )
+            response.raise_for_status()
+            return response.json()
+
+    def wait_for_completion(
+        self,
+        agent_id: str,
+        run_id: str,
+        *,
+        poll_interval: float = 10.0,
+        timeout_sec: float = 3600.0,
+    ) -> dict[str, Any]:
+        deadline = time.time() + timeout_sec
+        last: dict[str, Any] = {}
+        while time.time() < deadline:
+            last = self.get_cloud_run(agent_id, run_id)
+            run = last.get("run") or last
+            status = (run.get("status") or "").upper()
+            if status in self.TERMINAL_RUN_STATUSES:
+                return last
+            time.sleep(poll_interval)
+        raise TimeoutError(f"Cloud run {run_id} did not complete within {timeout_sec}s")
+
+    def verify_api(self) -> tuple[bool, str]:
+        if not self.api_key:
+            return False, "CURSOR_API_KEY not set"
+        try:
+            with httpx.Client(base_url=CURSOR_API_BASE, timeout=15.0) as client:
+                response = client.get("/v1/me", auth=self._auth(), headers=self._headers())
+                if response.status_code == 200:
+                    return True, "ok"
+                return False, response.text[:200]
+        except Exception as exc:
+            return False, str(exc)
 
     def dispatch_phase(
         self,
@@ -103,11 +179,12 @@ class CursorAdapter:
             "phase": phase,
             "simulation": simulation,
             "modes_available": {
-                "cloud": self.cloud_available,
+                "cloud_api": self.cloud_available,
+                "in_process_cloud": self.in_process_cloud,
                 "cli": self.cli_available,
             },
         }
-        (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+        (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
         if simulation:
             return CursorRunHandle(mode="simulation", run_id=run_id, prompt_path=prompt_path)
@@ -128,21 +205,28 @@ class CursorAdapter:
                     cloud_run_id=run.get("id"),
                     prompt_path=prompt_path,
                 )
-                (run_dir / "cursor_handle.json").write_text(json.dumps(handle.__dict__, default=str, indent=2))
+                (run_dir / "cursor_handle.json").write_text(
+                    json.dumps({k: str(v) if isinstance(v, Path) else v for k, v in asdict(handle).items()}, indent=2)
+                    + "\n",
+                    encoding="utf-8",
+                )
                 return handle
             except Exception as exc:
-                (run_dir / "cloud_error.log").write_text(str(exc))
+                (run_dir / "cloud_error.log").write_text(str(exc), encoding="utf-8")
+
+        if self.in_process_cloud:
+            return CursorRunHandle(
+                mode="in_process_cloud",
+                run_id=run_id,
+                agent_id=os.environ.get("CURSOR_CONVERSATION_ID"),
+                prompt_path=prompt_path,
+            )
 
         if self.cli_available and os.environ.get("BDA_AUTOMATION_USE_CLI", "0") == "1":
-            # Non-interactive local fallback — writes prompt; human/agent completes result.json
-            subprocess.run(
-                ["cursor", "--help"],
-                check=False,
-                capture_output=True,
-            )
+            subprocess.run(["cursor", "--help"], check=False, capture_output=True)
             return CursorRunHandle(mode="cli", run_id=run_id, prompt_path=prompt_path)
 
-        return CursorRunHandle(mode="local", run_id=run_id, prompt_path=prompt_path)
+        return CursorRunHandle(mode="unavailable", run_id=run_id, prompt_path=prompt_path)
 
     def build_phase_prompt(
         self,
