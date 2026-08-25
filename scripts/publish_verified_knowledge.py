@@ -112,6 +112,8 @@ async def run(args: argparse.Namespace) -> int:
                 entry["audit"] = audit
             if r.post_readiness:
                 entry["post_readiness"] = r.post_readiness
+            if r.post_readiness_detail:
+                entry["post_readiness_detail"] = r.post_readiness_detail
             out.append(entry)
 
         payload = {"ok": all(x["ok"] for x in out), "reports": out}

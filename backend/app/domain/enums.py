@@ -251,6 +251,7 @@ class SeedReplacementKind(StrEnum):
     FEE = "fee"
     CHECKLIST = "checklist"
     PROCEDURE_STEP = "procedure_step"
+    SERVICE_LINK = "service_link"
 
 
 class GeographyAliasType(StrEnum):

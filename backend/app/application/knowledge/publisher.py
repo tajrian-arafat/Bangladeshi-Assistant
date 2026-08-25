@@ -135,6 +135,7 @@ class PublishReport:
     eligible_count: int = 0
     rejected_by_gate_count: int = 0
     post_readiness: dict[str, str] = field(default_factory=dict)
+    post_readiness_detail: dict[str, dict[str, Any]] = field(default_factory=dict)
 
     @property
     def ok(self) -> bool:
@@ -160,6 +161,7 @@ class PublishReport:
             "eligible_samples": eligible[:15],
             "skipped_samples": skipped_actions[:15],
             "post_readiness": self.post_readiness,
+            "post_readiness_detail": self.post_readiness_detail,
         }
 
 
@@ -745,6 +747,7 @@ class KnowledgePublisher:
 
             published_official = 0
             critical_gaps = 0
+            seed_blocked_claim_ids: set[UUID] = set()
 
             for claim in claims:
                 vrec = verification_index.get(claim.research_claim_key or "")
@@ -899,6 +902,7 @@ class KnowledgePublisher:
                         report.skipped += 1
                         continue
                     if seed_block_structured:
+                        seed_blocked_claim_ids.add(claim.id)
                         report.actions.append(
                             {
                                 "action": "skip_mvp_seed_fee_overwrite",
@@ -939,6 +943,7 @@ class KnowledgePublisher:
                         report.skipped += 1
                         continue
                     if seed_block_structured:
+                        seed_blocked_claim_ids.add(claim.id)
                         report.actions.append(
                             {
                                 "action": "skip_mvp_seed_checklist_overwrite",
@@ -958,6 +963,7 @@ class KnowledgePublisher:
                         report.skipped += 1
                         continue
                     if seed_block_structured:
+                        seed_blocked_claim_ids.add(claim.id)
                         report.actions.append(
                             {
                                 "action": "skip_mvp_seed_step_overwrite",
@@ -986,13 +992,18 @@ class KnowledgePublisher:
                     )
                     published_official += 1
 
-            report.post_readiness[catalogue_id] = self._compute_readiness(
+            from app.application.knowledge.readiness import compute_service_readiness
+
+            detail = compute_service_readiness(
                 claims=claims,
                 published_official=published_official,
                 critical_gaps=critical_gaps,
+                seed_blocked_claim_ids=seed_blocked_claim_ids,
             )
+            report.post_readiness[catalogue_id] = detail.readiness
+            report.post_readiness_detail[catalogue_id] = detail.to_dict()
             if not self.dry_run:
-                readiness = report.post_readiness[catalogue_id]
+                readiness = detail.readiness
                 if readiness == "GREEN":
                     service.status = "ACTIVE"
                     service.review_state = "APPROVED"

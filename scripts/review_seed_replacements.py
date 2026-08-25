@@ -18,12 +18,42 @@ os.chdir(BACKEND)
 
 
 async def main() -> int:
-    parser = argparse.ArgumentParser(description="Review MVP seed replacement candidates")
+    parser = argparse.ArgumentParser(
+        description="Review MVP seed replacement candidates",
+        epilog=(
+            "Workflow: --dry-run → --record → --approve <id> → --apply\n"
+            "Bulk --approve-all is available but not recommended for high-risk replacements."
+        ),
+    )
     parser.add_argument("--batch", default="batch-01")
     parser.add_argument("--dry-run", action="store_true", help="Evaluate only; no DB writes")
     parser.add_argument("--record", action="store_true", help="Record PENDING replacement rows")
-    parser.add_argument("--approve-all", action="store_true", help="Approve all PENDING replacements")
-    parser.add_argument("--approve-claim", action="append", dest="approve_claims", default=[])
+    parser.add_argument(
+        "--approve",
+        action="append",
+        dest="approve_ids",
+        default=[],
+        help="Approve a specific replacement UUID (repeatable)",
+    )
+    parser.add_argument(
+        "--approve-claim",
+        action="append",
+        dest="approve_claims",
+        default=[],
+        help="Approve by research_claim_key",
+    )
+    parser.add_argument(
+        "--approve-all",
+        action="store_true",
+        help="Approve all PENDING replacements (use only for low-risk bulk after validation)",
+    )
+    parser.add_argument(
+        "--reject",
+        action="append",
+        dest="reject_ids",
+        default=[],
+        help="Reject a specific replacement UUID",
+    )
     parser.add_argument("--apply", action="store_true", help="Apply APPROVED replacements")
     parser.add_argument("--rollback", type=str, help="Rollback an APPLIED replacement by ID")
     args = parser.parse_args()
@@ -38,7 +68,9 @@ async def main() -> int:
     engine = create_async_engine(db_url, echo=False)
     session_factory = async_sessionmaker(engine, expire_on_commit=False)
 
-    dry_run = args.dry_run and not args.apply and not args.approve_all and not args.rollback
+    write_actions = args.record or args.approve_all or args.approve_ids or args.approve_claims
+    write_actions = write_actions or args.reject_ids or args.apply or args.rollback
+    dry_run = args.dry_run and not write_actions
 
     async with session_factory() as session:
         svc = SeedReplacementService(session, repo_root=ROOT, dry_run=dry_run)
@@ -55,7 +87,7 @@ async def main() -> int:
         for c in report.candidates:
             print(
                 f"  {c.research_claim_key} ({c.replacement_kind}) "
-                f"service={c.service_slug} gate_ok={c.gate_allowed} "
+                f"service={c.service_slug} claim_id={c.claim_id} "
                 f"status={c.existing_status or 'NEW'}"
             )
         print(f"Total candidates: {len(report.candidates)}")
@@ -64,8 +96,16 @@ async def main() -> int:
             n = await svc.record_pending(report.candidates, args.batch)
             print(f"Recorded {n} PENDING replacement(s)")
 
-        if args.approve_all or args.approve_claims:
+        if args.reject_ids:
+            n = await svc.reject(
+                replacement_ids=[UUID(rid) for rid in args.reject_ids],
+                reason="Rejected via review_seed_replacements.py",
+            )
+            print(f"Rejected {n} replacement(s)")
+
+        if args.approve_all or args.approve_claims or args.approve_ids:
             claim_ids = None
+            replacement_ids = [UUID(rid) for rid in args.approve_ids] if args.approve_ids else None
             if args.approve_claims:
                 from sqlalchemy import select
 
@@ -78,12 +118,25 @@ async def main() -> int:
                     )
                 ).scalars().all()
                 claim_ids = list(rows)
-            n = await svc.approve(claim_ids=claim_ids, approved_by="review_script")
+            n = await svc.approve(
+                claim_ids=claim_ids,
+                replacement_ids=replacement_ids,
+                approved_by="review_script",
+            )
             print(f"Approved {n} replacement(s)")
 
         if args.apply:
             apply_report = await svc.apply_approved(args.batch)
-            print(json.dumps({"applied": apply_report.applied, "skipped": apply_report.skipped, "errors": apply_report.errors}, indent=2))
+            print(
+                json.dumps(
+                    {
+                        "applied": apply_report.applied,
+                        "skipped": apply_report.skipped,
+                        "errors": apply_report.errors,
+                    },
+                    indent=2,
+                )
+            )
 
         if not dry_run:
             await session.commit()

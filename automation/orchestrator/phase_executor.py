@@ -327,6 +327,40 @@ class PhaseExecutor:
             )
 
         artifacts = [str(report_path.relative_to(self.repo_root))] if report_path.exists() else []
+        candidate_report_path = self.repo_root / "data" / "audit" / f"seed-candidates-{batch_arg}.json"
+        detect_code, detect_out = self._run_cmd(
+            [
+                self.python,
+                "scripts/detect_legacy_seed_candidates.py",
+                "--batch",
+                batch_arg,
+                "--record",
+            ],
+            timeout=120,
+        )
+        requires_seed_approval = detect_code == 2
+        if candidate_report_path.exists():
+            artifacts.append(str(candidate_report_path.relative_to(self.repo_root)))
+
+        if requires_seed_approval:
+            return PhaseResult(
+                run_id=run_id,
+                batch_id=batch["batch_id"],
+                phase="PUBLICATION",
+                status="SUCCESS",
+                started_at=started,
+                completed_at=self._now(),
+                artifacts=artifacts,
+                requires_escalation=True,
+                recommended_next_phase="HUMAN_APPROVAL_REQUIRED",
+                summary=(
+                    f"Publication complete for {batch_arg}; "
+                    "legacy seed replacement candidates require explicit human approval"
+                ),
+                metadata={"seed_replacement_detect": detect_out[-2000:]},
+                idempotency_key=f"{batch['batch_id']}:PUBLICATION:complete",
+            )
+
         return PhaseResult(
             run_id=run_id,
             batch_id=batch["batch_id"],

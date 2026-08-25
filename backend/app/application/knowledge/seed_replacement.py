@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any
@@ -17,7 +18,7 @@ from app.application.knowledge.publication_gate import (
     can_populate_procedure_step,
     evaluate_official_publication,
 )
-from app.application.knowledge.publisher import KnowledgePublisher, MVP_SEED_SLUGS
+from app.application.knowledge.publisher import KnowledgePublisher, MVP_SEED_SLUGS, PublishReport
 from app.domain.enums import (
     ClaimPipelineStatus,
     ClaimType,
@@ -26,9 +27,25 @@ from app.domain.enums import (
     SeedReplacementStatus,
 )
 from app.domain.models.claims import Claim, ServiceCatalogueMapping
-from app.domain.models.knowledge import ChecklistItem, Fee, ProcedureStep, Service
+from app.domain.models.knowledge import ChecklistItem, Fee, Procedure, ProcedureStep, Service, ServiceLink
 from app.domain.models.operations import AuditLog
 from app.domain.models.seed_replacement import SeedReplacement
+
+
+@dataclass
+class LegacyRowRecord:
+    service_slug: str
+    service_id: UUID
+    catalogue_service_id: str | None
+    field_type: str
+    row_id: str
+    current_value: dict[str, Any]
+    claim_id: str | None
+    source: str
+    seed_status: str
+    verified_replacement_exists: bool
+    replacement_candidate: dict[str, Any] | None = None
+    replacement_status: str | None = None
 
 
 @dataclass
@@ -41,6 +58,8 @@ class ReplacementCandidate:
     replacement_kind: str
     gate_allowed: bool
     gate_reasons: list[str] = field(default_factory=list)
+    verification_date: str | None = None
+    replacement_reason: str = "Verified OFFICIAL claim blocked by MVP seed guard"
     existing_replacement_id: UUID | None = None
     existing_status: str | None = None
     before_snapshot: dict[str, Any] = field(default_factory=dict)
@@ -69,20 +88,28 @@ class SeedReplacementService:
         self.dry_run = dry_run
         self.publisher = KnowledgePublisher(session, repo_root=repo_root, dry_run=dry_run)
 
-    async def discover_candidates(self, batch_id: str = "batch-01") -> ReplacementReport:
+    async def discover_candidates(
+        self, batch_id: str = "batch-01", *, catalogue_ids: set[str] | None = None
+    ) -> ReplacementReport:
         """Find gate-eligible verified claims blocked by MVP seed guard."""
         report = ReplacementReport(dry_run=self.dry_run)
         mappings = await self.publisher.load_mappings()
         seen_claim_ids: set[UUID] = set()
 
+        batch_catalogue_ids = catalogue_ids or self._catalogue_ids_for_batch(batch_id, mappings)
+
         for catalogue_id, mapping in mappings.items():
+            if batch_catalogue_ids and catalogue_id not in batch_catalogue_ids:
+                continue
             runtime_slug = mapping.get("runtime_slug")
             if not runtime_slug or runtime_slug not in MVP_SEED_SLUGS:
                 continue
             if mapping.get("allow_overwrite_seed"):
                 continue
 
-            service = await self.publisher.resolve_runtime_service(catalogue_id, mappings, None)
+            service = await self.publisher.resolve_runtime_service(
+                catalogue_id, mappings, PublishReport(dry_run=True, batch_id=batch_id)
+            )
             if not service:
                 continue
 
@@ -117,6 +144,7 @@ class SeedReplacementService:
                     "structured_value": claim.structured_value,
                     "value": claim.value,
                 }
+                verified_at = claim.verified_at.isoformat() if claim.verified_at else None
                 report.candidates.append(
                     ReplacementCandidate(
                         claim_id=claim.id,
@@ -127,6 +155,7 @@ class SeedReplacementService:
                         replacement_kind=kind,
                         gate_allowed=True,
                         gate_reasons=gate.get("reasons", []),
+                        verification_date=verified_at,
                         existing_replacement_id=existing.id if existing else None,
                         existing_status=existing.status if existing else None,
                         before_snapshot=before,
@@ -135,6 +164,178 @@ class SeedReplacementService:
                 )
                 seen_claim_ids.add(claim.id)
         return report
+
+    async def audit_legacy_inventory(
+        self, *, batch_id: str | None = None
+    ) -> list[LegacyRowRecord]:
+        """Inventory legacy seed rows (claim_id IS NULL) across MVP seed services."""
+        mappings = await self.publisher.load_mappings()
+        batch_catalogue_ids = (
+            self._catalogue_ids_for_batch(batch_id, mappings) if batch_id else None
+        )
+        candidate_report = await self.discover_candidates(
+            batch_id or "batch-01",
+            catalogue_ids=batch_catalogue_ids if batch_id else None,
+        )
+        candidates_by_service: dict[str, list[ReplacementCandidate]] = {}
+        for cand in candidate_report.candidates:
+            candidates_by_service.setdefault(cand.service_slug, []).append(cand)
+
+        rows: list[LegacyRowRecord] = []
+        for catalogue_id, mapping in mappings.items():
+            if batch_catalogue_ids and catalogue_id not in batch_catalogue_ids:
+                continue
+            runtime_slug = mapping.get("runtime_slug")
+            if not runtime_slug or runtime_slug not in MVP_SEED_SLUGS:
+                continue
+            service = await self.publisher.resolve_runtime_service(
+                catalogue_id, mappings, PublishReport(dry_run=True, batch_id=batch_id)
+            )
+            if not service:
+                continue
+
+            service_candidates = candidates_by_service.get(service.slug, [])
+            cand_by_kind: dict[str, list[ReplacementCandidate]] = {}
+            for c in service_candidates:
+                cand_by_kind.setdefault(c.replacement_kind, []).append(c)
+
+            for fee in (
+                await self.session.execute(
+                    select(Fee).where(Fee.service_id == service.id, Fee.claim_id.is_(None))
+                )
+            ).scalars():
+                kind = SeedReplacementKind.FEE.value
+                cands = cand_by_kind.get(kind, [])
+                rows.append(
+                    LegacyRowRecord(
+                        service_slug=service.slug,
+                        service_id=service.id,
+                        catalogue_service_id=catalogue_id,
+                        field_type="fee",
+                        row_id=str(fee.id),
+                        current_value={
+                            "label_en": fee.label_en,
+                            "amount": fee.amount,
+                            "currency": fee.currency,
+                        },
+                        claim_id=None,
+                        source="mvp_seed",
+                        seed_status="LEGACY_SEED",
+                        verified_replacement_exists=bool(cands),
+                        replacement_candidate=cands[0].after_snapshot if cands else None,
+                        replacement_status=cands[0].existing_status if cands else None,
+                    )
+                )
+
+            for item in (
+                await self.session.execute(
+                    select(ChecklistItem).where(
+                        ChecklistItem.service_id == service.id, ChecklistItem.claim_id.is_(None)
+                    )
+                )
+            ).scalars():
+                kind = SeedReplacementKind.CHECKLIST.value
+                cands = cand_by_kind.get(kind, [])
+                rows.append(
+                    LegacyRowRecord(
+                        service_slug=service.slug,
+                        service_id=service.id,
+                        catalogue_service_id=catalogue_id,
+                        field_type="checklist_item",
+                        row_id=str(item.id),
+                        current_value={
+                            "label_en": item.label_en,
+                            "item_type": item.item_type,
+                        },
+                        claim_id=None,
+                        source="mvp_seed",
+                        seed_status="LEGACY_SEED",
+                        verified_replacement_exists=bool(cands),
+                        replacement_candidate=cands[0].after_snapshot if cands else None,
+                        replacement_status=cands[0].existing_status if cands else None,
+                    )
+                )
+
+            proc_ids = (
+                await self.session.execute(
+                    select(Procedure.id).where(Procedure.service_id == service.id)
+                )
+            ).scalars().all()
+            step_query = select(ProcedureStep).where(ProcedureStep.claim_id.is_(None))
+            if proc_ids:
+                step_query = step_query.where(ProcedureStep.procedure_id.in_(proc_ids))
+            for step in (await self.session.execute(step_query)).scalars():
+                kind = SeedReplacementKind.PROCEDURE_STEP.value
+                cands = cand_by_kind.get(kind, [])
+                rows.append(
+                    LegacyRowRecord(
+                        service_slug=service.slug,
+                        service_id=service.id,
+                        catalogue_service_id=catalogue_id,
+                        field_type="procedure_step",
+                        row_id=str(step.id),
+                        current_value={
+                            "title_en": step.title_en,
+                            "order": step.order,
+                        },
+                        claim_id=None,
+                        source="mvp_seed",
+                        seed_status="LEGACY_SEED",
+                        verified_replacement_exists=bool(cands),
+                        replacement_candidate=cands[0].after_snapshot if cands else None,
+                        replacement_status=cands[0].existing_status if cands else None,
+                    )
+                )
+
+            for link in (
+                await self.session.execute(
+                    select(ServiceLink).where(
+                        ServiceLink.service_id == service.id,
+                        ServiceLink.is_verified.is_(False),
+                    )
+                )
+            ).scalars():
+                kind = SeedReplacementKind.SERVICE_LINK.value
+                cands = cand_by_kind.get(kind, [])
+                rows.append(
+                    LegacyRowRecord(
+                        service_slug=service.slug,
+                        service_id=service.id,
+                        catalogue_service_id=catalogue_id,
+                        field_type="service_link",
+                        row_id=str(link.id),
+                        current_value={
+                            "url": link.url,
+                            "link_type": link.link_type,
+                            "label_en": link.label_en,
+                        },
+                        claim_id=None,
+                        source="mvp_seed",
+                        seed_status="LEGACY_SEED",
+                        verified_replacement_exists=bool(cands),
+                        replacement_candidate=cands[0].after_snapshot if cands else None,
+                        replacement_status=cands[0].existing_status if cands else None,
+                    )
+                )
+
+            if service.required_documents:
+                rows.append(
+                    LegacyRowRecord(
+                        service_slug=service.slug,
+                        service_id=service.id,
+                        catalogue_service_id=catalogue_id,
+                        field_type="service_json_required_documents",
+                        row_id=f"{service.id}:required_documents",
+                        current_value={"documents": service.required_documents},
+                        claim_id=None,
+                        source="mvp_seed",
+                        seed_status="LEGACY_JSON_FIELD",
+                        verified_replacement_exists=bool(cand_by_kind.get(SeedReplacementKind.CHECKLIST.value)),
+                        replacement_candidate=None,
+                        replacement_status=None,
+                    )
+                )
+        return rows
 
     async def record_pending(self, candidates: list[ReplacementCandidate], batch_id: str) -> int:
         count = 0
@@ -194,6 +395,82 @@ class SeedReplacementService:
         if not self.dry_run:
             await self.session.flush()
         return len(rows)
+
+    async def reject(
+        self,
+        *,
+        claim_ids: list[UUID] | None = None,
+        replacement_ids: list[UUID] | None = None,
+        rejected_by: str = "review_script",
+        reason: str = "",
+    ) -> int:
+        stmt = select(SeedReplacement).where(
+            SeedReplacement.status == SeedReplacementStatus.PENDING.value
+        )
+        if replacement_ids:
+            stmt = stmt.where(SeedReplacement.id.in_(replacement_ids))
+        if claim_ids:
+            stmt = stmt.where(SeedReplacement.claim_id.in_(claim_ids))
+        rows = (await self.session.execute(stmt)).scalars().all()
+        for row in rows:
+            if self.dry_run:
+                continue
+            row.status = SeedReplacementStatus.REJECTED.value
+            row.notes = reason or row.notes
+            self.session.add(
+                AuditLog(
+                    action="reject_seed_replacement",
+                    resource_type="seed_replacement",
+                    resource_id=str(row.id),
+                    after_json={
+                        "claim_id": str(row.claim_id),
+                        "rejected_by": rejected_by,
+                        "reason": reason,
+                    },
+                )
+            )
+        if not self.dry_run:
+            await self.session.flush()
+        return len(rows)
+
+    async def count_pending_replacements(self, batch_id: str | None = None) -> int:
+        stmt = select(SeedReplacement).where(
+            SeedReplacement.status == SeedReplacementStatus.PENDING.value
+        )
+        if batch_id:
+            stmt = stmt.where(SeedReplacement.batch_id == batch_id)
+        rows = (await self.session.execute(stmt)).scalars().all()
+        return len(rows)
+
+    def _catalogue_ids_for_batch(
+        self, batch_id: str, mappings: dict[str, dict[str, Any]]
+    ) -> set[str]:
+        slug = batch_id.replace("BATCH_", "batch-").lower()
+        if not slug.startswith("batch-"):
+            slug = batch_id
+        staging_candidates = [
+            self.repo_root / "data" / "research" / "staging" / slug / "services.json",
+            self.repo_root / "data" / "research" / "raw" / slug / "services_index.json",
+            self.repo_root / "data" / "research" / "raw" / slug / "scope.json",
+        ]
+        ids: set[str] = set()
+        for path in staging_candidates:
+            if not path.exists():
+                continue
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if "services" in data:
+                for s in data["services"]:
+                    sid = s.get("service_id") or s.get("catalogue_service_id")
+                    if sid:
+                        ids.add(sid)
+            if "in_scope" in data:
+                ids.update(data["in_scope"])
+        if not ids:
+            for cid, mapping in mappings.items():
+                notes = (mapping.get("notes") or "").lower()
+                if slug.replace("-", "") in (mapping.get("runtime_slug") or "").replace("-", ""):
+                    ids.add(cid)
+        return ids
 
     async def apply_approved(self, batch_id: str = "batch-01") -> ReplacementReport:
         """Apply APPROVED replacements via publisher with explicit seed overwrite."""
@@ -466,5 +743,23 @@ class SeedReplacementService:
                 }
                 for s in steps
                 if s.procedure_id
+            ]
+        elif kind == SeedReplacementKind.SERVICE_LINK.value:
+            links = (
+                await self.session.execute(
+                    select(ServiceLink).where(
+                        ServiceLink.service_id == service.id,
+                        ServiceLink.is_verified.is_(False),
+                    )
+                )
+            ).scalars().all()
+            snapshot["service_links"] = [
+                {
+                    "url": link.url,
+                    "link_type": link.link_type,
+                    "label_en": link.label_en,
+                    "is_verified": link.is_verified,
+                }
+                for link in links
             ]
         return snapshot
