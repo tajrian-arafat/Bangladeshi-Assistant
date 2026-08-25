@@ -1,0 +1,66 @@
+{
+  "service_id": "epassport-enrollment-appointment",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Biometric Enrollment Appointment",
+  "service_name_bn": "বায়োমেট্রিক এনরোলমেন্ট/অ্যাপয়েন্টমেন্ট",
+  "aliases": [
+    "passport office appointment",
+    "enrollment slot"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://epassport.gov.bd/instructions/instructions",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "epassport-enrollment-appointment::c-appointment-required",
+      "legacy_claim_id": "c-appointment-required",
+      "service_id": "epassport-enrollment-appointment",
+      "claim_type": "procedure_step",
+      "claim_text": "Biometric enrollment at passport office requires printed application summary including appointment when scheduled.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-enrollment-docs",
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-enrollment-appointment::c-appointment-required-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-enrollment-appointment::c-bring-original-id",
+      "legacy_claim_id": "c-bring-original-id",
+      "service_id": "epassport-enrollment-appointment",
+      "claim_type": "document",
+      "claim_text": "Original NID or Birth Certificate must be carried to enrollment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-enrollment-appointment::c-bring-original-id-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Bring printed application summary with appointment and original NID/BRC."
+}

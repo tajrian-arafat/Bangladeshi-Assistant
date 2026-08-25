@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "batch_id": "batch-01-identity-civil-registration",
+  "verified_at": "2026-08-24T19:28:51.522618+00:00",
+  "rules": {
+    "high_risk_official": {
+      "preferred_tiers": [
+        1,
+        2
+      ],
+      "require_explicit_support": true,
+      "no_material_unresolved_conflict": true,
+      "no_promotion_from_tier_ge_5_to_official": true,
+      "verdict_if_only_weak_source": [
+        "UNVERIFIED",
+        "PARTIALLY_VERIFIED"
+      ]
+    },
+    "medium_risk": {
+      "prefer_cross_check": true
+    },
+    "low_risk_practical": {
+      "may_remain_practical": true,
+      "never_auto_must_need": true
+    },
+    "url_policy": "Live check preferred; 403/unreachable without homepage link corroboration → PARTIAL/UNVERIFIED",
+    "wayback_policy": "Allowed for Tier-1/2 pages unreachable live when capture is recent or cites identifiable LGD letter; record retrieval provenance.",
+    "publication": "STAGING_ONLY — do not run publish_verified_knowledge.py in this phase"
+  }
+}

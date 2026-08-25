@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Birth and Death Verification</title>
+    <link href="/Content/css?v=fMv03dmv_DveNnisgTYiJPHaZKWpUQ4CgcSrvanuR6k1" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script>
+        
+          window.addEventListener('contextmenu', function (e) {
+            // do something here... 
+            e.preventDefault();
+        }, false);
+        
+        document.onselectstart = function pauseEvent(e) {
+            if (e.stopPropagation) e.stopPropagation();
+            if (e.preventDefault) e.preventDefault();
+            e.cancelBubble = true;
+            e.returnValue = false;
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+                <img src="/images/gov_logo.png" height="80" width="80" />
+            </div>
+            <div class="col-sm-1">&nbsp;</div>
+            <div class="col-sm-11">
+                <span class="text-left text-uppercase"><strong>Office of the Registrar General, Birth and Death Registration</strong></span>
+                <p class="text-left text-uppercase">Local Government Division</p>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+
+<hr />
+
+
+<form action="/UBRNVerification/Search" enctype="multipart/form-data" id="ubrnsearchform" method="post"><input name="__RequestVerificationToken" type="hidden" value="Ij47jVv04vv1pirV28BWMmYIWrQGg92e7wE0y2sdEx55zsb7veOcI_6jlbkrokqGvtow_Ie7FCANf39VDqYFnLXrz6qEJs-RTQ2NT9Evpw81" />    <div style="float:right">
+        <h3><em> <a href="/UDRNVerification">Click here to verify death record</a></em></h3>
+    </div>
+    <div>
+        <p class="text-info">
+            <em>Enter "17 digits Birth  Registration Number" and "Date of Birth" of a person to verify the Birth Record.</em>
+            <br /><em>জন্ম নিবন্ধন তথ্য যাচাই এর জন্য ১৭ অংকের জন্ম নিবন্ধন নম্বর ও জন্ম তারিখ প্রবেশ করান</em>
+
+        </p>
+        <div class="form-group">
+            <label for="ubrn">Birth Registration Number:</label>
+            <input autocomplete="off" class="form-control" data-val="true" data-val-regex="17 digits only" data-val-regex-pattern="[0-9]{17}" data-val-required="required" id="ubrn" name="UBRN" oncopy="return false" onpaste="return false" type="number" value="" />
+            <span class="field-validation-valid text-danger" data-valmsg-for="UBRN" data-valmsg-replace="true"></span>
+
+        </div>
+        <div class="form-group">
+            <label for="BirthDate">Date of Birth (YYYY-MM-dd):</label><br />
+            <input class="datepicker text-box single-line" data-val="true" data-val-date="The field BirthDate must be a date." data-val-regex="Expected format: yyyy-MM-dd only" data-val-regex-pattern="^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$" data-val-required="required" id="BirthDate" name="BirthDate" type="datetime" value="" />
+            <span class="field-validation-valid text-danger  " data-valmsg-for="BirthDate" data-valmsg-replace="true"></span>
+
+        </div>
+
+        <div class="form-group">
+            
+<script type="text/javascript">
+$(function () {$('#d0c7b5447e2a4d2c99ffd3a679bda903').show();})
+function ______100afe52a62a468b92a6613407c2c87a________() { $('#d0c7b5447e2a4d2c99ffd3a679bda903').hide(); $.post("/DefaultCaptcha/Refresh", { t: $('#CaptchaDeText').val(), __m__: "0" }, function(){$('#d0c7b5447e2a4d2c99ffd3a679bda903').show();}); return false; }</script> 
+<br/>
+<img id="CaptchaImage" src="/DefaultCaptcha/Generate?t=27076b268fc34524a8c9ee4eb9aad5c2"/><input id="CaptchaDeText" name="CaptchaDeText" type="hidden" value="27076b268fc34524a8c9ee4eb9aad5c2" /> <br/><a href="#CaptchaImage" id="d0c7b5447e2a4d2c99ffd3a679bda903" onclick="______100afe52a62a468b92a6613407c2c87a________()" style="display:none;">Refresh</a><br/>The answer is<br/><input autocomplete="off" autocorrect="off" id="CaptchaInputText" name="CaptchaInputText" type="text" value="" /><br/>
+            <p class="text-danger"></p>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Search" />
+            <input class="btn btn-primary" type="reset" value="Clear" />
+        </div>
+    </div>
+</form><link href="/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+
+
+        <hr />
+        <footer class="">
+            <center>
+                <p>&copy; 2026 - Developed and maintained by Office of the Registrar General, Birth and Death Registration</p>
+            </center>
+        </footer>
+    </div>
+
+    <script src="/bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+    <script src="/bundles/bootstrap?v=M4Nk6kIOwMFflsEKET0iPL9i5YBqbzMzvUOrd8gyCnw1"></script>
+
+    
+    
+    <script src="/Scripts/jquery-ui-1.12.1.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $(".datepicker").datepicker({
+                dateFormat: "yy-mm-dd",
+                changemonth: true,
+                changeyear: true
+            });
+        });
+    </script>
+
+
+    <script src="/bundles/jqueryval?v=ewwbEwxCzNIunbw9c2Y5X5_ldbOkIBIkUo-LvchX7I81"></script>
+
+    <script src="/bundles/custom-validator?v="></script>
+
+
+
+</body>
+</html>

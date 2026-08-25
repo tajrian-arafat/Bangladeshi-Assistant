@@ -1,0 +1,17 @@
+{
+  "batch_id": "batch-03a-brta-driving-licence",
+  "normalized_at": "2026-08-25",
+  "claim_count": 55,
+  "fee_tiers_staged": 0,
+  "pipeline_status_counts": {
+    "VERIFIED": 22,
+    "UNVERIFIED": 13,
+    "PARTIALLY_VERIFIED": 20
+  },
+  "publication_rules": [
+    "Publish only VERIFIED + OFFICIAL + complete evidence",
+    "Fee claims remain PARTIALLY_VERIFIED until live BSP calculator confirmation",
+    "Do not invent license fee amounts",
+    "BSP sub-portal workflow gaps remain UNVERIFIED"
+  ]
+}

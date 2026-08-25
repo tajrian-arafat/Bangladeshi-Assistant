@@ -1,0 +1,63 @@
+{
+  "total_cases": 10,
+  "passed": 10,
+  "failed": 0,
+  "cases": [
+    {
+      "case": "CASE_1",
+      "passed": true,
+      "transition": "COMPLETE"
+    },
+    {
+      "case": "CASE_2",
+      "passed": true,
+      "transition": "RETRY -> SUPERVISOR_REVIEW"
+    },
+    {
+      "case": "CASE_3",
+      "passed": true,
+      "transition": "GAP_CLOSURE"
+    },
+    {
+      "case": "CASE_4",
+      "passed": true,
+      "transition": "HUMAN_APPROVAL_REQUIRED",
+      "decision_id": "sim-3f6bbc06b4d4"
+    },
+    {
+      "case": "CASE_5",
+      "passed": true,
+      "transition": "BLOCKED"
+    },
+    {
+      "case": "CASE_6",
+      "passed": true,
+      "transition": "BLOCKED"
+    },
+    {
+      "case": "CASE_7",
+      "passed": true,
+      "transition": "BLOCKED on regression"
+    },
+    {
+      "case": "CASE_8",
+      "passed": true,
+      "transition": "BATCH_03A -> BATCH_03B"
+    },
+    {
+      "case": "CASE_9",
+      "passed": true,
+      "transition": "DEPLOYMENT_BLOCKED"
+    },
+    {
+      "case": "CASE_10",
+      "passed": true,
+      "errors": [
+        "missing required fields: ['artifacts', 'batch_id', 'citation_failures', 'claims_total', 'completed_at', 'conflicting', 'critical_conflicts', 'e2e_failed', 'e2e_passed', 'e2e_total', 'hallucinations', 'knowledge_gaps', 'outdated', 'partial', 'phase', 'recommended_next_phase', 'regressions', 'rejected', 'requires_escalation', 'services_processed', 'services_total', 'started_at', 'summary', 'unverified', 'verified']"
+      ],
+      "transition": "RETRY"
+    }
+  ],
+  "deployment_lock": true,
+  "generated_at": "2026-08-24T23:54:56.964519+00:00"
+}

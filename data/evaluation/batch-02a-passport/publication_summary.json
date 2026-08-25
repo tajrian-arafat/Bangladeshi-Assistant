@@ -1,0 +1,41 @@
+{
+  "dry_run_ok": true,
+  "synced_claims": 80,
+  "eligible_count": 31,
+  "published_fees": 12,
+  "published_checklist": 3,
+  "published_steps": 4,
+  "published_urls": 5,
+  "published_practical": 2,
+  "skipped": 49,
+  "rejected_by_gate": 2,
+  "post_readiness": {
+    "epassport-new-application": "GREEN",
+    "epassport-reissue": "YELLOW",
+    "epassport-fee-payment": "GREEN",
+    "epassport-enrollment-appointment": "RED",
+    "epassport-application-status": "RED",
+    "epassport-urgent-super-express": "GREEN",
+    "epassport-rpo-secretariat": "RED",
+    "passport-mrp-initial": "GREEN",
+    "passport-mrp-reissue": "GREEN",
+    "passport-application-status": "YELLOW",
+    "police-passport-police-verification": "GREEN",
+    "police-passport-verification": "RED"
+  },
+  "url_publications_step16": [
+    {
+      "service": "epassport-new-application",
+      "url": "https://www.epassport.gov.bd/onboarding",
+      "link_type": "APPLICATION",
+      "claim_id": "gap-closure::c-new-application-url-landing-verified"
+    },
+    {
+      "service": "passport-renewal",
+      "url": "https://epassport.gov.bd/landing",
+      "link_type": "APPLICATION",
+      "claim_id": "gap-closure::c-reissue-url-landing-verified"
+    }
+  ],
+  "superseded_skipped": 4
+}
