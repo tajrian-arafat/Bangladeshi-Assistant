@@ -1,0 +1,371 @@
+{
+  "fees": [
+    {
+      "fee_id": "civil-birth-registration::f-br-0-45",
+      "service_id": "civil-birth-registration",
+      "description": "Registration within 45 days",
+      "amount": 0,
+      "currency": "BDT",
+      "condition": {
+        "field": "days_since_birth",
+        "op": "lte",
+        "value": 45
+      },
+      "claim_ids": [
+        "civil-birth-registration::c-br-fee-free45"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-birth-registration::f-br-45-5y",
+      "service_id": "civil-birth-registration",
+      "description": "Registration after 45 days up to 5 years (domestic)",
+      "amount": 25,
+      "currency": "BDT",
+      "condition": {
+        "all": [
+          {
+            "field": "days_since_birth",
+            "op": "gt",
+            "value": 45
+          },
+          {
+            "field": "years_since_birth",
+            "op": "lte",
+            "value": 5
+          }
+        ]
+      },
+      "claim_ids": [
+        "civil-birth-registration::c-br-fee-late"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-birth-registration::f-br-5y-plus",
+      "service_id": "civil-birth-registration",
+      "description": "Registration after 5 years (domestic)",
+      "amount": 50,
+      "currency": "BDT",
+      "condition": {
+        "field": "years_since_birth",
+        "op": "gt",
+        "value": 5
+      },
+      "claim_ids": [
+        "civil-birth-registration::c-br-fee-late"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-birth-registration-copy::f-dup-copy",
+      "service_id": "civil-birth-registration-copy",
+      "description": "Duplicate certificate copy (domestic)",
+      "amount": 50,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "civil-birth-registration-copy::c-copy-fee"
+      ],
+      "pipeline_status": "CROSS_CHECKED",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-birth-registration-correction::f-corr-dob",
+      "service_id": "civil-birth-registration-correction",
+      "description": "DOB correction application fee (domestic)",
+      "amount": 100,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "civil-birth-registration-correction::c-corr-fee-dob"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-birth-registration-correction::f-corr-other",
+      "service_id": "civil-birth-registration-correction",
+      "description": "Other field correction application fee (domestic)",
+      "amount": 50,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "civil-birth-registration-correction::c-corr-fee-other"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-birth-registration-correction::f-corr-cert-copy",
+      "service_id": "civil-birth-registration-correction",
+      "description": "Certified copy after correction in Bangla & English",
+      "amount": 0,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "CROSS_CHECKED",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-death-registration::f-dr-0-45",
+      "service_id": "civil-death-registration",
+      "description": "Death registration within 45 days",
+      "amount": 0,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "civil-death-registration::c-dr-fees"
+      ],
+      "pipeline_status": "CROSS_CHECKED",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-death-registration::f-dr-45-5y",
+      "service_id": "civil-death-registration",
+      "description": "After 45 days to 5 years (domestic)",
+      "amount": 25,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "civil-death-registration::c-dr-fees"
+      ],
+      "pipeline_status": "CROSS_CHECKED",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-death-registration::f-dr-5y",
+      "service_id": "civil-death-registration",
+      "description": "After 5 years (domestic)",
+      "amount": 50,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "civil-death-registration::c-dr-fees"
+      ],
+      "pipeline_status": "CROSS_CHECKED",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-death-registration-copy::f-dup-copy",
+      "service_id": "civil-death-registration-copy",
+      "description": "Duplicate certificate copy (domestic)",
+      "amount": 50,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "civil-death-registration-copy::c-copy-fee"
+      ],
+      "pipeline_status": "CROSS_CHECKED",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-death-registration-correction::f-corr-dob",
+      "service_id": "civil-death-registration-correction",
+      "description": "DOB correction application fee (domestic)",
+      "amount": 100,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "civil-death-registration-correction::c-corr-fee-dob"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-death-registration-correction::f-corr-other",
+      "service_id": "civil-death-registration-correction",
+      "description": "Other field correction application fee (domestic)",
+      "amount": 50,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "civil-death-registration-correction::c-corr-fee-other"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "civil-death-registration-correction::f-corr-cert-copy",
+      "service_id": "civil-death-registration-correction",
+      "description": "Certified copy after correction in Bangla & English",
+      "amount": 0,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "CROSS_CHECKED",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "nid-card-info-correction::f-corr-calc",
+      "service_id": "nid-card-info-correction",
+      "description": "Fee must be calculated on official NID fee calculator (application type + delivery type)",
+      "amount": null,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "nid-card-info-correction::c-nid-card-info-correction-fee-exists"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "nid-card-info-correction::f-corr-news-230",
+      "service_id": "nid-card-info-correction",
+      "description": "Reported first-time visible-info correction fee (VAT inclusive) — news only",
+      "amount": 230,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "nid-card-info-correction::c-nid-card-info-correction-fee-amount-news"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "UNVERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "nid-combined-correction::f-corr-calc",
+      "service_id": "nid-combined-correction",
+      "description": "Fee must be calculated on official NID fee calculator (application type + delivery type)",
+      "amount": null,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "nid-combined-correction::c-nid-combined-correction-fee-exists"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "nid-combined-correction::f-corr-news-230",
+      "service_id": "nid-combined-correction",
+      "description": "Reported first-time visible-info correction fee (VAT inclusive) — news only",
+      "amount": 230,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "nid-combined-correction::c-nid-combined-correction-fee-amount-news"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "UNVERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "nid-new-voter-registration::f-new-reg-forms",
+      "service_id": "nid-new-voter-registration",
+      "description": "Forms for applications — FAQ states forms themselves have no charge",
+      "amount": 0,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [],
+      "pipeline_status": "CROSS_CHECKED",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "nid-other-info-correction::f-corr-calc",
+      "service_id": "nid-other-info-correction",
+      "description": "Fee must be calculated on official NID fee calculator (application type + delivery type)",
+      "amount": null,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "nid-other-info-correction::c-nid-other-info-correction-fee-exists"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "nid-other-info-correction::f-corr-news-230",
+      "service_id": "nid-other-info-correction",
+      "description": "Reported first-time visible-info correction fee (VAT inclusive) — news only",
+      "amount": 230,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "nid-other-info-correction::c-nid-other-info-correction-fee-amount-news"
+      ],
+      "pipeline_status": "CONFLICTING",
+      "legacy_verification_status": "UNVERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    },
+    {
+      "fee_id": "nid-reissue-lost::f-reissue-calc",
+      "service_id": "nid-reissue-lost",
+      "description": "Calculate via official fee calculator (reissue + delivery type)",
+      "amount": null,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "nid-reissue-lost::c-reissue-fee"
+      ],
+      "pipeline_status": "CROSS_CHECKED",
+      "legacy_verification_status": "VERIFIED",
+      "publication_status": "STAGING_ONLY",
+      "maps_toward_runtime": "fees",
+      "warning": "Amount must not populate runtime Fee.amount until VERIFIED and conflict-free."
+    }
+  ]
+}

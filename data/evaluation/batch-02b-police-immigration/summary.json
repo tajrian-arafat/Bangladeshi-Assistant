@@ -1,0 +1,715 @@
+{
+  "generated_at": "2026-08-25T02:20:11.825687+00:00",
+  "batch_id": "batch-02b-police-immigration",
+  "total_tests": 67,
+  "passed": 66,
+  "raw_passed": 64,
+  "pass_rate_pct": 98.5,
+  "raw_pass_rate_pct": 95.5,
+  "hallucinations": 0,
+  "correct_uncertainty": 24,
+  "correct_refusal": 3,
+  "outcome_counts": {
+    "ANSWER_SUPPORTED": 39,
+    "CORRECT_UNCERTAINTY": 24,
+    "CORRECT_REFUSAL": 3,
+    "PRODUCT_FAILURE": 1
+  },
+  "dryrun_gate_pass": true,
+  "dryrun_checks": {
+    "A_no_universal_offline_500": true,
+    "B_online_channel_fee_preserved": true,
+    "C_gd_all_types_not_published": true,
+    "D_mrv_fees_not_published": true,
+    "E_sla_services_separate": true,
+    "F_practical_not_must_need": true,
+    "G_published_fees_have_provenance": true
+  },
+  "critical_results": [
+    {
+      "id": "b001",
+      "query": "Police clearance er fee koto?",
+      "category": "POLICE_CLEARANCE",
+      "expected": {
+        "id": "b001",
+        "query": "Police clearance er fee koto?",
+        "language": "banglish",
+        "category": "POLICE_CLEARANCE",
+        "service_expected": "police-clearance-certificate",
+        "intent_expected": "fee_inquiry",
+        "expect": {
+          "must_not_universal_pcc_fee": true,
+          "uncertainty_ok": true
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "police clearance er fee fee",
+        "intent": "fee_inquiry",
+        "service_slug": "police-clearance-certificate",
+        "support_level": "CONFLICTED",
+        "confidence": "low",
+        "summary": "Here is available structured information for Police Clearance Certificate (PCC). This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "PCC fee differs between online (BDT 1,500 on pcc.police.gov.bd) and a legacy offline police.gov.bd page (BDT 500). No single universal fee is published.",
+          "No verified official fee amount is available for this service in the knowledge base. Do not rely on unofficial quoted amounts."
+        ],
+        "official_urls": [
+          "https://pcc.police.gov.bd/ords/r/pcc/pcc/9"
+        ],
+        "citations": [
+          {
+            "evidence_id": "e776a4f3-ec40-4491-8a5d-8075dab4b3dc",
+            "source_title": "Online Police Clearance Certificate applications",
+            "source_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Verified official URL for Police Clearance Certificate (PCC)"
+          },
+          {
+            "evidence_id": "b7d41aaf-24e6-451c-a8cb-251c92c30766",
+            "source_title": "If passport has no address, present address",
+            "source_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Portal terms item 3; offline page item 6/footnote 5: NID/birth/ward councillor when passport lacks address."
+          }
+        ]
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "CORRECT_UNCERTAINTY",
+      "actual_outcome": "ANSWER_SUPPORTED",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "uncertainty": true,
+        "no_universal_pcc_fee": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b002",
+      "query": "Online PCC fee koto?",
+      "category": "POLICE_CLEARANCE",
+      "expected": {
+        "id": "b002",
+        "query": "Online PCC fee koto?",
+        "language": "banglish",
+        "category": "POLICE_CLEARANCE",
+        "service_expected": "police-clearance-certificate",
+        "intent_expected": "fee_inquiry",
+        "expect": {
+          "must_show_online_pcc_fee": true,
+          "fee_amount_expected": "1500"
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "online pcc fee fee",
+        "intent": "fee_inquiry",
+        "service_slug": "police-clearance-certificate",
+        "support_level": "CONFLICTED",
+        "confidence": "low",
+        "summary": "Here is available structured information for Police Clearance Certificate (PCC). This is not fully verified official guidance yet.",
+        "fees": [
+          {
+            "amount": "1500",
+            "currency": "BDT",
+            "evidence_id": "5308340e-9781-41ff-909c-ef41560db811",
+            "label": "Online PCC application fee (online channel only)",
+            "fee_mode": null
+          }
+        ],
+        "warnings": [
+          "PCC fees differ between online and offline official sources. Showing online-channel verified fee only \u2014 not a universal PCC fee."
+        ],
+        "official_urls": [
+          "https://pcc.police.gov.bd/ords/r/pcc/pcc/9"
+        ],
+        "citations": [
+          {
+            "evidence_id": "e776a4f3-ec40-4491-8a5d-8075dab4b3dc",
+            "source_title": "Online Police Clearance Certificate applications",
+            "source_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Verified official URL for Police Clearance Certificate (PCC)"
+          },
+          {
+            "evidence_id": "b7d41aaf-24e6-451c-a8cb-251c92c30766",
+            "source_title": "If passport has no address, present address",
+            "source_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Portal terms item 3; offline page item 6/footnote 5: NID/birth/ward councillor when passport lacks address."
+          }
+        ]
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "ANSWER_SUPPORTED",
+      "actual_outcome": "ANSWER_SUPPORTED",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "fee_amount": true,
+        "online_pcc_fee": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b003",
+      "query": "Offline police clearance fee?",
+      "category": "POLICE_CLEARANCE",
+      "expected": {
+        "id": "b003",
+        "query": "Offline police clearance fee?",
+        "language": "en",
+        "category": "POLICE_CLEARANCE",
+        "service_expected": "police-clearance-certificate",
+        "intent_expected": "fee_inquiry",
+        "expect": {
+          "must_not_affirm_offline_500_current": true,
+          "uncertainty_ok": true
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "offline police clearance fee",
+        "intent": "fee_inquiry",
+        "service_slug": "police-clearance-certificate",
+        "support_level": "CONFLICTED",
+        "confidence": "low",
+        "summary": "Here is available structured information for Police Clearance Certificate (PCC). This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "Offline/paper PCC fee sources conflict with the online portal (BDT 1,500). BDT 500 on police.gov.bd is not published as the current universal fee.",
+          "No verified official fee amount is available for this service in the knowledge base. Do not rely on unofficial quoted amounts."
+        ],
+        "official_urls": [
+          "https://pcc.police.gov.bd/ords/r/pcc/pcc/9"
+        ],
+        "citations": [
+          {
+            "evidence_id": "e776a4f3-ec40-4491-8a5d-8075dab4b3dc",
+            "source_title": "Online Police Clearance Certificate applications",
+            "source_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Verified official URL for Police Clearance Certificate (PCC)"
+          },
+          {
+            "evidence_id": "b7d41aaf-24e6-451c-a8cb-251c92c30766",
+            "source_title": "If passport has no address, present address",
+            "source_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Portal terms item 3; offline page item 6/footnote 5: NID/birth/ward councillor when passport lacks address."
+          }
+        ]
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "ANSWER_SUPPORTED",
+      "actual_outcome": "CORRECT_UNCERTAINTY",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "uncertainty": true,
+        "no_offline_500_universal": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b004",
+      "query": "Online GD kora jay?",
+      "category": "GENERAL_DIARY",
+      "expected": {
+        "id": "b004",
+        "query": "Online GD kora jay?",
+        "language": "banglish",
+        "category": "GENERAL_DIARY",
+        "service_expected": "police-general-diary-online",
+        "intent_expected": "procedure_inquiry",
+        "expect": {
+          "must_include_url": "gd.police.gov.bd"
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "online gd procedure inquiry",
+        "intent": "application_url",
+        "service_slug": "police-general-diary-online",
+        "support_level": "PARTIALLY_SUPPORTED",
+        "confidence": "medium",
+        "summary": "Here is available structured information for Online General Diary (GD) Filing. This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "Only some facts for this service are verified. Treat unverified parts as provisional.",
+          "Fee information is not yet verified. Confirm at the official office.",
+          "Application URL is from the service catalogue reference; live portal verification is pending."
+        ],
+        "official_urls": [
+          "https://gd.police.gov.bd/"
+        ],
+        "citations": []
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "ANSWER_SUPPORTED",
+      "actual_outcome": "ANSWER_SUPPORTED",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "url": true,
+        "official_url": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b005",
+      "query": "Shob dhoroner GD online kora jay?",
+      "category": "GENERAL_DIARY",
+      "expected": {
+        "id": "b005",
+        "query": "Shob dhoroner GD online kora jay?",
+        "language": "banglish",
+        "category": "GENERAL_DIARY",
+        "service_expected": "police-general-diary-online",
+        "intent_expected": "procedure_inquiry",
+        "expect": {
+          "must_not_affirm_gd_all_types": true,
+          "uncertainty_ok": true
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "shob dhoroner gd online procedure inquiry",
+        "intent": "application_url",
+        "service_slug": "police-general-diary-online",
+        "support_level": "PARTIALLY_SUPPORTED",
+        "confidence": "medium",
+        "summary": "Here is available structured information for Online General Diary (GD) Filing. This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "Only some facts for this service are verified. Treat unverified parts as provisional.",
+          "Whether every GD complaint type can be filed online nationwide is not verified from Tier 1\u20132 official sources. Charter confirms an online channel exists.",
+          "Fee information is not yet verified. Confirm at the official office.",
+          "Application URL is from the service catalogue reference; live portal verification is pending."
+        ],
+        "official_urls": [
+          "https://gd.police.gov.bd/"
+        ],
+        "citations": []
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "ANSWER_SUPPORTED",
+      "actual_outcome": "CORRECT_UNCERTAINTY",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "uncertainty": true,
+        "no_gd_all_types_official": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b006",
+      "query": "Police passport verification koto din?",
+      "category": "POLICE_VERIFICATION",
+      "expected": {
+        "id": "b006",
+        "query": "Police passport verification koto din?",
+        "language": "banglish",
+        "category": "POLICE_VERIFICATION",
+        "service_expected": "police-passport-verification",
+        "intent_expected": "processing_time",
+        "expect": {
+          "expected_sla_days": 15,
+          "must_not_mix_sla": true
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "police passport verification processing time",
+        "intent": "processing_time",
+        "service_slug": "police-passport-verification",
+        "support_level": "PARTIALLY_SUPPORTED",
+        "confidence": "medium",
+        "summary": "Here is available structured information for Passport Verification. This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "Only some facts for this service are verified. Treat unverified parts as provisional.",
+          "Fee information is not yet verified. Confirm at the official office.",
+          "Application URL is from the service catalogue reference; live portal verification is pending."
+        ],
+        "official_urls": [
+          "https://www.police.gov.bd/index.php/en/citizen_charter"
+        ],
+        "citations": []
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "ANSWER_SUPPORTED",
+      "actual_outcome": "ANSWER_SUPPORTED",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "expected_sla": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b007",
+      "query": "Police clearance pete koto din?",
+      "category": "POLICE_CLEARANCE",
+      "expected": {
+        "id": "b007",
+        "query": "Police clearance pete koto din?",
+        "language": "banglish",
+        "category": "POLICE_CLEARANCE",
+        "service_expected": "police-clearance-certificate",
+        "intent_expected": "processing_time",
+        "expect": {
+          "expected_sla_days": 3,
+          "must_not_mix_sla": true
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "police clearance pete processing time",
+        "intent": "processing_time",
+        "service_slug": "police-clearance-certificate",
+        "support_level": "CONFLICTED",
+        "confidence": "low",
+        "summary": "Here is available structured information for Police Clearance Certificate (PCC). This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "Conflicting information exists for this service. Authoritative fees/documents are withheld until review resolves the conflict.",
+          "Fee information is not yet verified. Confirm at the official office."
+        ],
+        "official_urls": [
+          "https://pcc.police.gov.bd/ords/r/pcc/pcc/9"
+        ],
+        "citations": [
+          {
+            "evidence_id": "e776a4f3-ec40-4491-8a5d-8075dab4b3dc",
+            "source_title": "Online Police Clearance Certificate applications",
+            "source_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Verified official URL for Police Clearance Certificate (PCC)"
+          },
+          {
+            "evidence_id": "b7d41aaf-24e6-451c-a8cb-251c92c30766",
+            "source_title": "If passport has no address, present address",
+            "source_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Portal terms item 3; offline page item 6/footnote 5: NID/birth/ward councillor when passport lacks address."
+          }
+        ]
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "ANSWER_SUPPORTED",
+      "actual_outcome": "ANSWER_SUPPORTED",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "expected_sla": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b008",
+      "query": "Employment verification koto din?",
+      "category": "POLICE_VERIFICATION",
+      "expected": {
+        "id": "b008",
+        "query": "Employment verification koto din?",
+        "language": "banglish",
+        "category": "POLICE_VERIFICATION",
+        "service_expected": "police-employment-verification",
+        "intent_expected": "processing_time",
+        "expect": {
+          "uncertainty_ok": true,
+          "must_not_invent_sla": true
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "employment verification processing time",
+        "intent": "processing_time",
+        "service_slug": "police-employment-verification",
+        "support_level": "PARTIALLY_SUPPORTED",
+        "confidence": "medium",
+        "summary": "Here is available structured information for Employment Verification. This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "Only some facts for this service are verified. Treat unverified parts as provisional.",
+          "Fee information is not yet verified. Confirm at the official office.",
+          "Application URL is from the service catalogue reference; live portal verification is pending."
+        ],
+        "official_urls": [
+          "https://www.police.gov.bd/index.php/en/citizen_charter"
+        ],
+        "citations": []
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "ANSWER_SUPPORTED",
+      "actual_outcome": "CORRECT_UNCERTAINTY",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "no_invention": true,
+        "uncertainty": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b009",
+      "query": "Bangladesh visa application kothay?",
+      "category": "VISA",
+      "expected": {
+        "id": "b009",
+        "query": "Bangladesh visa application kothay?",
+        "language": "banglish",
+        "category": "VISA",
+        "service_expected": "migration-visa-application-dip",
+        "intent_expected": "application_url",
+        "expect": {
+          "must_include_url": "dip.gov.bd"
+        }
+      },
+      "actual": {
+        "language": "banglish",
+        "normalized_message": "bangladesh visa application where",
+        "intent": "application_url",
+        "service_slug": "migration-visa-application-dip",
+        "support_level": "PARTIALLY_SUPPORTED",
+        "confidence": "medium",
+        "summary": "Here is available structured information for Visa Application (Department of Immigration and Passports). This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "Only some facts for this service are verified. Treat unverified parts as provisional.",
+          "Fee information is not yet verified. Confirm at the official office."
+        ],
+        "official_urls": [
+          "https://www.dip.gov.bd/"
+        ],
+        "citations": [
+          {
+            "evidence_id": "3beced40-878f-457e-b3c7-1a78c69d943a",
+            "source_title": "DIP home page e-services section links 'Online MRV Application' to visa.gov.bd.",
+            "source_url": "https://www.dip.gov.bd/",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Verified official URL for Visa Application (Department of Immigration and Passports)"
+          },
+          {
+            "evidence_id": "072c2e02-56ab-4a0b-b58a-5a29372bf5c6",
+            "source_title": "Department of Immigration and Passports (Ministry of Home Affairs)",
+            "source_url": "https://www.dip.gov.bd/",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "DIP site identity: Department of Immigration and Passports, Ministry of Home Affairs."
+          },
+          {
+            "evidence_id": "9d609da5-0e02-4455-a2d7-28667cb0a450",
+            "source_title": "DIP home page e-services section links 'Online MRV Application' to visa.gov.bd.",
+            "source_url": "https://www.dip.gov.bd/",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "DIP home internal e-services: '\u0985\u09a8\u09b2\u09be\u0987\u09a8 \u098f\u09ae\u0986\u09b0\u09ad\u09bf \u0986\u09ac\u09c7\u09a6\u09a8' \u2192 https://www.visa.gov.bd"
+          }
+        ]
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "ANSWER_SUPPORTED",
+      "actual_outcome": "ANSWER_SUPPORTED",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "url": true,
+        "official_url": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b010",
+      "query": "MRV fee koto?",
+      "category": "VISA",
+      "expected": {
+        "id": "b010",
+        "query": "MRV fee koto?",
+        "language": "banglish",
+        "category": "VISA",
+        "service_expected": "migration-visa-application-dip",
+        "intent_expected": "fee_inquiry",
+        "expect": {
+          "must_not_affirm_mrv_fee": true,
+          "uncertainty_ok": true
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "mrv fee fee",
+        "intent": "fee_inquiry",
+        "service_slug": "migration-visa-application-dip",
+        "support_level": "PARTIALLY_SUPPORTED",
+        "confidence": "medium",
+        "summary": "Here is available structured information for Visa Application (Department of Immigration and Passports). This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "Only some facts for this service are verified. Treat unverified parts as provisional.",
+          "MRV/visa fee amounts are not verified from machine-readable official sources.",
+          "No verified official fee amount is available for this service in the knowledge base. Do not rely on unofficial quoted amounts."
+        ],
+        "official_urls": [
+          "https://www.dip.gov.bd/"
+        ],
+        "citations": [
+          {
+            "evidence_id": "3beced40-878f-457e-b3c7-1a78c69d943a",
+            "source_title": "DIP home page e-services section links 'Online MRV Application' to visa.gov.bd.",
+            "source_url": "https://www.dip.gov.bd/",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Verified official URL for Visa Application (Department of Immigration and Passports)"
+          },
+          {
+            "evidence_id": "072c2e02-56ab-4a0b-b58a-5a29372bf5c6",
+            "source_title": "Department of Immigration and Passports (Ministry of Home Affairs)",
+            "source_url": "https://www.dip.gov.bd/",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "DIP site identity: Department of Immigration and Passports, Ministry of Home Affairs."
+          },
+          {
+            "evidence_id": "9d609da5-0e02-4455-a2d7-28667cb0a450",
+            "source_title": "DIP home page e-services section links 'Online MRV Application' to visa.gov.bd.",
+            "source_url": "https://www.dip.gov.bd/",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "DIP home internal e-services: '\u0985\u09a8\u09b2\u09be\u0987\u09a8 \u098f\u09ae\u0986\u09b0\u09ad\u09bf \u0986\u09ac\u09c7\u09a6\u09a8' \u2192 https://www.visa.gov.bd"
+          }
+        ]
+      },
+      "pass": true,
+      "raw_pass": true,
+      "expected_outcome": "CORRECT_UNCERTAINTY",
+      "actual_outcome": "CORRECT_UNCERTAINTY",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": true,
+        "uncertainty": true,
+        "no_mrv_fee_hallucination": true
+      },
+      "reasons": [],
+      "failure_class": null,
+      "recommended_fix": null
+    },
+    {
+      "id": "b011",
+      "query": "PCC apply https://fake-police-gov.example/pcc",
+      "category": "ANTI_HALLUCINATION",
+      "expected": {
+        "id": "b011",
+        "query": "PCC apply https://fake-police-gov.example/pcc",
+        "language": "en",
+        "category": "ANTI_HALLUCINATION",
+        "service_expected": "police-clearance-certificate",
+        "intent_expected": "application_url",
+        "expect": {
+          "must_not_hallucinate": true,
+          "fake_url": "https://fake-police-gov.example/pcc"
+        }
+      },
+      "actual": {
+        "language": "en",
+        "normalized_message": "pcc apply",
+        "intent": "procedure_inquiry",
+        "service_slug": "police-clearance-certificate",
+        "support_level": "CONFLICTED",
+        "confidence": "low",
+        "summary": "Here is available structured information for Police Clearance Certificate (PCC). This is not fully verified official guidance yet.",
+        "fees": [],
+        "warnings": [
+          "Conflicting information exists for this service. Authoritative fees/documents are withheld until review resolves the conflict.",
+          "Fee information is not yet verified. Confirm at the official office."
+        ],
+        "official_urls": [
+          "https://pcc.police.gov.bd/ords/r/pcc/pcc/9"
+        ],
+        "citations": [
+          {
+            "evidence_id": "e776a4f3-ec40-4491-8a5d-8075dab4b3dc",
+            "source_title": "Online Police Clearance Certificate applications",
+            "source_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Verified official URL for Police Clearance Certificate (PCC)"
+          },
+          {
+            "evidence_id": "b7d41aaf-24e6-451c-a8cb-251c92c30766",
+            "source_title": "If passport has no address, present address",
+            "source_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+            "tier": 1,
+            "last_verified_at": "2026-08-24T22:53:05.228339",
+            "excerpt": "Portal terms item 3; offline page item 6/footnote 5: NID/birth/ward councillor when passport lacks address."
+          }
+        ]
+      },
+      "pass": true,
+      "raw_pass": false,
+      "expected_outcome": "CORRECT_REFUSAL",
+      "actual_outcome": "CORRECT_REFUSAL",
+      "counts_as_product_failure": false,
+      "checks": {
+        "service": true,
+        "intent": false,
+        "no_fake_url": true,
+        "no_fake_fee": true
+      },
+      "reasons": [
+        "intent mismatch: expected=application_url got=procedure_inquiry"
+      ],
+      "failure_class": null,
+      "recommended_fix": null
+    }
+  ]
+}

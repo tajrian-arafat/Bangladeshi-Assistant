@@ -1,0 +1,168 @@
+{
+  "service_id": "civil-birth-registration-correction",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Birth Registration Information Correction",
+  "service_name_bn": "জন্ম তথ্য সংশোধন",
+  "aliases": [
+    "birth record correction",
+    "BRIS correction"
+  ],
+  "banglish_variants": [],
+  "category_id": "civil_registration",
+  "responsible_ministry": "Local Government Division, MoLGRD&C",
+  "responsible_agency": "Office of the Registrar General, Birth and Death Registration",
+  "target_applicant": [
+    "citizen",
+    "parent",
+    "guardian"
+  ],
+  "eligibility": [],
+  "prerequisites": [],
+  "application_methods": [],
+  "online_application": null,
+  "offline_application": null,
+  "official_application_url": "https://bdris.gov.bd/br/correction",
+  "official_information_urls": [
+    "https://www.bdris.gov.bd/",
+    "https://orgbdr.gov.bd/"
+  ],
+  "official_forms": [],
+  "requirements": [],
+  "fees": [
+    {
+      "fee_id": "f-corr-dob",
+      "description": "DOB correction application fee (domestic)",
+      "amount": 100,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "c-corr-fee-dob"
+      ],
+      "verification_status": "VERIFIED",
+      "notes": null,
+      "retrieved_at": "2026-08-24"
+    },
+    {
+      "fee_id": "f-corr-other",
+      "description": "Other field correction application fee (domestic)",
+      "amount": 50,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [
+        "c-corr-fee-other"
+      ],
+      "verification_status": "VERIFIED",
+      "notes": null,
+      "retrieved_at": "2026-08-24"
+    },
+    {
+      "fee_id": "f-corr-cert-copy",
+      "description": "Certified copy after correction in Bangla & English",
+      "amount": 0,
+      "currency": "BDT",
+      "condition": null,
+      "claim_ids": [],
+      "verification_status": "VERIFIED",
+      "notes": "Original/corrected certificate copy free per schedule; duplicate copy BDT 50.",
+      "retrieved_at": "2026-08-24"
+    }
+  ],
+  "payment_methods": [],
+  "processing_time": null,
+  "procedure_steps": [],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [],
+  "office_locations": [],
+  "geographic_limitations": [],
+  "service_availability": "AVAILABLE",
+  "related_services": [
+    "civil-birth-registration",
+    "civil-death-registration"
+  ],
+  "dependencies": [],
+  "renewal_rules": [],
+  "correction_rules": [],
+  "replacement_rules": [],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [],
+  "common_mistakes": [],
+  "practical_experience": [],
+  "warnings": [],
+  "legal_basis": [],
+  "claims": [
+    {
+      "claim_id": "c-corr-fee-dob",
+      "claim": "Application fee for date-of-birth correction: BDT 100 domestic / USD 2 abroad (LGD-referenced schedule).",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-corr-fee-other",
+      "claim": "Application fee for other information correction (name, parents, address, etc.): BDT 50 domestic / USD 1 abroad (LGD-referenced schedule).",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.75,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [
+    {
+      "conflict_id": "conf-bdris-corr-other-fee",
+      "topic": "Other-info correction fee",
+      "claim_a": "BDT 50 (MOFA/LGD-referenced + bdservicerules table)",
+      "source_a": "src-mofa-ankara-bdr",
+      "claim_b": "Some secondary sites state BDT 100 for other corrections too",
+      "source_b": "src-bdservicerules-fee",
+      "resolution": "Prefer MOFA English notice distinguishing DOB 100 vs other 50; mark secondary ambiguity.",
+      "notes": "bdservicerules table itself shows 50 for other; another blog claimed 100 — unresolved blog noise."
+    }
+  ],
+  "research_status": "PARTIAL",
+  "missing_information": [
+    "Field-by-field supporting document matrix for birth/death corrections."
+  ],
+  "manual_review_required": [],
+  "knowledge_quality": {
+    "knowledge_quality_score": 65.8,
+    "dimensions": {
+      "coverage": 50,
+      "authority": 82,
+      "freshness": 70,
+      "consistency": 75,
+      "usability": 50.0
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Fees better than docs.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24"
+}

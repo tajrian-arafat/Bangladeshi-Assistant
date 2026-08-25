@@ -1,0 +1,179 @@
+{
+  "service_id": "civil-marriage-registration",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Marriage Registration",
+  "service_name_bn": "বিবাহ নিবন্ধন",
+  "aliases": [
+    "nikah registration",
+    "CRVS marriage registration"
+  ],
+  "banglish_variants": [],
+  "category_id": "civil_registration",
+  "responsible_ministry": "Ministry of Law, Justice and Parliamentary Affairs / Local Government (CRVS)",
+  "responsible_agency": "Ministry of Law, Justice and Parliamentary Affairs (CRVS Marriage & Divorce Portal)",
+  "target_applicant": [
+    "citizen",
+    "nikah_registrar"
+  ],
+  "eligibility": [],
+  "prerequisites": [],
+  "application_methods": [],
+  "online_application": null,
+  "offline_application": null,
+  "official_application_url": "https://marriage.gov.bd/",
+  "official_information_urls": [
+    "https://marriage.gov.bd/",
+    "https://marriage.gov.bd/docs/CRVS_User_Manual.pdf"
+  ],
+  "official_forms": [],
+  "requirements": [
+    {
+      "requirement_id": "r-nikah",
+      "name_en": "Nikahnama / kabinnama details and witnesses as applicable",
+      "name_bn": "কাবিননামা/সাক্ষী",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "notes": "Exact portal upload checklist needs manual extraction from registrar practice."
+    },
+    {
+      "requirement_id": "r-registrar",
+      "name_en": "Registration via licensed Nikah Registrar / Hindu Marriage Registrar as applicable",
+      "name_bn": "নিবন্ধক",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [],
+      "notes": null
+    }
+  ],
+  "fees": [],
+  "payment_methods": [],
+  "processing_time": null,
+  "procedure_steps": [],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [],
+  "office_locations": [],
+  "geographic_limitations": [],
+  "service_availability": "AVAILABLE",
+  "related_services": [],
+  "dependencies": [],
+  "renewal_rules": [],
+  "correction_rules": [],
+  "replacement_rules": [],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [],
+  "common_mistakes": [],
+  "practical_experience": [],
+  "warnings": [],
+  "legal_basis": [
+    {
+      "name": "Muslim Marriages and Divorces (Registration) Act, 1974",
+      "source_ids": [
+        "src-law-muslim-marriage"
+      ]
+    },
+    {
+      "name": "Hindu Marriage Registration Act, 2012",
+      "source_ids": [
+        "src-law-hindu-marriage"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "c-mm-mandatory",
+      "claim": "Every marriage solemnized under Muslim law shall be registered under the 1974 Act.",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-law-muslim-marriage"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-hm-optional",
+      "claim": "Hindu marriage registration is provided for under the 2012 Act (registration framework; widely described as optional vs Muslim mandatory).",
+      "field": "eligibility",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-law-hindu-marriage"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-portal",
+      "claim": "CRVS Marriage & Divorce portal supports civilian registration/login and multi-step marriage registration forms; registrars manage applications (official user manual).",
+      "field": "application",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-marriage-manual",
+        "src-marriage-portal"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-report-30",
+      "claim": "Where marriage is solemnized by someone other than the Nikah Registrar, the bridegroom must report within 30 days for registration.",
+      "field": "procedure",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-law-muslim-marriage"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [],
+  "research_status": "PARTIAL",
+  "missing_information": [
+    "Citizen-facing fee schedule for nikah registration",
+    "Complete document upload list from portal UI"
+  ],
+  "manual_review_required": [],
+  "knowledge_quality": {
+    "knowledge_quality_score": 70.5,
+    "dimensions": {
+      "coverage": 55,
+      "authority": 90,
+      "freshness": 70,
+      "consistency": 85,
+      "usability": 50.0
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Legal basis strong; operational fees/docs incomplete.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24"
+}

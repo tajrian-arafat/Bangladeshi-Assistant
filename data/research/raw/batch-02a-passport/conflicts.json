@@ -1,0 +1,41 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "conflict-super-express-eligibility",
+      "service_ids": [
+        "epassport-urgent-super-express",
+        "epassport-reissue"
+      ],
+      "topic": "super_express_eligibility",
+      "claim_ids": [
+        "epassport-urgent-super-express::c-super-express-mrp-no-address-change",
+        "epassport-urgent-super-express::c-super-express-2-days"
+      ],
+      "description": "Urgent page states any citizen may apply for Super Express, but NOTE restricts current availability to existing MRP holders without permanent address change.",
+      "hypotheses": [
+        "policy_change_over_time",
+        "applicant_type_restriction"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-mrp-vs-epassport-primary",
+      "service_ids": [
+        "passport-mrp-initial",
+        "epassport-new-application"
+      ],
+      "topic": "primary_passport_channel",
+      "description": "Both MRP (passport.gov.bd) and e-Passport (epassport.gov.bd) portals remain active; national primary channel for new applicants needs DIP circular confirmation.",
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-fee-freshness",
+      "service_ids": [
+        "epassport-fee-payment"
+      ],
+      "topic": "fee_schedule_date",
+      "description": "Official fee page last updated 8 March 2023; potential stale fees if revised by gazette/circular without page update.",
+      "status": "UNRESOLVED"
+    }
+  ]
+}

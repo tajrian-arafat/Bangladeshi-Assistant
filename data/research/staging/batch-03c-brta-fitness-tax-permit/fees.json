@@ -1,0 +1,238 @@
+{
+  "fees": [
+    {
+      "fee_id": "brta-fitness-certificate::c-fitness-fee-calculator",
+      "service_id": "brta-fitness-certificate",
+      "description": "brta-fitness-certificate fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "fitness_issue_or_renewal"
+      },
+      "claim_ids": [
+        "brta-fitness-certificate::c-fitness-fee-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "brta-tax-token::c-tax-token-fee-calculator",
+      "service_id": "brta-tax-token",
+      "description": "brta-tax-token fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "tax_token_issue_or_renewal"
+      },
+      "claim_ids": [
+        "brta-tax-token::c-tax-token-fee-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "brta-mv-tax-payment::c-mv-tax-amount-calculator",
+      "service_id": "brta-mv-tax-payment",
+      "description": "brta-mv-tax-payment fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-mvtax-portal",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "mv_tax_payment"
+      },
+      "claim_ids": [
+        "brta-mv-tax-payment::c-mv-tax-amount-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "brta-advance-income-tax::c-ait-fee-calculator",
+      "service_id": "brta-advance-income-tax",
+      "description": "brta-advance-income-tax fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "advance_income_tax"
+      },
+      "claim_ids": [
+        "brta-advance-income-tax::c-ait-fee-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "brta-route-permit::c-route-permit-fee-calculator",
+      "service_id": "brta-route-permit",
+      "description": "brta-route-permit fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "route_permit_issue_or_renewal"
+      },
+      "claim_ids": [
+        "brta-route-permit::c-route-permit-fee-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "transport-route-permit::c-route-permit-fee-calculator",
+      "service_id": "transport-route-permit",
+      "description": "transport-route-permit fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "route_permit_issue_or_renewal"
+      },
+      "claim_ids": [
+        "transport-route-permit::c-route-permit-fee-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "brta-fee-calculator::c-interactive-matrix-not-extracted",
+      "service_id": "brta-fee-calculator",
+      "description": "brta-fee-calculator fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "fee_lookup"
+      },
+      "claim_ids": [
+        "brta-fee-calculator::c-interactive-matrix-not-extracted"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "brta-color-change::c-color-change-fee-calculator",
+      "service_id": "brta-color-change",
+      "description": "brta-color-change fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "vehicle_modification_color"
+      },
+      "claim_ids": [
+        "brta-color-change::c-color-change-fee-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "brta-engine-change::c-engine-change-fee-calculator",
+      "service_id": "brta-engine-change",
+      "description": "brta-engine-change fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "vehicle_modification_engine"
+      },
+      "claim_ids": [
+        "brta-engine-change::c-engine-change-fee-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "brta-tire-size-change::c-tire-change-fee-calculator",
+      "service_id": "brta-tire-size-change",
+      "description": "brta-tire-size-change fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "VARIES",
+        "action": "vehicle_modification_tire"
+      },
+      "claim_ids": [
+        "brta-tire-size-change::c-tire-change-fee-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "brta-driving-school-registration::c-registration-fee-unknown",
+      "service_id": "brta-driving-school-registration",
+      "description": "brta-driving-school-registration fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "NOT_APPLICABLE",
+        "action": "driving_school_registration"
+      },
+      "claim_ids": [
+        "brta-driving-school-registration::c-registration-fee-unknown"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "transport-driving-school-licence::c-licence-fee-calculator",
+      "service_id": "transport-driving-school-licence",
+      "description": "transport-driving-school-licence fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": "NOT_APPLICABLE",
+        "action": "driving_school_licence"
+      },
+      "claim_ids": [
+        "transport-driving-school-licence::c-licence-fee-calculator"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    },
+    {
+      "fee_id": "gap-closure::c-fitness-tax-fees-calculator-derived",
+      "service_id": "brta-fee-calculator",
+      "description": "brta-fee-calculator fee \u2014 CALCULATOR_DERIVED via BSP feeCalculator or payment portal",
+      "amount": "CALCULATOR_DERIVED",
+      "currency": "BDT",
+      "condition": {
+        "source": "src-gap-bsp-fee-calculator-browser",
+        "verification": "PENDING_INTERACTIVE_EXTRACT",
+        "vehicle_type": null,
+        "action": null
+      },
+      "claim_ids": [
+        "gap-closure::c-fitness-tax-fees-calculator-derived"
+      ],
+      "pipeline_status": "PARTIALLY_VERIFIED",
+      "publication_status": "NOT_PUBLISHABLE_STATIC_AMOUNT"
+    }
+  ]
+}

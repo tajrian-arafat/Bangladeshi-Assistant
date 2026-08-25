@@ -1,0 +1,123 @@
+{
+  "services": {
+    "migration-visa-application-dip": {
+      "service_id": "migration-visa-application-dip",
+      "readiness": "YELLOW",
+      "claim_count": 7,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 2,
+        "VERIFIED": 4,
+        "UNVERIFIED": 1
+      },
+      "reason": "DIP portal links and Dec 2024 visa-types PDF partially verified; visa.gov.bd unreachable; MRV fee matrix UNVERIFIED (scanned PDF).",
+      "manual_review_recommended": true
+    },
+    "police-clearance-certificate": {
+      "service_id": "police-clearance-certificate",
+      "readiness": "YELLOW",
+      "claim_count": 23,
+      "status_counts": {
+        "VERIFIED": 22,
+        "CONFLICTING": 1
+      },
+      "reason": "Online PCC core rules live-verified (Tier 1 portal + charter) but offline fee CONFLICTING; collection/delivery and correction workflows still gapped.",
+      "manual_review_recommended": true
+    },
+    "police-cyber-support-women": {
+      "service_id": "police-cyber-support-women",
+      "readiness": "GREEN",
+      "claim_count": 5,
+      "status_counts": {
+        "VERIFIED": 5
+      },
+      "reason": "All charter-sourced PCSW claims VERIFIED on live citizen charter.",
+      "manual_review_recommended": false
+    },
+    "police-employment-verification": {
+      "service_id": "police-employment-verification",
+      "readiness": "YELLOW",
+      "claim_count": 5,
+      "status_counts": {
+        "VERIFIED": 3,
+        "PARTIALLY_VERIFIED": 2
+      },
+      "reason": "Pathway verified; fee amount and numeric SLA not on Tier 1–2 sources.",
+      "manual_review_recommended": true
+    },
+    "police-expatriate-services": {
+      "service_id": "police-expatriate-services",
+      "readiness": "YELLOW",
+      "claim_count": 5,
+      "status_counts": {
+        "VERIFIED": 5
+      },
+      "reason": "Charter scope verified; detailed procedures beyond charter not captured.",
+      "manual_review_recommended": true
+    },
+    "police-firearms-license": {
+      "service_id": "police-firearms-license",
+      "readiness": "YELLOW",
+      "claim_count": 4,
+      "status_counts": {
+        "VERIFIED": 4
+      },
+      "reason": "Charter pathway/SLA verified; eligibility/documents/legal basis beyond charter not captured.",
+      "manual_review_recommended": true
+    },
+    "police-general-diary": {
+      "service_id": "police-general-diary",
+      "readiness": "YELLOW",
+      "claim_count": 6,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 2,
+        "VERIFIED": 4
+      },
+      "reason": "Charter SLA/fee/channels verified; gd.police.gov.bd unreachable; online scope/expansion UNVERIFIED.",
+      "manual_review_recommended": true
+    },
+    "police-general-diary-online": {
+      "service_id": "police-general-diary-online",
+      "readiness": "YELLOW",
+      "claim_count": 10,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 1,
+        "VERIFIED": 4,
+        "UNVERIFIED": 5
+      },
+      "reason": "Charter SLA/fee/channels verified; gd.police.gov.bd unreachable; online scope/expansion UNVERIFIED.",
+      "manual_review_recommended": true
+    },
+    "police-nid-address-verification": {
+      "service_id": "police-nid-address-verification",
+      "readiness": "YELLOW",
+      "claim_count": 3,
+      "status_counts": {
+        "VERIFIED": 3
+      },
+      "reason": "Conditional NID/address rules verified via PCC pages; no standalone service portal.",
+      "manual_review_recommended": true
+    },
+    "police-passport-police-verification": {
+      "service_id": "police-passport-police-verification",
+      "readiness": "YELLOW",
+      "claim_count": 4,
+      "status_counts": {
+        "PARTIALLY_VERIFIED": 2,
+        "VERIFIED": 2
+      },
+      "reason": "Service boundaries verified; e-Passport onboarding PV steps only partially verified (batch-02a).",
+      "manual_review_recommended": true
+    },
+    "police-passport-verification": {
+      "service_id": "police-passport-verification",
+      "readiness": "YELLOW",
+      "claim_count": 5,
+      "status_counts": {
+        "VERIFIED": 4,
+        "PARTIALLY_VERIFIED": 1
+      },
+      "reason": "Passport verification SLAs VERIFIED on charter; fee amount missing; distinct from PCC.",
+      "manual_review_recommended": true
+    }
+  }
+}

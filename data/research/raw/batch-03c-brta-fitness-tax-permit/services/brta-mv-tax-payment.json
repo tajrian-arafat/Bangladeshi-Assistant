@@ -1,0 +1,212 @@
+{
+  "service_id": "brta-mv-tax-payment",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Motor Vehicle Tax (MV Tax) Payment",
+  "service_name_bn": "মোটরযান কর (এমভি ট্যাক্স)",
+  "aliases": [
+    "MV tax",
+    "mvtax BRTA"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner"
+  ],
+  "official_application_url": "https://brta.cnsbd.com/mvtax_brta",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-mv-tax-payment::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "application_url",
+      "claim_text": "Motor vehicle tax (MV tax) payment available at brta.cnsbd.com/mvtax_brta per catalogue official_source.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-portal-url-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-linked-from-brta-portal",
+      "legacy_claim_id": "c-linked-from-brta-portal",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "application_url",
+      "claim_text": "MV tax portal linked from BRTA portal internal e-services section per catalogue discovery notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-linked-from-brta-portal-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-distinct-from-tax-token",
+      "legacy_claim_id": "c-distinct-from-tax-token",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "restriction",
+      "claim_text": "MV tax payment portal is separate from tax token issue/renewal (brta-tax-token) — both relate to vehicle taxation but use different workflows.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-brta-portal-tax-token"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-distinct-from-tax-token-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-registered-vehicle-required",
+      "legacy_claim_id": "c-registered-vehicle-required",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "eligibility",
+      "claim_text": "MV tax payment requires registered vehicle identification (registration number/chassis) on payment portal.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-registered-vehicle-required-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-mv-tax-amount-calculator",
+      "legacy_claim_id": "c-mv-tax-amount-calculator",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "fee",
+      "claim_text": "MV tax amounts depend on vehicle class, engine capacity, and tax year; may align with BSP fee calculator categories but portal computes at payment time.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-mv-tax-payment",
+        "vehicle_type": "VARIES",
+        "action": "mv_tax_payment",
+        "condition": "vehicle_class_and_tax_year",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-mvtax-portal",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-mv-tax-amount-calculator-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-online-payment-channel",
+      "legacy_claim_id": "c-online-payment-channel",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "MV tax payable online via dedicated portal — reduces need for in-person payment for eligible cases.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-online-payment-channel-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-advance-tax-related",
+      "legacy_claim_id": "c-advance-tax-related",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "conditional_document",
+      "claim_text": "Advance income tax (brta-advance-income-tax) may interact with overall vehicle tax settlement — exact sequencing not fully captured.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "ait_applicable_to_vehicle_class"
+      },
+      "source_ids": [
+        "src-mvtax-portal",
+        "src-brta-portal-advance-tax"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-advance-tax-related-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-mv-tax-payment::c-practical-keep-receipt",
+      "legacy_claim_id": "c-practical-keep-receipt",
+      "service_id": "brta-mv-tax-payment",
+      "claim_type": "practical_tip",
+      "claim_text": "Save MV tax payment receipt/transaction ID for tax token renewal and circle office visits.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mvtax-portal"
+      ],
+      "evidence_ids": [
+        "ev-brta-mv-tax-payment::c-practical-keep-receipt-src-mvtax-portal"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Linked from BRTA portal internal e-services.",
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator); batch-03b-brta-vehicle (fitness/tax cross-refs)"
+}

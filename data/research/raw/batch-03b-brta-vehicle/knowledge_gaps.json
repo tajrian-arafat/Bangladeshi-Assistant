@@ -1,0 +1,57 @@
+{
+  "knowledge_gaps": [
+    {
+      "gap_id": "MISSING_BSP_VEHICLE_SUBPORTAL_SNAPSHOT",
+      "service_ids": [
+        "brta-new-vehicle-registration",
+        "brta-trustee-board-certificate"
+      ],
+      "classification": "source_discovery_problem",
+      "priority": "HIGH",
+      "description": "BSP vehicleRegistration and tbc URLs returned 404 outside operating window; Tier-1 workflow text not snapshotted."
+    },
+    {
+      "gap_id": "MISSING_PORTAL_JS_BODY",
+      "service_ids": [
+        "brta-ownership-transfer",
+        "brta-digital-registration-certificate",
+        "brta-vehicle-info-correction",
+        "brta-retro-reflective-number-plate"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "HIGH",
+      "description": "BRTA portal static pages are JS-rendered; procedural checklists in page body not captured in HTML shell snapshots."
+    },
+    {
+      "gap_id": "MISSING_VEHICLE_FEE_MATRIX",
+      "service_ids": [
+        "brta-new-vehicle-registration",
+        "brta-ownership-transfer",
+        "brta-digital-registration-certificate",
+        "brta-vehicle-info-correction"
+      ],
+      "classification": "missing_fee_schedule",
+      "priority": "MEDIUM",
+      "description": "Fee calculator referenced but per-vehicle-type numeric matrix not extracted without interactive BSP session."
+    },
+    {
+      "gap_id": "MISSING_FITNESS_VALIDITY_BY_CLASS",
+      "service_ids": [
+        "brta-new-vehicle-registration"
+      ],
+      "classification": "cross_batch_dependency",
+      "priority": "MEDIUM",
+      "description": "Fitness validity periods and commercial-vs-private inspection rules belong to brta-fitness-certificate (BATCH_03C)."
+    },
+    {
+      "gap_id": "MISSING_LOST_RC_PROCEDURE_DETAIL",
+      "service_ids": [
+        "brta-digital-registration-certificate",
+        "brta-ownership-transfer"
+      ],
+      "classification": "insufficient_evidence",
+      "priority": "MEDIUM",
+      "description": "No standalone lost/damaged RC catalogue service; replacement/GD procedure details not fully captured."
+    }
+  ]
+}

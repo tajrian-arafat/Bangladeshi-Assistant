@@ -1,0 +1,39 @@
+{
+  "resolutions": [
+    {
+      "dependency_id": "dep-03b-fitness-validity-03c",
+      "from_batch": "BATCH_03B",
+      "to_batch": "BATCH_03C",
+      "from_service_ids": [
+        "brta-new-vehicle-registration",
+        "brta-ownership-transfer"
+      ],
+      "to_service_id": "brta-fitness-certificate",
+      "prior_status": "DEFERRED",
+      "prior_claim_id": "gap-closure::c-fitness-validity-deferred-batch03c",
+      "resolution_claim_id": "gap-closure::c-fitness-validity-unresolved",
+      "status": "PARTIALLY_RESOLVED",
+      "requirements": [
+        "Fitness validity period by vehicle class",
+        "Commercial vs private inspection rules",
+        "Renewal interval and grace rules"
+      ],
+      "requirements_met": [],
+      "requirements_partially_met": [
+        "Portal page title 'ফিটনেস নবায়ন' verified via browser render"
+      ],
+      "requirements_unmet": [
+        "Fitness validity period by vehicle class",
+        "Commercial vs private inspection rules",
+        "Renewal interval and grace rules"
+      ],
+      "evidence": [
+        "src-gap-brta-fitness-browser",
+        "gap-closure::c-fitness-page-title-verified",
+        "gap-closure::c-fitness-validity-unresolved"
+      ],
+      "note": "03B deferral addressed with browser probe; validity matrix remains UNRESOLVED — portal title captured but no class-by-class validity rules in render."
+    }
+  ],
+  "closed_at": "2026-08-25T02:20:44.098676+00:00"
+}

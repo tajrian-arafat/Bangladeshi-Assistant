@@ -1,0 +1,126 @@
+{
+  "investigations": [
+    {
+      "gap_id": "MISSING_FITNESS_VALIDITY_BY_CLASS",
+      "priority": "HIGH",
+      "classification": "UNRESOLVABLE_WITHOUT_NEW_SOURCE",
+      "status": "UNRESOLVED",
+      "original_description": "Fitness validity by vehicle class deferred from BATCH_03B to BATCH_03C (brta-fitness-certificate).",
+      "evidence_attempted": [
+        "puppeteer render with 15s wait on brta.portal.gov.bd fitness page",
+        "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/brta_fitness.txt",
+        "cross-batch dependency dep-03b-fitness-validity-03c from BATCH_03B"
+      ],
+      "new_evidence": [
+        "src-gap-brta-fitness-browser",
+        "gap-closure::c-fitness-validity-unresolved",
+        "gap-closure::c-fitness-page-title-verified"
+      ],
+      "resolution": "Browser render captured page title 'ফিটনেস নবায়ন' confirming correct portal page. Validity period matrix, commercial vs private rules, and renewal intervals NOT found in render — status UNRESOLVED. No validity durations invented.",
+      "remaining_uncertainty": "Validity rules may exist in circulars, PDF attachments, or authenticated BSP E-Fitness UI.",
+      "new_claim_ids": [
+        "gap-closure::c-fitness-validity-unresolved",
+        "gap-closure::c-fitness-page-title-verified"
+      ]
+    },
+    {
+      "gap_id": "MISSING_VEHICLE_FEE_MATRIX",
+      "priority": "HIGH",
+      "classification": "UNRESOLVED",
+      "status": "UNRESOLVED",
+      "original_description": "BSP fee calculator referenced for fitness, tax token, route permit, modifications; per-vehicle-type matrix not extracted.",
+      "evidence_attempted": [
+        "puppeteer interaction probe on feeCalculator",
+        "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/scrape_results.json fee_calculator_probe"
+      ],
+      "new_evidence": [
+        "gap-closure::c-fitness-tax-fees-calculator-derived"
+      ],
+      "resolution": "Fees explicitly represented as CALCULATOR_DERIVED across fitness/tax/permit/modification services. Calculator returned 404 off-hours; no numeric matrix invented.",
+      "remaining_uncertainty": "Interactive in-hours BSP session required for sample fee captures.",
+      "new_claim_ids": [
+        "gap-closure::c-fitness-tax-fees-calculator-derived"
+      ]
+    },
+    {
+      "gap_id": "MISSING_ROUTE_PERMIT_TYPE_MATRIX",
+      "priority": "HIGH",
+      "classification": "UNRESOLVABLE_WITHOUT_NEW_SOURCE",
+      "status": "UNRESOLVED",
+      "original_description": "Route permit categories and applicability by vehicle class not extracted from portal or BSP.",
+      "evidence_attempted": [
+        "puppeteer render on brta-route-permit portal page",
+        "data/research/verification/batch-03c-brta-fitness-tax-permit-gap-closure/source_snapshots/brta_route_permit.txt"
+      ],
+      "new_evidence": [
+        "src-gap-brta-route-permit-browser",
+        "gap-closure::c-route-permit-type-matrix-unresolved"
+      ],
+      "resolution": "Portal page metadata captured; route-type matrix (inter-district, city, long-route) not in CMS render. Status UNRESOLVED.",
+      "remaining_uncertainty": "Route-type rules may require BSP operator workflow or circle-office circulars.",
+      "new_claim_ids": [
+        "gap-closure::c-route-permit-type-matrix-unresolved"
+      ]
+    },
+    {
+      "gap_id": "MISSING_PORTAL_JS_BODY",
+      "priority": "HIGH",
+      "classification": "PARTIALLY_RESOLVABLE",
+      "status": "PARTIALLY_RESOLVED",
+      "original_description": "BRTA portal static pages JS-rendered; procedural checklists not in HTML shell.",
+      "evidence_attempted": [
+        "puppeteer render with 15s wait on fitness, tax token, route permit, AIT, modification pages"
+      ],
+      "new_evidence": [
+        "src-gap-brta-fitness-browser",
+        "gap-closure::c-brta-portal-cms-body-empty",
+        "gap-closure::c-fitness-page-title-verified"
+      ],
+      "resolution": "Browser render captured page titles and last-updated metadata across 7 portal pages. CMS instructional body shows empty 'Content: Pages' placeholder.",
+      "remaining_uncertainty": "Full procedural checklists may require authenticated CMS or PDF attachments.",
+      "new_claim_ids": [
+        "gap-closure::c-brta-portal-cms-body-empty",
+        "gap-closure::c-fitness-page-title-verified"
+      ]
+    },
+    {
+      "gap_id": "MISSING_MVTAX_PORTAL_SNAPSHOT",
+      "priority": "MEDIUM",
+      "classification": "RESOLVABLE_NOW",
+      "status": "UNRESOLVED",
+      "original_description": "MV tax portal workflow and payment fields not snapshotted.",
+      "evidence_attempted": [
+        "puppeteer render on https://brta.cnsbd.com/mvtax_brta"
+      ],
+      "new_evidence": [
+        "src-gap-mv-tax-portal-browser",
+        "gap-closure::c-mv-tax-portal-shell-captured"
+      ],
+      "resolution": "Portal probe failed: net::ERR_NAME_NOT_RESOLVED at https://brta.cnsbd.com/mvtax_brta. Catalogue URL retained; snapshot not captured.",
+      "remaining_uncertainty": "Challan fields and payment steps not fully captured.",
+      "new_claim_ids": [
+        "gap-closure::c-mv-tax-portal-shell-captured"
+      ]
+    },
+    {
+      "gap_id": "MISSING_BSP_SUBPORTAL_AVAILABILITY",
+      "priority": "HIGH",
+      "classification": "RESOLVABLE_NOW",
+      "status": "PARTIALLY_RESOLVED",
+      "original_description": "BSP feeCalculator, home, roadSafety availability unknown.",
+      "evidence_attempted": [
+        "puppeteer probe of feeCalculator, bsp/home, roadSafety"
+      ],
+      "new_evidence": [
+        "src-gap-bsp-fee-calculator-browser",
+        "gap-closure::c-bsp-subportals-temporarily-unavailable"
+      ],
+      "resolution": "BSP feeCalculator, home, and roadSafety returned HTTP 200 and RENDERED during probe. Fee calculator shell captured; interactive fee matrix not extractable.",
+      "remaining_uncertainty": "Numeric fee matrix requires interactive calculator session or login-gated UI.",
+      "new_claim_ids": [
+        "gap-closure::c-bsp-subportals-temporarily-unavailable"
+      ]
+    }
+  ],
+  "closed_at": "2026-08-25T02:20:44.098676+00:00"
+}

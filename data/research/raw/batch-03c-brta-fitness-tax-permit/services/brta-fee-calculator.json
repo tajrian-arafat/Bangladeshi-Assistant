@@ -1,0 +1,210 @@
+{
+  "service_id": "brta-fee-calculator",
+  "batch_id": "batch-03c-brta-fitness-tax-permit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "BRTA Fee Calculator",
+  "service_name_bn": "ফি ক্যালকুলেটর",
+  "aliases": [
+    "registration fee calculator",
+    "BSP fee calculator"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner",
+    "driver"
+  ],
+  "official_application_url": "https://bsp.brta.gov.bd/feeCalculator",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-fee-calculator::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "application_url",
+      "claim_text": "BRTA fee calculator available at bsp.brta.gov.bd/feeCalculator per catalogue official_source.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-portal-url-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-covers-fitness-route-tax",
+      "legacy_claim_id": "c-covers-fitness-route-tax",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "procedure_step",
+      "claim_text": "Fee calculator covers fitness, route permit, registration, and license fees per catalogue notes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-covers-fitness-route-tax-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-vehicle-type-dependent",
+      "legacy_claim_id": "c-vehicle-type-dependent",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "restriction",
+      "claim_text": "All fee outputs depend on selected vehicle type/class — no single flat fee for any service category.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-vehicle-type-dependent-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-interactive-matrix-not-extracted",
+      "legacy_claim_id": "c-interactive-matrix-not-extracted",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "fee",
+      "claim_text": "Per-vehicle-type numeric fee matrix not statically published; requires interactive calculator session.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-fee-calculator",
+        "vehicle_type": "VARIES",
+        "action": "fee_lookup",
+        "condition": "service_and_vehicle_class_selected",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-interactive-matrix-not-extracted-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-cross-cutting-tool",
+      "legacy_claim_id": "c-cross-cutting-tool",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "restriction",
+      "claim_text": "Fee calculator is cross-cutting — referenced by fitness, tax token, route permit, and modification services in this batch.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-cross-cutting-tool-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-may-differ-from-static-pages",
+      "legacy_claim_id": "c-may-differ-from-static-pages",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "restriction",
+      "claim_text": "Calculator-derived fees may differ from outdated static fee tables on portal pages — calculator treated as authoritative when available.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-home"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-may-differ-from-static-pages-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-no-login-required-likely",
+      "legacy_claim_id": "c-no-login-required-likely",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "eligibility",
+      "claim_text": "Fee calculator likely accessible without BSP login for fee estimation (workflow not fully snapshotted).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "RECOMMENDED"
+      },
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-no-login-required-likely-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-fee-calculator::c-practical-use-before-visit",
+      "legacy_claim_id": "c-practical-use-before-visit",
+      "service_id": "brta-fee-calculator",
+      "claim_type": "practical_tip",
+      "claim_text": "Use fee calculator before circle office visits for fitness, tax token, or route permit to prepare exact payment amounts.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator"
+      ],
+      "evidence_ids": [
+        "ev-brta-fee-calculator::c-practical-use-before-visit-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Covers new/registered vehicle, license, fitness, route permit fees.",
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator); batch-03b-brta-vehicle (fitness/tax cross-refs)"
+}

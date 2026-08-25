@@ -1,0 +1,34 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "conflict-bsp-entry-url-variants",
+      "service_ids": [
+        "brta-learner-driving-license",
+        "brta-driving-license-renewal",
+        "brta-duplicate-driving-license",
+        "brta-smart-card-driving-license"
+      ],
+      "topic": "application_url",
+      "description": "Catalogue uses service-specific BSP URLs (drivingLicense/?lan=en) for learner vs shared bsp/?lan=en hub for renewal/duplicate/smart card; both resolve to BSP ecosystem but entry paths differ.",
+      "hypotheses": [
+        "service_specific_deep_link_vs_hub",
+        "catalogue_canonical_per_service"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "conflict_id": "conflict-dctc-dctb-url-naming",
+      "service_ids": [
+        "brta-dctc-exam-result",
+        "brta-smart-card-driving-license"
+      ],
+      "topic": "portal_naming",
+      "description": "Service named DCTC (Driving Competency Test Centre) but official BSP result URL path is dctbResult; acronym spelling differs in URL vs service title.",
+      "hypotheses": [
+        "legacy_url_path",
+        "abbreviation_variant"
+      ],
+      "status": "UNRESOLVED"
+    }
+  ]
+}
