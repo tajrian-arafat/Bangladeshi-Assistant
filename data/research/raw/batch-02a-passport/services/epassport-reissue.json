@@ -1,0 +1,215 @@
+{
+  "service_id": "epassport-reissue",
+  "batch_id": "batch-02a-passport",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "e-Passport Re-issue",
+  "service_name_bn": "ই-পাসপোর্ট পুন:ইssue/রি-ইস্যু",
+  "aliases": [
+    "passport renewal e-passport",
+    "re-issue passport"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "citizen"
+  ],
+  "official_application_url": "https://epassport.gov.bd/landing",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "epassport-reissue::c-reissue-portal",
+      "legacy_claim_id": "c-reissue-portal",
+      "service_id": "epassport-reissue",
+      "claim_type": "application_url",
+      "claim_text": "e-Passport re-issue applications are made via epassport.gov.bd landing Apply Online for e-Passport / Re-Issue.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-landing"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-reissue-portal-src-epassport-landing"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-show-previous-passport",
+      "legacy_claim_id": "c-show-previous-passport",
+      "service_id": "epassport-reissue",
+      "claim_type": "conditional_document",
+      "claim_text": "For re-issue, original previous passport must be presented at enrollment.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "application_type",
+        "op": "in",
+        "value": [
+          "reissue",
+          "renewal"
+        ]
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-show-previous-passport-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-lost-gd-copy",
+      "legacy_claim_id": "c-lost-gd-copy",
+      "service_id": "epassport-reissue",
+      "claim_type": "conditional_document",
+      "claim_text": "For lost passport re-issue, GD copy must be presented/submitted at application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "application_type",
+        "op": "eq",
+        "value": "lost"
+      },
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-lost-gd-copy-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-lost-gd-immediate",
+      "legacy_claim_id": "c-lost-gd-immediate",
+      "service_id": "epassport-reissue",
+      "claim_type": "practical_tip",
+      "claim_text": "If passport is lost or damaged, citizen should file GD promptly at nearest police station before re-application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-epassport-instructions"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-lost-gd-immediate-src-epassport-instructions"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-correction-extra-docs",
+      "legacy_claim_id": "c-correction-extra-docs",
+      "service_id": "epassport-reissue",
+      "claim_type": "conditional_document",
+      "claim_text": "Information correction may require additional supporting documents depending on correction type.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "application_type",
+        "op": "eq",
+        "value": "correction"
+      },
+      "source_ids": [
+        "src-epassport-enrollment-docs"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-correction-extra-docs-src-epassport-enrollment-docs"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-mission-lost-report",
+      "legacy_claim_id": "c-mission-lost-report",
+      "service_id": "epassport-reissue",
+      "claim_type": "conditional_document",
+      "claim_text": "Expatriate lost passport applicants at missions may need local police lost report (mission-specific).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_location",
+        "op": "eq",
+        "value": "foreign_mission"
+      },
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-mission-lost-report-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-dubai-mrp-validity-limit",
+      "legacy_claim_id": "c-dubai-mrp-validity-limit",
+      "service_id": "epassport-reissue",
+      "claim_type": "eligibility",
+      "claim_text": "Dubai consulate states e-Passport not accepted if existing MRP has more than one year validity remaining.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "field": "applicant_location",
+        "op": "eq",
+        "value": "dubai_mission"
+      },
+      "source_ids": [
+        "src-mofa-dubai-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-dubai-mrp-validity-limit-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "epassport-reissue::c-mission-biometric-presence",
+      "legacy_claim_id": "c-mission-biometric-presence",
+      "service_id": "epassport-reissue",
+      "claim_type": "procedure_step",
+      "claim_text": "Mission pages state physical presence mandatory for biometric enrollment (age thresholds vary by mission; Dubai cites under-5 exemption).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-mofa-dubai-epassport",
+        "src-mofa-singapore-epassport"
+      ],
+      "evidence_ids": [
+        "ev-epassport-reissue::c-mission-biometric-presence-src-mofa-dubai-epassport"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": "Apply online for e-Passport / Re-Issue from landing portal."
+}

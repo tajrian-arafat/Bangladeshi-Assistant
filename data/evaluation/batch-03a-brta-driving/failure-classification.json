@@ -1,0 +1,33 @@
+{
+  "generated_from": "data/evaluation/batch-03a-brta-driving-licence/results.jsonl",
+  "total_queries": 55,
+  "failed_queries": 0,
+  "baseline_25_queries": {
+    "passed": 4,
+    "failed": 21,
+    "citation_failures": 22,
+    "hallucinations": 0,
+    "category_summary": {
+      "CITATION_MAPPING": 18,
+      "MISSING_VERIFIED_KNOWLEDGE": 12,
+      "SERVICE_ROUTING": 8,
+      "INTENT": 6,
+      "URL_PROBLEM": 4,
+      "LANGUAGE/BANGLISH": 3,
+      "RESPONSE_PLANNER": 2
+    },
+    "note": "Counts overlap — many failures had multiple root causes (e.g. empty citations after routing miss)."
+  },
+  "post_fix": {
+    "passed": 55,
+    "failed": 0,
+    "citation_failures": 0,
+    "hallucinations": 0,
+    "outcome_counts": {
+      "ANSWER_SUPPORTED": 52,
+      "CORRECT_UNCERTAINTY": 2,
+      "CORRECT_REFUSAL": 1
+    }
+  },
+  "failures": []
+}

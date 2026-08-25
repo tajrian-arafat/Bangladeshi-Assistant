@@ -1,0 +1,131 @@
+{
+  "service_id": "police-employment-verification",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Employment Verification",
+  "service_name_bn": "চাকরির ভেরিফিকেশন",
+  "aliases": [
+    "job verification police"
+  ],
+  "banglish_variants": [],
+  "category_id": "police",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Bangladesh Police (District/Special Branch)",
+  "target_applicant": [
+    "citizen",
+    "employer"
+  ],
+  "official_application_url": "https://www.police.gov.bd/index.php/en/citizen_charter",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "police-employment-verification::c-ev-charter-pathway",
+      "legacy_claim_id": "c-ev-charter-pathway",
+      "service_id": "police-employment-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Employment verification processed on application at District Special Branch / Metropolitan Special Branch / SB.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-charter-pathway-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "police-employment-verification::c-ev-charter-fee",
+      "legacy_claim_id": "c-ev-charter-fee",
+      "service_id": "police-employment-verification",
+      "claim_type": "fee",
+      "claim_text": "Employment verification requires government-prescribed fee (সরকার কর্তৃক নির্ধারিত ফি) per citizen charter; amount not enumerated on charter page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-charter-fee-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-employment-verification::c-ev-charter-sla",
+      "legacy_claim_id": "c-ev-charter-sla",
+      "service_id": "police-employment-verification",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter lists employment verification service time as 'timely' (যথাসময়ে) without numeric SLA.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-charter-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-employment-verification::c-ev-responsible-officer",
+      "legacy_claim_id": "c-ev-responsible-officer",
+      "service_id": "police-employment-verification",
+      "claim_type": "office",
+      "claim_text": "Responsible officers: SP (DSB) / DC Metropolitan Police / Special Superintendent (City SB).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-responsible-officer-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-employment-verification::c-ev-no-universal-rule",
+      "legacy_claim_id": "c-ev-no-universal-rule",
+      "service_id": "police-employment-verification",
+      "claim_type": "eligibility",
+      "claim_text": "Employment verification requirements are employer/request-driven; no universal document list found on Tier 1–2 sources in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-no-universal-rule-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "UNKNOWN"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": null
+}

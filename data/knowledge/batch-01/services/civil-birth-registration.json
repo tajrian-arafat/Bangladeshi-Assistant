@@ -1,0 +1,419 @@
+{
+  "service_id": "civil-birth-registration",
+  "batch_id": "batch-01-identity-civil-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Birth Registration",
+  "service_name_bn": "জন্ম নিবন্ধন",
+  "aliases": [
+    "birth certificate",
+    "BRIS birth registration",
+    "জন্ম সনদ"
+  ],
+  "banglish_variants": [
+    "jonmo nibondhon",
+    "birth certificate",
+    "bdris",
+    "bris"
+  ],
+  "category_id": "civil_registration",
+  "responsible_ministry": "Local Government Division, MoLGRD&C",
+  "responsible_agency": "Office of the Registrar General, Birth and Death Registration",
+  "target_applicant": [
+    "citizen",
+    "parent",
+    "guardian"
+  ],
+  "eligibility": [],
+  "prerequisites": [],
+  "application_methods": [
+    "online",
+    "local_registration_office"
+  ],
+  "online_application": true,
+  "offline_application": null,
+  "official_application_url": "https://bdris.gov.bd/br/application",
+  "official_information_urls": [
+    "https://www.bdris.gov.bd/",
+    "https://orgbdr.gov.bd/",
+    "https://everify.bdris.gov.bd/"
+  ],
+  "official_forms": [],
+  "requirements": [
+    {
+      "requirement_id": "r-br-hospital",
+      "name_en": "Hospital birth certificate or midwife certificate",
+      "name_bn": "হাসপাতাল/মিডওয়াইফ সনদ",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "birth_place_type",
+        "op": "in",
+        "value": [
+          "hospital",
+          "clinic",
+          "home_with_midwife"
+        ]
+      },
+      "claim_ids": [
+        "c-br-docs-practical"
+      ],
+      "notes": "Listed on secondary/mission materials; confirm against Guidelines 2021 PDF in manual review."
+    },
+    {
+      "requirement_id": "r-br-parents-id",
+      "name_en": "Parents' NID or birth registration certificates",
+      "name_bn": "পিতা-মাতার এনআইডি/জন্ম সনদ",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [
+        "c-br-docs-practical"
+      ],
+      "notes": "Strongly evidenced across official application context and secondary guides; mark MUST with review flag if Guidelines PDF differs."
+    },
+    {
+      "requirement_id": "r-br-guardian-proof",
+      "name_en": "Guardian proof if applicant is not father/mother",
+      "name_bn": "অভিভাবকের উপযুক্ত প্রমাণক",
+      "classification": "CONDITIONAL",
+      "condition": {
+        "field": "applicant_relation",
+        "op": "not_in",
+        "value": [
+          "father",
+          "mother"
+        ]
+      },
+      "claim_ids": [
+        "c-br-portal"
+      ],
+      "notes": "Application form text references guardian proof under Act/Rules."
+    },
+    {
+      "requirement_id": "r-br-images",
+      "name_en": "Supporting scans as JPG/JPEG/PNG ≤ 2MB each",
+      "name_bn": "ইমেজ আপলোড সীমা",
+      "classification": "MUST",
+      "condition": null,
+      "claim_ids": [
+        "c-br-upload"
+      ],
+      "notes": null
+    }
+  ],
+  "fees": [
+    {
+      "fee_id": "f-br-0-45",
+      "description": "Registration within 45 days",
+      "amount": 0,
+      "currency": "BDT",
+      "condition": {
+        "field": "days_since_birth",
+        "op": "lte",
+        "value": 45
+      },
+      "claim_ids": [
+        "c-br-fee-free45"
+      ],
+      "verification_status": "VERIFIED",
+      "notes": null,
+      "retrieved_at": "2026-08-24"
+    },
+    {
+      "fee_id": "f-br-45-5y",
+      "description": "Registration after 45 days up to 5 years (domestic)",
+      "amount": 25,
+      "currency": "BDT",
+      "condition": {
+        "all": [
+          {
+            "field": "days_since_birth",
+            "op": "gt",
+            "value": 45
+          },
+          {
+            "field": "years_since_birth",
+            "op": "lte",
+            "value": 5
+          }
+        ]
+      },
+      "claim_ids": [
+        "c-br-fee-late"
+      ],
+      "verification_status": "VERIFIED",
+      "notes": null,
+      "retrieved_at": "2026-08-24"
+    },
+    {
+      "fee_id": "f-br-5y-plus",
+      "description": "Registration after 5 years (domestic)",
+      "amount": 50,
+      "currency": "BDT",
+      "condition": {
+        "field": "years_since_birth",
+        "op": "gt",
+        "value": 5
+      },
+      "claim_ids": [
+        "c-br-fee-late"
+      ],
+      "verification_status": "VERIFIED",
+      "notes": null,
+      "retrieved_at": "2026-08-24"
+    }
+  ],
+  "payment_methods": [],
+  "processing_time": null,
+  "procedure_steps": [
+    {
+      "step_id": "b1",
+      "order": 1,
+      "title": "Open BDRIS birth application",
+      "description": "Go to bdris.gov.bd/br/application.",
+      "claim_ids": [
+        "c-br-portal"
+      ]
+    },
+    {
+      "step_id": "b2",
+      "order": 2,
+      "title": "Select registration address basis",
+      "description": "Choose birth place / permanent / present address path.",
+      "claim_ids": [
+        "c-br-portal"
+      ]
+    },
+    {
+      "step_id": "b3",
+      "order": 3,
+      "title": "Enter child and parents data",
+      "description": "Provide names, dates, parent identifiers as required.",
+      "claim_ids": []
+    },
+    {
+      "step_id": "b4",
+      "order": 4,
+      "title": "Upload supporting images",
+      "description": "JPG/JPEG/PNG ≤2MB.",
+      "claim_ids": [
+        "c-br-upload"
+      ]
+    },
+    {
+      "step_id": "b5",
+      "order": 5,
+      "title": "Submit and follow local office verification",
+      "description": "Declaration of accuracy required; processing via registration office.",
+      "claim_ids": []
+    },
+    {
+      "step_id": "b6",
+      "order": 6,
+      "title": "Obtain certificate / verify online",
+      "description": "Use reprint/verify portals as applicable.",
+      "claim_ids": []
+    }
+  ],
+  "appointment_requirements": [],
+  "verification_requirements": [],
+  "delivery_collection": [],
+  "office_locations": [],
+  "geographic_limitations": [],
+  "service_availability": "AVAILABLE",
+  "related_services": [
+    "civil-birth-registration-correction",
+    "civil-birth-registration-copy",
+    "civil-birth-death-verify",
+    "civil-birth-registration-duplicate-cancel",
+    "nid-new-voter-registration"
+  ],
+  "dependencies": [],
+  "renewal_rules": [],
+  "correction_rules": [],
+  "replacement_rules": [],
+  "cancellation_rules": [],
+  "common_rejection_reasons": [],
+  "common_mistakes": [],
+  "practical_experience": [],
+  "warnings": [
+    "Do not use secondary BDT 500 late fee as official.",
+    "False declaration of non-prior registration creates legal liability (application declaration)."
+  ],
+  "legal_basis": [
+    {
+      "name": "Births and Deaths Registration Act, 2004",
+      "source_ids": [
+        "src-bdris-home"
+      ]
+    },
+    {
+      "name": "Births and Deaths Registration Rules, 2018",
+      "source_ids": [
+        "src-bdris-home"
+      ]
+    },
+    {
+      "name": "Birth and Death Registration Guidelines 2021",
+      "source_ids": [
+        "src-bdris-home"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "c-br-portal",
+      "claim": "Birth registration applications are submitted via BDRIS at bdris.gov.bd; applicant chooses registration address type (birth place / permanent / present).",
+      "field": "application",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-bdris-br-app"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-br-upload",
+      "claim": "Only image files (.jpg/.jpeg/.png) may be uploaded; maximum 2 MB per file (application page).",
+      "field": "requirements",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-bdris-br-app"
+      ],
+      "evidence_excerpt": "শুধুমাত্র ইমেজ ফাইল (.jpg, .jpeg, .png) আপলোড করা যাবে। (প্রতিটি ফাইলের জন্য সর্বোচ্চ ফাইল সাইজ 2 মেগাবাইট)",
+      "verification_status": "VERIFIED",
+      "confidence": 0.95,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-br-fee-free45",
+      "claim": "Registration within 45 days of birth is free of charge (domestic and abroad) per LGD-referenced fee schedule republished via MOFA mission notice.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": "within 45 (forty-five) days ... Free of charge",
+      "verification_status": "VERIFIED",
+      "confidence": 0.85,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-br-fee-late",
+      "claim": "After 45 days to 5 years: BDT 25 (domestic) / USD 1 (abroad); after 5 years: BDT 50 (domestic) / USD 1 (abroad), per LGD-referenced schedule.",
+      "field": "fees",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-mofa-ankara-bdr",
+        "src-bdservicerules-fee"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.8,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-br-fee-conflict-500",
+      "claim": "Some secondary guides claim BDT 500 for registration after 10 years; this conflicts with the LGD-referenced schedule (BDT 50 after 5 years) and is not adopted as official.",
+      "field": "fees",
+      "information_class": "PRACTICAL",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-legalclarity-birth"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "UNVERIFIED",
+      "confidence": 0.3,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-br-helpline",
+      "claim": "Registrar General office operates call centre 16152; support emails support@bdris.gov.bd / help@bdris.gov.bd.",
+      "field": "office",
+      "information_class": "OFFICIAL",
+      "layer": "OFFICIAL",
+      "source_ids": [
+        "src-orgbdr"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "VERIFIED",
+      "confidence": 0.9,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": "2026-08-24",
+      "conflicting_sources": []
+    },
+    {
+      "claim_id": "c-br-docs-practical",
+      "claim": "Guides commonly list hospital birth certificate/midwife certificate and parents' NID/birth certificates; treat as practical/conditional pending full official checklist PDF retrieval.",
+      "field": "requirements",
+      "information_class": "PRACTICAL",
+      "layer": "PRACTICAL",
+      "source_ids": [
+        "src-legalclarity-birth",
+        "src-mofa-ankara-bdr"
+      ],
+      "evidence_excerpt": null,
+      "verification_status": "UNVERIFIED",
+      "confidence": 0.55,
+      "retrieved_at": "2026-08-24",
+      "last_verified_at": null,
+      "conflicting_sources": []
+    }
+  ],
+  "conflicts": [
+    {
+      "conflict_id": "conf-br-fee-10y",
+      "topic": "Late birth registration fee after 10 years",
+      "claim_a": "LGD-referenced schedule via MOFA mission: BDT 50 after 5 years (no separate 10-year tier).",
+      "source_a": "src-mofa-ankara-bdr",
+      "claim_b": "LegalClarity guide: BDT 500 after more than 10 years.",
+      "source_b": "src-legalclarity-birth",
+      "resolution": "UNRESOLVED — prefer Tier-2 LGD-referenced schedule; do not publish BDT 500 as official.",
+      "likely_reason": "Outdated/incorrect secondary guide or different historical schedule."
+    }
+  ],
+  "research_status": "SUBSTANTIAL",
+  "missing_information": [
+    "Full official document checklist from Guidelines 2021 PDF not extracted in this pass.",
+    "Payment channel details for domestic fees (online vs cash at UP/pourashava) not fully verified."
+  ],
+  "manual_review_required": [
+    "Retrieve and attach Guidelines 2021 + official fee gazette PDF."
+  ],
+  "knowledge_quality": {
+    "knowledge_quality_score": 71.8,
+    "dimensions": {
+      "coverage": 72,
+      "authority": 86,
+      "freshness": 75,
+      "consistency": 65,
+      "usability": 50.0
+    },
+    "weights": {
+      "coverage": 0.25,
+      "authority": 0.25,
+      "freshness": 0.2,
+      "consistency": 0.15,
+      "usability": 0.15
+    },
+    "notes": "Portal + fee schedule strong; document checklist partly secondary; fee conflict recorded.",
+    "scored_at": "2026-08-24"
+  },
+  "geographic_availability": [],
+  "researched_at": "2026-08-24"
+}

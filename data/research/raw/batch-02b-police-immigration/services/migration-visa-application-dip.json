@@ -1,0 +1,176 @@
+{
+  "service_id": "migration-visa-application-dip",
+  "batch_id": "batch-02b-police-immigration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Visa Application (Department of Immigration and Passports)",
+  "service_name_bn": "ভিসা আবেদন (DIP)",
+  "aliases": [
+    "DIP visa",
+    "visa application Bangladesh",
+    "Divisional Passport and Visa Office"
+  ],
+  "banglish_variants": [],
+  "category_id": "passport_immigration",
+  "responsible_ministry": "Ministry of Home Affairs",
+  "responsible_agency": "Department of Immigration and Passports (DIP)",
+  "target_applicant": [
+    "foreigner",
+    "citizen"
+  ],
+  "official_application_url": "https://www.dip.gov.bd/",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-online-portal",
+      "legacy_claim_id": "c-visa-online-portal",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "application_url",
+      "claim_text": "Bangladesh visa (MRV) online applications are submitted at visa.gov.bd per DIP Apply Visa Online page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-visa-online",
+        "src-visa-gov-bd",
+        "src-dip-home"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-online-portal-src-dip-visa-online"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-dip-responsible",
+      "legacy_claim_id": "c-visa-dip-responsible",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "eligibility",
+      "claim_text": "Department of Immigration and Passports (Ministry of Home Affairs) is responsible authority for Bangladesh visa issuance to foreigners.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-home",
+        "src-dip-visa-online"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-dip-responsible-src-dip-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-types-page",
+      "legacy_claim_id": "c-visa-types-page",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "document",
+      "claim_text": "DIP publishes visa types and essential documents matrix (Types and Essential Documents of Visa page).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-visa-types"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-types-page-src-dip-visa-types"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-types-freshness-2022",
+      "legacy_claim_id": "c-visa-types-freshness-2022",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "restriction",
+      "claim_text": "Visa types/documents page last updated March 2022; treat document requirements as requiring freshness verification before publication.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-visa-types"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-types-freshness-2022-src-dip-visa-types"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-mrv-fees-page",
+      "legacy_claim_id": "c-visa-mrv-fees-page",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "fee",
+      "claim_text": "DIP publishes Machine Readable Visa (MRV) fee schedule on dedicated fee page; structured fee table not extracted in this research pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-mrv-fees"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-mrv-fees-page-src-dip-mrv-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-foreign-embassy-not-in-scope",
+      "legacy_claim_id": "c-visa-foreign-embassy-not-in-scope",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "restriction",
+      "claim_text": "Foreign embassy visa rules for Bangladesh citizens traveling abroad are out of scope; this service covers Bangladesh-government visa issuance only.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-visa-online"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-foreign-embassy-not-in-scope-src-dip-visa-online"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-dip-eservice-link",
+      "legacy_claim_id": "c-visa-dip-eservice-link",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "application_url",
+      "claim_text": "DIP home page e-services section links 'Online MRV Application' to visa.gov.bd.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-home"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-dip-eservice-link-src-dip-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": null
+}

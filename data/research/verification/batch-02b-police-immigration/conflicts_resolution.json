@@ -1,0 +1,190 @@
+{
+  "conflicts": [
+    {
+      "conflict_id": "conflict-pcc-fee-online-vs-offline",
+      "resolution_status": "PARTIALLY_RESOLVED",
+      "classification": "channel_specific_unreconciled",
+      "old_claim": "Offline police.gov.bd page: BDT 500, treasury code 1-2201-0001-2681 (paper/chalan to SP/Commissioner).",
+      "new_claim": "Online pcc.police.gov.bd + charter online row: BDT 1,500, code 1-7301-0001-2681.",
+      "old_evidence": [
+        {
+          "source_id": "src-police-pcc-offline-page",
+          "source_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+          "authority_tier": 2,
+          "retrieval_method": "live_html",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-02b-police-immigration/source_snapshots/police_pcc_offline_live.html",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "new_evidence": [
+        {
+          "source_id": "src-pcc-portal",
+          "source_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+          "authority_tier": 1,
+          "retrieval_method": "live_html",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-02b-police-immigration/source_snapshots/pcc_portal_live.html",
+          "retrieved_at": "2026-08-24",
+          "evidence_locator": "Terms and conditions / Required Documents / How to Apply sections"
+        },
+        {
+          "source_id": "src-police-charter",
+          "source_url": "https://www.police.gov.bd/index.php/en/citizen_charter",
+          "authority_tier": 2,
+          "retrieval_method": "live_html",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-02b-police-immigration/source_snapshots/police_charter_live.html",
+          "retrieved_at": "2026-08-24",
+          "evidence_locator": "Citizen services table rows 3 (GD), 5 (passport verification), 6 (employment), 7 (clearance), 8 (firearms), 23 (expatriate)"
+        }
+      ],
+      "authority": "Bangladesh Police Tier 1 portal vs Tier 2 static instruction page",
+      "freshness": "Both pages live as of 2026-08-24; charter aligns with online 1500 only",
+      "outcome": "Likely channel-specific (online vs legacy paper procedure) but NOT authoritatively reconciled: no circular/gazette found stating offline paper path fee. Online 1500 VERIFIED for online channel. Offline 500 claim marked CONFLICTING — do not publish as current universal PCC fee.",
+      "blocks_official_publication": true,
+      "claim_ids": [
+        "police-clearance-certificate::c-online-fee-1500",
+        "police-clearance-certificate::c-offline-fee-500-chalan"
+      ]
+    },
+    {
+      "conflict_id": "conflict-pcc-treasury-code",
+      "resolution_status": "PARTIALLY_RESOLVED",
+      "classification": "channel_specific",
+      "old_claim": "Treasury code 1-2201-0001-2681 (offline page)",
+      "new_claim": "Treasury code 1-7301-0001-2681 (online portal + payment instructions)",
+      "old_evidence": [
+        {
+          "source_id": "src-police-pcc-offline-page",
+          "source_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+          "authority_tier": 2,
+          "retrieval_method": "live_html",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-02b-police-immigration/source_snapshots/police_pcc_offline_live.html",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "new_evidence": [
+        {
+          "source_id": "src-pcc-portal",
+          "source_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+          "authority_tier": 1,
+          "retrieval_method": "live_html",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-02b-police-immigration/source_snapshots/pcc_portal_live.html",
+          "retrieved_at": "2026-08-24",
+          "evidence_locator": "Terms and conditions / Required Documents / How to Apply sections"
+        }
+      ],
+      "authority": "Same sources as fee conflict",
+      "freshness": "2026-08-24 live fetch",
+      "outcome": "Treasury codes differ by channel documentation; treat as paired with fee conflict.",
+      "blocks_official_publication": true
+    },
+    {
+      "conflict_id": "conflict-gd-online-scope-timeline",
+      "resolution_status": "UNRESOLVED",
+      "classification": "historical_rollout_vs_current_capability_unknown",
+      "old_claim": "Online GD limited to lost-and-found (Tier-5 TBS Jun 2025 reporting).",
+      "new_claim": "All GD types available online nationwide (Tier-5 BSS Sep 2025).",
+      "old_evidence": [
+        {
+          "source_id": "src-tbs-online-gd-expansion",
+          "source_url": "https://www.tbsnews.net/bangladesh/online-gd-service-be-launched-dhaka-mymensingh-tomorrow-1177476",
+          "authority_tier": 5,
+          "retrieval_method": "secondary_news",
+          "published_date": "2025-06-30",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "new_evidence": [
+        {
+          "source_id": "src-bss-online-gd-rollout",
+          "source_url": "https://www.bssnews.net/news/315020",
+          "authority_tier": 5,
+          "retrieval_method": "secondary_news",
+          "published_date": "2025-09-24",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "authority": "Tier-5 news only — no Tier 1–2 confirmation",
+      "freshness": "2025 press statements; gd.police.gov.bd unreachable",
+      "outcome": "Current online GD scope UNVERIFIED. Charter confirms online channel exists but not complaint-type matrix.",
+      "blocks_official_publication": true,
+      "claim_ids": [
+        "police-general-diary-online::c-gd-all-types-expansion",
+        "police-general-diary::c-gd-not-all-types-historically"
+      ]
+    },
+    {
+      "conflict_id": "conflict-passport-verification-vs-pcc",
+      "resolution_status": "RESOLVED",
+      "classification": "distinct_services_not_contradiction",
+      "old_claim": "Passport verification SLA 15–21 days normal / 7 urgent (charter row 5).",
+      "new_claim": "Online police clearance SLA 3–7 days (charter row 7).",
+      "old_evidence": [
+        {
+          "source_id": "src-police-charter",
+          "source_url": "https://www.police.gov.bd/index.php/en/citizen_charter",
+          "authority_tier": 2,
+          "retrieval_method": "live_html",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-02b-police-immigration/source_snapshots/police_charter_live.html",
+          "retrieved_at": "2026-08-24",
+          "evidence_locator": "Citizen services table rows 3 (GD), 5 (passport verification), 6 (employment), 7 (clearance), 8 (firearms), 23 (expatriate)"
+        }
+      ],
+      "new_evidence": [
+        {
+          "source_id": "src-police-charter",
+          "source_url": "https://www.police.gov.bd/index.php/en/citizen_charter",
+          "authority_tier": 2,
+          "retrieval_method": "live_html",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-02b-police-immigration/source_snapshots/police_charter_live.html",
+          "retrieved_at": "2026-08-24",
+          "evidence_locator": "Citizen services table rows 3 (GD), 5 (passport verification), 6 (employment), 7 (clearance), 8 (firearms), 23 (expatriate)"
+        }
+      ],
+      "authority": "Bangladesh Police citizen charter",
+      "freshness": "Live charter 2026-08-24",
+      "outcome": "Not a factual conflict — different catalogue services with different charter rows. Must not merge SLAs in product answers.",
+      "blocks_official_publication": false
+    },
+    {
+      "conflict_id": "conflict-pcc-portal-url-variants",
+      "resolution_status": "RESOLVED",
+      "classification": "same_apex_app_multiple_entry_routes",
+      "old_claim": "Catalogue URL pcc.police.gov.bd/ords/r/pcc/pcc/9",
+      "new_claim": "police.gov.bd menu links f?p=500:1 alternate APEX route",
+      "old_evidence": [
+        {
+          "source_id": "src-pcc-portal",
+          "source_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+          "authority_tier": 1,
+          "retrieval_method": "live_html",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-02b-police-immigration/source_snapshots/pcc_portal_live.html",
+          "retrieved_at": "2026-08-24",
+          "evidence_locator": "Terms and conditions / Required Documents / How to Apply sections"
+        }
+      ],
+      "new_evidence": [
+        {
+          "source_id": "src-police-pcc-offline-page",
+          "source_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+          "authority_tier": 2,
+          "retrieval_method": "live_html",
+          "live_http_status": 200,
+          "snapshot": "data/research/verification/batch-02b-police-immigration/source_snapshots/police_pcc_offline_live.html",
+          "retrieved_at": "2026-08-24"
+        }
+      ],
+      "authority": "Same Bangladesh Police PCC Oracle APEX application",
+      "freshness": "2026-08-24",
+      "outcome": "Multiple entry URLs for same PCC system; catalogue canonical URL live-verified.",
+      "blocks_official_publication": false
+    }
+  ]
+}

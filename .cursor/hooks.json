@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "python3 .cursor/hooks/guard_deployment.py"
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": "python3 .cursor/hooks/audit_action.py"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "python3 .cursor/hooks/validate_result.py"
+      }
+    ],
+    "stop": [
+      {
+        "command": "python3 .cursor/hooks/audit_action.py"
+      }
+    ]
+  }
+}

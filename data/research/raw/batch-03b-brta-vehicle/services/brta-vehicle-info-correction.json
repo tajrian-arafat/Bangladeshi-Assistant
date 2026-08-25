@@ -1,0 +1,213 @@
+{
+  "service_id": "brta-vehicle-info-correction",
+  "batch_id": "batch-03b-brta-vehicle",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Vehicle Registration Information Correction",
+  "service_name_bn": "মোটরযান তথ্য সংশোধন",
+  "aliases": [
+    "registration data correction"
+  ],
+  "banglish_variants": [],
+  "category_id": "transport",
+  "responsible_ministry": "Ministry of Road Transport and Bridges",
+  "responsible_agency": "Bangladesh Road Transport Authority (BRTA)",
+  "target_applicant": [
+    "citizen",
+    "vehicle_owner"
+  ],
+  "official_application_url": "http://brta.portal.gov.bd/pages/static-pages/6922dc03933eb65569e0df09",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "brta-vehicle-info-correction::c-portal-url",
+      "legacy_claim_id": "c-portal-url",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_type": "application_url",
+      "claim_text": "Registration certificate information correction/change approval process published on BRTA portal static page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-info-correction",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-vehicle-info-correction::c-portal-url-src-brta-portal-info-correction"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-not-ownership-transfer",
+      "legacy_claim_id": "c-not-ownership-transfer",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_type": "restriction",
+      "claim_text": "Registration data correction is distinct from ownership transfer (brta-ownership-transfer); owner identity unchanged.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "NOT_APPLICABLE",
+        "if": "change_of_registered_owner"
+      },
+      "source_ids": [
+        "src-brta-portal-info-correction",
+        "src-brta-portal-ownership-transfer"
+      ],
+      "evidence_ids": [
+        "ev-brta-vehicle-info-correction::c-not-ownership-transfer-src-brta-portal-info-correction"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-original-rc-required",
+      "legacy_claim_id": "c-original-rc-required",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_type": "document",
+      "claim_text": "Original registration certificate required for information correction application.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-brta-portal-info-correction"
+      ],
+      "evidence_ids": [
+        "ev-brta-vehicle-info-correction::c-original-rc-required-src-brta-portal-info-correction"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-supporting-proof-required",
+      "legacy_claim_id": "c-supporting-proof-required",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_type": "conditional_document",
+      "claim_text": "Supporting documents proving correct information (e.g., factory invoice, customs papers, court order) required depending on field being corrected.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "field_being_corrected"
+      },
+      "source_ids": [
+        "src-brta-portal-info-correction"
+      ],
+      "evidence_ids": [
+        "ev-brta-vehicle-info-correction::c-supporting-proof-required-src-brta-portal-info-correction"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-circle-office-application",
+      "legacy_claim_id": "c-circle-office-application",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_type": "procedure_step",
+      "claim_text": "Information correction applications submitted to relevant BRTA circle office with prescribed forms.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-info-correction"
+      ],
+      "evidence_ids": [
+        "ev-brta-vehicle-info-correction::c-circle-office-application-src-brta-portal-info-correction"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-correction-fee-calculator",
+      "legacy_claim_id": "c-correction-fee-calculator",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_type": "fee",
+      "claim_text": "Registration information correction fees are vehicle-type dependent via BSP fee calculator.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "service": "brta-vehicle-info-correction",
+        "vehicle_type": "VARIES",
+        "action": "registration_info_correction",
+        "condition": "correction_type",
+        "amount": "CALCULATOR_DERIVED",
+        "source": "src-bsp-fee-calculator",
+        "verification": "PENDING_INTERACTIVE_EXTRACT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-bsp-fee-calculator",
+        "src-brta-portal-info-correction"
+      ],
+      "evidence_ids": [
+        "ev-brta-vehicle-info-correction::c-correction-fee-calculator-src-bsp-fee-calculator"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-fields-not-fully-enumerated",
+      "legacy_claim_id": "c-fields-not-fully-enumerated",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_type": "document",
+      "claim_text": "Full list of correctable RC fields not machine-read from portal page in this research pass (JS-rendered content).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-info-correction"
+      ],
+      "evidence_ids": [
+        "ev-brta-vehicle-info-correction::c-fields-not-fully-enumerated-src-brta-portal-info-correction"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "brta-vehicle-info-correction::c-practical-separate-from-modifications",
+      "legacy_claim_id": "c-practical-separate-from-modifications",
+      "service_id": "brta-vehicle-info-correction",
+      "claim_type": "practical_tip",
+      "claim_text": "Engine/color/tyre changes are separate BRTA modification services (BATCH_03C), not generic info correction.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-brta-portal-info-correction",
+        "src-catalogue-transport"
+      ],
+      "evidence_ids": [
+        "ev-brta-vehicle-info-correction::c-practical-separate-from-modifications-src-brta-portal-info-correction"
+      ],
+      "retrieved_at": "2026-08-25",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ],
+  "notes": null,
+  "prior_batch_research": "batch-03a-brta-driving-licence (BSP registration, fee calculator, hours)"
+}

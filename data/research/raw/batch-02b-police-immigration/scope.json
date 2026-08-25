@@ -1,0 +1,120 @@
+{
+  "in_scope": [
+    "police-clearance-certificate",
+    "police-cyber-support-women",
+    "police-employment-verification",
+    "police-general-diary",
+    "police-general-diary-online",
+    "police-nid-address-verification",
+    "police-passport-police-verification",
+    "police-passport-verification",
+    "migration-visa-application-dip",
+    "police-expatriate-services",
+    "police-firearms-license"
+  ],
+  "out_of_scope_noted": [
+    {
+      "service_id": "epassport-new-application",
+      "reason": "Passport issuance; covered in batch-02a"
+    },
+    {
+      "service_id": "epassport-reissue",
+      "reason": "Passport reissue; covered in batch-02a"
+    },
+    {
+      "service_id": "passport-mrp-initial",
+      "reason": "MRP passport; covered in batch-02a"
+    },
+    {
+      "service_id": "migration-e-apostille",
+      "reason": "MOFA e-apostille; separate MOFA batch"
+    },
+    {
+      "service_id": "mofa-document-attestation",
+      "reason": "MOFA consular attestation; separate batch"
+    },
+    {
+      "service_id": "bida-work-permit-security-clearance",
+      "reason": "BIDA expatriate work-permit clearance; not Bangladesh Police citizen service"
+    },
+    {
+      "service_id": "expatriate-emigration-clearance",
+      "reason": "BMET emigration clearance; separate expatriate/labour batch"
+    }
+  ],
+  "subprocess_coverage": [
+    {
+      "topic": "police_clearance_online",
+      "catalogue_services": [
+        "police-clearance-certificate"
+      ]
+    },
+    {
+      "topic": "police_clearance_offline",
+      "catalogue_services": [
+        "police-clearance-certificate"
+      ]
+    },
+    {
+      "topic": "general_diary_online",
+      "catalogue_services": [
+        "police-general-diary",
+        "police-general-diary-online"
+      ]
+    },
+    {
+      "topic": "general_diary_offline",
+      "catalogue_services": [
+        "police-general-diary"
+      ]
+    },
+    {
+      "topic": "employment_verification",
+      "catalogue_services": [
+        "police-employment-verification"
+      ]
+    },
+    {
+      "topic": "address_nid_verification",
+      "catalogue_services": [
+        "police-nid-address-verification"
+      ]
+    },
+    {
+      "topic": "passport_pathway_police_verification",
+      "catalogue_services": [
+        "police-passport-police-verification"
+      ]
+    },
+    {
+      "topic": "district_passport_verification",
+      "catalogue_services": [
+        "police-passport-verification"
+      ]
+    },
+    {
+      "topic": "visa_application_mrv",
+      "catalogue_services": [
+        "migration-visa-application-dip"
+      ]
+    },
+    {
+      "topic": "expatriate_police_support",
+      "catalogue_services": [
+        "police-expatriate-services"
+      ]
+    },
+    {
+      "topic": "firearms_licensing",
+      "catalogue_services": [
+        "police-firearms-license"
+      ]
+    },
+    {
+      "topic": "cyber_support_women",
+      "catalogue_services": [
+        "police-cyber-support-women"
+      ]
+    }
+  ]
+}

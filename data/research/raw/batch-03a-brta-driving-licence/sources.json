@@ -1,0 +1,132 @@
+{
+  "sources": [
+    {
+      "source_id": "src-bsp-home",
+      "source_url": "https://bsp.brta.gov.bd/bsp/?lan=en",
+      "source_title": "BRTA Service Portal (BSP) — Home / Driving Licence Services Hub",
+      "source_type": "official_portal",
+      "authority_tier": 1,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "en",
+      "snapshot_path": "source_snapshots/bsp_home.html",
+      "freshness_note": "Catalogue official_source for renewal, duplicate, smart card; sub-services linked from BSP hub"
+    },
+    {
+      "source_id": "src-bsp-learner-portal",
+      "source_url": "https://bsp.brta.gov.bd/drivingLicense/?lan=en",
+      "source_title": "BSP — Learner Driving License Application",
+      "source_type": "official_portal",
+      "authority_tier": 1,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "en",
+      "snapshot_path": "source_snapshots/bsp_learner_portal.html",
+      "freshness_note": "Catalogue official_source for learner license; path returned 404 outside BSP operating window in research fetch"
+    },
+    {
+      "source_id": "src-bsp-dctb-result",
+      "source_url": "https://bsp.brta.gov.bd/dctbResult",
+      "source_title": "BSP — Driving Test (DCTC/DCTB) Result Publication",
+      "source_type": "official_portal",
+      "authority_tier": 1,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "bn",
+      "snapshot_path": "source_snapshots/bsp_dctb_result.html",
+      "freshness_note": "Catalogue notes division/district-wise results; URL uses dctbResult spelling"
+    },
+    {
+      "source_id": "src-bsp-register",
+      "source_url": "https://bsp.brta.gov.bd/register",
+      "source_title": "BSP — User Registration (Driver/Owner/Dealer)",
+      "source_type": "official_portal",
+      "authority_tier": 1,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "en",
+      "snapshot_path": "source_snapshots/bsp_register.html",
+      "freshness_note": "NID-linked mobile registration prerequisite for BSP driver services per catalogue discovery notes"
+    },
+    {
+      "source_id": "src-bsp-fee-calculator",
+      "source_url": "https://bsp.brta.gov.bd/feeCalculator",
+      "source_title": "BSP — Fee Calculator (license, registration, fitness, route permit)",
+      "source_type": "official_portal",
+      "authority_tier": 1,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "en",
+      "snapshot_path": "source_snapshots/bsp_fee_calculator.html",
+      "freshness_note": "Catalogue notes cover license fees; numeric amounts require interactive calculator — not extracted in this pass"
+    },
+    {
+      "source_id": "src-brta-portal-home",
+      "source_url": "http://brta.portal.gov.bd/",
+      "source_title": "BRTA Official Portal (National Portal)",
+      "source_type": "official_website",
+      "authority_tier": 2,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "bn",
+      "snapshot_path": null
+    },
+    {
+      "source_id": "src-brta-instructor-page",
+      "source_url": "http://brta.portal.gov.bd/pages/static-pages/6922db6c933eb65569e0a116",
+      "source_title": "BRTA Portal — Driving Instructor License Service Page",
+      "source_type": "official_website",
+      "authority_tier": 2,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "bn",
+      "snapshot_path": "source_snapshots/brta_instructor_page.html",
+      "freshness_note": "Catalogue official_source for instructor license; JS-rendered page — full document checklist not snapshotted"
+    },
+    {
+      "source_id": "src-bsp-maintenance-notice",
+      "source_url": "https://bsp.brta.gov.bd/",
+      "source_title": "BSP — Operating Hours Notice (root landing when sub-portals unavailable)",
+      "source_type": "official_portal",
+      "authority_tier": 1,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "en",
+      "snapshot_path": "source_snapshots/bsp_hours_notice.html",
+      "freshness_note": "Live fetch 2026-08-24: BSP available 8:00–22:00 Bangladesh Standard Time"
+    },
+    {
+      "source_id": "src-brta-portal-dl-services",
+      "source_url": "http://brta.portal.gov.bd/pages/services/driving-license",
+      "source_title": "BRTA Portal — Driving License Services Overview",
+      "source_type": "official_website",
+      "authority_tier": 2,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "bn",
+      "snapshot_path": "source_snapshots/brta_portal_dl_services.html",
+      "freshness_note": "Discovery cross-reference for learner → training → DCTC → smart card pathway"
+    },
+    {
+      "source_id": "src-brta-seba-app-discovery",
+      "source_url": "https://play.google.com/store/apps/details?id=bd.gov.brta.seba",
+      "source_title": "BRTA Seba Mobile App (discovery reference)",
+      "source_type": "official_app_store",
+      "authority_tier": 2,
+      "responsible_body": "Bangladesh Road Transport Authority (BRTA)",
+      "published_date": null,
+      "retrieved_at": "2026-08-24",
+      "language": "en",
+      "notes": "DISCOVERY/PRACTICAL only; mobile channel for BSP-related services per BRTA communications"
+    }
+  ]
+}

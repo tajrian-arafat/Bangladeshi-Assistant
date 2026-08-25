@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bda-automation"
+version = "0.1.0"
+description = "Autonomous knowledge-construction orchestrator for Bangladeshi Assistant"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["automation*"]
+
+[tool.pytest.ini_options]
+testpaths = ["automation/tests"]
+pythonpath = ["."]

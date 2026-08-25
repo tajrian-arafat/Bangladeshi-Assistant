@@ -1,0 +1,390 @@
+{
+  "rule": "No discovery-phase VERIFIED survives into staging.",
+  "demotions": [
+    {
+      "claim_id": "civil-bdris-application-print::c-print",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-death-verify::c-verify",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-portal",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-upload",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CROSS_CHECKED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-fee-free45",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CONFLICTING",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-fee-late",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CONFLICTING",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-registration::c-br-helpline",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-registration-copy::c-copy-fee",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-registration-correction::c-corr-fee-dob",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CONFLICTING",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-registration-correction::c-corr-fee-other",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CONFLICTING",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-dup-cancel",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-death-registration::c-dr-portal",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-death-registration::c-dr-fees",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-death-registration-copy::c-copy-fee",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-corr-fee-dob",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CONFLICTING",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-death-registration-correction::c-corr-fee-other",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CONFLICTING",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-death-registration-duplicate-cancel::c-dup-cancel",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-divorce-registration::c-div-portal",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-marriage-registrar-hindu-list::c-reg-list",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-marriage-registrar-muslim-list::c-reg-list",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-mm-mandatory",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-hm-optional",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-portal",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "civil-marriage-registration::c-report-30",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "dc-attestation-photocopy::c-dc-attestation-photocopy-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "EXTRACTED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "dc-guardianship-certificate::c-dc-guardianship-certificate-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "EXTRACTED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "identity-voter-slip-download::c-slip",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "local-character-certificate::c-local-character-certificate-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "EXTRACTED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "local-death-certificate-union::c-local-death-certificate-union-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "EXTRACTED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "local-death-certificate-union::c-local-death-vs-bdris",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "EXTRACTED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "local-nationality-certificate::c-local-nationality-certificate-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "EXTRACTED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "local-passport-attestation::c-local-passport-attestation-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "EXTRACTED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "local-voter-transfer-attestation::c-local-voter-transfer-attestation-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "EXTRACTED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-channel",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-ssc-priority",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-once",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CROSS_CHECKED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-card-info-correction::c-nid-card-info-correction-fee-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CONFLICTING",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-claim-account::c-claim",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-channel",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-ssc-priority",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-once",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CROSS_CHECKED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-combined-correction::c-nid-combined-correction-fee-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CONFLICTING",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-download-copy::c-dl",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-expatriate-registration::c-exp-otp",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-expatriate-registration::c-exp-apply",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-fee-calculator::c-fee-types",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-age10",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CROSS_CHECKED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-voter18",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CROSS_CHECKED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-docs",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-new-duplicate-crime",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CROSS_CHECKED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-nid-ssc-priority",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CROSS_CHECKED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-online-account-registration::c-acct-reg",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-online-account-registration::c-acct-wallet",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-channel",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-ssc-priority",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-once",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CROSS_CHECKED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-other-info-correction::c-nid-other-info-correction-fee-exists",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "CONFLICTING",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-photo-signature-appointment::c-photo",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-photo-signature-appointment::c-sign-once",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-online",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-law",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-no-combo",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-reissue-fee",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    },
+    {
+      "claim_id": "nid-voter-area-change::c-f13",
+      "legacy_status": "VERIFIED",
+      "new_pipeline_status": "NORMALIZED",
+      "reason": "Discovery-phase VERIFIED label demoted; dedicated verification/publication phase has not run."
+    }
+  ],
+  "count": 64
+}

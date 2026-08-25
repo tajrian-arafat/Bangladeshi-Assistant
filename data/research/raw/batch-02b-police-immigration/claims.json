@@ -1,0 +1,1740 @@
+{
+  "claims": [
+    {
+      "claim_id": "police-clearance-certificate::c-online-portal-url",
+      "legacy_claim_id": "c-online-portal-url",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Online Police Clearance Certificate applications are submitted at pcc.police.gov.bd (Oracle APEX portal).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-portal-url-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-fee-1500",
+      "legacy_claim_id": "c-online-fee-1500",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "fee",
+      "claim_text": "Online PCC application fee is BDT 1,500 payable via treasury challan code 1-7301-0001-2681 (Sonali Bank/Bangladesh Bank) or online card payment with service charges.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 1500,
+        "currency": "BDT",
+        "treasury_code": "1-7301-0001-2681"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-fee-1500-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-passport-validity",
+      "legacy_claim_id": "c-online-passport-validity",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Online PCC applicant must hold a passport valid for at least 3 months.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-passport-validity-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-jurisdiction-address",
+      "legacy_claim_id": "c-online-jurisdiction-address",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Applicant present address must fall under same metropolitan/district police jurisdiction as permanent or emergency contact address on passport (foreign passport holders: present address = Bangladesh stay address).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-jurisdiction-address-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-no-address-nid-birth-ward",
+      "legacy_claim_id": "c-online-no-address-nid-birth-ward",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "If passport has no address, present address must be supported by NID, Birth ID, or ward councillor certificate attested by class-one gazetted officer.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "passport_lacks_address"
+      },
+      "source_ids": [
+        "src-pcc-portal",
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-no-address-nid-birth-ward-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-eligible-populations",
+      "legacy_claim_id": "c-online-eligible-populations",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Online system issues PCC to Bangladeshi nationals going/residing abroad and foreign nationals who departed Bangladesh after their stay.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-eligible-populations-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-not-for-domestic-employment",
+      "legacy_claim_id": "c-online-not-for-domestic-employment",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "restriction",
+      "claim_text": "PCC for employment or other work within Bangladesh is not handled through online portal; applicant must contact district DSB or metropolitan City Special Branch per portal terms.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "purpose_domestic_employment"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-not-for-domestic-employment-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-abroad-attestation-bd-national",
+      "legacy_claim_id": "c-online-abroad-attestation-bd-national",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Bangladeshi nationals applying from abroad must upload passport bio/address pages attested by Bangladesh High Commission of present country of residence.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "applicant_abroad",
+        "applicant_type": "bangladeshi_national"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-abroad-attestation-bd-national-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-abroad-attestation-foreigner",
+      "legacy_claim_id": "c-online-abroad-attestation-foreigner",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Foreign passport holders applying from abroad must upload passport pages attested by Justice of the Peace in country of present residence.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "applicant_abroad",
+        "applicant_type": "foreign_passport"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-abroad-attestation-foreigner-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-expatriate-auth-letter",
+      "legacy_claim_id": "c-online-expatriate-auth-letter",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Expatriate applicants must upload authorization letter naming collector and collector NID; local applicants must send same permission letter to collector at certificate acceptance.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "representative_collection"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-expatriate-auth-letter-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-arrival-stamp",
+      "legacy_claim_id": "c-online-arrival-stamp",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Bangladeshi citizens/expatriates who issued/reissued passport outside Bangladesh must upload latest arrival stamp page when seeking PCC after arriving in Bangladesh.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "passport_issued_abroad_and_applicant_in_bangladesh"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-arrival-stamp-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-apply-steps",
+      "legacy_claim_id": "c-online-apply-steps",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Online PCC workflow: register → login → Apply → personal/address pages → upload documents → review/submit (no edit after final submit) → pay fee.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-apply-steps-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-status-sms",
+      "legacy_claim_id": "c-online-status-sms",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Application status check: SMS 'PCC S' + application reference number to 26969.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-status-sms-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-online-helpdesk",
+      "legacy_claim_id": "c-online-helpdesk",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "office",
+      "claim_text": "PCC portal helpdesk Sun–Thu 9:00–16:00 (excl. public holidays): 01320001824, 01320001825; email ssaphq@gmail.com.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-online-helpdesk-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-charter-online-fee-sla",
+      "legacy_claim_id": "c-charter-online-fee-sla",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter lists online police clearance fee BDT 1,500 to government and service time 3–7 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 3,
+        "official_sla_days_max": 7,
+        "fee_bdt": 1500
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-charter-online-fee-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-offline-sp-application",
+      "legacy_claim_id": "c-offline-sp-application",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Offline PCC: written application addressed to Superintendent of Police or Police Commissioner (metropolitan) on white paper.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-offline-sp-application-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-offline-fee-500-chalan",
+      "legacy_claim_id": "c-offline-fee-500-chalan",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "fee",
+      "claim_text": "Offline PCC page cites treasury chalan Tk 500 to code 1-2201-0001-2681 (Bangladesh Bank/Sonali Bank).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 500,
+        "currency": "BDT",
+        "treasury_code": "1-2201-0001-2681",
+        "channel": "offline_paper"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-offline-fee-500-chalan-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-offline-passport-attested-copy",
+      "legacy_claim_id": "c-offline-passport-attested-copy",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "document",
+      "claim_text": "Offline PCC requires passport photocopy attested by first-class gazetted officer; renewed pages must be included; expired passport not accepted.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-offline-passport-attested-copy-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-offline-relative-abroad",
+      "legacy_claim_id": "c-offline-relative-abroad",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "Persons staying abroad may apply through relative with embassy/high commission attested passport copy.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "applicant_abroad"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-offline-relative-abroad-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-destination-spain-extra",
+      "legacy_claim_id": "c-destination-spain-extra",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "conditional_document",
+      "claim_text": "PCC for Spain requires three passport-size photos submitted to Home Ministry immigration section-3 addressing the Secretary (per offline police page).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "destination_country",
+        "value": "Spain"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-destination-spain-extra-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-dmp-token-collection",
+      "legacy_claim_id": "c-dmp-token-collection",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "DMP provides token with serial number and collection date for PCC pickup (metropolitan-specific).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "LOCATION_SPECIFIC",
+        "if": "jurisdiction",
+        "value": "DMP"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-dmp-token-collection-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-certificate-language-attestation",
+      "legacy_claim_id": "c-certificate-language-attestation",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "PCC issued in English; applications may be Bangla or English; certificates attested by officials concerned in foreign ministry.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-certificate-language-attestation-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-clearance-certificate::c-practical-fee-confusion",
+      "legacy_claim_id": "c-practical-fee-confusion",
+      "service_id": "police-clearance-certificate",
+      "claim_type": "practical_tip",
+      "claim_text": "Secondary media guides still reference Tk 500 PCC fee; treat as potentially stale vs current online portal 1500 BDT until independently verified.",
+      "information_class": "PRACTICAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-unb-pcc-guide"
+      ],
+      "evidence_ids": [
+        "ev-police-clearance-certificate::c-practical-fee-confusion-src-unb-pcc-guide"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-gd-portal-url",
+      "legacy_claim_id": "c-gd-portal-url",
+      "service_id": "police-general-diary",
+      "claim_type": "application_url",
+      "claim_text": "Online General Diary is filed via gd.police.gov.bd and/or Online GD mobile app (per catalogue and police communications).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gd-portal",
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-gd-portal-url-src-gd-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-charter-gd-fee-free",
+      "legacy_claim_id": "c-charter-gd-fee-free",
+      "service_id": "police-general-diary",
+      "claim_type": "fee",
+      "claim_text": "Citizen charter lists GD service fee as free (বিনামূল্যে).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 0,
+        "currency": "BDT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-charter-gd-fee-free-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-charter-gd-sla",
+      "legacy_claim_id": "c-charter-gd-sla",
+      "service_id": "police-general-diary",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA for GD: 1–7 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 1,
+        "official_sla_days_max": 7
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-charter-gd-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-charter-gd-channels",
+      "legacy_claim_id": "c-charter-gd-channels",
+      "service_id": "police-general-diary",
+      "claim_type": "procedure_step",
+      "claim_text": "Citizen charter states GD available directly at police station and online.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-charter-gd-channels-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-charter-gd-office",
+      "legacy_claim_id": "c-charter-gd-office",
+      "service_id": "police-general-diary",
+      "claim_type": "office",
+      "claim_text": "GD handled at relevant police station / unit (থানা).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-charter-gd-office-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-portal-url",
+      "legacy_claim_id": "c-gd-portal-url",
+      "service_id": "police-general-diary-online",
+      "claim_type": "application_url",
+      "claim_text": "Online General Diary is filed via gd.police.gov.bd and/or Online GD mobile app (per catalogue and police communications).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-gd-portal",
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-portal-url-src-gd-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-charter-gd-fee-free",
+      "legacy_claim_id": "c-charter-gd-fee-free",
+      "service_id": "police-general-diary-online",
+      "claim_type": "fee",
+      "claim_text": "Citizen charter lists GD service fee as free (বিনামূল্যে).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 0,
+        "currency": "BDT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-charter-gd-fee-free-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-charter-gd-sla",
+      "legacy_claim_id": "c-charter-gd-sla",
+      "service_id": "police-general-diary-online",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA for GD: 1–7 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 1,
+        "official_sla_days_max": 7
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-charter-gd-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-charter-gd-channels",
+      "legacy_claim_id": "c-charter-gd-channels",
+      "service_id": "police-general-diary-online",
+      "claim_type": "procedure_step",
+      "claim_text": "Citizen charter states GD available directly at police station and online.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-charter-gd-channels-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-charter-gd-office",
+      "legacy_claim_id": "c-charter-gd-office",
+      "service_id": "police-general-diary-online",
+      "claim_type": "office",
+      "claim_text": "GD handled at relevant police station / unit (থানা).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-charter-gd-office-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-online-registration-nid",
+      "legacy_claim_id": "c-gd-online-registration-nid",
+      "service_id": "police-general-diary-online",
+      "claim_type": "eligibility",
+      "claim_text": "Online GD registration requires valid NID, active mobile number, and live photo during registration (per police rollout communications).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED"
+      },
+      "source_ids": [
+        "src-bss-online-gd-rollout",
+        "src-tbs-online-gd-expansion"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-online-registration-nid-src-bss-online-gd-rollout"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-online-hotline",
+      "legacy_claim_id": "c-gd-online-hotline",
+      "service_id": "police-general-diary-online",
+      "claim_type": "office",
+      "claim_text": "Online GD support hotline 01320001428 operates 24/7 per Police HQ statements.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bss-online-gd-rollout"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-online-hotline-src-bss-online-gd-rollout"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-all-types-expansion",
+      "legacy_claim_id": "c-gd-all-types-expansion",
+      "service_id": "police-general-diary-online",
+      "claim_type": "availability",
+      "claim_text": "Police HQ announced expansion from lost-and-found-only online GD to all GD types, with nationwide availability claimed from Sep 2025.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-bss-online-gd-rollout",
+        "src-tbs-online-gd-expansion"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-all-types-expansion-src-bss-online-gd-rollout"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-digital-copy-no-seal",
+      "legacy_claim_id": "c-gd-digital-copy-no-seal",
+      "service_id": "police-general-diary-online",
+      "claim_type": "procedure_step",
+      "claim_text": "Digital GD copy may be downloaded/printed; rollout reporting states seal/signature not required on online GD copy.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-tbs-online-gd-expansion"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-digital-copy-no-seal-src-tbs-online-gd-expansion"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary::c-gd-not-all-types-historically",
+      "legacy_claim_id": "c-gd-not-all-types-historically",
+      "service_id": "police-general-diary",
+      "claim_type": "restriction",
+      "claim_text": "Prior to 2025 expansion communications, online GD was limited to lost-and-found categories; do not assume all complaint types were always online.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-tbs-online-gd-expansion"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary::c-gd-not-all-types-historically-src-tbs-online-gd-expansion"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-general-diary-online::c-gd-cognizable-offence-thana",
+      "legacy_claim_id": "c-gd-cognizable-offence-thana",
+      "service_id": "police-general-diary-online",
+      "claim_type": "procedure_step",
+      "claim_text": "If online complaint concerns cognizable offence (case), applicant may need to attend thana with print copy or complaint code (per GD portal guidance cited in rollout reporting).",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "complaint_type_cognizable_offence"
+      },
+      "source_ids": [
+        "src-bss-online-gd-rollout"
+      ],
+      "evidence_ids": [
+        "ev-police-general-diary-online::c-gd-cognizable-offence-thana-src-bss-online-gd-rollout"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-cyber-support-women::c-pcsw-channels",
+      "legacy_claim_id": "c-pcsw-channels",
+      "service_id": "police-cyber-support-women",
+      "claim_type": "availability",
+      "claim_text": "Police Cyber Support for Women (PCSW) available online and offline per citizen charter.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-cyber-support-women::c-pcsw-channels-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-cyber-support-women::c-pcsw-free",
+      "legacy_claim_id": "c-pcsw-free",
+      "service_id": "police-cyber-support-women",
+      "claim_type": "fee",
+      "claim_text": "PCSW service is free (বিনামূল্যে) per citizen charter.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 0,
+        "currency": "BDT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-cyber-support-women::c-pcsw-free-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-cyber-support-women::c-pcsw-sla-fastest",
+      "legacy_claim_id": "c-pcsw-sla-fastest",
+      "service_id": "police-cyber-support-women",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter commits PCSW service at fastest possible time (দ্রুততম সময়ে সেবা প্রদান).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-cyber-support-women::c-pcsw-sla-fastest-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-cyber-support-women::c-pcsw-hotline",
+      "legacy_claim_id": "c-pcsw-hotline",
+      "service_id": "police-cyber-support-women",
+      "claim_type": "office",
+      "claim_text": "PCSW hotline 01320-000888; email cybersupport.women@police.gov.bd; responsible AIG (LIC), Police HQ Dhaka.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-cyber-support-women::c-pcsw-hotline-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-cyber-support-women::c-pcsw-facebook-page",
+      "legacy_claim_id": "c-pcsw-facebook-page",
+      "service_id": "police-cyber-support-women",
+      "claim_type": "application_url",
+      "claim_text": "Citizen charter references PCSW Facebook page m.facebook.com/PCSw.PHQ/ as contact channel.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-cyber-support-women::c-pcsw-facebook-page-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-employment-verification::c-ev-charter-pathway",
+      "legacy_claim_id": "c-ev-charter-pathway",
+      "service_id": "police-employment-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Employment verification processed on application at District Special Branch / Metropolitan Special Branch / SB.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-charter-pathway-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "police-employment-verification::c-ev-charter-fee",
+      "legacy_claim_id": "c-ev-charter-fee",
+      "service_id": "police-employment-verification",
+      "claim_type": "fee",
+      "claim_text": "Employment verification requires government-prescribed fee (সরকার কর্তৃক নির্ধারিত ফি) per citizen charter; amount not enumerated on charter page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-charter-fee-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-employment-verification::c-ev-charter-sla",
+      "legacy_claim_id": "c-ev-charter-sla",
+      "service_id": "police-employment-verification",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter lists employment verification service time as 'timely' (যথাসময়ে) without numeric SLA.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-charter-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-employment-verification::c-ev-responsible-officer",
+      "legacy_claim_id": "c-ev-responsible-officer",
+      "service_id": "police-employment-verification",
+      "claim_type": "office",
+      "claim_text": "Responsible officers: SP (DSB) / DC Metropolitan Police / Special Superintendent (City SB).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-responsible-officer-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-employment-verification::c-ev-no-universal-rule",
+      "legacy_claim_id": "c-ev-no-universal-rule",
+      "service_id": "police-employment-verification",
+      "claim_type": "eligibility",
+      "claim_text": "Employment verification requirements are employer/request-driven; no universal document list found on Tier 1–2 sources in this pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-employment-verification::c-ev-no-universal-rule-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "UNKNOWN"
+    },
+    {
+      "claim_id": "police-nid-address-verification::c-nid-verify-when-no-passport-address",
+      "legacy_claim_id": "c-nid-verify-when-no-passport-address",
+      "service_id": "police-nid-address-verification",
+      "claim_type": "conditional_document",
+      "claim_text": "When passport lacks address, NID/birth certificate/ward councillor certificate may establish present address for police verification/PCC (attested).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "passport_lacks_address"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page",
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-nid-address-verification::c-nid-verify-when-no-passport-address-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "CONDITIONAL"
+    },
+    {
+      "claim_id": "police-nid-address-verification::c-nid-address-match",
+      "legacy_claim_id": "c-nid-address-match",
+      "service_id": "police-nid-address-verification",
+      "claim_type": "eligibility",
+      "claim_text": "Present address on NID/birth/ward councillor certificate must match applicant present address for verification purposes.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "MUST_NEED",
+        "if": "passport_lacks_address"
+      },
+      "source_ids": [
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-nid-address-verification::c-nid-address-match-src-police-pcc-offline-page"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-nid-address-verification::c-nid-not-standalone-service-url",
+      "legacy_claim_id": "c-nid-not-standalone-service-url",
+      "service_id": "police-nid-address-verification",
+      "claim_type": "application_url",
+      "claim_text": "No dedicated standalone portal URL for address/NID verification; service routed through local police unit / PCC / verification request context.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter",
+        "src-police-pcc-offline-page"
+      ],
+      "evidence_ids": [
+        "ev-police-nid-address-verification::c-nid-not-standalone-service-url-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-e-passport-pathway-sb",
+      "legacy_claim_id": "c-pv-e-passport-pathway-sb",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "availability",
+      "claim_text": "Passport police verification for e-Passport processing routes through Special Branch per DIP/police pathway.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-sb",
+        "src-dip-home",
+        "src-batch-02a-passport-research"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-e-passport-pathway-sb-src-police-sb"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-onboarding-station-select",
+      "legacy_claim_id": "c-pv-onboarding-station-select",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "e-Passport onboarding requires applicant to select nearest police station for verification routing (Batch 2A cross-reference).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-batch-02a-passport-research"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-onboarding-station-select-src-batch-02a-passport-research"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-not-universal-all-police-services",
+      "legacy_claim_id": "c-pv-not-universal-all-police-services",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "restriction",
+      "claim_text": "Passport onboarding police-station selection rule applies to e-Passport pathway only; must not be generalized to employment PCC or GD services.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-pcc-portal",
+        "src-batch-02a-passport-research"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-not-universal-all-police-services-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "police-passport-police-verification::c-pv-online-pcc-domestic-employment-elsewhere",
+      "legacy_claim_id": "c-pv-online-pcc-domestic-employment-elsewhere",
+      "service_id": "police-passport-police-verification",
+      "claim_type": "procedure_step",
+      "claim_text": "Domestic employment police clearance uses district DSB/metro CSB, not e-Passport onboarding station selection.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "purpose_domestic_employment"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-police-verification::c-pv-online-pcc-domestic-employment-elsewhere-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-charter-sla-normal",
+      "legacy_claim_id": "c-pv-charter-sla-normal",
+      "service_id": "police-passport-verification",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA: normal passport verification 15–21 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 15,
+        "official_sla_days_max": 21,
+        "tier": "normal"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-charter-sla-normal-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-charter-sla-urgent",
+      "legacy_claim_id": "c-pv-charter-sla-urgent",
+      "service_id": "police-passport-verification",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA: urgent passport verification 7 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days": 7,
+        "tier": "urgent"
+      },
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "urgent_request"
+      },
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-charter-sla-urgent-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-charter-fee",
+      "legacy_claim_id": "c-pv-charter-fee",
+      "service_id": "police-passport-verification",
+      "claim_type": "fee",
+      "claim_text": "Passport verification requires government-prescribed fee per citizen charter; amount not listed on charter page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-charter-fee-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-district-sb-office",
+      "legacy_claim_id": "c-pv-district-sb-office",
+      "service_id": "police-passport-verification",
+      "claim_type": "office",
+      "claim_text": "District-level passport verification handled by District Special Branch / Metropolitan Special Branch.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-district-sb-office-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "LOCATION_SPECIFIC"
+    },
+    {
+      "claim_id": "police-passport-verification::c-pv-distinct-from-online-pcc",
+      "legacy_claim_id": "c-pv-distinct-from-online-pcc",
+      "service_id": "police-passport-verification",
+      "claim_type": "restriction",
+      "claim_text": "Charter 'passport verification' is distinct from online PCC portal service; purposes and channels differ.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter",
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-passport-verification::c-pv-distinct-from-online-pcc-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step",
+      "verification_scope": "SERVICE_SPECIFIC"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-online-portal",
+      "legacy_claim_id": "c-visa-online-portal",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "application_url",
+      "claim_text": "Bangladesh visa (MRV) online applications are submitted at visa.gov.bd per DIP Apply Visa Online page.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-visa-online",
+        "src-visa-gov-bd",
+        "src-dip-home"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-online-portal-src-dip-visa-online"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-dip-responsible",
+      "legacy_claim_id": "c-visa-dip-responsible",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "eligibility",
+      "claim_text": "Department of Immigration and Passports (Ministry of Home Affairs) is responsible authority for Bangladesh visa issuance to foreigners.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-home",
+        "src-dip-visa-online"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-dip-responsible-src-dip-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-types-page",
+      "legacy_claim_id": "c-visa-types-page",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "document",
+      "claim_text": "DIP publishes visa types and essential documents matrix (Types and Essential Documents of Visa page).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-visa-types"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-types-page-src-dip-visa-types"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-types-freshness-2022",
+      "legacy_claim_id": "c-visa-types-freshness-2022",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "restriction",
+      "claim_text": "Visa types/documents page last updated March 2022; treat document requirements as requiring freshness verification before publication.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-visa-types"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-types-freshness-2022-src-dip-visa-types"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-mrv-fees-page",
+      "legacy_claim_id": "c-visa-mrv-fees-page",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "fee",
+      "claim_text": "DIP publishes Machine Readable Visa (MRV) fee schedule on dedicated fee page; structured fee table not extracted in this research pass.",
+      "information_class": "DISCOVERY",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-mrv-fees"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-mrv-fees-page-src-dip-mrv-fees"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-foreign-embassy-not-in-scope",
+      "legacy_claim_id": "c-visa-foreign-embassy-not-in-scope",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "restriction",
+      "claim_text": "Foreign embassy visa rules for Bangladesh citizens traveling abroad are out of scope; this service covers Bangladesh-government visa issuance only.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-visa-online"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-foreign-embassy-not-in-scope-src-dip-visa-online"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "migration-visa-application-dip::c-visa-dip-eservice-link",
+      "legacy_claim_id": "c-visa-dip-eservice-link",
+      "service_id": "migration-visa-application-dip",
+      "claim_type": "application_url",
+      "claim_text": "DIP home page e-services section links 'Online MRV Application' to visa.gov.bd.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-dip-home"
+      ],
+      "evidence_ids": [
+        "ev-migration-visa-application-dip::c-visa-dip-eservice-link-src-dip-home"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-expatriate-services::c-expat-charter-services",
+      "legacy_claim_id": "c-expat-charter-services",
+      "service_id": "police-expatriate-services",
+      "claim_type": "availability",
+      "claim_text": "Expatriate Cell services include passport verification, legal action on admitted offences, family security, and investment protection per citizen charter item 23.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-charter-services-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-expatriate-services::c-expat-charter-free",
+      "legacy_claim_id": "c-expat-charter-free",
+      "service_id": "police-expatriate-services",
+      "claim_type": "fee",
+      "claim_text": "Expatriate services listed as free (বিনামূল্যে) in citizen charter.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "amount": 0,
+        "currency": "BDT"
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-charter-free-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-expatriate-services::c-expat-charter-sla",
+      "legacy_claim_id": "c-expat-charter-sla",
+      "service_id": "police-expatriate-services",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter commits expatriate services at fastest possible time (দ্রুততম সময়).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-charter-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-expatriate-services::c-expat-responsible-aig",
+      "legacy_claim_id": "c-expat-responsible-aig",
+      "service_id": "police-expatriate-services",
+      "claim_type": "office",
+      "claim_text": "Expatriate Cell led by AIG (Expatriate Cell), Police HQ Dhaka; mobile 55101678 per charter.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-responsible-aig-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-expatriate-services::c-expat-pcc-auth-letter-link",
+      "legacy_claim_id": "c-expat-pcc-auth-letter-link",
+      "service_id": "police-expatriate-services",
+      "claim_type": "conditional_document",
+      "claim_text": "Online PCC rules require expatriate authorization letter for representative collection — related but distinct from Expatriate Cell charter entry.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": {
+        "requirement_class": "CONDITIONAL",
+        "if": "pcc_via_representative"
+      },
+      "source_ids": [
+        "src-pcc-portal"
+      ],
+      "evidence_ids": [
+        "ev-police-expatriate-services::c-expat-pcc-auth-letter-link-src-pcc-portal"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-firearms-license::c-firearms-charter-pathway",
+      "legacy_claim_id": "c-firearms-charter-pathway",
+      "service_id": "police-firearms-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Firearms license applications processed on application at District Special Branch per citizen charter.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-firearms-license::c-firearms-charter-pathway-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-firearms-license::c-firearms-charter-fee-na",
+      "legacy_claim_id": "c-firearms-charter-fee-na",
+      "service_id": "police-firearms-license",
+      "claim_type": "fee",
+      "claim_text": "Citizen charter lists firearms license service fee as not applicable (প্রযোজ্য নহে) on charter table.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-firearms-license::c-firearms-charter-fee-na-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-firearms-license::c-firearms-charter-sla",
+      "legacy_claim_id": "c-firearms-charter-sla",
+      "service_id": "police-firearms-license",
+      "claim_type": "processing_time",
+      "claim_text": "Citizen charter official SLA for firearms license: 21–30 days.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": {
+        "official_sla_days_min": 21,
+        "official_sla_days_max": 30
+      },
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-firearms-license::c-firearms-charter-sla-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    },
+    {
+      "claim_id": "police-firearms-license::c-firearms-responsible-officer",
+      "legacy_claim_id": "c-firearms-responsible-officer",
+      "service_id": "police-firearms-license",
+      "claim_type": "office",
+      "claim_text": "Responsible: SP (DSB) / metropolitan unit officer / Special Superintendent (City SB).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "confidence": null,
+      "structured_value": null,
+      "condition": null,
+      "source_ids": [
+        "src-police-charter"
+      ],
+      "evidence_ids": [
+        "ev-police-firearms-license::c-firearms-responsible-officer-src-police-charter"
+      ],
+      "retrieved_at": "2026-08-24",
+      "notes": "Research-phase claim; not verified in this step"
+    }
+  ]
+}
