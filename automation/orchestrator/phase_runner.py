@@ -1,4 +1,4 @@
-"""Execute workflow phases, simulations, and pilot runs."""
+"""Execute workflow phases, simulations, and autonomous pilot runs."""
 
 from __future__ import annotations
 
@@ -14,6 +14,8 @@ from automation.orchestrator.escalation_manager import EscalationManager
 from automation.orchestrator.gate_engine import GateEngine
 from automation.orchestrator.github_adapter import GitHubAdapter
 from automation.orchestrator.logging import setup_logging, write_report
+from automation.orchestrator.phase_completion import phase_artifacts_complete
+from automation.orchestrator.phase_executor import PhaseExecutor
 from automation.orchestrator.result_validator import ResultValidator
 from automation.orchestrator.retry_manager import RetryManager
 from automation.orchestrator.state_machine import StateMachine
@@ -32,6 +34,7 @@ class PhaseRunner:
         self.validator = ResultValidator()
         self.retry = RetryManager()
         self.escalation = EscalationManager(repo_root)
+        self.executor = PhaseExecutor(repo_root)
         self.runs_dir = repo_root / ".automation" / "runs"
         self.logger = setup_logging(repo_root)
 
@@ -48,6 +51,9 @@ class PhaseRunner:
         path.write_text(json.dumps(result.to_dict(), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         return path
 
+    def _phase_run_id(self, batch_id: str, phase: str, base_run_id: str) -> str:
+        return f"{base_run_id}-{phase.lower()}"
+
     def _next_phase(self, current: str) -> str:
         try:
             idx = PHASE_ORDER.index(WorkflowPhase(current))
@@ -56,6 +62,23 @@ class PhaseRunner:
         if idx + 1 < len(PHASE_ORDER):
             return PHASE_ORDER[idx + 1].value
         return ""
+
+    def _skip_gap_closure_if_not_needed(self, current: str, result: dict[str, Any]) -> str:
+        """GAP_CLOSURE is optional — skip when verification had zero gaps."""
+        if current != WorkflowPhase.GAP_CLOSURE.value:
+            return current
+        if int(result.get("knowledge_gaps") or 0) == 0:
+            return WorkflowPhase.PUBLICATION.value
+        return current
+
+    def _idempotency_seen(self, state: ProjectState, key: str) -> bool:
+        return key in (state.idempotency_keys or [])
+
+    def _record_idempotency(self, state: ProjectState, key: str) -> None:
+        keys = list(state.idempotency_keys or [])
+        if key not in keys:
+            keys.append(key)
+        state.idempotency_keys = keys
 
     def simulate_all(self) -> dict[str, Any]:
         cases = [
@@ -207,95 +230,129 @@ class PhaseRunner:
             "transition": "RETRY",
         }
 
-    def start_research_phase(self, state: ProjectState, batch: dict[str, Any]) -> PhaseResult:
+    def _ensure_run_id(self, state: ProjectState, batch: dict[str, Any]) -> str:
+        if state.current_run_id:
+            return state.current_run_id
         run_id = f"run-{uuid.uuid4().hex[:12]}"
-        run_dir = self._run_dir(run_id)
-        started = self._now()
-        artifacts = self.batch_manager.setup_research_artifacts(batch)
-        self.github.write_snapshot(run_dir)
-        context = {
-            "batch": batch,
-            "template": "docs/research/BATCH_RESEARCH_TEMPLATE.md",
-            "artifacts_created": artifacts,
-            "rules": [
-                "Never publish during research",
-                "Never mark VERIFIED without independent verification",
-                "Use authority tiers",
-                "Preserve provenance",
-            ],
+        state.current_run_id = run_id
+        self.state_machine.save(state)
+        return run_id
+
+    def _dispatch_cursor_prompt(
+        self,
+        *,
+        run_dir: Path,
+        batch: dict[str, Any],
+        phase: str,
+        state: ProjectState,
+        context: dict[str, Any],
+    ) -> None:
+        template_map = {
+            "RESEARCH": "research",
+            "VERIFICATION": "verification",
+            "GAP_CLOSURE": "gap_closure",
+            "PUBLICATION": "publication",
+            "E2E": "e2e",
+            "REGRESSION": "regression_fix",
         }
         prompt = self.cursor.build_phase_prompt(
-            template_name="research",
+            template_name=template_map.get(phase, "research"),
             batch_id=batch["batch_id"],
-            phase="RESEARCH",
+            phase=phase,
             context=context,
         )
-        handle = self.cursor.dispatch_phase(
+        self.cursor.dispatch_phase(
             run_dir=run_dir,
             batch_id=batch["batch_id"],
-            phase="RESEARCH",
+            phase=phase,
             prompt=prompt,
             simulation=state.simulation_mode,
         )
-        state.current_run_id = run_id
-        state.current_phase = WorkflowPhase.RESEARCH.value
-        self.state_machine.save(state)
+
+    def execute_current_phase(self, state: ProjectState, batch: dict[str, Any]) -> PhaseResult:
+        """Run the current phase via PhaseExecutor (idempotent)."""
+        phase = state.current_phase or WorkflowPhase.RESEARCH.value
+        batch_id = batch["batch_id"]
+        base_run_id = self._ensure_run_id(state, batch)
+        phase_run_id = self._phase_run_id(batch_id, phase, base_run_id)
+        idem_key = f"{batch_id}:{phase}:complete"
+
+        if self.batch_manager.is_phase_complete(batch_id, phase):
+            completion = phase_artifacts_complete(self.repo_root, batch, phase)
+            if completion.complete:
+                return PhaseResult(
+                    run_id=phase_run_id,
+                    batch_id=batch_id,
+                    phase=phase,
+                    status="SUCCESS",
+                    started_at=self._now(),
+                    completed_at=self._now(),
+                    summary=f"Phase {phase} already complete (idempotent skip)",
+                    recommended_next_phase=self._next_phase(phase),
+                    idempotency_key=idem_key,
+                )
+
+        if self._idempotency_seen(state, idem_key):
+            completion = phase_artifacts_complete(self.repo_root, batch, phase)
+            if completion.complete:
+                return PhaseResult(
+                    run_id=phase_run_id,
+                    batch_id=batch_id,
+                    phase=phase,
+                    status="SUCCESS",
+                    started_at=self._now(),
+                    completed_at=self._now(),
+                    summary=f"Phase {phase} idempotent skip",
+                    recommended_next_phase=self._next_phase(phase),
+                    idempotency_key=idem_key,
+                )
+
+        run_dir = self._run_dir(phase_run_id)
+        self.github.write_snapshot(run_dir)
         self.state_machine.write_current_run(
             {
-                "run_id": run_id,
-                "batch_id": batch["batch_id"],
-                "phase": "RESEARCH",
-                "mode": handle.mode,
-                "started_at": started,
-                "artifacts": artifacts,
+                "run_id": base_run_id,
+                "phase_run_id": phase_run_id,
+                "batch_id": batch_id,
+                "phase": phase,
+                "started_at": self._now(),
             }
         )
-        if handle.mode == "local":
-            # Pilot: deterministic setup complete; research execution continues via Cursor agent
-            result = PhaseResult(
-                run_id=run_id,
-                batch_id=batch["batch_id"],
-                phase="RESEARCH",
-                status="PARTIAL",
-                started_at=started,
-                completed_at=self._now(),
-                services_total=len(batch.get("service_ids") or []),
-                services_processed=0,
-                artifacts=artifacts + [str(run_dir / "prompt.md"), str(run_dir / "manifest.json")],
-                requires_escalation=False,
-                recommended_next_phase="VERIFICATION",
-                summary=(
-                    f"Research kickoff for {batch['batch_id']}: scope and services_index created. "
-                    f"Cursor agent must complete discovery per BATCH_RESEARCH_TEMPLATE.md."
-                ),
-                idempotency_key=f"{batch['batch_id']}:RESEARCH:setup:{run_id}",
-            )
-            self._write_result(run_dir, result)
-            return result
 
-        result = PhaseResult(
-            run_id=run_id,
-            batch_id=batch["batch_id"],
-            phase="RESEARCH",
-            status="PARTIAL",
-            started_at=started,
-            completed_at=self._now(),
-            services_total=len(batch.get("service_ids") or []),
-            artifacts=artifacts,
-            recommended_next_phase="",
-            summary=f"Dispatched to Cursor ({handle.mode}). Awaiting completion.",
-            idempotency_key=f"{batch['batch_id']}:RESEARCH:{run_id}",
+        result = self.executor.execute_phase(
+            run_id=phase_run_id,
+            batch=batch,
+            phase=phase,
+            batch_manager=self.batch_manager,
         )
         self._write_result(run_dir, result)
+        if result.status == "SUCCESS":
+            self._record_idempotency(state, idem_key)
+            self.batch_manager.mark_phase_complete(batch_id, phase)
+        self.state_machine.save(state)
         return result
 
-    def validate_and_transition(self, state: ProjectState) -> ProjectState:
+    def validate_and_transition(
+        self, state: ProjectState, result_path: Path | None = None, result_data: dict[str, Any] | None = None
+    ) -> ProjectState:
         if not state.current_run_id:
             raise RuntimeError("No current run to validate")
-        run_dir = self._run_dir(state.current_run_id)
-        result_path = run_dir / "result.json"
+        phase = state.current_phase or WorkflowPhase.RESEARCH.value
+        phase_run_id = self._phase_run_id(state.current_batch or "", phase, state.current_run_id)
+        run_dir = self._run_dir(phase_run_id)
+        if result_path is None:
+            result_path = run_dir / "result.json"
         self.state_machine.transition(state, WorkflowStatus.VALIDATING_RESULT)
-        ok, errors = self.validator.validate_file(result_path)
+
+        from automation.schemas.result import validate_phase_result
+
+        if result_data is not None:
+            ok, errors = validate_phase_result(result_data)
+            result = result_data
+        else:
+            ok, errors = self.validator.validate_file(result_path)
+            result = None
+
         if not ok:
             decision = self.retry.evaluate("malformed artifact: " + "; ".join(errors), state.retry_count)
             if decision.should_retry:
@@ -310,14 +367,15 @@ class PhaseRunner:
             state.pending_escalations.append(record.decision_id)
             return self.state_machine.transition(state, WorkflowStatus.HUMAN_APPROVAL_REQUIRED)
 
-        result = self.validator.load_validated(result_path)
+        if result is None:
+            result = self.validator.load_validated(result_path)
         gate_results = self.gates.validate_phase_result_gates(result)
         if any(not g.passed for g in gate_results):
             if result.get("hallucinations", 0) > 0 or result.get("citation_failures", 0) > 0:
                 return self.state_machine.transition(state, WorkflowStatus.BLOCKED)
             return self.state_machine.transition(state, WorkflowStatus.SUPERVISOR_REVIEW)
 
-        if result.get("requires_escalation") or result.get("critical_conflicts", 0) > 0:
+        if result.get("requires_escalation") or result.get("critical_conflicts", 0) > 0 or result.get("status") == "ESCALATED":
             record = self.escalation.create_decision(
                 batch=state.current_batch or result["batch_id"],
                 issue=result.get("summary", "Escalation required"),
@@ -326,12 +384,41 @@ class PhaseRunner:
             state.pending_escalations.append(record.decision_id)
             return self.state_machine.transition(state, WorkflowStatus.HUMAN_APPROVAL_REQUIRED)
 
-        if result.get("knowledge_gaps", 0) > 0 and state.current_phase == WorkflowPhase.VERIFICATION.value:
+        status = result.get("status")
+        if status == "PARTIAL":
+            return self.state_machine.transition(state, WorkflowStatus.RUNNING)
+
+        if status in {"FAILED", "BLOCKED"}:
+            decision = self.retry.evaluate(result.get("summary", "phase failed"), state.retry_count)
+            if decision.should_retry:
+                state.retry_count = decision.retry_count
+                return self.state_machine.transition(state, WorkflowStatus.RETRY)
+            if decision.escalate:
+                record = self.escalation.create_decision(
+                    batch=state.current_batch or result["batch_id"],
+                    issue=result.get("summary", "Phase failed after retries"),
+                    severity="HIGH",
+                )
+                state.pending_escalations.append(record.decision_id)
+                return self.state_machine.transition(state, WorkflowStatus.HUMAN_APPROVAL_REQUIRED)
+            return self.state_machine.transition(state, WorkflowStatus.BLOCKED)
+
+        if int(result.get("knowledge_gaps") or 0) > 0 and phase == WorkflowPhase.VERIFICATION.value:
+            state.current_phase = WorkflowPhase.GAP_CLOSURE.value
+            self.state_machine.save(state)
             return self.state_machine.transition(state, WorkflowStatus.GAP_CLOSURE)
 
-        if result.get("status") == "PARTIAL" and state.pilot_mode:
-            # Pilot: allow manual review between phases
-            return self.state_machine.transition(state, WorkflowStatus.AUTO_CONTINUE)
+        if status == "SUCCESS" and not result.get("recommended_next_phase") and phase == WorkflowPhase.REGRESSION.value:
+            return self.advance_phase(state)
+
+        recommended = result.get("recommended_next_phase") or self._next_phase(phase)
+        if recommended == "GAP_CLOSURE" and int(result.get("knowledge_gaps") or 0) == 0:
+            recommended = WorkflowPhase.PUBLICATION.value
+
+        if recommended and recommended not in {"", "HUMAN_APPROVAL_REQUIRED"}:
+            if recommended in {p.value for p in WorkflowPhase}:
+                state.current_phase = recommended
+            self.state_machine.save(state)
 
         return self.state_machine.transition(state, WorkflowStatus.AUTO_CONTINUE)
 
@@ -341,6 +428,15 @@ class PhaseRunner:
         if not nxt:
             self.batch_manager.mark_batch_status(state.current_batch or "", "COMPLETE")
             state.last_completed_batch = state.current_batch or state.last_completed_batch
+            next_batch = self.batch_manager.next_ready_batch()
+            if next_batch and state.current_batch:
+                state.current_batch = next_batch["batch_id"]
+                state.current_phase = WorkflowPhase.RESEARCH.value
+                state.current_run_id = None
+                state.retry_count = 0
+                self.batch_manager.mark_batch_status(next_batch["batch_id"], "IN_PROGRESS")
+                self.state_machine.clear_current_run()
+                return self.state_machine.transition(state, WorkflowStatus.READY)
             state.current_batch = None
             state.current_phase = None
             state.current_run_id = None
@@ -350,7 +446,8 @@ class PhaseRunner:
         state.retry_count = 0
         return self.state_machine.transition(state, WorkflowStatus.RUNNING)
 
-    def run_once(self, state: ProjectState) -> dict[str, Any]:
+    def run_autonomous_step(self, state: ProjectState) -> dict[str, Any]:
+        """Single autonomous iteration: execute, validate, and auto-continue when possible."""
         lock = self.gates.assert_deployment_locked()
         if not lock.passed:
             return {"status": "BLOCKED", "reason": lock.message}
@@ -367,25 +464,84 @@ class PhaseRunner:
             if not batch:
                 return {"status": "COMPLETE", "message": "No ready batches"}
             state.current_batch = batch["batch_id"]
+            state.current_phase = WorkflowPhase.RESEARCH.value
             self.batch_manager.mark_batch_status(batch["batch_id"], "IN_PROGRESS")
+            self.state_machine.save(state)
 
         phase = state.current_phase or WorkflowPhase.RESEARCH.value
-        self.state_machine.transition(state, WorkflowStatus.RUNNING)
 
-        if phase == WorkflowPhase.RESEARCH.value:
-            result = self.start_research_phase(state, batch)
+        executable_statuses = {
+            WorkflowStatus.READY.value,
+            WorkflowStatus.RUNNING.value,
+            WorkflowStatus.RETRY.value,
+            WorkflowStatus.GAP_CLOSURE.value,
+            WorkflowStatus.AUTO_CONTINUE.value,
+        }
+
+        if state.workflow_status in executable_statuses:
+            if state.workflow_status == WorkflowStatus.AUTO_CONTINUE.value:
+                state.retry_count = 0
+            if state.workflow_status != WorkflowStatus.RUNNING.value:
+                self.state_machine.transition(state, WorkflowStatus.RUNNING)
+            result = self.execute_current_phase(state, batch)
             self.state_machine.transition(state, WorkflowStatus.WAITING_FOR_RESULT)
-            if result.status in {"SUCCESS", "PARTIAL", "SIMULATED"}:
-                state = self.validate_and_transition(state)
+            state = self.validate_and_transition(state, result_data=result.to_dict())
+
             report = {
                 "status": state.workflow_status,
                 "batch": batch["batch_id"],
                 "phase": phase,
-                "run_id": result.run_id,
+                "run_id": state.current_run_id,
                 "result_status": result.status,
                 "summary": result.summary,
+                "next_phase": state.current_phase,
             }
-            write_report(self.repo_root, f"pilot_{batch['batch_id']}_research.json", report)
+            write_report(self.repo_root, f"autonomous_{batch['batch_id']}_{phase}.json", report)
             return report
 
-        return {"status": "UNSUPPORTED_PHASE", "phase": phase}
+        return {"status": state.workflow_status, "batch": batch["batch_id"], "phase": phase}
+
+    def run_autonomous_loop(self, state: ProjectState, *, max_steps: int = 20) -> dict[str, Any]:
+        """Run until blocked, complete, or human approval required."""
+        steps: list[dict[str, Any]] = []
+        for _ in range(max_steps):
+            state = self.state_machine.load()
+            if state.workflow_status in {
+                WorkflowStatus.PAUSED.value,
+                WorkflowStatus.STOPPED.value,
+            }:
+                break
+            if state.pending_escalations:
+                break
+            report = self.run_autonomous_step(state)
+            steps.append(report)
+            terminal = {
+                "HUMAN_APPROVAL_REQUIRED",
+                "BLOCKED",
+                "COMPLETE",
+                "SUPERVISOR_REVIEW",
+            }
+            if report.get("status") in terminal:
+                break
+            if report.get("result_status") == "PARTIAL":
+                break
+            state = self.state_machine.load()
+            if state.workflow_status not in {
+                WorkflowStatus.AUTO_CONTINUE.value,
+                WorkflowStatus.RUNNING.value,
+                WorkflowStatus.READY.value,
+                WorkflowStatus.RETRY.value,
+            }:
+                break
+        summary = {
+            "steps": len(steps),
+            "final_status": steps[-1]["status"] if steps else "NOOP",
+            "last": steps[-1] if steps else None,
+            "history": steps,
+        }
+        write_report(self.repo_root, "autonomous_loop_summary.json", summary)
+        return summary
+
+    def run_once(self, state: ProjectState) -> dict[str, Any]:
+        """Backward-compatible single step — delegates to autonomous loop step."""
+        return self.run_autonomous_step(state)

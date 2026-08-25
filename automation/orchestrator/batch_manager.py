@@ -294,6 +294,24 @@ class BatchManager:
         queue["updated_at"] = datetime.now(timezone.utc).isoformat()
         self.queue_path.write_text(json.dumps(queue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
+    def mark_phase_complete(self, batch_id: str, phase: str) -> None:
+        queue = self.load_queue()
+        for batch in queue.get("batches", []):
+            if batch["batch_id"] == batch_id:
+                completed = list(batch.get("phases_completed") or [])
+                if phase not in completed:
+                    completed.append(phase)
+                batch["phases_completed"] = completed
+                break
+        queue["updated_at"] = datetime.now(timezone.utc).isoformat()
+        self.queue_path.write_text(json.dumps(queue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    def is_phase_complete(self, batch_id: str, phase: str) -> bool:
+        batch = self.get_batch(batch_id)
+        if not batch:
+            return False
+        return phase in (batch.get("phases_completed") or [])
+
     def setup_research_artifacts(self, batch: dict[str, Any]) -> list[str]:
         """Deterministic research kickoff — scope + services_index from catalogue."""
         slug = batch["slug"]

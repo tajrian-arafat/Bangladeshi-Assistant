@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T23:55:03.687123+00:00",
+  "generated_at": "2026-08-25T00:06:43.859877+00:00",
   "catalogue_source": "data/service_catalogue/services.json",
   "total_batches": 17,
   "confirmed_services_in_catalogue": 454,
@@ -115,7 +115,7 @@
       "batch_id": "BATCH_03A",
       "slug": "batch-03a-brta-driving-licence",
       "name": "BRTA Driving Licence",
-      "status": "IN_PROGRESS",
+      "status": "READY",
       "service_ids": [
         "brta-learner-driving-license",
         "brta-driving-license-renewal",
@@ -125,7 +125,11 @@
         "brta-dctc-exam-result"
       ],
       "service_count": 6,
-      "phases_completed": [],
+      "phases_completed": [
+        "RESEARCH",
+        "VERIFICATION",
+        "PUBLICATION"
+      ],
       "authority_id": "brta",
       "category_id": "transport"
     },
@@ -674,5 +678,5 @@
       "phases_completed": []
     }
   ],
-  "updated_at": "2026-08-24T23:55:03.838396+00:00"
+  "updated_at": "2026-08-25T00:06:45.726992+00:00"
 }

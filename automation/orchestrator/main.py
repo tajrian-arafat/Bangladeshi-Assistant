@@ -156,7 +156,18 @@ def cmd_run(_: argparse.Namespace) -> int:
         sm.transition(state, WorkflowStatus.READY)
         state = sm.load()
     runner = PhaseRunner(REPO_ROOT)
-    report = runner.run_once(state)
+    # Run autonomous loop until a terminal state (one full continuation chain)
+    summary = runner.run_autonomous_loop(state, max_steps=20)
+    print(json.dumps(summary, indent=2))
+    return 0
+
+
+def cmd_run_once(_: argparse.Namespace) -> int:
+    """Single step only — manual recovery."""
+    sm = StateMachine(REPO_ROOT)
+    state = sm.load()
+    runner = PhaseRunner(REPO_ROOT)
+    report = runner.run_autonomous_step(state)
     print(json.dumps(report, indent=2))
     return 0
 
@@ -228,6 +239,10 @@ def cmd_daemon(args: argparse.Namespace) -> int:
     interval = args.interval
     logger = setup_logging(REPO_ROOT, "daemon")
     logger.info("Starting automation daemon (interval=%ss)", interval)
+    sm = StateMachine(REPO_ROOT)
+    state = sm.load()
+    state.continuous_mode = True
+    sm.save(state)
     while True:
         sm = StateMachine(REPO_ROOT)
         state = sm.load()
@@ -239,11 +254,17 @@ def cmd_daemon(args: argparse.Namespace) -> int:
             time.sleep(interval)
             continue
         runner = PhaseRunner(REPO_ROOT)
-        report = runner.run_once(state)
-        logger.info("Daemon tick: %s", report)
-        if report.get("status") in {"HUMAN_APPROVAL_REQUIRED", "BLOCKED", "COMPLETE"}:
-            logger.info("Stopping daemon: %s", report.get("status"))
+        summary = runner.run_autonomous_loop(state, max_steps=10)
+        logger.info("Daemon tick: %s", summary.get("final_status"))
+        final = summary.get("final_status")
+        last = summary.get("last") or {}
+        if final in {"HUMAN_APPROVAL_REQUIRED", "BLOCKED", "COMPLETE", "SUPERVISOR_REVIEW"}:
+            logger.info("Stopping daemon: %s", final)
             break
+        if last.get("result_status") == "PARTIAL":
+            logger.info("Phase partial — waiting for artifacts")
+            time.sleep(interval)
+            continue
         time.sleep(interval)
     return 0
 
@@ -255,7 +276,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("init", help="Initialize automation state")
     sub.add_parser("status", help="Show orchestrator status")
     sub.add_parser("simulate", help="Run offline simulation cases")
-    sub.add_parser("run", help="Run next orchestrator step")
+    sub.add_parser("run", help="Run autonomous continuation loop until terminal state")
+    sub.add_parser("step", help="Run a single orchestrator step (manual recovery)")
     sub.add_parser("resume", help="Resume from pause/stop")
     sub.add_parser("pause", help="Pause automation")
     sub.add_parser("stop", help="Stop automation")
@@ -273,6 +295,7 @@ def main(argv: list[str] | None = None) -> int:
         "status": cmd_status,
         "simulate": cmd_simulate,
         "run": cmd_run,
+        "step": cmd_run_once,
         "resume": cmd_resume,
         "pause": cmd_pause,
         "stop": cmd_stop,

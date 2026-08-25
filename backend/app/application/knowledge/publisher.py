@@ -185,6 +185,9 @@ class KnowledgePublisher:
             self.staging_root / "batch-02b-police-immigration"
             if batch_id.startswith("batch-02b")
             else None,
+            self.staging_root / "batch-03a-brta-driving-licence"
+            if batch_id.startswith("batch-03a")
+            else None,
         ]
         for c in candidates:
             if c and c.exists():
