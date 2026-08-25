@@ -1,0 +1,153 @@
+{
+  "service_id": "judiciary-supreme-court-e-filing",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Supreme Court e-Filing (Lawyers Panel)",
+  "service_name_bn": "সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel)",
+  "aliases": [
+    "apps.supremecourt.gov.bd",
+    "mycase portal",
+    "SC e-filing"
+  ],
+  "category_id": "judiciary",
+  "profile_key": "JUDICIARY",
+  "responsible_agency": "Supreme Court of Bangladesh",
+  "official_application_url": "https://apps.supremecourt.gov.bd/mycase",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-catalogue-authority",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Supreme Court of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-official-portal",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "application_url",
+      "claim_text": "Supreme Court e-Filing (Lawyers Panel) official information is published at https://apps.supremecourt.gov.bd/mycase (page title: MyCase : E-Filing System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://apps.supremecourt.gov.bd/mycase"
+      },
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official"
+      ],
+      "evidence_ids": [
+        "ev-judiciary-supreme-court-e-filing::c-official-portal-src-judiciary-supreme-court-e-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-procedure-overview",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "procedure_step",
+      "claim_text": "Supreme Court e-Filing (Lawyers Panel) is a government service under Supreme Court of Bangladesh (case filing). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-supreme-court-e-filing::c-service-identity",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "claim_type": "eligibility",
+      "claim_text": "Supreme Court e-Filing (Lawyers Panel) (সুপ্রীম কোর্ট ই-ফাইলিং (Lawyers Panel)) is a confirmed government service in category judiciary, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-supreme-court-e-filing-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-judiciary-supreme-court-e-filing-official",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "url": "https://apps.supremecourt.gov.bd/mycase",
+      "title": "MyCase : E-Filing System",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://apps.supremecourt.gov.bd/mycase/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "MyCase : E-Filing System",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "75c45ae9dae22cb2",
+        "retrieved_at": "2026-08-25T03:28:03.878378+00:00"
+      },
+      "evidence_locator": "probe:https://apps.supremecourt.gov.bd/mycase"
+    },
+    {
+      "source_id": "src-judiciary-supreme-court-e-filing-alt-1",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "url": "https://supremecourt.gov.bd/web/index.php?lang=&menu=11&page=tutorial.php",
+      "title": "Home : Supreme Court of Bangladesh",
+      "authority_id": "supreme-court-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://supremecourt.gov.bd/web/index.php?lang=&menu=11&page=tutorial.php",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Home : Supreme Court of Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "e5decda8a88bfb6f",
+        "retrieved_at": "2026-08-25T03:28:05.535842+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-judiciary-supreme-court-e-filing-fee-unverified",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Supreme Court e-Filing (Lawyers Panel).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-judiciary-supreme-court-e-filing-documents-unverified",
+      "service_id": "judiciary-supreme-court-e-filing",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Supreme Court e-Filing (Lawyers Panel).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

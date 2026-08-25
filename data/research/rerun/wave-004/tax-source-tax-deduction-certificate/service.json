@@ -1,0 +1,172 @@
+{
+  "service_id": "tax-source-tax-deduction-certificate",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Tax Deduction at Source Certificate",
+  "service_name_bn": "উৎস কর সনদ (TDS/AIT certificate)",
+  "aliases": [
+    "TDS certificate",
+    "AIT certificate",
+    "source tax certificate"
+  ],
+  "category_id": "tax",
+  "profile_key": "TAX",
+  "responsible_agency": "National Board of Revenue (NBR)",
+  "official_application_url": "https://secure.incometax.gov.bd",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "tax-source-tax-deduction-certificate::c-catalogue-authority",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-source-tax-deduction-certificate::c-official-portal",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Tax Deduction at Source Certificate official information is published at https://secure.incometax.gov.bd (page title: - NBR TIN Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://secure.incometax.gov.bd"
+      },
+      "source_ids": [
+        "src-tax-source-tax-deduction-certificate-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-source-tax-deduction-certificate::c-official-portal-src-tax-source-tax-deduction-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-source-tax-deduction-certificate::c-procedure-overview",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Tax Deduction at Source Certificate is a government service under National Board of Revenue (NBR) (withholding). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-source-tax-deduction-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-source-tax-deduction-certificate::c-service-identity",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Tax Deduction at Source Certificate (উৎস কর সনদ (TDS/AIT certificate)) is a confirmed government service in category tax, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-source-tax-deduction-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-tax-source-tax-deduction-certificate-official",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "url": "https://secure.incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://secure.incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "7dbc0d79e88c33d2",
+        "retrieved_at": "2026-08-25T03:22:54.047204+00:00"
+      },
+      "evidence_locator": "probe:https://secure.incometax.gov.bd"
+    },
+    {
+      "source_id": "src-tax-source-tax-deduction-certificate-alt-1",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "url": "https://nbr.gov.bd/",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:55.464364+00:00"
+      }
+    },
+    {
+      "source_id": "src-tax-source-tax-deduction-certificate-alt-2",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:56.869666+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-tax-source-tax-deduction-certificate-fee-unverified",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Tax Deduction at Source Certificate.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-tax-source-tax-deduction-certificate-documents-unverified",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Tax Deduction at Source Certificate.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

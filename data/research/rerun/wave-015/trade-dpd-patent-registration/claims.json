@@ -1,0 +1,72 @@
+{
+  "service_id": "trade-dpd-patent-registration",
+  "claims": [
+    {
+      "claim_id": "trade-dpd-patent-registration::c-catalogue-authority",
+      "service_id": "trade-dpd-patent-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Patents, Designs and Trademarks (DPDT).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-patent-registration::c-official-portal",
+      "service_id": "trade-dpd-patent-registration",
+      "claim_type": "application_url",
+      "claim_text": "Patent Registration official information is published at https://dpdt.gov.bd/ (page title: হোম | পেটেন্ট, শিল্প-নকশা ও ট্রেডমার্কস অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dpdt.gov.bd/"
+      },
+      "source_ids": [
+        "src-trade-dpd-patent-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-trade-dpd-patent-registration::c-official-portal-src-trade-dpd-patent-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-patent-registration::c-procedure-overview",
+      "service_id": "trade-dpd-patent-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Patent Registration is a government service under Department of Patents, Designs and Trademarks (DPDT) (intellectual property). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-dpd-patent-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-patent-registration::c-service-identity",
+      "service_id": "trade-dpd-patent-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Patent Registration (পেটেন্ট নিবন্ধন) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-dpd-patent-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

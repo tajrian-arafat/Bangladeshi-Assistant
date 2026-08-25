@@ -1,0 +1,172 @@
+{
+  "service_id": "land-khatian-online-copy",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Online Khatian Copy",
+  "service_name_bn": "খতিয়ান অনলাইন কপি",
+  "aliases": [
+    "e-porcha",
+    "DLRMS khatian",
+    "QR khatian"
+  ],
+  "category_id": "land",
+  "profile_key": "LAND",
+  "responsible_agency": "Ministry of Land (DLRMS)",
+  "official_application_url": "https://dlrms.land.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "land-khatian-online-copy::c-catalogue-authority",
+      "service_id": "land-khatian-online-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land (DLRMS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-online-copy::c-official-portal",
+      "service_id": "land-khatian-online-copy",
+      "claim_type": "application_url",
+      "claim_text": "Online Khatian Copy official information is published at https://dlrms.land.gov.bd/ (page title: DLRMS).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dlrms.land.gov.bd/"
+      },
+      "source_ids": [
+        "src-land-khatian-online-copy-official"
+      ],
+      "evidence_ids": [
+        "ev-land-khatian-online-copy::c-official-portal-src-land-khatian-online-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-online-copy::c-procedure-overview",
+      "service_id": "land-khatian-online-copy",
+      "claim_type": "procedure_step",
+      "claim_text": "Online Khatian Copy is a government service under Ministry of Land (DLRMS) (khatian copy). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-online-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-online-copy::c-service-identity",
+      "service_id": "land-khatian-online-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Online Khatian Copy (খতিয়ান অনলাইন কপি) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-online-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-land-khatian-online-copy-official",
+      "service_id": "land-khatian-online-copy",
+      "url": "https://dlrms.land.gov.bd/",
+      "title": "DLRMS",
+      "authority_id": "ministry-land",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dlrms.land.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "DLRMS",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "3cf041a2cff16369",
+        "retrieved_at": "2026-08-25T03:21:18.092362+00:00"
+      },
+      "evidence_locator": "probe:https://dlrms.land.gov.bd/"
+    },
+    {
+      "source_id": "src-land-khatian-online-copy-alt-1",
+      "service_id": "land-khatian-online-copy",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "5dbe671c90819be8",
+        "retrieved_at": "2026-08-25T03:21:18.136448+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-khatian-online-copy-alt-2",
+      "service_id": "land-khatian-online-copy",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "47e134ff69289ba5",
+        "retrieved_at": "2026-08-25T03:21:18.172943+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-land-khatian-online-copy-fee-unverified",
+      "service_id": "land-khatian-online-copy",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Online Khatian Copy.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-khatian-online-copy-documents-unverified",
+      "service_id": "land-khatian-online-copy",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Online Khatian Copy.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

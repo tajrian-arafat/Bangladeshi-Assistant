@@ -1,0 +1,72 @@
+{
+  "service_id": "dpdc-new-connection",
+  "claims": [
+    {
+      "claim_id": "dpdc-new-connection::c-catalogue-authority",
+      "service_id": "dpdc-new-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Power Distribution Company Limited (DPDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-new-connection::c-official-portal",
+      "service_id": "dpdc-new-connection",
+      "claim_type": "application_url",
+      "claim_text": "DPDC New Electricity Connection official information is published at https://onlineapplication.dpdc.org.bd/frm_main_application.php (page title: New Connection | Application).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://onlineapplication.dpdc.org.bd/frm_main_application.php"
+      },
+      "source_ids": [
+        "src-dpdc-new-connection-official"
+      ],
+      "evidence_ids": [
+        "ev-dpdc-new-connection::c-official-portal-src-dpdc-new-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-new-connection::c-procedure-overview",
+      "service_id": "dpdc-new-connection",
+      "claim_type": "procedure_step",
+      "claim_text": "DPDC New Electricity Connection is a government service under Dhaka Power Distribution Company Limited (DPDC) (electricity connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-new-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-new-connection::c-service-identity",
+      "service_id": "dpdc-new-connection",
+      "claim_type": "eligibility",
+      "claim_text": "DPDC New Electricity Connection (ডিপিডিসি নতুন বিদ্যুৎ সংযোগ) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-new-connection-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

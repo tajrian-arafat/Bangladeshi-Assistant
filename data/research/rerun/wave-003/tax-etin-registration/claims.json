@@ -1,0 +1,72 @@
+{
+  "service_id": "tax-etin-registration",
+  "claims": [
+    {
+      "claim_id": "tax-etin-registration::c-catalogue-authority",
+      "service_id": "tax-etin-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-official-portal",
+      "service_id": "tax-etin-registration",
+      "claim_type": "application_url",
+      "claim_text": "e-TIN Registration official information is published at https://secure.incometax.gov.bd (page title: - NBR TIN Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://secure.incometax.gov.bd"
+      },
+      "source_ids": [
+        "src-tax-etin-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-etin-registration::c-official-portal-src-tax-etin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-procedure-overview",
+      "service_id": "tax-etin-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "e-TIN Registration is a government service under National Board of Revenue (NBR) (tin). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-etin-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-etin-registration::c-service-identity",
+      "service_id": "tax-etin-registration",
+      "claim_type": "eligibility",
+      "claim_text": "e-TIN Registration (ই-টিআইএন নিবন্ধন) is a confirmed government service in category tax, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-etin-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

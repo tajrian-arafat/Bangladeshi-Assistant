@@ -1,0 +1,593 @@
+{
+  "batch_id": "batch-09-agriculture",
+  "verifications": [
+    {
+      "claim_id": "agri-bamis-farmer-registration::c-application-portal",
+      "service_id": "agri-bamis-farmer-registration",
+      "verification_status": "VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507365+00:00",
+      "notes": [
+        "Official portal URL reachable at verification time"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-agri-bamis-farmer-registration",
+          "url": "https://www.bamis.gov.bd/en/registration/farmer/",
+          "reachable": true,
+          "status_code": 200
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-bamis-farmer-registration::c-responsible-authority",
+      "service_id": "agri-bamis-farmer-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507370+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-dae-district-extension::c-application-portal",
+      "service_id": "agri-dae-district-extension",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507374+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-agri-dae-district-extension",
+          "url": "https://dae.kishoreganj.gov.bd/en",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-dae-district-extension::c-responsible-authority",
+      "service_id": "agri-dae-district-extension",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507377+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-e-pesticide-prescription::c-application-portal",
+      "service_id": "agri-e-pesticide-prescription",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507380+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-agri-e-pesticide-prescription",
+          "url": "https://dae.kishoreganj.gov.bd/en",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-e-pesticide-prescription::c-responsible-authority",
+      "service_id": "agri-e-pesticide-prescription",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507382+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-farmer-digital-address::c-application-portal",
+      "service_id": "agri-farmer-digital-address",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507385+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-agri-farmer-digital-address",
+          "url": "https://dae.kishoreganj.gov.bd/en",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-farmer-digital-address::c-responsible-authority",
+      "service_id": "agri-farmer-digital-address",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507387+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-farmers-window::c-application-portal",
+      "service_id": "agri-farmers-window",
+      "verification_status": "VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507389+00:00",
+      "notes": [
+        "Official portal URL reachable at verification time"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-agri-farmers-window",
+          "url": "https://sacp.dae.gov.bd/en/farmers-window/",
+          "reachable": true,
+          "status_code": 200
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-farmers-window::c-responsible-authority",
+      "service_id": "agri-farmers-window",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507391+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-fsmms-farmer-registration::c-application-portal",
+      "service_id": "agri-fsmms-farmer-registration",
+      "verification_status": "VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507394+00:00",
+      "notes": [
+        "Official portal URL reachable at verification time"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-agri-fsmms-farmer-registration",
+          "url": "https://fsmms.dgf.gov.bd/portal/bn/farmer",
+          "reachable": true,
+          "status_code": 200
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agri-fsmms-farmer-registration::c-responsible-authority",
+      "service_id": "agri-fsmms-farmer-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507396+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agriculture-fisheries-fish-farm-registration::c-application-portal",
+      "service_id": "agriculture-fisheries-fish-farm-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507398+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-agriculture-fisheries-fish-farm-registration",
+          "url": "https://fisheries.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agriculture-fisheries-fish-farm-registration::c-responsible-authority",
+      "service_id": "agriculture-fisheries-fish-farm-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507400+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agriculture-livestock-farm-registration::c-application-portal",
+      "service_id": "agriculture-livestock-farm-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507403+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-agriculture-livestock-farm-registration",
+          "url": "https://dls.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "agriculture-livestock-farm-registration::c-responsible-authority",
+      "service_id": "agriculture-livestock-farm-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507405+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-export-health-certificate::c-application-portal",
+      "service_id": "fisheries-export-health-certificate",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507407+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-fisheries-export-health-certificate",
+          "url": "https://www.ecertificate.fisheries.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-export-health-certificate::c-responsible-authority",
+      "service_id": "fisheries-export-health-certificate",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507409+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-fioc-user-registration::c-application-portal",
+      "service_id": "fisheries-fioc-user-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507412+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-fisheries-fioc-user-registration",
+          "url": "https://www.ecertificate.fisheries.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-fioc-user-registration::c-responsible-authority",
+      "service_id": "fisheries-fioc-user-registration",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507413+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-import-noc::c-application-portal",
+      "service_id": "fisheries-import-noc",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507416+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-fisheries-import-noc",
+          "url": "https://www.ecertificate.fisheries.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-import-noc::c-responsible-authority",
+      "service_id": "fisheries-import-noc",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507418+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-import-registration-certificate::c-application-portal",
+      "service_id": "fisheries-import-registration-certificate",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507420+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-fisheries-import-registration-certificate",
+          "url": "https://www.ecertificate.fisheries.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-import-registration-certificate::c-responsible-authority",
+      "service_id": "fisheries-import-registration-certificate",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507433+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-import-release-order::c-application-portal",
+      "service_id": "fisheries-import-release-order",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507436+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-fisheries-import-release-order",
+          "url": "https://www.ecertificate.fisheries.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-import-release-order::c-responsible-authority",
+      "service_id": "fisheries-import-release-order",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507438+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-processing-plant-license::c-application-portal",
+      "service_id": "fisheries-processing-plant-license",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507440+00:00",
+      "notes": [
+        "URL documented but not independently reachable"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-fisheries-processing-plant-license",
+          "url": "https://www.ecertificate.fisheries.gov.bd/",
+          "reachable": false,
+          "status_code": null
+        },
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    },
+    {
+      "claim_id": "fisheries-processing-plant-license::c-responsible-authority",
+      "service_id": "fisheries-processing-plant-license",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "verifier": "generic_verification_builder",
+      "verified_at": "2026-08-25T02:47:06.507442+00:00",
+      "notes": [
+        "Authority from catalogue only — not independently confirmed"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-catalogue",
+          "url": "/workspace/data/service_catalogue/services.json",
+          "reachable": null,
+          "status_code": null
+        }
+      ]
+    }
+  ]
+}

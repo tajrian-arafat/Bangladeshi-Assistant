@@ -1,0 +1,139 @@
+{
+  "service_id": "legal-aid-district-helpline-16430",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "District Legal Aid Toll-free Helpline (16430)",
+  "service_name_bn": "জেলা আইন সহায়তা হেল্পলাইন (১৬৪৩০)",
+  "aliases": [
+    "16430 legal aid",
+    "District Legal Aid Toll-free Helpline (16430)"
+  ],
+  "category_id": "legal_aid",
+  "profile_key": "JUDICIARY",
+  "responsible_agency": "District Legal Aid Office (NLASO)",
+  "official_application_url": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "legal-aid-district-helpline-16430::c-catalogue-authority",
+      "service_id": "legal-aid-district-helpline-16430",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: District Legal Aid Office (NLASO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-district-helpline-16430::c-official-url-documented",
+      "service_id": "legal-aid-district-helpline-16430",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline for District Legal Aid Toll-free Helpline (16430); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline"
+      },
+      "source_ids": [
+        "src-legal-aid-district-helpline-16430-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-district-helpline-16430::c-procedure-overview",
+      "service_id": "legal-aid-district-helpline-16430",
+      "claim_type": "procedure_step",
+      "claim_text": "District Legal Aid Toll-free Helpline (16430) is a government service under District Legal Aid Office (NLASO) (helpline). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-district-helpline-16430-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-district-helpline-16430::c-service-identity",
+      "service_id": "legal-aid-district-helpline-16430",
+      "claim_type": "eligibility",
+      "claim_text": "District Legal Aid Toll-free Helpline (16430) (জেলা আইন সহায়তা হেল্পলাইন (১৬৪৩০)) is a confirmed government service in category legal_aid, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-district-helpline-16430-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-legal-aid-district-helpline-16430-official",
+      "service_id": "legal-aid-district-helpline-16430",
+      "url": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline",
+      "title": "Just a moment...",
+      "authority_id": "district-legal-aid-office-nlaso",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "bd3a6a98dfe8eac6",
+        "retrieved_at": "2026-08-25T03:28:09.810007+00:00"
+      },
+      "evidence_locator": "probe:https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-legal-aid-district-helpline-16430-portal-unreachable",
+      "service_id": "legal-aid-district-helpline-16430",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for District Legal Aid Toll-free Helpline (16430).",
+      "severity": "MEDIUM",
+      "url": "https://jamalpur.judiciary.gov.bd/en/menu/page/legal-aid-helpline"
+    },
+    {
+      "gap_id": "gap-legal-aid-district-helpline-16430-fee-unverified",
+      "service_id": "legal-aid-district-helpline-16430",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for District Legal Aid Toll-free Helpline (16430).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-legal-aid-district-helpline-16430-documents-unverified",
+      "service_id": "legal-aid-district-helpline-16430",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for District Legal Aid Toll-free Helpline (16430).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

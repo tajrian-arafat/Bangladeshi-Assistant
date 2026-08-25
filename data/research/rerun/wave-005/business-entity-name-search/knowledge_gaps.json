@@ -1,0 +1,27 @@
+{
+  "service_id": "business-entity-name-search",
+  "gaps": [
+    {
+      "gap_id": "gap-business-entity-name-search-portal-unreachable",
+      "service_id": "business-entity-name-search",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Entity Name Search.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/psp/nc_search"
+    },
+    {
+      "gap_id": "gap-business-entity-name-search-fee-unverified",
+      "service_id": "business-entity-name-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Entity Name Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-entity-name-search-documents-unverified",
+      "service_id": "business-entity-name-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Entity Name Search.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "nid-voter-area-change",
+  "claims": [
+    {
+      "claim_id": "nid-voter-area-change::c-catalogue-authority",
+      "service_id": "nid-voter-area-change",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-voter-area-change::c-official-portal",
+      "service_id": "nid-voter-area-change",
+      "claim_type": "application_url",
+      "claim_text": "Voter Area or Address Change (Form 13) official information is published at https://services.nidw.gov.bd/nid-pub/faq?locale=en (page title: Bangladesh NID Application System | Frequently Asked Question).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?locale=en"
+      },
+      "source_ids": [
+        "src-nid-voter-area-change-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-voter-area-change::c-official-portal-src-nid-voter-area-change-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-voter-area-change::c-procedure-overview",
+      "service_id": "nid-voter-area-change",
+      "claim_type": "procedure_step",
+      "claim_text": "Voter Area or Address Change (Form 13) is a government service under Bangladesh Election Commission (NID Wing) (voter registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-voter-area-change-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-voter-area-change::c-service-identity",
+      "service_id": "nid-voter-area-change",
+      "claim_type": "eligibility",
+      "claim_text": "Voter Area or Address Change (Form 13) (ভোটার এলাকা/ঠিকানা পরিবর্তন (ফর্ম ১৩)) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-voter-area-change-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

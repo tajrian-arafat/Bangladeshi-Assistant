@@ -1,0 +1,157 @@
+{
+  "service_id": "ff-mis-freedom-fighter-list",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Freedom Fighter List (MIS)",
+  "service_name_bn": "মুক্তিযোদ্ধা তালিকা (MIS)",
+  "aliases": [
+    "freedom fighter verification",
+    "Muktijuddha list",
+    "Freedom Fighter List (MIS)",
+    "MOLWA MIS",
+    "freedom fighter database",
+    "Freedom Fighter Management Information System (MIS)",
+    "ff-mis-login"
+  ],
+  "category_id": "social_protection",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Ministry of Liberation War Affairs",
+  "official_application_url": "https://mis.molwa.gov.bd/freedom-fighter-list",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "ff-mis-freedom-fighter-list::c-catalogue-authority",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Liberation War Affairs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-mis-freedom-fighter-list::c-official-portal",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "claim_type": "application_url",
+      "claim_text": "Freedom Fighter List (MIS) official information is published at https://mis.molwa.gov.bd/freedom-fighter-list (page title: মুক্তিযোদ্ধা অনুসন্ধান).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://mis.molwa.gov.bd/freedom-fighter-list"
+      },
+      "source_ids": [
+        "src-ff-mis-freedom-fighter-list-official"
+      ],
+      "evidence_ids": [
+        "ev-ff-mis-freedom-fighter-list::c-official-portal-src-ff-mis-freedom-fighter-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-mis-freedom-fighter-list::c-procedure-overview",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "claim_type": "procedure_step",
+      "claim_text": "Freedom Fighter List (MIS) is a government service under Ministry of Liberation War Affairs (freedom fighter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-mis-freedom-fighter-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "ff-mis-freedom-fighter-list::c-service-identity",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "claim_type": "eligibility",
+      "claim_text": "Freedom Fighter List (MIS) (মুক্তিযোদ্ধা তালিকা (MIS)) is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-ff-mis-freedom-fighter-list-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-ff-mis-freedom-fighter-list-official",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "url": "https://mis.molwa.gov.bd/freedom-fighter-list",
+      "title": "মুক্তিযোদ্ধা অনুসন্ধান",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mis.molwa.gov.bd/freedom-fighter-list",
+        "status_code": 200,
+        "reachable": true,
+        "title": "মুক্তিযোদ্ধা অনুসন্ধান",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d143ab5254d6ad56",
+        "retrieved_at": "2026-08-25T03:27:22.721648+00:00"
+      },
+      "evidence_locator": "probe:https://mis.molwa.gov.bd/freedom-fighter-list"
+    },
+    {
+      "source_id": "src-ff-mis-freedom-fighter-list-alt-1",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "url": "https://mis.molwa.gov.bd/",
+      "title": "লগ ইন",
+      "authority_id": "ministry-of-liberation-war-affairs",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mis.molwa.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "লগ ইন",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "9438fc866cb1599d",
+        "retrieved_at": "2026-08-25T03:27:24.782375+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-ff-mis-freedom-fighter-list-fee-unverified",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Freedom Fighter List (MIS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-ff-mis-freedom-fighter-list-documents-unverified",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Freedom Fighter List (MIS).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

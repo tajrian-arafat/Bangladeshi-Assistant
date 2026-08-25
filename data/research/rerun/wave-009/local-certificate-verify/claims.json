@@ -1,0 +1,72 @@
+{
+  "service_id": "local-certificate-verify",
+  "claims": [
+    {
+      "claim_id": "local-certificate-verify::c-catalogue-authority",
+      "service_id": "local-certificate-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad (Digital Union Tax System).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-certificate-verify::c-official-portal",
+      "service_id": "local-certificate-verify",
+      "claim_type": "application_url",
+      "claim_text": "Union Certificate Verification Search official information is published at https://uniontax.gov.bd/sonod/search (page title: ইউনিয়ন পরিষদ ক্যাশলেস সেবা সিস্টেম).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://uniontax.gov.bd/sonod/search"
+      },
+      "source_ids": [
+        "src-local-certificate-verify-official"
+      ],
+      "evidence_ids": [
+        "ev-local-certificate-verify::c-official-portal-src-local-certificate-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-certificate-verify::c-procedure-overview",
+      "service_id": "local-certificate-verify",
+      "claim_type": "procedure_step",
+      "claim_text": "Union Certificate Verification Search is a government service under Union Parishad (Digital Union Tax System) (verification). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-certificate-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-certificate-verify::c-service-identity",
+      "service_id": "local-certificate-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Union Certificate Verification Search (ইউনিয়ন সনদ যাচাই) is a confirmed government service in category certificates, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-certificate-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

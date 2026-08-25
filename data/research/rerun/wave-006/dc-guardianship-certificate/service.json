@@ -1,0 +1,136 @@
+{
+  "service_id": "dc-guardianship-certificate",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Guardianship Certificate (DC Office)",
+  "service_name_bn": "অভিভাবকত্ব সনদ (জেলা প্রশাসক)",
+  "aliases": [
+    "legal guardianship certificate",
+    "Guardianship Certificate (DC Office)"
+  ],
+  "category_id": "local_government",
+  "profile_key": "LOCAL_GOVERNMENT",
+  "responsible_agency": "Deputy Commissioner Office",
+  "official_application_url": "https://www.dhaka.gov.bd/en",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "dc-guardianship-certificate::c-catalogue-authority",
+      "service_id": "dc-guardianship-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Deputy Commissioner Office.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-guardianship-certificate::c-official-url-documented",
+      "service_id": "dc-guardianship-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.dhaka.gov.bd/en for Guardianship Certificate (DC Office); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.dhaka.gov.bd/en"
+      },
+      "source_ids": [
+        "src-dc-guardianship-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-guardianship-certificate::c-procedure-overview",
+      "service_id": "dc-guardianship-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Guardianship Certificate (DC Office) is a government service under Deputy Commissioner Office (certificate). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-guardianship-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dc-guardianship-certificate::c-service-identity",
+      "service_id": "dc-guardianship-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Guardianship Certificate (DC Office) (অভিভাবকত্ব সনদ (জেলা প্রশাসক)) is a confirmed government service in category local_government, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dc-guardianship-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-dc-guardianship-certificate-official",
+      "service_id": "dc-guardianship-certificate",
+      "url": "https://www.dhaka.gov.bd/en",
+      "title": "Guardianship Certificate (DC Office)",
+      "authority_id": "deputy-commissioner-office",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.dhaka.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:25:16.386703+00:00"
+      },
+      "evidence_locator": "probe:https://www.dhaka.gov.bd/en"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-dc-guardianship-certificate-portal-unreachable",
+      "service_id": "dc-guardianship-certificate",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Guardianship Certificate (DC Office).",
+      "severity": "MEDIUM",
+      "url": "https://www.dhaka.gov.bd/en"
+    },
+    {
+      "gap_id": "gap-dc-guardianship-certificate-fee-unverified",
+      "service_id": "dc-guardianship-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Guardianship Certificate (DC Office).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dc-guardianship-certificate-documents-unverified",
+      "service_id": "dc-guardianship-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Guardianship Certificate (DC Office).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "service_id": "health-bmdc-eligibility-certificate",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-health-bmdc-eligibility-certificate-portal-unreachable",
+      "service_id": "health-bmdc-eligibility-certificate",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for BMDC Eligibility Certificate.",
+      "severity": "MEDIUM",
+      "url": "https://payment.bmdc.org.bd/home/page/form-list"
+    },
+    {
+      "gap_id": "gap-health-bmdc-eligibility-certificate-fee-unverified",
+      "service_id": "health-bmdc-eligibility-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BMDC Eligibility Certificate.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-bmdc-eligibility-certificate-documents-unverified",
+      "service_id": "health-bmdc-eligibility-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BMDC Eligibility Certificate.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

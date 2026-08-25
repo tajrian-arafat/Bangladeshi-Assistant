@@ -1,0 +1,20 @@
+{
+  "service_id": "local-passport-attestation",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-local-passport-attestation-fee-unverified",
+      "service_id": "local-passport-attestation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Passport-related Attestation (Union).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-passport-attestation-documents-unverified",
+      "service_id": "local-passport-attestation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Passport-related Attestation (Union).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

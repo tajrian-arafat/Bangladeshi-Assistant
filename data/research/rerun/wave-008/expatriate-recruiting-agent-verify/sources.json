@@ -1,0 +1,47 @@
+{
+  "service_id": "expatriate-recruiting-agent-verify",
+  "sources": [
+    {
+      "source_id": "src-expatriate-recruiting-agent-verify-official",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "url": "https://old.bmet.gov.bd/BMET/agentlistpreview",
+      "title": "Recruiting Agent Verification",
+      "authority_id": "bmet",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://old.bmet.gov.bd/BMET/agentlistpreview",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:27:16.540905+00:00"
+      },
+      "evidence_locator": "probe:https://old.bmet.gov.bd/BMET/agentlistpreview"
+    },
+    {
+      "source_id": "src-expatriate-recruiting-agent-verify-alt-1",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "url": "https://bmet.gov.bd",
+      "title": "Recruiting Agent Verification",
+      "authority_id": "bmet",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bmet.gov.bd",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:27:17.078061+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

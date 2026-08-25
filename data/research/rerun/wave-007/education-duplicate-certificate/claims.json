@@ -1,0 +1,70 @@
+{
+  "service_id": "education-duplicate-certificate",
+  "claims": [
+    {
+      "claim_id": "education-duplicate-certificate::c-catalogue-authority",
+      "service_id": "education-duplicate-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Controller of Examinations (respective board).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-duplicate-certificate::c-official-url-documented",
+      "service_id": "education-duplicate-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL http://www.educationboard.gov.bd/edb_rules_regulations_powers_duties_controller.php for Duplicate SSC/HSC Certificate or Transcript; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://www.educationboard.gov.bd/edb_rules_regulations_powers_duties_controller.php"
+      },
+      "source_ids": [
+        "src-education-duplicate-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-duplicate-certificate::c-procedure-overview",
+      "service_id": "education-duplicate-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Duplicate SSC/HSC Certificate or Transcript is a government service under Controller of Examinations (respective board) (duplicate certificate). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-duplicate-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-duplicate-certificate::c-service-identity",
+      "service_id": "education-duplicate-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Duplicate SSC/HSC Certificate or Transcript (SSC/HSC সনদ/ট্রান্সক্রিপ্টের ডুপ্লিকেট) is a confirmed government service in category education, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-duplicate-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "service_id": "civil-death-registration-copy",
+  "claims": [
+    {
+      "claim_id": "civil-death-registration-copy::c-catalogue-authority",
+      "service_id": "civil-death-registration-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Office of the Registrar General, Birth and Death Registration.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-death-registration-copy::c-official-url-documented",
+      "service_id": "civil-death-registration-copy",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdris.gov.bd/dr/reprint/add for Death Registration Copy (Reprint); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdris.gov.bd/dr/reprint/add"
+      },
+      "source_ids": [
+        "src-civil-death-registration-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-death-registration-copy::c-procedure-overview",
+      "service_id": "civil-death-registration-copy",
+      "claim_type": "procedure_step",
+      "claim_text": "Death Registration Copy (Reprint) is a government service under Office of the Registrar General, Birth and Death Registration (death copy). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-death-registration-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-death-registration-copy::c-service-identity",
+      "service_id": "civil-death-registration-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Death Registration Copy (Reprint) (মৃত্যু নিবন্ধন প্রতিলিপি) is a confirmed government service in category civil_registration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-death-registration-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

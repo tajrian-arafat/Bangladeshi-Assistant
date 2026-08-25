@@ -1,0 +1,70 @@
+{
+  "service_id": "civil-birth-registration-duplicate-cancel",
+  "claims": [
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-catalogue-authority",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Office of the Registrar General, Birth and Death Registration.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-official-url-documented",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdris.gov.bd/application/print for Cancellation of Duplicate Birth Registrations; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdris.gov.bd/application/print"
+      },
+      "source_ids": [
+        "src-civil-birth-registration-duplicate-cancel-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-procedure-overview",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_type": "procedure_step",
+      "claim_text": "Cancellation of Duplicate Birth Registrations is a government service under Office of the Registrar General, Birth and Death Registration (birth duplicate cancel). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-birth-registration-duplicate-cancel-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "civil-birth-registration-duplicate-cancel::c-service-identity",
+      "service_id": "civil-birth-registration-duplicate-cancel",
+      "claim_type": "eligibility",
+      "claim_text": "Cancellation of Duplicate Birth Registrations (একাধিক জন্ম নিবন্ধন সনদ বাতিল) is a confirmed government service in category civil_registration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-civil-birth-registration-duplicate-cancel-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

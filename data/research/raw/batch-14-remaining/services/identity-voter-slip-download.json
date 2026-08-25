@@ -1,0 +1,44 @@
+{
+  "service_id": "identity-voter-slip-download",
+  "batch_id": "batch-14-remaining",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Voter Information Slip Download",
+  "service_name_bn": "ভোটার স্লিপ/তথ্য ডাউনলোড",
+  "aliases": [
+    "voter slip",
+    "voter ID slip EC"
+  ],
+  "category_id": "identity",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/",
+  "research_status": "SUBSTANTIAL",
+  "claims": [
+    {
+      "claim_id": "identity-voter-slip-download::c-application-portal",
+      "service_id": "identity-voter-slip-download",
+      "claim_type": "application_url",
+      "claim_text": "Voter Information Slip Download is associated with NBR e-service portal https://services.nidw.gov.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-identity-voter-slip-download",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "identity-voter-slip-download::c-responsible-authority",
+      "service_id": "identity-voter-slip-download",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Election Commission (NID Wing).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

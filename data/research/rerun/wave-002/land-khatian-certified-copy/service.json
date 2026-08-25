@@ -1,0 +1,176 @@
+{
+  "service_id": "land-khatian-certified-copy",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Certified Khatian Copy",
+  "service_name_bn": "সার্টিফাইড/সত্যায়িত খতিয়ান",
+  "aliases": [
+    "certified land record"
+  ],
+  "category_id": "land",
+  "profile_key": "LAND",
+  "responsible_agency": "Ministry of Land (DLRMS)",
+  "official_application_url": "https://land.gov.bd/vumisheba-fee",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "land-khatian-certified-copy::c-catalogue-authority",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land (DLRMS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-official-url-documented",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://land.gov.bd/vumisheba-fee for Certified Khatian Copy; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://land.gov.bd/vumisheba-fee"
+      },
+      "source_ids": [
+        "src-land-khatian-certified-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-procedure-overview",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "procedure_step",
+      "claim_text": "Certified Khatian Copy is a government service under Ministry of Land (DLRMS) (khatian certified). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-certified-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-khatian-certified-copy::c-service-identity",
+      "service_id": "land-khatian-certified-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Certified Khatian Copy (সার্টিফাইড/সত্যায়িত খতিয়ান) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-khatian-certified-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-land-khatian-certified-copy-official",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://land.gov.bd/vumisheba-fee",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd/vumisheba-fee",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d7305ed1defa31bc",
+        "retrieved_at": "2026-08-25T03:21:16.957719+00:00"
+      },
+      "evidence_locator": "probe:https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "source_id": "src-land-khatian-certified-copy-alt-1",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d06f26231ea48d3e",
+        "retrieved_at": "2026-08-25T03:21:16.989912+00:00"
+      }
+    },
+    {
+      "source_id": "src-land-khatian-certified-copy-alt-2",
+      "service_id": "land-khatian-certified-copy",
+      "url": "https://mutation.land.gov.bd",
+      "title": "Just a moment...",
+      "authority_id": "ministry-land",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mutation.land.gov.bd",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "1324966c8fbb67de",
+        "retrieved_at": "2026-08-25T03:21:17.019873+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-land-khatian-certified-copy-portal-unreachable",
+      "service_id": "land-khatian-certified-copy",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Certified Khatian Copy.",
+      "severity": "MEDIUM",
+      "url": "https://land.gov.bd/vumisheba-fee"
+    },
+    {
+      "gap_id": "gap-land-khatian-certified-copy-fee-unverified",
+      "service_id": "land-khatian-certified-copy",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Certified Khatian Copy.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-land-khatian-certified-copy-documents-unverified",
+      "service_id": "land-khatian-certified-copy",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Certified Khatian Copy.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

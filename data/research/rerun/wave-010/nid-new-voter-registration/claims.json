@@ -1,0 +1,72 @@
+{
+  "service_id": "nid-new-voter-registration",
+  "claims": [
+    {
+      "claim_id": "nid-new-voter-registration::c-catalogue-authority",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-official-portal",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "application_url",
+      "claim_text": "New Voter and National ID Registration official information is published at https://services.nidw.gov.bd/nid-pub/register-account?locale=en (page title: Bangladesh NID Application System | New Register).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en"
+      },
+      "source_ids": [
+        "src-nid-new-voter-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-new-voter-registration::c-official-portal-src-nid-new-voter-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-procedure-overview",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "New Voter and National ID Registration is a government service under Bangladesh Election Commission (NID Wing) (nid registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-new-voter-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-service-identity",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "eligibility",
+      "claim_text": "New Voter and National ID Registration (নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-new-voter-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

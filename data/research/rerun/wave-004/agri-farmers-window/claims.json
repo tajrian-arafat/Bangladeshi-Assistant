@@ -1,0 +1,72 @@
+{
+  "service_id": "agri-farmers-window",
+  "claims": [
+    {
+      "claim_id": "agri-farmers-window::c-catalogue-authority",
+      "service_id": "agri-farmers-window",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Agricultural Extension (DAE).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-farmers-window::c-official-portal",
+      "service_id": "agri-farmers-window",
+      "claim_type": "application_url",
+      "claim_text": "Farmer's Window (SACP/DAE) official information is published at https://sacp.dae.gov.bd/en/farmers-window/ (page title: Farmer&#8217;s window).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://sacp.dae.gov.bd/en/farmers-window/"
+      },
+      "source_ids": [
+        "src-agri-farmers-window-official"
+      ],
+      "evidence_ids": [
+        "ev-agri-farmers-window::c-official-portal-src-agri-farmers-window-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-farmers-window::c-procedure-overview",
+      "service_id": "agri-farmers-window",
+      "claim_type": "procedure_step",
+      "claim_text": "Farmer's Window (SACP/DAE) is a government service under Department of Agricultural Extension (DAE) (extension). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-farmers-window-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-farmers-window::c-service-identity",
+      "service_id": "agri-farmers-window",
+      "claim_type": "eligibility",
+      "claim_text": "Farmer's Window (SACP/DAE) (কৃষকের জানালা (Farmer's Window)) is a confirmed government service in category agriculture, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-farmers-window-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

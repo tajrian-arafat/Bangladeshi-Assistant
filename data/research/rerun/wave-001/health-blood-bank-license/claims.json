@@ -1,0 +1,70 @@
+{
+  "service_id": "health-blood-bank-license",
+  "claims": [
+    {
+      "claim_id": "health-blood-bank-license::c-catalogue-authority",
+      "service_id": "health-blood-bank-license",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Directorate General of Health Services (DGHS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-blood-bank-license::c-official-url-documented",
+      "service_id": "health-blood-bank-license",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md for Blood Bank Licence; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://git.dghs.gov.bd/riaz.somc/chatbot-knowledge/src/branch/main/PrivateHospitalRegistration.md"
+      },
+      "source_ids": [
+        "src-health-blood-bank-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-blood-bank-license::c-procedure-overview",
+      "service_id": "health-blood-bank-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Blood Bank Licence is a government service under Directorate General of Health Services (DGHS) (facility licence). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-blood-bank-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-blood-bank-license::c-service-identity",
+      "service_id": "health-blood-bank-license",
+      "claim_type": "eligibility",
+      "claim_text": "Blood Bank Licence (ব্লাড ব্যাংক লাইসেন্স) is a confirmed government service in category health, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-health-blood-bank-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

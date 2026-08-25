@@ -1,0 +1,28 @@
+{
+  "service_id": "local-holding-tax-payment",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-local-holding-tax-payment-portal-unreachable",
+      "service_id": "local-holding-tax-payment",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Local Government Holding Tax Payment.",
+      "severity": "MEDIUM",
+      "url": "https://dncc.gov.bd/"
+    },
+    {
+      "gap_id": "gap-local-holding-tax-payment-fee-unverified",
+      "service_id": "local-holding-tax-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Local Government Holding Tax Payment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-holding-tax-payment-documents-unverified",
+      "service_id": "local-holding-tax-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Local Government Holding Tax Payment.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

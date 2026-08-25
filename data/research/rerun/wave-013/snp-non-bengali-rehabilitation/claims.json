@@ -1,0 +1,72 @@
+{
+  "service_id": "snp-non-bengali-rehabilitation",
+  "claims": [
+    {
+      "claim_id": "snp-non-bengali-rehabilitation::c-catalogue-authority",
+      "service_id": "snp-non-bengali-rehabilitation",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Disaster Management & Relief.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-non-bengali-rehabilitation::c-official-portal",
+      "service_id": "snp-non-bengali-rehabilitation",
+      "claim_type": "application_url",
+      "claim_text": "Non-Bengali Rehabilitation official information is published at https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/ (page title: All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/"
+      },
+      "source_ids": [
+        "src-snp-non-bengali-rehabilitation-official"
+      ],
+      "evidence_ids": [
+        "ev-snp-non-bengali-rehabilitation::c-official-portal-src-snp-non-bengali-rehabilitation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-non-bengali-rehabilitation::c-procedure-overview",
+      "service_id": "snp-non-bengali-rehabilitation",
+      "claim_type": "procedure_step",
+      "claim_text": "Non-Bengali Rehabilitation is a government service under Ministry of Disaster Management & Relief (social security program). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-non-bengali-rehabilitation-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-non-bengali-rehabilitation::c-service-identity",
+      "service_id": "snp-non-bengali-rehabilitation",
+      "claim_type": "eligibility",
+      "claim_text": "Non-Bengali Rehabilitation () is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-non-bengali-rehabilitation-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

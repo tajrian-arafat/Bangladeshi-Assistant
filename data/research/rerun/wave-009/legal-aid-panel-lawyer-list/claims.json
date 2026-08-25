@@ -1,0 +1,72 @@
+{
+  "service_id": "legal-aid-panel-lawyer-list",
+  "claims": [
+    {
+      "claim_id": "legal-aid-panel-lawyer-list::c-catalogue-authority",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: District Legal Aid Office (NLASO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-panel-lawyer-list::c-official-portal",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "claim_type": "application_url",
+      "claim_text": "Panel Lawyer List (District Legal Aid) official information is published at http://nlaso.portal.gov.bd/ (page title: হোম | বাংলাদেশ আইনগত সহায়তা অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://nlaso.portal.gov.bd/"
+      },
+      "source_ids": [
+        "src-legal-aid-panel-lawyer-list-official"
+      ],
+      "evidence_ids": [
+        "ev-legal-aid-panel-lawyer-list::c-official-portal-src-legal-aid-panel-lawyer-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-panel-lawyer-list::c-procedure-overview",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "claim_type": "procedure_step",
+      "claim_text": "Panel Lawyer List (District Legal Aid) is a government service under District Legal Aid Office (NLASO) (directory). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-panel-lawyer-list-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-panel-lawyer-list::c-service-identity",
+      "service_id": "legal-aid-panel-lawyer-list",
+      "claim_type": "eligibility",
+      "claim_text": "Panel Lawyer List (District Legal Aid) (প্যানেল আইনজীবী তালিকা) is a confirmed government service in category legal_aid, scope DISTRICT.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-panel-lawyer-list-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

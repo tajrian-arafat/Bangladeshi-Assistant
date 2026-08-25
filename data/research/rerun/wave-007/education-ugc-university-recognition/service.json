@@ -1,0 +1,136 @@
+{
+  "service_id": "education-ugc-university-recognition",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "UGC University/Institution Recognition Verification",
+  "service_name_bn": "UGC বিশ্ববিদ্যালয়/প্রতিষ্ঠান স্বীকৃতি যাচাই",
+  "aliases": [
+    "UGC approved university list",
+    "university recognition Bangladesh"
+  ],
+  "category_id": "education",
+  "profile_key": "EDUCATION",
+  "responsible_agency": "University Grants Commission (UGC)",
+  "official_application_url": "https://www.ugc.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "education-ugc-university-recognition::c-catalogue-authority",
+      "service_id": "education-ugc-university-recognition",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: University Grants Commission (UGC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ugc-university-recognition::c-official-url-documented",
+      "service_id": "education-ugc-university-recognition",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.ugc.gov.bd/ for UGC University/Institution Recognition Verification; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.ugc.gov.bd/"
+      },
+      "source_ids": [
+        "src-education-ugc-university-recognition-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ugc-university-recognition::c-procedure-overview",
+      "service_id": "education-ugc-university-recognition",
+      "claim_type": "procedure_step",
+      "claim_text": "UGC University/Institution Recognition Verification is a government service under University Grants Commission (UGC) (higher education). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ugc-university-recognition-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "education-ugc-university-recognition::c-service-identity",
+      "service_id": "education-ugc-university-recognition",
+      "claim_type": "eligibility",
+      "claim_text": "UGC University/Institution Recognition Verification (UGC বিশ্ববিদ্যালয়/প্রতিষ্ঠান স্বীকৃতি যাচাই) is a confirmed government service in category education, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-education-ugc-university-recognition-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-education-ugc-university-recognition-official",
+      "service_id": "education-ugc-university-recognition",
+      "url": "https://www.ugc.gov.bd/",
+      "title": "UGC University/Institution Recognition Verification",
+      "authority_id": "university-grants-commission-ugc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ugc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:26:43.115832+00:00"
+      },
+      "evidence_locator": "probe:https://www.ugc.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-education-ugc-university-recognition-portal-unreachable",
+      "service_id": "education-ugc-university-recognition",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for UGC University/Institution Recognition Verification.",
+      "severity": "MEDIUM",
+      "url": "https://www.ugc.gov.bd/"
+    },
+    {
+      "gap_id": "gap-education-ugc-university-recognition-fee-unverified",
+      "service_id": "education-ugc-university-recognition",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for UGC University/Institution Recognition Verification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-education-ugc-university-recognition-documents-unverified",
+      "service_id": "education-ugc-university-recognition",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for UGC University/Institution Recognition Verification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

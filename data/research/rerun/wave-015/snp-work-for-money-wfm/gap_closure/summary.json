@@ -1,0 +1,20 @@
+{
+  "service_id": "snp-work-for-money-wfm",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-snp-work-for-money-wfm-fee-unverified",
+      "service_id": "snp-work-for-money-wfm",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Work For Money (WFM).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-work-for-money-wfm-documents-unverified",
+      "service_id": "snp-work-for-money-wfm",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Work For Money (WFM).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

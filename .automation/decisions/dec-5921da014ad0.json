@@ -1,0 +1,14 @@
+{
+  "decision_id": "dec-5921da014ad0",
+  "status": "DEFERRED_HUMAN_REVIEW",
+  "batch": "BATCH_12",
+  "issue": "Publication dry-run blocked: owledge.py\", line 55, in run\n    reports.append(await sync_publisher.sync_claims_from_staging(args.batch))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/backend/app/application/knowledge/publisher.py\", line 283, in sync_claims_from_staging\n    versions = json.loads((staging / \"source_versions.json\").read_text(encoding=\"utf-8\"))[\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'source_versions'\n",
+  "severity": "MEDIUM",
+  "evidence": [],
+  "recommended_action": "Deferred human review \u2014 overnight run continued",
+  "publication_blocked": true,
+  "created_at": "2026-08-25T02:48:56.934237+00:00",
+  "resolved_at": null,
+  "resolution": null,
+  "approved_by": null
+}

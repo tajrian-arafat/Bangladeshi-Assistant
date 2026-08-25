@@ -1,0 +1,27 @@
+{
+  "service_id": "post-emts",
+  "gaps": [
+    {
+      "gap_id": "gap-post-emts-portal-unreachable",
+      "service_id": "post-emts",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Electronic Money Transfer Service (EMTS).",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.portal.gov.bd/site/page/f51a53e6-926b-48a7-a927-8331e2f326ff/-"
+    },
+    {
+      "gap_id": "gap-post-emts-fee-unverified",
+      "service_id": "post-emts",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Electronic Money Transfer Service (EMTS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-emts-documents-unverified",
+      "service_id": "post-emts",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Electronic Money Transfer Service (EMTS).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

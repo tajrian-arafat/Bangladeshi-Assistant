@@ -1,0 +1,137 @@
+{
+  "service_id": "trade-bsti-standard-certification",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "BSTI Product Standard Certification",
+  "service_name_bn": "BSTI standard certification (CM mark)",
+  "aliases": [
+    "BSTI certification",
+    "CM mark Bangladesh",
+    "standard mark"
+  ],
+  "category_id": "trade",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Bangladesh Standards and Testing Institution (BSTI)",
+  "official_application_url": "https://bsti.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "trade-bsti-standard-certification::c-catalogue-authority",
+      "service_id": "trade-bsti-standard-certification",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Standards and Testing Institution (BSTI).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-bsti-standard-certification::c-official-url-documented",
+      "service_id": "trade-bsti-standard-certification",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bsti.gov.bd/ for BSTI Product Standard Certification; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bsti.gov.bd/"
+      },
+      "source_ids": [
+        "src-trade-bsti-standard-certification-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-bsti-standard-certification::c-procedure-overview",
+      "service_id": "trade-bsti-standard-certification",
+      "claim_type": "procedure_step",
+      "claim_text": "BSTI Product Standard Certification is a government service under Bangladesh Standards and Testing Institution (BSTI) (standardization). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-bsti-standard-certification-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-bsti-standard-certification::c-service-identity",
+      "service_id": "trade-bsti-standard-certification",
+      "claim_type": "eligibility",
+      "claim_text": "BSTI Product Standard Certification (BSTI standard certification (CM mark)) is a confirmed government service in category trade, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-bsti-standard-certification-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-trade-bsti-standard-certification-official",
+      "service_id": "trade-bsti-standard-certification",
+      "url": "https://bsti.gov.bd/",
+      "title": "BSTI Product Standard Certification",
+      "authority_id": "bangladesh-standards-and-testing-institution-bsti",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bsti.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:36:46.512651+00:00"
+      },
+      "evidence_locator": "probe:https://bsti.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-trade-bsti-standard-certification-portal-unreachable",
+      "service_id": "trade-bsti-standard-certification",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for BSTI Product Standard Certification.",
+      "severity": "MEDIUM",
+      "url": "https://bsti.gov.bd/"
+    },
+    {
+      "gap_id": "gap-trade-bsti-standard-certification-fee-unverified",
+      "service_id": "trade-bsti-standard-certification",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BSTI Product Standard Certification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-bsti-standard-certification-documents-unverified",
+      "service_id": "trade-bsti-standard-certification",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BSTI Product Standard Certification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

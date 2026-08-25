@@ -1,1 +1,71 @@
-[]
+[
+  {
+    "id": "b018",
+    "query": "follow up: online channel?",
+    "category": "POLICE_CLEARANCE",
+    "expected": {
+      "id": "b018",
+      "query": "follow up: online channel?",
+      "language": "en",
+      "category": "POLICE_CLEARANCE",
+      "service_expected": "police-clearance-certificate",
+      "intent_expected": "fee_inquiry",
+      "expect": {
+        "must_show_online_pcc_fee": true
+      },
+      "clarifications": {
+        "service": "police-clearance-certificate"
+      }
+    },
+    "actual": {
+      "language": "en",
+      "normalized_message": "follow up online channel",
+      "intent": "fee_inquiry",
+      "service_slug": "police-clearance-certificate",
+      "support_level": "CONFLICTED",
+      "confidence": "low",
+      "summary": "Here is available structured information for Police Clearance Certificate (PCC). This is not fully verified official guidance yet.",
+      "fees": [],
+      "warnings": [
+        "PCC fee differs between online (BDT 1,500 on pcc.police.gov.bd) and a legacy offline police.gov.bd page (BDT 500). No single universal fee is published.",
+        "No verified official fee amount is available for this service in the knowledge base. Do not rely on unofficial quoted amounts."
+      ],
+      "official_urls": [
+        "https://pcc.police.gov.bd/ords/r/pcc/pcc/9"
+      ],
+      "citations": [
+        {
+          "evidence_id": "e776a4f3-ec40-4491-8a5d-8075dab4b3dc",
+          "source_title": "Online Police Clearance Certificate applications",
+          "source_url": "https://pcc.police.gov.bd/ords/r/pcc/pcc/9",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T22:53:05.228339",
+          "excerpt": "Verified official URL for Police Clearance Certificate (PCC)"
+        },
+        {
+          "evidence_id": "b7d41aaf-24e6-451c-a8cb-251c92c30766",
+          "source_title": "If passport has no address, present address",
+          "source_url": "https://www.police.gov.bd/en/police_clearance_certificate",
+          "tier": 1,
+          "last_verified_at": "2026-08-24T22:53:05.228339",
+          "excerpt": "Portal terms item 3; offline page item 6/footnote 5: NID/birth/ward councillor when passport lacks address."
+        }
+      ]
+    },
+    "pass": false,
+    "raw_pass": false,
+    "expected_outcome": "ANSWER_SUPPORTED",
+    "actual_outcome": "PRODUCT_FAILURE",
+    "counts_as_product_failure": true,
+    "checks": {
+      "service": true,
+      "intent": true,
+      "online_pcc_fee": false
+    },
+    "reasons": [
+      "online PCC BDT 1500 not shown for online-channel query"
+    ],
+    "failure_class": "OTHER",
+    "recommended_fix": "Inspect pipeline evidence and tighten expectation or fix matching stage."
+  }
+]

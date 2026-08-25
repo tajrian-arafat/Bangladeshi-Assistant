@@ -1,0 +1,72 @@
+{
+  "service_id": "snp-construction-of-hostel-for-govt-orphanage",
+  "claims": [
+    {
+      "claim_id": "snp-construction-of-hostel-for-govt-orphanage::c-catalogue-authority",
+      "service_id": "snp-construction-of-hostel-for-govt-orphanage",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Social Welfare.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-construction-of-hostel-for-govt-orphanage::c-official-portal",
+      "service_id": "snp-construction-of-hostel-for-govt-orphanage",
+      "claim_type": "application_url",
+      "claim_text": "Construction of Hostel for Govt. Orphanage official information is published at https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/ (page title: All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/"
+      },
+      "source_ids": [
+        "src-snp-construction-of-hostel-for-govt-orphanage-official"
+      ],
+      "evidence_ids": [
+        "ev-snp-construction-of-hostel-for-govt-orphanage::c-official-portal-src-snp-construction-of-hostel-for-govt-orphanage-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-construction-of-hostel-for-govt-orphanage::c-procedure-overview",
+      "service_id": "snp-construction-of-hostel-for-govt-orphanage",
+      "claim_type": "procedure_step",
+      "claim_text": "Construction of Hostel for Govt. Orphanage is a government service under Ministry of Social Welfare (social security program). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-construction-of-hostel-for-govt-orphanage-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-construction-of-hostel-for-govt-orphanage::c-service-identity",
+      "service_id": "snp-construction-of-hostel-for-govt-orphanage",
+      "claim_type": "eligibility",
+      "claim_text": "Construction of Hostel for Govt. Orphanage () is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-construction-of-hostel-for-govt-orphanage-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

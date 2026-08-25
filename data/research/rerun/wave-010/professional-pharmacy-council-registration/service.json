@@ -1,0 +1,136 @@
+{
+  "service_id": "professional-pharmacy-council-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Pharmacy Council Pharmacist Registration",
+  "service_name_bn": "ফার্মেসি কাউন্সিল নিবন্ধন",
+  "aliases": [
+    "pharmacist registration",
+    "PCB registration"
+  ],
+  "category_id": "professional",
+  "profile_key": "PROFESSIONAL",
+  "responsible_agency": "Pharmacy Council of Bangladesh",
+  "official_application_url": "https://www.pcb.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "professional-pharmacy-council-registration::c-catalogue-authority",
+      "service_id": "professional-pharmacy-council-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Pharmacy Council of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "professional-pharmacy-council-registration::c-official-url-documented",
+      "service_id": "professional-pharmacy-council-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.pcb.gov.bd/ for Pharmacy Council Pharmacist Registration; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.pcb.gov.bd/"
+      },
+      "source_ids": [
+        "src-professional-pharmacy-council-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "professional-pharmacy-council-registration::c-procedure-overview",
+      "service_id": "professional-pharmacy-council-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Pharmacy Council Pharmacist Registration is a government service under Pharmacy Council of Bangladesh (pharmacy profession). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-professional-pharmacy-council-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "professional-pharmacy-council-registration::c-service-identity",
+      "service_id": "professional-pharmacy-council-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Pharmacy Council Pharmacist Registration (ফার্মেসি কাউন্সিল নিবন্ধন) is a confirmed government service in category professional, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-professional-pharmacy-council-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-professional-pharmacy-council-registration-official",
+      "service_id": "professional-pharmacy-council-registration",
+      "url": "https://www.pcb.gov.bd/",
+      "title": "Pharmacy Council Pharmacist Registration",
+      "authority_id": "pharmacy-council-of-bangladesh",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.pcb.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:29:41.278780+00:00"
+      },
+      "evidence_locator": "probe:https://www.pcb.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-professional-pharmacy-council-registration-portal-unreachable",
+      "service_id": "professional-pharmacy-council-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Pharmacy Council Pharmacist Registration.",
+      "severity": "MEDIUM",
+      "url": "https://www.pcb.gov.bd/"
+    },
+    {
+      "gap_id": "gap-professional-pharmacy-council-registration-fee-unverified",
+      "service_id": "professional-pharmacy-council-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Pharmacy Council Pharmacist Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-professional-pharmacy-council-registration-documents-unverified",
+      "service_id": "professional-pharmacy-council-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Pharmacy Council Pharmacist Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

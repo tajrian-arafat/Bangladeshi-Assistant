@@ -1,0 +1,72 @@
+{
+  "service_id": "legal-aid-online-application",
+  "claims": [
+    {
+      "claim_id": "legal-aid-online-application::c-catalogue-authority",
+      "service_id": "legal-aid-online-application",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Legal Aid Services Organization (NLASO).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-online-application::c-official-portal",
+      "service_id": "legal-aid-online-application",
+      "claim_type": "application_url",
+      "claim_text": "National Legal Aid Online Application official information is published at https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx (page title: DBLA | Office Management System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://db.nlaso.gov.bd/Pages/OnlineApplications.aspx"
+      },
+      "source_ids": [
+        "src-legal-aid-online-application-official"
+      ],
+      "evidence_ids": [
+        "ev-legal-aid-online-application::c-official-portal-src-legal-aid-online-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-online-application::c-procedure-overview",
+      "service_id": "legal-aid-online-application",
+      "claim_type": "procedure_step",
+      "claim_text": "National Legal Aid Online Application is a government service under National Legal Aid Services Organization (NLASO) (application). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-online-application-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "legal-aid-online-application::c-service-identity",
+      "service_id": "legal-aid-online-application",
+      "claim_type": "eligibility",
+      "claim_text": "National Legal Aid Online Application (আইনগত সহায়তা অনলাইন আবেদন) is a confirmed government service in category legal_aid, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-legal-aid-online-application-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

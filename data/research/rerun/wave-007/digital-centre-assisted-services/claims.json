@@ -1,0 +1,72 @@
+{
+  "service_id": "digital-centre-assisted-services",
+  "claims": [
+    {
+      "claim_id": "digital-centre-assisted-services::c-catalogue-authority",
+      "service_id": "digital-centre-assisted-services",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Aspire to Innovate (a2i), ICT Division.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-assisted-services::c-official-portal",
+      "service_id": "digital-centre-assisted-services",
+      "claim_type": "application_url",
+      "claim_text": "Assisted Government Services via Digital Centres official information is published at https://uddokta.eksheba.gov.bd/ (page title: Digital Center | Services at People&#039;s Doorstep).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://uddokta.eksheba.gov.bd/"
+      },
+      "source_ids": [
+        "src-digital-centre-assisted-services-official"
+      ],
+      "evidence_ids": [
+        "ev-digital-centre-assisted-services::c-official-portal-src-digital-centre-assisted-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-assisted-services::c-procedure-overview",
+      "service_id": "digital-centre-assisted-services",
+      "claim_type": "procedure_step",
+      "claim_text": "Assisted Government Services via Digital Centres is a government service under Aspire to Innovate (a2i), ICT Division (digital centre). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-centre-assisted-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-assisted-services::c-service-identity",
+      "service_id": "digital-centre-assisted-services",
+      "claim_type": "eligibility",
+      "claim_text": "Assisted Government Services via Digital Centres (ডিজিটাল সেন্টার assisted সরকারি সেবা) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-centre-assisted-services-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

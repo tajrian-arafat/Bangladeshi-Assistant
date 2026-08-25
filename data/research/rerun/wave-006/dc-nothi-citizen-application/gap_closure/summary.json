@@ -1,0 +1,28 @@
+{
+  "service_id": "dc-nothi-citizen-application",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-dc-nothi-citizen-application-portal-unreachable",
+      "service_id": "dc-nothi-citizen-application",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Nothi Citizen Application (District/DC Office).",
+      "severity": "MEDIUM",
+      "url": "http://nothi.gov.bd/dak_nagoriks/NagorikAbedon"
+    },
+    {
+      "gap_id": "gap-dc-nothi-citizen-application-fee-unverified",
+      "service_id": "dc-nothi-citizen-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Nothi Citizen Application (District/DC Office).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dc-nothi-citizen-application-documents-unverified",
+      "service_id": "dc-nothi-citizen-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Nothi Citizen Application (District/DC Office).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

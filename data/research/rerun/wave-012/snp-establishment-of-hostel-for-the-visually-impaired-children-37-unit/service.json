@@ -1,0 +1,132 @@
+{
+  "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Establishment of Hostel for the Visually Impaired Children (37 Unit)",
+  "service_name_bn": "",
+  "aliases": [
+    "Establishment of Hostel for the Visually Impaired Children (37 Unit)"
+  ],
+  "category_id": "social_protection",
+  "profile_key": "SOCIAL_PROTECTION",
+  "responsible_agency": "Ministry of Social Welfare",
+  "official_application_url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit::c-catalogue-authority",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Social Welfare.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit::c-official-portal",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "claim_type": "application_url",
+      "claim_text": "Establishment of Hostel for the Visually Impaired Children (37 Unit) official information is published at https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/ (page title: All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/"
+      },
+      "source_ids": [
+        "src-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit-official"
+      ],
+      "evidence_ids": [
+        "ev-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit::c-official-portal-src-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit::c-procedure-overview",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "claim_type": "procedure_step",
+      "claim_text": "Establishment of Hostel for the Visually Impaired Children (37 Unit) is a government service under Ministry of Social Welfare (social security program). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit::c-service-identity",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "claim_type": "eligibility",
+      "claim_text": "Establishment of Hostel for the Visually Impaired Children (37 Unit) () is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit-official",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+      "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+      "authority_id": "ministry-of-social-welfare",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "eb67cd296e0471bd",
+        "retrieved_at": "2026-08-25T03:31:50.745377+00:00"
+      },
+      "evidence_locator": "probe:https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit-fee-unverified",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Establishment of Hostel for the Visually Impaired Children (37 Unit).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit-documents-unverified",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Establishment of Hostel for the Visually Impaired Children (37 Unit).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

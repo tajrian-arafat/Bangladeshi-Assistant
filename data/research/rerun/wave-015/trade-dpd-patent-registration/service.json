@@ -1,0 +1,133 @@
+{
+  "service_id": "trade-dpd-patent-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Patent Registration",
+  "service_name_bn": "পেটেন্ট নিবন্ধন",
+  "aliases": [
+    "patent application Bangladesh",
+    "DPDT patent"
+  ],
+  "category_id": "registrations",
+  "profile_key": "BUSINESS",
+  "responsible_agency": "Department of Patents, Designs and Trademarks (DPDT)",
+  "official_application_url": "https://dpdt.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "trade-dpd-patent-registration::c-catalogue-authority",
+      "service_id": "trade-dpd-patent-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Patents, Designs and Trademarks (DPDT).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-patent-registration::c-official-portal",
+      "service_id": "trade-dpd-patent-registration",
+      "claim_type": "application_url",
+      "claim_text": "Patent Registration official information is published at https://dpdt.gov.bd/ (page title: হোম | পেটেন্ট, শিল্প-নকশা ও ট্রেডমার্কস অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dpdt.gov.bd/"
+      },
+      "source_ids": [
+        "src-trade-dpd-patent-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-trade-dpd-patent-registration::c-official-portal-src-trade-dpd-patent-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-patent-registration::c-procedure-overview",
+      "service_id": "trade-dpd-patent-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Patent Registration is a government service under Department of Patents, Designs and Trademarks (DPDT) (intellectual property). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-dpd-patent-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "trade-dpd-patent-registration::c-service-identity",
+      "service_id": "trade-dpd-patent-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Patent Registration (পেটেন্ট নিবন্ধন) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-trade-dpd-patent-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-trade-dpd-patent-registration-official",
+      "service_id": "trade-dpd-patent-registration",
+      "url": "https://dpdt.gov.bd/",
+      "title": "হোম | পেটেন্ট, শিল্প-নকশা ও ট্রেডমার্কস অধিদপ্তর",
+      "authority_id": "department-of-patents-designs-and-trademarks-dpdt",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dpdt.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোম | পেটেন্ট, শিল্প-নকশা ও ট্রেডমার্কস অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "4610f8c7503fb377",
+        "retrieved_at": "2026-08-25T03:36:48.622512+00:00"
+      },
+      "evidence_locator": "probe:https://dpdt.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-trade-dpd-patent-registration-fee-unverified",
+      "service_id": "trade-dpd-patent-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Patent Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-dpd-patent-registration-documents-unverified",
+      "service_id": "trade-dpd-patent-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Patent Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

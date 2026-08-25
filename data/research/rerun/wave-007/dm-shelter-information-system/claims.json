@@ -1,0 +1,72 @@
+{
+  "service_id": "dm-shelter-information-system",
+  "claims": [
+    {
+      "claim_id": "dm-shelter-information-system::c-catalogue-authority",
+      "service_id": "dm-shelter-information-system",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Disaster Management (DDM).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-shelter-information-system::c-official-portal",
+      "service_id": "dm-shelter-information-system",
+      "claim_type": "application_url",
+      "claim_text": "Cyclone Shelter Information Management System official information is published at http://ddm.portal.gov.bd/ (page title: হোম | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://ddm.portal.gov.bd/"
+      },
+      "source_ids": [
+        "src-dm-shelter-information-system-official"
+      ],
+      "evidence_ids": [
+        "ev-dm-shelter-information-system::c-official-portal-src-dm-shelter-information-system-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-shelter-information-system::c-procedure-overview",
+      "service_id": "dm-shelter-information-system",
+      "claim_type": "procedure_step",
+      "claim_text": "Cyclone Shelter Information Management System is a government service under Department of Disaster Management (DDM) (shelter). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-shelter-information-system-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-shelter-information-system::c-service-identity",
+      "service_id": "dm-shelter-information-system",
+      "claim_type": "eligibility",
+      "claim_text": "Cyclone Shelter Information Management System (আশ্রয়কেন্দ্র তথ্য ব্যবস্থাপনা) is a confirmed government service in category disaster_relief, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-shelter-information-system-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "service_id": "civil-death-registration-copy",
+  "sources": [
+    {
+      "source_id": "src-civil-death-registration-copy-official",
+      "service_id": "civil-death-registration-copy",
+      "url": "https://bdris.gov.bd/dr/reprint/add",
+      "title": "Death Registration Copy (Reprint)",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd/dr/reprint/add",
+        "status_code": 403,
+        "reachable": false,
+        "title": "",
+        "content_type": null,
+        "content_hash": "b531159ca46f89ab",
+        "retrieved_at": "2026-08-25T03:24:25.881440+00:00"
+      },
+      "evidence_locator": "probe:https://bdris.gov.bd/dr/reprint/add"
+    },
+    {
+      "source_id": "src-civil-death-registration-copy-alt-1",
+      "service_id": "civil-death-registration-copy",
+      "url": "https://bdris.gov.bd",
+      "title": "হোমপেজ",
+      "authority_id": "bdris",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdris.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "হোমপেজ",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "3d733e594e71613e",
+        "retrieved_at": "2026-08-25T03:24:27.894357+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

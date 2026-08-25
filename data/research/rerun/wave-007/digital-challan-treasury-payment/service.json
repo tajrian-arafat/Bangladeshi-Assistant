@@ -1,0 +1,156 @@
+{
+  "service_id": "digital-challan-treasury-payment",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Treasury Challan Online Payment (aChallan)",
+  "service_name_bn": "ট্রেজারি/চালান পেমেন্ট (aChallan)",
+  "aliases": [
+    "aChallan",
+    "online chalan payment",
+    "treasury challan"
+  ],
+  "category_id": "government_payments",
+  "profile_key": "UTILITIES",
+  "responsible_agency": "Finance Division / Office of the Controller General of Accounts",
+  "official_application_url": "https://www.achallan.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "digital-challan-treasury-payment::c-catalogue-authority",
+      "service_id": "digital-challan-treasury-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Finance Division / Office of the Controller General of Accounts.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-challan-treasury-payment::c-official-url-documented",
+      "service_id": "digital-challan-treasury-payment",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.achallan.gov.bd/ for Treasury Challan Online Payment (aChallan); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.achallan.gov.bd/"
+      },
+      "source_ids": [
+        "src-digital-challan-treasury-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-challan-treasury-payment::c-procedure-overview",
+      "service_id": "digital-challan-treasury-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "Treasury Challan Online Payment (aChallan) is a government service under Finance Division / Office of the Controller General of Accounts (challan). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-challan-treasury-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-challan-treasury-payment::c-service-identity",
+      "service_id": "digital-challan-treasury-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Treasury Challan Online Payment (aChallan) (ট্রেজারি/চালান পেমেন্ট (aChallan)) is a confirmed government service in category government_payments, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-challan-treasury-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-digital-challan-treasury-payment-official",
+      "service_id": "digital-challan-treasury-payment",
+      "url": "https://www.achallan.gov.bd/",
+      "title": "Treasury Challan Online Payment (aChallan)",
+      "authority_id": "finance-division-office-of-the-controller-general-of-accounts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.achallan.gov.bd/",
+        "reachable": false,
+        "error": "_ssl.c:983: The handshake operation timed out",
+        "retrieved_at": "2026-08-25T03:26:16.960573+00:00"
+      },
+      "evidence_locator": "probe:https://www.achallan.gov.bd/"
+    },
+    {
+      "source_id": "src-digital-challan-treasury-payment-alt-1",
+      "service_id": "digital-challan-treasury-payment",
+      "url": "https://www.mygov.bd/",
+      "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+      "authority_id": "finance-division-office-of-the-controller-general-of-accounts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.mygov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d2bbaab6c11c14a1",
+        "retrieved_at": "2026-08-25T03:26:19.069361+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-digital-challan-treasury-payment-portal-unreachable",
+      "service_id": "digital-challan-treasury-payment",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Treasury Challan Online Payment (aChallan).",
+      "severity": "MEDIUM",
+      "url": "https://www.achallan.gov.bd/"
+    },
+    {
+      "gap_id": "gap-digital-challan-treasury-payment-fee-unverified",
+      "service_id": "digital-challan-treasury-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Treasury Challan Online Payment (aChallan).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-digital-challan-treasury-payment-documents-unverified",
+      "service_id": "digital-challan-treasury-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Treasury Challan Online Payment (aChallan).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "land-dlrms-application-track",
+  "claims": [
+    {
+      "claim_id": "land-dlrms-application-track::c-catalogue-authority",
+      "service_id": "land-dlrms-application-track",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Land (DLRMS).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-dlrms-application-track::c-official-portal",
+      "service_id": "land-dlrms-application-track",
+      "claim_type": "application_url",
+      "claim_text": "Land Record Application Tracking (DLRMS) official information is published at https://dlrms.land.gov.bd/application/track (page title: DLRMS).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dlrms.land.gov.bd/application/track"
+      },
+      "source_ids": [
+        "src-land-dlrms-application-track-official"
+      ],
+      "evidence_ids": [
+        "ev-land-dlrms-application-track::c-official-portal-src-land-dlrms-application-track-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-dlrms-application-track::c-procedure-overview",
+      "service_id": "land-dlrms-application-track",
+      "claim_type": "procedure_step",
+      "claim_text": "Land Record Application Tracking (DLRMS) is a government service under Ministry of Land (DLRMS) (application tracking). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-dlrms-application-track-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "land-dlrms-application-track::c-service-identity",
+      "service_id": "land-dlrms-application-track",
+      "claim_type": "eligibility",
+      "claim_text": "Land Record Application Tracking (DLRMS) (ভূমি রেকর্ড আবেদন ট্র্যাকিং) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-land-dlrms-application-track-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

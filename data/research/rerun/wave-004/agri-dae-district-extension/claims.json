@@ -1,0 +1,70 @@
+{
+  "service_id": "agri-dae-district-extension",
+  "claims": [
+    {
+      "claim_id": "agri-dae-district-extension::c-catalogue-authority",
+      "service_id": "agri-dae-district-extension",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Agricultural Extension (DAE).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-dae-district-extension::c-official-url-documented",
+      "service_id": "agri-dae-district-extension",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://dae.kishoreganj.gov.bd/en for District Agricultural Extension Services; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://dae.kishoreganj.gov.bd/en"
+      },
+      "source_ids": [
+        "src-agri-dae-district-extension-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-dae-district-extension::c-procedure-overview",
+      "service_id": "agri-dae-district-extension",
+      "claim_type": "procedure_step",
+      "claim_text": "District Agricultural Extension Services is a government service under Department of Agricultural Extension (DAE) (extension). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-dae-district-extension-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "agri-dae-district-extension::c-service-identity",
+      "service_id": "agri-dae-district-extension",
+      "claim_type": "eligibility",
+      "claim_text": "District Agricultural Extension Services (জেলা কৃষি সম্প্রসারণ সেবা) is a confirmed government service in category agriculture, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-agri-dae-district-extension-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

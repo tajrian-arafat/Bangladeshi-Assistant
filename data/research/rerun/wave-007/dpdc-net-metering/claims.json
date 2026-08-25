@@ -1,0 +1,70 @@
+{
+  "service_id": "dpdc-net-metering",
+  "claims": [
+    {
+      "claim_id": "dpdc-net-metering::c-catalogue-authority",
+      "service_id": "dpdc-net-metering",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Power Distribution Company Limited (DPDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-net-metering::c-official-url-documented",
+      "service_id": "dpdc-net-metering",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://onlineapplication.dpdc.org.bd/frm_Apply_NetMetering.php for DPDC Net Metering Application; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://onlineapplication.dpdc.org.bd/frm_Apply_NetMetering.php"
+      },
+      "source_ids": [
+        "src-dpdc-net-metering-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-net-metering::c-procedure-overview",
+      "service_id": "dpdc-net-metering",
+      "claim_type": "procedure_step",
+      "claim_text": "DPDC Net Metering Application is a government service under Dhaka Power Distribution Company Limited (DPDC) (electricity connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-net-metering-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-net-metering::c-service-identity",
+      "service_id": "dpdc-net-metering",
+      "claim_type": "eligibility",
+      "claim_text": "DPDC Net Metering Application (ডিপিডিসি নেট মিটারিং আবেদন) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-net-metering-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

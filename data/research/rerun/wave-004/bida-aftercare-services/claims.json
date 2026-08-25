@@ -1,0 +1,72 @@
+{
+  "service_id": "bida-aftercare-services",
+  "claims": [
+    {
+      "claim_id": "bida-aftercare-services::c-catalogue-authority",
+      "service_id": "bida-aftercare-services",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Investment Development Authority (BIDA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-aftercare-services::c-official-portal",
+      "service_id": "bida-aftercare-services",
+      "claim_type": "application_url",
+      "claim_text": "BIDA Aftercare Services for Investors official information is published at https://bida.gov.bd/ (page title: Invest Bangladesh I Explore Opportunities).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bida.gov.bd/"
+      },
+      "source_ids": [
+        "src-bida-aftercare-services-official"
+      ],
+      "evidence_ids": [
+        "ev-bida-aftercare-services::c-official-portal-src-bida-aftercare-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-aftercare-services::c-procedure-overview",
+      "service_id": "bida-aftercare-services",
+      "claim_type": "procedure_step",
+      "claim_text": "BIDA Aftercare Services for Investors is a government service under Bangladesh Investment Development Authority (BIDA) (aftercare). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-aftercare-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bida-aftercare-services::c-service-identity",
+      "service_id": "bida-aftercare-services",
+      "claim_type": "eligibility",
+      "claim_text": "BIDA Aftercare Services for Investors (BIDA Aftercare Services) is a confirmed government service in category investment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bida-aftercare-services-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "service_id": "snp-general-relief-activities",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-snp-general-relief-activities-fee-unverified",
+      "service_id": "snp-general-relief-activities",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for General Relief Activities.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-general-relief-activities-documents-unverified",
+      "service_id": "snp-general-relief-activities",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for General Relief Activities.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

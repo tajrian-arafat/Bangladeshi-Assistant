@@ -1,0 +1,66 @@
+{
+  "service_id": "local-holding-tax-payment",
+  "sources": [
+    {
+      "source_id": "src-local-holding-tax-payment-official",
+      "service_id": "local-holding-tax-payment",
+      "url": "https://dncc.gov.bd/",
+      "title": "Local Government Holding Tax Payment",
+      "authority_id": "local-government-institutions",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dncc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:28:20.198620+00:00"
+      },
+      "evidence_locator": "probe:https://dncc.gov.bd/"
+    },
+    {
+      "source_id": "src-local-holding-tax-payment-alt-1",
+      "service_id": "local-holding-tax-payment",
+      "url": "https://dscc.gov.bd/",
+      "title": "Local Government Holding Tax Payment",
+      "authority_id": "local-government-institutions",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dscc.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:28:20.747827+00:00"
+      }
+    },
+    {
+      "source_id": "src-local-holding-tax-payment-alt-2",
+      "service_id": "local-holding-tax-payment",
+      "url": "https://www.tbsnews.net/bangladesh/chattogram-city-corporation-launches-app-one-stop-citizen-services-1491636",
+      "title": "Chattogram City Corporation launches app for one-stop citizen services | The Business Standard",
+      "authority_id": "local-government-institutions",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.tbsnews.net/bangladesh/chattogram-city-corporation-launches-app-one-stop-citizen-services-1491636",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Chattogram City Corporation launches app for one-stop citizen services | The Business Standard",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "f2acdea0345a5b08",
+        "retrieved_at": "2026-08-25T03:28:22.659256+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

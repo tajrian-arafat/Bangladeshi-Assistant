@@ -1,0 +1,72 @@
+{
+  "service_id": "snp-primary-school-stipend",
+  "claims": [
+    {
+      "claim_id": "snp-primary-school-stipend::c-catalogue-authority",
+      "service_id": "snp-primary-school-stipend",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Primary & Mass Education.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-primary-school-stipend::c-official-portal",
+      "service_id": "snp-primary-school-stipend",
+      "claim_type": "application_url",
+      "claim_text": "Primary School Stipend official information is published at https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/ (page title: All Social Security Programmes Implemented by Ministries/Divisions | Social Security Policy Support (SSPS) Programme).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://socialprotection.gov.bd/all-social-security-programmes-implemented-by-ministriesdivisions/"
+      },
+      "source_ids": [
+        "src-snp-primary-school-stipend-official"
+      ],
+      "evidence_ids": [
+        "ev-snp-primary-school-stipend::c-official-portal-src-snp-primary-school-stipend-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-primary-school-stipend::c-procedure-overview",
+      "service_id": "snp-primary-school-stipend",
+      "claim_type": "procedure_step",
+      "claim_text": "Primary School Stipend is a government service under Ministry of Primary & Mass Education (social security program). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-primary-school-stipend-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "snp-primary-school-stipend::c-service-identity",
+      "service_id": "snp-primary-school-stipend",
+      "claim_type": "eligibility",
+      "claim_text": "Primary School Stipend () is a confirmed government service in category social_protection, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-snp-primary-school-stipend-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

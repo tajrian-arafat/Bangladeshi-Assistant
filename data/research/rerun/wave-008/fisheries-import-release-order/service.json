@@ -1,0 +1,137 @@
+{
+  "service_id": "fisheries-import-release-order",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Fisheries Import Release Order",
+  "service_name_bn": "মাছ/মৎস্য আমদানি Release Order",
+  "aliases": [
+    "FIQC release letter",
+    "customs fish release",
+    "Fisheries Import Release Order"
+  ],
+  "category_id": "fisheries",
+  "profile_key": "FISHERIES",
+  "responsible_agency": "Department of Fisheries (FIQC)",
+  "official_application_url": "https://www.ecertificate.fisheries.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "fisheries-import-release-order::c-catalogue-authority",
+      "service_id": "fisheries-import-release-order",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Fisheries (FIQC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-import-release-order::c-official-url-documented",
+      "service_id": "fisheries-import-release-order",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.ecertificate.fisheries.gov.bd/ for Fisheries Import Release Order; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/"
+      },
+      "source_ids": [
+        "src-fisheries-import-release-order-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-import-release-order::c-procedure-overview",
+      "service_id": "fisheries-import-release-order",
+      "claim_type": "procedure_step",
+      "claim_text": "Fisheries Import Release Order is a government service under Department of Fisheries (FIQC) (import release). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-fisheries-import-release-order-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "fisheries-import-release-order::c-service-identity",
+      "service_id": "fisheries-import-release-order",
+      "claim_type": "eligibility",
+      "claim_text": "Fisheries Import Release Order (মাছ/মৎস্য আমদানি Release Order) is a confirmed government service in category fisheries, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-fisheries-import-release-order-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-fisheries-import-release-order-official",
+      "service_id": "fisheries-import-release-order",
+      "url": "https://www.ecertificate.fisheries.gov.bd/",
+      "title": "Fisheries Import Release Order",
+      "authority_id": "department-of-fisheries-fiqc",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.ecertificate.fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[Errno -2] Name or service not known",
+        "retrieved_at": "2026-08-25T03:27:26.370699+00:00"
+      },
+      "evidence_locator": "probe:https://www.ecertificate.fisheries.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-fisheries-import-release-order-portal-unreachable",
+      "service_id": "fisheries-import-release-order",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Fisheries Import Release Order.",
+      "severity": "MEDIUM",
+      "url": "https://www.ecertificate.fisheries.gov.bd/"
+    },
+    {
+      "gap_id": "gap-fisheries-import-release-order-fee-unverified",
+      "service_id": "fisheries-import-release-order",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Fisheries Import Release Order.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-fisheries-import-release-order-documents-unverified",
+      "service_id": "fisheries-import-release-order",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Fisheries Import Release Order.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

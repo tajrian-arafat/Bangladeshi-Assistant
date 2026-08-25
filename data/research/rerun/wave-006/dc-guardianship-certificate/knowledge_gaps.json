@@ -1,0 +1,27 @@
+{
+  "service_id": "dc-guardianship-certificate",
+  "gaps": [
+    {
+      "gap_id": "gap-dc-guardianship-certificate-portal-unreachable",
+      "service_id": "dc-guardianship-certificate",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Guardianship Certificate (DC Office).",
+      "severity": "MEDIUM",
+      "url": "https://www.dhaka.gov.bd/en"
+    },
+    {
+      "gap_id": "gap-dc-guardianship-certificate-fee-unverified",
+      "service_id": "dc-guardianship-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Guardianship Certificate (DC Office).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dc-guardianship-certificate-documents-unverified",
+      "service_id": "dc-guardianship-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Guardianship Certificate (DC Office).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

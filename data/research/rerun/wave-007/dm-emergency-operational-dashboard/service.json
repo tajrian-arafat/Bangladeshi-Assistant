@@ -1,0 +1,134 @@
+{
+  "service_id": "dm-emergency-operational-dashboard",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Emergency Operational Dashboard (EOD)",
+  "service_name_bn": "Emergency Operational Dashboard (EOD)",
+  "aliases": [
+    "DDM EOD",
+    "disaster operations dashboard",
+    "Emergency Operational Dashboard (EOD)"
+  ],
+  "category_id": "disaster_relief",
+  "profile_key": "OTHER",
+  "responsible_agency": "Department of Disaster Management (DDM)",
+  "official_application_url": "http://ddm.portal.gov.bd/pages/internal-eservices/emergency-operational-dashboard-eod-444cba-6922d97bdbfbab28ce04d12f",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "dm-emergency-operational-dashboard::c-catalogue-authority",
+      "service_id": "dm-emergency-operational-dashboard",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Disaster Management (DDM).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-emergency-operational-dashboard::c-official-portal",
+      "service_id": "dm-emergency-operational-dashboard",
+      "claim_type": "application_url",
+      "claim_text": "Emergency Operational Dashboard (EOD) official information is published at http://ddm.portal.gov.bd/pages/internal-eservices/emergency-operational-dashboard-eod-444cba-6922d97bdbfbab28ce04d12f (page title: Emergency Operational Dashboard (Eod) | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://ddm.portal.gov.bd/pages/internal-eservices/emergency-operational-dashboard-eod-444cba-6922d97bdbfbab28ce04d12f"
+      },
+      "source_ids": [
+        "src-dm-emergency-operational-dashboard-official"
+      ],
+      "evidence_ids": [
+        "ev-dm-emergency-operational-dashboard::c-official-portal-src-dm-emergency-operational-dashboard-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-emergency-operational-dashboard::c-procedure-overview",
+      "service_id": "dm-emergency-operational-dashboard",
+      "claim_type": "procedure_step",
+      "claim_text": "Emergency Operational Dashboard (EOD) is a government service under Department of Disaster Management (DDM) (operations). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-emergency-operational-dashboard-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-emergency-operational-dashboard::c-service-identity",
+      "service_id": "dm-emergency-operational-dashboard",
+      "claim_type": "eligibility",
+      "claim_text": "Emergency Operational Dashboard (EOD) (Emergency Operational Dashboard (EOD)) is a confirmed government service in category disaster_relief, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-emergency-operational-dashboard-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-dm-emergency-operational-dashboard-official",
+      "service_id": "dm-emergency-operational-dashboard",
+      "url": "http://ddm.portal.gov.bd/pages/internal-eservices/emergency-operational-dashboard-eod-444cba-6922d97bdbfbab28ce04d12f",
+      "title": "Emergency Operational Dashboard (Eod) | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর",
+      "authority_id": "department-of-disaster-management-ddm",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "http://ddm.portal.gov.bd/pages/internal-eservices/emergency-operational-dashboard-eod-444cba-6922d97bdbfbab28ce04d12f",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Emergency Operational Dashboard (Eod) | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "bfd98e37b68a49ee",
+        "retrieved_at": "2026-08-25T03:26:25.441588+00:00"
+      },
+      "evidence_locator": "probe:http://ddm.portal.gov.bd/pages/internal-eservices/emergency-operational-dashboard-eod-444cba-6922d97bdbfbab28ce04d12f"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-dm-emergency-operational-dashboard-fee-unverified",
+      "service_id": "dm-emergency-operational-dashboard",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Emergency Operational Dashboard (EOD).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dm-emergency-operational-dashboard-documents-unverified",
+      "service_id": "dm-emergency-operational-dashboard",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Emergency Operational Dashboard (EOD).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

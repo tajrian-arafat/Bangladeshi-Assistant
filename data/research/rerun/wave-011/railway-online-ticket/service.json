@@ -1,0 +1,133 @@
+{
+  "service_id": "railway-online-ticket",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Bangladesh Railway Online Ticket Booking",
+  "service_name_bn": "বাংলাদেশ রেলওয়ে অনলাইন টিকিট",
+  "aliases": [
+    "e-ticket railway",
+    "train ticket Bangladesh"
+  ],
+  "category_id": "railways",
+  "profile_key": "OTHER",
+  "responsible_agency": "Bangladesh Railway",
+  "official_application_url": "https://eticket.railway.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "railway-online-ticket::c-catalogue-authority",
+      "service_id": "railway-online-ticket",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Railway.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-online-ticket::c-official-portal",
+      "service_id": "railway-online-ticket",
+      "claim_type": "application_url",
+      "claim_text": "Bangladesh Railway Online Ticket Booking official information is published at https://eticket.railway.gov.bd/ (page title: Bangladesh Railway E-Ticketing Service).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://eticket.railway.gov.bd/"
+      },
+      "source_ids": [
+        "src-railway-online-ticket-official"
+      ],
+      "evidence_ids": [
+        "ev-railway-online-ticket::c-official-portal-src-railway-online-ticket-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-online-ticket::c-procedure-overview",
+      "service_id": "railway-online-ticket",
+      "claim_type": "procedure_step",
+      "claim_text": "Bangladesh Railway Online Ticket Booking is a government service under Bangladesh Railway (ticket booking). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-online-ticket-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-online-ticket::c-service-identity",
+      "service_id": "railway-online-ticket",
+      "claim_type": "eligibility",
+      "claim_text": "Bangladesh Railway Online Ticket Booking (বাংলাদেশ রেলওয়ে অনলাইন টিকিট) is a confirmed government service in category railways, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-online-ticket-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-railway-online-ticket-official",
+      "service_id": "railway-online-ticket",
+      "url": "https://eticket.railway.gov.bd/",
+      "title": "Bangladesh Railway E-Ticketing Service",
+      "authority_id": "bangladesh-railway",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://eticket.railway.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh Railway E-Ticketing Service",
+        "content_type": "text/html",
+        "content_hash": "3c484ae2435b8b97",
+        "retrieved_at": "2026-08-25T03:30:07.159006+00:00"
+      },
+      "evidence_locator": "probe:https://eticket.railway.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-railway-online-ticket-fee-unverified",
+      "service_id": "railway-online-ticket",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Bangladesh Railway Online Ticket Booking.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-railway-online-ticket-documents-unverified",
+      "service_id": "railway-online-ticket",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Bangladesh Railway Online Ticket Booking.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

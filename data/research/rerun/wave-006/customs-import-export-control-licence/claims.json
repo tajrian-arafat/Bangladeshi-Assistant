@@ -1,0 +1,72 @@
+{
+  "service_id": "customs-import-export-control-licence",
+  "claims": [
+    {
+      "claim_id": "customs-import-export-control-licence::c-catalogue-authority",
+      "service_id": "customs-import-export-control-licence",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Chief Controller of Imports and Exports / Customs.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-import-export-control-licence::c-official-portal",
+      "service_id": "customs-import-export-control-licence",
+      "claim_type": "application_url",
+      "claim_text": "Import/Export Control Licence official information is published at https://nbr.gov.bd/all-eservices/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/all-eservices/eng"
+      },
+      "source_ids": [
+        "src-customs-import-export-control-licence-official"
+      ],
+      "evidence_ids": [
+        "ev-customs-import-export-control-licence::c-official-portal-src-customs-import-export-control-licence-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-import-export-control-licence::c-procedure-overview",
+      "service_id": "customs-import-export-control-licence",
+      "claim_type": "procedure_step",
+      "claim_text": "Import/Export Control Licence is a government service under Chief Controller of Imports and Exports / Customs (licence). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-customs-import-export-control-licence-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "customs-import-export-control-licence::c-service-identity",
+      "service_id": "customs-import-export-control-licence",
+      "claim_type": "eligibility",
+      "claim_text": "Import/Export Control Licence (আমদানি/রপ্তানি নিয়ন্ত্রণ লাইসেন্স) is a confirmed government service in category customs, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-customs-import-export-control-licence-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

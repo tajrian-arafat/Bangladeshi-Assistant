@@ -1,0 +1,51 @@
+{
+  "service_id": "local-upazila-land-tax-payment",
+  "claims": [
+    {
+      "claim_id": "local-upazila-land-tax-payment::c-catalogue-authority",
+      "service_id": "local-upazila-land-tax-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Union Parishad / Upazila Land Office.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-upazila-land-tax-payment::c-procedure-overview",
+      "service_id": "local-upazila-land-tax-payment",
+      "claim_type": "procedure_step",
+      "claim_text": "Upazila Land Development Tax Payment is a government service under Union Parishad / Upazila Land Office (land tax). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-upazila-land-tax-payment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "local-upazila-land-tax-payment::c-service-identity",
+      "service_id": "local-upazila-land-tax-payment",
+      "claim_type": "eligibility",
+      "claim_text": "Upazila Land Development Tax Payment (উপজেলা ভূমি উন্নয়ন কর) is a confirmed government service in category land, scope UPAZILA.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-local-upazila-land-tax-payment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

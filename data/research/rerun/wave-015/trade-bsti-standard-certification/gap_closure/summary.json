@@ -1,0 +1,28 @@
+{
+  "service_id": "trade-bsti-standard-certification",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-trade-bsti-standard-certification-portal-unreachable",
+      "service_id": "trade-bsti-standard-certification",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for BSTI Product Standard Certification.",
+      "severity": "MEDIUM",
+      "url": "https://bsti.gov.bd/"
+    },
+    {
+      "gap_id": "gap-trade-bsti-standard-certification-fee-unverified",
+      "service_id": "trade-bsti-standard-certification",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BSTI Product Standard Certification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-trade-bsti-standard-certification-documents-unverified",
+      "service_id": "trade-bsti-standard-certification",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BSTI Product Standard Certification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

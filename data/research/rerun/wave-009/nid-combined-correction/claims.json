@@ -1,0 +1,72 @@
+{
+  "service_id": "nid-combined-correction",
+  "claims": [
+    {
+      "claim_id": "nid-combined-correction::c-catalogue-authority",
+      "service_id": "nid-combined-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-official-portal",
+      "service_id": "nid-combined-correction",
+      "claim_type": "application_url",
+      "claim_text": "Combined NID and Other Information Correction official information is published at https://services.nidw.gov.bd/nid-pub/fees (page title: Bangladesh NID Application System | ফি হিসাব করুন).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/fees"
+      },
+      "source_ids": [
+        "src-nid-combined-correction-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-combined-correction::c-official-portal-src-nid-combined-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-procedure-overview",
+      "service_id": "nid-combined-correction",
+      "claim_type": "procedure_step",
+      "claim_text": "Combined NID and Other Information Correction is a government service under Bangladesh Election Commission (NID Wing) (nid correction). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-combined-correction-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-combined-correction::c-service-identity",
+      "service_id": "nid-combined-correction",
+      "claim_type": "eligibility",
+      "claim_text": "Combined NID and Other Information Correction (কার্ড ও অন্যান্য তথ্য একত্রে সংশোধন) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-combined-correction-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

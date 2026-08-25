@@ -1,0 +1,152 @@
+{
+  "service_id": "expatriate-bmet-training",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "BMET Skill Development Training",
+  "service_name_bn": "BMET দক্ষতা/প্রশিক্ষণ",
+  "aliases": [
+    "skill training overseas employment",
+    "BMET training"
+  ],
+  "category_id": "expatriate",
+  "profile_key": "EMPLOYMENT",
+  "responsible_agency": "Bureau of Manpower, Employment and Training (BMET)",
+  "official_application_url": "https://old.bmet.gov.bd/BMET/downloadAction",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "expatriate-bmet-training::c-catalogue-authority",
+      "service_id": "expatriate-bmet-training",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bureau of Manpower, Employment and Training (BMET).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-bmet-training::c-official-url-documented",
+      "service_id": "expatriate-bmet-training",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://old.bmet.gov.bd/BMET/downloadAction for BMET Skill Development Training; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://old.bmet.gov.bd/BMET/downloadAction"
+      },
+      "source_ids": [
+        "src-expatriate-bmet-training-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-bmet-training::c-procedure-overview",
+      "service_id": "expatriate-bmet-training",
+      "claim_type": "procedure_step",
+      "claim_text": "BMET Skill Development Training is a government service under Bureau of Manpower, Employment and Training (BMET) (training). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-expatriate-bmet-training-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-bmet-training::c-service-identity",
+      "service_id": "expatriate-bmet-training",
+      "claim_type": "eligibility",
+      "claim_text": "BMET Skill Development Training (BMET দক্ষতা/প্রশিক্ষণ) is a confirmed government service in category expatriate, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-expatriate-bmet-training-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-expatriate-bmet-training-official",
+      "service_id": "expatriate-bmet-training",
+      "url": "https://old.bmet.gov.bd/BMET/downloadAction",
+      "title": "BMET Skill Development Training",
+      "authority_id": "bmet",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://old.bmet.gov.bd/BMET/downloadAction",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:27:13.688019+00:00"
+      },
+      "evidence_locator": "probe:https://old.bmet.gov.bd/BMET/downloadAction"
+    },
+    {
+      "source_id": "src-expatriate-bmet-training-alt-1",
+      "service_id": "expatriate-bmet-training",
+      "url": "https://bmet.gov.bd",
+      "title": "BMET Skill Development Training",
+      "authority_id": "bmet",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bmet.gov.bd",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:27:14.523659+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-expatriate-bmet-training-portal-unreachable",
+      "service_id": "expatriate-bmet-training",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for BMET Skill Development Training.",
+      "severity": "MEDIUM",
+      "url": "https://old.bmet.gov.bd/BMET/downloadAction"
+    },
+    {
+      "gap_id": "gap-expatriate-bmet-training-fee-unverified",
+      "service_id": "expatriate-bmet-training",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BMET Skill Development Training.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-expatriate-bmet-training-documents-unverified",
+      "service_id": "expatriate-bmet-training",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BMET Skill Development Training.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

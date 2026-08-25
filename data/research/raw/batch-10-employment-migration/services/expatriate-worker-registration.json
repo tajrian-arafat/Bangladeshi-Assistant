@@ -1,0 +1,44 @@
+{
+  "service_id": "expatriate-worker-registration",
+  "batch_id": "batch-10-employment-migration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Overseas Worker Registration",
+  "service_name_bn": "বিদেশে কর্মী নিবন্ধন",
+  "aliases": [
+    "BMET worker registration",
+    "employ registration form"
+  ],
+  "category_id": "expatriate",
+  "responsible_agency": "Bureau of Manpower, Employment and Training (BMET)",
+  "official_application_url": "https://old.bmet.gov.bd/BMET/downloadAction",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "expatriate-worker-registration::c-application-portal",
+      "service_id": "expatriate-worker-registration",
+      "claim_type": "application_url",
+      "claim_text": "Overseas Worker Registration is associated with NBR e-service portal https://old.bmet.gov.bd/BMET/downloadAction.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-expatriate-worker-registration",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-worker-registration::c-responsible-authority",
+      "service_id": "expatriate-worker-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bureau of Manpower, Employment and Training (BMET).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

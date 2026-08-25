@@ -1,0 +1,28 @@
+{
+  "service_id": "housing-nha-allotment-application",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-housing-nha-allotment-application-portal-unreachable",
+      "service_id": "housing-nha-allotment-application",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for National Housing Authority Flat Allotment Application.",
+      "severity": "MEDIUM",
+      "url": "https://nha.gov.bd/"
+    },
+    {
+      "gap_id": "gap-housing-nha-allotment-application-fee-unverified",
+      "service_id": "housing-nha-allotment-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for National Housing Authority Flat Allotment Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-housing-nha-allotment-application-documents-unverified",
+      "service_id": "housing-nha-allotment-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for National Housing Authority Flat Allotment Application.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

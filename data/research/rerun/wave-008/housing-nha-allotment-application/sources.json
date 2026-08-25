@@ -1,0 +1,31 @@
+{
+  "service_id": "housing-nha-allotment-application",
+  "sources": [
+    {
+      "source_id": "src-housing-nha-allotment-application-official",
+      "service_id": "housing-nha-allotment-application",
+      "url": "https://nha.gov.bd/",
+      "title": "National Housing Authority Flat Allotment Application",
+      "authority_id": "national-housing-authority-nha",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nha.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:27:30.751189+00:00"
+      },
+      "evidence_locator": "probe:https://nha.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

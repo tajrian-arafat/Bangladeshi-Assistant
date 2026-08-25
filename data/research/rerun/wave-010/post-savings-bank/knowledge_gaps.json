@@ -1,0 +1,27 @@
+{
+  "service_id": "post-savings-bank",
+  "gaps": [
+    {
+      "gap_id": "gap-post-savings-bank-portal-unreachable",
+      "service_id": "post-savings-bank",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Post Office Savings Bank.",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/ac7d5cfe-11e9-441a-a1b4-61cde1245484/-"
+    },
+    {
+      "gap_id": "gap-post-savings-bank-fee-unverified",
+      "service_id": "post-savings-bank",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Post Office Savings Bank.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-savings-bank-documents-unverified",
+      "service_id": "post-savings-bank",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Post Office Savings Bank.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

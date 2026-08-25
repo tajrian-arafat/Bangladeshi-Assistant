@@ -1,0 +1,27 @@
+{
+  "service_id": "post-gep",
+  "gaps": [
+    {
+      "gap_id": "gap-post-gep-portal-unreachable",
+      "service_id": "post-gep",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Government Express Post (GEP).",
+      "severity": "MEDIUM",
+      "url": "https://bdpost.gov.bd/site/page/7eadb9ba-596e-482b-a1fe-712ec361a946/-"
+    },
+    {
+      "gap_id": "gap-post-gep-fee-unverified",
+      "service_id": "post-gep",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Government Express Post (GEP).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-post-gep-documents-unverified",
+      "service_id": "post-gep",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Government Express Post (GEP).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

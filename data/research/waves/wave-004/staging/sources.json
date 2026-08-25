@@ -1,0 +1,555 @@
+{
+  "wave_id": "wave-004",
+  "sources": [
+    {
+      "source_id": "src-tax-income-tax-return-filing-official",
+      "service_id": "tax-income-tax-return-filing",
+      "url": "https://secure.incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://secure.incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "7dbc0d79e88c33d2",
+        "retrieved_at": "2026-08-25T03:22:49.147881+00:00"
+      },
+      "evidence_locator": "probe:https://secure.incometax.gov.bd"
+    },
+    {
+      "source_id": "src-tax-income-tax-return-filing-alt-1",
+      "service_id": "tax-income-tax-return-filing",
+      "url": "https://nbr.gov.bd/",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:50.562905+00:00"
+      }
+    },
+    {
+      "source_id": "src-tax-income-tax-return-filing-alt-2",
+      "service_id": "tax-income-tax-return-filing",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:51.992694+00:00"
+      }
+    },
+    {
+      "source_id": "src-tax-source-tax-deduction-certificate-official",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "url": "https://secure.incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://secure.incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "7dbc0d79e88c33d2",
+        "retrieved_at": "2026-08-25T03:22:54.047204+00:00"
+      },
+      "evidence_locator": "probe:https://secure.incometax.gov.bd"
+    },
+    {
+      "source_id": "src-tax-source-tax-deduction-certificate-alt-1",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "url": "https://nbr.gov.bd/",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:55.464364+00:00"
+      }
+    },
+    {
+      "source_id": "src-tax-source-tax-deduction-certificate-alt-2",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:56.869666+00:00"
+      }
+    },
+    {
+      "source_id": "src-vat-return-filing-official",
+      "service_id": "vat-return-filing",
+      "url": "https://nbr.gov.bd/",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:58.260923+00:00"
+      },
+      "evidence_locator": "probe:https://nbr.gov.bd/"
+    },
+    {
+      "source_id": "src-vat-return-filing-alt-1",
+      "service_id": "vat-return-filing",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:22:59.638714+00:00"
+      }
+    },
+    {
+      "source_id": "src-vat-return-filing-alt-2",
+      "service_id": "vat-return-filing",
+      "url": "https://incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "7dbc0d79e88c33d2",
+        "retrieved_at": "2026-08-25T03:23:01.727136+00:00"
+      }
+    },
+    {
+      "source_id": "src-vat-turnover-enlistment-official",
+      "service_id": "vat-turnover-enlistment",
+      "url": "https://nbr.gov.bd/faq/vat-faq/eng",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd/faq/vat-faq/eng",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "ddcde77f96d125e2",
+        "retrieved_at": "2026-08-25T03:23:03.269332+00:00"
+      },
+      "evidence_locator": "probe:https://nbr.gov.bd/faq/vat-faq/eng"
+    },
+    {
+      "source_id": "src-vat-turnover-enlistment-alt-1",
+      "service_id": "vat-turnover-enlistment",
+      "url": "https://nbr.gov.bd",
+      "title": "National Board of Revenue (NBR), Bangladesh",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://nbr.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "National Board of Revenue (NBR), Bangladesh",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "94c00045a455056a",
+        "retrieved_at": "2026-08-25T03:23:04.617969+00:00"
+      }
+    },
+    {
+      "source_id": "src-vat-turnover-enlistment-alt-2",
+      "service_id": "vat-turnover-enlistment",
+      "url": "https://incometax.gov.bd",
+      "title": "- NBR TIN Registration",
+      "authority_id": "nbr",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://incometax.gov.bd/TINHome",
+        "status_code": 200,
+        "reachable": true,
+        "title": "- NBR TIN Registration",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "7dbc0d79e88c33d2",
+        "retrieved_at": "2026-08-25T03:23:06.730019+00:00"
+      }
+    },
+    {
+      "source_id": "src-agri-dae-district-extension-official",
+      "service_id": "agri-dae-district-extension",
+      "url": "https://dae.kishoreganj.gov.bd/en",
+      "title": "District Agricultural Extension Services",
+      "authority_id": "department-of-agricultural-extension-dae",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dae.kishoreganj.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:07.292261+00:00"
+      },
+      "evidence_locator": "probe:https://dae.kishoreganj.gov.bd/en"
+    },
+    {
+      "source_id": "src-agri-e-pesticide-prescription-official",
+      "service_id": "agri-e-pesticide-prescription",
+      "url": "https://dae.kishoreganj.gov.bd/en",
+      "title": "E-Pesticide Prescription",
+      "authority_id": "department-of-agricultural-extension-dae",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dae.kishoreganj.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:07.840404+00:00"
+      },
+      "evidence_locator": "probe:https://dae.kishoreganj.gov.bd/en"
+    },
+    {
+      "source_id": "src-agri-farmer-digital-address-official",
+      "service_id": "agri-farmer-digital-address",
+      "url": "https://dae.kishoreganj.gov.bd/en",
+      "title": "Farmer Digital Address",
+      "authority_id": "department-of-agricultural-extension-dae",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dae.kishoreganj.gov.bd/en",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:08.404619+00:00"
+      },
+      "evidence_locator": "probe:https://dae.kishoreganj.gov.bd/en"
+    },
+    {
+      "source_id": "src-agri-farmers-window-official",
+      "service_id": "agri-farmers-window",
+      "url": "https://sacp.dae.gov.bd/en/farmers-window/",
+      "title": "Farmer&#8217;s window",
+      "authority_id": "department-of-agricultural-extension-dae",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://sacp.dae.gov.bd/en/farmers-window/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Farmer&#8217;s window",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "5f5167a141893bff",
+        "retrieved_at": "2026-08-25T03:23:10.287234+00:00"
+      },
+      "evidence_locator": "probe:https://sacp.dae.gov.bd/en/farmers-window/"
+    },
+    {
+      "source_id": "src-agri-fsmms-farmer-registration-official",
+      "service_id": "agri-fsmms-farmer-registration",
+      "url": "https://fsmms.dgf.gov.bd/portal/bn/farmer",
+      "title": "কৃষক",
+      "authority_id": "directorate-general-of-food",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://fsmms.dgf.gov.bd/portal/bn/farmer",
+        "status_code": 200,
+        "reachable": true,
+        "title": "কৃষক",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "517f3f5ff17d9ff5",
+        "retrieved_at": "2026-08-25T03:23:13.755317+00:00"
+      },
+      "evidence_locator": "probe:https://fsmms.dgf.gov.bd/portal/bn/farmer"
+    },
+    {
+      "source_id": "src-agriculture-fisheries-fish-farm-registration-official",
+      "service_id": "agriculture-fisheries-fish-farm-registration",
+      "url": "https://fisheries.gov.bd/",
+      "title": "Fish Farm Registration",
+      "authority_id": "department-of-fisheries-dof",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://fisheries.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:14.338452+00:00"
+      },
+      "evidence_locator": "probe:https://fisheries.gov.bd/"
+    },
+    {
+      "source_id": "src-agriculture-livestock-farm-registration-official",
+      "service_id": "agriculture-livestock-farm-registration",
+      "url": "https://dls.gov.bd/",
+      "title": "Livestock Farm Registration (DLS)",
+      "authority_id": "department-of-livestock-services-dls",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://dls.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:15.184085+00:00"
+      },
+      "evidence_locator": "probe:https://dls.gov.bd/"
+    },
+    {
+      "source_id": "src-bida-aftercare-services-official",
+      "service_id": "bida-aftercare-services",
+      "url": "https://bida.gov.bd/",
+      "title": "Invest Bangladesh I Explore Opportunities",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://investbangladesh.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Invest Bangladesh I Explore Opportunities",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "5eb9df5460334603",
+        "retrieved_at": "2026-08-25T03:23:17.022339+00:00"
+      },
+      "evidence_locator": "probe:https://bida.gov.bd/"
+    },
+    {
+      "source_id": "src-bida-commercial-office-services-official",
+      "service_id": "bida-commercial-office-services",
+      "url": "https://bida.gov.bd/",
+      "title": "Invest Bangladesh I Explore Opportunities",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://investbangladesh.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Invest Bangladesh I Explore Opportunities",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "5eb9df5460334603",
+        "retrieved_at": "2026-08-25T03:23:17.154215+00:00"
+      },
+      "evidence_locator": "probe:https://bida.gov.bd/"
+    },
+    {
+      "source_id": "src-bida-invest-bangladesh-oss-official",
+      "service_id": "bida-invest-bangladesh-oss",
+      "url": "https://investbangladesh.gov.bd/faq",
+      "title": "Invest Bangladesh FAQ | Answers to Investment, Visa, Tax &amp; Business Setup Queries",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://investbangladesh.gov.bd/faq",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Invest Bangladesh FAQ | Answers to Investment, Visa, Tax &amp; Business Setup Queries",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "9adc21ed047d8964",
+        "retrieved_at": "2026-08-25T03:23:17.206691+00:00"
+      },
+      "evidence_locator": "probe:https://investbangladesh.gov.bd/faq"
+    },
+    {
+      "source_id": "src-bida-invest-bangladesh-oss-alt-1",
+      "service_id": "bida-invest-bangladesh-oss",
+      "url": "https://bidaquickserv.org",
+      "title": "Just a moment...",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bidaquickserv.org",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "9877df63a67cc2c4",
+        "retrieved_at": "2026-08-25T03:23:17.278522+00:00"
+      }
+    },
+    {
+      "source_id": "src-bida-irms-platform-official",
+      "service_id": "bida-irms-platform",
+      "url": "https://irms.bida.gov.bd/",
+      "title": "One Stop Service platform for Investment Relationship Management",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://irms.bida.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "One Stop Service platform for Investment Relationship Management",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "949c06d2e2102f9b",
+        "retrieved_at": "2026-08-25T03:23:18.790933+00:00"
+      },
+      "evidence_locator": "probe:https://irms.bida.gov.bd/"
+    },
+    {
+      "source_id": "src-bida-osspid-registration-official",
+      "service_id": "bida-osspid-registration",
+      "url": "https://irms.bida.gov.bd/set-registration-type/investor",
+      "title": "Just a moment...",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://osspid.org/user/create?client_id=aa8a367e918753e3643af625217601a933df0c7f&cs=YzFhZDA1NzliNTBiZTJlMjVjN2E2Mjg2YmNiZDg4ZDc0NTA5NjhlOTo6wsx4yaSqAvC4hKE0ILR0VA&callback_url=https://irms.bida.gov.bd/osspid-callback",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "ace395a295ab98bf",
+        "retrieved_at": "2026-08-25T03:23:19.739662+00:00"
+      },
+      "evidence_locator": "probe:https://irms.bida.gov.bd/set-registration-type/investor"
+    },
+    {
+      "source_id": "src-bida-work-permit-security-clearance-official",
+      "service_id": "bida-work-permit-security-clearance",
+      "url": "https://bida.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital",
+      "title": "Invest Bangladesh",
+      "authority_id": "bangladesh-investment-development-authority-bida",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://investbangladesh.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Invest Bangladesh",
+        "content_type": "text/html; charset=utf-8",
+        "content_hash": "56c6ce823327723e",
+        "retrieved_at": "2026-08-25T03:23:19.887564+00:00"
+      },
+      "evidence_locator": "probe:https://bida.gov.bd/press-release/security-clearance-for-work-permits-now-fully-digital"
+    },
+    {
+      "source_id": "src-bpdb-high-tension-connection-official",
+      "service_id": "bpdb-high-tension-connection",
+      "url": "https://bpdb.gov.bd/",
+      "title": "BPDB High Tension Connection Application",
+      "authority_id": "bangladesh-power-development-board-bpdb",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bpdb.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:20.685521+00:00"
+      },
+      "evidence_locator": "probe:https://bpdb.gov.bd/"
+    },
+    {
+      "source_id": "src-bpdb-new-connection-general-official",
+      "service_id": "bpdb-new-connection-general",
+      "url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717",
+      "title": "BPDB New Electricity Connection (General Customer)",
+      "authority_id": "bangladesh-power-development-board-bpdb",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:21.224788+00:00"
+      },
+      "evidence_locator": "probe:https://bpdb.gov.bd/pages/static-pages/6922dfe0933eb65569e24717"
+    },
+    {
+      "source_id": "src-bpdb-online-bill-official",
+      "service_id": "bpdb-online-bill",
+      "url": "https://billonweb.bpdb.gov.bd",
+      "title": "BpdbUi",
+      "authority_id": "bangladesh-power-development-board-bpdb",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://billonweb.bpdb.gov.bd",
+        "status_code": 200,
+        "reachable": true,
+        "title": "BpdbUi",
+        "content_type": "text/html",
+        "content_hash": "df90ae3f2482c287",
+        "retrieved_at": "2026-08-25T03:23:22.644380+00:00"
+      },
+      "evidence_locator": "probe:https://billonweb.bpdb.gov.bd"
+    }
+  ]
+}

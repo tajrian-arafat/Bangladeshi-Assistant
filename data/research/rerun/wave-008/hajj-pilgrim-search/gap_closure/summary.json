@@ -1,0 +1,28 @@
+{
+  "service_id": "hajj-pilgrim-search",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-hajj-pilgrim-search-portal-unreachable",
+      "service_id": "hajj-pilgrim-search",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Hajj Pilgrim Search and Status.",
+      "severity": "MEDIUM",
+      "url": "https://hajj.gov.bd/"
+    },
+    {
+      "gap_id": "gap-hajj-pilgrim-search-fee-unverified",
+      "service_id": "hajj-pilgrim-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Hajj Pilgrim Search and Status.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-hajj-pilgrim-search-documents-unverified",
+      "service_id": "hajj-pilgrim-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Hajj Pilgrim Search and Status.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

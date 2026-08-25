@@ -1,0 +1,20 @@
+{
+  "service_id": "health-hospital-birth-notification",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-health-hospital-birth-notification-fee-unverified",
+      "service_id": "health-hospital-birth-notification",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Hospital Birth Notification (for BDRIS registration).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-health-hospital-birth-notification-documents-unverified",
+      "service_id": "health-hospital-birth-notification",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Hospital Birth Notification (for BDRIS registration).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

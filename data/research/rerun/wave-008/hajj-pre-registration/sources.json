@@ -1,0 +1,53 @@
+{
+  "service_id": "hajj-pre-registration",
+  "sources": [
+    {
+      "source_id": "src-hajj-pre-registration-official",
+      "service_id": "hajj-pre-registration",
+      "url": "https://pilgrim.hajj.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-religious-affairs-hajj-wing",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://pilgrim.hajj.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "55745cc1b5d5d59e",
+        "retrieved_at": "2026-08-25T03:27:27.106850+00:00"
+      },
+      "evidence_locator": "probe:https://pilgrim.hajj.gov.bd/"
+    },
+    {
+      "source_id": "src-hajj-pre-registration-alt-1",
+      "service_id": "hajj-pre-registration",
+      "url": "https://hajj.gov.bd/",
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-religious-affairs-hajj-wing",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://hajj.gov.bd/",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "d20836d937715b51",
+        "retrieved_at": "2026-08-25T03:27:27.138472+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

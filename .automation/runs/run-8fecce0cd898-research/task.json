@@ -1,0 +1,63 @@
+{
+  "task_id": "BATCH_06:RESEARCH:run-8fecce0cd898-research",
+  "batch_id": "BATCH_06",
+  "batch_slug": "batch-06-education",
+  "phase": "RESEARCH",
+  "run_id": "run-8fecce0cd898-research",
+  "service_ids": [
+    "education-class-registration",
+    "education-duplicate-certificate",
+    "education-foreign-enrollment-permission",
+    "education-foreign-equivalency",
+    "education-hsc-certificate",
+    "education-hsc-transcript",
+    "education-registration-card-correction",
+    "education-ssc-certificate",
+    "education-ssc-hsc-result-verify",
+    "education-ssc-transcript",
+    "education-ugc-university-recognition"
+  ],
+  "service_names": {
+    "education-class-registration": "Class IX/XI Board Registration",
+    "education-duplicate-certificate": "Duplicate SSC/HSC Certificate or Transcript",
+    "education-foreign-enrollment-permission": "Permission for Class XI Enrollment (Foreign Qualification)",
+    "education-foreign-equivalency": "Foreign Qualification Equivalency",
+    "education-hsc-certificate": "HSC Certificate Issuance",
+    "education-hsc-transcript": "HSC Academic Transcript",
+    "education-registration-card-correction": "Registration Card Information Correction",
+    "education-ssc-certificate": "SSC Certificate Issuance",
+    "education-ssc-hsc-result-verify": "SSC/HSC Result Verification",
+    "education-ssc-transcript": "SSC Academic Transcript",
+    "education-ugc-university-recognition": "UGC University/Institution Recognition Verification"
+  },
+  "domain": "education",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/raw/batch-06-education/scope.json",
+    "data/research/raw/batch-06-education/services_index.json",
+    "data/research/raw/batch-06-education/services/*.json",
+    "data/research/raw/batch-06-education/claims.json",
+    "data/research/raw/batch-06-education/sources.json",
+    "data/research/raw/batch-06-education/conflicts.json",
+    "data/research/raw/batch-06-education/knowledge_gaps.json",
+    "data/research/raw/batch-06-education/metadata.json",
+    "docs/research/batch-06-education-research.md",
+    ".automation/runs/run-8fecce0cd898-research/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — RESEARCH\n\n**Batch:** BATCH_06 (Education)\n**Run ID:** run-8fecce0cd898-research\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/raw/batch-06-education/scope.json`\n- `data/research/raw/batch-06-education/services_index.json`\n- `data/research/raw/batch-06-education/services/*.json`\n- `data/research/raw/batch-06-education/claims.json`\n- `data/research/raw/batch-06-education/sources.json`\n- `data/research/raw/batch-06-education/conflicts.json`\n- `data/research/raw/batch-06-education/knowledge_gaps.json`\n- `data/research/raw/batch-06-education/metadata.json`\n- `docs/research/batch-06-education-research.md`\n- `.automation/runs/run-8fecce0cd898-research/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_06\",\n    \"slug\": \"batch-06-education\",\n    \"name\": \"Education\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"education-class-registration\",\n      \"education-duplicate-certificate\",\n      \"education-foreign-enrollment-permission\",\n      \"education-foreign-equivalency\",\n      \"education-hsc-certificate\",\n      \"education-hsc-transcript\",\n      \"education-registration-card-correction\",\n      \"education-ssc-certificate\",\n      \"education-ssc-hsc-result-verify\",\n      \"education-ssc-transcript\",\n      \"education-ugc-university-recognition\"\n    ],\n    \"service_count\": 11,\n    \"phases_completed\": []\n  },\n  \"phase\": \"RESEARCH\",\n  \"run_id\": \"run-8fecce0cd898-research\",\n  \"service_ids\": [\n    \"education-class-registration\",\n    \"education-duplicate-certificate\",\n    \"education-foreign-enrollment-permission\",\n    \"education-foreign-equivalency\",\n    \"education-hsc-certificate\",\n    \"education-hsc-transcript\",\n    \"education-registration-card-correction\",\n    \"education-ssc-certificate\",\n    \"education-ssc-hsc-result-verify\",\n    \"education-ssc-transcript\",\n    \"education-ugc-university-recognition\"\n  ],\n  \"gaps\": [],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Research phase prompt\n\nFollow `docs/research/BATCH_RESEARCH_TEMPLATE.md` exactly.\n\n## Goals\n- Identify in-scope services from catalogue\n- Search broadly; prioritize Tier 1–2 official sources\n- Separate official / practical / discovery evidence\n- Create atomic claims with provenance\n- Record conflicts and knowledge gaps\n- **Never publish**\n- **Never mark VERIFIED** because a source merely exists\n\n## Outputs\n- `data/research/raw/<batch-slug>/services/*.json`\n- `data/research/raw/<batch-slug>/claims.json`\n- `data/research/raw/<batch-slug>/sources.json`\n- `data/research/raw/<batch-slug>/conflicts.json`\n- `data/research/raw/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-8fecce0cd898-research/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:45:00.458010+00:00"
+  }
+}

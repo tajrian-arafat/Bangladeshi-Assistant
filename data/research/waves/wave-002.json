@@ -1,0 +1,1420 @@
+{
+  "wave_id": "wave-002",
+  "wave_number": 2,
+  "run_id": "wave-002-a3c320b5",
+  "commit_sha": "0abc805b3f71",
+  "generated_at": "2026-08-25T03:21:41.159288+00:00",
+  "wave_size": 10,
+  "services_attempted": [
+    "health-medical-assistant-registration",
+    "health-private-clinic-license",
+    "health-private-hospital-license",
+    "land-dlrms-application-track",
+    "land-khatian-certified-copy",
+    "land-khatian-correction",
+    "land-khatian-online-copy",
+    "land-mortgage-info-search",
+    "land-mouza-map",
+    "land-mutation-apply"
+  ],
+  "service_results": [
+    {
+      "service_id": "health-medical-assistant-registration",
+      "service_name_en": "Medical Assistant BMDC Registration",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-medical-assistant-registration",
+        "service_name_en": "Medical Assistant BMDC Registration",
+        "service_name_bn": "মেডিকেল Assistant BMDC নিবন্ধন",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Bangladesh Medical and Dental Council (BMDC)",
+          "bmdc"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "medical assistant registration"
+        ],
+        "official_source": "https://payment.bmdc.org.bd/home/page/form-list",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-medical-assistant-registration",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-medical-assistant-registration-en-procedure",
+            "query": "How do I apply for Medical Assistant BMDC Registration?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-medical-assistant-registration-bn-procedure",
+            "query": "মেডিকেল Assistant BMDC নিবন্ধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-medical-assistant-registration-fee",
+            "query": "What is the fee for Medical Assistant BMDC Registration?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-medical-assistant-registration-documents",
+            "query": "What documents are needed for Medical Assistant BMDC Registration?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-medical-assistant-registration-url",
+            "query": "What is the official website for Medical Assistant BMDC Registration?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-medical-assistant-registration",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-private-clinic-license",
+      "service_name_en": "Private Clinic Licence",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-private-clinic-license",
+        "service_name_en": "Private Clinic Licence",
+        "service_name_bn": "বেসরকারি ক্লিনিক লাইসেন্স",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Directorate General of Health Services (DGHS) - Hospitals and Clinics Branch",
+          "directorate-general-of-health-services-dghs-hospitals-and-clinic"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "clinic registration DGHS"
+        ],
+        "official_source": "https://hospitaldghs.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-private-clinic-license",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-private-clinic-license-en-procedure",
+            "query": "How do I apply for Private Clinic Licence?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-private-clinic-license-bn-procedure",
+            "query": "বেসরকারি ক্লিনিক লাইসেন্স কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-private-clinic-license-fee",
+            "query": "What is the fee for Private Clinic Licence?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-private-clinic-license-documents",
+            "query": "What documents are needed for Private Clinic Licence?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-private-clinic-license-url",
+            "query": "What is the official website for Private Clinic Licence?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-private-clinic-license",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "health-private-hospital-license",
+      "service_name_en": "Private Hospital Licence",
+      "category_id": "health",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "health-private-hospital-license",
+        "service_name_en": "Private Hospital Licence",
+        "service_name_bn": "বেসরকারি হাসপাতাল লাইসেন্স",
+        "category_id": "health",
+        "research_profile": "HEALTH",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "procedure"
+        ],
+        "responsible_authority_candidates": [
+          "Directorate General of Health Services (DGHS) - Hospitals and Clinics Branch",
+          "directorate-general-of-health-services-dghs-hospitals-and-clinic"
+        ],
+        "known_official_domains": [],
+        "service_aliases": [
+          "hospital registration DGHS",
+          "private hospital license"
+        ],
+        "official_source": "https://hospitaldghs.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "NATIONAL",
+        "minimum_meaningful_claims": 2,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 1,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "health-private-hospital-license",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "health-private-hospital-license-en-procedure",
+            "query": "How do I apply for Private Hospital Licence?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-private-hospital-license-bn-procedure",
+            "query": "বেসরকারি হাসপাতাল লাইসেন্স কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-private-hospital-license-fee",
+            "query": "What is the fee for Private Hospital Licence?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-private-hospital-license-documents",
+            "query": "What documents are needed for Private Hospital Licence?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "health-private-hospital-license-url",
+            "query": "What is the official website for Private Hospital Licence?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "health-private-hospital-license",
+        "profile_key": "HEALTH",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 1,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-dlrms-application-track",
+      "service_name_en": "Land Record Application Tracking (DLRMS)",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-dlrms-application-track",
+        "service_name_en": "Land Record Application Tracking (DLRMS)",
+        "service_name_bn": "ভূমি রেকর্ড আবেদন ট্র্যাকিং",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land (DLRMS)",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "DLRMS track"
+        ],
+        "official_source": "https://dlrms.land.gov.bd/application/track",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-dlrms-application-track",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-dlrms-application-track-en-procedure",
+            "query": "How do I apply for Land Record Application Tracking (DLRMS)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-dlrms-application-track-bn-procedure",
+            "query": "ভূমি রেকর্ড আবেদন ট্র্যাকিং কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-dlrms-application-track-fee",
+            "query": "What is the fee for Land Record Application Tracking (DLRMS)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-dlrms-application-track-documents",
+            "query": "What documents are needed for Land Record Application Tracking (DLRMS)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-dlrms-application-track-url",
+            "query": "What is the official website for Land Record Application Tracking (DLRMS)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-dlrms-application-track",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-khatian-certified-copy",
+      "service_name_en": "Certified Khatian Copy",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-khatian-certified-copy",
+        "service_name_en": "Certified Khatian Copy",
+        "service_name_bn": "সার্টিফাইড/সত্যায়িত খতিয়ান",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land (DLRMS)",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "certified land record"
+        ],
+        "official_source": "https://land.gov.bd/vumisheba-fee",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-khatian-certified-copy",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-khatian-certified-copy-en-procedure",
+            "query": "How do I apply for Certified Khatian Copy?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-certified-copy-bn-procedure",
+            "query": "সার্টিফাইড/সত্যায়িত খতিয়ান কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-certified-copy-fee",
+            "query": "What is the fee for Certified Khatian Copy?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-certified-copy-documents",
+            "query": "What documents are needed for Certified Khatian Copy?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-certified-copy-url",
+            "query": "What is the official website for Certified Khatian Copy?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-khatian-certified-copy",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-khatian-correction",
+      "service_name_en": "Khatian Record Correction",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-khatian-correction",
+        "service_name_en": "Khatian Record Correction",
+        "service_name_bn": "খতিয়ান সংশোধন",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "record correction",
+          "land record amendment"
+        ],
+        "official_source": "https://land.gov.bd/vumisheba-fee",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-khatian-correction",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-khatian-correction-en-procedure",
+            "query": "How do I apply for Khatian Record Correction?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-correction-bn-procedure",
+            "query": "খতিয়ান সংশোধন কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-correction-fee",
+            "query": "What is the fee for Khatian Record Correction?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-correction-documents",
+            "query": "What documents are needed for Khatian Record Correction?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-correction-url",
+            "query": "What is the official website for Khatian Record Correction?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-khatian-correction",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-khatian-online-copy",
+      "service_name_en": "Online Khatian Copy",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-khatian-online-copy",
+        "service_name_en": "Online Khatian Copy",
+        "service_name_bn": "খতিয়ান অনলাইন কপি",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land (DLRMS)",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "e-porcha",
+          "DLRMS khatian",
+          "QR khatian"
+        ],
+        "official_source": "https://dlrms.land.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 3,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-khatian-online-copy",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-khatian-online-copy-en-procedure",
+            "query": "How do I apply for Online Khatian Copy?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-online-copy-bn-procedure",
+            "query": "খতিয়ান অনলাইন কপি কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-online-copy-fee",
+            "query": "What is the fee for Online Khatian Copy?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-online-copy-documents",
+            "query": "What documents are needed for Online Khatian Copy?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-khatian-online-copy-url",
+            "query": "What is the official website for Online Khatian Copy?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-khatian-online-copy",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 3,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-mortgage-info-search",
+      "service_name_en": "Land Mortgage Information Search",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-mortgage-info-search",
+        "service_name_en": "Land Mortgage Information Search",
+        "service_name_bn": "মর্টগেজ তথ্য অনুসন্ধান",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "mortgage search"
+        ],
+        "official_source": "https://mutation.land.gov.bd/search-mortgage-info",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-mortgage-info-search",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-mortgage-info-search-en-procedure",
+            "query": "How do I apply for Land Mortgage Information Search?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mortgage-info-search-bn-procedure",
+            "query": "মর্টগেজ তথ্য অনুসন্ধান কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mortgage-info-search-fee",
+            "query": "What is the fee for Land Mortgage Information Search?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mortgage-info-search-documents",
+            "query": "What documents are needed for Land Mortgage Information Search?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mortgage-info-search-url",
+            "query": "What is the official website for Land Mortgage Information Search?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-mortgage-info-search",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-mouza-map",
+      "service_name_en": "Mouza Map Request",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-mouza-map",
+        "service_name_en": "Mouza Map Request",
+        "service_name_bn": "মৌজা ম্যাপ/চিতা",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "land map",
+          "mouza chita"
+        ],
+        "official_source": "https://land.gov.bd/vumisheba-fee",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-mouza-map",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-mouza-map-en-procedure",
+            "query": "How do I apply for Mouza Map Request?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mouza-map-bn-procedure",
+            "query": "মৌজা ম্যাপ/চিতা কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mouza-map-fee",
+            "query": "What is the fee for Mouza Map Request?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mouza-map-documents",
+            "query": "What documents are needed for Mouza Map Request?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mouza-map-url",
+            "query": "What is the official website for Mouza Map Request?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-mouza-map",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    },
+    {
+      "service_id": "land-mutation-apply",
+      "service_name_en": "Land Mutation (Namjari)",
+      "category_id": "land",
+      "research_brief": {
+        "instruction": "RESEARCH THIS EXACT SERVICE — not the category generically",
+        "service_id": "land-mutation-apply",
+        "service_name_en": "Land Mutation (Namjari)",
+        "service_name_bn": "নামজারি (মিউটেশন)",
+        "category_id": "land",
+        "research_profile": "LAND",
+        "required_research_dimensions": [
+          "identity",
+          "authority",
+          "official_url",
+          "procedure"
+        ],
+        "high_risk_dimensions": [
+          "documents",
+          "fees",
+          "eligibility",
+          "geography",
+          "office"
+        ],
+        "responsible_authority_candidates": [
+          "Ministry of Land",
+          "ministry-land"
+        ],
+        "known_official_domains": [
+          "land.gov.bd",
+          "mutation.land.gov.bd",
+          "dlrms.land.gov.bd"
+        ],
+        "service_aliases": [
+          "mutation application",
+          "land ownership transfer"
+        ],
+        "official_source": "https://mutation.land.gov.bd/",
+        "existing_claims_count": 2,
+        "existing_sources_count": 1,
+        "current_gaps": [
+          "CURRENT_URL_MISSING",
+          "CURRENT_FEE_MISSING",
+          "LOCAL_RULE_MISSING"
+        ],
+        "related_services": [],
+        "geographic_scope": "UPAZILA",
+        "minimum_meaningful_claims": 3,
+        "minimum_service_specific_sources": 1
+      },
+      "research_status": "RESEARCH_COMPLETE",
+      "final_status": "PARTIAL",
+      "false_completion_risk": false,
+      "meaningful_claims": 3,
+      "verified_claims": 2,
+      "service_specific_sources": 3,
+      "completeness_score": 1.0,
+      "flags": [],
+      "e2e": {
+        "service_id": "land-mutation-apply",
+        "wave_id": "wave-002",
+        "total": 5,
+        "passed": 5,
+        "answer_supported": 0,
+        "correct_uncertainty": 5,
+        "product_failure": 0,
+        "hallucinations": 0,
+        "citation_failures": 0,
+        "outcomes": [
+          {
+            "id": "land-mutation-apply-en-procedure",
+            "query": "How do I apply for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-apply-bn-procedure",
+            "query": "নামজারি (মিউটেশন) কিভাবে করব?",
+            "language": "bn",
+            "category": "procedure",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-apply-fee",
+            "query": "What is the fee for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "fee",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-apply-documents",
+            "query": "What documents are needed for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "documents",
+            "outcome": "CORRECT_UNCERTAINTY"
+          },
+          {
+            "id": "land-mutation-apply-url",
+            "query": "What is the official website for Land Mutation (Namjari)?",
+            "language": "en",
+            "category": "official_url",
+            "outcome": "CORRECT_UNCERTAINTY"
+          }
+        ]
+      },
+      "evaluation": {
+        "service_id": "land-mutation-apply",
+        "profile_key": "LAND",
+        "research_status": "RESEARCH_COMPLETE",
+        "completeness_score": 1.0,
+        "meaningful_claims": 3,
+        "verified_claims": 2,
+        "service_specific_sources": 3,
+        "catalogue_metadata_claims": 1,
+        "false_completion_risk": false,
+        "flags": [],
+        "dimension_coverage": {
+          "official_url": true,
+          "procedure": true,
+          "eligibility": true,
+          "identity": true,
+          "authority": true
+        },
+        "missing_dimensions": [],
+        "score_breakdown": {
+          "research_quality": 0.25,
+          "verification_quality": 0.2,
+          "knowledge_coverage": 0.2,
+          "e2e_supported_coverage": 0.15,
+          "source_quality": 0.1,
+          "citation_integrity": 0.1
+        }
+      },
+      "research_complete": true
+    }
+  ],
+  "status_counts": {
+    "COMPLETE": 0,
+    "PARTIAL": 10,
+    "DEFERRED": 0,
+    "BLOCKED": 0
+  },
+  "verified_claims": 22,
+  "partial_claims": 8,
+  "conflicts": 0,
+  "knowledge_gaps": 28,
+  "staging_path": "/workspace/data/research/waves/wave-002/staging",
+  "e2e_summary": {
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "answer_supported": 0
+  },
+  "regression": {
+    "passed": true,
+    "metrics": {
+      "hallucinations": 0,
+      "citation_failures": 0,
+      "batch_01_pass_pct": 100.0,
+      "passport_pass_pct": 100.0,
+      "batch_02b_pass_pct": 100.0,
+      "routing_pass_pct": 100.0,
+      "pytest_failed": 0,
+      "batch_03a_pass_pct": 100.0,
+      "batch_03b_pass_pct": 100.0,
+      "batch_03c_pass_pct": 100.0
+    },
+    "failures": [],
+    "automation_exit_code": 0
+  },
+  "wave_quality": {
+    "passed": true,
+    "wave_id": "wave-002",
+    "services_total": 10,
+    "false_completion_count": 0,
+    "services_with_sources": 10,
+    "services_with_verified_claims": 10,
+    "source_rate": 1.0,
+    "verified_rate": 1.0,
+    "hallucinations": 0,
+    "citation_failures": 0,
+    "regression_failures": [],
+    "blocking_reasons": [],
+    "service_statuses": {
+      "health-medical-assistant-registration": "PARTIAL",
+      "health-private-clinic-license": "PARTIAL",
+      "health-private-hospital-license": "PARTIAL",
+      "land-dlrms-application-track": "PARTIAL",
+      "land-khatian-certified-copy": "PARTIAL",
+      "land-khatian-correction": "PARTIAL",
+      "land-khatian-online-copy": "PARTIAL",
+      "land-mortgage-info-search": "PARTIAL",
+      "land-mouza-map": "PARTIAL",
+      "land-mutation-apply": "PARTIAL"
+    }
+  },
+  "quality_passed": true
+}

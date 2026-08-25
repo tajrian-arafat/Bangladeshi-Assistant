@@ -1,0 +1,28 @@
+{
+  "service_id": "business-name-clearance",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-business-name-clearance-portal-unreachable",
+      "service_id": "business-name-clearance",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Company Name Clearance.",
+      "severity": "MEDIUM",
+      "url": "https://app.roc.gov.bd/Guidlines/RJSC_bus_pro_NC.htm"
+    },
+    {
+      "gap_id": "gap-business-name-clearance-fee-unverified",
+      "service_id": "business-name-clearance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Company Name Clearance.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-business-name-clearance-documents-unverified",
+      "service_id": "business-name-clearance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Company Name Clearance.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

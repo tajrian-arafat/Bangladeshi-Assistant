@@ -1,112 +1,60 @@
 {
   "ticks": [
     {
-      "steps": 3,
-      "final_status": "HUMAN_APPROVAL_REQUIRED",
+      "tick": 0,
+      "batch_before": "BATCH_SIM_A",
+      "batch_after": "BATCH_SIM_B",
+      "phase_before": "REGRESSION",
+      "phase_after": "RESEARCH",
+      "steps": 5,
       "last": {
-        "status": "HUMAN_APPROVAL_REQUIRED",
-        "batch": "BATCH_03A",
-        "phase": "PUBLICATION",
-        "run_id": "run-8ff4330a8ab0",
-        "result_status": "SUCCESS",
-        "summary": "Publication complete for batch-03a-brta-driving-licence; legacy seed replacement candidates require explicit human approval",
-        "next_phase": "PUBLICATION"
+        "status": "RETRY",
+        "batch": "BATCH_SIM_B",
+        "phase": "RESEARCH",
+        "result_status": "PARTIAL",
+        "summary": "still working"
       },
-      "history": [
-        {
-          "status": "AUTO_CONTINUE",
-          "batch": "BATCH_03A",
-          "phase": "RESEARCH",
-          "run_id": "run-8ff4330a8ab0",
-          "result_status": "SUCCESS",
-          "summary": "Phase RESEARCH idempotent skip",
-          "next_phase": "VERIFICATION"
-        },
-        {
-          "status": "AUTO_CONTINUE",
-          "batch": "BATCH_03A",
-          "phase": "VERIFICATION",
-          "run_id": "run-8ff4330a8ab0",
-          "result_status": "SUCCESS",
-          "summary": "Phase VERIFICATION idempotent skip",
-          "next_phase": "PUBLICATION"
-        },
-        {
-          "status": "HUMAN_APPROVAL_REQUIRED",
-          "batch": "BATCH_03A",
-          "phase": "PUBLICATION",
-          "run_id": "run-8ff4330a8ab0",
-          "result_status": "SUCCESS",
-          "summary": "Publication complete for batch-03a-brta-driving-licence; legacy seed replacement candidates require explicit human approval",
-          "next_phase": "PUBLICATION"
-        }
-      ]
+      "workflow_status": "READY"
     },
     {
-      "steps": 3,
-      "final_status": "HUMAN_APPROVAL_REQUIRED",
+      "tick": 1,
+      "batch_before": "BATCH_SIM_B",
+      "batch_after": "BATCH_SIM_B",
+      "phase_before": "RESEARCH",
+      "phase_after": "RESEARCH",
+      "steps": 5,
       "last": {
-        "status": "HUMAN_APPROVAL_REQUIRED",
-        "batch": "BATCH_03A",
-        "phase": "STABILIZATION",
-        "run_id": "run-8ff4330a8ab0",
-        "result_status": "FAILED",
-        "summary": "Unsupported phase: STABILIZATION",
-        "next_phase": "STABILIZATION"
+        "status": "RETRY",
+        "batch": "BATCH_SIM_B",
+        "phase": "RESEARCH",
+        "result_status": "PARTIAL",
+        "summary": "still working"
       },
-      "history": [
-        {
-          "status": "AUTO_CONTINUE",
-          "batch": "BATCH_03A",
-          "phase": "E2E",
-          "run_id": "run-8ff4330a8ab0",
-          "result_status": "SUCCESS",
-          "summary": "Phase E2E idempotent skip",
-          "next_phase": "REGRESSION"
-        },
-        {
-          "status": "AUTO_CONTINUE",
-          "batch": "BATCH_03A",
-          "phase": "REGRESSION",
-          "run_id": "run-8ff4330a8ab0",
-          "result_status": "SUCCESS",
-          "summary": "Phase REGRESSION idempotent skip",
-          "next_phase": "STABILIZATION"
-        },
-        {
-          "status": "HUMAN_APPROVAL_REQUIRED",
-          "batch": "BATCH_03A",
-          "phase": "STABILIZATION",
-          "run_id": "run-8ff4330a8ab0",
-          "result_status": "FAILED",
-          "summary": "Unsupported phase: STABILIZATION",
-          "next_phase": "STABILIZATION"
-        }
-      ]
+      "workflow_status": "READY"
     }
   ],
   "final": {
     "status": "IN_PROGRESS",
-    "updated_at": "2026-08-25T02:39:38.945912+00:00",
+    "updated_at": "2026-08-25T03:41:07.651905+00:00",
     "deployment_allowed": false,
     "catalogue_progress": {
       "total_confirmed_services": 454,
-      "researched_services": 78,
-      "verified_services": 72,
-      "published_services": 72,
-      "partially_covered_services": 6,
+      "researched_services": 59,
+      "verified_services": 58,
+      "published_services": 58,
+      "partially_covered_services": 1,
       "deferred_services": 0,
       "blocked_services": 0,
-      "completed_services": 72,
-      "services_remaining": 382,
+      "completed_services": 58,
+      "services_remaining": 396,
       "completed_batches": 4,
-      "total_batches": 17
+      "total_batches": 19
     },
-    "last_completed_batch": "BATCH_04",
-    "current_batch": "BATCH_03A",
-    "workflow_status": "RUNNING",
+    "last_completed_batch": "BATCH_SIM_A",
+    "current_batch": "BATCH_SIM_B",
+    "workflow_status": "READY",
     "overnight_ticks": 2,
-    "total_autonomous_steps": 6
+    "total_autonomous_steps": 10
   },
-  "generated_at": "2026-08-25T02:39:38.946021+00:00"
+  "generated_at": "2026-08-25T03:41:07.651985+00:00"
 }

@@ -1,0 +1,70 @@
+{
+  "service_id": "expatriate-recruiting-agent-verify",
+  "claims": [
+    {
+      "claim_id": "expatriate-recruiting-agent-verify::c-catalogue-authority",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bureau of Manpower, Employment and Training (BMET).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-recruiting-agent-verify::c-official-url-documented",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://old.bmet.gov.bd/BMET/agentlistpreview for Recruiting Agent Verification; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://old.bmet.gov.bd/BMET/agentlistpreview"
+      },
+      "source_ids": [
+        "src-expatriate-recruiting-agent-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-recruiting-agent-verify::c-procedure-overview",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "claim_type": "procedure_step",
+      "claim_text": "Recruiting Agent Verification is a government service under Bureau of Manpower, Employment and Training (BMET) (agent verification). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-expatriate-recruiting-agent-verify-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-recruiting-agent-verify::c-service-identity",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Recruiting Agent Verification (রিক্রুটিং এজেন্ট যাচাই) is a confirmed government service in category expatriate, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-expatriate-recruiting-agent-verify-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

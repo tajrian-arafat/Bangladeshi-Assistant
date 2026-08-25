@@ -1,0 +1,136 @@
+{
+  "service_id": "environment-forest-clearance",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Forest Clearance Certificate",
+  "service_name_bn": "বন/forest clearance",
+  "aliases": [
+    "forest clearance Bangladesh",
+    "tree felling permission"
+  ],
+  "category_id": "environment",
+  "profile_key": "OTHER",
+  "responsible_agency": "Forest Department, Ministry of Environment & Forest",
+  "official_application_url": "https://bforest.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "environment-forest-clearance::c-catalogue-authority",
+      "service_id": "environment-forest-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Forest Department, Ministry of Environment & Forest.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "environment-forest-clearance::c-official-url-documented",
+      "service_id": "environment-forest-clearance",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bforest.gov.bd/ for Forest Clearance Certificate; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bforest.gov.bd/"
+      },
+      "source_ids": [
+        "src-environment-forest-clearance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "environment-forest-clearance::c-procedure-overview",
+      "service_id": "environment-forest-clearance",
+      "claim_type": "procedure_step",
+      "claim_text": "Forest Clearance Certificate is a government service under Forest Department, Ministry of Environment & Forest (forest clearance). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-environment-forest-clearance-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "environment-forest-clearance::c-service-identity",
+      "service_id": "environment-forest-clearance",
+      "claim_type": "eligibility",
+      "claim_text": "Forest Clearance Certificate (বন/forest clearance) is a confirmed government service in category environment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-environment-forest-clearance-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-environment-forest-clearance-official",
+      "service_id": "environment-forest-clearance",
+      "url": "https://bforest.gov.bd/",
+      "title": "Forest Clearance Certificate",
+      "authority_id": "forest-department-ministry-of-environment-forest",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bforest.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:27:12.266947+00:00"
+      },
+      "evidence_locator": "probe:https://bforest.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-environment-forest-clearance-portal-unreachable",
+      "service_id": "environment-forest-clearance",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Forest Clearance Certificate.",
+      "severity": "MEDIUM",
+      "url": "https://bforest.gov.bd/"
+    },
+    {
+      "gap_id": "gap-environment-forest-clearance-fee-unverified",
+      "service_id": "environment-forest-clearance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Forest Clearance Certificate.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-environment-forest-clearance-documents-unverified",
+      "service_id": "environment-forest-clearance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Forest Clearance Certificate.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "task_id": "BATCH_05:RESEARCH:run-8e9d950ab72a-research",
+  "batch_id": "BATCH_05",
+  "batch_slug": "batch-05-land",
+  "phase": "RESEARCH",
+  "run_id": "run-8e9d950ab72a-research",
+  "service_ids": [
+    "land-deed-registration",
+    "land-dlrms-application-track",
+    "land-khatian-certified-copy",
+    "land-khatian-correction",
+    "land-khatian-online-copy",
+    "land-mortgage-info-search",
+    "land-mouza-map",
+    "land-mutation-apply",
+    "land-mutation-dcr",
+    "land-mutation-khatian-search",
+    "land-mutation-review",
+    "land-mutation-track",
+    "land-partition-consolidation",
+    "land-survey-khatian-search",
+    "local-upazila-land-tax-payment"
+  ],
+  "service_names": {
+    "land-deed-registration": "Deed Registration (Sub-Registry)",
+    "land-dlrms-application-track": "Land Record Application Tracking (DLRMS)",
+    "land-khatian-certified-copy": "Certified Khatian Copy",
+    "land-khatian-correction": "Khatian Record Correction",
+    "land-khatian-online-copy": "Online Khatian Copy",
+    "land-mortgage-info-search": "Land Mortgage Information Search",
+    "land-mouza-map": "Mouza Map Request",
+    "land-mutation-apply": "Land Mutation (Namjari)",
+    "land-mutation-dcr": "Mutation DCR and Khatian Download",
+    "land-mutation-khatian-search": "Mutation Khatian Search",
+    "land-mutation-review": "Mutation Review Application",
+    "land-mutation-track": "Mutation Application Tracking",
+    "land-partition-consolidation": "Land Partition and Consolidation (Record Correction)",
+    "land-survey-khatian-search": "Survey Khatian Search",
+    "local-upazila-land-tax-payment": "Upazila Land Development Tax Payment"
+  },
+  "domain": "land",
+  "project_state": {},
+  "previous_artifacts": [],
+  "knowledge_gaps": [],
+  "known_conflicts": [],
+  "required_outputs": [
+    "data/research/raw/batch-05-land/scope.json",
+    "data/research/raw/batch-05-land/services_index.json",
+    "data/research/raw/batch-05-land/services/*.json",
+    "data/research/raw/batch-05-land/claims.json",
+    "data/research/raw/batch-05-land/sources.json",
+    "data/research/raw/batch-05-land/conflicts.json",
+    "data/research/raw/batch-05-land/knowledge_gaps.json",
+    "data/research/raw/batch-05-land/metadata.json",
+    "docs/research/batch-05-land-research.md",
+    ".automation/runs/run-8e9d950ab72a-research/result.json"
+  ],
+  "result_schema": "automation.schemas.result.PhaseResult",
+  "safety_constraints": [
+    "LOCAL_DEV_ONLY — deployment_allowed must remain false",
+    "Do NOT deploy, merge to main, or use external paid AI APIs",
+    "Never publish UNVERIFIED/CONFLICTING claims as authoritative",
+    "Write validated result.json — do not mutate project_state.json directly"
+  ],
+  "deployment_locked": true,
+  "no_external_paid_api": true,
+  "prompt_text": "# BDA Cloud Task — RESEARCH\n\n**Batch:** BATCH_05 (Land & Property Records)\n**Run ID:** run-8e9d950ab72a-research\n\n## Safety\n- LOCAL_DEV_ONLY — deployment_allowed must remain false\n- Do NOT deploy, merge to main, or use external paid AI APIs\n- Never publish UNVERIFIED/CONFLICTING claims as authoritative\n- Write validated result.json — do not mutate project_state.json directly\n\n## Required outputs\n- `data/research/raw/batch-05-land/scope.json`\n- `data/research/raw/batch-05-land/services_index.json`\n- `data/research/raw/batch-05-land/services/*.json`\n- `data/research/raw/batch-05-land/claims.json`\n- `data/research/raw/batch-05-land/sources.json`\n- `data/research/raw/batch-05-land/conflicts.json`\n- `data/research/raw/batch-05-land/knowledge_gaps.json`\n- `data/research/raw/batch-05-land/metadata.json`\n- `docs/research/batch-05-land-research.md`\n- `.automation/runs/run-8e9d950ab72a-research/result.json`\n\n## Context\n```json\n{\n  \"batch\": {\n    \"batch_id\": \"BATCH_05\",\n    \"slug\": \"batch-05-land\",\n    \"name\": \"Land & Property Records\",\n    \"status\": \"IN_PROGRESS\",\n    \"service_ids\": [\n      \"land-deed-registration\",\n      \"land-dlrms-application-track\",\n      \"land-khatian-certified-copy\",\n      \"land-khatian-correction\",\n      \"land-khatian-online-copy\",\n      \"land-mortgage-info-search\",\n      \"land-mouza-map\",\n      \"land-mutation-apply\",\n      \"land-mutation-dcr\",\n      \"land-mutation-khatian-search\",\n      \"land-mutation-review\",\n      \"land-mutation-track\",\n      \"land-partition-consolidation\",\n      \"land-survey-khatian-search\",\n      \"local-upazila-land-tax-payment\"\n    ],\n    \"service_count\": 15,\n    \"phases_completed\": []\n  },\n  \"phase\": \"RESEARCH\",\n  \"run_id\": \"run-8e9d950ab72a-research\",\n  \"service_ids\": [\n    \"land-deed-registration\",\n    \"land-dlrms-application-track\",\n    \"land-khatian-certified-copy\",\n    \"land-khatian-correction\",\n    \"land-khatian-online-copy\",\n    \"land-mortgage-info-search\",\n    \"land-mouza-map\",\n    \"land-mutation-apply\",\n    \"land-mutation-dcr\",\n    \"land-mutation-khatian-search\",\n    \"land-mutation-review\",\n    \"land-mutation-track\",\n    \"land-partition-consolidation\",\n    \"land-survey-khatian-search\",\n    \"local-upazila-land-tax-payment\"\n  ],\n  \"gaps\": [],\n  \"conflicts\": []\n}\n```\n\n## Phase instructions\n# Research phase prompt\n\nFollow `docs/research/BATCH_RESEARCH_TEMPLATE.md` exactly.\n\n## Goals\n- Identify in-scope services from catalogue\n- Search broadly; prioritize Tier 1–2 official sources\n- Separate official / practical / discovery evidence\n- Create atomic claims with provenance\n- Record conflicts and knowledge gaps\n- **Never publish**\n- **Never mark VERIFIED** because a source merely exists\n\n## Outputs\n- `data/research/raw/<batch-slug>/services/*.json`\n- `data/research/raw/<batch-slug>/claims.json`\n- `data/research/raw/<batch-slug>/sources.json`\n- `data/research/raw/<batch-slug>/conflicts.json`\n- `data/research/raw/<batch-slug>/knowledge_gaps.json`\n\nWrite `result.json` when complete.\n\n\nFollow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.\nWrite machine-readable `.automation/runs/run-8e9d950ab72a-research/result.json` when complete.\n",
+  "metadata": {
+    "created_at": "2026-08-25T02:44:25.193961+00:00"
+  }
+}

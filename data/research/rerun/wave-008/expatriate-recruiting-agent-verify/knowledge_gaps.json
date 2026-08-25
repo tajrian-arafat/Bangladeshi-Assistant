@@ -1,0 +1,27 @@
+{
+  "service_id": "expatriate-recruiting-agent-verify",
+  "gaps": [
+    {
+      "gap_id": "gap-expatriate-recruiting-agent-verify-portal-unreachable",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Recruiting Agent Verification.",
+      "severity": "MEDIUM",
+      "url": "https://old.bmet.gov.bd/BMET/agentlistpreview"
+    },
+    {
+      "gap_id": "gap-expatriate-recruiting-agent-verify-fee-unverified",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Recruiting Agent Verification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-expatriate-recruiting-agent-verify-documents-unverified",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Recruiting Agent Verification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

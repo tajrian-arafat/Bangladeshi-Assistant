@@ -1,0 +1,70 @@
+{
+  "service_id": "business-society-registration",
+  "claims": [
+    {
+      "claim_id": "business-society-registration::c-catalogue-authority",
+      "service_id": "business-society-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Registrar of Joint Stock Companies and Firms (RJSC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-society-registration::c-official-url-documented",
+      "service_id": "business-society-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://app.roc.gov.bd/Guidlines/Download/Downloads.htm for Society Registration; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://app.roc.gov.bd/Guidlines/Download/Downloads.htm"
+      },
+      "source_ids": [
+        "src-business-society-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-society-registration::c-procedure-overview",
+      "service_id": "business-society-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Society Registration is a government service under Registrar of Joint Stock Companies and Firms (RJSC) (society). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-society-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "business-society-registration::c-service-identity",
+      "service_id": "business-society-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Society Registration (সোসাইটি নিবন্ধন) is a confirmed government service in category registrations, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-business-society-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "service_id": "expatriate-recruiting-agent-verify",
+  "batch_id": "batch-10-employment-migration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Recruiting Agent Verification",
+  "service_name_bn": "রিক্রুটিং এজেন্ট যাচাই",
+  "aliases": [
+    "RL agent list",
+    "BMET agent check"
+  ],
+  "category_id": "expatriate",
+  "responsible_agency": "Bureau of Manpower, Employment and Training (BMET)",
+  "official_application_url": "https://old.bmet.gov.bd/BMET/agentlistpreview",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "expatriate-recruiting-agent-verify::c-application-portal",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "claim_type": "application_url",
+      "claim_text": "Recruiting Agent Verification is associated with NBR e-service portal https://old.bmet.gov.bd/BMET/agentlistpreview.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-expatriate-recruiting-agent-verify",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "expatriate-recruiting-agent-verify::c-responsible-authority",
+      "service_id": "expatriate-recruiting-agent-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bureau of Manpower, Employment and Training (BMET).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "service_id": "bpdb-high-tension-connection",
+  "sources": [
+    {
+      "source_id": "src-bpdb-high-tension-connection-official",
+      "service_id": "bpdb-high-tension-connection",
+      "url": "https://bpdb.gov.bd/",
+      "title": "BPDB High Tension Connection Application",
+      "authority_id": "bangladesh-power-development-board-bpdb",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bpdb.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:23:20.685521+00:00"
+      },
+      "evidence_locator": "probe:https://bpdb.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

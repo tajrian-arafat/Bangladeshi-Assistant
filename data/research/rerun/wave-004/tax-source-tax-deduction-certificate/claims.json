@@ -1,0 +1,72 @@
+{
+  "service_id": "tax-source-tax-deduction-certificate",
+  "claims": [
+    {
+      "claim_id": "tax-source-tax-deduction-certificate::c-catalogue-authority",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-source-tax-deduction-certificate::c-official-portal",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "claim_type": "application_url",
+      "claim_text": "Tax Deduction at Source Certificate official information is published at https://secure.incometax.gov.bd (page title: - NBR TIN Registration).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://secure.incometax.gov.bd"
+      },
+      "source_ids": [
+        "src-tax-source-tax-deduction-certificate-official"
+      ],
+      "evidence_ids": [
+        "ev-tax-source-tax-deduction-certificate::c-official-portal-src-tax-source-tax-deduction-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-source-tax-deduction-certificate::c-procedure-overview",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "claim_type": "procedure_step",
+      "claim_text": "Tax Deduction at Source Certificate is a government service under National Board of Revenue (NBR) (withholding). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-source-tax-deduction-certificate-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "tax-source-tax-deduction-certificate::c-service-identity",
+      "service_id": "tax-source-tax-deduction-certificate",
+      "claim_type": "eligibility",
+      "claim_text": "Tax Deduction at Source Certificate (উৎস কর সনদ (TDS/AIT certificate)) is a confirmed government service in category tax, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-tax-source-tax-deduction-certificate-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

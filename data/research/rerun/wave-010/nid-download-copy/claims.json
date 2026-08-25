@@ -1,0 +1,72 @@
+{
+  "service_id": "nid-download-copy",
+  "claims": [
+    {
+      "claim_id": "nid-download-copy::c-catalogue-authority",
+      "service_id": "nid-download-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-download-copy::c-official-portal",
+      "service_id": "nid-download-copy",
+      "claim_type": "application_url",
+      "claim_text": "Download NID Card Copy official information is published at https://services.nidw.gov.bd/nid-pub/?locale=en (page title: Bangladesh NID Application System).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/?locale=en"
+      },
+      "source_ids": [
+        "src-nid-download-copy-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-download-copy::c-official-portal-src-nid-download-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-download-copy::c-procedure-overview",
+      "service_id": "nid-download-copy",
+      "claim_type": "procedure_step",
+      "claim_text": "Download NID Card Copy is a government service under Bangladesh Election Commission (NID Wing) (nid delivery). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-download-copy-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-download-copy::c-service-identity",
+      "service_id": "nid-download-copy",
+      "claim_type": "eligibility",
+      "claim_text": "Download NID Card Copy (এনআইডি কপি ডাউনলোড) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-download-copy-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "judiciary-virtual-court-services",
+  "claims": [
+    {
+      "claim_id": "judiciary-virtual-court-services::c-catalogue-authority",
+      "service_id": "judiciary-virtual-court-services",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Law and Justice Division / Supreme Court of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-virtual-court-services::c-official-portal",
+      "service_id": "judiciary-virtual-court-services",
+      "claim_type": "application_url",
+      "claim_text": "Virtual Court Services official information is published at https://supremecourt.gov.bd/ (page title: Home : Supreme Court of Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://supremecourt.gov.bd/"
+      },
+      "source_ids": [
+        "src-judiciary-virtual-court-services-official"
+      ],
+      "evidence_ids": [
+        "ev-judiciary-virtual-court-services::c-official-portal-src-judiciary-virtual-court-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-virtual-court-services::c-procedure-overview",
+      "service_id": "judiciary-virtual-court-services",
+      "claim_type": "procedure_step",
+      "claim_text": "Virtual Court Services is a government service under Law and Justice Division / Supreme Court of Bangladesh (virtual court). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-virtual-court-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "judiciary-virtual-court-services::c-service-identity",
+      "service_id": "judiciary-virtual-court-services",
+      "claim_type": "eligibility",
+      "claim_text": "Virtual Court Services (ভার্চুয়াল/অনলাইন আদালত সেবা) is a confirmed government service in category judiciary, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-judiciary-virtual-court-services-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

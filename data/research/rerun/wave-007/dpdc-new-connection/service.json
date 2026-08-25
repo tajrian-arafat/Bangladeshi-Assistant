@@ -1,0 +1,132 @@
+{
+  "service_id": "dpdc-new-connection",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "DPDC New Electricity Connection",
+  "service_name_bn": "ডিপিডিসি নতুন বিদ্যুৎ সংযোগ",
+  "aliases": [
+    "DPDC connection application"
+  ],
+  "category_id": "utilities",
+  "profile_key": "UTILITIES",
+  "responsible_agency": "Dhaka Power Distribution Company Limited (DPDC)",
+  "official_application_url": "https://onlineapplication.dpdc.org.bd/frm_main_application.php",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "dpdc-new-connection::c-catalogue-authority",
+      "service_id": "dpdc-new-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Dhaka Power Distribution Company Limited (DPDC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-new-connection::c-official-portal",
+      "service_id": "dpdc-new-connection",
+      "claim_type": "application_url",
+      "claim_text": "DPDC New Electricity Connection official information is published at https://onlineapplication.dpdc.org.bd/frm_main_application.php (page title: New Connection | Application).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://onlineapplication.dpdc.org.bd/frm_main_application.php"
+      },
+      "source_ids": [
+        "src-dpdc-new-connection-official"
+      ],
+      "evidence_ids": [
+        "ev-dpdc-new-connection::c-official-portal-src-dpdc-new-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-new-connection::c-procedure-overview",
+      "service_id": "dpdc-new-connection",
+      "claim_type": "procedure_step",
+      "claim_text": "DPDC New Electricity Connection is a government service under Dhaka Power Distribution Company Limited (DPDC) (electricity connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-new-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dpdc-new-connection::c-service-identity",
+      "service_id": "dpdc-new-connection",
+      "claim_type": "eligibility",
+      "claim_text": "DPDC New Electricity Connection (ডিপিডিসি নতুন বিদ্যুৎ সংযোগ) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dpdc-new-connection-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-dpdc-new-connection-official",
+      "service_id": "dpdc-new-connection",
+      "url": "https://onlineapplication.dpdc.org.bd/frm_main_application.php",
+      "title": "New Connection | Application",
+      "authority_id": "dhaka-power-distribution-company-limited-dpdc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://onlineapplication.dpdc.org.bd/frm_main_application.php",
+        "status_code": 200,
+        "reachable": true,
+        "title": "New Connection | Application",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "5681c81330c3bce4",
+        "retrieved_at": "2026-08-25T03:26:31.456128+00:00"
+      },
+      "evidence_locator": "probe:https://onlineapplication.dpdc.org.bd/frm_main_application.php"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-dpdc-new-connection-fee-unverified",
+      "service_id": "dpdc-new-connection",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for DPDC New Electricity Connection.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dpdc-new-connection-documents-unverified",
+      "service_id": "dpdc-new-connection",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for DPDC New Electricity Connection.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

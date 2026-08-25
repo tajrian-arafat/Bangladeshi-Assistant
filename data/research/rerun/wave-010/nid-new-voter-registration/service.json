@@ -1,0 +1,134 @@
+{
+  "service_id": "nid-new-voter-registration",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "New Voter and National ID Registration",
+  "service_name_bn": "নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন",
+  "aliases": [
+    "new NID",
+    "voter registration",
+    "NID application"
+  ],
+  "category_id": "identity",
+  "profile_key": "IDENTITY_CIVIL",
+  "responsible_agency": "Bangladesh Election Commission (NID Wing)",
+  "official_application_url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "nid-new-voter-registration::c-catalogue-authority",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-official-portal",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "application_url",
+      "claim_text": "New Voter and National ID Registration official information is published at https://services.nidw.gov.bd/nid-pub/register-account?locale=en (page title: Bangladesh NID Application System | New Register).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en"
+      },
+      "source_ids": [
+        "src-nid-new-voter-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-new-voter-registration::c-official-portal-src-nid-new-voter-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-procedure-overview",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "New Voter and National ID Registration is a government service under Bangladesh Election Commission (NID Wing) (nid registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-new-voter-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-new-voter-registration::c-service-identity",
+      "service_id": "nid-new-voter-registration",
+      "claim_type": "eligibility",
+      "claim_text": "New Voter and National ID Registration (নতুন ভোটার/জাতীয় পরিচয়পত্র নিবন্ধন) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-new-voter-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-nid-new-voter-registration-official",
+      "service_id": "nid-new-voter-registration",
+      "url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+      "title": "Bangladesh NID Application System | New Register",
+      "authority_id": "ec-nid",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://services.nidw.gov.bd/nid-pub/register-account?locale=en",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Bangladesh NID Application System | New Register",
+        "content_type": "text/html;charset=UTF-8",
+        "content_hash": "5dc8081e10e71be8",
+        "retrieved_at": "2026-08-25T03:29:09.519607+00:00"
+      },
+      "evidence_locator": "probe:https://services.nidw.gov.bd/nid-pub/register-account?locale=en"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-nid-new-voter-registration-fee-unverified",
+      "service_id": "nid-new-voter-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for New Voter and National ID Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-nid-new-voter-registration-documents-unverified",
+      "service_id": "nid-new-voter-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for New Voter and National ID Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "service_id": "civil-marriage-certificate-search",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-civil-marriage-certificate-search-fee-unverified",
+      "service_id": "civil-marriage-certificate-search",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Completed Marriage Certificate Search.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-civil-marriage-certificate-search-documents-unverified",
+      "service_id": "civil-marriage-certificate-search",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Completed Marriage Certificate Search.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

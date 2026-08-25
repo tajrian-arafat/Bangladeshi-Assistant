@@ -1,0 +1,72 @@
+{
+  "service_id": "dm-lims-lightning",
+  "claims": [
+    {
+      "claim_id": "dm-lims-lightning::c-catalogue-authority",
+      "service_id": "dm-lims-lightning",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Disaster Management (DDM).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-lims-lightning::c-official-portal",
+      "service_id": "dm-lims-lightning",
+      "claim_type": "application_url",
+      "claim_text": "Lightning Information Management System (LIMS) official information is published at http://ddm.portal.gov.bd/pages/internal-eservices/lightning-information-management-system-lims-ec3337-6922d96fdbfbab28ce04c94a (page title: Lightning Information Management System (Lims) | অভ্যন্তরীণ ই সেবা | দুর্যোগ ব্যবস্থাপনা অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://ddm.portal.gov.bd/pages/internal-eservices/lightning-information-management-system-lims-ec3337-6922d96fdbfbab28ce04c94a"
+      },
+      "source_ids": [
+        "src-dm-lims-lightning-official"
+      ],
+      "evidence_ids": [
+        "ev-dm-lims-lightning::c-official-portal-src-dm-lims-lightning-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-lims-lightning::c-procedure-overview",
+      "service_id": "dm-lims-lightning",
+      "claim_type": "procedure_step",
+      "claim_text": "Lightning Information Management System (LIMS) is a government service under Department of Disaster Management (DDM) (early warning). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-lims-lightning-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-lims-lightning::c-service-identity",
+      "service_id": "dm-lims-lightning",
+      "claim_type": "eligibility",
+      "claim_text": "Lightning Information Management System (LIMS) (Lightning Information Management System (LIMS)) is a confirmed government service in category disaster_relief, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-lims-lightning-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

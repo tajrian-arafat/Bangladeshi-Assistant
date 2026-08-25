@@ -1,0 +1,133 @@
+{
+  "service_id": "titas-domestic-gas-connection",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Titas Gas Domestic Connection Application",
+  "service_name_bn": "তিতাস গ্যাস গৃহস্থ সংযোগ",
+  "aliases": [
+    "household gas connection",
+    "TGTDCL domestic gas"
+  ],
+  "category_id": "utilities",
+  "profile_key": "UTILITIES",
+  "responsible_agency": "Titas Gas Transmission and Distribution PLC",
+  "official_application_url": "https://onlineapplication.titasgas.org.bd/application/domestic/add",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "titas-domestic-gas-connection::c-catalogue-authority",
+      "service_id": "titas-domestic-gas-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Titas Gas Transmission and Distribution PLC.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "titas-domestic-gas-connection::c-official-portal",
+      "service_id": "titas-domestic-gas-connection",
+      "claim_type": "application_url",
+      "claim_text": "Titas Gas Domestic Connection Application official information is published at https://onlineapplication.titasgas.org.bd/application/domestic/add (page title: TGTDCL Online Application).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://onlineapplication.titasgas.org.bd/application/domestic/add"
+      },
+      "source_ids": [
+        "src-titas-domestic-gas-connection-official"
+      ],
+      "evidence_ids": [
+        "ev-titas-domestic-gas-connection::c-official-portal-src-titas-domestic-gas-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "titas-domestic-gas-connection::c-procedure-overview",
+      "service_id": "titas-domestic-gas-connection",
+      "claim_type": "procedure_step",
+      "claim_text": "Titas Gas Domestic Connection Application is a government service under Titas Gas Transmission and Distribution PLC (gas connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-titas-domestic-gas-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "titas-domestic-gas-connection::c-service-identity",
+      "service_id": "titas-domestic-gas-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Titas Gas Domestic Connection Application (তিতাস গ্যাস গৃহস্থ সংযোগ) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-titas-domestic-gas-connection-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-titas-domestic-gas-connection-official",
+      "service_id": "titas-domestic-gas-connection",
+      "url": "https://onlineapplication.titasgas.org.bd/application/domestic/add",
+      "title": "TGTDCL Online Application",
+      "authority_id": "titas-gas-transmission-and-distribution-plc",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://onlineapplication.titasgas.org.bd/application/domestic/add",
+        "status_code": 200,
+        "reachable": true,
+        "title": "TGTDCL Online Application",
+        "content_type": "text/html;charset=ISO-8859-1",
+        "content_hash": "e7acb5dc881defe1",
+        "retrieved_at": "2026-08-25T03:36:44.217152+00:00"
+      },
+      "evidence_locator": "probe:https://onlineapplication.titasgas.org.bd/application/domestic/add"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-titas-domestic-gas-connection-fee-unverified",
+      "service_id": "titas-domestic-gas-connection",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Titas Gas Domestic Connection Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-titas-domestic-gas-connection-documents-unverified",
+      "service_id": "titas-domestic-gas-connection",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Titas Gas Domestic Connection Application.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

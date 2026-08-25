@@ -1,0 +1,72 @@
+{
+  "service_id": "women-ngo-registration",
+  "claims": [
+    {
+      "claim_id": "women-ngo-registration::c-catalogue-authority",
+      "service_id": "women-ngo-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Women Affairs (DWA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-ngo-registration::c-official-portal",
+      "service_id": "women-ngo-registration",
+      "claim_type": "application_url",
+      "claim_text": "Voluntary Women Organization Online Registration official information is published at http://dwa.portal.gov.bd/ (page title: হোম | মহিলা বিষয়ক অধিদপ্তর).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "http://dwa.portal.gov.bd/"
+      },
+      "source_ids": [
+        "src-women-ngo-registration-official"
+      ],
+      "evidence_ids": [
+        "ev-women-ngo-registration::c-official-portal-src-women-ngo-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-ngo-registration::c-procedure-overview",
+      "service_id": "women-ngo-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Voluntary Women Organization Online Registration is a government service under Department of Women Affairs (DWA) (registration). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-ngo-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "women-ngo-registration::c-service-identity",
+      "service_id": "women-ngo-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Voluntary Women Organization Online Registration (স্বেচ্ছাসেবী মহিলা সংগঠন অনলাইন নিবন্ধন) is a confirmed government service in category women_children, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-women-ngo-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "service_id": "housing-cda-building-permit",
+  "sources": [
+    {
+      "source_id": "src-housing-cda-building-permit-official",
+      "service_id": "housing-cda-building-permit",
+      "url": "https://cda.gov.bd/",
+      "title": "Chattogram Development Authority Building Plan Approval",
+      "authority_id": "chattogram-development-authority-cda",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://cda.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:27:29.674075+00:00"
+      },
+      "evidence_locator": "probe:https://cda.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "service_id": "migration-e-apostille",
+  "claims": [
+    {
+      "claim_id": "migration-e-apostille::c-catalogue-authority",
+      "service_id": "migration-e-apostille",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Foreign Affairs (MOFA).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "migration-e-apostille::c-official-url-documented",
+      "service_id": "migration-e-apostille",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://apostille.mygov.bd/ for e-Apostille Document Authentication; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://apostille.mygov.bd/"
+      },
+      "source_ids": [
+        "src-migration-e-apostille-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "migration-e-apostille::c-procedure-overview",
+      "service_id": "migration-e-apostille",
+      "claim_type": "procedure_step",
+      "claim_text": "e-Apostille Document Authentication is a government service under Ministry of Foreign Affairs (MOFA) (document authentication). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-migration-e-apostille-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "migration-e-apostille::c-service-identity",
+      "service_id": "migration-e-apostille",
+      "claim_type": "eligibility",
+      "claim_text": "e-Apostille Document Authentication (ই-আপোস্টিল (MOFA)) is a confirmed government service in category passport_immigration, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-migration-e-apostille-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "titas-industry-gas-connection",
+  "claims": [
+    {
+      "claim_id": "titas-industry-gas-connection::c-catalogue-authority",
+      "service_id": "titas-industry-gas-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Titas Gas Transmission and Distribution PLC.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "titas-industry-gas-connection::c-official-portal",
+      "service_id": "titas-industry-gas-connection",
+      "claim_type": "application_url",
+      "claim_text": "Titas Gas Industry or Captive Power Connection official information is published at https://titasonlineapp.titasgas.org.bd/login (page title: Titas Oss).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://titasonlineapp.titasgas.org.bd/login"
+      },
+      "source_ids": [
+        "src-titas-industry-gas-connection-official"
+      ],
+      "evidence_ids": [
+        "ev-titas-industry-gas-connection::c-official-portal-src-titas-industry-gas-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "titas-industry-gas-connection::c-procedure-overview",
+      "service_id": "titas-industry-gas-connection",
+      "claim_type": "procedure_step",
+      "claim_text": "Titas Gas Industry or Captive Power Connection is a government service under Titas Gas Transmission and Distribution PLC (gas connection). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-titas-industry-gas-connection-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "titas-industry-gas-connection::c-service-identity",
+      "service_id": "titas-industry-gas-connection",
+      "claim_type": "eligibility",
+      "claim_text": "Titas Gas Industry or Captive Power Connection (তিতাস গ্যাস শিল্প/ক্যাপটিভ পাওয়ার সংযোগ) is a confirmed government service in category utilities, scope LOCAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-titas-industry-gas-connection-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

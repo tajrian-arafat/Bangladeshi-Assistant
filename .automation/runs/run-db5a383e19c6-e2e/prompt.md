@@ -1,0 +1,2624 @@
+# BDA Cloud Task — E2E
+
+**Batch:** BATCH_08 (Social Protection / Disability / Allowances)
+**Run ID:** run-db5a383e19c6-e2e
+
+## Safety
+- LOCAL_DEV_ONLY — deployment_allowed must remain false
+- Do NOT deploy, merge to main, or use external paid AI APIs
+- Never publish UNVERIFIED/CONFLICTING claims as authoritative
+- Write validated result.json — do not mutate project_state.json directly
+
+## Required outputs
+- `data/evaluation/batch-08-social-protection/queries.json`
+- `data/evaluation/batch-08-social-protection/summary.json`
+- `docs/evaluation/batch-08-social-protection-publication-e2e.md`
+- `.automation/runs/run-db5a383e19c6-e2e/result.json`
+
+## Context
+```json
+{
+  "batch": {
+    "batch_id": "BATCH_08",
+    "slug": "batch-08-social-protection",
+    "name": "Social Protection / Disability / Allowances",
+    "status": "IN_PROGRESS",
+    "service_ids": [
+      "disability-dis-registration",
+      "ff-g2p-electronic-payment",
+      "ff-honorarium-allowance",
+      "ff-mis-freedom-fighter-list",
+      "ff-welfare-trust-enrollment",
+      "food-ministry-vgf-card",
+      "snp-adaptation-to-climate-change-and-rehabilitation-of-livelihood",
+      "snp-agriculture-infrastructure-improvement",
+      "snp-agriculture-rehabilitation",
+      "snp-allowances-for-distressed-cultural-personalities-activists",
+      "snp-allowances-for-the-financially-insolvent-disabled",
+      "snp-allowances-for-the-widow-deserted-and-destitute-women",
+      "snp-allowances-for-urban-low-income-lactating-mothers",
+      "snp-ashroyan-2-project",
+      "snp-assistance-for-cancer-kidney-and-liver-cirrhosis-patients",
+      "snp-bangladesh-climate-resilient-participatory-afforestation-and-reforestation",
+      "snp-bangladesh-rural-water-supply-and-sanitation",
+      "snp-block-allocation-for-disaster-management",
+      "snp-block-allocation-for-various-programme",
+      "snp-capitation-grants-for-orphan-students-in-non-gov-orphanages",
+      "snp-char-development-and-settlement",
+      "snp-char-livelihood-program",
+      "snp-child-development-center",
+      "snp-child-sensitive-social-protection-in-bangladesh",
+      "snp-clinical-contraception-services-delivery",
+      "snp-coastal-climate-resilient-infrastructure-improvement",
+      "snp-community-based-health-care",
+      "snp-comprehensive-disaster-management-programme",
+      "snp-comprehensive-village-development-programme",
+      "snp-conservancy-workers-colony",
+      "snp-construction-of-hostel-for-govt-orphanage",
+      "snp-construction-of-residence-for-landless-poor-freedom-fighters",
+      "snp-day-care-program-for-lower-and-middle-income-working-women",
+      "snp-disaster-and-climate-resilient",
+      "snp-early-learning-for-child-development",
+      "snp-economic-empowerment-of-the-poorest-in-bangladesh",
+      "snp-emergency-2007-cyclone-recovery-and-restoration",
+      "snp-employment-generation-programme-for-the-poor",
+      "snp-employment-of-ultra-poor-for-northern-areas",
+      "snp-employment-opportunities-for-unemployed-youth-in-7-northern-district",
+      "snp-enabling-environment-for-child-right",
+      "snp-essential-services-delivery",
+      "snp-establishment-of-autistic-academy-in-bangladesh",
+      "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "snp-expansion-of-polli-daridro-bimochon-foundation-for-poverty-alleviation-and-self-employment",
+      "snp-family-planning-field-services-delivery",
+      "snp-fishermen-id-card-and-fisheries-project",
+      "snp-food-assistance-in-ctg-hill-tracts-area",
+      "snp-food-for-work-ffw",
+      "snp-food-security-through-enhanced-agricultural-production-income-value-addition-and-marketing-in-bangladesh",
+      "snp-fund-for-assistance-to-the-small-farmer-and-poultry-farms",
+      "snp-fund-for-climate-change",
+      "snp-fund-for-micro-credit-through-pksf",
+      "snp-fund-for-the-welfare-of-burnt-and-disabled",
+      "snp-general-relief-activities",
+      "snp-generation-breakthrough",
+      "snp-grants-for-residents-in-government-orphanages-and-other-institutions",
+      "snp-grants-for-the-schools-for-the-disabled",
+      "snp-gratuitous-relief-gr",
+      "snp-gucchagram-climate-victims-rehabilitation",
+      "snp-haor-infrastructure-and-livelihood-development",
+      "snp-health-economic-financing-and-gnsp",
+      "snp-higher-secondary-stipend",
+      "snp-honorarium-for-freedom-fighters",
+      "snp-honorarium-medical-allowances-for-injured-freedom-fighters",
+      "snp-housing-support",
+      "snp-improving-working-condition-in-the-ready-made-garments-sector",
+      "snp-income-support-program-for-the-poorest",
+      "snp-initiative-for-development-empowerment-awareness-livelihood-kurigram",
+      "snp-institute-of-pediatric-neuro-disorder",
+      "snp-integrated-fisheries-livestock-development-in-flood-controlled-areas-water-bodies",
+      "snp-integrated-rural-employment-support-project-for-the-poor-women",
+      "snp-integrated-support-to-poverty-and-inequality-reduction-through-enterprise-development",
+      "snp-investment-component-for-vulnerable-group-development",
+      "snp-joyeeta-foundation",
+      "snp-lump-provision-for-development-of-special-areas-except-hill-tracts",
+      "snp-maternal-child-reproductive-and-adolescent-health",
+      "snp-maternal-neo-natal-child-and-adolescent-health",
+      "snp-maternity-allowance-programme-for-the-poor",
+      "snp-micro-credit-for-women-self-employment",
+      "snp-mujibnagar-integrated-agricultural-development",
+      "snp-multipurpose-disaster-shelter-construction",
+      "snp-national-legal-aid-services",
+      "snp-national-nutrition-services",
+      "snp-national-service",
+      "snp-non-bengali-rehabilitation",
+      "snp-northern-area-reduction-of-poverty",
+      "snp-old-age-allowance",
+      "snp-one-house-one-farm",
+      "snp-open-market-sales-oms",
+      "snp-participatory-small-scale-water-resource-development",
+      "snp-pension-for-retired-government-employees-and-their-families",
+      "snp-poverty-reduction-livelihood-security-for-the-people-of-economically-backward-area",
+      "snp-poverty-reduction-through-inclusive-and-sustainable-markets",
+      "snp-poverty-reduction-through-urban-partnership",
+      "snp-primary-school-stipend",
+      "snp-pro-poor-slum-integration",
+      "snp-programme-for-improving-the-livelihood-of-harijan-dalit-bade-community",
+      "snp-programme-for-improving-the-livelihood-of-trans-gender-hijra",
+      "snp-programme-for-livelihood-improvement-of-tea-garden-labourers",
+      "snp-promotion-of-services-opportunity-to-the-disabled-person-in-bangladesh",
+      "snp-ration-for-shaheed-family-and-injured-freedom-fighters",
+      "snp-reaching-out-of-school",
+      "snp-regional-duck-breeding-and-hatchery",
+      "snp-rehabilitation-and-creation-of-alternative-employment-for-beggars-profession",
+      "snp-rehabilitation-of-aila-affected-infrastructure",
+      "snp-rural-development-of-greater-comilla",
+      "snp-rural-employment-and-road-maintenance-program",
+      "snp-rural-infrastructure-development",
+      "snp-rural-livelihood-2nd-phase",
+      "snp-rural-settlement-construction-for-improvement-of-rural-livelihood",
+      "snp-rural-water-supply",
+      "snp-school-feeding-programme",
+      "snp-second-chittagong-hill-tracts-rural-development",
+      "snp-secondary-education-quality-and-access-enhancement-project-seqaep",
+      "snp-secondary-education-sector-investment-program",
+      "snp-secondary-education-stipend",
+      "snp-service-and-assistance-center-for-disabled",
+      "snp-services-for-children-at-risk",
+      "snp-shamaj-kallyan-parishad",
+      "snp-skill-and-employment-programme-in-bangladesh",
+      "snp-skill-and-training-enhancement-project",
+      "snp-skills-for-employment-and-productivity",
+      "snp-skills-for-employment-investment-programme",
+      "snp-social-development-foundation",
+      "snp-social-security-policy-support-ssps-programme",
+      "snp-stipend-for-disabled-students",
+      "snp-stipend-for-female-students-at-bachelor-level",
+      "snp-street-children-rehabilitation-programme",
+      "snp-strengthening-public-financial-management-for-social-protection",
+      "snp-strengthening-women-s-ability-for-productive-new-opportunities-swapno",
+      "snp-support-to-the-urban-health-and-nutrition-to-bangladesh",
+      "snp-swanirvar-training-programme",
+      "snp-t-b-leprosy-communicable-non-communicable-disease",
+      "snp-test-relief-tr-cash",
+      "snp-test-relief-tr-food",
+      "snp-trust-for-the-protection-of-the-persons-with-neurodevelopmental-disabilities",
+      "snp-universal-pension-insurance-scheme",
+      "snp-urban-based-marginal-women-development",
+      "snp-urban-primary-health-care",
+      "snp-urban-public-environmental-health-care",
+      "snp-urban-resilience-project-dncc-ddm",
+      "snp-vulnerable-group-development-vgd",
+      "snp-vulnerable-group-feeding-vgf",
+      "snp-welfare-trust-for-physical-disabilities",
+      "snp-women-s-skill-based-training-for-livelihood",
+      "snp-work-for-money-wfm",
+      "social-allowance-online-application",
+      "women-assistance-programme",
+      "women-child-daycare-benefit",
+      "women-child-helpline-1098",
+      "women-distressed-fund",
+      "women-hostel-benefit",
+      "women-hotline-109",
+      "women-lactating-mothers-allowance",
+      "women-ngo-registration",
+      "women-one-stop-crisis-centre",
+      "women-violence-prevention-cell"
+    ],
+    "service_count": 158,
+    "phases_completed": [
+      "RESEARCH",
+      "VERIFICATION",
+      "GAP_CLOSURE"
+    ]
+  },
+  "phase": "E2E",
+  "run_id": "run-db5a383e19c6-e2e",
+  "service_ids": [
+    "disability-dis-registration",
+    "ff-g2p-electronic-payment",
+    "ff-honorarium-allowance",
+    "ff-mis-freedom-fighter-list",
+    "ff-welfare-trust-enrollment",
+    "food-ministry-vgf-card",
+    "snp-adaptation-to-climate-change-and-rehabilitation-of-livelihood",
+    "snp-agriculture-infrastructure-improvement",
+    "snp-agriculture-rehabilitation",
+    "snp-allowances-for-distressed-cultural-personalities-activists",
+    "snp-allowances-for-the-financially-insolvent-disabled",
+    "snp-allowances-for-the-widow-deserted-and-destitute-women",
+    "snp-allowances-for-urban-low-income-lactating-mothers",
+    "snp-ashroyan-2-project",
+    "snp-assistance-for-cancer-kidney-and-liver-cirrhosis-patients",
+    "snp-bangladesh-climate-resilient-participatory-afforestation-and-reforestation",
+    "snp-bangladesh-rural-water-supply-and-sanitation",
+    "snp-block-allocation-for-disaster-management",
+    "snp-block-allocation-for-various-programme",
+    "snp-capitation-grants-for-orphan-students-in-non-gov-orphanages",
+    "snp-char-development-and-settlement",
+    "snp-char-livelihood-program",
+    "snp-child-development-center",
+    "snp-child-sensitive-social-protection-in-bangladesh",
+    "snp-clinical-contraception-services-delivery",
+    "snp-coastal-climate-resilient-infrastructure-improvement",
+    "snp-community-based-health-care",
+    "snp-comprehensive-disaster-management-programme",
+    "snp-comprehensive-village-development-programme",
+    "snp-conservancy-workers-colony",
+    "snp-construction-of-hostel-for-govt-orphanage",
+    "snp-construction-of-residence-for-landless-poor-freedom-fighters",
+    "snp-day-care-program-for-lower-and-middle-income-working-women",
+    "snp-disaster-and-climate-resilient",
+    "snp-early-learning-for-child-development",
+    "snp-economic-empowerment-of-the-poorest-in-bangladesh",
+    "snp-emergency-2007-cyclone-recovery-and-restoration",
+    "snp-employment-generation-programme-for-the-poor",
+    "snp-employment-of-ultra-poor-for-northern-areas",
+    "snp-employment-opportunities-for-unemployed-youth-in-7-northern-district",
+    "snp-enabling-environment-for-child-right",
+    "snp-essential-services-delivery",
+    "snp-establishment-of-autistic-academy-in-bangladesh",
+    "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+    "snp-expansion-of-polli-daridro-bimochon-foundation-for-poverty-alleviation-and-self-employment",
+    "snp-family-planning-field-services-delivery",
+    "snp-fishermen-id-card-and-fisheries-project",
+    "snp-food-assistance-in-ctg-hill-tracts-area",
+    "snp-food-for-work-ffw",
+    "snp-food-security-through-enhanced-agricultural-production-income-value-addition-and-marketing-in-bangladesh",
+    "snp-fund-for-assistance-to-the-small-farmer-and-poultry-farms",
+    "snp-fund-for-climate-change",
+    "snp-fund-for-micro-credit-through-pksf",
+    "snp-fund-for-the-welfare-of-burnt-and-disabled",
+    "snp-general-relief-activities",
+    "snp-generation-breakthrough",
+    "snp-grants-for-residents-in-government-orphanages-and-other-institutions",
+    "snp-grants-for-the-schools-for-the-disabled",
+    "snp-gratuitous-relief-gr",
+    "snp-gucchagram-climate-victims-rehabilitation",
+    "snp-haor-infrastructure-and-livelihood-development",
+    "snp-health-economic-financing-and-gnsp",
+    "snp-higher-secondary-stipend",
+    "snp-honorarium-for-freedom-fighters",
+    "snp-honorarium-medical-allowances-for-injured-freedom-fighters",
+    "snp-housing-support",
+    "snp-improving-working-condition-in-the-ready-made-garments-sector",
+    "snp-income-support-program-for-the-poorest",
+    "snp-initiative-for-development-empowerment-awareness-livelihood-kurigram",
+    "snp-institute-of-pediatric-neuro-disorder",
+    "snp-integrated-fisheries-livestock-development-in-flood-controlled-areas-water-bodies",
+    "snp-integrated-rural-employment-support-project-for-the-poor-women",
+    "snp-integrated-support-to-poverty-and-inequality-reduction-through-enterprise-development",
+    "snp-investment-component-for-vulnerable-group-development",
+    "snp-joyeeta-foundation",
+    "snp-lump-provision-for-development-of-special-areas-except-hill-tracts",
+    "snp-maternal-child-reproductive-and-adolescent-health",
+    "snp-maternal-neo-natal-child-and-adolescent-health",
+    "snp-maternity-allowance-programme-for-the-poor",
+    "snp-micro-credit-for-women-self-employment",
+    "snp-mujibnagar-integrated-agricultural-development",
+    "snp-multipurpose-disaster-shelter-construction",
+    "snp-national-legal-aid-services",
+    "snp-national-nutrition-services",
+    "snp-national-service",
+    "snp-non-bengali-rehabilitation",
+    "snp-northern-area-reduction-of-poverty",
+    "snp-old-age-allowance",
+    "snp-one-house-one-farm",
+    "snp-open-market-sales-oms",
+    "snp-participatory-small-scale-water-resource-development",
+    "snp-pension-for-retired-government-employees-and-their-families",
+    "snp-poverty-reduction-livelihood-security-for-the-people-of-economically-backward-area",
+    "snp-poverty-reduction-through-inclusive-and-sustainable-markets",
+    "snp-poverty-reduction-through-urban-partnership",
+    "snp-primary-school-stipend",
+    "snp-pro-poor-slum-integration",
+    "snp-programme-for-improving-the-livelihood-of-harijan-dalit-bade-community",
+    "snp-programme-for-improving-the-livelihood-of-trans-gender-hijra",
+    "snp-programme-for-livelihood-improvement-of-tea-garden-labourers",
+    "snp-promotion-of-services-opportunity-to-the-disabled-person-in-bangladesh",
+    "snp-ration-for-shaheed-family-and-injured-freedom-fighters",
+    "snp-reaching-out-of-school",
+    "snp-regional-duck-breeding-and-hatchery",
+    "snp-rehabilitation-and-creation-of-alternative-employment-for-beggars-profession",
+    "snp-rehabilitation-of-aila-affected-infrastructure",
+    "snp-rural-development-of-greater-comilla",
+    "snp-rural-employment-and-road-maintenance-program",
+    "snp-rural-infrastructure-development",
+    "snp-rural-livelihood-2nd-phase",
+    "snp-rural-settlement-construction-for-improvement-of-rural-livelihood",
+    "snp-rural-water-supply",
+    "snp-school-feeding-programme",
+    "snp-second-chittagong-hill-tracts-rural-development",
+    "snp-secondary-education-quality-and-access-enhancement-project-seqaep",
+    "snp-secondary-education-sector-investment-program",
+    "snp-secondary-education-stipend",
+    "snp-service-and-assistance-center-for-disabled",
+    "snp-services-for-children-at-risk",
+    "snp-shamaj-kallyan-parishad",
+    "snp-skill-and-employment-programme-in-bangladesh",
+    "snp-skill-and-training-enhancement-project",
+    "snp-skills-for-employment-and-productivity",
+    "snp-skills-for-employment-investment-programme",
+    "snp-social-development-foundation",
+    "snp-social-security-policy-support-ssps-programme",
+    "snp-stipend-for-disabled-students",
+    "snp-stipend-for-female-students-at-bachelor-level",
+    "snp-street-children-rehabilitation-programme",
+    "snp-strengthening-public-financial-management-for-social-protection",
+    "snp-strengthening-women-s-ability-for-productive-new-opportunities-swapno",
+    "snp-support-to-the-urban-health-and-nutrition-to-bangladesh",
+    "snp-swanirvar-training-programme",
+    "snp-t-b-leprosy-communicable-non-communicable-disease",
+    "snp-test-relief-tr-cash",
+    "snp-test-relief-tr-food",
+    "snp-trust-for-the-protection-of-the-persons-with-neurodevelopmental-disabilities",
+    "snp-universal-pension-insurance-scheme",
+    "snp-urban-based-marginal-women-development",
+    "snp-urban-primary-health-care",
+    "snp-urban-public-environmental-health-care",
+    "snp-urban-resilience-project-dncc-ddm",
+    "snp-vulnerable-group-development-vgd",
+    "snp-vulnerable-group-feeding-vgf",
+    "snp-welfare-trust-for-physical-disabilities",
+    "snp-women-s-skill-based-training-for-livelihood",
+    "snp-work-for-money-wfm",
+    "social-allowance-online-application",
+    "women-assistance-programme",
+    "women-child-daycare-benefit",
+    "women-child-helpline-1098",
+    "women-distressed-fund",
+    "women-hostel-benefit",
+    "women-hotline-109",
+    "women-lactating-mothers-allowance",
+    "women-ngo-registration",
+    "women-one-stop-crisis-centre",
+    "women-violence-prevention-cell"
+  ],
+  "gaps": [
+    {
+      "gap_id": "gap-disability-dis-registration-fee-unverified",
+      "service_id": "disability-dis-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Disability Registration and Identity Card (DIS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-disability-dis-registration-documents-unverified",
+      "service_id": "disability-dis-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Disability Registration and Identity Card (DIS).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-ff-g2p-electronic-payment-fee-unverified",
+      "service_id": "ff-g2p-electronic-payment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Freedom Fighter Allowance G2P Electronic Payment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-ff-g2p-electronic-payment-documents-unverified",
+      "service_id": "ff-g2p-electronic-payment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Freedom Fighter Allowance G2P Electronic Payment.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-ff-honorarium-allowance-fee-unverified",
+      "service_id": "ff-honorarium-allowance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Freedom Fighter Honorarium Allowance.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-ff-honorarium-allowance-documents-unverified",
+      "service_id": "ff-honorarium-allowance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Freedom Fighter Honorarium Allowance.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-ff-mis-freedom-fighter-list-portal-unreachable",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Freedom Fighter List (MIS).",
+      "severity": "MEDIUM",
+      "url": "https://mis.molwa.gov.bd/freedom-fighter-list"
+    },
+    {
+      "gap_id": "gap-ff-mis-freedom-fighter-list-fee-unverified",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Freedom Fighter List (MIS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-ff-mis-freedom-fighter-list-documents-unverified",
+      "service_id": "ff-mis-freedom-fighter-list",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Freedom Fighter List (MIS).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-ff-welfare-trust-enrollment-fee-unverified",
+      "service_id": "ff-welfare-trust-enrollment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Freedom Fighter Welfare Trust Enrollment Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-ff-welfare-trust-enrollment-documents-unverified",
+      "service_id": "ff-welfare-trust-enrollment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Freedom Fighter Welfare Trust Enrollment Application.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-food-ministry-vgf-card-portal-unreachable",
+      "service_id": "food-ministry-vgf-card",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Vulnerable Group Feeding (VGF) / Food Assistance Card.",
+      "severity": "MEDIUM",
+      "url": "https://food.gov.bd/"
+    },
+    {
+      "gap_id": "gap-food-ministry-vgf-card-fee-unverified",
+      "service_id": "food-ministry-vgf-card",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Vulnerable Group Feeding (VGF) / Food Assistance Card.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-food-ministry-vgf-card-documents-unverified",
+      "service_id": "food-ministry-vgf-card",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Vulnerable Group Feeding (VGF) / Food Assistance Card.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-adaptation-to-climate-change-and-rehabilitation-of-livelihood-fee-unverified",
+      "service_id": "snp-adaptation-to-climate-change-and-rehabilitation-of-livelihood",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Adaptation to Climate Change and Rehabilitation of Livelihood.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-adaptation-to-climate-change-and-rehabilitation-of-livelihood-documents-unverified",
+      "service_id": "snp-adaptation-to-climate-change-and-rehabilitation-of-livelihood",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Adaptation to Climate Change and Rehabilitation of Livelihood.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-agriculture-infrastructure-improvement-fee-unverified",
+      "service_id": "snp-agriculture-infrastructure-improvement",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Agriculture Infrastructure Improvement.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-agriculture-infrastructure-improvement-documents-unverified",
+      "service_id": "snp-agriculture-infrastructure-improvement",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Agriculture Infrastructure Improvement.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-agriculture-rehabilitation-fee-unverified",
+      "service_id": "snp-agriculture-rehabilitation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Agriculture Rehabilitation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-agriculture-rehabilitation-documents-unverified",
+      "service_id": "snp-agriculture-rehabilitation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Agriculture Rehabilitation.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-allowances-for-distressed-cultural-personalities-activists-fee-unverified",
+      "service_id": "snp-allowances-for-distressed-cultural-personalities-activists",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Allowances for Distressed Cultural Personalities/Activists.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-allowances-for-distressed-cultural-personalities-activists-documents-unverified",
+      "service_id": "snp-allowances-for-distressed-cultural-personalities-activists",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Allowances for Distressed Cultural Personalities/Activists.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-allowances-for-the-financially-insolvent-disabled-fee-unverified",
+      "service_id": "snp-allowances-for-the-financially-insolvent-disabled",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Allowances for the Financially Insolvent Disabled.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-allowances-for-the-financially-insolvent-disabled-documents-unverified",
+      "service_id": "snp-allowances-for-the-financially-insolvent-disabled",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Allowances for the Financially Insolvent Disabled.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-allowances-for-the-widow-deserted-and-destitute-women-fee-unverified",
+      "service_id": "snp-allowances-for-the-widow-deserted-and-destitute-women",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Allowances for the Widow, Deserted and Destitute Women.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-allowances-for-the-widow-deserted-and-destitute-women-documents-unverified",
+      "service_id": "snp-allowances-for-the-widow-deserted-and-destitute-women",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Allowances for the Widow, Deserted and Destitute Women.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-allowances-for-urban-low-income-lactating-mothers-fee-unverified",
+      "service_id": "snp-allowances-for-urban-low-income-lactating-mothers",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Allowances for Urban Low- income Lactating Mothers.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-allowances-for-urban-low-income-lactating-mothers-documents-unverified",
+      "service_id": "snp-allowances-for-urban-low-income-lactating-mothers",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Allowances for Urban Low- income Lactating Mothers.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-ashroyan-2-project-fee-unverified",
+      "service_id": "snp-ashroyan-2-project",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Ashroyan-2 Project.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-ashroyan-2-project-documents-unverified",
+      "service_id": "snp-ashroyan-2-project",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Ashroyan-2 Project.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-assistance-for-cancer-kidney-and-liver-cirrhosis-patients-fee-unverified",
+      "service_id": "snp-assistance-for-cancer-kidney-and-liver-cirrhosis-patients",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Assistance for Cancer, Kidney and Liver Cirrhosis Patients.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-assistance-for-cancer-kidney-and-liver-cirrhosis-patients-documents-unverified",
+      "service_id": "snp-assistance-for-cancer-kidney-and-liver-cirrhosis-patients",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Assistance for Cancer, Kidney and Liver Cirrhosis Patients.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-bangladesh-climate-resilient-participatory-afforestation-and-reforestation-fee-unverified",
+      "service_id": "snp-bangladesh-climate-resilient-participatory-afforestation-and-reforestation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Bangladesh Climate Resilient Participatory Afforestation and Reforestation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-bangladesh-climate-resilient-participatory-afforestation-and-reforestation-documents-unverified",
+      "service_id": "snp-bangladesh-climate-resilient-participatory-afforestation-and-reforestation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Bangladesh Climate Resilient Participatory Afforestation and Reforestation.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-bangladesh-rural-water-supply-and-sanitation-fee-unverified",
+      "service_id": "snp-bangladesh-rural-water-supply-and-sanitation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Bangladesh Rural Water Supply and Sanitation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-bangladesh-rural-water-supply-and-sanitation-documents-unverified",
+      "service_id": "snp-bangladesh-rural-water-supply-and-sanitation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Bangladesh Rural Water Supply and Sanitation.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-block-allocation-for-disaster-management-fee-unverified",
+      "service_id": "snp-block-allocation-for-disaster-management",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Block Allocation for Disaster Management.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-block-allocation-for-disaster-management-documents-unverified",
+      "service_id": "snp-block-allocation-for-disaster-management",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Block Allocation for Disaster Management.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-block-allocation-for-various-programme-fee-unverified",
+      "service_id": "snp-block-allocation-for-various-programme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Block Allocation for Various Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-block-allocation-for-various-programme-documents-unverified",
+      "service_id": "snp-block-allocation-for-various-programme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Block Allocation for Various Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-capitation-grants-for-orphan-students-in-non-gov-orphanages-fee-unverified",
+      "service_id": "snp-capitation-grants-for-orphan-students-in-non-gov-orphanages",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Capitation Grants for Orphan Students in Non-gov. Orphanages.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-capitation-grants-for-orphan-students-in-non-gov-orphanages-documents-unverified",
+      "service_id": "snp-capitation-grants-for-orphan-students-in-non-gov-orphanages",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Capitation Grants for Orphan Students in Non-gov. Orphanages.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-char-development-and-settlement-fee-unverified",
+      "service_id": "snp-char-development-and-settlement",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Char Development and Settlement.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-char-development-and-settlement-documents-unverified",
+      "service_id": "snp-char-development-and-settlement",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Char Development and Settlement.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-char-livelihood-program-fee-unverified",
+      "service_id": "snp-char-livelihood-program",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Char Livelihood Program.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-char-livelihood-program-documents-unverified",
+      "service_id": "snp-char-livelihood-program",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Char Livelihood Program.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-child-development-center-fee-unverified",
+      "service_id": "snp-child-development-center",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Child Development Center.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-child-development-center-documents-unverified",
+      "service_id": "snp-child-development-center",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Child Development Center.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-child-sensitive-social-protection-in-bangladesh-fee-unverified",
+      "service_id": "snp-child-sensitive-social-protection-in-bangladesh",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Child Sensitive Social Protection in Bangladesh.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-child-sensitive-social-protection-in-bangladesh-documents-unverified",
+      "service_id": "snp-child-sensitive-social-protection-in-bangladesh",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Child Sensitive Social Protection in Bangladesh.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-clinical-contraception-services-delivery-fee-unverified",
+      "service_id": "snp-clinical-contraception-services-delivery",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Clinical Contraception Services Delivery.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-clinical-contraception-services-delivery-documents-unverified",
+      "service_id": "snp-clinical-contraception-services-delivery",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Clinical Contraception Services Delivery.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-coastal-climate-resilient-infrastructure-improvement-fee-unverified",
+      "service_id": "snp-coastal-climate-resilient-infrastructure-improvement",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Coastal Climate Resilient Infrastructure Improvement.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-coastal-climate-resilient-infrastructure-improvement-documents-unverified",
+      "service_id": "snp-coastal-climate-resilient-infrastructure-improvement",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Coastal Climate Resilient Infrastructure Improvement.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-community-based-health-care-fee-unverified",
+      "service_id": "snp-community-based-health-care",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Community Based Health Care.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-community-based-health-care-documents-unverified",
+      "service_id": "snp-community-based-health-care",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Community Based Health Care.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-comprehensive-disaster-management-programme-fee-unverified",
+      "service_id": "snp-comprehensive-disaster-management-programme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Comprehensive Disaster Management Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-comprehensive-disaster-management-programme-documents-unverified",
+      "service_id": "snp-comprehensive-disaster-management-programme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Comprehensive Disaster Management Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-comprehensive-village-development-programme-fee-unverified",
+      "service_id": "snp-comprehensive-village-development-programme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Comprehensive Village Development Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-comprehensive-village-development-programme-documents-unverified",
+      "service_id": "snp-comprehensive-village-development-programme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Comprehensive Village Development Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-conservancy-workers-colony-fee-unverified",
+      "service_id": "snp-conservancy-workers-colony",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Conservancy Workers Colony.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-conservancy-workers-colony-documents-unverified",
+      "service_id": "snp-conservancy-workers-colony",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Conservancy Workers Colony.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-construction-of-hostel-for-govt-orphanage-fee-unverified",
+      "service_id": "snp-construction-of-hostel-for-govt-orphanage",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Construction of Hostel for Govt. Orphanage.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-construction-of-hostel-for-govt-orphanage-documents-unverified",
+      "service_id": "snp-construction-of-hostel-for-govt-orphanage",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Construction of Hostel for Govt. Orphanage.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-construction-of-residence-for-landless-poor-freedom-fighters-fee-unverified",
+      "service_id": "snp-construction-of-residence-for-landless-poor-freedom-fighters",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Construction of Residence for Landless & poor Freedom Fighters.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-construction-of-residence-for-landless-poor-freedom-fighters-documents-unverified",
+      "service_id": "snp-construction-of-residence-for-landless-poor-freedom-fighters",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Construction of Residence for Landless & poor Freedom Fighters.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-day-care-program-for-lower-and-middle-income-working-women-fee-unverified",
+      "service_id": "snp-day-care-program-for-lower-and-middle-income-working-women",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Day Care Program for Lower and Middle Income Working Women.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-day-care-program-for-lower-and-middle-income-working-women-documents-unverified",
+      "service_id": "snp-day-care-program-for-lower-and-middle-income-working-women",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Day Care Program for Lower and Middle Income Working Women.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-disaster-and-climate-resilient-fee-unverified",
+      "service_id": "snp-disaster-and-climate-resilient",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Disaster and Climate Resilient.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-disaster-and-climate-resilient-documents-unverified",
+      "service_id": "snp-disaster-and-climate-resilient",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Disaster and Climate Resilient.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-early-learning-for-child-development-fee-unverified",
+      "service_id": "snp-early-learning-for-child-development",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Early Learning for Child Development.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-early-learning-for-child-development-documents-unverified",
+      "service_id": "snp-early-learning-for-child-development",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Early Learning for Child Development.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-economic-empowerment-of-the-poorest-in-bangladesh-fee-unverified",
+      "service_id": "snp-economic-empowerment-of-the-poorest-in-bangladesh",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Economic Empowerment of the Poorest in Bangladesh.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-economic-empowerment-of-the-poorest-in-bangladesh-documents-unverified",
+      "service_id": "snp-economic-empowerment-of-the-poorest-in-bangladesh",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Economic Empowerment of the Poorest in Bangladesh.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-emergency-2007-cyclone-recovery-and-restoration-fee-unverified",
+      "service_id": "snp-emergency-2007-cyclone-recovery-and-restoration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Emergency 2007 Cyclone Recovery and Restoration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-emergency-2007-cyclone-recovery-and-restoration-documents-unverified",
+      "service_id": "snp-emergency-2007-cyclone-recovery-and-restoration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Emergency 2007 Cyclone Recovery and Restoration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-employment-generation-programme-for-the-poor-fee-unverified",
+      "service_id": "snp-employment-generation-programme-for-the-poor",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Employment Generation Programme for the Poor.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-employment-generation-programme-for-the-poor-documents-unverified",
+      "service_id": "snp-employment-generation-programme-for-the-poor",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Employment Generation Programme for the Poor.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-employment-of-ultra-poor-for-northern-areas-fee-unverified",
+      "service_id": "snp-employment-of-ultra-poor-for-northern-areas",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Employment of Ultra Poor for Northern Areas.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-employment-of-ultra-poor-for-northern-areas-documents-unverified",
+      "service_id": "snp-employment-of-ultra-poor-for-northern-areas",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Employment of Ultra Poor for Northern Areas.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-employment-opportunities-for-unemployed-youth-in-7-northern-district-fee-unverified",
+      "service_id": "snp-employment-opportunities-for-unemployed-youth-in-7-northern-district",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Employment Opportunities for Unemployed Youth in 7 Northern District.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-employment-opportunities-for-unemployed-youth-in-7-northern-district-documents-unverified",
+      "service_id": "snp-employment-opportunities-for-unemployed-youth-in-7-northern-district",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Employment Opportunities for Unemployed Youth in 7 Northern District.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-enabling-environment-for-child-right-fee-unverified",
+      "service_id": "snp-enabling-environment-for-child-right",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Enabling Environment for Child Right.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-enabling-environment-for-child-right-documents-unverified",
+      "service_id": "snp-enabling-environment-for-child-right",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Enabling Environment for Child Right.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-essential-services-delivery-fee-unverified",
+      "service_id": "snp-essential-services-delivery",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Essential Services Delivery.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-essential-services-delivery-documents-unverified",
+      "service_id": "snp-essential-services-delivery",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Essential Services Delivery.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-establishment-of-autistic-academy-in-bangladesh-fee-unverified",
+      "service_id": "snp-establishment-of-autistic-academy-in-bangladesh",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Establishment of Autistic Academy in Bangladesh.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-establishment-of-autistic-academy-in-bangladesh-documents-unverified",
+      "service_id": "snp-establishment-of-autistic-academy-in-bangladesh",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Establishment of Autistic Academy in Bangladesh.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit-fee-unverified",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Establishment of Hostel for the Visually Impaired Children (37 Unit).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit-documents-unverified",
+      "service_id": "snp-establishment-of-hostel-for-the-visually-impaired-children-37-unit",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Establishment of Hostel for the Visually Impaired Children (37 Unit).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-expansion-of-polli-daridro-bimochon-foundation-for-poverty-alleviation-and-self-employment-fee-unverified",
+      "service_id": "snp-expansion-of-polli-daridro-bimochon-foundation-for-poverty-alleviation-and-self-employment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Expansion of Polli Daridro Bimochon Foundation for Poverty Alleviation and self-Employment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-expansion-of-polli-daridro-bimochon-foundation-for-poverty-alleviation-and-self-employment-documents-unverified",
+      "service_id": "snp-expansion-of-polli-daridro-bimochon-foundation-for-poverty-alleviation-and-self-employment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Expansion of Polli Daridro Bimochon Foundation for Poverty Alleviation and self-Employment.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-family-planning-field-services-delivery-fee-unverified",
+      "service_id": "snp-family-planning-field-services-delivery",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Family Planning Field Services Delivery.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-family-planning-field-services-delivery-documents-unverified",
+      "service_id": "snp-family-planning-field-services-delivery",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Family Planning Field Services Delivery.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-fishermen-id-card-and-fisheries-project-fee-unverified",
+      "service_id": "snp-fishermen-id-card-and-fisheries-project",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Fishermen ID Card and Fisheries Project.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-fishermen-id-card-and-fisheries-project-documents-unverified",
+      "service_id": "snp-fishermen-id-card-and-fisheries-project",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Fishermen ID Card and Fisheries Project.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-food-assistance-in-ctg-hill-tracts-area-fee-unverified",
+      "service_id": "snp-food-assistance-in-ctg-hill-tracts-area",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Food Assistance in CTG-Hill Tracts Area.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-food-assistance-in-ctg-hill-tracts-area-documents-unverified",
+      "service_id": "snp-food-assistance-in-ctg-hill-tracts-area",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Food Assistance in CTG-Hill Tracts Area.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-food-for-work-ffw-fee-unverified",
+      "service_id": "snp-food-for-work-ffw",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Food For Work (FFW).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-food-for-work-ffw-documents-unverified",
+      "service_id": "snp-food-for-work-ffw",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Food For Work (FFW).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-food-security-through-enhanced-agricultural-production-income-value-addition-and-marketing-in-bangladesh-fee-unverified",
+      "service_id": "snp-food-security-through-enhanced-agricultural-production-income-value-addition-and-marketing-in-bangladesh",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Food Security through enhanced Agricultural Production, Income, Value Addition and Marketing in Bangladesh.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-food-security-through-enhanced-agricultural-production-income-value-addition-and-marketing-in-bangladesh-documents-unverified",
+      "service_id": "snp-food-security-through-enhanced-agricultural-production-income-value-addition-and-marketing-in-bangladesh",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Food Security through enhanced Agricultural Production, Income, Value Addition and Marketing in Bangladesh.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-fund-for-assistance-to-the-small-farmer-and-poultry-farms-fee-unverified",
+      "service_id": "snp-fund-for-assistance-to-the-small-farmer-and-poultry-farms",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Fund for Assistance to the Small Farmer and Poultry Farms.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-fund-for-assistance-to-the-small-farmer-and-poultry-farms-documents-unverified",
+      "service_id": "snp-fund-for-assistance-to-the-small-farmer-and-poultry-farms",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Fund for Assistance to the Small Farmer and Poultry Farms.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-fund-for-climate-change-fee-unverified",
+      "service_id": "snp-fund-for-climate-change",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Fund for Climate Change.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-fund-for-climate-change-documents-unverified",
+      "service_id": "snp-fund-for-climate-change",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Fund for Climate Change.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-fund-for-micro-credit-through-pksf-fee-unverified",
+      "service_id": "snp-fund-for-micro-credit-through-pksf",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Fund for Micro-Credit through PKSF.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-fund-for-micro-credit-through-pksf-documents-unverified",
+      "service_id": "snp-fund-for-micro-credit-through-pksf",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Fund for Micro-Credit through PKSF.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-fund-for-the-welfare-of-burnt-and-disabled-fee-unverified",
+      "service_id": "snp-fund-for-the-welfare-of-burnt-and-disabled",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Fund for the Welfare of Burnt and Disabled.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-fund-for-the-welfare-of-burnt-and-disabled-documents-unverified",
+      "service_id": "snp-fund-for-the-welfare-of-burnt-and-disabled",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Fund for the Welfare of Burnt and Disabled.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-general-relief-activities-fee-unverified",
+      "service_id": "snp-general-relief-activities",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for General Relief Activities.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-general-relief-activities-documents-unverified",
+      "service_id": "snp-general-relief-activities",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for General Relief Activities.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-generation-breakthrough-fee-unverified",
+      "service_id": "snp-generation-breakthrough",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Generation Breakthrough.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-generation-breakthrough-documents-unverified",
+      "service_id": "snp-generation-breakthrough",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Generation Breakthrough.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-grants-for-residents-in-government-orphanages-and-other-institutions-fee-unverified",
+      "service_id": "snp-grants-for-residents-in-government-orphanages-and-other-institutions",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Grants for Residents in Government Orphanages and Other Institutions.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-grants-for-residents-in-government-orphanages-and-other-institutions-documents-unverified",
+      "service_id": "snp-grants-for-residents-in-government-orphanages-and-other-institutions",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Grants for Residents in Government Orphanages and Other Institutions.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-grants-for-the-schools-for-the-disabled-fee-unverified",
+      "service_id": "snp-grants-for-the-schools-for-the-disabled",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Grants for the Schools for the Disabled.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-grants-for-the-schools-for-the-disabled-documents-unverified",
+      "service_id": "snp-grants-for-the-schools-for-the-disabled",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Grants for the Schools for the Disabled.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-gratuitous-relief-gr-fee-unverified",
+      "service_id": "snp-gratuitous-relief-gr",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Gratuitous Relief (GR).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-gratuitous-relief-gr-documents-unverified",
+      "service_id": "snp-gratuitous-relief-gr",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Gratuitous Relief (GR).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-gucchagram-climate-victims-rehabilitation-fee-unverified",
+      "service_id": "snp-gucchagram-climate-victims-rehabilitation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Gucchagram (Climate Victims Rehabilitation).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-gucchagram-climate-victims-rehabilitation-documents-unverified",
+      "service_id": "snp-gucchagram-climate-victims-rehabilitation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Gucchagram (Climate Victims Rehabilitation).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-haor-infrastructure-and-livelihood-development-fee-unverified",
+      "service_id": "snp-haor-infrastructure-and-livelihood-development",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Haor Infrastructure and livelihood Development.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-haor-infrastructure-and-livelihood-development-documents-unverified",
+      "service_id": "snp-haor-infrastructure-and-livelihood-development",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Haor Infrastructure and livelihood Development.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-health-economic-financing-and-gnsp-fee-unverified",
+      "service_id": "snp-health-economic-financing-and-gnsp",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Health Economic Financing and GNSP.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-health-economic-financing-and-gnsp-documents-unverified",
+      "service_id": "snp-health-economic-financing-and-gnsp",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Health Economic Financing and GNSP.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-higher-secondary-stipend-fee-unverified",
+      "service_id": "snp-higher-secondary-stipend",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Higher Secondary Stipend.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-higher-secondary-stipend-documents-unverified",
+      "service_id": "snp-higher-secondary-stipend",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Higher Secondary Stipend.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-honorarium-for-freedom-fighters-fee-unverified",
+      "service_id": "snp-honorarium-for-freedom-fighters",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Honorarium for Freedom Fighters.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-honorarium-for-freedom-fighters-documents-unverified",
+      "service_id": "snp-honorarium-for-freedom-fighters",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Honorarium for Freedom Fighters.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-honorarium-medical-allowances-for-injured-freedom-fighters-fee-unverified",
+      "service_id": "snp-honorarium-medical-allowances-for-injured-freedom-fighters",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Honorarium & Medical Allowances for Injured Freedom Fighters.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-honorarium-medical-allowances-for-injured-freedom-fighters-documents-unverified",
+      "service_id": "snp-honorarium-medical-allowances-for-injured-freedom-fighters",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Honorarium & Medical Allowances for Injured Freedom Fighters.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-housing-support-fee-unverified",
+      "service_id": "snp-housing-support",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Housing Support.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-housing-support-documents-unverified",
+      "service_id": "snp-housing-support",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Housing Support.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-improving-working-condition-in-the-ready-made-garments-sector-fee-unverified",
+      "service_id": "snp-improving-working-condition-in-the-ready-made-garments-sector",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Improving Working Condition in the Ready Made Garments Sector.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-improving-working-condition-in-the-ready-made-garments-sector-documents-unverified",
+      "service_id": "snp-improving-working-condition-in-the-ready-made-garments-sector",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Improving Working Condition in the Ready Made Garments Sector.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-income-support-program-for-the-poorest-fee-unverified",
+      "service_id": "snp-income-support-program-for-the-poorest",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Income Support Program for the Poorest.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-income-support-program-for-the-poorest-documents-unverified",
+      "service_id": "snp-income-support-program-for-the-poorest",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Income Support Program for the Poorest.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-initiative-for-development-empowerment-awareness-livelihood-kurigram-fee-unverified",
+      "service_id": "snp-initiative-for-development-empowerment-awareness-livelihood-kurigram",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Initiative for Development, Empowerment, Awareness & Livelihood, Kurigram.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-initiative-for-development-empowerment-awareness-livelihood-kurigram-documents-unverified",
+      "service_id": "snp-initiative-for-development-empowerment-awareness-livelihood-kurigram",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Initiative for Development, Empowerment, Awareness & Livelihood, Kurigram.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-institute-of-pediatric-neuro-disorder-fee-unverified",
+      "service_id": "snp-institute-of-pediatric-neuro-disorder",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Institute of Pediatric Neuro Disorder.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-institute-of-pediatric-neuro-disorder-documents-unverified",
+      "service_id": "snp-institute-of-pediatric-neuro-disorder",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Institute of Pediatric Neuro Disorder.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-integrated-fisheries-livestock-development-in-flood-controlled-areas-water-bodies-fee-unverified",
+      "service_id": "snp-integrated-fisheries-livestock-development-in-flood-controlled-areas-water-bodies",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Integrated Fisheries & Livestock Development in Flood Controlled Areas & Water Bodies.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-integrated-fisheries-livestock-development-in-flood-controlled-areas-water-bodies-documents-unverified",
+      "service_id": "snp-integrated-fisheries-livestock-development-in-flood-controlled-areas-water-bodies",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Integrated Fisheries & Livestock Development in Flood Controlled Areas & Water Bodies.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-integrated-rural-employment-support-project-for-the-poor-women-fee-unverified",
+      "service_id": "snp-integrated-rural-employment-support-project-for-the-poor-women",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Integrated Rural Employment Support Project for the Poor Women.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-integrated-rural-employment-support-project-for-the-poor-women-documents-unverified",
+      "service_id": "snp-integrated-rural-employment-support-project-for-the-poor-women",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Integrated Rural Employment Support Project for the Poor Women.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-integrated-support-to-poverty-and-inequality-reduction-through-enterprise-development-fee-unverified",
+      "service_id": "snp-integrated-support-to-poverty-and-inequality-reduction-through-enterprise-development",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Integrated Support to Poverty and Inequality Reduction through Enterprise Development.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-integrated-support-to-poverty-and-inequality-reduction-through-enterprise-development-documents-unverified",
+      "service_id": "snp-integrated-support-to-poverty-and-inequality-reduction-through-enterprise-development",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Integrated Support to Poverty and Inequality Reduction through Enterprise Development.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-investment-component-for-vulnerable-group-development-fee-unverified",
+      "service_id": "snp-investment-component-for-vulnerable-group-development",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Investment Component for Vulnerable Group Development.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-investment-component-for-vulnerable-group-development-documents-unverified",
+      "service_id": "snp-investment-component-for-vulnerable-group-development",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Investment Component for Vulnerable Group Development.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-joyeeta-foundation-fee-unverified",
+      "service_id": "snp-joyeeta-foundation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Joyeeta Foundation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-joyeeta-foundation-documents-unverified",
+      "service_id": "snp-joyeeta-foundation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Joyeeta Foundation.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-lump-provision-for-development-of-special-areas-except-hill-tracts-fee-unverified",
+      "service_id": "snp-lump-provision-for-development-of-special-areas-except-hill-tracts",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Lump Provision for Development of Special Areas (Except Hill Tracts).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-lump-provision-for-development-of-special-areas-except-hill-tracts-documents-unverified",
+      "service_id": "snp-lump-provision-for-development-of-special-areas-except-hill-tracts",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Lump Provision for Development of Special Areas (Except Hill Tracts).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-maternal-child-reproductive-and-adolescent-health-fee-unverified",
+      "service_id": "snp-maternal-child-reproductive-and-adolescent-health",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Maternal, Child, Reproductive and Adolescent Health.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-maternal-child-reproductive-and-adolescent-health-documents-unverified",
+      "service_id": "snp-maternal-child-reproductive-and-adolescent-health",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Maternal, Child, Reproductive and Adolescent Health.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-maternal-neo-natal-child-and-adolescent-health-fee-unverified",
+      "service_id": "snp-maternal-neo-natal-child-and-adolescent-health",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Maternal, Neo-natal, Child and Adolescent Health.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-maternal-neo-natal-child-and-adolescent-health-documents-unverified",
+      "service_id": "snp-maternal-neo-natal-child-and-adolescent-health",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Maternal, Neo-natal, Child and Adolescent Health.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-maternity-allowance-programme-for-the-poor-fee-unverified",
+      "service_id": "snp-maternity-allowance-programme-for-the-poor",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Maternity Allowance Programme for the Poor.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-maternity-allowance-programme-for-the-poor-documents-unverified",
+      "service_id": "snp-maternity-allowance-programme-for-the-poor",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Maternity Allowance Programme for the Poor.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-micro-credit-for-women-self-employment-fee-unverified",
+      "service_id": "snp-micro-credit-for-women-self-employment",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Micro-credit for Women Self- employment.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-micro-credit-for-women-self-employment-documents-unverified",
+      "service_id": "snp-micro-credit-for-women-self-employment",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Micro-credit for Women Self- employment.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-mujibnagar-integrated-agricultural-development-fee-unverified",
+      "service_id": "snp-mujibnagar-integrated-agricultural-development",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Mujibnagar Integrated Agricultural Development.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-mujibnagar-integrated-agricultural-development-documents-unverified",
+      "service_id": "snp-mujibnagar-integrated-agricultural-development",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Mujibnagar Integrated Agricultural Development.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-multipurpose-disaster-shelter-construction-fee-unverified",
+      "service_id": "snp-multipurpose-disaster-shelter-construction",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Multipurpose Disaster Shelter Construction.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-multipurpose-disaster-shelter-construction-documents-unverified",
+      "service_id": "snp-multipurpose-disaster-shelter-construction",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Multipurpose Disaster Shelter Construction.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-national-legal-aid-services-fee-unverified",
+      "service_id": "snp-national-legal-aid-services",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for National Legal Aid Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-national-legal-aid-services-documents-unverified",
+      "service_id": "snp-national-legal-aid-services",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for National Legal Aid Services.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-national-nutrition-services-fee-unverified",
+      "service_id": "snp-national-nutrition-services",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for National Nutrition Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-national-nutrition-services-documents-unverified",
+      "service_id": "snp-national-nutrition-services",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for National Nutrition Services.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-national-service-fee-unverified",
+      "service_id": "snp-national-service",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for National Service.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-national-service-documents-unverified",
+      "service_id": "snp-national-service",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for National Service.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-non-bengali-rehabilitation-fee-unverified",
+      "service_id": "snp-non-bengali-rehabilitation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Non-Bengali Rehabilitation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-non-bengali-rehabilitation-documents-unverified",
+      "service_id": "snp-non-bengali-rehabilitation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Non-Bengali Rehabilitation.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-northern-area-reduction-of-poverty-fee-unverified",
+      "service_id": "snp-northern-area-reduction-of-poverty",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Northern Area Reduction of Poverty.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-northern-area-reduction-of-poverty-documents-unverified",
+      "service_id": "snp-northern-area-reduction-of-poverty",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Northern Area Reduction of Poverty.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-old-age-allowance-fee-unverified",
+      "service_id": "snp-old-age-allowance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Old Age Allowance.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-old-age-allowance-documents-unverified",
+      "service_id": "snp-old-age-allowance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Old Age Allowance.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-one-house-one-farm-fee-unverified",
+      "service_id": "snp-one-house-one-farm",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for One House One Farm.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-one-house-one-farm-documents-unverified",
+      "service_id": "snp-one-house-one-farm",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for One House One Farm.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-open-market-sales-oms-fee-unverified",
+      "service_id": "snp-open-market-sales-oms",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Open Market Sales (OMS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-open-market-sales-oms-documents-unverified",
+      "service_id": "snp-open-market-sales-oms",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Open Market Sales (OMS).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-participatory-small-scale-water-resource-development-fee-unverified",
+      "service_id": "snp-participatory-small-scale-water-resource-development",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Participatory Small Scale Water Resource Development.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-participatory-small-scale-water-resource-development-documents-unverified",
+      "service_id": "snp-participatory-small-scale-water-resource-development",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Participatory Small Scale Water Resource Development.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-pension-for-retired-government-employees-and-their-families-fee-unverified",
+      "service_id": "snp-pension-for-retired-government-employees-and-their-families",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Pension for Retired Government Employees and their Families.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-pension-for-retired-government-employees-and-their-families-documents-unverified",
+      "service_id": "snp-pension-for-retired-government-employees-and-their-families",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Pension for Retired Government Employees and their Families.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-poverty-reduction-livelihood-security-for-the-people-of-economically-backward-area-fee-unverified",
+      "service_id": "snp-poverty-reduction-livelihood-security-for-the-people-of-economically-backward-area",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Poverty Reduction & Livelihood Security for the People of Economically Backward Area.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-poverty-reduction-livelihood-security-for-the-people-of-economically-backward-area-documents-unverified",
+      "service_id": "snp-poverty-reduction-livelihood-security-for-the-people-of-economically-backward-area",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Poverty Reduction & Livelihood Security for the People of Economically Backward Area.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-poverty-reduction-through-inclusive-and-sustainable-markets-fee-unverified",
+      "service_id": "snp-poverty-reduction-through-inclusive-and-sustainable-markets",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Poverty Reduction Through Inclusive and Sustainable Markets.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-poverty-reduction-through-inclusive-and-sustainable-markets-documents-unverified",
+      "service_id": "snp-poverty-reduction-through-inclusive-and-sustainable-markets",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Poverty Reduction Through Inclusive and Sustainable Markets.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-poverty-reduction-through-urban-partnership-fee-unverified",
+      "service_id": "snp-poverty-reduction-through-urban-partnership",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Poverty Reduction through Urban Partnership.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-poverty-reduction-through-urban-partnership-documents-unverified",
+      "service_id": "snp-poverty-reduction-through-urban-partnership",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Poverty Reduction through Urban Partnership.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-primary-school-stipend-fee-unverified",
+      "service_id": "snp-primary-school-stipend",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Primary School Stipend.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-primary-school-stipend-documents-unverified",
+      "service_id": "snp-primary-school-stipend",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Primary School Stipend.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-pro-poor-slum-integration-fee-unverified",
+      "service_id": "snp-pro-poor-slum-integration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Pro Poor Slum Integration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-pro-poor-slum-integration-documents-unverified",
+      "service_id": "snp-pro-poor-slum-integration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Pro Poor Slum Integration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-programme-for-improving-the-livelihood-of-harijan-dalit-bade-community-fee-unverified",
+      "service_id": "snp-programme-for-improving-the-livelihood-of-harijan-dalit-bade-community",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Programme for Improving the Livelihood of Harijan, Dalit, Bade community.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-programme-for-improving-the-livelihood-of-harijan-dalit-bade-community-documents-unverified",
+      "service_id": "snp-programme-for-improving-the-livelihood-of-harijan-dalit-bade-community",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Programme for Improving the Livelihood of Harijan, Dalit, Bade community.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-programme-for-improving-the-livelihood-of-trans-gender-hijra-fee-unverified",
+      "service_id": "snp-programme-for-improving-the-livelihood-of-trans-gender-hijra",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Programme for Improving the Livelihood of Trans Gender (Hijra).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-programme-for-improving-the-livelihood-of-trans-gender-hijra-documents-unverified",
+      "service_id": "snp-programme-for-improving-the-livelihood-of-trans-gender-hijra",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Programme for Improving the Livelihood of Trans Gender (Hijra).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-programme-for-livelihood-improvement-of-tea-garden-labourers-fee-unverified",
+      "service_id": "snp-programme-for-livelihood-improvement-of-tea-garden-labourers",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Programme for Livelihood Improvement of tea-garden labourers.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-programme-for-livelihood-improvement-of-tea-garden-labourers-documents-unverified",
+      "service_id": "snp-programme-for-livelihood-improvement-of-tea-garden-labourers",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Programme for Livelihood Improvement of tea-garden labourers.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-promotion-of-services-opportunity-to-the-disabled-person-in-bangladesh-fee-unverified",
+      "service_id": "snp-promotion-of-services-opportunity-to-the-disabled-person-in-bangladesh",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Promotion of Services & Opportunity to the Disabled Person in Bangladesh.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-promotion-of-services-opportunity-to-the-disabled-person-in-bangladesh-documents-unverified",
+      "service_id": "snp-promotion-of-services-opportunity-to-the-disabled-person-in-bangladesh",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Promotion of Services & Opportunity to the Disabled Person in Bangladesh.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-ration-for-shaheed-family-and-injured-freedom-fighters-fee-unverified",
+      "service_id": "snp-ration-for-shaheed-family-and-injured-freedom-fighters",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Ration for Shaheed Family and Injured Freedom Fighters.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-ration-for-shaheed-family-and-injured-freedom-fighters-documents-unverified",
+      "service_id": "snp-ration-for-shaheed-family-and-injured-freedom-fighters",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Ration for Shaheed Family and Injured Freedom Fighters.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-reaching-out-of-school-fee-unverified",
+      "service_id": "snp-reaching-out-of-school",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Reaching Out of School.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-reaching-out-of-school-documents-unverified",
+      "service_id": "snp-reaching-out-of-school",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Reaching Out of School.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-regional-duck-breeding-and-hatchery-fee-unverified",
+      "service_id": "snp-regional-duck-breeding-and-hatchery",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Regional Duck Breeding and Hatchery.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-regional-duck-breeding-and-hatchery-documents-unverified",
+      "service_id": "snp-regional-duck-breeding-and-hatchery",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Regional Duck Breeding and Hatchery.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-rehabilitation-and-creation-of-alternative-employment-for-beggars-profession-fee-unverified",
+      "service_id": "snp-rehabilitation-and-creation-of-alternative-employment-for-beggars-profession",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rehabilitation and Creation of Alternative Employment for Beggars Profession.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-rehabilitation-and-creation-of-alternative-employment-for-beggars-profession-documents-unverified",
+      "service_id": "snp-rehabilitation-and-creation-of-alternative-employment-for-beggars-profession",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Rehabilitation and Creation of Alternative Employment for Beggars Profession.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-rehabilitation-of-aila-affected-infrastructure-fee-unverified",
+      "service_id": "snp-rehabilitation-of-aila-affected-infrastructure",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rehabilitation of Aila Affected Infrastructure.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-rehabilitation-of-aila-affected-infrastructure-documents-unverified",
+      "service_id": "snp-rehabilitation-of-aila-affected-infrastructure",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Rehabilitation of Aila Affected Infrastructure.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-rural-development-of-greater-comilla-fee-unverified",
+      "service_id": "snp-rural-development-of-greater-comilla",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rural Development of Greater Comilla.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-rural-development-of-greater-comilla-documents-unverified",
+      "service_id": "snp-rural-development-of-greater-comilla",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Rural Development of Greater Comilla.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-rural-employment-and-road-maintenance-program-fee-unverified",
+      "service_id": "snp-rural-employment-and-road-maintenance-program",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rural Employment and Road Maintenance Program,.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-rural-employment-and-road-maintenance-program-documents-unverified",
+      "service_id": "snp-rural-employment-and-road-maintenance-program",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Rural Employment and Road Maintenance Program,.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-rural-infrastructure-development-fee-unverified",
+      "service_id": "snp-rural-infrastructure-development",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rural Infrastructure Development.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-rural-infrastructure-development-documents-unverified",
+      "service_id": "snp-rural-infrastructure-development",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Rural Infrastructure Development.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-rural-livelihood-2nd-phase-fee-unverified",
+      "service_id": "snp-rural-livelihood-2nd-phase",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rural Livelihood (2nd Phase).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-rural-livelihood-2nd-phase-documents-unverified",
+      "service_id": "snp-rural-livelihood-2nd-phase",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Rural Livelihood (2nd Phase).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-rural-settlement-construction-for-improvement-of-rural-livelihood-fee-unverified",
+      "service_id": "snp-rural-settlement-construction-for-improvement-of-rural-livelihood",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rural Settlement Construction for improvement of Rural Livelihood.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-rural-settlement-construction-for-improvement-of-rural-livelihood-documents-unverified",
+      "service_id": "snp-rural-settlement-construction-for-improvement-of-rural-livelihood",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Rural Settlement Construction for improvement of Rural Livelihood.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-rural-water-supply-fee-unverified",
+      "service_id": "snp-rural-water-supply",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Rural Water Supply.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-rural-water-supply-documents-unverified",
+      "service_id": "snp-rural-water-supply",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Rural Water Supply.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-school-feeding-programme-fee-unverified",
+      "service_id": "snp-school-feeding-programme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for School Feeding Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-school-feeding-programme-documents-unverified",
+      "service_id": "snp-school-feeding-programme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for School Feeding Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-second-chittagong-hill-tracts-rural-development-fee-unverified",
+      "service_id": "snp-second-chittagong-hill-tracts-rural-development",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Second Chittagong Hill Tracts Rural Development.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-second-chittagong-hill-tracts-rural-development-documents-unverified",
+      "service_id": "snp-second-chittagong-hill-tracts-rural-development",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Second Chittagong Hill Tracts Rural Development.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-secondary-education-quality-and-access-enhancement-project-seqaep-fee-unverified",
+      "service_id": "snp-secondary-education-quality-and-access-enhancement-project-seqaep",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Secondary Education Quality and Access Enhancement Project (SEQAEP).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-secondary-education-quality-and-access-enhancement-project-seqaep-documents-unverified",
+      "service_id": "snp-secondary-education-quality-and-access-enhancement-project-seqaep",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Secondary Education Quality and Access Enhancement Project (SEQAEP).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-secondary-education-sector-investment-program-fee-unverified",
+      "service_id": "snp-secondary-education-sector-investment-program",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Secondary Education Sector Investment Program.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-secondary-education-sector-investment-program-documents-unverified",
+      "service_id": "snp-secondary-education-sector-investment-program",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Secondary Education Sector Investment Program.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-secondary-education-stipend-fee-unverified",
+      "service_id": "snp-secondary-education-stipend",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Secondary Education Stipend.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-secondary-education-stipend-documents-unverified",
+      "service_id": "snp-secondary-education-stipend",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Secondary Education Stipend.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-service-and-assistance-center-for-disabled-fee-unverified",
+      "service_id": "snp-service-and-assistance-center-for-disabled",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Service and Assistance Center for Disabled.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-service-and-assistance-center-for-disabled-documents-unverified",
+      "service_id": "snp-service-and-assistance-center-for-disabled",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Service and Assistance Center for Disabled.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-services-for-children-at-risk-fee-unverified",
+      "service_id": "snp-services-for-children-at-risk",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Services for Children at Risk.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-services-for-children-at-risk-documents-unverified",
+      "service_id": "snp-services-for-children-at-risk",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Services for Children at Risk.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-shamaj-kallyan-parishad-fee-unverified",
+      "service_id": "snp-shamaj-kallyan-parishad",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Shamaj Kallyan Parishad.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-shamaj-kallyan-parishad-documents-unverified",
+      "service_id": "snp-shamaj-kallyan-parishad",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Shamaj Kallyan Parishad.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-skill-and-employment-programme-in-bangladesh-fee-unverified",
+      "service_id": "snp-skill-and-employment-programme-in-bangladesh",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Skill and Employment Programme in Bangladesh.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-skill-and-employment-programme-in-bangladesh-documents-unverified",
+      "service_id": "snp-skill-and-employment-programme-in-bangladesh",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Skill and Employment Programme in Bangladesh.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-skill-and-training-enhancement-project-fee-unverified",
+      "service_id": "snp-skill-and-training-enhancement-project",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Skill and Training Enhancement Project.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-skill-and-training-enhancement-project-documents-unverified",
+      "service_id": "snp-skill-and-training-enhancement-project",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Skill and Training Enhancement Project.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-skills-for-employment-and-productivity-fee-unverified",
+      "service_id": "snp-skills-for-employment-and-productivity",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Skills for Employment and Productivity.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-skills-for-employment-and-productivity-documents-unverified",
+      "service_id": "snp-skills-for-employment-and-productivity",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Skills for Employment and Productivity.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-skills-for-employment-investment-programme-fee-unverified",
+      "service_id": "snp-skills-for-employment-investment-programme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Skills for Employment Investment Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-skills-for-employment-investment-programme-documents-unverified",
+      "service_id": "snp-skills-for-employment-investment-programme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Skills for Employment Investment Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-social-development-foundation-fee-unverified",
+      "service_id": "snp-social-development-foundation",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Social Development Foundation.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-social-development-foundation-documents-unverified",
+      "service_id": "snp-social-development-foundation",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Social Development Foundation.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-social-security-policy-support-ssps-programme-fee-unverified",
+      "service_id": "snp-social-security-policy-support-ssps-programme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Social Security Policy Support (SSPS) Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-social-security-policy-support-ssps-programme-documents-unverified",
+      "service_id": "snp-social-security-policy-support-ssps-programme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Social Security Policy Support (SSPS) Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-stipend-for-disabled-students-fee-unverified",
+      "service_id": "snp-stipend-for-disabled-students",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Stipend for Disabled Students.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-stipend-for-disabled-students-documents-unverified",
+      "service_id": "snp-stipend-for-disabled-students",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Stipend for Disabled Students.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-stipend-for-female-students-at-bachelor-level-fee-unverified",
+      "service_id": "snp-stipend-for-female-students-at-bachelor-level",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Stipend for Female students at Bachelor Level.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-stipend-for-female-students-at-bachelor-level-documents-unverified",
+      "service_id": "snp-stipend-for-female-students-at-bachelor-level",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Stipend for Female students at Bachelor Level.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-street-children-rehabilitation-programme-fee-unverified",
+      "service_id": "snp-street-children-rehabilitation-programme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Street Children Rehabilitation Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-street-children-rehabilitation-programme-documents-unverified",
+      "service_id": "snp-street-children-rehabilitation-programme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Street Children Rehabilitation Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-strengthening-public-financial-management-for-social-protection-fee-unverified",
+      "service_id": "snp-strengthening-public-financial-management-for-social-protection",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Strengthening Public Financial Management for Social Protection.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-strengthening-public-financial-management-for-social-protection-documents-unverified",
+      "service_id": "snp-strengthening-public-financial-management-for-social-protection",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Strengthening Public Financial Management for Social Protection.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-strengthening-women-s-ability-for-productive-new-opportunities-swapno-fee-unverified",
+      "service_id": "snp-strengthening-women-s-ability-for-productive-new-opportunities-swapno",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Strengthening Women\u2019s Ability for Productive New Opportunities (SWAPNO).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-strengthening-women-s-ability-for-productive-new-opportunities-swapno-documents-unverified",
+      "service_id": "snp-strengthening-women-s-ability-for-productive-new-opportunities-swapno",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Strengthening Women\u2019s Ability for Productive New Opportunities (SWAPNO).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-support-to-the-urban-health-and-nutrition-to-bangladesh-fee-unverified",
+      "service_id": "snp-support-to-the-urban-health-and-nutrition-to-bangladesh",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Support to the Urban Health and Nutrition to Bangladesh.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-support-to-the-urban-health-and-nutrition-to-bangladesh-documents-unverified",
+      "service_id": "snp-support-to-the-urban-health-and-nutrition-to-bangladesh",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Support to the Urban Health and Nutrition to Bangladesh.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-swanirvar-training-programme-fee-unverified",
+      "service_id": "snp-swanirvar-training-programme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Swanirvar Training Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-swanirvar-training-programme-documents-unverified",
+      "service_id": "snp-swanirvar-training-programme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Swanirvar Training Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-t-b-leprosy-communicable-non-communicable-disease-fee-unverified",
+      "service_id": "snp-t-b-leprosy-communicable-non-communicable-disease",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for T.B., Leprosy, Communicable Non-communicable Disease.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-t-b-leprosy-communicable-non-communicable-disease-documents-unverified",
+      "service_id": "snp-t-b-leprosy-communicable-non-communicable-disease",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for T.B., Leprosy, Communicable Non-communicable Disease.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-test-relief-tr-cash-fee-unverified",
+      "service_id": "snp-test-relief-tr-cash",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Test Relief (TR) Cash.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-test-relief-tr-cash-documents-unverified",
+      "service_id": "snp-test-relief-tr-cash",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Test Relief (TR) Cash.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-test-relief-tr-food-fee-unverified",
+      "service_id": "snp-test-relief-tr-food",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Test Relief (TR) Food.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-test-relief-tr-food-documents-unverified",
+      "service_id": "snp-test-relief-tr-food",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Test Relief (TR) Food.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-trust-for-the-protection-of-the-persons-with-neurodevelopmental-disabilities-fee-unverified",
+      "service_id": "snp-trust-for-the-protection-of-the-persons-with-neurodevelopmental-disabilities",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Trust for the protection of the persons with neurodevelopmental disabilities..",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-trust-for-the-protection-of-the-persons-with-neurodevelopmental-disabilities-documents-unverified",
+      "service_id": "snp-trust-for-the-protection-of-the-persons-with-neurodevelopmental-disabilities",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Trust for the protection of the persons with neurodevelopmental disabilities..",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-universal-pension-insurance-scheme-fee-unverified",
+      "service_id": "snp-universal-pension-insurance-scheme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Universal Pension Insurance Scheme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-universal-pension-insurance-scheme-documents-unverified",
+      "service_id": "snp-universal-pension-insurance-scheme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Universal Pension Insurance Scheme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-urban-based-marginal-women-development-fee-unverified",
+      "service_id": "snp-urban-based-marginal-women-development",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Urban Based Marginal Women Development.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-urban-based-marginal-women-development-documents-unverified",
+      "service_id": "snp-urban-based-marginal-women-development",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Urban Based Marginal Women Development.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-urban-primary-health-care-fee-unverified",
+      "service_id": "snp-urban-primary-health-care",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Urban Primary Health Care.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-urban-primary-health-care-documents-unverified",
+      "service_id": "snp-urban-primary-health-care",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Urban Primary Health Care.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-urban-public-environmental-health-care-fee-unverified",
+      "service_id": "snp-urban-public-environmental-health-care",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Urban Public Environmental Health Care.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-urban-public-environmental-health-care-documents-unverified",
+      "service_id": "snp-urban-public-environmental-health-care",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Urban Public Environmental Health Care.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-urban-resilience-project-dncc-ddm-fee-unverified",
+      "service_id": "snp-urban-resilience-project-dncc-ddm",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Urban Resilience Project: (DNCC & DDM).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-urban-resilience-project-dncc-ddm-documents-unverified",
+      "service_id": "snp-urban-resilience-project-dncc-ddm",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Urban Resilience Project: (DNCC & DDM).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-vulnerable-group-development-vgd-fee-unverified",
+      "service_id": "snp-vulnerable-group-development-vgd",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Vulnerable Group Development (VGD).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-vulnerable-group-development-vgd-documents-unverified",
+      "service_id": "snp-vulnerable-group-development-vgd",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Vulnerable Group Development (VGD).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-vulnerable-group-feeding-vgf-fee-unverified",
+      "service_id": "snp-vulnerable-group-feeding-vgf",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Vulnerable Group Feeding (VGF).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-vulnerable-group-feeding-vgf-documents-unverified",
+      "service_id": "snp-vulnerable-group-feeding-vgf",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Vulnerable Group Feeding (VGF).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-welfare-trust-for-physical-disabilities-fee-unverified",
+      "service_id": "snp-welfare-trust-for-physical-disabilities",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Welfare Trust for Physical disabilities..",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-welfare-trust-for-physical-disabilities-documents-unverified",
+      "service_id": "snp-welfare-trust-for-physical-disabilities",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Welfare Trust for Physical disabilities..",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-women-s-skill-based-training-for-livelihood-fee-unverified",
+      "service_id": "snp-women-s-skill-based-training-for-livelihood",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Women\u2019s Skill Based Training For Livelihood.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-women-s-skill-based-training-for-livelihood-documents-unverified",
+      "service_id": "snp-women-s-skill-based-training-for-livelihood",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Women\u2019s Skill Based Training For Livelihood.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-snp-work-for-money-wfm-fee-unverified",
+      "service_id": "snp-work-for-money-wfm",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Work For Money (WFM).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-work-for-money-wfm-documents-unverified",
+      "service_id": "snp-work-for-money-wfm",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Work For Money (WFM).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-social-allowance-online-application-portal-unreachable",
+      "service_id": "social-allowance-online-application",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Social Allowance and Stipend Online Application.",
+      "severity": "MEDIUM",
+      "url": "https://mis.bhata.gov.bd/online-application"
+    },
+    {
+      "gap_id": "gap-social-allowance-online-application-fee-unverified",
+      "service_id": "social-allowance-online-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Social Allowance and Stipend Online Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-social-allowance-online-application-documents-unverified",
+      "service_id": "social-allowance-online-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Social Allowance and Stipend Online Application.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-assistance-programme-fee-unverified",
+      "service_id": "women-assistance-programme",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Women Assistance Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-assistance-programme-documents-unverified",
+      "service_id": "women-assistance-programme",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Women Assistance Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-child-daycare-benefit-fee-unverified",
+      "service_id": "women-child-daycare-benefit",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Child Daycare Centre Benefit.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-child-daycare-benefit-documents-unverified",
+      "service_id": "women-child-daycare-benefit",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Child Daycare Centre Benefit.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-child-helpline-1098-portal-unreachable",
+      "service_id": "women-child-helpline-1098",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for Child Helpline 1098.",
+      "severity": "MEDIUM",
+      "url": "https://mowca.gov.bd/"
+    },
+    {
+      "gap_id": "gap-women-child-helpline-1098-fee-unverified",
+      "service_id": "women-child-helpline-1098",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Child Helpline 1098.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-child-helpline-1098-documents-unverified",
+      "service_id": "women-child-helpline-1098",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Child Helpline 1098.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-distressed-fund-fee-unverified",
+      "service_id": "women-distressed-fund",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Distressed Women and Children Assistance Fund.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-distressed-fund-documents-unverified",
+      "service_id": "women-distressed-fund",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Distressed Women and Children Assistance Fund.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-hostel-benefit-fee-unverified",
+      "service_id": "women-hostel-benefit",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Women Hostel Benefit Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-hostel-benefit-documents-unverified",
+      "service_id": "women-hostel-benefit",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Women Hostel Benefit Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-hotline-109-fee-unverified",
+      "service_id": "women-hotline-109",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Women and Child Abuse Hotline (109).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-hotline-109-documents-unverified",
+      "service_id": "women-hotline-109",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Women and Child Abuse Hotline (109).",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-lactating-mothers-allowance-fee-unverified",
+      "service_id": "women-lactating-mothers-allowance",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Working Lactating Mothers Allowance Programme.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-lactating-mothers-allowance-documents-unverified",
+      "service_id": "women-lactating-mothers-allowance",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Working Lactating Mothers Allowance Programme.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-ngo-registration-fee-unverified",
+      "service_id": "women-ngo-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Voluntary Women Organization Online Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-ngo-registration-documents-unverified",
+      "service_id": "women-ngo-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Voluntary Women Organization Online Registration.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-one-stop-crisis-centre-portal-unreachable",
+      "service_id": "women-one-stop-crisis-centre",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Catalogue/portal URL not reachable at research time for One Stop Crisis Centre (OCC) Services.",
+      "severity": "MEDIUM",
+      "url": "https://mowca.gov.bd/"
+    },
+    {
+      "gap_id": "gap-women-one-stop-crisis-centre-fee-unverified",
+      "service_id": "women-one-stop-crisis-centre",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for One Stop Crisis Centre (OCC) Services.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-one-stop-crisis-centre-documents-unverified",
+      "service_id": "women-one-stop-crisis-centre",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for One Stop Crisis Centre (OCC) Services.",
+      "severity": "MEDIUM"
+    },
+    {
+      "gap_id": "gap-women-violence-prevention-cell-fee-unverified",
+      "service_id": "women-violence-prevention-cell",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Violence Against Women Prevention Cell.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-women-violence-prevention-cell-documents-unverified",
+      "service_id": "women-violence-prevention-cell",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Mandatory document checklist not fully verified for Violence Against Women Prevention Cell.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "conflicts": []
+}
+```
+
+## Phase instructions
+# E2E evaluation prompt
+
+Generate realistic user questions: Bangla, English, Banglish, typos, ambiguity, follow-ups, multi-turn.
+
+Correct uncertainty/refusal is NOT failure. Wrong factual answers ARE failures.
+
+Write eval artifacts under `data/evaluation/<batch-slug>/` and `result.json`.
+
+
+Follow docs/research/BATCH_RESEARCH_TEMPLATE.md for RESEARCH.
+Write machine-readable `.automation/runs/run-db5a383e19c6-e2e/result.json` when complete.

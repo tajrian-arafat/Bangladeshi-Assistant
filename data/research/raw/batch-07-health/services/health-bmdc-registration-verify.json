@@ -1,0 +1,44 @@
+{
+  "service_id": "health-bmdc-registration-verify",
+  "batch_id": "batch-07-health",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "BMDC Registration Verification",
+  "service_name_bn": "BMDC নিবন্ধন যাচাই",
+  "aliases": [
+    "doctor registration check",
+    "BMDC verify"
+  ],
+  "category_id": "health",
+  "responsible_agency": "Bangladesh Medical and Dental Council (BMDC)",
+  "official_application_url": "https://verify.bmdc.org.bd/",
+  "research_status": "PARTIAL",
+  "claims": [
+    {
+      "claim_id": "health-bmdc-registration-verify::c-application-portal",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "application_url",
+      "claim_text": "BMDC Registration Verification is associated with NBR e-service portal https://verify.bmdc.org.bd/.",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-health-bmdc-registration-verify",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "health-bmdc-registration-verify::c-responsible-authority",
+      "service_id": "health-bmdc-registration-verify",
+      "claim_type": "eligibility",
+      "claim_text": "Responsible authority: Bangladesh Medical and Dental Council (BMDC).",
+      "information_class": "OFFICIAL",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

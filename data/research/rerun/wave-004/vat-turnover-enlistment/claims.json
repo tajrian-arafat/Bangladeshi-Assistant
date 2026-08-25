@@ -1,0 +1,72 @@
+{
+  "service_id": "vat-turnover-enlistment",
+  "claims": [
+    {
+      "claim_id": "vat-turnover-enlistment::c-catalogue-authority",
+      "service_id": "vat-turnover-enlistment",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: National Board of Revenue (NBR).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-turnover-enlistment::c-official-portal",
+      "service_id": "vat-turnover-enlistment",
+      "claim_type": "application_url",
+      "claim_text": "Turnover Tax Enlistment official information is published at https://nbr.gov.bd/faq/vat-faq/eng (page title: National Board of Revenue (NBR), Bangladesh).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://nbr.gov.bd/faq/vat-faq/eng"
+      },
+      "source_ids": [
+        "src-vat-turnover-enlistment-official"
+      ],
+      "evidence_ids": [
+        "ev-vat-turnover-enlistment::c-official-portal-src-vat-turnover-enlistment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-turnover-enlistment::c-procedure-overview",
+      "service_id": "vat-turnover-enlistment",
+      "claim_type": "procedure_step",
+      "claim_text": "Turnover Tax Enlistment is a government service under National Board of Revenue (NBR) (enlistment). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-turnover-enlistment-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "vat-turnover-enlistment::c-service-identity",
+      "service_id": "vat-turnover-enlistment",
+      "claim_type": "eligibility",
+      "claim_text": "Turnover Tax Enlistment (টার্নওভার ট্যাক্স তালিকাভুক্তি) is a confirmed government service in category vat, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-vat-turnover-enlistment-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

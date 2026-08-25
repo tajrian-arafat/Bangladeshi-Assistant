@@ -1,0 +1,20 @@
+{
+  "service_id": "snp-clinical-contraception-services-delivery",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-snp-clinical-contraception-services-delivery-fee-unverified",
+      "service_id": "snp-clinical-contraception-services-delivery",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Clinical Contraception Services Delivery.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-snp-clinical-contraception-services-delivery-documents-unverified",
+      "service_id": "snp-clinical-contraception-services-delivery",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Clinical Contraception Services Delivery.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

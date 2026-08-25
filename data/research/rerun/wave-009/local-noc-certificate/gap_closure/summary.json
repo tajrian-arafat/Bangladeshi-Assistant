@@ -1,0 +1,20 @@
+{
+  "service_id": "local-noc-certificate",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-local-noc-certificate-fee-unverified",
+      "service_id": "local-noc-certificate",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for No Objection Certificate (NOC).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-local-noc-certificate-documents-unverified",
+      "service_id": "local-noc-certificate",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for No Objection Certificate (NOC).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

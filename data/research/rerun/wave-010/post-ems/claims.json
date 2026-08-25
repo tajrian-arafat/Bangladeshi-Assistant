@@ -1,0 +1,70 @@
+{
+  "service_id": "post-ems",
+  "claims": [
+    {
+      "claim_id": "post-ems::c-catalogue-authority",
+      "service_id": "post-ems",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-ems::c-official-url-documented",
+      "service_id": "post-ems",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://bdpost.gov.bd/site/page/a375dd34-3e14-4021-83f9-736d357d7eda/- for Express Mail Service (EMS); independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://bdpost.gov.bd/site/page/a375dd34-3e14-4021-83f9-736d357d7eda/-"
+      },
+      "source_ids": [
+        "src-post-ems-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-ems::c-procedure-overview",
+      "service_id": "post-ems",
+      "claim_type": "procedure_step",
+      "claim_text": "Express Mail Service (EMS) is a government service under Bangladesh Post Office (Directorate of Posts) (express mail). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-ems-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-ems::c-service-identity",
+      "service_id": "post-ems",
+      "claim_type": "eligibility",
+      "claim_text": "Express Mail Service (EMS) (এক্সপ্রেস মেইল সার্ভিস (ইএমএস)) is a confirmed government service in category post, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-ems-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

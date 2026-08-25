@@ -1,0 +1,27 @@
+{
+  "service_id": "social-allowance-online-application",
+  "gaps": [
+    {
+      "gap_id": "gap-social-allowance-online-application-portal-unreachable",
+      "service_id": "social-allowance-online-application",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Social Allowance and Stipend Online Application.",
+      "severity": "MEDIUM",
+      "url": "https://mis.bhata.gov.bd/online-application"
+    },
+    {
+      "gap_id": "gap-social-allowance-online-application-fee-unverified",
+      "service_id": "social-allowance-online-application",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Social Allowance and Stipend Online Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-social-allowance-online-application-documents-unverified",
+      "service_id": "social-allowance-online-application",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Social Allowance and Stipend Online Application.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

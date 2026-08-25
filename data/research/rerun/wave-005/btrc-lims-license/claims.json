@@ -1,0 +1,72 @@
+{
+  "service_id": "btrc-lims-license",
+  "claims": [
+    {
+      "claim_id": "btrc-lims-license::c-catalogue-authority",
+      "service_id": "btrc-lims-license",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Telecommunication Regulatory Commission (BTRC).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-lims-license::c-official-portal",
+      "service_id": "btrc-lims-license",
+      "claim_type": "application_url",
+      "claim_text": "Telecom License and Registration (LIMS) official information is published at https://lims.btrc.gov.bd/ (page title: Bangladesh Telecommunication Regulatory Commission).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://lims.btrc.gov.bd/"
+      },
+      "source_ids": [
+        "src-btrc-lims-license-official"
+      ],
+      "evidence_ids": [
+        "ev-btrc-lims-license::c-official-portal-src-btrc-lims-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-lims-license::c-procedure-overview",
+      "service_id": "btrc-lims-license",
+      "claim_type": "procedure_step",
+      "claim_text": "Telecom License and Registration (LIMS) is a government service under Bangladesh Telecommunication Regulatory Commission (BTRC) (telecom licensing). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-lims-license-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "btrc-lims-license::c-service-identity",
+      "service_id": "btrc-lims-license",
+      "claim_type": "eligibility",
+      "claim_text": "Telecom License and Registration (LIMS) (টেলিকম লাইসেন্স/নিবন্ধন (এলআইএমএস)) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-btrc-lims-license-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

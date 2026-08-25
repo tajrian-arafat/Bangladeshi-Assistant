@@ -1,0 +1,133 @@
+{
+  "service_id": "digital-centre-assisted-services",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Assisted Government Services via Digital Centres",
+  "service_name_bn": "ডিজিটাল সেন্টার assisted সরকারি সেবা",
+  "aliases": [
+    "300+ e-services digital centre",
+    "last mile e-governance"
+  ],
+  "category_id": "ict",
+  "profile_key": "OTHER",
+  "responsible_agency": "Aspire to Innovate (a2i), ICT Division",
+  "official_application_url": "https://uddokta.eksheba.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "digital-centre-assisted-services::c-catalogue-authority",
+      "service_id": "digital-centre-assisted-services",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Aspire to Innovate (a2i), ICT Division.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-assisted-services::c-official-portal",
+      "service_id": "digital-centre-assisted-services",
+      "claim_type": "application_url",
+      "claim_text": "Assisted Government Services via Digital Centres official information is published at https://uddokta.eksheba.gov.bd/ (page title: Digital Center | Services at People&#039;s Doorstep).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://uddokta.eksheba.gov.bd/"
+      },
+      "source_ids": [
+        "src-digital-centre-assisted-services-official"
+      ],
+      "evidence_ids": [
+        "ev-digital-centre-assisted-services::c-official-portal-src-digital-centre-assisted-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-assisted-services::c-procedure-overview",
+      "service_id": "digital-centre-assisted-services",
+      "claim_type": "procedure_step",
+      "claim_text": "Assisted Government Services via Digital Centres is a government service under Aspire to Innovate (a2i), ICT Division (digital centre). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-centre-assisted-services-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "digital-centre-assisted-services::c-service-identity",
+      "service_id": "digital-centre-assisted-services",
+      "claim_type": "eligibility",
+      "claim_text": "Assisted Government Services via Digital Centres (ডিজিটাল সেন্টার assisted সরকারি সেবা) is a confirmed government service in category ict, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-digital-centre-assisted-services-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-digital-centre-assisted-services-official",
+      "service_id": "digital-centre-assisted-services",
+      "url": "https://uddokta.eksheba.gov.bd/",
+      "title": "Digital Center | Services at People&#039;s Doorstep",
+      "authority_id": "aspire-to-innovate-a2i-ict-division",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://digitalcentre.gov.bd/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Digital Center | Services at People&#039;s Doorstep",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "5e646bb074f8d8f9",
+        "retrieved_at": "2026-08-25T03:26:02.903247+00:00"
+      },
+      "evidence_locator": "probe:https://uddokta.eksheba.gov.bd/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-digital-centre-assisted-services-fee-unverified",
+      "service_id": "digital-centre-assisted-services",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Assisted Government Services via Digital Centres.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-digital-centre-assisted-services-documents-unverified",
+      "service_id": "digital-centre-assisted-services",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Assisted Government Services via Digital Centres.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "service_id": "nid-reissue-lost",
+  "claims": [
+    {
+      "claim_id": "nid-reissue-lost::c-catalogue-authority",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Election Commission (NID Wing).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-official-portal",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "application_url",
+      "claim_text": "NID Reissue for Lost or Damaged Card official information is published at https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction (page title: Bangladesh NID Application System | সাধারন জিজ্ঞাসা).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://services.nidw.gov.bd/nid-pub/faq?tab=faq-correction"
+      },
+      "source_ids": [
+        "src-nid-reissue-lost-official"
+      ],
+      "evidence_ids": [
+        "ev-nid-reissue-lost::c-official-portal-src-nid-reissue-lost-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-procedure-overview",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "procedure_step",
+      "claim_text": "NID Reissue for Lost or Damaged Card is a government service under Bangladesh Election Commission (NID Wing) (nid reissue). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-reissue-lost-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "nid-reissue-lost::c-service-identity",
+      "service_id": "nid-reissue-lost",
+      "claim_type": "eligibility",
+      "claim_text": "NID Reissue for Lost or Damaged Card (হারানো/নষ্ট এনআইডি পুনর্মুদ্রণ (রিইস্যু)) is a confirmed government service in category identity, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-nid-reissue-lost-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

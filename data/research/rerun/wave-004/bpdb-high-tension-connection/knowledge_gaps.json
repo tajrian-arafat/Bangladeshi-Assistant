@@ -1,0 +1,27 @@
+{
+  "service_id": "bpdb-high-tension-connection",
+  "gaps": [
+    {
+      "gap_id": "gap-bpdb-high-tension-connection-portal-unreachable",
+      "service_id": "bpdb-high-tension-connection",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for BPDB High Tension Connection Application.",
+      "severity": "MEDIUM",
+      "url": "https://bpdb.gov.bd/"
+    },
+    {
+      "gap_id": "gap-bpdb-high-tension-connection-fee-unverified",
+      "service_id": "bpdb-high-tension-connection",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for BPDB High Tension Connection Application.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-bpdb-high-tension-connection-documents-unverified",
+      "service_id": "bpdb-high-tension-connection",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for BPDB High Tension Connection Application.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

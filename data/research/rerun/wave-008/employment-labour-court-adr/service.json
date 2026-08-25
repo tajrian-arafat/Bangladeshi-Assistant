@@ -1,0 +1,155 @@
+{
+  "service_id": "employment-labour-court-adr",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Labour Court Alternative Dispute Resolution",
+  "service_name_bn": "শ্রম আদালত/ADR সেবা",
+  "aliases": [
+    "labour court ADR",
+    "industrial dispute resolution"
+  ],
+  "category_id": "employment",
+  "profile_key": "EMPLOYMENT",
+  "responsible_agency": "Ministry of Labour & Employment",
+  "official_application_url": "https://mole.gov.bd/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "employment-labour-court-adr::c-catalogue-authority",
+      "service_id": "employment-labour-court-adr",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Ministry of Labour & Employment.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-labour-court-adr::c-official-url-documented",
+      "service_id": "employment-labour-court-adr",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://mole.gov.bd/ for Labour Court Alternative Dispute Resolution; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://mole.gov.bd/"
+      },
+      "source_ids": [
+        "src-employment-labour-court-adr-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-labour-court-adr::c-procedure-overview",
+      "service_id": "employment-labour-court-adr",
+      "claim_type": "procedure_step",
+      "claim_text": "Labour Court Alternative Dispute Resolution is a government service under Ministry of Labour & Employment (dispute resolution). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-employment-labour-court-adr-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "employment-labour-court-adr::c-service-identity",
+      "service_id": "employment-labour-court-adr",
+      "claim_type": "eligibility",
+      "claim_text": "Labour Court Alternative Dispute Resolution (শ্রম আদালত/ADR সেবা) is a confirmed government service in category employment, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-employment-labour-court-adr-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-employment-labour-court-adr-official",
+      "service_id": "employment-labour-court-adr",
+      "url": "https://mole.gov.bd/",
+      "title": "Labour Court Alternative Dispute Resolution",
+      "authority_id": "ministry-of-labour-employment",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://mole.gov.bd/",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:27:06.355529+00:00"
+      },
+      "evidence_locator": "probe:https://mole.gov.bd/"
+    },
+    {
+      "source_id": "src-employment-labour-court-adr-alt-1",
+      "service_id": "employment-labour-court-adr",
+      "url": "https://www.newagebd.net/print/post/292120",
+      "title": "Just a moment...",
+      "authority_id": "ministry-of-labour-employment",
+      "tier": 4,
+      "source_type": "DISCOVERY",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://www.newagebd.net/print/post/292120",
+        "status_code": 403,
+        "reachable": false,
+        "title": "Just a moment...",
+        "content_type": "text/html; charset=UTF-8",
+        "content_hash": "398bf85ca73124d2",
+        "retrieved_at": "2026-08-25T03:27:06.404710+00:00"
+      }
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-employment-labour-court-adr-portal-unreachable",
+      "service_id": "employment-labour-court-adr",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Labour Court Alternative Dispute Resolution.",
+      "severity": "MEDIUM",
+      "url": "https://mole.gov.bd/"
+    },
+    {
+      "gap_id": "gap-employment-labour-court-adr-fee-unverified",
+      "service_id": "employment-labour-court-adr",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Labour Court Alternative Dispute Resolution.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-employment-labour-court-adr-documents-unverified",
+      "service_id": "employment-labour-court-adr",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Labour Court Alternative Dispute Resolution.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

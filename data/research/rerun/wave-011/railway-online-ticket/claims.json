@@ -1,0 +1,72 @@
+{
+  "service_id": "railway-online-ticket",
+  "claims": [
+    {
+      "claim_id": "railway-online-ticket::c-catalogue-authority",
+      "service_id": "railway-online-ticket",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Railway.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-online-ticket::c-official-portal",
+      "service_id": "railway-online-ticket",
+      "claim_type": "application_url",
+      "claim_text": "Bangladesh Railway Online Ticket Booking official information is published at https://eticket.railway.gov.bd/ (page title: Bangladesh Railway E-Ticketing Service).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://eticket.railway.gov.bd/"
+      },
+      "source_ids": [
+        "src-railway-online-ticket-official"
+      ],
+      "evidence_ids": [
+        "ev-railway-online-ticket::c-official-portal-src-railway-online-ticket-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-online-ticket::c-procedure-overview",
+      "service_id": "railway-online-ticket",
+      "claim_type": "procedure_step",
+      "claim_text": "Bangladesh Railway Online Ticket Booking is a government service under Bangladesh Railway (ticket booking). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-online-ticket-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "railway-online-ticket::c-service-identity",
+      "service_id": "railway-online-ticket",
+      "claim_type": "eligibility",
+      "claim_text": "Bangladesh Railway Online Ticket Booking (বাংলাদেশ রেলওয়ে অনলাইন টিকিট) is a confirmed government service in category railways, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-railway-online-ticket-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

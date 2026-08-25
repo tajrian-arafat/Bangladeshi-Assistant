@@ -1,0 +1,19 @@
+{
+  "service_id": "btrc-neir-imei-check",
+  "gaps": [
+    {
+      "gap_id": "gap-btrc-neir-imei-check-fee-unverified",
+      "service_id": "btrc-neir-imei-check",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for NEIR IMEI Verification.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-btrc-neir-imei-check-documents-unverified",
+      "service_id": "btrc-neir-imei-check",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for NEIR IMEI Verification.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

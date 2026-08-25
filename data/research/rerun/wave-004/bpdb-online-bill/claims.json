@@ -1,0 +1,72 @@
+{
+  "service_id": "bpdb-online-bill",
+  "claims": [
+    {
+      "claim_id": "bpdb-online-bill::c-catalogue-authority",
+      "service_id": "bpdb-online-bill",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Power Development Board (BPDB).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bpdb-online-bill::c-official-portal",
+      "service_id": "bpdb-online-bill",
+      "claim_type": "application_url",
+      "claim_text": "BPDB Online Electricity Bill official information is published at https://billonweb.bpdb.gov.bd (page title: BpdbUi).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://billonweb.bpdb.gov.bd"
+      },
+      "source_ids": [
+        "src-bpdb-online-bill-official"
+      ],
+      "evidence_ids": [
+        "ev-bpdb-online-bill::c-official-portal-src-bpdb-online-bill-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bpdb-online-bill::c-procedure-overview",
+      "service_id": "bpdb-online-bill",
+      "claim_type": "procedure_step",
+      "claim_text": "BPDB Online Electricity Bill is a government service under Bangladesh Power Development Board (BPDB) (electricity payment). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bpdb-online-bill-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "bpdb-online-bill::c-service-identity",
+      "service_id": "bpdb-online-bill",
+      "claim_type": "eligibility",
+      "claim_text": "BPDB Online Electricity Bill (বিপিডিবি অনলাইন বিদ্যুৎ বিল) is a confirmed government service in category utilities, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-bpdb-online-bill-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

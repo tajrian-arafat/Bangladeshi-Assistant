@@ -1,0 +1,28 @@
+{
+  "service_id": "employment-trade-union-registration",
+  "deferred": 3,
+  "gaps": [
+    {
+      "gap_id": "gap-employment-trade-union-registration-portal-unreachable",
+      "service_id": "employment-trade-union-registration",
+      "gap_type": "CURRENT_URL_MISSING",
+      "description": "Official URL not reachable at research time for Trade Union Registration.",
+      "severity": "MEDIUM",
+      "url": "https://mole.gov.bd/"
+    },
+    {
+      "gap_id": "gap-employment-trade-union-registration-fee-unverified",
+      "service_id": "employment-trade-union-registration",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Trade Union Registration.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-employment-trade-union-registration-documents-unverified",
+      "service_id": "employment-trade-union-registration",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Trade Union Registration.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

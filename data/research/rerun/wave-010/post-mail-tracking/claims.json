@@ -1,0 +1,72 @@
+{
+  "service_id": "post-mail-tracking",
+  "claims": [
+    {
+      "claim_id": "post-mail-tracking::c-catalogue-authority",
+      "service_id": "post-mail-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Bangladesh Post Office (Directorate of Posts).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-mail-tracking::c-official-portal",
+      "service_id": "post-mail-tracking",
+      "claim_type": "application_url",
+      "claim_text": "Domestic Mail Item Tracking official information is published at https://report.dms.bdpost.gov.bd/ (page title: DMS Item Tracking).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://report.dms.bdpost.gov.bd/"
+      },
+      "source_ids": [
+        "src-post-mail-tracking-official"
+      ],
+      "evidence_ids": [
+        "ev-post-mail-tracking::c-official-portal-src-post-mail-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-mail-tracking::c-procedure-overview",
+      "service_id": "post-mail-tracking",
+      "claim_type": "procedure_step",
+      "claim_text": "Domestic Mail Item Tracking is a government service under Bangladesh Post Office (Directorate of Posts) (tracking). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-mail-tracking-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "post-mail-tracking::c-service-identity",
+      "service_id": "post-mail-tracking",
+      "claim_type": "eligibility",
+      "claim_text": "Domestic Mail Item Tracking (ডাক প্রেরণ ট্র্যাকিং) is a confirmed government service in category post, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-post-mail-tracking-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

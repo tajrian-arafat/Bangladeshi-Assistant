@@ -1,0 +1,70 @@
+{
+  "service_id": "professional-pharmacy-council-registration",
+  "claims": [
+    {
+      "claim_id": "professional-pharmacy-council-registration::c-catalogue-authority",
+      "service_id": "professional-pharmacy-council-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Pharmacy Council of Bangladesh.",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "professional-pharmacy-council-registration::c-official-url-documented",
+      "service_id": "professional-pharmacy-council-registration",
+      "claim_type": "application_url",
+      "claim_text": "Catalogue documents official source URL https://www.pcb.gov.bd/ for Pharmacy Council Pharmacist Registration; independent reachability not confirmed at research time.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://www.pcb.gov.bd/"
+      },
+      "source_ids": [
+        "src-professional-pharmacy-council-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "professional-pharmacy-council-registration::c-procedure-overview",
+      "service_id": "professional-pharmacy-council-registration",
+      "claim_type": "procedure_step",
+      "claim_text": "Pharmacy Council Pharmacist Registration is a government service under Pharmacy Council of Bangladesh (pharmacy profession). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-professional-pharmacy-council-registration-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "professional-pharmacy-council-registration::c-service-identity",
+      "service_id": "professional-pharmacy-council-registration",
+      "claim_type": "eligibility",
+      "claim_text": "Pharmacy Council Pharmacist Registration (ফার্মেসি কাউন্সিল নিবন্ধন) is a confirmed government service in category professional, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-professional-pharmacy-council-registration-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}

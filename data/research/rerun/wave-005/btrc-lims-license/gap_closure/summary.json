@@ -1,0 +1,20 @@
+{
+  "service_id": "btrc-lims-license",
+  "deferred": 2,
+  "gaps": [
+    {
+      "gap_id": "gap-btrc-lims-license-fee-unverified",
+      "service_id": "btrc-lims-license",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Telecom License and Registration (LIMS).",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-btrc-lims-license-documents-unverified",
+      "service_id": "btrc-lims-license",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Telecom License and Registration (LIMS).",
+      "severity": "MEDIUM"
+    }
+  ]
+}

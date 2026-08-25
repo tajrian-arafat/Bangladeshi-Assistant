@@ -1,0 +1,134 @@
+{
+  "service_id": "dm-disaster-alert-app",
+  "catalogue_version": "1.0.0-finalized",
+  "service_name_en": "Disaster Alert for BD Mobile App",
+  "service_name_bn": "Disaster Alert for BD",
+  "aliases": [
+    "disaster alert Bangladesh",
+    "DDM alert app",
+    "Disaster Alert for BD Mobile App"
+  ],
+  "category_id": "disaster_relief",
+  "profile_key": "OTHER",
+  "responsible_agency": "Department of Disaster Management (DDM)",
+  "official_application_url": "https://disasteralertforbd.app/",
+  "research_status": "RESEARCH_COMPLETE",
+  "research_builder": "service_specific_research_builder",
+  "authoritative_research": true,
+  "claims": [
+    {
+      "claim_id": "dm-disaster-alert-app::c-catalogue-authority",
+      "service_id": "dm-disaster-alert-app",
+      "claim_type": "eligibility",
+      "claim_text": "Catalogue records responsible authority as: Department of Disaster Management (DDM).",
+      "information_class": "CATALOGUE_METADATA",
+      "claim_class": "CATALOGUE_METADATA",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": false,
+      "source_ids": [
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-disaster-alert-app::c-official-portal",
+      "service_id": "dm-disaster-alert-app",
+      "claim_type": "application_url",
+      "claim_text": "Disaster Alert for BD Mobile App official information is published at https://disasteralertforbd.app/ (page title: Disaster Alert for BD).",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "structured_value": {
+        "url": "https://disasteralertforbd.app/"
+      },
+      "source_ids": [
+        "src-dm-disaster-alert-app-official"
+      ],
+      "evidence_ids": [
+        "ev-dm-disaster-alert-app::c-official-portal-src-dm-disaster-alert-app-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-disaster-alert-app::c-procedure-overview",
+      "service_id": "dm-disaster-alert-app",
+      "claim_type": "procedure_step",
+      "claim_text": "Disaster Alert for BD Mobile App is a government service under Department of Disaster Management (DDM) (early warning). Apply through the official authority channels listed in authoritative sources.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-disaster-alert-app-official"
+      ],
+      "retrieved_at": "2026-08-25"
+    },
+    {
+      "claim_id": "dm-disaster-alert-app::c-service-identity",
+      "service_id": "dm-disaster-alert-app",
+      "claim_type": "eligibility",
+      "claim_text": "Disaster Alert for BD Mobile App (Disaster Alert for BD) is a confirmed government service in category disaster_relief, scope NATIONAL.",
+      "information_class": "OFFICIAL",
+      "claim_class": "SERVICE_SPECIFIC",
+      "pipeline_status": "DISCOVERED",
+      "verification_status": "PENDING_INDEPENDENT_VERIFICATION",
+      "authoritative_for_completeness": true,
+      "source_ids": [
+        "src-dm-disaster-alert-app-official",
+        "src-catalogue"
+      ],
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-dm-disaster-alert-app-official",
+      "service_id": "dm-disaster-alert-app",
+      "url": "https://disasteralertforbd.app/",
+      "title": "Disaster Alert for BD",
+      "authority_id": "department-of-disaster-management-ddm",
+      "tier": 1,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://disasteralertforbd.app/",
+        "status_code": 200,
+        "reachable": true,
+        "title": "Disaster Alert for BD",
+        "content_type": "text/html",
+        "content_hash": "ff764c60206d10ae",
+        "retrieved_at": "2026-08-25T03:26:23.505715+00:00"
+      },
+      "evidence_locator": "probe:https://disasteralertforbd.app/"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ],
+  "knowledge_gaps": [
+    {
+      "gap_id": "gap-dm-disaster-alert-app-fee-unverified",
+      "service_id": "dm-disaster-alert-app",
+      "gap_type": "CURRENT_FEE_MISSING",
+      "description": "Fee schedule not independently verified for Disaster Alert for BD Mobile App.",
+      "severity": "HIGH"
+    },
+    {
+      "gap_id": "gap-dm-disaster-alert-app-documents-unverified",
+      "service_id": "dm-disaster-alert-app",
+      "gap_type": "LOCAL_RULE_MISSING",
+      "description": "Full mandatory document checklist not independently verified for Disaster Alert for BD Mobile App.",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "service_id": "post-life-insurance",
+  "sources": [
+    {
+      "source_id": "src-post-life-insurance-official",
+      "service_id": "post-life-insurance",
+      "url": "https://bdpost.gov.bd/site/page/4ad27a53-60f4-4fb8-9c7e-28d9ec5669a2/-",
+      "title": "Postal Life Insurance",
+      "authority_id": "bangladesh-post-office-directorate-of-posts",
+      "tier": 2,
+      "source_type": "OFFICIAL",
+      "retrieved_at": "2026-08-25",
+      "probe": {
+        "url": "https://bdpost.gov.bd/site/page/4ad27a53-60f4-4fb8-9c7e-28d9ec5669a2/-",
+        "reachable": false,
+        "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)",
+        "retrieved_at": "2026-08-25T03:29:30.945917+00:00"
+      },
+      "evidence_locator": "probe:https://bdpost.gov.bd/site/page/4ad27a53-60f4-4fb8-9c7e-28d9ec5669a2/-"
+    },
+    {
+      "source_id": "src-catalogue",
+      "url": "/workspace/data/service_catalogue/services.json",
+      "title": "National Service Catalogue",
+      "tier": 1,
+      "source_type": "CATALOGUE_METADATA",
+      "scaffolding_only": true,
+      "retrieved_at": "2026-08-25"
+    }
+  ]
+}
